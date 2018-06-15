@@ -1,0 +1,1 @@
+XCOPY "C:\Users\Frosty\Desktop\My Projects\b4j\Cuppy Framework\Files\*" "C:\Users\Frosty\Desktop\My Projects\b4j\Cyna\Files" /s /i /Y

@@ -1,0 +1,49 @@
+﻿Version=5.51
+AppType=JavaFX
+NumberOfModules=12
+Module1=Configs
+Module2=tODOS
+Module3=Themes
+Module4=ComponentsManager
+Module5=SquareFAB
+Module6=MaterialButton
+Module7=StyleManager
+Module8=AppBar
+Module9=LicenseManager
+Module10=AnimationManager
+Module11=ControlsUtils
+Module12=FAB
+Build1=Full,Punchline.Tech.Cuppy.Framework,Full
+NumberOfFiles=4
+File1=AppBarLayout.bjl
+File2=FABLayout.bjl
+File3=MaterialButtonLayout.bjl
+File4=SquareFABLayout.bjl
+NumberOfLibraries=3
+Library1=jcore
+Library2=jfx
+Library3=cssutils
+@EndOfDesignText@
+#Region Project Attributes 
+
+'Meta datas ... also defined in Configs for app usage.
+#LcdFontSmoothing: True
+'Copyright to Oluwaseyi Aderinkomi < Frost Codes >  - seyiaderinkomi@gmail.com
+#LibraryAuthor: Punchline Technologies
+#LibraryName: Cuppy Framework
+#LibraryVersion: 0.4
+ 
+#End Region
+
+Sub Process_Globals
+
+End Sub
+
+Sub AppStart (form1 As Form, Args() As String)
+  
+End Sub
+
+'Return true to allow the default exceptions handler to handle the uncaught exception.
+Sub Application_Error (Error As Exception, StackTrace As String) As Boolean
+	Return True
+End Sub
