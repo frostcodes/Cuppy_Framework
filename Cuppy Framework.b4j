@@ -9,10 +9,10 @@ Module5=SquareFAB
 Module6=MaterialButton
 Module7=StyleManager
 Module8=AppBar
-Module9=LicenseManager
-Module10=AnimationManager
-Module11=ControlsUtils
-Module12=FAB
+Module9=FAB
+Module10=LicenseManager
+Module11=AnimationManager
+Module12=ControlsUtils
 Build1=Full,Punchline.Tech.Cuppy.Framework,Full
 NumberOfFiles=4
 File1=AppBarLayout.bjl
@@ -31,7 +31,7 @@ Library3=cssutils
 'Copyright to Oluwaseyi Aderinkomi < Frost Codes >  - seyiaderinkomi@gmail.com
 #LibraryAuthor: Punchline Technologies
 #LibraryName: Cuppy Framework
-#LibraryVersion: 0.4
+#LibraryVersion: 0.5
  
 #End Region
 
