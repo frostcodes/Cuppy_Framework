@@ -33,9 +33,9 @@ public b4j.example.cssutils _cssutils = null;
 public Punchline.Tech.Cuppy.Framework.configs _configs = null;
 public Punchline.Tech.Cuppy.Framework.componentsmanager _componentsmanager = null;
 public Punchline.Tech.Cuppy.Framework.stylemanager _stylemanager = null;
+public Punchline.Tech.Cuppy.Framework.controlsutils _controlsutils = null;
 public Punchline.Tech.Cuppy.Framework.licensemanager _licensemanager = null;
 public Punchline.Tech.Cuppy.Framework.animationmanager _animationmanager = null;
-public Punchline.Tech.Cuppy.Framework.controlsutils _controlsutils = null;
 public String  _base_resize(double _width,double _height) throws Exception{
  //BA.debugLineNum = 23;BA.debugLine="Private Sub Base_Resize (Width As Double, Height A";
  //BA.debugLineNum = 26;BA.debugLine="FAB_Btn.PrefWidth = Width";
@@ -95,6 +95,13 @@ public String  _setbg(String _color) throws Exception{
  //BA.debugLineNum = 37;BA.debugLine="CSSUtils.SetStyleProperty( FAB_Btn, \"-fx-backgrou";
 _cssutils._setstyleproperty((anywheresoftware.b4j.objects.NodeWrapper.ConcreteNodeWrapper) anywheresoftware.b4a.AbsObjectWrapper.ConvertToWrapper(new anywheresoftware.b4j.objects.NodeWrapper.ConcreteNodeWrapper(), (javafx.scene.Node)(_fab_btn.getObject())),"-fx-background-color",_color);
  //BA.debugLineNum = 39;BA.debugLine="End Sub";
+return "";
+}
+public String  _setborder(String _color,int _width) throws Exception{
+ //BA.debugLineNum = 47;BA.debugLine="Public Sub setBorder(color As String , width As In";
+ //BA.debugLineNum = 49;BA.debugLine="ControlsUtils.setBorder(FAB_Btn, color, width)";
+_controlsutils._setborder((anywheresoftware.b4j.objects.NodeWrapper.ControlWrapper.ConcreteControlWrapper) anywheresoftware.b4a.AbsObjectWrapper.ConvertToWrapper(new anywheresoftware.b4j.objects.NodeWrapper.ControlWrapper.ConcreteControlWrapper(), (javafx.scene.control.Control)(_fab_btn.getObject())),_color,_width);
+ //BA.debugLineNum = 51;BA.debugLine="End Sub";
 return "";
 }
 public String  _setrotationx(float _angle) throws Exception{

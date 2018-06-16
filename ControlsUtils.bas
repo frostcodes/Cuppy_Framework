@@ -16,3 +16,19 @@ Sub setPaneRotationX(PaneObj As Pane, Angle As Float)
 	CSSUtils.SetStyleProperty(PaneObj, "-fx-rotate", Angle)
 End Sub
  
+Sub setBorder(controlObj As Control, color As String , width As Int)
+	
+	CSSUtils.SetStyleProperty( controlObj, "-fx-border-color", color)
+	CSSUtils.SetStyleProperty (controlObj, "-fx-border-width", width)
+	
+End Sub
+	
+	
+	
+Sub setPaneBorder(PaneObj As Pane, color As String , width As Int)
+	
+	CSSUtils.SetStyleProperty( PaneObj, "-fx-border-color", color)
+	CSSUtils.SetStyleProperty (PaneObj, "-fx-border-width", width)
+	
+End Sub
+	

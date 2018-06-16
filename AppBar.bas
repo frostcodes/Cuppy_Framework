@@ -48,3 +48,11 @@ Public Sub setRotationX(angle As Float)
 	ControlsUtils.setPaneRotationX(InnerPane , angle) 'rotate
 	 
 End Sub
+
+Public Sub setBorder(color As String , width As Int)
+	
+	ControlsUtils.setBorder(Label1, color, width)
+ 	ControlsUtils.setPaneBorder(InnerPane, color, width)
+'	
+End Sub
+

@@ -33,9 +33,9 @@ public b4j.example.cssutils _cssutils = null;
 public Punchline.Tech.Cuppy.Framework.configs _configs = null;
 public Punchline.Tech.Cuppy.Framework.componentsmanager _componentsmanager = null;
 public Punchline.Tech.Cuppy.Framework.stylemanager _stylemanager = null;
+public Punchline.Tech.Cuppy.Framework.controlsutils _controlsutils = null;
 public Punchline.Tech.Cuppy.Framework.licensemanager _licensemanager = null;
 public Punchline.Tech.Cuppy.Framework.animationmanager _animationmanager = null;
-public Punchline.Tech.Cuppy.Framework.controlsutils _controlsutils = null;
 public String  _base_resize(double _width,double _height) throws Exception{
  //BA.debugLineNum = 22;BA.debugLine="Private Sub Base_Resize (Width As Double, Height A";
  //BA.debugLineNum = 25;BA.debugLine="FAB_Btn.PrefWidth = Width";
@@ -72,18 +72,18 @@ _setbg(BA.ObjectToString(_stylemanager._defaulttheme.Get((Object)("accent"))));
 return "";
 }
 public String  _fab_btn_focuschanged(boolean _hasfocus) throws Exception{
- //BA.debugLineNum = 70;BA.debugLine="Sub FAB_Btn_FocusChanged (HasFocus As Boolean)";
- //BA.debugLineNum = 79;BA.debugLine="End Sub";
+ //BA.debugLineNum = 78;BA.debugLine="Sub FAB_Btn_FocusChanged (HasFocus As Boolean)";
+ //BA.debugLineNum = 87;BA.debugLine="End Sub";
 return "";
 }
 public String  _fab_btn_mousemoved(anywheresoftware.b4j.objects.NodeWrapper.MouseEventWrapper _eventdata) throws Exception{
- //BA.debugLineNum = 41;BA.debugLine="Sub FAB_Btn_MouseMoved (EventData As MouseEvent)";
- //BA.debugLineNum = 45;BA.debugLine="End Sub";
+ //BA.debugLineNum = 49;BA.debugLine="Sub FAB_Btn_MouseMoved (EventData As MouseEvent)";
+ //BA.debugLineNum = 53;BA.debugLine="End Sub";
 return "";
 }
 public String  _fab_btn_mousereleased(anywheresoftware.b4j.objects.NodeWrapper.MouseEventWrapper _eventdata) throws Exception{
- //BA.debugLineNum = 47;BA.debugLine="Sub FAB_Btn_MouseReleased (EventData As MouseEvent";
- //BA.debugLineNum = 68;BA.debugLine="End Sub";
+ //BA.debugLineNum = 55;BA.debugLine="Sub FAB_Btn_MouseReleased (EventData As MouseEvent";
+ //BA.debugLineNum = 76;BA.debugLine="End Sub";
 return "";
 }
 public anywheresoftware.b4j.objects.PaneWrapper.ConcretePaneWrapper  _getbase() throws Exception{
@@ -110,11 +110,18 @@ _cssutils._setstyleproperty((anywheresoftware.b4j.objects.NodeWrapper.ConcreteNo
  //BA.debugLineNum = 38;BA.debugLine="End Sub";
 return "";
 }
+public String  _setborder(String _color,int _width) throws Exception{
+ //BA.debugLineNum = 40;BA.debugLine="Public Sub setBorder(color As String , width As In";
+ //BA.debugLineNum = 42;BA.debugLine="ControlsUtils.setBorder(FAB_Btn, color, width)";
+_controlsutils._setborder((anywheresoftware.b4j.objects.NodeWrapper.ControlWrapper.ConcreteControlWrapper) anywheresoftware.b4a.AbsObjectWrapper.ConvertToWrapper(new anywheresoftware.b4j.objects.NodeWrapper.ControlWrapper.ConcreteControlWrapper(), (javafx.scene.control.Control)(_fab_btn.getObject())),_color,_width);
+ //BA.debugLineNum = 44;BA.debugLine="End Sub";
+return "";
+}
 public String  _setrotationx(float _angle) throws Exception{
- //BA.debugLineNum = 82;BA.debugLine="Public Sub setRotationX(angle As Float)";
- //BA.debugLineNum = 84;BA.debugLine="ControlsUtils.setRotationX(FAB_Btn, angle) 'rotat";
+ //BA.debugLineNum = 90;BA.debugLine="Public Sub setRotationX(angle As Float)";
+ //BA.debugLineNum = 92;BA.debugLine="ControlsUtils.setRotationX(FAB_Btn, angle) 'rotat";
 _controlsutils._setrotationx((anywheresoftware.b4j.objects.NodeWrapper.ControlWrapper.ConcreteControlWrapper) anywheresoftware.b4a.AbsObjectWrapper.ConvertToWrapper(new anywheresoftware.b4j.objects.NodeWrapper.ControlWrapper.ConcreteControlWrapper(), (javafx.scene.control.Control)(_fab_btn.getObject())),_angle);
- //BA.debugLineNum = 86;BA.debugLine="End Sub";
+ //BA.debugLineNum = 94;BA.debugLine="End Sub";
 return "";
 }
 public Object callSub(String sub, Object sender, Object[] args) throws Exception {

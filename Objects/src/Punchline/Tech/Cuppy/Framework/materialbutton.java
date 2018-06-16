@@ -33,9 +33,9 @@ public b4j.example.cssutils _cssutils = null;
 public Punchline.Tech.Cuppy.Framework.configs _configs = null;
 public Punchline.Tech.Cuppy.Framework.componentsmanager _componentsmanager = null;
 public Punchline.Tech.Cuppy.Framework.stylemanager _stylemanager = null;
+public Punchline.Tech.Cuppy.Framework.controlsutils _controlsutils = null;
 public Punchline.Tech.Cuppy.Framework.licensemanager _licensemanager = null;
 public Punchline.Tech.Cuppy.Framework.animationmanager _animationmanager = null;
-public Punchline.Tech.Cuppy.Framework.controlsutils _controlsutils = null;
 public String  _base_resize(double _width,double _height) throws Exception{
  //BA.debugLineNum = 23;BA.debugLine="Private Sub Base_Resize (Width As Double, Height A";
  //BA.debugLineNum = 27;BA.debugLine="InnerButton.PrefWidth = Width";
@@ -95,6 +95,13 @@ public String  _setbg(String _color) throws Exception{
  //BA.debugLineNum = 38;BA.debugLine="CSSUtils.SetStyleProperty( InnerButton, \"-fx-back";
 _cssutils._setstyleproperty((anywheresoftware.b4j.objects.NodeWrapper.ConcreteNodeWrapper) anywheresoftware.b4a.AbsObjectWrapper.ConvertToWrapper(new anywheresoftware.b4j.objects.NodeWrapper.ConcreteNodeWrapper(), (javafx.scene.Node)(_innerbutton.getObject())),"-fx-background-color",_color);
  //BA.debugLineNum = 40;BA.debugLine="End Sub";
+return "";
+}
+public String  _setborder(String _color,int _width) throws Exception{
+ //BA.debugLineNum = 48;BA.debugLine="Public Sub setBorder(color As String , width As In";
+ //BA.debugLineNum = 50;BA.debugLine="ControlsUtils.setBorder(InnerButton, color, width";
+_controlsutils._setborder((anywheresoftware.b4j.objects.NodeWrapper.ControlWrapper.ConcreteControlWrapper) anywheresoftware.b4a.AbsObjectWrapper.ConvertToWrapper(new anywheresoftware.b4j.objects.NodeWrapper.ControlWrapper.ConcreteControlWrapper(), (javafx.scene.control.Control)(_innerbutton.getObject())),_color,_width);
+ //BA.debugLineNum = 52;BA.debugLine="End Sub";
 return "";
 }
 public String  _setrotationx(float _angle) throws Exception{

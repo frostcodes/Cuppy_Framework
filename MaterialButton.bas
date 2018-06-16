@@ -50,3 +50,8 @@ Public Sub setRotationX(angle As Float)
 	 
 End Sub
   
+Public Sub setBorder(color As String , width As Int)
+	
+	ControlsUtils.setBorder(InnerButton, color, width)
+
+End Sub

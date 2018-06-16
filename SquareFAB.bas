@@ -48,4 +48,10 @@ Public Sub setRotationX(angle As Float)
 	ControlsUtils.setRotationX(FAB_Btn, angle) 'rotate 
 	 
 End Sub
+
+Public Sub setBorder(color As String , width As Int)
+	
+	ControlsUtils.setBorder(FAB_Btn, color, width)
+
+End Sub
   

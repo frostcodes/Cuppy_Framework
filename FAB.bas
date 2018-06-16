@@ -41,6 +41,14 @@ Public Sub SetBg(color As String)
  CSSUtils.SetStyleProperty( FAB_Btn, "-fx-background-color", color)
  
 End Sub
+
+Public Sub setBorder(color As String , width As Int)
+	
+	ControlsUtils.setBorder(FAB_Btn, color, width)
+
+End Sub
+
+
  
 'hover effect
 Sub FAB_Btn_MouseMoved (EventData As MouseEvent)
