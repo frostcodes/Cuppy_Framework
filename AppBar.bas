@@ -40,8 +40,7 @@ Public Sub SetBg(color As String)
 	CSSUtils.SetStyleProperty( InnerPane, "-fx-background-color", color)
  
 End Sub
-
-
+ 
 Public Sub setRotationX(angle As Float)
 	
 	ControlsUtils.setRotationX(Label1, angle) 'rotate
@@ -54,5 +53,23 @@ Public Sub setBorder(color As String , width As Int)
 	ControlsUtils.setBorder(Label1, color, width)
  	ControlsUtils.setPaneBorder(InnerPane, color, width)
 '	
+End Sub
+
+Public Sub setBorderRadius(radius As Int)
+	ControlsUtils.setBorderRadius(Label1, radius)
+	ControlsUtils.setPaneBorderRadius(InnerPane, radius)
+	
+End Sub
+
+Public Sub setPaneEffect(effect As String)
+	
+	ControlsUtils.setEffect(Label1, effect)
+	
+End Sub
+
+Public Sub removeEffects()
+	
+	ControlsUtils.removeEffect(Label1)
+	
 End Sub
 

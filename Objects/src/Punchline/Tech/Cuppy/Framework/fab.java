@@ -72,18 +72,18 @@ _setbg(BA.ObjectToString(_stylemanager._defaulttheme.Get((Object)("accent"))));
 return "";
 }
 public String  _fab_btn_focuschanged(boolean _hasfocus) throws Exception{
- //BA.debugLineNum = 78;BA.debugLine="Sub FAB_Btn_FocusChanged (HasFocus As Boolean)";
- //BA.debugLineNum = 87;BA.debugLine="End Sub";
+ //BA.debugLineNum = 96;BA.debugLine="Sub FAB_Btn_FocusChanged (HasFocus As Boolean)";
+ //BA.debugLineNum = 105;BA.debugLine="End Sub";
 return "";
 }
 public String  _fab_btn_mousemoved(anywheresoftware.b4j.objects.NodeWrapper.MouseEventWrapper _eventdata) throws Exception{
- //BA.debugLineNum = 49;BA.debugLine="Sub FAB_Btn_MouseMoved (EventData As MouseEvent)";
- //BA.debugLineNum = 53;BA.debugLine="End Sub";
+ //BA.debugLineNum = 67;BA.debugLine="Sub FAB_Btn_MouseMoved (EventData As MouseEvent)";
+ //BA.debugLineNum = 71;BA.debugLine="End Sub";
 return "";
 }
 public String  _fab_btn_mousereleased(anywheresoftware.b4j.objects.NodeWrapper.MouseEventWrapper _eventdata) throws Exception{
- //BA.debugLineNum = 55;BA.debugLine="Sub FAB_Btn_MouseReleased (EventData As MouseEvent";
- //BA.debugLineNum = 76;BA.debugLine="End Sub";
+ //BA.debugLineNum = 73;BA.debugLine="Sub FAB_Btn_MouseReleased (EventData As MouseEvent";
+ //BA.debugLineNum = 94;BA.debugLine="End Sub";
 return "";
 }
 public anywheresoftware.b4j.objects.PaneWrapper.ConcretePaneWrapper  _getbase() throws Exception{
@@ -103,6 +103,13 @@ _mcallback = _callback;
  //BA.debugLineNum = 13;BA.debugLine="End Sub";
 return "";
 }
+public String  _removeeffects() throws Exception{
+ //BA.debugLineNum = 59;BA.debugLine="Public Sub removeEffects()";
+ //BA.debugLineNum = 61;BA.debugLine="ControlsUtils.removeEffect(FAB_Btn)";
+_controlsutils._removeeffect((anywheresoftware.b4j.objects.NodeWrapper.ControlWrapper.ConcreteControlWrapper) anywheresoftware.b4a.AbsObjectWrapper.ConvertToWrapper(new anywheresoftware.b4j.objects.NodeWrapper.ControlWrapper.ConcreteControlWrapper(), (javafx.scene.control.Control)(_fab_btn.getObject())));
+ //BA.debugLineNum = 63;BA.debugLine="End Sub";
+return "";
+}
 public String  _setbg(String _color) throws Exception{
  //BA.debugLineNum = 34;BA.debugLine="Public Sub SetBg(color As String)";
  //BA.debugLineNum = 36;BA.debugLine="CSSUtils.SetStyleProperty( FAB_Btn, \"-fx-backgrou";
@@ -117,11 +124,25 @@ _controlsutils._setborder((anywheresoftware.b4j.objects.NodeWrapper.ControlWrapp
  //BA.debugLineNum = 44;BA.debugLine="End Sub";
 return "";
 }
+public String  _setborderradius(int _radius) throws Exception{
+ //BA.debugLineNum = 46;BA.debugLine="Sub setBorderRadius(radius As Int)";
+ //BA.debugLineNum = 48;BA.debugLine="ControlsUtils.setBorderRadius(FAB_Btn, radius)";
+_controlsutils._setborderradius((anywheresoftware.b4j.objects.NodeWrapper.ControlWrapper.ConcreteControlWrapper) anywheresoftware.b4a.AbsObjectWrapper.ConvertToWrapper(new anywheresoftware.b4j.objects.NodeWrapper.ControlWrapper.ConcreteControlWrapper(), (javafx.scene.control.Control)(_fab_btn.getObject())),_radius);
+ //BA.debugLineNum = 50;BA.debugLine="End Sub";
+return "";
+}
+public String  _setpaneeffect(String _effect) throws Exception{
+ //BA.debugLineNum = 53;BA.debugLine="Public Sub setPaneEffect(effect As String)";
+ //BA.debugLineNum = 55;BA.debugLine="ControlsUtils.setEffect(FAB_Btn, effect)";
+_controlsutils._seteffect((anywheresoftware.b4j.objects.NodeWrapper.ControlWrapper.ConcreteControlWrapper) anywheresoftware.b4a.AbsObjectWrapper.ConvertToWrapper(new anywheresoftware.b4j.objects.NodeWrapper.ControlWrapper.ConcreteControlWrapper(), (javafx.scene.control.Control)(_fab_btn.getObject())),_effect);
+ //BA.debugLineNum = 57;BA.debugLine="End Sub";
+return "";
+}
 public String  _setrotationx(float _angle) throws Exception{
- //BA.debugLineNum = 90;BA.debugLine="Public Sub setRotationX(angle As Float)";
- //BA.debugLineNum = 92;BA.debugLine="ControlsUtils.setRotationX(FAB_Btn, angle) 'rotat";
+ //BA.debugLineNum = 108;BA.debugLine="Public Sub setRotationX(angle As Float)";
+ //BA.debugLineNum = 110;BA.debugLine="ControlsUtils.setRotationX(FAB_Btn, angle) 'rotat";
 _controlsutils._setrotationx((anywheresoftware.b4j.objects.NodeWrapper.ControlWrapper.ConcreteControlWrapper) anywheresoftware.b4a.AbsObjectWrapper.ConvertToWrapper(new anywheresoftware.b4j.objects.NodeWrapper.ControlWrapper.ConcreteControlWrapper(), (javafx.scene.control.Control)(_fab_btn.getObject())),_angle);
- //BA.debugLineNum = 94;BA.debugLine="End Sub";
+ //BA.debugLineNum = 112;BA.debugLine="End Sub";
 return "";
 }
 public Object callSub(String sub, Object sender, Object[] args) throws Exception {

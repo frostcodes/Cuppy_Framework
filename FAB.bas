@@ -48,6 +48,24 @@ Public Sub setBorder(color As String , width As Int)
 
 End Sub
 
+Sub setBorderRadius(radius As Int)
+	
+	ControlsUtils.setBorderRadius(FAB_Btn, radius)
+	
+End Sub
+
+
+Public Sub setPaneEffect(effect As String)
+	
+	ControlsUtils.setEffect(FAB_Btn, effect)
+	
+End Sub
+
+Public Sub removeEffects()
+	
+	ControlsUtils.removeEffect(FAB_Btn)
+	
+End Sub
 
  
 'hover effect

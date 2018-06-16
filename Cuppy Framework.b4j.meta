@@ -1,4 +1,4 @@
-﻿VisibleModules=1,2,3,4,5,6,7,8,9,10
+﻿VisibleModules=1,2,3,4,5,6,7,8,9,10,11,13
 ModuleBreakpoints0=
 ModuleBookmarks0=
 ModuleClosedNodes0=
@@ -38,4 +38,7 @@ ModuleClosedNodes11=
 ModuleBreakpoints12=
 ModuleBookmarks12=
 ModuleClosedNodes12=
+ModuleBreakpoints13=
+ModuleBookmarks13=
+ModuleClosedNodes13=
 SelectedBuild=0

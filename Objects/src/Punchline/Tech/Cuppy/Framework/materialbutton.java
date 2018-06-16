@@ -90,6 +90,13 @@ _mcallback = _callback;
  //BA.debugLineNum = 13;BA.debugLine="End Sub";
 return "";
 }
+public String  _removeeffects() throws Exception{
+ //BA.debugLineNum = 68;BA.debugLine="Public Sub removeEffects()";
+ //BA.debugLineNum = 70;BA.debugLine="ControlsUtils.removeEffect(InnerButton)";
+_controlsutils._removeeffect((anywheresoftware.b4j.objects.NodeWrapper.ControlWrapper.ConcreteControlWrapper) anywheresoftware.b4a.AbsObjectWrapper.ConvertToWrapper(new anywheresoftware.b4j.objects.NodeWrapper.ControlWrapper.ConcreteControlWrapper(), (javafx.scene.control.Control)(_innerbutton.getObject())));
+ //BA.debugLineNum = 72;BA.debugLine="End Sub";
+return "";
+}
 public String  _setbg(String _color) throws Exception{
  //BA.debugLineNum = 36;BA.debugLine="Public Sub SetBg(color As String)";
  //BA.debugLineNum = 38;BA.debugLine="CSSUtils.SetStyleProperty( InnerButton, \"-fx-back";
@@ -102,6 +109,20 @@ public String  _setborder(String _color,int _width) throws Exception{
  //BA.debugLineNum = 50;BA.debugLine="ControlsUtils.setBorder(InnerButton, color, width";
 _controlsutils._setborder((anywheresoftware.b4j.objects.NodeWrapper.ControlWrapper.ConcreteControlWrapper) anywheresoftware.b4a.AbsObjectWrapper.ConvertToWrapper(new anywheresoftware.b4j.objects.NodeWrapper.ControlWrapper.ConcreteControlWrapper(), (javafx.scene.control.Control)(_innerbutton.getObject())),_color,_width);
  //BA.debugLineNum = 52;BA.debugLine="End Sub";
+return "";
+}
+public String  _setborderradius(int _radius) throws Exception{
+ //BA.debugLineNum = 55;BA.debugLine="Sub setBorderRadius(radius As Int)";
+ //BA.debugLineNum = 57;BA.debugLine="ControlsUtils.setBorderRadius(InnerButton, radius";
+_controlsutils._setborderradius((anywheresoftware.b4j.objects.NodeWrapper.ControlWrapper.ConcreteControlWrapper) anywheresoftware.b4a.AbsObjectWrapper.ConvertToWrapper(new anywheresoftware.b4j.objects.NodeWrapper.ControlWrapper.ConcreteControlWrapper(), (javafx.scene.control.Control)(_innerbutton.getObject())),_radius);
+ //BA.debugLineNum = 59;BA.debugLine="End Sub";
+return "";
+}
+public String  _setpaneeffect(String _effect) throws Exception{
+ //BA.debugLineNum = 62;BA.debugLine="Public Sub setPaneEffect(effect As String)";
+ //BA.debugLineNum = 64;BA.debugLine="ControlsUtils.setEffect(InnerButton, effect)";
+_controlsutils._seteffect((anywheresoftware.b4j.objects.NodeWrapper.ControlWrapper.ConcreteControlWrapper) anywheresoftware.b4a.AbsObjectWrapper.ConvertToWrapper(new anywheresoftware.b4j.objects.NodeWrapper.ControlWrapper.ConcreteControlWrapper(), (javafx.scene.control.Control)(_innerbutton.getObject())),_effect);
+ //BA.debugLineNum = 66;BA.debugLine="End Sub";
 return "";
 }
 public String  _setrotationx(float _angle) throws Exception{

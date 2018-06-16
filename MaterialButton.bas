@@ -55,3 +55,23 @@ Public Sub setBorder(color As String , width As Int)
 	ControlsUtils.setBorder(InnerButton, color, width)
 
 End Sub
+
+
+Sub setBorderRadius(radius As Int)
+	
+	ControlsUtils.setBorderRadius(InnerButton, radius)
+	
+End Sub
+
+
+Public Sub setPaneEffect(effect As String)
+	
+	ControlsUtils.setEffect(InnerButton, effect)
+	
+End Sub
+
+Public Sub removeEffects()
+	
+	ControlsUtils.removeEffect(InnerButton)
+	
+End Sub
