@@ -4,6 +4,8 @@ ModulesStructureVersion=1
 B4J=true
 @EndOfDesignText@
 'Custom View class
+ 
+#Event: MousePressed (EventData As MouseEvent)
 
 #Region Internal Segment
 
@@ -12,7 +14,7 @@ Sub Class_Globals
 	Private mEventName As String 'ignore
 	Private mCallBack As Object 'ignore
 	Private mBase As Pane
-	Public FAB_Btn As Label
+	Public InnerButton As Button
 End Sub
 
 Public Sub Initialize (Callback As Object, EventName As String)
@@ -22,17 +24,16 @@ End Sub
 
 Public Sub DesignerCreateView (Base As Pane, Lbl As Label, Props As Map)
 	mBase = Base
-	mBase.LoadLayout("SquareFABLayout")
+	mBase.LoadLayout("MaterialButtonLayout")
 	'set using theme...
 	SetBg(StyleManager.DefaultTheme.Get("accent"))
-	setRotationX(135) 'rotate by default
+	InnerButton.Font = StyleManager.DefaultFont
 End Sub
 
 Private Sub Base_Resize (Width As Double, Height As Double)
  
-	 'maintain aspect ratio
-	FAB_Btn.PrefWidth = Width
-	FAB_Btn.PrefHeight = Width
+	InnerButton.PrefWidth = Width
+	InnerButton.PrefHeight =  Height
 	 
 End Sub
 
@@ -42,45 +43,53 @@ End Sub
 
 #End Region
 
+
+Public Sub InnerButton_MousePressed (EventData As MouseEvent)
+	  
+	CallSub2(mCallBack, mEventName & "_MousePressed", EventData) 'ignore
+	 
+End Sub
+
+
 #Region Actions and Effects
 
 Public Sub SetBg(color As String)
  
-	CSSUtils.SetStyleProperty( FAB_Btn, "-fx-background-color", color)
+	CSSUtils.SetStyleProperty( InnerButton, "-fx-background-color", color)
  
 End Sub
 
 Public Sub setRotationX(angle As Float)
 	
-	ControlsUtils.setRotationX(FAB_Btn, angle) 'rotate 
+	ControlsUtils.setRotationX(InnerButton, angle) 'rotate
 	 
 End Sub
-
+  
 Public Sub setBorder(color As String , width As Int)
 	
-	ControlsUtils.setBorder(FAB_Btn, color, width)
+	ControlsUtils.setBorder(InnerButton, color, width)
 
 End Sub
 
 
 Sub setBorderRadius(radius As Int)
 	
-	ControlsUtils.setBorderRadius(FAB_Btn, radius)
+	ControlsUtils.setBorderRadius(InnerButton, radius)
 	
 End Sub
 
 
 Public Sub setPaneEffect(effect As String)
 	
-	ControlsUtils.setEffect(FAB_Btn, effect)
+	ControlsUtils.setEffect(InnerButton, effect)
 	
 End Sub
 
 Public Sub removeEffects()
 	
-	ControlsUtils.removeEffect(FAB_Btn)
+	ControlsUtils.removeEffect(InnerButton)
 	
 End Sub
 
 #End Region
-  
+

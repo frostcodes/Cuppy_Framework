@@ -4,6 +4,9 @@ ModulesStructureVersion=1
 B4J=true
 @EndOfDesignText@
 'Custom View class
+
+#Region Internal Segment
+
 Sub Class_Globals
 	Private fx As JFX
 	Private mEventName As String 'ignore
@@ -45,6 +48,10 @@ Public Sub SetBg(color As String)
  
 End Sub
 
+#End Region
+
+#Region Actions and Effects
+
 Public Sub setRotationX(angle As Float)
 	
 	ControlsUtils.setPaneRotationX(InnerPane, angle) 'rotate
@@ -76,3 +83,5 @@ Public Sub removeEffects()
 	ControlsUtils.removePaneEffect(InnerPane)
 	
 End Sub
+
+#End Region

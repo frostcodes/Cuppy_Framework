@@ -4,6 +4,8 @@ ModulesStructureVersion=1
 B4J=true
 @EndOfDesignText@
 'Custom View class
+#Region Internal Segment
+
 Sub Class_Globals
 	Private fx As JFX
 	Private mEventName As String 'ignore
@@ -36,6 +38,11 @@ Public Sub GetBase As Pane
 	Return mBase
 End Sub
 
+#End Region
+
+#Region Actions and Effects
+
+
 Public Sub SetBg(color As String)
  
  CSSUtils.SetStyleProperty( FAB_Btn, "-fx-background-color", color)
@@ -66,52 +73,54 @@ Public Sub removeEffects()
 	ControlsUtils.removeEffect(FAB_Btn)
 	
 End Sub
-
  
+Public Sub setRotationX(angle As Float)
+	
+	ControlsUtils.setRotationX(FAB_Btn, angle) 'rotate
+	 
+End Sub
+
+
+#End Region
+
+
 'hover effect
 Sub FAB_Btn_MouseMoved (EventData As MouseEvent)
 	
- 'FAB_Btn.SetAlphaAnimated(300, 0.8)
+	'FAB_Btn.SetAlphaAnimated(300, 0.8)
  
 End Sub
  
 Sub FAB_Btn_MouseReleased (EventData As MouseEvent)
  
-'	FAB_Btn.SetAlphaAnimated(300, 0.9)
-'	
-'	If  EventData.PrimaryButtonDown Then
-'	
-''		FAB_Btn.SetAlphaAnimated(300, 0.9)
-'		Log(11147687)
-'		FAB_Btn.SetAlphaAnimated(200,1)
-'		
-'	
-'	Else
-'		
-'		Log(9447687)
-'	'	FAB_Btn.SetAlphaAnimated(300, 0.9)
-'		
-' 	FAB_Btn.SetAlphaAnimated(200,1)
-'		
-'	End If
+	'	FAB_Btn.SetAlphaAnimated(300, 0.9)
+	'
+	'	If  EventData.PrimaryButtonDown Then
+	'
+	''		FAB_Btn.SetAlphaAnimated(300, 0.9)
+	'		Log(11147687)
+	'		FAB_Btn.SetAlphaAnimated(200,1)
+	'
+	'
+	'	Else
+	'
+	'		Log(9447687)
+	'	'	FAB_Btn.SetAlphaAnimated(300, 0.9)
+	'
+	' 	FAB_Btn.SetAlphaAnimated(200,1)
+	'
+	'	End If
 	
 	
 End Sub
 
 Sub FAB_Btn_FocusChanged (HasFocus As Boolean)
-'	
-'	If Not(HasFocus) Then
-'		
-'		Log(65447687)
-'		FAB_Btn.SetAlphaAnimated(200,1)
-'		
-'	End If
+	'
+	'	If Not(HasFocus) Then
+	'
+	'		Log(65447687)
+	'		FAB_Btn.SetAlphaAnimated(200,1)
+	'
+	'	End If
 	
-End Sub
-
-
-Public Sub setRotationX(angle As Float)
-	
-	ControlsUtils.setRotationX(FAB_Btn, angle) 'rotate
-	 
 End Sub

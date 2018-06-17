@@ -3,8 +3,10 @@ Version=5.51
 ModulesStructureVersion=1
 B4J=true
 @EndOfDesignText@
-
 'Custom View class
+
+#Region Internal Segment
+
 Sub Class_Globals
 	Private fx As JFX
 	Private mEventName As String 'ignore
@@ -36,6 +38,10 @@ End Sub
 Public Sub GetBase As Pane
 	Return mBase
 End Sub
+
+#End Region
+
+#Region Actions and Effects
 
 Public Sub SetBg(color As String)
  
@@ -75,3 +81,5 @@ Public Sub removeEffects()
 	ControlsUtils.removePaneEffect(InnerCard)
 	
 End Sub
+
+#End Region

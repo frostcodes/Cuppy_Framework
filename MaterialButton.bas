@@ -6,6 +6,9 @@ B4J=true
 'Custom View class
  
 #Event: MousePressed (EventData As MouseEvent)
+
+#Region Internal Segment
+
 Sub Class_Globals
 	Private fx As JFX
 	Private mEventName As String 'ignore
@@ -38,13 +41,10 @@ Public Sub GetBase As Pane
 	Return mBase
 End Sub
 
+#End Region
 
-Public Sub InnerButton_MousePressed (EventData As MouseEvent)
-	  
-	CallSub2(mCallBack, mEventName & "_MousePressed", EventData) 'ignore
-	 
-End Sub
-
+#Region Actions and Effects
+ 
 Public Sub SetBg(color As String)
  
 	CSSUtils.SetStyleProperty( InnerButton, "-fx-background-color", color)
@@ -82,3 +82,13 @@ Public Sub removeEffects()
 	ControlsUtils.removeEffect(InnerButton)
 	
 End Sub
+
+#End Region
+
+
+Public Sub InnerButton_MousePressed (EventData As MouseEvent)
+	  
+	CallSub2(mCallBack, mEventName & "_MousePressed", EventData) 'ignore
+	 
+End Sub
+
