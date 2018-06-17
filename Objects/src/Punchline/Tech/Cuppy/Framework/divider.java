@@ -37,12 +37,10 @@ public Punchline.Tech.Cuppy.Framework.controlsutils _controlsutils = null;
 public Punchline.Tech.Cuppy.Framework.animationmanager _animationmanager = null;
 public Punchline.Tech.Cuppy.Framework.licensemanager _licensemanager = null;
 public String  _base_resize(double _width,double _height) throws Exception{
- //BA.debugLineNum = 32;BA.debugLine="Private Sub Base_Resize (Width As Double, Height A";
- //BA.debugLineNum = 34;BA.debugLine="line.PrefWidth = Width";
+ //BA.debugLineNum = 39;BA.debugLine="Private Sub Base_Resize (Width As Double, Height A";
+ //BA.debugLineNum = 41;BA.debugLine="line.PrefWidth = Width";
 _line.setPrefWidth(_width);
- //BA.debugLineNum = 35;BA.debugLine="line.PrefHeight =  Height";
-_line.setPrefHeight(_height);
- //BA.debugLineNum = 37;BA.debugLine="End Sub";
+ //BA.debugLineNum = 43;BA.debugLine="End Sub";
 return "";
 }
 public String  _class_globals() throws Exception{
@@ -55,7 +53,7 @@ _meventname = "";
 _mcallback = new Object();
  //BA.debugLineNum = 11;BA.debugLine="Private mBase As Pane";
 _mbase = new anywheresoftware.b4j.objects.PaneWrapper.ConcretePaneWrapper();
- //BA.debugLineNum = 12;BA.debugLine="Private line As Pane";
+ //BA.debugLineNum = 12;BA.debugLine="Public line As Pane";
 _line = new anywheresoftware.b4j.objects.PaneWrapper.ConcretePaneWrapper();
  //BA.debugLineNum = 13;BA.debugLine="End Sub";
 return "";
@@ -68,19 +66,22 @@ _mbase = _base;
 _mbase.LoadLayout(ba,"DividerLayout");
  //BA.debugLineNum = 24;BA.debugLine="SetBg(StyleManager.DefaultTheme.Get(\"divider\"))";
 _setbg(BA.ObjectToString(_stylemanager._defaulttheme.Get((Object)("divider"))));
- //BA.debugLineNum = 25;BA.debugLine="setThickness(Props.Get(\"thickness\"))";
-_setthickness((int)(BA.ObjectToNumber(_props.Get((Object)("thickness")))));
- //BA.debugLineNum = 28;BA.debugLine="Log(\"Thick:  \" & Props.Get(\"thickness\"))";
-__c.Log("Thick:  "+BA.ObjectToString(_props.Get((Object)("thickness"))));
- //BA.debugLineNum = 30;BA.debugLine="End Sub";
+ //BA.debugLineNum = 37;BA.debugLine="End Sub";
 return "";
 }
 public anywheresoftware.b4j.objects.PaneWrapper.ConcretePaneWrapper  _getbase() throws Exception{
- //BA.debugLineNum = 39;BA.debugLine="Public Sub GetBase As Pane";
- //BA.debugLineNum = 40;BA.debugLine="Return mBase";
+ //BA.debugLineNum = 45;BA.debugLine="Public Sub GetBase As Pane";
+ //BA.debugLineNum = 46;BA.debugLine="Return mBase";
 if (true) return _mbase;
- //BA.debugLineNum = 41;BA.debugLine="End Sub";
+ //BA.debugLineNum = 47;BA.debugLine="End Sub";
 return null;
+}
+public double  _getsize() throws Exception{
+ //BA.debugLineNum = 102;BA.debugLine="Public Sub getSize() As Double";
+ //BA.debugLineNum = 104;BA.debugLine="Return line.PrefHeight";
+if (true) return _line.getPrefHeight();
+ //BA.debugLineNum = 106;BA.debugLine="End Sub";
+return 0;
 }
 public String  _initialize(anywheresoftware.b4a.BA _ba,Object _callback,String _eventname) throws Exception{
 innerInitialize(_ba);
@@ -93,62 +94,53 @@ _mcallback = _callback;
 return "";
 }
 public String  _removeeffects() throws Exception{
- //BA.debugLineNum = 80;BA.debugLine="Public Sub removeEffects()";
- //BA.debugLineNum = 82;BA.debugLine="ControlsUtils.removePaneEffect(line)";
+ //BA.debugLineNum = 86;BA.debugLine="Public Sub removeEffects()";
+ //BA.debugLineNum = 88;BA.debugLine="ControlsUtils.removePaneEffect(line)";
 _controlsutils._removepaneeffect(_line);
- //BA.debugLineNum = 84;BA.debugLine="End Sub";
+ //BA.debugLineNum = 90;BA.debugLine="End Sub";
 return "";
 }
 public String  _setbg(String _color) throws Exception{
- //BA.debugLineNum = 48;BA.debugLine="Public Sub SetBg(color As String)";
- //BA.debugLineNum = 50;BA.debugLine="CSSUtils.SetStyleProperty( line, \"-fx-background-";
+ //BA.debugLineNum = 54;BA.debugLine="Public Sub SetBg(color As String)";
+ //BA.debugLineNum = 56;BA.debugLine="CSSUtils.SetStyleProperty( line, \"-fx-background-";
 _cssutils._setstyleproperty((anywheresoftware.b4j.objects.NodeWrapper.ConcreteNodeWrapper) anywheresoftware.b4a.AbsObjectWrapper.ConvertToWrapper(new anywheresoftware.b4j.objects.NodeWrapper.ConcreteNodeWrapper(), (javafx.scene.Node)(_line.getObject())),"-fx-background-color",_color);
- //BA.debugLineNum = 52;BA.debugLine="End Sub";
-return "";
-}
-public String  _setborder(String _color,int _width) throws Exception{
- //BA.debugLineNum = 60;BA.debugLine="Public Sub setBorder(color As String , width As In";
- //BA.debugLineNum = 62;BA.debugLine="ControlsUtils.setPaneBorder(line, color, width)";
-_controlsutils._setpaneborder(_line,_color,_width);
- //BA.debugLineNum = 64;BA.debugLine="End Sub";
-return "";
-}
-public String  _setborderradius(int _radius) throws Exception{
- //BA.debugLineNum = 67;BA.debugLine="Sub setBorderRadius(radius As Int)";
- //BA.debugLineNum = 69;BA.debugLine="ControlsUtils.setPaneBorderRadius(line, radius)";
-_controlsutils._setpaneborderradius(_line,_radius);
- //BA.debugLineNum = 71;BA.debugLine="End Sub";
-return "";
-}
-public String  _setpaneeffect(String _effect) throws Exception{
- //BA.debugLineNum = 74;BA.debugLine="Public Sub setPaneEffect(effect As String)";
- //BA.debugLineNum = 76;BA.debugLine="ControlsUtils.setPaneEffect(line, effect)";
-_controlsutils._setpaneeffect(_line,_effect);
- //BA.debugLineNum = 78;BA.debugLine="End Sub";
-return "";
-}
-public String  _setrotationx(float _angle) throws Exception{
- //BA.debugLineNum = 54;BA.debugLine="Public Sub setRotationX(angle As Float)";
- //BA.debugLineNum = 56;BA.debugLine="ControlsUtils.setPaneRotationX(line, angle) 'rota";
-_controlsutils._setpanerotationx(_line,_angle);
  //BA.debugLineNum = 58;BA.debugLine="End Sub";
 return "";
 }
-public String  _setthickness(int _size) throws Exception{
- //BA.debugLineNum = 90;BA.debugLine="Sub setThickness(size As Int)";
- //BA.debugLineNum = 92;BA.debugLine="line.PrefHeight =  thickness";
-_line.setPrefHeight(_thickness());
- //BA.debugLineNum = 93;BA.debugLine="mBase.PrefHeight = thickness";
-_mbase.setPrefHeight(_thickness());
- //BA.debugLineNum = 95;BA.debugLine="End Sub";
+public String  _setborder(String _color,int _width) throws Exception{
+ //BA.debugLineNum = 66;BA.debugLine="Public Sub setBorder(color As String , width As In";
+ //BA.debugLineNum = 68;BA.debugLine="ControlsUtils.setPaneBorder(line, color, width)";
+_controlsutils._setpaneborder(_line,_color,_width);
+ //BA.debugLineNum = 70;BA.debugLine="End Sub";
 return "";
 }
-public int  _thickness() throws Exception{
- //BA.debugLineNum = 97;BA.debugLine="Sub thickness() As Int";
- //BA.debugLineNum = 99;BA.debugLine="Return line.PrefHeight";
-if (true) return (int) (_line.getPrefHeight());
- //BA.debugLineNum = 101;BA.debugLine="End Sub";
-return 0;
+public String  _setborderradius(int _radius) throws Exception{
+ //BA.debugLineNum = 73;BA.debugLine="Public Sub setBorderRadius(radius As Int)";
+ //BA.debugLineNum = 75;BA.debugLine="ControlsUtils.setPaneBorderRadius(line, radius)";
+_controlsutils._setpaneborderradius(_line,_radius);
+ //BA.debugLineNum = 77;BA.debugLine="End Sub";
+return "";
+}
+public String  _setpaneeffect(String _effect) throws Exception{
+ //BA.debugLineNum = 80;BA.debugLine="Public Sub setPaneEffect(effect As String)";
+ //BA.debugLineNum = 82;BA.debugLine="ControlsUtils.setPaneEffect(line, effect)";
+_controlsutils._setpaneeffect(_line,_effect);
+ //BA.debugLineNum = 84;BA.debugLine="End Sub";
+return "";
+}
+public String  _setrotationx(float _angle) throws Exception{
+ //BA.debugLineNum = 60;BA.debugLine="Public Sub setRotationX(angle As Float)";
+ //BA.debugLineNum = 62;BA.debugLine="ControlsUtils.setPaneRotationX(line, angle) 'rota";
+_controlsutils._setpanerotationx(_line,_angle);
+ //BA.debugLineNum = 64;BA.debugLine="End Sub";
+return "";
+}
+public String  _setsize(int _sizex) throws Exception{
+ //BA.debugLineNum = 96;BA.debugLine="Public Sub setSize(sizeX As Int)";
+ //BA.debugLineNum = 98;BA.debugLine="line.PrefHeight =  sizeX";
+_line.setPrefHeight(_sizex);
+ //BA.debugLineNum = 100;BA.debugLine="End Sub";
+return "";
 }
 public Object callSub(String sub, Object sender, Object[] args) throws Exception {
 BA.senderHolder.set(sender);

@@ -55,7 +55,7 @@ Public Sub setBorder(color As String , width As Int)
 
 End Sub
 
-Sub setBorderRadius(radius As Int)
+Public Sub setBorderRadius(radius As Int)
 	
 	ControlsUtils.setBorderRadius(FAB_Btn, radius)
 	

@@ -110,7 +110,7 @@ _controlsutils._setpaneborder(_innercard,_color,_width);
 return "";
 }
 public String  _setborderradius(int _radius) throws Exception{
- //BA.debugLineNum = 61;BA.debugLine="Sub setBorderRadius(radius As Int)";
+ //BA.debugLineNum = 61;BA.debugLine="Public Sub setBorderRadius(radius As Int)";
  //BA.debugLineNum = 63;BA.debugLine="ControlsUtils.setPaneBorderRadius(InnerCard, radi";
 _controlsutils._setpaneborderradius(_innercard,_radius);
  //BA.debugLineNum = 65;BA.debugLine="End Sub";

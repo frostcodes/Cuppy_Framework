@@ -5,7 +5,7 @@ B4J=true
 @EndOfDesignText@
 'Custom View class
  
-#DesignerProperty: Key: thickness, DisplayName: thickness, FieldType: Int, DefaultValue: 1, MinRange: 0, MaxRange: 20, Description: Set how thick the divider should be
+''''#  Designer    Property: Key: thic kness, DisplayName: thick ness, FieldType: Int, DefaultValue: 1, Description: Set how thick the divider should be
 
 #Region Internal Segment
 
@@ -14,9 +14,9 @@ Sub Class_Globals
 	Private mEventName As String 'ignore
 	Private mCallBack As Object 'ignore
 	Private mBase As Pane
-	Private line As Pane
+	Public line As Pane
 End Sub
-
+'
 Public Sub Initialize (Callback As Object, EventName As String)
 	mEventName = EventName
 	mCallBack = Callback
@@ -27,17 +27,23 @@ Public Sub DesignerCreateView (Base As Pane, Lbl As Label, Props As Map)
 	mBase.LoadLayout("DividerLayout")
 	'set using theme...
 	SetBg(StyleManager.DefaultTheme.Get("divider"))
-	setThickness(Props.Get("thickness"))
-	
 	 
-	Log("Thick:  " & Props.Get("thickness"))
 	 
+	 'BUG: unable to set thickness from designer...
+'	Dim thick As Double =  Props.Get("thickness")
+'	line.SetSize(mBase.Width, thick)
+'	 
+'	 
+'	Log("Thick:  " & thick)
+'	
+'	Log("Thick2:  " & Thickness)
+'	
+'	 
 End Sub
 
 Private Sub Base_Resize (Width As Double, Height As Double)
  
 	line.PrefWidth = Width
-	line.PrefHeight =  Height
 	 
 End Sub
 
@@ -69,7 +75,7 @@ Public Sub setBorder(color As String , width As Int)
 End Sub
 
 
-Sub setBorderRadius(radius As Int)
+Public Sub setBorderRadius(radius As Int)
 	
 	ControlsUtils.setPaneBorderRadius(line, radius)
 	
@@ -79,27 +85,26 @@ End Sub
 Public Sub setPaneEffect(effect As String)
 	
 	ControlsUtils.setPaneEffect(line, effect)
-	
+	 
 End Sub
 
 Public Sub removeEffects()
 	
 	ControlsUtils.removePaneEffect(line)
-	
+	 
 End Sub
 
 #End Region
 
 #Region Control Properties
 
-Sub setThickness(size As Int)
+Public Sub setSize(sizeX As Int)
 	
-	line.PrefHeight =  thickness
-	mBase.PrefHeight = thickness
-	 
+	line.PrefHeight =  sizeX
+	  
 End Sub
 
-Sub thickness() As Int
+Public Sub getSize() As Double
 	
 	Return line.PrefHeight
 	

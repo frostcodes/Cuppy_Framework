@@ -112,7 +112,7 @@ _controlsutils._setborder((anywheresoftware.b4j.objects.NodeWrapper.ControlWrapp
 return "";
 }
 public String  _setborderradius(int _radius) throws Exception{
- //BA.debugLineNum = 61;BA.debugLine="Sub setBorderRadius(radius As Int)";
+ //BA.debugLineNum = 61;BA.debugLine="Public Sub setBorderRadius(radius As Int)";
  //BA.debugLineNum = 63;BA.debugLine="ControlsUtils.setBorderRadius(FAB_Btn, radius)";
 _controlsutils._setborderradius((anywheresoftware.b4j.objects.NodeWrapper.ControlWrapper.ConcreteControlWrapper) anywheresoftware.b4a.AbsObjectWrapper.ConvertToWrapper(new anywheresoftware.b4j.objects.NodeWrapper.ControlWrapper.ConcreteControlWrapper(), (javafx.scene.control.Control)(_fab_btn.getObject())),_radius);
  //BA.debugLineNum = 65;BA.debugLine="End Sub";
