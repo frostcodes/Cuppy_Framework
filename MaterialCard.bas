@@ -12,7 +12,7 @@ Sub Class_Globals
 	Private mEventName As String 'ignore
 	Private mCallBack As Object 'ignore
 	Private mBase As Pane
-	Public FAB_Btn As Label
+	Public InnerCard As Pane
 End Sub
 
 Public Sub Initialize (Callback As Object, EventName As String)
@@ -22,17 +22,16 @@ End Sub
 
 Public Sub DesignerCreateView (Base As Pane, Lbl As Label, Props As Map)
 	mBase = Base
-	mBase.LoadLayout("SquareFABLayout")
+	mBase.LoadLayout("CardLayout")
 	'set using theme...
-	SetBg(StyleManager.DefaultTheme.Get("accent"))
-	setRotationX(135) 'rotate by default
+	setBorder(StyleManager.DefaultTheme.Get("divider"), 1)
+	 
 End Sub
 
 Private Sub Base_Resize (Width As Double, Height As Double)
- 
-	 'maintain aspect ratio
-	FAB_Btn.PrefWidth = Width
-	FAB_Btn.PrefHeight = Width
+  
+	InnerCard.PrefWidth = Width
+	InnerCard.PrefHeight = Height
 	 
 End Sub
 
@@ -46,41 +45,41 @@ End Sub
 
 Public Sub SetBg(color As String)
  
-	CSSUtils.SetStyleProperty( FAB_Btn, "-fx-background-color", color)
+	CSSUtils.SetStyleProperty( InnerCard, "-fx-background-color", color)
  
 End Sub
 
 Public Sub setRotationX(angle As Float)
 	
-	ControlsUtils.setRotationX(FAB_Btn, angle) 'rotate 
+	ControlsUtils.setPaneRotationX(InnerCard, angle) 'rotate
 	 
 End Sub
-
+ 
 Public Sub setBorder(color As String , width As Int)
 	
-	ControlsUtils.setBorder(FAB_Btn, color, width)
+	ControlsUtils.setPaneBorder(InnerCard, color, width)
 
 End Sub
-
-
+  
+  
+  
 Sub setBorderRadius(radius As Int)
 	
-	ControlsUtils.setBorderRadius(FAB_Btn, radius)
+	ControlsUtils.setPaneBorderRadius(InnerCard, radius)
 	
 End Sub
 
 
 Public Sub setPaneEffect(effect As String)
 	
-	ControlsUtils.setEffect(FAB_Btn, effect)
+	ControlsUtils.setPaneEffect(InnerCard, effect)
 	
 End Sub
 
 Public Sub removeEffects()
 	
-	ControlsUtils.removeEffect(FAB_Btn)
+	ControlsUtils.removePaneEffect(InnerCard)
 	
 End Sub
 
 #End Region
-  

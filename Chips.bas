@@ -12,7 +12,10 @@ Sub Class_Globals
 	Private mEventName As String 'ignore
 	Private mCallBack As Object 'ignore
 	Private mBase As Pane
-	Public FAB_Btn As Label
+ 
+	Public InnerButtonPane As Pane
+	Public InnerLabel As Label
+	Public InnerPane As Pane
 End Sub
 
 Public Sub Initialize (Callback As Object, EventName As String)
@@ -22,17 +25,16 @@ End Sub
 
 Public Sub DesignerCreateView (Base As Pane, Lbl As Label, Props As Map)
 	mBase = Base
-	mBase.LoadLayout("SquareFABLayout")
+	mBase.LoadLayout("ChipsLayout")
 	'set using theme...
 	SetBg(StyleManager.DefaultTheme.Get("accent"))
-	setRotationX(135) 'rotate by default
+	InnerLabel.Font = StyleManager.SelectFont("Thin", 12)
 End Sub
 
 Private Sub Base_Resize (Width As Double, Height As Double)
  
-	 'maintain aspect ratio
-	FAB_Btn.PrefWidth = Width
-	FAB_Btn.PrefHeight = Width
+	InnerPane.PrefWidth = Width
+	InnerPane.PrefHeight =  Height
 	 
 End Sub
 
@@ -40,47 +42,46 @@ Public Sub GetBase As Pane
 	Return mBase
 End Sub
 
+Public Sub SetBg(color As String)
+ 
+	CSSUtils.SetStyleProperty( InnerPane, "-fx-background-color", color)
+ 
+End Sub
+
 #End Region
 
 #Region Actions and Effects
 
-Public Sub SetBg(color As String)
- 
-	CSSUtils.SetStyleProperty( FAB_Btn, "-fx-background-color", color)
- 
-End Sub
-
 Public Sub setRotationX(angle As Float)
 	
-	ControlsUtils.setRotationX(FAB_Btn, angle) 'rotate 
+	ControlsUtils.setPaneRotationX(InnerPane, angle) 'rotate
 	 
 End Sub
-
+  
 Public Sub setBorder(color As String , width As Int)
 	
-	ControlsUtils.setBorder(FAB_Btn, color, width)
+	ControlsUtils.setPaneBorder(InnerPane, color, width)
 
 End Sub
 
 
 Sub setBorderRadius(radius As Int)
 	
-	ControlsUtils.setBorderRadius(FAB_Btn, radius)
+	ControlsUtils.setPaneBorderRadius(InnerPane, radius)
 	
 End Sub
 
 
 Public Sub setPaneEffect(effect As String)
 	
-	ControlsUtils.setEffect(FAB_Btn, effect)
+	ControlsUtils.setPaneEffect(InnerPane, effect)
 	
 End Sub
 
 Public Sub removeEffects()
 	
-	ControlsUtils.removeEffect(FAB_Btn)
+	ControlsUtils.removePaneEffect(InnerPane)
 	
 End Sub
 
 #End Region
-  

@@ -29,9 +29,9 @@ public b4j.example.cssutils _cssutils = null;
 public Punchline.Tech.Cuppy.Framework.configs _configs = null;
 public Punchline.Tech.Cuppy.Framework.componentsmanager _componentsmanager = null;
 public Punchline.Tech.Cuppy.Framework.stylemanager _stylemanager = null;
-public Punchline.Tech.Cuppy.Framework.licensemanager _licensemanager = null;
-public Punchline.Tech.Cuppy.Framework.animationmanager _animationmanager = null;
 public Punchline.Tech.Cuppy.Framework.controlsutils _controlsutils = null;
+public Punchline.Tech.Cuppy.Framework.animationmanager _animationmanager = null;
+public Punchline.Tech.Cuppy.Framework.licensemanager _licensemanager = null;
 public String  _class_globals() throws Exception{
  //BA.debugLineNum = 1;BA.debugLine="Sub Class_Globals";
  //BA.debugLineNum = 2;BA.debugLine="Private fx As JFX";

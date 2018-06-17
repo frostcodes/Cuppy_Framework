@@ -34,9 +34,9 @@ public b4j.example.cssutils _cssutils = null;
 public Punchline.Tech.Cuppy.Framework.configs _configs = null;
 public Punchline.Tech.Cuppy.Framework.componentsmanager _componentsmanager = null;
 public Punchline.Tech.Cuppy.Framework.stylemanager _stylemanager = null;
-public Punchline.Tech.Cuppy.Framework.licensemanager _licensemanager = null;
-public Punchline.Tech.Cuppy.Framework.animationmanager _animationmanager = null;
 public Punchline.Tech.Cuppy.Framework.controlsutils _controlsutils = null;
+public Punchline.Tech.Cuppy.Framework.animationmanager _animationmanager = null;
+public Punchline.Tech.Cuppy.Framework.licensemanager _licensemanager = null;
 public String  _base_resize(double _width,double _height) throws Exception{
  //BA.debugLineNum = 24;BA.debugLine="Private Sub Base_Resize (Width As Double, Height A";
  //BA.debugLineNum = 26;BA.debugLine="End Sub";
@@ -87,6 +87,13 @@ _mcallback = _callback;
  //BA.debugLineNum = 14;BA.debugLine="End Sub";
 return "";
 }
+public String  _removeeffects() throws Exception{
+ //BA.debugLineNum = 65;BA.debugLine="Public Sub removeEffects()";
+ //BA.debugLineNum = 67;BA.debugLine="ControlsUtils.removeEffect(Label1)";
+_controlsutils._removeeffect((anywheresoftware.b4j.objects.NodeWrapper.ControlWrapper.ConcreteControlWrapper) anywheresoftware.b4a.AbsObjectWrapper.ConvertToWrapper(new anywheresoftware.b4j.objects.NodeWrapper.ControlWrapper.ConcreteControlWrapper(), (javafx.scene.control.Control)(_label1.getObject())));
+ //BA.debugLineNum = 69;BA.debugLine="End Sub";
+return "";
+}
 public String  _setbg(String _color) throws Exception{
  //BA.debugLineNum = 32;BA.debugLine="Public Sub SetBg(color As String)";
  //BA.debugLineNum = 34;BA.debugLine="CSSUtils.SetStyleProperty( Label1, \"-fx-backgroun";
@@ -96,13 +103,38 @@ _cssutils._setstyleproperty((anywheresoftware.b4j.objects.NodeWrapper.ConcreteNo
  //BA.debugLineNum = 37;BA.debugLine="End Sub";
 return "";
 }
+public String  _setborder(String _color,int _width) throws Exception{
+ //BA.debugLineNum = 46;BA.debugLine="Public Sub setBorder(color As String , width As In";
+ //BA.debugLineNum = 48;BA.debugLine="ControlsUtils.setBorder(Label1, color, width)";
+_controlsutils._setborder((anywheresoftware.b4j.objects.NodeWrapper.ControlWrapper.ConcreteControlWrapper) anywheresoftware.b4a.AbsObjectWrapper.ConvertToWrapper(new anywheresoftware.b4j.objects.NodeWrapper.ControlWrapper.ConcreteControlWrapper(), (javafx.scene.control.Control)(_label1.getObject())),_color,_width);
+ //BA.debugLineNum = 49;BA.debugLine="ControlsUtils.setPaneBorder(InnerPane, color, wi";
+_controlsutils._setpaneborder(_innerpane,_color,_width);
+ //BA.debugLineNum = 51;BA.debugLine="End Sub";
+return "";
+}
+public String  _setborderradius(int _radius) throws Exception{
+ //BA.debugLineNum = 53;BA.debugLine="Public Sub setBorderRadius(radius As Int)";
+ //BA.debugLineNum = 54;BA.debugLine="ControlsUtils.setBorderRadius(Label1, radius)";
+_controlsutils._setborderradius((anywheresoftware.b4j.objects.NodeWrapper.ControlWrapper.ConcreteControlWrapper) anywheresoftware.b4a.AbsObjectWrapper.ConvertToWrapper(new anywheresoftware.b4j.objects.NodeWrapper.ControlWrapper.ConcreteControlWrapper(), (javafx.scene.control.Control)(_label1.getObject())),_radius);
+ //BA.debugLineNum = 55;BA.debugLine="ControlsUtils.setPaneBorderRadius(InnerPane, radi";
+_controlsutils._setpaneborderradius(_innerpane,_radius);
+ //BA.debugLineNum = 57;BA.debugLine="End Sub";
+return "";
+}
+public String  _setpaneeffect(String _effect) throws Exception{
+ //BA.debugLineNum = 59;BA.debugLine="Public Sub setPaneEffect(effect As String)";
+ //BA.debugLineNum = 61;BA.debugLine="ControlsUtils.setEffect(Label1, effect)";
+_controlsutils._seteffect((anywheresoftware.b4j.objects.NodeWrapper.ControlWrapper.ConcreteControlWrapper) anywheresoftware.b4a.AbsObjectWrapper.ConvertToWrapper(new anywheresoftware.b4j.objects.NodeWrapper.ControlWrapper.ConcreteControlWrapper(), (javafx.scene.control.Control)(_label1.getObject())),_effect);
+ //BA.debugLineNum = 63;BA.debugLine="End Sub";
+return "";
+}
 public String  _setrotationx(float _angle) throws Exception{
- //BA.debugLineNum = 40;BA.debugLine="Public Sub setRotationX(angle As Float)";
- //BA.debugLineNum = 42;BA.debugLine="ControlsUtils.setRotationX(Label1, angle) 'rotate";
+ //BA.debugLineNum = 39;BA.debugLine="Public Sub setRotationX(angle As Float)";
+ //BA.debugLineNum = 41;BA.debugLine="ControlsUtils.setRotationX(Label1, angle) 'rotate";
 _controlsutils._setrotationx((anywheresoftware.b4j.objects.NodeWrapper.ControlWrapper.ConcreteControlWrapper) anywheresoftware.b4a.AbsObjectWrapper.ConvertToWrapper(new anywheresoftware.b4j.objects.NodeWrapper.ControlWrapper.ConcreteControlWrapper(), (javafx.scene.control.Control)(_label1.getObject())),_angle);
- //BA.debugLineNum = 43;BA.debugLine="ControlsUtils.setPaneRotationX(InnerPane , angle)";
+ //BA.debugLineNum = 42;BA.debugLine="ControlsUtils.setPaneRotationX(InnerPane , angle)";
 _controlsutils._setpanerotationx(_innerpane,_angle);
- //BA.debugLineNum = 45;BA.debugLine="End Sub";
+ //BA.debugLineNum = 44;BA.debugLine="End Sub";
 return "";
 }
 public Object callSub(String sub, Object sender, Object[] args) throws Exception {
