@@ -63,7 +63,7 @@ End Sub
   
   
   
-Sub setBorderRadius(radius As Int)
+Public Sub setBorderRadius(radius As Int)
 	
 	ControlsUtils.setPaneBorderRadius(InnerCard, radius)
 	
