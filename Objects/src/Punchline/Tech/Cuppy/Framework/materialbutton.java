@@ -37,64 +37,64 @@ public Punchline.Tech.Cuppy.Framework.controlsutils _controlsutils = null;
 public Punchline.Tech.Cuppy.Framework.animationmanager _animationmanager = null;
 public Punchline.Tech.Cuppy.Framework.licensemanager _licensemanager = null;
 public String  _base_resize(double _width,double _height) throws Exception{
- //BA.debugLineNum = 25;BA.debugLine="Private Sub Base_Resize (Width As Double, Height A";
- //BA.debugLineNum = 27;BA.debugLine="InnerButton.PrefWidth = Width";
+ //BA.debugLineNum = 28;BA.debugLine="Private Sub Base_Resize (Width As Double, Height A";
+ //BA.debugLineNum = 30;BA.debugLine="InnerButton.PrefWidth = Width";
 _innerbutton.setPrefWidth(_width);
- //BA.debugLineNum = 28;BA.debugLine="InnerButton.PrefHeight =  Height";
+ //BA.debugLineNum = 31;BA.debugLine="InnerButton.PrefHeight =  Height";
 _innerbutton.setPrefHeight(_height);
- //BA.debugLineNum = 30;BA.debugLine="End Sub";
+ //BA.debugLineNum = 33;BA.debugLine="End Sub";
 return "";
 }
 public String  _class_globals() throws Exception{
- //BA.debugLineNum = 4;BA.debugLine="Sub Class_Globals";
- //BA.debugLineNum = 5;BA.debugLine="Private fx As JFX";
+ //BA.debugLineNum = 7;BA.debugLine="Sub Class_Globals";
+ //BA.debugLineNum = 8;BA.debugLine="Private fx As JFX";
 _fx = new anywheresoftware.b4j.objects.JFX();
- //BA.debugLineNum = 6;BA.debugLine="Private mEventName As String 'ignore";
+ //BA.debugLineNum = 9;BA.debugLine="Private mEventName As String 'ignore";
 _meventname = "";
- //BA.debugLineNum = 7;BA.debugLine="Private mCallBack As Object 'ignore";
+ //BA.debugLineNum = 10;BA.debugLine="Private mCallBack As Object 'ignore";
 _mcallback = new Object();
- //BA.debugLineNum = 8;BA.debugLine="Private mBase As Pane";
+ //BA.debugLineNum = 11;BA.debugLine="Private mBase As Pane";
 _mbase = new anywheresoftware.b4j.objects.PaneWrapper.ConcretePaneWrapper();
- //BA.debugLineNum = 9;BA.debugLine="Public InnerButton As Button";
+ //BA.debugLineNum = 12;BA.debugLine="Public InnerButton As Button";
 _innerbutton = new anywheresoftware.b4j.objects.ButtonWrapper();
- //BA.debugLineNum = 10;BA.debugLine="End Sub";
+ //BA.debugLineNum = 13;BA.debugLine="End Sub";
 return "";
 }
 public String  _designercreateview(anywheresoftware.b4j.objects.PaneWrapper.ConcretePaneWrapper _base,anywheresoftware.b4j.objects.LabelWrapper _lbl,anywheresoftware.b4a.objects.collections.Map _props) throws Exception{
- //BA.debugLineNum = 17;BA.debugLine="Public Sub DesignerCreateView (Base As Pane, Lbl A";
- //BA.debugLineNum = 18;BA.debugLine="mBase = Base";
+ //BA.debugLineNum = 20;BA.debugLine="Public Sub DesignerCreateView (Base As Pane, Lbl A";
+ //BA.debugLineNum = 21;BA.debugLine="mBase = Base";
 _mbase = _base;
- //BA.debugLineNum = 19;BA.debugLine="mBase.LoadLayout(\"MaterialButtonLayout\")";
+ //BA.debugLineNum = 22;BA.debugLine="mBase.LoadLayout(\"MaterialButtonLayout\")";
 _mbase.LoadLayout(ba,"MaterialButtonLayout");
- //BA.debugLineNum = 21;BA.debugLine="SetBg(StyleManager.DefaultTheme.Get(\"accent\"))";
+ //BA.debugLineNum = 24;BA.debugLine="SetBg(StyleManager.DefaultTheme.Get(\"accent\"))";
 _setbg(BA.ObjectToString(_stylemanager._defaulttheme.Get((Object)("accent"))));
- //BA.debugLineNum = 22;BA.debugLine="InnerButton.Font = StyleManager.DefaultFont";
+ //BA.debugLineNum = 25;BA.debugLine="InnerButton.Font = StyleManager.DefaultFont";
 _innerbutton.setFont(_stylemanager._defaultfont);
- //BA.debugLineNum = 23;BA.debugLine="End Sub";
+ //BA.debugLineNum = 26;BA.debugLine="End Sub";
 return "";
 }
 public anywheresoftware.b4j.objects.PaneWrapper.ConcretePaneWrapper  _getbase() throws Exception{
- //BA.debugLineNum = 32;BA.debugLine="Public Sub GetBase As Pane";
- //BA.debugLineNum = 33;BA.debugLine="Return mBase";
+ //BA.debugLineNum = 35;BA.debugLine="Public Sub GetBase As Pane";
+ //BA.debugLineNum = 36;BA.debugLine="Return mBase";
 if (true) return _mbase;
- //BA.debugLineNum = 34;BA.debugLine="End Sub";
+ //BA.debugLineNum = 37;BA.debugLine="End Sub";
 return null;
 }
 public String  _initialize(anywheresoftware.b4a.BA _ba,Object _callback,String _eventname) throws Exception{
 innerInitialize(_ba);
- //BA.debugLineNum = 12;BA.debugLine="Public Sub Initialize (Callback As Object, EventNa";
- //BA.debugLineNum = 13;BA.debugLine="mEventName = EventName";
+ //BA.debugLineNum = 15;BA.debugLine="Public Sub Initialize (Callback As Object, EventNa";
+ //BA.debugLineNum = 16;BA.debugLine="mEventName = EventName";
 _meventname = _eventname;
- //BA.debugLineNum = 14;BA.debugLine="mCallBack = Callback";
+ //BA.debugLineNum = 17;BA.debugLine="mCallBack = Callback";
 _mcallback = _callback;
- //BA.debugLineNum = 15;BA.debugLine="End Sub";
+ //BA.debugLineNum = 18;BA.debugLine="End Sub";
 return "";
 }
 public String  _innerbutton_mousepressed(anywheresoftware.b4j.objects.NodeWrapper.MouseEventWrapper _eventdata) throws Exception{
- //BA.debugLineNum = 37;BA.debugLine="Public Sub InnerButton_MousePressed (EventData As";
- //BA.debugLineNum = 39;BA.debugLine="CallSub2(mCallBack, mEventName & \"_MousePressed\",";
+ //BA.debugLineNum = 84;BA.debugLine="Public Sub InnerButton_MousePressed (EventData As";
+ //BA.debugLineNum = 86;BA.debugLine="CallSub2(mCallBack, mEventName & \"_MousePressed\",";
 __c.CallSubNew2(ba,_mcallback,_meventname+"_MousePressed",(Object)(_eventdata));
- //BA.debugLineNum = 41;BA.debugLine="End Sub";
+ //BA.debugLineNum = 88;BA.debugLine="End Sub";
 return "";
 }
 public String  _removeeffects() throws Exception{

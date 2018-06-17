@@ -5,7 +5,7 @@ B4J=true
 @EndOfDesignText@
 'Custom View class
  
-#Event: MousePressed (EventData As MouseEvent)
+#DesignerProperty: Key: thickness, DisplayName: thickness, FieldType: Int, DefaultValue: 1, MinRange: 0, MaxRange: 20, Description: Set how thick the divider should be
 
 #Region Internal Segment
 
@@ -14,7 +14,7 @@ Sub Class_Globals
 	Private mEventName As String 'ignore
 	Private mCallBack As Object 'ignore
 	Private mBase As Pane
-	Public InnerButton As Button
+	Private line As Pane
 End Sub
 
 Public Sub Initialize (Callback As Object, EventName As String)
@@ -24,16 +24,20 @@ End Sub
 
 Public Sub DesignerCreateView (Base As Pane, Lbl As Label, Props As Map)
 	mBase = Base
-	mBase.LoadLayout("MaterialButtonLayout")
+	mBase.LoadLayout("DividerLayout")
 	'set using theme...
-	SetBg(StyleManager.DefaultTheme.Get("accent"))
-	InnerButton.Font = StyleManager.DefaultFont
+	SetBg(StyleManager.DefaultTheme.Get("divider"))
+	setThickness(Props.Get("thickness"))
+	
+	 
+	Log("Thick:  " & Props.Get("thickness"))
+	 
 End Sub
 
 Private Sub Base_Resize (Width As Double, Height As Double)
  
-	InnerButton.PrefWidth = Width
-	InnerButton.PrefHeight =  Height
+	line.PrefWidth = Width
+	line.PrefHeight =  Height
 	 
 End Sub
 
@@ -42,54 +46,65 @@ Public Sub GetBase As Pane
 End Sub
 
 #End Region
-
-
-Public Sub InnerButton_MousePressed (EventData As MouseEvent)
-	  
-	CallSub2(mCallBack, mEventName & "_MousePressed", EventData) 'ignore
-	 
-End Sub
-
+ 
 
 #Region Actions and Effects
 
 Public Sub SetBg(color As String)
  
-	CSSUtils.SetStyleProperty( InnerButton, "-fx-background-color", color)
+	CSSUtils.SetStyleProperty( line, "-fx-background-color", color)
  
 End Sub
 
 Public Sub setRotationX(angle As Float)
 	
-	ControlsUtils.setRotationX(InnerButton, angle) 'rotate
+	ControlsUtils.setPaneRotationX(line, angle) 'rotate
 	 
 End Sub
   
 Public Sub setBorder(color As String , width As Int)
 	
-	ControlsUtils.setBorder(InnerButton, color, width)
+	ControlsUtils.setPaneBorder(line, color, width)
 
 End Sub
 
 
 Sub setBorderRadius(radius As Int)
 	
-	ControlsUtils.setBorderRadius(InnerButton, radius)
+	ControlsUtils.setPaneBorderRadius(line, radius)
 	
 End Sub
 
 
 Public Sub setPaneEffect(effect As String)
 	
-	ControlsUtils.setEffect(InnerButton, effect)
+	ControlsUtils.setPaneEffect(line, effect)
 	
 End Sub
 
 Public Sub removeEffects()
 	
-	ControlsUtils.removeEffect(InnerButton)
+	ControlsUtils.removePaneEffect(line)
 	
 End Sub
 
 #End Region
+
+#Region Control Properties
+
+Sub setThickness(size As Int)
+	
+	line.PrefHeight =  thickness
+	mBase.PrefHeight = thickness
+	 
+End Sub
+
+Sub thickness() As Int
+	
+	Return line.PrefHeight
+	
+End Sub
+
+#End Region
+
 
