@@ -4,14 +4,15 @@ ModulesStructureVersion=1
 B4J=true
 @EndOfDesignText@
 'Custom View class
- 
-#Event: MousePressed (EventData As MouseEvent)
 Sub Class_Globals
 	Private fx As JFX
 	Private mEventName As String 'ignore
 	Private mCallBack As Object 'ignore
 	Private mBase As Pane
-	Public InnerButton As Button
+ 
+	Public InnerButtonPane As Pane
+	Public InnerLabel As Label
+	Public InnerPane As Pane
 End Sub
 
 Public Sub Initialize (Callback As Object, EventName As String)
@@ -21,16 +22,16 @@ End Sub
 
 Public Sub DesignerCreateView (Base As Pane, Lbl As Label, Props As Map)
 	mBase = Base
-	mBase.LoadLayout("MaterialButtonLayout")
+	mBase.LoadLayout("ChipsLayout")
 	'set using theme...
 	SetBg(StyleManager.DefaultTheme.Get("accent"))
-	InnerButton.Font = StyleManager.DefaultFont
+	InnerLabel.Font = StyleManager.SelectFont("Thin", 12)
 End Sub
 
 Private Sub Base_Resize (Width As Double, Height As Double)
  
-	InnerButton.PrefWidth = Width
-	InnerButton.PrefHeight =  Height
+	InnerPane.PrefWidth = Width
+	InnerPane.PrefHeight =  Height
 	 
 End Sub
 
@@ -38,47 +39,40 @@ Public Sub GetBase As Pane
 	Return mBase
 End Sub
 
-
-Public Sub InnerButton_MousePressed (EventData As MouseEvent)
-	  
-	CallSub2(mCallBack, mEventName & "_MousePressed", EventData) 'ignore
-	 
-End Sub
-
 Public Sub SetBg(color As String)
  
-	CSSUtils.SetStyleProperty( InnerButton, "-fx-background-color", color)
+	CSSUtils.SetStyleProperty( InnerPane, "-fx-background-color", color)
  
 End Sub
 
 Public Sub setRotationX(angle As Float)
 	
-	ControlsUtils.setRotationX(InnerButton, angle) 'rotate
+	ControlsUtils.setPaneRotationX(InnerPane, angle) 'rotate
 	 
 End Sub
   
 Public Sub setBorder(color As String , width As Int)
 	
-	ControlsUtils.setBorder(InnerButton, color, width)
+	ControlsUtils.setPaneBorder(InnerPane, color, width)
 
 End Sub
 
 
 Sub setBorderRadius(radius As Int)
 	
-	ControlsUtils.setBorderRadius(InnerButton, radius)
+	ControlsUtils.setPaneBorderRadius(InnerPane, radius)
 	
 End Sub
 
 
 Public Sub setPaneEffect(effect As String)
 	
-	ControlsUtils.setEffect(InnerButton, effect)
+	ControlsUtils.setPaneEffect(InnerPane, effect)
 	
 End Sub
 
 Public Sub removeEffects()
 	
-	ControlsUtils.removeEffect(InnerButton)
+	ControlsUtils.removePaneEffect(InnerPane)
 	
 End Sub
