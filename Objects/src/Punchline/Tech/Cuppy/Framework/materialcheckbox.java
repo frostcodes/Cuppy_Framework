@@ -54,16 +54,16 @@ _checkedlabel.setPrefHeight(_height);
 return "";
 }
 public String  _checkboxpane_mousepressed(anywheresoftware.b4j.objects.NodeWrapper.MouseEventWrapper _eventdata) throws Exception{
- //BA.debugLineNum = 145;BA.debugLine="Private Sub CheckboxPane_MousePressed (EventData A";
- //BA.debugLineNum = 147;BA.debugLine="If Not(checked) Or IsIndeterminate Then";
+ //BA.debugLineNum = 146;BA.debugLine="Private Sub CheckboxPane_MousePressed (EventData A";
+ //BA.debugLineNum = 148;BA.debugLine="If Not(checked) Or IsIndeterminate Then";
 if (__c.Not(_checked()) || _isindeterminate()) { 
- //BA.debugLineNum = 149;BA.debugLine="setCheckState(CHECKED_STATE)";
+ //BA.debugLineNum = 150;BA.debugLine="setCheckState(CHECKED_STATE)";
 _setcheckstate(_checked_state);
  }else {
- //BA.debugLineNum = 154;BA.debugLine="setCheckState(INDETERMINATE_STATE)";
-_setcheckstate(_indeterminate_state);
+ //BA.debugLineNum = 154;BA.debugLine="setCheckState(UNCHECKED_STATE)";
+_setcheckstate(_unchecked_state);
  };
- //BA.debugLineNum = 160;BA.debugLine="End Sub";
+ //BA.debugLineNum = 159;BA.debugLine="End Sub";
 return "";
 }
 public boolean  _checked() throws Exception{
@@ -83,9 +83,9 @@ _meventname = "";
 _mcallback = new Object();
  //BA.debugLineNum = 12;BA.debugLine="Private mBase As Pane";
 _mbase = new anywheresoftware.b4j.objects.PaneWrapper.ConcretePaneWrapper();
- //BA.debugLineNum = 14;BA.debugLine="Private CheckedLabel As Label";
+ //BA.debugLineNum = 14;BA.debugLine="Public CheckedLabel As Label";
 _checkedlabel = new anywheresoftware.b4j.objects.LabelWrapper();
- //BA.debugLineNum = 15;BA.debugLine="Private CheckboxPane As Pane";
+ //BA.debugLineNum = 15;BA.debugLine="Public CheckboxPane As Pane";
 _checkboxpane = new anywheresoftware.b4j.objects.PaneWrapper.ConcretePaneWrapper();
  //BA.debugLineNum = 18;BA.debugLine="Public CHECKED_STATE As Int = 0";
 _checked_state = (int) (0);
@@ -102,8 +102,8 @@ public String  _designercreateview(anywheresoftware.b4j.objects.PaneWrapper.Conc
 _mbase = _base;
  //BA.debugLineNum = 31;BA.debugLine="mBase.LoadLayout(\"MaterialCheckboxLayout\")";
 _mbase.LoadLayout(ba,"MaterialCheckboxLayout");
- //BA.debugLineNum = 33;BA.debugLine="SetBg(StyleManager.DefaultTheme.Get(\"divider\"))";
-_setbg(BA.ObjectToString(_stylemanager._defaulttheme.Get((Object)("divider"))));
+ //BA.debugLineNum = 33;BA.debugLine="setBorder(StyleManager.DefaultTheme.Get(\"divider\"";
+_setborder(BA.ObjectToString(_stylemanager._defaulttheme.Get((Object)("divider"))),(int) (2));
  //BA.debugLineNum = 34;BA.debugLine="setCheckedColor(StyleManager.DefaultTheme.Get(\"pr";
 _setcheckedcolor(BA.ObjectToString(_stylemanager._defaulttheme.Get((Object)("primary"))));
  //BA.debugLineNum = 37;BA.debugLine="setCheckState(UNCHECKED_STATE) 'set initial value";
@@ -195,10 +195,10 @@ __c.CallSubDelayed2(ba,_mcallback,_meventname+"_CheckedChanged",(Object)(_value)
 return "";
 }
 public String  _seticon(int _iconcode) throws Exception{
- //BA.debugLineNum = 139;BA.debugLine="Public Sub setIcon(iconCode As Int)";
- //BA.debugLineNum = 141;BA.debugLine="CheckedLabel.Text = Chr(iconCode)";
+ //BA.debugLineNum = 140;BA.debugLine="Public Sub setIcon(iconCode As Int)";
+ //BA.debugLineNum = 142;BA.debugLine="CheckedLabel.Text = Chr(iconCode)";
 _checkedlabel.setText(BA.ObjectToString(__c.Chr(_iconcode)));
- //BA.debugLineNum = 143;BA.debugLine="End Sub";
+ //BA.debugLineNum = 144;BA.debugLine="End Sub";
 return "";
 }
 public String  _setpaneeffect(String _effect) throws Exception{

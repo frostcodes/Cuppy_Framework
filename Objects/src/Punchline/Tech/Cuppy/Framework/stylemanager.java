@@ -77,9 +77,9 @@ _defaultfont = new anywheresoftware.b4j.objects.JFX.FontWrapper();
 _defaultfont = _selectfont("Regular",12);
  //BA.debugLineNum = 7;BA.debugLine="Public AvailableThemes As Themes";
 _availablethemes = new Punchline.Tech.Cuppy.Framework.themes();
- //BA.debugLineNum = 9;BA.debugLine="Public DefaultTheme As Map = AvailableThemes.Them";
+ //BA.debugLineNum = 8;BA.debugLine="Public DefaultTheme As Map = AvailableThemes.The";
 _defaulttheme = new anywheresoftware.b4a.objects.collections.Map();
-_defaulttheme.setObject((anywheresoftware.b4a.objects.collections.Map.MyMap)(_availablethemes._themeslist().Get((Object)("Teal"))));
+_defaulttheme.setObject((anywheresoftware.b4a.objects.collections.Map.MyMap)(_availablethemes._themeslist().Get((Object)("Blue"))));
  //BA.debugLineNum = 12;BA.debugLine="End Sub";
 return "";
 }

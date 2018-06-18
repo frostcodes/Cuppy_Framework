@@ -16,11 +16,11 @@ Sub Class_Globals
 	Private mCallBack As Object 'ignore
 	Private mBase As Pane
  
-	Public CheckedLabel As Label
 	Public CheckboxPane As Pane
+	Public CheckedPane As Pane
 	
 	'Checkbox states
-	Public CHECKED_STATE As Int = 0 
+	Public CHECKED_STATE As Int = 0
 	Public UNCHECKED_STATE As Int = 1
 	Public INDETERMINATE_STATE As Int = 2
 	 
@@ -33,9 +33,11 @@ End Sub
 
 Public Sub DesignerCreateView (Base As Pane, Lbl As Label, Props As Map)
 	mBase = Base
-	mBase.LoadLayout("MaterialCheckboxLayout")
+	mBase.LoadLayout("MaterialRadioBoxLayout")
 	'set using theme...
+	'SetBg(StyleManager.DefaultTheme.Get("divider"))
 	setBorder(StyleManager.DefaultTheme.Get("divider"), 2)
+	
 	setCheckedColor(StyleManager.DefaultTheme.Get("primary"))
 	
 	'TODO: create a designer prorerty for this...
@@ -44,13 +46,7 @@ Public Sub DesignerCreateView (Base As Pane, Lbl As Label, Props As Map)
 End Sub
 
 Private Sub Base_Resize (Width As Double, Height As Double)
- 
-	CheckboxPane.PrefWidth = Width
-	CheckedLabel.PrefWidth = Width
-	
-	CheckboxPane.PrefHeight = Height
-	CheckedLabel.PrefHeight = Height
-	 
+ 'we are not handling resizes for this ..
 End Sub
 
 Public Sub GetBase As Pane
@@ -101,7 +97,7 @@ End Sub
   
 Public Sub setCheckedColor(color As String)
   	
-	CSSUtils.SetStyleProperty( CheckedLabel, "-fx-background-color", color)
+	CSSUtils.SetStyleProperty( CheckedPane, "-fx-background-color", color)
 	
 End Sub
  
@@ -109,45 +105,44 @@ Public Sub setCheckState(value As Int)
 	 
 	If value = UNCHECKED_STATE Then
 		
-		CheckedLabel.Visible = False
-		CheckedLabel.SetAlphaAnimated(300, 0 )
+		CheckedPane.Visible = False
+		CheckedPane.SetAlphaAnimated(300, 0 )
+		'SetBg(StyleManager.DefaultTheme.Get("divider"))
+		
 		 
 	Else if value = CHECKED_STATE Then
 	
-		CheckedLabel.Visible = True
-		CheckedLabel.SetAlphaAnimated(300, 1 )
+		CheckedPane.Visible = True
+		CheckedPane.SetAlphaAnimated(300, 1 )
+		'SetBg(StyleManager.DefaultTheme.Get("primary"))
+		
 		 
-		Else
+	Else
 			
-		CheckedLabel.SetAlphaAnimated(300, 0.6 )
-		CheckedLabel.Visible = True
+		CheckedPane.SetAlphaAnimated(300, 0.6 )
+		CheckedPane.Visible = True
+		'SetBg(StyleManager.DefaultTheme.Get("primary"))
+		
 		 	
 	End If
 	 
 	'call callback for checked changed status
-	 CallSubDelayed2(mCallBack, mEventName & "_CheckedChanged" , value)
-	 
+	CallSubDelayed2(mCallBack, mEventName & "_CheckedChanged" , value)
+	  
 End Sub
 
 Public Sub checked As Boolean
 
-	Return CheckedLabel.Visible
+	Return CheckedPane.Visible
 	 
 End Sub
 
 Public Sub IsIndeterminate As Boolean
 	
-	Return CheckedLabel.Alpha = "0.6"
+	Return CheckedPane.Alpha = "0.6"
 	
 End Sub
-
-'TODO: allow settingicon form designer
-Public Sub setIcon(iconCode As Int)
-	
-	CheckedLabel.Text = Chr(iconCode)
-	
-End Sub
-   
+ 
 Private Sub CheckboxPane_MousePressed (EventData As MouseEvent)
 	 
 	If Not(checked) Or IsIndeterminate Then
@@ -156,7 +151,7 @@ Private Sub CheckboxPane_MousePressed (EventData As MouseEvent)
 	
 	Else
 	
- 	 setCheckState(UNCHECKED_STATE)
+		setCheckState(UNCHECKED_STATE)
 		  
 	End If
 	
