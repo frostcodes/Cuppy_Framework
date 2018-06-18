@@ -92,8 +92,8 @@ return "";
 }
 public String  _innerbutton_mousepressed(anywheresoftware.b4j.objects.NodeWrapper.MouseEventWrapper _eventdata) throws Exception{
  //BA.debugLineNum = 84;BA.debugLine="Public Sub InnerButton_MousePressed (EventData As";
- //BA.debugLineNum = 86;BA.debugLine="CallSub2(mCallBack, mEventName & \"_MousePressed\",";
-__c.CallSubNew2(ba,_mcallback,_meventname+"_MousePressed",(Object)(_eventdata));
+ //BA.debugLineNum = 86;BA.debugLine="CallSubDelayed2(mCallBack, mEventName & \"_MousePr";
+__c.CallSubDelayed2(ba,_mcallback,_meventname+"_MousePressed",(Object)(_eventdata));
  //BA.debugLineNum = 88;BA.debugLine="End Sub";
 return "";
 }

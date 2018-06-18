@@ -41,10 +41,10 @@ public Punchline.Tech.Cuppy.Framework.controlsutils _controlsutils = null;
 public Punchline.Tech.Cuppy.Framework.animationmanager _animationmanager = null;
 public Punchline.Tech.Cuppy.Framework.licensemanager _licensemanager = null;
 public double  _alpha() throws Exception{
- //BA.debugLineNum = 137;BA.debugLine="Public Sub Alpha As Double";
- //BA.debugLineNum = 139;BA.debugLine="Return CheckedLabel.Alpha";
+ //BA.debugLineNum = 138;BA.debugLine="Public Sub Alpha As Double";
+ //BA.debugLineNum = 140;BA.debugLine="Return CheckedLabel.Alpha";
 if (true) return _checkedlabel.getAlpha();
- //BA.debugLineNum = 141;BA.debugLine="End Sub";
+ //BA.debugLineNum = 142;BA.debugLine="End Sub";
 return 0;
 }
 public String  _base_resize(double _width,double _height) throws Exception{
@@ -61,23 +61,23 @@ _checkedlabel.setPrefHeight(_height);
 return "";
 }
 public String  _checkboxpane_mousepressed(anywheresoftware.b4j.objects.NodeWrapper.MouseEventWrapper _eventdata) throws Exception{
- //BA.debugLineNum = 143;BA.debugLine="Sub CheckboxPane_MousePressed (EventData As MouseE";
- //BA.debugLineNum = 145;BA.debugLine="If Not(checked) Or Alpha = \"0.6\" Then";
+ //BA.debugLineNum = 150;BA.debugLine="Private Sub CheckboxPane_MousePressed (EventData A";
+ //BA.debugLineNum = 152;BA.debugLine="If Not(checked) Or Alpha = \"0.6\" Then";
 if (__c.Not(_checked()) || _alpha()==(double)(Double.parseDouble("0.6"))) { 
- //BA.debugLineNum = 147;BA.debugLine="setCheckState(CHECKED_STATE)";
+ //BA.debugLineNum = 154;BA.debugLine="setCheckState(CHECKED_STATE)";
 _setcheckstate(_checked_state);
  }else {
- //BA.debugLineNum = 151;BA.debugLine="setCheckState(UNCHECKED_STATE)";
+ //BA.debugLineNum = 158;BA.debugLine="setCheckState(UNCHECKED_STATE)";
 _setcheckstate(_unchecked_state);
  };
- //BA.debugLineNum = 156;BA.debugLine="End Sub";
+ //BA.debugLineNum = 163;BA.debugLine="End Sub";
 return "";
 }
 public boolean  _checked() throws Exception{
- //BA.debugLineNum = 131;BA.debugLine="Public Sub checked As Boolean";
- //BA.debugLineNum = 133;BA.debugLine="Return CheckedLabel.Visible";
+ //BA.debugLineNum = 132;BA.debugLine="Public Sub checked As Boolean";
+ //BA.debugLineNum = 134;BA.debugLine="Return CheckedLabel.Visible";
 if (true) return _checkedlabel.getVisible();
- //BA.debugLineNum = 135;BA.debugLine="End Sub";
+ //BA.debugLineNum = 136;BA.debugLine="End Sub";
 return false;
 }
 public String  _class_globals() throws Exception{
@@ -171,27 +171,34 @@ _cssutils._setstyleproperty((anywheresoftware.b4j.objects.NodeWrapper.ConcreteNo
 return "";
 }
 public String  _setcheckstate(int _value) throws Exception{
- //BA.debugLineNum = 105;BA.debugLine="Public Sub setCheckState(value As Int)";
- //BA.debugLineNum = 107;BA.debugLine="If value = UNCHECKED_STATE Then";
+ //BA.debugLineNum = 107;BA.debugLine="Public Sub setCheckState(value As Int)";
+ //BA.debugLineNum = 109;BA.debugLine="If value = UNCHECKED_STATE Then";
 if (_value==_unchecked_state) { 
- //BA.debugLineNum = 109;BA.debugLine="CheckedLabel.Visible = False";
+ //BA.debugLineNum = 111;BA.debugLine="CheckedLabel.Visible = False";
 _checkedlabel.setVisible(__c.False);
- //BA.debugLineNum = 110;BA.debugLine="CheckedLabel.SetAlphaAnimated(300, 0 )";
+ //BA.debugLineNum = 112;BA.debugLine="CheckedLabel.SetAlphaAnimated(300, 0 )";
 _checkedlabel.SetAlphaAnimated((int) (300),0);
  }else if(_value==_checked_state) { 
- //BA.debugLineNum = 115;BA.debugLine="CheckedLabel.Visible = True";
+ //BA.debugLineNum = 117;BA.debugLine="CheckedLabel.Visible = True";
 _checkedlabel.setVisible(__c.True);
- //BA.debugLineNum = 116;BA.debugLine="CheckedLabel.SetAlphaAnimated(300, 1 )";
+ //BA.debugLineNum = 118;BA.debugLine="CheckedLabel.SetAlphaAnimated(300, 1 )";
 _checkedlabel.SetAlphaAnimated((int) (300),1);
  }else {
- //BA.debugLineNum = 120;BA.debugLine="CheckedLabel.SetAlphaAnimated(300, 0.6 )";
+ //BA.debugLineNum = 122;BA.debugLine="CheckedLabel.SetAlphaAnimated(300, 0.6 )";
 _checkedlabel.SetAlphaAnimated((int) (300),0.6);
- //BA.debugLineNum = 121;BA.debugLine="CheckedLabel.Visible = True";
+ //BA.debugLineNum = 123;BA.debugLine="CheckedLabel.Visible = True";
 _checkedlabel.setVisible(__c.True);
  };
- //BA.debugLineNum = 127;BA.debugLine="CallSubDelayed2(mCallBack, mEventName & \"_Checked";
+ //BA.debugLineNum = 128;BA.debugLine="CallSubDelayed2(mCallBack, mEventName & \"_Checke";
 __c.CallSubDelayed2(ba,_mcallback,_meventname+"_CheckedChanged",(Object)(_value));
- //BA.debugLineNum = 129;BA.debugLine="End Sub";
+ //BA.debugLineNum = 130;BA.debugLine="End Sub";
+return "";
+}
+public String  _seticon(int _iconcode) throws Exception{
+ //BA.debugLineNum = 144;BA.debugLine="Public Sub setIcon(iconCode As Int)";
+ //BA.debugLineNum = 146;BA.debugLine="CheckedLabel.Text = Chr(iconCode)";
+_checkedlabel.setText(BA.ObjectToString(__c.Chr(_iconcode)));
+ //BA.debugLineNum = 148;BA.debugLine="End Sub";
 return "";
 }
 public String  _setpaneeffect(String _effect) throws Exception{

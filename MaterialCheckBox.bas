@@ -107,6 +107,8 @@ Public Sub setCheckedColor(color As String)
 	
 End Sub
 
+
+
 Public Sub setCheckState(value As Int)
 	 
 	If value = UNCHECKED_STATE Then
@@ -143,8 +145,14 @@ Public Sub Alpha As Double
 	Return CheckedLabel.Alpha
 	
 End Sub
+
+Public Sub setIcon(iconCode As Int)
+	
+	CheckedLabel.Text = Chr(iconCode)
+	
+End Sub
   
-Sub CheckboxPane_MousePressed (EventData As MouseEvent)
+Private Sub CheckboxPane_MousePressed (EventData As MouseEvent)
 	 
 	If Not(checked) Or Alpha = "0.6" Then
 	
