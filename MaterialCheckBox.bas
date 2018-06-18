@@ -23,9 +23,7 @@ Sub Class_Globals
 	Public CHECKED_STATE As Int = 0 
 	Public UNCHECKED_STATE As Int = 1
 	Public INDETERMINATE_STATE As Int = 2
-	
-	
-	
+	 
 End Sub
 
 Public Sub Initialize (Callback As Object, EventName As String)
@@ -106,16 +104,13 @@ Public Sub setCheckedColor(color As String)
 	CSSUtils.SetStyleProperty( CheckedLabel, "-fx-background-color", color)
 	
 End Sub
-
-
-
+ 
 Public Sub setCheckState(value As Int)
 	 
 	If value = UNCHECKED_STATE Then
 		
 		CheckedLabel.Visible = False
 		CheckedLabel.SetAlphaAnimated(300, 0 )
-		
 		 
 	Else if value = CHECKED_STATE Then
 	
@@ -140,9 +135,9 @@ Public Sub checked As Boolean
 	 
 End Sub
 
-Public Sub Alpha As Double
+Public Sub IsIndeterminate As Boolean
 	
-	Return CheckedLabel.Alpha
+	Return CheckedLabel.Alpha = "0.6"
 	
 End Sub
 
@@ -154,13 +149,15 @@ End Sub
   
 Private Sub CheckboxPane_MousePressed (EventData As MouseEvent)
 	 
-	If Not(checked) Or Alpha = "0.6" Then
+	If Not(checked) Or IsIndeterminate Then
 	
 		setCheckState(CHECKED_STATE)
 	
 	Else
 	
- 	setCheckState(UNCHECKED_STATE)
+ 	'setCheckState(UNCHECKED_STATE)
+		setCheckState(INDETERMINATE_STATE)
+	
 	 	  
 	End If
 	
