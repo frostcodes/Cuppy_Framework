@@ -6,6 +6,8 @@ B4J=true
 'Custom View class
 
 'TODO: implement indeterminate progress bar 
+'TODO: circular progress bar
+'https://material.io/design/components/progress-indicators.html#circular-progress-indicators
 
 #Event: ProgressFinished
  
