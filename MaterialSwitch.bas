@@ -39,7 +39,8 @@ Public Sub DesignerCreateView (Base As Pane, Lbl As Label, Props As Map)
 	setCheckedColor(StyleManager.DefaultTheme.Get("primary"))
 	
 	'TODO: create a designer prorerty for this...
-	setCheckState(UNCHECKED_STATE) 'set initial value
+ 	setCheckState(UNCHECKED_STATE) 'set initial value
+	 
 	
 	'TODO: add a shadow for SwitchBtn to make it like the intial google material type
 
@@ -110,25 +111,25 @@ Public Sub setCheckState(value As Int)
 	 
 	If value = UNCHECKED_STATE Then
 		
-		 SwitchBtn.SetAlphaAnimated(300, 1 )
-		
-		'Set bg here
-		SwitchBtn.SetLayoutAnimated(300 , 10, SwitchBtn.Top, SwitchBtn.PrefWidth, SwitchBtn.PrefHeight)
-		 
+		 SwitchBtn.SetLayoutAnimated(200 , 10, SwitchBtn.Top, SwitchBtn.PrefWidth, SwitchBtn.PrefHeight)
+		SwitchPane.SetAlphaAnimated(200, 1 )
+		SetBg(StyleManager.DefaultTheme.Get("divider"))
+		  
 	Else if value = CHECKED_STATE Then
 	
-		 SwitchBtn.SetAlphaAnimated(300, 1 )
-		'Set bg here
+	'Fade effect
+		SwitchPane.SetAlphaAnimated(200, 0.6 )
+		SetBg(ControlsUtils.getPaneBG(SwitchBtn))
 		
-		SwitchBtn.SetLayoutAnimated(300 , 23 , SwitchBtn.Top, SwitchBtn.PrefWidth, SwitchBtn.PrefWidth)
+		SwitchBtn.SetLayoutAnimated(200 , 23 , SwitchBtn.Top, SwitchBtn.PrefWidth, SwitchBtn.PrefWidth)
 		
 	Else
 			
-		SwitchBtn.SetAlphaAnimated(300, 0.6 )
-		'Set bg here
-		
-		SwitchBtn.SetLayoutAnimated(300 , 23 , SwitchBtn.Top, SwitchBtn.PrefWidth, SwitchBtn.PrefWidth)
-		
+		 
+		SwitchBtn.SetLayoutAnimated(200 , 23 , SwitchBtn.Top, SwitchBtn.PrefWidth, SwitchBtn.PrefWidth)
+		SwitchPane.SetAlphaAnimated(200, 1 )
+		SetBg(StyleManager.DefaultTheme.Get("divider"))
+		  
 	End If
 	 
 	'call callback for checked changed status
@@ -157,7 +158,7 @@ Private Sub SwitchPane_MousePressed (EventData As MouseEvent)
 	Else
 	
 		setCheckState(UNCHECKED_STATE)
-		   
+ 
 	End If
 	
 	
