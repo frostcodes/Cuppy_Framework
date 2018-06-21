@@ -33,6 +33,8 @@ public static b4j.example.cssutils _cssutils = null;
 public static Punchline.Tech.Cuppy.Framework.componentsmanager _componentsmanager = null;
 public static Punchline.Tech.Cuppy.Framework.stylemanager _stylemanager = null;
 public static Punchline.Tech.Cuppy.Framework.controlsutils _controlsutils = null;
+public static Punchline.Tech.Cuppy.Framework.stringutility _stringutility = null;
+public static Punchline.Tech.Cuppy.Framework.cuppyglobals _cuppyglobals = null;
 public static Punchline.Tech.Cuppy.Framework.animationmanager _animationmanager = null;
 public static Punchline.Tech.Cuppy.Framework.licensemanager _licensemanager = null;
 public static String  _process_globals() throws Exception{

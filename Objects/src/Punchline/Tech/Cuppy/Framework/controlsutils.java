@@ -27,6 +27,8 @@ public static b4j.example.cssutils _cssutils = null;
 public static Punchline.Tech.Cuppy.Framework.configs _configs = null;
 public static Punchline.Tech.Cuppy.Framework.componentsmanager _componentsmanager = null;
 public static Punchline.Tech.Cuppy.Framework.stylemanager _stylemanager = null;
+public static Punchline.Tech.Cuppy.Framework.stringutility _stringutility = null;
+public static Punchline.Tech.Cuppy.Framework.cuppyglobals _cuppyglobals = null;
 public static Punchline.Tech.Cuppy.Framework.animationmanager _animationmanager = null;
 public static Punchline.Tech.Cuppy.Framework.licensemanager _licensemanager = null;
 public static String  _getbg(anywheresoftware.b4j.objects.NodeWrapper.ControlWrapper.ConcreteControlWrapper _controlobj) throws Exception{
@@ -65,7 +67,7 @@ _cssutils._setstyleproperty((anywheresoftware.b4j.objects.NodeWrapper.ConcreteNo
 return "";
 }
 public static String  _setbg(anywheresoftware.b4j.objects.NodeWrapper.ControlWrapper.ConcreteControlWrapper _controlobj,String _color) throws Exception{
- //BA.debugLineNum = 78;BA.debugLine="Sub setBG(controlObj As Control, color As String)";
+ //BA.debugLineNum = 78;BA.debugLine="Public Sub setBG(controlObj As Control, color As S";
  //BA.debugLineNum = 80;BA.debugLine="CSSUtils.SetStyleProperty( controlObj, \"-fx-backg";
 _cssutils._setstyleproperty((anywheresoftware.b4j.objects.NodeWrapper.ConcreteNodeWrapper) anywheresoftware.b4a.AbsObjectWrapper.ConvertToWrapper(new anywheresoftware.b4j.objects.NodeWrapper.ConcreteNodeWrapper(), (javafx.scene.Node)(_controlobj.getObject())),"-fx-background-color",_color);
  //BA.debugLineNum = 82;BA.debugLine="End Sub";

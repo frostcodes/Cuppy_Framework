@@ -80,7 +80,7 @@ Sub setPaneBG(PaneObj As Pane, color As String)
 	
 End Sub
  
-Sub setBG(controlObj As Control, color As String)
+Public Sub setBG(controlObj As Control, color As String)
 	 
 	CSSUtils.SetStyleProperty( controlObj, "-fx-background-color", color)
 	 

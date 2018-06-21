@@ -35,17 +35,16 @@ Public Sub DesignerCreateView (Base As Pane, Lbl As Label, Props As Map)
 	mBase = Base
 	mBase.LoadLayout("MaterialSwitchesLayout")
 	'set using theme...
-	SetBg(StyleManager.DefaultTheme.Get("divider"))
 	setCheckedColor(StyleManager.DefaultTheme.Get("primary"))
 	
 	'TODO: create a designer prorerty for this...
- 	setCheckState(UNCHECKED_STATE) 'set initial value
+	setCheckState(UNCHECKED_STATE) 'set initial value
 	 
 	
 	'TODO: add a shadow for SwitchBtn to make it like the intial google material type
 
 	'ControlsUtils.setPaneEffect(SwitchBtn, "dropshadow( three-pass-box , rgba(0,0,0,0.4) , 5, 0.0 , 0 , 1 )")
-	 
+	
   
 End Sub
 
