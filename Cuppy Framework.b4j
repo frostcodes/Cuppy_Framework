@@ -1,25 +1,29 @@
 ﻿Version=5.51
 AppType=JavaFX
-NumberOfModules=17
+NumberOfModules=21
 Module1=Configs
 Module2=tODOS
 Module3=Themes
 Module4=ComponentsManager
 Module5=StyleManager
 Module6=ControlsUtils
-Module7=MaterialButton
-Module8=MaterialCheckBox
-Module9=Divider
-Module10=SquareFAB
-Module11=MaterialLinearProgressBar
-Module12=FAB
-Module13=MaterialCard
-Module14=AppBar
-Module15=Chips
-Module16=AnimationManager
-Module17=LicenseManager
+Module7=MaterialSwitch
+Module8=StringUtility
+Module9=CuppyGlobals
+Module10=MaterialCheckBox
+Module11=MaterialRadioBox
+Module12=MaterialButton
+Module13=Divider
+Module14=SquareFAB
+Module15=MaterialLinearProgressBar
+Module16=FAB
+Module17=MaterialCard
+Module18=AppBar
+Module19=Chips
+Module20=AnimationManager
+Module21=LicenseManager
 Build1=Full,Punchline.Tech.Cuppy.Framework,Full
-NumberOfFiles=9
+NumberOfFiles=11
 File1=AppBarLayout.bjl
 File2=CardLayout.bjl
 File3=ChipsLayout.bjl
@@ -28,11 +32,14 @@ File5=FABLayout.bjl
 File6=MaterialButtonLayout.bjl
 File7=MaterialCheckboxLayout.bjl
 File8=MaterialLinearProgressBar.bjl
-File9=SquareFABLayout.bjl
-NumberOfLibraries=3
+File9=MaterialRadioBoxLayout.bjl
+File10=MaterialSwitchesLayout.bjl
+File11=SquareFABLayout.bjl
+NumberOfLibraries=4
 Library1=jcore
 Library2=jfx
 Library3=cssutils
+Library4=jstringutils
 @EndOfDesignText@
 #Region Project Attributes 
 
@@ -41,7 +48,7 @@ Library3=cssutils
 'Copyright to Oluwaseyi Aderinkomi < Frost Codes >  - seyiaderinkomi@gmail.com
 #LibraryAuthor: Punchline Technologies
 #LibraryName: Cuppy Framework
-#LibraryVersion: 0.7
+#LibraryVersion: 0.8
  
 #End Region
 

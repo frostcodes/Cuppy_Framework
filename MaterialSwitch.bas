@@ -16,14 +16,14 @@ Sub Class_Globals
 	Private mCallBack As Object 'ignore
 	Private mBase As Pane
  
-	Public CheckedLabel As Label
-	Public CheckboxPane As Pane
+	Public SwitchBtn As Pane
+	Public SwitchPane As Pane
 	
 	'Checkbox states
-	Public CHECKED_STATE As Int = 0 
+	Public CHECKED_STATE As Int = 0
 	Public UNCHECKED_STATE As Int = 1
 	Public INDETERMINATE_STATE As Int = 2
-	 
+	  
 End Sub
 
 Public Sub Initialize (Callback As Object, EventName As String)
@@ -33,23 +33,24 @@ End Sub
 
 Public Sub DesignerCreateView (Base As Pane, Lbl As Label, Props As Map)
 	mBase = Base
-	mBase.LoadLayout("MaterialCheckboxLayout")
+	mBase.LoadLayout("MaterialSwitchesLayout")
 	'set using theme...
-	setBorder(StyleManager.DefaultTheme.Get("divider"), 2)
 	setCheckedColor(StyleManager.DefaultTheme.Get("primary"))
 	
 	'TODO: create a designer prorerty for this...
 	setCheckState(UNCHECKED_STATE) 'set initial value
 	 
+	
+	'TODO: add a shadow for SwitchBtn to make it like the intial google material type
+
+	'ControlsUtils.setPaneEffect(SwitchBtn, "dropshadow( three-pass-box , rgba(0,0,0,0.4) , 5, 0.0 , 0 , 1 )")
+	
+  
 End Sub
 
 Private Sub Base_Resize (Width As Double, Height As Double)
  
-	CheckboxPane.PrefWidth = Width
-	CheckedLabel.PrefWidth = Width
-	
-	CheckboxPane.PrefHeight = Height
-	CheckedLabel.PrefHeight = Height
+	'we are not handling resizes here...
 	 
 End Sub
 
@@ -63,37 +64,37 @@ End Sub
 
 Public Sub SetBg(color As String)
  
-	CSSUtils.SetStyleProperty( CheckboxPane, "-fx-background-color", color)
+	CSSUtils.SetStyleProperty( SwitchPane, "-fx-background-color", color)
  
 End Sub
 
 Public Sub setRotationX(angle As Float)
 	
-	ControlsUtils.setPaneRotationX(CheckboxPane, angle) 'rotate
+	ControlsUtils.setPaneRotationX(SwitchPane, angle) 'rotate
 	 
 End Sub
 
 Public Sub setBorder(color As String , width As Int)
 	
-	ControlsUtils.setPaneBorder(CheckboxPane, color, width)
+	ControlsUtils.setPaneBorder(SwitchPane, color, width)
 
 End Sub
  
 Public Sub setBorderRadius(radius As Int)
 	
-	ControlsUtils.setPaneBorderRadius(CheckboxPane, radius)
+	ControlsUtils.setPaneBorderRadius(SwitchPane, radius)
 	
 End Sub
  
 Public Sub setPaneEffect(effect As String)
 	
-	ControlsUtils.setPaneEffect(CheckboxPane, effect)
+	ControlsUtils.setPaneEffect(SwitchPane, effect)
 	
 End Sub
 
 Public Sub removeEffects()
 	
-	ControlsUtils.removePaneEffect(CheckboxPane)
+	ControlsUtils.removePaneEffect(SwitchPane)
 	
 End Sub
 
@@ -101,7 +102,7 @@ End Sub
   
 Public Sub setCheckedColor(color As String)
   	
-	CSSUtils.SetStyleProperty( CheckedLabel, "-fx-background-color", color)
+	CSSUtils.SetStyleProperty( SwitchBtn, "-fx-background-color", color)
 	
 End Sub
  
@@ -109,46 +110,45 @@ Public Sub setCheckState(value As Int)
 	 
 	If value = UNCHECKED_STATE Then
 		
-		CheckedLabel.Visible = False
-		CheckedLabel.SetAlphaAnimated(300, 0 )
-		 
+		 SwitchBtn.SetLayoutAnimated(200 , 10, SwitchBtn.Top, SwitchBtn.PrefWidth, SwitchBtn.PrefHeight)
+		SwitchPane.SetAlphaAnimated(200, 1 )
+		SetBg(StyleManager.DefaultTheme.Get("divider"))
+		  
 	Else if value = CHECKED_STATE Then
 	
-		CheckedLabel.Visible = True
-		CheckedLabel.SetAlphaAnimated(300, 1 )
-		 
-		Else
+	'Fade effect
+		SwitchPane.SetAlphaAnimated(200, 0.6 )
+		SetBg(ControlsUtils.getPaneBG(SwitchBtn))
+		
+		SwitchBtn.SetLayoutAnimated(200 , 23 , SwitchBtn.Top, SwitchBtn.PrefWidth, SwitchBtn.PrefWidth)
+		
+	Else
 			
-		CheckedLabel.SetAlphaAnimated(300, 0.6 )
-		CheckedLabel.Visible = True
-		 	
+		 
+		SwitchBtn.SetLayoutAnimated(200 , 23 , SwitchBtn.Top, SwitchBtn.PrefWidth, SwitchBtn.PrefWidth)
+		SwitchPane.SetAlphaAnimated(200, 1 )
+		SetBg(StyleManager.DefaultTheme.Get("divider"))
+		  
 	End If
 	 
 	'call callback for checked changed status
-	 CallSubDelayed2(mCallBack, mEventName & "_CheckedChanged" , value)
+	CallSubDelayed2(mCallBack, mEventName & "_CheckedChanged" , value)
 	 
 End Sub
 
 Public Sub checked As Boolean
 
-	Return CheckedLabel.Visible
+	Return SwitchBtn.Left = 23
 	 
 End Sub
 
 Public Sub IsIndeterminate As Boolean
 	
-	Return CheckedLabel.Alpha = "0.6"
+	Return SwitchBtn.Alpha = "0.6"
 	
 End Sub
-
-'TODO: allow settingicon form designer
-Public Sub setIcon(iconCode As Int)
-	
-	CheckedLabel.Text = Chr(iconCode)
-	
-End Sub
-   
-Private Sub CheckboxPane_MousePressed (EventData As MouseEvent)
+ 
+Private Sub SwitchPane_MousePressed (EventData As MouseEvent)
 	 
 	If Not(checked) Or IsIndeterminate Then
 	
@@ -156,9 +156,15 @@ Private Sub CheckboxPane_MousePressed (EventData As MouseEvent)
 	
 	Else
 	
- 	 setCheckState(UNCHECKED_STATE)
-		   
+		setCheckState(UNCHECKED_STATE)
+ 
 	End If
 	
+	
+End Sub
+
+Sub SwitchBtn_MousePressed (EventData As MouseEvent)
+	
+	CallSub2(Me , "SwitchPane_MousePressed", EventData)
 	
 End Sub

@@ -30,6 +30,8 @@ public Punchline.Tech.Cuppy.Framework.configs _configs = null;
 public Punchline.Tech.Cuppy.Framework.componentsmanager _componentsmanager = null;
 public Punchline.Tech.Cuppy.Framework.stylemanager _stylemanager = null;
 public Punchline.Tech.Cuppy.Framework.controlsutils _controlsutils = null;
+public Punchline.Tech.Cuppy.Framework.stringutility _stringutility = null;
+public Punchline.Tech.Cuppy.Framework.cuppyglobals _cuppyglobals = null;
 public Punchline.Tech.Cuppy.Framework.animationmanager _animationmanager = null;
 public Punchline.Tech.Cuppy.Framework.licensemanager _licensemanager = null;
 public String  _class_globals() throws Exception{

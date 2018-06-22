@@ -30,6 +30,8 @@ public static b4j.example.cssutils _cssutils = null;
 public static Punchline.Tech.Cuppy.Framework.configs _configs = null;
 public static Punchline.Tech.Cuppy.Framework.componentsmanager _componentsmanager = null;
 public static Punchline.Tech.Cuppy.Framework.controlsutils _controlsutils = null;
+public static Punchline.Tech.Cuppy.Framework.stringutility _stringutility = null;
+public static Punchline.Tech.Cuppy.Framework.cuppyglobals _cuppyglobals = null;
 public static Punchline.Tech.Cuppy.Framework.animationmanager _animationmanager = null;
 public static Punchline.Tech.Cuppy.Framework.licensemanager _licensemanager = null;
 public static anywheresoftware.b4a.objects.collections.Map  _fonttypes() throws Exception{
@@ -77,9 +79,9 @@ _defaultfont = new anywheresoftware.b4j.objects.JFX.FontWrapper();
 _defaultfont = _selectfont("Regular",12);
  //BA.debugLineNum = 7;BA.debugLine="Public AvailableThemes As Themes";
 _availablethemes = new Punchline.Tech.Cuppy.Framework.themes();
- //BA.debugLineNum = 9;BA.debugLine="Public DefaultTheme As Map = AvailableThemes.Them";
+ //BA.debugLineNum = 8;BA.debugLine="Public DefaultTheme As Map = AvailableThemes.The";
 _defaulttheme = new anywheresoftware.b4a.objects.collections.Map();
-_defaulttheme.setObject((anywheresoftware.b4a.objects.collections.Map.MyMap)(_availablethemes._themeslist().Get((Object)("Teal"))));
+_defaulttheme.setObject((anywheresoftware.b4a.objects.collections.Map.MyMap)(_availablethemes._themeslist().Get((Object)("Blue"))));
  //BA.debugLineNum = 12;BA.debugLine="End Sub";
 return "";
 }

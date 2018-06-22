@@ -10,8 +10,8 @@ Private Sub Process_Globals
 	 
 	Public DefaultFont As Font = SelectFont("Regular" , 12)
 	Public AvailableThemes As Themes 
-'	Public DefaultTheme As Map = AvailableThemes.ThemesList.Get("Blue") 'ignore
-	Public DefaultTheme As Map = AvailableThemes.ThemesList.Get("Teal") 'ignore
+ 	Public DefaultTheme As Map = AvailableThemes.ThemesList.Get("Blue") 'ignore
+	'Public DefaultTheme As Map = AvailableThemes.ThemesList.Get("Teal") 'ignore
 	
 	 
 End Sub
