@@ -31,6 +31,7 @@ public static Punchline.Tech.Cuppy.Framework.stringutility _stringutility = null
 public static Punchline.Tech.Cuppy.Framework.cuppyglobals _cuppyglobals = null;
 public static Punchline.Tech.Cuppy.Framework.animationmanager _animationmanager = null;
 public static Punchline.Tech.Cuppy.Framework.licensemanager _licensemanager = null;
+public static Punchline.Tech.Cuppy.Framework.fileutility _fileutility = null;
 public static String  _getbg(anywheresoftware.b4j.objects.NodeWrapper.ControlWrapper.ConcreteControlWrapper _controlobj) throws Exception{
  //BA.debugLineNum = 98;BA.debugLine="Sub getBG(controlObj As Control) As String";
  //BA.debugLineNum = 100;BA.debugLine="Return CSSUtils.GetStyleProperty(controlObj, \"-fx";

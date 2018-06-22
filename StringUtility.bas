@@ -3,33 +3,69 @@ Version=5.51
 ModulesStructureVersion=1
 B4J=true
 @EndOfDesignText@
-'Static code module
+'This file contain Utility sub/functions for string manipulation 
+
 Private Sub Process_Globals
 	Private fx As JFX
 End Sub
 
- 'checks if an object returns NULL
+ 'Checks if an object returns NULL
  Public Sub isNull(val As Object) As Boolean
 	Return (val = Null)
 End Sub
 	
-'checks if a string is empty
+'Checks if a string is empty
 Public Sub isEmpty(str As String) As Boolean
 	Return (str.Trim = "")
 End Sub
 
-'checks if a string contains a valid email
+'Checks if a string contains a valid email
+'FROM: https://www.b4x.com/android/forum/threads/validate-a-correctly-formatted-email-address.39803/
 Public Sub IsEmail(EmailAddress As String) As Boolean
+	
 	Dim MatchEmail As Matcher = Regex.Matcher("^(?i)[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])$", EmailAddress)
+	
 	If MatchEmail.Find = True Then
-		Log(MatchEmail.Match)
 		Return True
 	Else
-		Log("Oops, please double check your email address")
 		Return False
 	End If
+	
 End Sub
 
+'Checks if a string is a valid ip-address (ipv4 only)
+'FROM: https://www.b4x.com/android/forum/threads/using-regex-to-validate-an-ip-address.15642/
+Public Sub IsValidIp(ip As String) As Boolean
+	Dim m As Matcher
+	m = Regex.Matcher("^(\d+)\.(\d+)\.(\d+)\.(\d+)$", ip)
+	If m.Find = False Then Return False
+	For i = 1 To 4
+		If m.Group(i) > 255 Or m.Group(i) < 0 Then Return False
+	Next
+	Return True
+End Sub
+ 
+ 'Checks if a single Char is a letter only!
+ 'FROM: https://www.b4x.com/android/forum/threads/isletters-check-if-string-are-letters.83506/
+Public Sub IsLetter (c As String) As Boolean
+	
+	Dim pattern As String = "\p{Alpha}"
+	If IsDevTool("B4J") Then pattern = "(?U)" & pattern
+	
+	Return Regex.IsMatch(pattern, c)
+	
+End Sub
+
+'Checks if string contains letters only!
+'FROM: https://www.b4x.com/android/forum/threads/isletters-check-if-string-are-letters.83506/
+Public Sub IsLetters (text As String) As Boolean
+	
+	Dim pattern As String = "\p{Alpha}+"
+	If IsDevTool("B4J") Then pattern = "(?U)" & pattern
+	
+	Return Regex.IsMatch(pattern, text)
+	
+End Sub
 
 'Trim a character once at the both sides from a string
 Public Sub trim_once(str As String, character As String) As String
@@ -244,7 +280,6 @@ End Sub
  'Log(StringUtility.increment_string("test", "_",1)) ' returns: test_1
 'Log(StringUtility.increment_string("test_24", "_",1))  ' returns: test_25
 '</code>
-'NOTE: large values like test_24895895 returns in Exponential values like test_2.4895896E7
 Public Sub increment_string(str As String, separator As String , first As Int  ) As String
  	
 	Dim parsed_str, foundInt As String =""
@@ -262,8 +297,13 @@ Public Sub increment_string(str As String, separator As String , first As Int  )
 		If IsNumber(foundInt) Then
 		 
 			parsed_str = str.SubString2(0 , IndexOfSeperator) 'Text found before the number to increment
-			 
-			Return parsed_str & separator & (foundInt + 1)
+			
+			'FIX: added to allow longer numbers like test_24895895
+			'Before it use to get converted to Exponential values like test_2.4895896E7
+			
+			Dim foundLong As Long = (foundInt + 1)
+			  
+			Return parsed_str & separator & foundLong
 			 
 		Else
 				
@@ -377,7 +417,6 @@ Public Sub underscore(str As String)  As String
 	
 End Sub
 
-
 'Takes multiple words separated by the separator and changes them to spaces
 Public Sub humanize(str As String, separator As String)  As String
 	 
@@ -386,3 +425,27 @@ Public Sub humanize(str As String, separator As String)  As String
 	
 End Sub
 
+'
+Public Sub prep_url(str As String)  As String
+	
+	 str= str.Trim
+	 
+	If isEmpty(str) Or str.EqualsIgnoreCase("http://") Then
+		
+		Return  ""
+		
+		Else
+			
+		If Not(str.StartsWith("http://")) Then
+		  
+		 Return "http://" & str
+		 
+		 Else
+			
+			Return str
+		 	  	
+			End If
+			 
+	End If
+	
+End Sub

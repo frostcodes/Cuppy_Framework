@@ -1,6 +1,6 @@
 ﻿Version=5.51
 AppType=JavaFX
-NumberOfModules=21
+NumberOfModules=22
 Module1=Configs
 Module2=tODOS
 Module3=Themes
@@ -22,6 +22,7 @@ Module18=AppBar
 Module19=Chips
 Module20=AnimationManager
 Module21=LicenseManager
+Module22=FileUtility
 Build1=Full,Punchline.Tech.Cuppy.Framework,Full
 NumberOfFiles=11
 File1=AppBarLayout.bjl
@@ -35,11 +36,10 @@ File8=MaterialLinearProgressBar.bjl
 File9=MaterialRadioBoxLayout.bjl
 File10=MaterialSwitchesLayout.bjl
 File11=SquareFABLayout.bjl
-NumberOfLibraries=4
+NumberOfLibraries=3
 Library1=jcore
 Library2=jfx
 Library3=cssutils
-Library4=jstringutils
 @EndOfDesignText@
 #Region Project Attributes 
 
