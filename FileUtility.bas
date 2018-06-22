@@ -69,7 +69,8 @@ End Sub
 
 #End Region
   
-  
+'Write an array of bytes to a file
+'FROM: https://www.b4x.com/android/forum/threads/b4x-bytes-to-file.70111/#content
 Public Sub BytesToFile (Dir As String, FileName As String, Data() As Byte)
 	
 	Dim out As OutputStream = File.OpenOutput(Dir, FileName, False)
@@ -78,12 +79,52 @@ Public Sub BytesToFile (Dir As String, FileName As String, Data() As Byte)
 	
 End Sub
 
+'Read a file into an array of bytes
+'FROM: https://www.b4x.com/android/forum/threads/b4x-bytes-to-file.70111/#content
 Public Sub FileToBytes (Dir As String, FileName As String) As Byte()
 	
 	Return Bit.InputStreamToBytes(File.OpenInput(Dir, FileName))
 	
 End Sub
-  
+ 
+'Converts Bytes to Image
+Public Sub BytesToImage(bytes() As Byte) As Image
+	
+	Dim in As InputStream
+	in.InitializeFromBytesArray(bytes,0,bytes.Length)
+	
+	Dim bmp As Image
+	bmp.Initialize2(in)
+	
+	Return bmp
+ 
+End Sub
+ 
+'Format file's size in Human readable format
+Public Sub FormatFileSize(Bytes As Float) As String
+   
+	Private Unit() As String = Array As String(" Byte", " KB", " MB", " GB", " TB", " PB", " EB", " ZB", " YB")
+   
+	If Bytes = 0 Then
+                    
+		Return "0 Bytes"
+    
+	Else
+       
+		Private Po, Si As Double
+		Private I As Int
+       
+		Bytes = Abs(Bytes)
+                            
+		I = Floor(Logarithm(Bytes, 1024))
+		Po = Power(1024, I)
+		Si = Bytes / Po
+       
+		Return NumberFormat(Si, 1, 3) & Unit(I)
+       
+	End If
+	 
+End Sub
 '
 ''Generate random string array
 ''Example:
