@@ -38,6 +38,7 @@ public Punchline.Tech.Cuppy.Framework.stringutility _stringutility = null;
 public Punchline.Tech.Cuppy.Framework.cuppyglobals _cuppyglobals = null;
 public Punchline.Tech.Cuppy.Framework.animationmanager _animationmanager = null;
 public Punchline.Tech.Cuppy.Framework.licensemanager _licensemanager = null;
+public Punchline.Tech.Cuppy.Framework.fileutility _fileutility = null;
 public String  _base_resize(double _width,double _height) throws Exception{
  //BA.debugLineNum = 28;BA.debugLine="Private Sub Base_Resize (Width As Double, Height A";
  //BA.debugLineNum = 30;BA.debugLine="InnerButton.PrefWidth = Width";
