@@ -124,6 +124,7 @@ Public Sub FormatFileSize(Bytes As Float) As String
        
 	End If
 	 
+	
 End Sub
 '
 ''Generate random string array
