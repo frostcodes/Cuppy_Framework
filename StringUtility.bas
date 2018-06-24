@@ -622,48 +622,34 @@ Sub word_wrap(str As String, limit As Int) As String
 	 
 End Sub
 
-'
-'
-'Public function convert_ascii($str)
-'	{
-'		$count	= 1;
-'		$out	= '';
-'		$temp	= Array();
-'
-'		For ($i = 0, $s = strlen($str); $i < $s; $i++)
-'		{
-'			$ordinal = ord($str[$i]);
-'
-'			If ($ordinal < 128)
-'			{
-'				$out .= $str[$i];
-'			}
-'			Else
-'			{
-'				If (count($temp) === 0)
-'				{
-'					$count = ($ordinal < 224) ? 2 : 3;
-'				}
-'
-'				$temp[] = $ordinal;
-'
-'				If (count($temp) === $count)
-'				{
-'					$number = ($count === 3)
-'						? (($temp[0] % 16) * 4096) + (($temp[1] % 64) * 64) + ($temp[2] % 64)
-'						: (($temp[0] % 32) * 64) + ($temp[1] % 64);
-'
-'					$out .= '&#'.$number.';';
-'					$count = 1;
-'					$temp = Array();
-'				}
-'			}
-'		}
-'
-'		Return $out;
-'	}
-'
+'Converts a string to it ASCII values
+' with a seperator such as  {SPACE} 
+Public Sub String2AsciiWithSeperator(text As String, seperator As String) As String
+	
+	Dim result As StringBuilder
+	result.Initialize
+  
+	For i = 0 To text.Length - 1
+		
+		result.Append(Asc(text.CharAt(i)) & seperator)
 
+	Next
+	
+	Return result.ToString.Trim
+
+End Sub
+	 
+'Converts a string to it ASCII values
+Public Sub String2Ascii(text As String) As String
+	 
+	'just an alias but with {SPACE} as seperator
+	Return String2AsciiWithSeperator(text, "")
+
+End Sub
+	
+ 
+'
+'  chr to byte ?
 
 'TODO: add functions:
 

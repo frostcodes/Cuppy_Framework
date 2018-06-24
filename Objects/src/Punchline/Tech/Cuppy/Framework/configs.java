@@ -40,13 +40,13 @@ public static Punchline.Tech.Cuppy.Framework.animationmanager _animationmanager 
 public static Punchline.Tech.Cuppy.Framework.licensemanager _licensemanager = null;
 public static Punchline.Tech.Cuppy.Framework.numbersutility _numbersutility = null;
 public static String  _process_globals() throws Exception{
- //BA.debugLineNum = 2;BA.debugLine="Sub Process_Globals";
+ //BA.debugLineNum = 2;BA.debugLine="Private Sub Process_Globals";
  //BA.debugLineNum = 5;BA.debugLine="Public LibraryAuthor As String = \"Punchline Techn";
 _libraryauthor = "Punchline Technologies";
  //BA.debugLineNum = 6;BA.debugLine="Public LibraryName As String =  \"Cuppy Framework\"";
 _libraryname = "Cuppy Framework";
- //BA.debugLineNum = 7;BA.debugLine="Public LibraryVersion As String =  \"0.8\"";
-_libraryversion = "0.8";
+ //BA.debugLineNum = 7;BA.debugLine="Public LibraryVersion As String =  \"0.9.1\"";
+_libraryversion = "0.9.1";
  //BA.debugLineNum = 8;BA.debugLine="Public DebugMode As Boolean = True  'are we debug";
 _debugmode = anywheresoftware.b4a.keywords.Common.True;
  //BA.debugLineNum = 12;BA.debugLine="Public AppDir As String = File.DirApp";

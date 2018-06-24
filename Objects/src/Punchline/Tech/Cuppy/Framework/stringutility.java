@@ -578,7 +578,37 @@ _sres = _sres+_c;
 ;
  //BA.debugLineNum = 567;BA.debugLine="Return(sres)";
 if (true) return (_sres);
- //BA.debugLineNum = 568;BA.debugLine="End Sub";
+ //BA.debugLineNum = 569;BA.debugLine="End Sub";
+return "";
+}
+public static String  _string2ascii(String _text) throws Exception{
+ //BA.debugLineNum = 638;BA.debugLine="Public Sub String2Ascii(text As String) As String";
+ //BA.debugLineNum = 641;BA.debugLine="Return String2AsciiWithSeperator(text, \"\")";
+if (true) return _string2asciiwithseperator(_text,"");
+ //BA.debugLineNum = 643;BA.debugLine="End Sub";
+return "";
+}
+public static String  _string2asciiwithseperator(String _text,String _seperator) throws Exception{
+anywheresoftware.b4a.keywords.StringBuilderWrapper _result = null;
+int _i = 0;
+ //BA.debugLineNum = 622;BA.debugLine="Public Sub String2AsciiWithSeperator(text As Strin";
+ //BA.debugLineNum = 624;BA.debugLine="Dim result As StringBuilder";
+_result = new anywheresoftware.b4a.keywords.StringBuilderWrapper();
+ //BA.debugLineNum = 625;BA.debugLine="result.Initialize";
+_result.Initialize();
+ //BA.debugLineNum = 627;BA.debugLine="For i = 0 To text.Length - 1";
+{
+final int step3 = 1;
+final int limit3 = (int) (_text.length()-1);
+_i = (int) (0) ;
+for (;(step3 > 0 && _i <= limit3) || (step3 < 0 && _i >= limit3) ;_i = ((int)(0 + _i + step3))  ) {
+ //BA.debugLineNum = 629;BA.debugLine="result.Append(Asc(text.CharAt(i)) & seperator)";
+_result.Append(BA.NumberToString(anywheresoftware.b4a.keywords.Common.Asc(_text.charAt(_i)))+_seperator);
+ }
+};
+ //BA.debugLineNum = 633;BA.debugLine="Return result.ToString.Trim";
+if (true) return _result.ToString().trim();
+ //BA.debugLineNum = 635;BA.debugLine="End Sub";
 return "";
 }
 public static String  _stringarray2string(String[] _strarray) throws Exception{
@@ -721,68 +751,50 @@ if (true) return _str.replace(" ","_");
 return "";
 }
 public static String  _word_wrap(String _str,int _limit) throws Exception{
-int _lastindex = 0;
 int _divval = 0;
 anywheresoftware.b4a.keywords.StringBuilderWrapper _stringbuild = null;
 int _i = 0;
 int _nextval = 0;
- //BA.debugLineNum = 577;BA.debugLine="Sub word_wrap(str As String, limit As Int) As Stri";
- //BA.debugLineNum = 579;BA.debugLine="str = str.Trim";
+ //BA.debugLineNum = 578;BA.debugLine="Sub word_wrap(str As String, limit As Int) As Stri";
+ //BA.debugLineNum = 580;BA.debugLine="str = str.Trim";
 _str = _str.trim();
- //BA.debugLineNum = 581;BA.debugLine="If str.Length = limit Then";
+ //BA.debugLineNum = 582;BA.debugLine="If str.Length = limit Then";
 if (_str.length()==_limit) { 
- //BA.debugLineNum = 583;BA.debugLine="Log(86734535)";
-anywheresoftware.b4a.keywords.Common.Log(BA.NumberToString(86734535));
- //BA.debugLineNum = 585;BA.debugLine="Return str";
+ //BA.debugLineNum = 584;BA.debugLine="Return str";
 if (true) return _str;
  }else {
- //BA.debugLineNum = 589;BA.debugLine="Dim lastIndex, DivVal As Int";
-_lastindex = 0;
+ //BA.debugLineNum = 588;BA.debugLine="Dim DivVal As Int";
 _divval = 0;
- //BA.debugLineNum = 591;BA.debugLine="Dim stringBuild As StringBuilder";
+ //BA.debugLineNum = 590;BA.debugLine="Dim stringBuild As StringBuilder";
 _stringbuild = new anywheresoftware.b4a.keywords.StringBuilderWrapper();
- //BA.debugLineNum = 592;BA.debugLine="stringBuild.Initialize";
+ //BA.debugLineNum = 591;BA.debugLine="stringBuild.Initialize";
 _stringbuild.Initialize();
- //BA.debugLineNum = 595;BA.debugLine="DivVal =  str.Length / limit";
+ //BA.debugLineNum = 593;BA.debugLine="DivVal =  str.Length / limit";
 _divval = (int) (_str.length()/(double)_limit);
- //BA.debugLineNum = 598;BA.debugLine="Log(\"DivVal :: \"  & DivVal  )";
-anywheresoftware.b4a.keywords.Common.Log("DivVal :: "+BA.NumberToString(_divval));
- //BA.debugLineNum = 600;BA.debugLine="Log(\"Mod :: \"  &  (str.Length Mod limit ) )";
-anywheresoftware.b4a.keywords.Common.Log("Mod :: "+BA.NumberToString((_str.length()%_limit)));
- //BA.debugLineNum = 605;BA.debugLine="For i = 0 To DivVal";
+ //BA.debugLineNum = 595;BA.debugLine="For i = 0 To DivVal";
 {
-final int step12 = 1;
-final int limit12 = _divval;
+final int step9 = 1;
+final int limit9 = _divval;
 _i = (int) (0) ;
-for (;(step12 > 0 && _i <= limit12) || (step12 < 0 && _i >= limit12) ;_i = ((int)(0 + _i + step12))  ) {
- //BA.debugLineNum = 607;BA.debugLine="Dim nextVal As Int = i * limit";
+for (;(step9 > 0 && _i <= limit9) || (step9 < 0 && _i >= limit9) ;_i = ((int)(0 + _i + step9))  ) {
+ //BA.debugLineNum = 597;BA.debugLine="Dim nextVal As Int = i * limit";
 _nextval = (int) (_i*_limit);
- //BA.debugLineNum = 609;BA.debugLine="If i = DivVal Then";
+ //BA.debugLineNum = 599;BA.debugLine="If i = DivVal Then";
 if (_i==_divval) { 
- //BA.debugLineNum = 613;BA.debugLine="stringBuild.Append( str.SubString( nextVal).Tr";
+ //BA.debugLineNum = 602;BA.debugLine="stringBuild.Append( str.SubString( nextVal).Tr";
 _stringbuild.Append(_str.substring(_nextval).trim());
- //BA.debugLineNum = 616;BA.debugLine="Log(\"Lats :: \"  & str.SubString( nextVal)  )";
-anywheresoftware.b4a.keywords.Common.Log("Lats :: "+_str.substring(_nextval));
- //BA.debugLineNum = 617;BA.debugLine="Log(\"Lats nextVal :: \"  &  nextVal  )";
-anywheresoftware.b4a.keywords.Common.Log("Lats nextVal :: "+BA.NumberToString(_nextval));
  }else {
- //BA.debugLineNum = 623;BA.debugLine="stringBuild.Append( str.SubString2( nextVal ,";
+ //BA.debugLineNum = 607;BA.debugLine="stringBuild.Append( str.SubString2( nextVal ,";
 _stringbuild.Append(_str.substring(_nextval,(int) (_nextval+_limit)).trim());
- //BA.debugLineNum = 624;BA.debugLine="stringBuild.Append( CRLF)";
+ //BA.debugLineNum = 608;BA.debugLine="stringBuild.Append( CRLF)";
 _stringbuild.Append(anywheresoftware.b4a.keywords.Common.CRLF);
- //BA.debugLineNum = 627;BA.debugLine="Log(\"Nor :: \"  & str.SubString2( nextVal , nex";
-anywheresoftware.b4a.keywords.Common.Log("Nor :: "+_str.substring(_nextval,(int) (_nextval+_limit)));
- //BA.debugLineNum = 628;BA.debugLine="Log(\"Nor nextVal :: \"  &  nextVal  )";
-anywheresoftware.b4a.keywords.Common.Log("Nor nextVal :: "+BA.NumberToString(_nextval));
- //BA.debugLineNum = 630;BA.debugLine="Log(\"Nor Limit next :: \"  &   (nextVal + limit";
-anywheresoftware.b4a.keywords.Common.Log("Nor Limit next :: "+BA.NumberToString((_nextval+_limit)));
  };
  }
 };
- //BA.debugLineNum = 638;BA.debugLine="Return stringBuild.ToString";
+ //BA.debugLineNum = 614;BA.debugLine="Return stringBuild.ToString";
 if (true) return _stringbuild.ToString();
  };
- //BA.debugLineNum = 642;BA.debugLine="End Sub";
+ //BA.debugLineNum = 618;BA.debugLine="End Sub";
 return "";
 }
 }

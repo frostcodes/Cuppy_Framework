@@ -20,7 +20,7 @@ End Sub
 	   ' **   Change to using setBG to change background in controls
 	
 '   instaed of something like  CSSUtils.SetStyleProperty SwitchBtn, "-fx-background-color", color)
-	   ' **   
+	   ' **   add mime types as a cuppy plugin...
 	  
 	   ' **   
 '  .NET Framework 4.0 (Client Profile) And later.
