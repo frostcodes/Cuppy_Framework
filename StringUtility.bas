@@ -67,6 +67,29 @@ Public Sub IsLetters (text As String) As Boolean
 	
 End Sub
 
+
+
+'Checks if string is a url
+Public Sub isUrl (text As String) As Boolean
+	
+	text = text.Trim
+	
+	Return text.StartsWith("http://") Or text.StartsWith("https://")
+	
+End Sub
+
+
+'Checks if string Contains a Url
+Public Sub ContainUrl(text As String) As Boolean
+	
+	text = text.Trim
+	
+	Return text.Contains("http://") Or text.Contains("https://")
+	
+End Sub
+
+
+
 'Trim a character once at the both sides from a string
 Public Sub trim_once(str As String, character As String) As String
  
@@ -438,14 +461,196 @@ Public Sub prep_url(str As String)  As String
 			
 		If Not(str.StartsWith("http://")) Then
 		  
-		 Return "http://" & str
+			Return "http://" & str
 		 
-		 Else
+		Else
 			
 			Return str
 		 	  	
-			End If
+		End If
 			 
 	End If
 	
 End Sub
+
+'Similar To C's sprintf function. 
+'It is very simple and handles only the %s, %d, and %f format types.
+'%d can have a field width specifying leading spaces Or leading 0's to fill out the field width. 
+'For example, %5d will specify a field width of five with leading spaces, 
+'%05d will specify a field width of five with leading zeros.
+'%f can optionally specify field width, As in %5f. 
+'It can also specify field width And precision, As in %5.2f.
+'Example:
+'<code>
+'Dim RandomArray() As String = Array As String("sam", 1,2,3,4,5,6,7,8,9,0)
+'Log(StringUtility.Sprintf("Hi %s , how are you %d .. %d .. %d", RandomArray))
+'Returns:  Hi sam , how are you 1 .. 2 .. 3
+'</code>
+'
+'FROM: https://www.b4x.com/android/forum/threads/sprintf.10860/
+Public Sub Sprintf(fmt As String, arg() As Object) As String
+	Dim ai, fi, i As Int
+	Dim exp, wid As Int
+	Dim stmp, ptmp, sres, c, t As String
+	Dim bdone As Boolean
+  
+	ai = 0
+	fi = 0
+	stmp = ""
+	sres = ""
+  
+	Do While (fi < fmt.Length)
+		c = fmt.CharAt(fi)
+		fi = fi + 1
+   
+		If (c = "%") Then
+			stmp = ""
+			ptmp = ""
+			bdone = False
+     
+			Do While ((fi < fmt.Length) And (bdone = False))
+				c = fmt.CharAt(fi)
+				fi = fi + 1
+      
+				If ((IsNumber(c) = True) Or (c = ".")) Then
+					ptmp = ptmp & c
+					bdone = False
+				Else If (c = "s") Then
+					stmp = arg(ai)
+					ai = ai + 1
+					sres = sres & stmp
+					bdone = True
+				Else If (c = "d") Then
+					If (ptmp.Length > 0) Then
+						t = " "
+						If (ptmp.CharAt(0) = "0") Then
+							t = "0"
+							ptmp = ptmp.SubString(1)
+						End If
+					End If
+        
+					If (ptmp.Length > 0) Then wid = ptmp Else wid = 0
+        
+					stmp = arg(ai)
+        
+					Do While (stmp.Length < wid)
+						stmp = t & stmp
+					Loop
+        
+					ai = ai + 1
+					sres = sres & stmp
+					bdone = True
+				Else If (c = "f") Then
+					If (ptmp.Length > 0) Then
+						i = ptmp.IndexOf(".")
+						If (i >= 0) Then
+							wid = ptmp.SubString2(0, i)
+							exp = ptmp.SubString(i+1)
+						Else
+							wid = ptmp
+							exp = 0
+						End If
+          
+						stmp = NumberFormat(arg(ai), wid, exp)
+					Else
+						stmp = arg(ai)
+					End If
+
+					ai = ai + 1
+					sres = sres & stmp
+					bdone = True
+				Else
+					ai = ai + 1
+				End If
+      
+			Loop
+		Else
+			sres = sres & c
+		End If
+	Loop
+  
+	Return(sres)
+	
+End Sub
+
+
+
+'Word wrap a string after a limit
+'NOTE: it is not sensitive to words but characters count
+'words like Components might get cut off to - 
+' Compo
+' nents
+Sub word_wrap(str As String, limit As Int) As String
+	
+	str = str.Trim
+	 	 
+	If str.Length = limit Then
+		 
+		Return str
+	
+	Else
+		
+		Dim DivVal As Int
+	
+		Dim stringBuild As StringBuilder
+		stringBuild.Initialize
+	 
+		DivVal =  str.Length / limit
+		 
+		For i = 0 To DivVal
+			 
+			Dim nextVal As Int = i * limit
+			 
+			If i = DivVal Then
+				
+				'Return the remaining text at the end
+				stringBuild.Append( str.SubString( nextVal).Trim)
+				  
+			Else
+					
+				'get part of the text and wrap
+				stringBuild.Append( str.SubString2( nextVal , nextVal + limit).Trim)
+				stringBuild.Append( CRLF)
+				 	
+			End If
+			  
+		Next
+		 
+		Return stringBuild.ToString
+		
+	End If
+	 
+End Sub
+
+'Converts a string to it ASCII values
+' with a seperator such as  {SPACE} 
+Public Sub String2AsciiWithSeperator(text As String, seperator As String) As String
+	
+	Dim result As StringBuilder
+	result.Initialize
+  
+	For i = 0 To text.Length - 1
+		
+		result.Append(Asc(text.CharAt(i)) & seperator)
+
+	Next
+	
+	Return result.ToString.Trim
+
+End Sub
+	 
+'Converts a string to it ASCII values
+Public Sub String2Ascii(text As String) As String
+	 
+	'just an alias but with {SPACE} as seperator
+	Return String2AsciiWithSeperator(text, "")
+
+End Sub
+	
+ 
+'
+'  chr to byte ?
+
+'TODO: add functions:
+
+' 

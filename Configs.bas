@@ -4,17 +4,17 @@ ModulesStructureVersion=1
 B4J=true
 @EndOfDesignText@
 'This file defines all the framework configurations 
-Sub Process_Globals
+Private Sub Process_Globals
  
-	 'Libary Infos and Behaviour
+	'Libary Infos and Behaviour
 	Public LibraryAuthor As String = "Punchline Technologies"
 	Public LibraryName As String =  "Cuppy Framework"
-	Public LibraryVersion As String =  "0.8"
+	Public LibraryVersion As String =  "0.9.1"
 	Public DebugMode As Boolean = True  'are we debugging ... or in release mode
 	
 	'Paths
 	 
-	Public AppDir As String = File.DirApp 
+	Public AppDir As String = File.DirApp
 	Public RobotoFontsPath As String =  File.Combine(AppDir , "Roboto") 'ignore
 	
 	
