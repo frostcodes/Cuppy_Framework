@@ -343,27 +343,19 @@ Public Sub increment_string(str As String, separator As String , first As Int  )
 	End If
 	  
 End Sub
+ 
+'Allow spliting a string by a common delimiter such as , or :
+Sub Split(str As String, delimiter As String) As List
+	Dim t As List
+	t = Regex.Split(delimiter, str)
+	Return t
+End Sub
 
+'ALIAS of : Split() just paramater arrangement that differs
 'Allow spliting a string by a common delimiter such as , or :
 Public Sub explode(delimiter As String ,  str As String ) As List
 	
-	Dim result As List
-	result.Initialize
-	
-	Dim delimiterIndex As Int
-	delimiterIndex=str.IndexOf(delimiter)
-   
-	Do While delimiterIndex >-1
-		Dim LeftSide As String : LeftSide= str.SubString2(0,delimiterIndex)
-		Dim RightSide As String :RightSide= str.SubString(delimiterIndex+1)
-		result.Add(LeftSide)
-		str=RightSide
-		delimiterIndex=str.IndexOf(delimiter)
-	Loop
-	
-	result.Add(str)
-	
-	Return result
+	Return Split(str, delimiter)
  
 End Sub
 
@@ -376,6 +368,14 @@ Public Sub implode(separator As String, StrList As List) As String
 		Next
 		
 	Return trim_once(result, separator) ' trim separator just in case
+	
+End Sub
+
+'ALIAS of : implode() just paramater arrangement that differs
+'Join list values into a single string
+Public Sub join(StrList As List,separator As String )  As String
+	
+	Return implode(separator, StrList)
 	
 End Sub
 
@@ -647,10 +647,81 @@ Public Sub String2Ascii(text As String) As String
 
 End Sub
 	
- 
+'Repeat a string
+'input = The string To be repeated.
+'multiplier = Number of time the input string should be repeated.
 '
-'  chr to byte ?
+'NOTE: multiplier has To be greater than Or equal To 0. 
+'If the multiplier Is set To 0, the function will Return an empty string.
+Sub str_repeat(input As String, multiplier As Int) As String
+  	 
+	If multiplier < 1 Then
+		
+		Return ""
+		
+		Else
+		 
+		 Dim result As String = ""
+		 
+		For i = 0 To multiplier - 1
+			 
+			result = result & input
+		
+		Next
+		  
+		Return result
+			
+	End If
+	  
+End Sub
 
+'Breaks a string at the positiona particular string was found 
+'haystack = string to find in
+'after = string to search for then break string at 
+Public Sub breakStrAt(haystack As String, after As String) As Object
+	
+	Dim found As String = ""
+	
+	found= haystack.IndexOf(after)
+	
+	If found = -1 Then
+		
+		Return False
+		
+	Else
+		
+		Return haystack.SubString(found)
+		 
+	End If
+	
+End Sub
+
+Public Sub strpbrk(haystack As String, charList As String) As Object
+ 
+	For i = 0 To haystack.Length - 1
+		 
+		 If charList.IndexOf(haystack.CharAt(i)) >= 0 Then
+		 	 
+			  Return haystack.SubString(i)
+			
+		End If
+		  
+	Next
+	 
+	Return False
+	 
+ 
+End Sub
+
+
+'
+'
+' SplitGetWord (CurrentString As String, Split_At_Delimiter As String, GetElement As Int) As String
+'Returns just the one element selected with GetElement from the string.
+'EXAMPLE:
+'ANS = SF.SplitGetWord("This is a test string.", " ", 2)
+'In this example the function will Return: "is"
+'  
 'TODO: add functions:
 
 ' 
