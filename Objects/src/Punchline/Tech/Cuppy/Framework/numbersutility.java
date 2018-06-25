@@ -33,6 +33,7 @@ public static Punchline.Tech.Cuppy.Framework.stringutility _stringutility = null
 public static Punchline.Tech.Cuppy.Framework.fileutility _fileutility = null;
 public static Punchline.Tech.Cuppy.Framework.animationmanager _animationmanager = null;
 public static Punchline.Tech.Cuppy.Framework.licensemanager _licensemanager = null;
+public static Punchline.Tech.Cuppy.Framework.mathutility _mathutility = null;
 public static String  _process_globals() throws Exception{
  //BA.debugLineNum = 3;BA.debugLine="Sub Process_Globals";
  //BA.debugLineNum = 4;BA.debugLine="Private fx As JFX";

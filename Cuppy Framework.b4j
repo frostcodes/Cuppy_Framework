@@ -1,6 +1,6 @@
 ﻿Version=5.51
 AppType=JavaFX
-NumberOfModules=23
+NumberOfModules=24
 Module1=Configs
 Module2=tODOS
 Module3=Themes
@@ -8,8 +8,8 @@ Module4=ComponentsManager
 Module5=StyleManager
 Module6=ControlsUtils
 Module7=CuppyGlobals
-Module8=StringUtility
-Module9=NumbersUtility
+Module8=NumbersUtility
+Module9=StringUtility
 Module10=FileUtility
 Module11=MaterialCheckBox
 Module12=MaterialSwitch
@@ -24,6 +24,7 @@ Module20=AppBar
 Module21=Chips
 Module22=AnimationManager
 Module23=LicenseManager
+Module24=MathUtility
 Build1=Full,Punchline.Tech.Cuppy.Framework,Full
 NumberOfFiles=11
 File1=AppBarLayout.bjl
@@ -49,7 +50,7 @@ Library3=cssutils
 'Copyright to Oluwaseyi Aderinkomi < Frost Codes >  - seyiaderinkomi@gmail.com
 #LibraryAuthor: Punchline Technologies
 #LibraryName: Cuppy Framework
-#LibraryVersion: 0.91
+#LibraryVersion: 0.956
  
 #End Region
 

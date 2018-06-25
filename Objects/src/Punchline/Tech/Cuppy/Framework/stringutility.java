@@ -33,6 +33,7 @@ public static Punchline.Tech.Cuppy.Framework.numbersutility _numbersutility = nu
 public static Punchline.Tech.Cuppy.Framework.fileutility _fileutility = null;
 public static Punchline.Tech.Cuppy.Framework.animationmanager _animationmanager = null;
 public static Punchline.Tech.Cuppy.Framework.licensemanager _licensemanager = null;
+public static Punchline.Tech.Cuppy.Framework.mathutility _mathutility = null;
 public static Object  _breakstrat(String _haystack,String _after) throws Exception{
 String _found = "";
  //BA.debugLineNum = 676;BA.debugLine="Public Sub breakStrAt(haystack As String, after As";

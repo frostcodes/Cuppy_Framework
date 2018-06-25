@@ -714,6 +714,9 @@ Public Sub strpbrk(haystack As String, charList As String) As Object
 End Sub
 
 
+ 
+
+
 '
 '
 ' SplitGetWord (CurrentString As String, Split_At_Delimiter As String, GetElement As Int) As String
