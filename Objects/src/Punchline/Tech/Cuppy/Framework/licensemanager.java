@@ -29,10 +29,10 @@ public static Punchline.Tech.Cuppy.Framework.componentsmanager _componentsmanage
 public static Punchline.Tech.Cuppy.Framework.stylemanager _stylemanager = null;
 public static Punchline.Tech.Cuppy.Framework.controlsutils _controlsutils = null;
 public static Punchline.Tech.Cuppy.Framework.cuppyglobals _cuppyglobals = null;
-public static Punchline.Tech.Cuppy.Framework.fileutility _fileutility = null;
 public static Punchline.Tech.Cuppy.Framework.stringutility _stringutility = null;
-public static Punchline.Tech.Cuppy.Framework.animationmanager _animationmanager = null;
 public static Punchline.Tech.Cuppy.Framework.numbersutility _numbersutility = null;
+public static Punchline.Tech.Cuppy.Framework.fileutility _fileutility = null;
+public static Punchline.Tech.Cuppy.Framework.animationmanager _animationmanager = null;
 public static String  _process_globals() throws Exception{
  //BA.debugLineNum = 2;BA.debugLine="Sub Process_Globals";
  //BA.debugLineNum = 5;BA.debugLine="Public LicenseKey As String = \"\"";
