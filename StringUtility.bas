@@ -10,13 +10,17 @@ Private Sub Process_Globals
 End Sub
 
  'Checks if an object returns NULL
- Public Sub isNull(val As Object) As Boolean
-	Return (val = Null)
+Public Sub isNull(obj As Object) As Boolean
+	
+	Return (obj = Null)
+	
 End Sub
 	
 'Checks if a string is empty
 Public Sub isEmpty(str As String) As Boolean
+	
 	Return (str.Trim = "")
+	
 End Sub
 
 'Checks if a string contains a valid email
@@ -36,13 +40,18 @@ End Sub
 'Checks if a string is a valid ip-address (ipv4 only)
 'FROM: https://www.b4x.com/android/forum/threads/using-regex-to-validate-an-ip-address.15642/
 Public Sub IsValidIp(ip As String) As Boolean
+	
 	Dim m As Matcher
 	m = Regex.Matcher("^(\d+)\.(\d+)\.(\d+)\.(\d+)$", ip)
+	
 	If m.Find = False Then Return False
+	
 	For i = 1 To 4
 		If m.Group(i) > 255 Or m.Group(i) < 0 Then Return False
 	Next
+	
 	Return True
+	
 End Sub
  
  'Checks if a single Char is a letter only!
@@ -137,9 +146,7 @@ Public Sub trim_right_once(str As String, character As String) As  String
 	Return str
 	 
 End Sub
-
-
-
+ 
 'Trim Slashes once from a string
 'Removes any leading/trailing slashes from a string:
 '/this/that/theother/   becomes:  this/that/theother
@@ -192,8 +199,7 @@ Public Sub reduce_double_slashes(str As String) As String
 	 Return str
 	 
 End Sub
-
-
+ 
 'Generate random string array
 'Example:
 '<code> 
@@ -273,8 +279,7 @@ End Sub
 	Return  result
 	
 End Sub
- 
- 
+  
  'Convert an array of strings to a single string
  'Example:
  '<code>Dim RandomArray() As String = Array As String("A","B","C")
@@ -290,9 +295,6 @@ Public Sub StringArray2String(StrArray() As String) As String
 	Return result
 	
 End Sub
- 
- 
- 
   
 'Add's _1 to a string or increment the ending number to allow _2, _3, etc
 'str = string to increment on
@@ -581,9 +583,7 @@ Public Sub Sprintf(fmt As String, arg() As Object) As String
 	Return(sres)
 	
 End Sub
-
-
-
+ 
 'Word wrap a string after a limit
 'NOTE: it is not sensitive to words but characters count
 'words like Components might get cut off to - 
@@ -684,7 +684,7 @@ Sub str_repeat(input As String, multiplier As Int) As String
 	  
 End Sub
 
-'Breaks a string at the positiona particular string was found 
+'Breaks a string at the position a particular string was found 
 'haystack = string to find in
 'after = string to search for then break string at 
 Public Sub breakStrAt(haystack As String, after As String) As Object
