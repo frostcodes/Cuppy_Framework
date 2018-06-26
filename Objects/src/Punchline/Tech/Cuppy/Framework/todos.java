@@ -37,6 +37,7 @@ public Punchline.Tech.Cuppy.Framework.mathutility _mathutility = null;
 public Punchline.Tech.Cuppy.Framework.fileutility _fileutility = null;
 public Punchline.Tech.Cuppy.Framework.animationmanager _animationmanager = null;
 public Punchline.Tech.Cuppy.Framework.licensemanager _licensemanager = null;
+public Punchline.Tech.Cuppy.Framework.datatypeutility _datatypeutility = null;
 public String  _class_globals() throws Exception{
  //BA.debugLineNum = 1;BA.debugLine="Sub Class_Globals";
  //BA.debugLineNum = 2;BA.debugLine="Private fx As JFX";

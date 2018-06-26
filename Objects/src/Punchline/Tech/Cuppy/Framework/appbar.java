@@ -42,6 +42,7 @@ public Punchline.Tech.Cuppy.Framework.mathutility _mathutility = null;
 public Punchline.Tech.Cuppy.Framework.fileutility _fileutility = null;
 public Punchline.Tech.Cuppy.Framework.animationmanager _animationmanager = null;
 public Punchline.Tech.Cuppy.Framework.licensemanager _licensemanager = null;
+public Punchline.Tech.Cuppy.Framework.datatypeutility _datatypeutility = null;
 public String  _base_resize(double _width,double _height) throws Exception{
  //BA.debugLineNum = 27;BA.debugLine="Private Sub Base_Resize (Width As Double, Height A";
  //BA.debugLineNum = 29;BA.debugLine="End Sub";

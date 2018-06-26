@@ -1,6 +1,6 @@
 ﻿Version=5.51
 AppType=JavaFX
-NumberOfModules=24
+NumberOfModules=25
 Module1=Configs
 Module2=tODOS
 Module3=Themes
@@ -25,6 +25,7 @@ Module21=AppBar
 Module22=Chips
 Module23=AnimationManager
 Module24=LicenseManager
+Module25=DataTypeUtility
 Build1=Full,Punchline.Tech.Cuppy.Framework,Full
 NumberOfFiles=11
 File1=AppBarLayout.bjl
