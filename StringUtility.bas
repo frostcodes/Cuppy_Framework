@@ -396,8 +396,7 @@ Public Sub ucwords(str As String) As String
 	Return result
 	
 End Sub
-
-
+ 
 'converts the first character of a string to uppercase.
 Public Sub ucfirst(str As String) As String
  
@@ -406,10 +405,20 @@ Public Sub ucfirst(str As String) As String
 	firstChar = firstChar.ToUpperCase
 	
 	Return firstChar & str.SubString(1)
-	 
-	
+	  
 End Sub
-
+ 
+'Make a string's first character lowercase
+Public Sub lcfirst(str As String) As String
+ 
+	Dim firstChar As String =""
+	firstChar= str.CharAt(0)
+	firstChar = firstChar.ToLowerCase
+	
+	Return firstChar & str.SubString(1)
+	  
+End Sub
+ 
 'Takes multiple words separated by spaces Or underscores And camelizes them
 'Example:
 '<code>
@@ -709,22 +718,102 @@ Public Sub strpbrk(haystack As String, charList As String) As Object
 	Next
 	 
 	Return False
-	 
- 
+	  
 End Sub
 
+'Converts a string to a List of characters..
+'Eg ABCD  = [A, B, C, D]
+Public Sub strToStrList(str As String) As List
+	
+	Dim result As List
+	result.Initialize
+	 
+	For i = 0 To str.Length - 1
+		 
+		result.Add(str.CharAt(i))
+		 
+	Next
+	 
+	Return result
+	
+End Sub
 
  
-
-
-'
-'
-' SplitGetWord (CurrentString As String, Split_At_Delimiter As String, GetElement As Int) As String
-'Returns just the one element selected with GetElement from the string.
-'EXAMPLE:
-'ANS = SF.SplitGetWord("This is a test string.", " ", 2)
-'In this example the function will Return: "is"
+ 
+Public Sub str_split (str As String, splitLength As Int) As List
+	 
+	Dim chunks As List
+	chunks.Initialize
+	 
+	If (isEmpty(str) Or splitLength < 1)  Then
+		
+		Return chunks 'empty list
+		
+	Else If  splitLength = str.Length Then
+			
+		chunks.Add(str)
+		Return chunks
+			
+	End If
+	  
+	Dim DivVal As Int  =  str.Length / splitLength
+		 
+	For i = 0 To DivVal
+			 
+		Dim nextVal As Int = i * splitLength
+			 
+		If i = DivVal Then
+				
+			'Return the remaining text at the end
+			chunks.add( str.SubString( nextVal))
+				  
+		Else
+					
+			'get the remainin part of the text
+			chunks.add( str.SubString2( nextVal , nextVal + splitLength))
+				 	
+		End If
+			  
+	Next
+		  
+	Return chunks
+	
+End Sub
+ 
+ 
 '  
+'
+'module.exports = function str_split (string, splitLength) { // eslint-disable-line camelcase
+'  //  discuss at: http://locutus.io/php/str_split/
+'  // original by: Martijn Wieringa
+'  // improved by: Brett Zamir (http://brett-zamir.me)
+'  // bugfixed by: Onno Marsman (https://twitter.com/onnomarsman)
+'  //  revised by: Theriault (https://github.com/Theriault)
+'  //  revised by: Rafał Kukawski (http://blog.kukawski.pl)
+'  //    input by: Bjorn Roesbeke (http://www.bjornroesbeke.be/)
+'  //   example 1: str_split('Hello Friend', 3)
+'  //   returns 1: ['Hel', 'lo ', 'Fri', 'end']
+'
+'  If (splitLength === Null) {
+'    splitLength = 1
+'  }
+'  If (string === Null || splitLength < 1) {
+'    Return False
+'  }
+'
+'  var chunks = []
+'  var pos = 0
+'  var len = string.length
+'
+'  While (pos < len) {
+'    chunks.push(string.slice(pos, pos += splitLength))
+'  }
+'
+'  Return chunks
+'}
+
+
+ 
 'TODO: add functions:
 
 ' 
