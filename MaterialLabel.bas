@@ -14,7 +14,7 @@ Sub Class_Globals
 	Private mEventName As String 'ignore
 	Private mCallBack As Object 'ignore
 	Private mBase As Pane
-	Public InnerButton As Button
+	Private InnerLabel As Label
 End Sub
 
 Public Sub Initialize (Callback As Object, EventName As String)
@@ -26,14 +26,14 @@ Public Sub DesignerCreateView (Base As Pane, Lbl As Label, Props As Map)
 	mBase = Base
 	mBase.LoadLayout("MaterialButtonLayout")
 	'set using theme...
-	SetBg(StyleManager.DefaultTheme.Get("accent"))
-	InnerButton.Font = StyleManager.DefaultFont
+	SetBg(StyleManager.DefaultTheme.Get("primary_text"))
+	InnerLabel.Font = StyleManager.SelectFont("Light:", 12)
 End Sub
 
 Private Sub Base_Resize (Width As Double, Height As Double)
  
-	InnerButton.PrefWidth = Width
-	InnerButton.PrefHeight =  Height
+	InnerLabel.PrefWidth = Width
+	InnerLabel.PrefHeight =  Height
 	 
 End Sub
 
@@ -47,46 +47,46 @@ End Sub
  
 Public Sub SetBg(color As String)
  
-	CSSUtils.SetStyleProperty( InnerButton, "-fx-background-color", color)
+	CSSUtils.SetStyleProperty( InnerLabel, "-fx-background-color", color)
  
 End Sub
 
 Public Sub setRotationX(angle As Float)
 	
-	ControlsUtils.setRotationX(InnerButton, angle) 'rotate
+	ControlsUtils.setRotationX(InnerLabel, angle) 'rotate
 	 
 End Sub
   
 Public Sub setBorder(color As String , width As Int)
 	
-	ControlsUtils.setBorder(InnerButton, color, width)
+	ControlsUtils.setBorder(InnerLabel, color, width)
 
 End Sub
 
 
 Public Sub setBorderRadius(radius As Int)
 	
-	ControlsUtils.setBorderRadius(InnerButton, radius)
+	ControlsUtils.setBorderRadius(InnerLabel, radius)
 	
 End Sub
 
 
 Public Sub setEffect(effect As String)
 	
-	ControlsUtils.setEffect(InnerButton, effect)
+	ControlsUtils.setEffect(InnerLabel, effect)
 	
 End Sub
 
 Public Sub removeEffects()
 	
-	ControlsUtils.removeEffect(InnerButton)
+	ControlsUtils.removeEffect(InnerLabel)
 	
 End Sub
 
 #End Region
 
 
-Public Sub InnerButton_MousePressed (EventData As MouseEvent)
+Public Sub InnerLabel_MousePressed (EventData As MouseEvent)
 	  
 	CallSubDelayed2(mCallBack, mEventName & "_MousePressed", EventData) 'ignore
 	 

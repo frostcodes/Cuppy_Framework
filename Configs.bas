@@ -9,7 +9,7 @@ Private Sub Process_Globals
 	'Libary Infos and Behaviour
 	Public LibraryAuthor As String = "Punchline Technologies"
 	Public LibraryName As String =  "Cuppy Framework"
-	Public LibraryVersion As String =  "0.9.1"
+	Public LibraryVersion As String =  "0.9.60"
 	Public DebugMode As Boolean = True  'are we debugging ... or in release mode
 	
 	'Paths
@@ -21,7 +21,7 @@ Private Sub Process_Globals
 	'License Verification....
 	
 	
-	Private LicenseServer As String =""
+	Private LicenseServer As String ="" 'ignore
 	
 	
 	

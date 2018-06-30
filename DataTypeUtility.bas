@@ -12,6 +12,8 @@ Sub Process_Globals
 	Private fx As JFX
 End Sub
 
+'Resolves a value type into Boolean
+'Eg 0 is false , 1 is true in Boolean table
 Public Sub boolval(mixedVar As Object) As Boolean
 	
 	If mixedVar = False Then
@@ -25,11 +27,7 @@ Public Sub boolval(mixedVar As Object) As Boolean
 	If mixedVar = "" Or mixedVar = "0" Then
 		Return False
 	End If
-	 
-	'	If (Array.isArray(mixedVar) && mixedVar.length = 0) Then
-	'		Return False
-	'	End If
-	'
+	  
 	If mixedVar = Null  Or mixedVar = "undefined" Then
 		Return False
 	End If
@@ -50,8 +48,7 @@ Private Sub strip_java_type(str As String) As String
 		str = StringUtility.breakStrAt( str, "$")
 		str = StringUtility.trim_left_once(str, "$") 
 		str = StringUtility.trim_left_once(str, "_")
-		 
-	  
+		  
 	End If
 	  
 	Return str.ToLowerCase
@@ -115,79 +112,21 @@ Public Sub isNull(obj As Object) As Boolean
 	Return StringUtility.isNull(obj)
 	
 End Sub
+
+'Checks if a value is an  Object
+Public Sub isObject(obj As Object) As Boolean
 	
-
-
-
-'
-'Waiting For debugger To connect...
-'Program started.
-'java.lang.integer
-'java.util.arraylist
-'java.lang.integer
-'java.lang.string
-'java.lang.double
-'java.lang.boolean
-'java.lang.boolean
-'Check state changed:  1
-'Check state changed:  1
-'Check state changed:  1
-'Checked:  False
-'
-
-
-
-
-
-
-
-
-
-'
-'module.exports = function boolval (mixedVar) {
-'  // original by: Will Rowe
-'  //   example 1: boolval(True)
-'  //   returns 1: True
-'  //   example 2: boolval(False)
-'  //   returns 2: False
-'  //   example 3: boolval(0)
-'  //   returns 3: False
-'  //   example 4: boolval(0.0)
-'  //   returns 4: False
-'  //   example 5: boolval('')
-'  //   returns 5: False
-'  //   example 6: boolval('0')
-'  //   returns 6: False
-'  //   example 7: boolval([])
-'  //   returns 7: False
-'  //   example 8: boolval('')
-'  //   returns 8: False
-'  //   example 9: boolval(Null)
-'  //   returns 9: False
-'  //   example 10: boolval(undefined)
-'  //   returns 10: False
-'  //   example 11: boolval('true')
-'  //   returns 11: True
-'
-'  If (mixedVar === False) {
-'    Return False
-'  }
-'
-'  If (mixedVar === 0 || mixedVar === 0.0) {
-'    Return False
-'  }
-'
-'  If (mixedVar === '' || mixedVar === '0') {
-'    Return False
-'  }
-'
-'  If (Array.isArray(mixedVar) && mixedVar.length === 0) {
-'    Return False
-'  }
-'
-'  If (mixedVar === Null || mixedVar === undefined) {
-'    Return False
-'  }
-'
-'  Return True
-'}
+	Return isTypeOf(obj, "object")
+	
+End Sub 
+ 
+'Check whether a variable Is a scalar. 
+'Note : Values which contain boolean, double, 
+'integer, Or string types are scalar.
+' Array, object, etc are Not scalar.
+Public Sub is_scalar (mixedVar As Object) As Boolean
+	
+	Return isString(mixedVar) Or IsNumber(mixedVar) Or isBoolean(mixedVar)
+	  
+End Sub
+ 
