@@ -87,6 +87,11 @@ Public Sub setBG(controlObj As Control, color As String)
 End Sub
 
 
+Public Sub setTextColor(controlObj As Control, color As String)
+	
+	CSSUtils.SetStyleProperty(controlObj,"-fx-text-fill",  color)
+	 
+End Sub
 
 
 

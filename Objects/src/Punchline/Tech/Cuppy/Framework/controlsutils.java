@@ -35,17 +35,17 @@ public static Punchline.Tech.Cuppy.Framework.fileutility _fileutility = null;
 public static Punchline.Tech.Cuppy.Framework.animationmanager _animationmanager = null;
 public static Punchline.Tech.Cuppy.Framework.licensemanager _licensemanager = null;
 public static String  _getbg(anywheresoftware.b4j.objects.NodeWrapper.ControlWrapper.ConcreteControlWrapper _controlobj) throws Exception{
- //BA.debugLineNum = 98;BA.debugLine="Public Sub getBG(controlObj As Control) As String";
- //BA.debugLineNum = 100;BA.debugLine="Return CSSUtils.GetStyleProperty(controlObj, \"-fx";
+ //BA.debugLineNum = 103;BA.debugLine="Public Sub getBG(controlObj As Control) As String";
+ //BA.debugLineNum = 105;BA.debugLine="Return CSSUtils.GetStyleProperty(controlObj, \"-fx";
 if (true) return _cssutils._getstyleproperty((anywheresoftware.b4j.objects.NodeWrapper.ConcreteNodeWrapper) anywheresoftware.b4a.AbsObjectWrapper.ConvertToWrapper(new anywheresoftware.b4j.objects.NodeWrapper.ConcreteNodeWrapper(), (javafx.scene.Node)(_controlobj.getObject())),"-fx-background-color");
- //BA.debugLineNum = 102;BA.debugLine="End Sub";
+ //BA.debugLineNum = 107;BA.debugLine="End Sub";
 return "";
 }
 public static String  _getpanebg(anywheresoftware.b4j.objects.PaneWrapper.ConcretePaneWrapper _paneobj) throws Exception{
- //BA.debugLineNum = 92;BA.debugLine="Public Sub getPaneBG(PaneObj As Pane) As String";
- //BA.debugLineNum = 94;BA.debugLine="Return CSSUtils.GetStyleProperty(PaneObj, \"-fx-ba";
+ //BA.debugLineNum = 97;BA.debugLine="Public Sub getPaneBG(PaneObj As Pane) As String";
+ //BA.debugLineNum = 99;BA.debugLine="Return CSSUtils.GetStyleProperty(PaneObj, \"-fx-ba";
 if (true) return _cssutils._getstyleproperty((anywheresoftware.b4j.objects.NodeWrapper.ConcreteNodeWrapper) anywheresoftware.b4a.AbsObjectWrapper.ConvertToWrapper(new anywheresoftware.b4j.objects.NodeWrapper.ConcreteNodeWrapper(), (javafx.scene.Node)(_paneobj.getObject())),"-fx-background-color");
- //BA.debugLineNum = 96;BA.debugLine="End Sub";
+ //BA.debugLineNum = 101;BA.debugLine="End Sub";
 return "";
 }
 public static String  _process_globals() throws Exception{
@@ -141,6 +141,13 @@ public static String  _setrotationx(anywheresoftware.b4j.objects.NodeWrapper.Con
  //BA.debugLineNum = 7;BA.debugLine="CSSUtils.SetStyleProperty(controlObj, \"-fx-rotate";
 _cssutils._setstyleproperty((anywheresoftware.b4j.objects.NodeWrapper.ConcreteNodeWrapper) anywheresoftware.b4a.AbsObjectWrapper.ConvertToWrapper(new anywheresoftware.b4j.objects.NodeWrapper.ConcreteNodeWrapper(), (javafx.scene.Node)(_controlobj.getObject())),"-fx-rotate",BA.NumberToString(_angle));
  //BA.debugLineNum = 8;BA.debugLine="End Sub";
+return "";
+}
+public static String  _settextcolor(anywheresoftware.b4j.objects.NodeWrapper.ControlWrapper.ConcreteControlWrapper _controlobj,String _color) throws Exception{
+ //BA.debugLineNum = 85;BA.debugLine="Public Sub setTextColor(controlObj As Control, col";
+ //BA.debugLineNum = 87;BA.debugLine="CSSUtils.SetStyleProperty(controlObj,\"-fx-text-fi";
+_cssutils._setstyleproperty((anywheresoftware.b4j.objects.NodeWrapper.ConcreteNodeWrapper) anywheresoftware.b4a.AbsObjectWrapper.ConvertToWrapper(new anywheresoftware.b4j.objects.NodeWrapper.ConcreteNodeWrapper(), (javafx.scene.Node)(_controlobj.getObject())),"-fx-text-fill",_color);
+ //BA.debugLineNum = 89;BA.debugLine="End Sub";
 return "";
 }
 }

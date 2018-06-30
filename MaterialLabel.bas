@@ -14,7 +14,7 @@ Sub Class_Globals
 	Private mEventName As String 'ignore
 	Private mCallBack As Object 'ignore
 	Private mBase As Pane
-	Private InnerLabel As Label
+	Public InnerLabel As Label
 End Sub
 
 Public Sub Initialize (Callback As Object, EventName As String)
@@ -24,10 +24,12 @@ End Sub
 
 Public Sub DesignerCreateView (Base As Pane, Lbl As Label, Props As Map)
 	mBase = Base
-	mBase.LoadLayout("MaterialButtonLayout")
+	mBase.LoadLayout("MaterialLabelLayout")
 	'set using theme...
-	SetBg(StyleManager.DefaultTheme.Get("primary_text"))
-	InnerLabel.Font = StyleManager.SelectFont("Light:", 12)
+ 
+	setTextColor(StyleManager.DefaultTheme.Get("primary_text"))
+	InnerLabel.Font = StyleManager.SelectFont("Light", 12)
+	
 End Sub
 
 Private Sub Base_Resize (Width As Double, Height As Double)
@@ -47,7 +49,13 @@ End Sub
  
 Public Sub SetBg(color As String)
  
-	CSSUtils.SetStyleProperty( InnerLabel, "-fx-background-color", color)
+	ControlsUtils.SetBg( InnerLabel, color)
+ 
+End Sub
+
+Public Sub setTextColor(color As String)
+ 
+	ControlsUtils.setTextColor (InnerLabel, color)
  
 End Sub
 
