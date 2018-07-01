@@ -110,3 +110,85 @@ Public Sub getBG(controlObj As Control) As String
 	Return CSSUtils.GetStyleProperty(controlObj, "-fx-background-color")
 	 
 End Sub
+
+ #Region Add/remove Tooltip
+ 
+'Add tooltip to an Image View
+'JavaFX API Reference: http://download.java.net/jdk8/jfxdocs/javafx/scene/control/Tooltip.html
+'FROM: https://www.b4x.com/android/forum/threads/add-a-tooltip-to-an-imageview.65439/
+Public Sub addImageViewToolTip(ControlObj As ImageView, msg As String)
+   
+	Dim joToolTip As JavaObject
+	Dim joToolTip2 As JavaObject = joToolTip.InitializeNewInstance("javafx.scene.control.Tooltip", Array(msg))
+   
+	joToolTip.RunMethod("install", Array(ControlObj, joToolTip2))
+     
+End Sub
+
+'Remove tooltip from an Image View
+'JavaFX API Reference: http://download.java.net/jdk8/jfxdocs/javafx/scene/control/Tooltip.html
+'FROM: https://www.b4x.com/android/forum/threads/add-a-tooltip-to-an-imageview.65439/
+Public Sub removeImageViewToolTip(ControlObj As ImageView)
+   
+    Dim joToolTip As JavaObject
+    Dim joToolTip2 As JavaObject = joToolTip.InitializeNewInstance("javafx.scene.control.Tooltip", Array(""))
+    
+		joToolTip.RunMethod("uninstall", Array(ControlObj, joToolTip2))
+	
+End Sub
+ 
+'Add tooltip to a Control
+'JavaFX API Reference: http://download.java.net/jdk8/jfxdocs/javafx/scene/control/Tooltip.html
+'FROM: https://www.b4x.com/android/forum/threads/add-a-tooltip-to-an-imageview.65439/
+Public Sub addControlToolTip(ControlObj As Control, msg As String)
+    
+	Dim joToolTip As JavaObject
+	Dim joToolTip2 As JavaObject = joToolTip.InitializeNewInstance("javafx.scene.control.Tooltip", Array(msg))
+    joToolTip.RunMethod("install", Array(ControlObj, joToolTip2))
+	 
+End Sub
+ 
+'Remove tooltip from a Control
+'JavaFX API Reference: http://download.java.net/jdk8/jfxdocs/javafx/scene/control/Tooltip.html
+'FROM: https://www.b4x.com/android/forum/threads/add-a-tooltip-to-an-imageview.65439/
+Public Sub removeControlToolTip(ControlObj As Control)
+    
+	Dim joToolTip As JavaObject
+	Dim joToolTip2 As JavaObject = joToolTip.InitializeNewInstance("javafx.scene.control.Tooltip", Array(""))
+    
+	joToolTip.RunMethod("uninstall", Array(ControlObj, joToolTip2))
+ 
+End Sub
+ 
+'Add tooltip to a Pane
+'JavaFX API Reference: http://download.java.net/jdk8/jfxdocs/javafx/scene/control/Tooltip.html
+'FROM: https://www.b4x.com/android/forum/threads/add-a-tooltip-to-an-imageview.65439/
+Public Sub addPaneToolTip(PanelObj As Pane, msg As String)
+    
+	Dim joToolTip As JavaObject
+	Dim joToolTip2 As JavaObject = joToolTip.InitializeNewInstance("javafx.scene.control.Tooltip", Array(msg))
+	joToolTip.RunMethod("install", Array(PanelObj, joToolTip2))
+	 
+End Sub
+ 
+'Remove tooltip from a Pane
+'JavaFX API Reference: http://download.java.net/jdk8/jfxdocs/javafx/scene/control/Tooltip.html
+'FROM: https://www.b4x.com/android/forum/threads/add-a-tooltip-to-an-imageview.65439/
+Public Sub removePaneToolTip(PanelObj As Pane)
+    
+	Dim joToolTip As JavaObject
+	Dim joToolTip2 As JavaObject = joToolTip.InitializeNewInstance("javafx.scene.control.Tooltip", Array(""))
+    
+	joToolTip.RunMethod("uninstall", Array(PanelObj, joToolTip2))
+ 
+End Sub
+
+#End Region
+
+'
+'.tooltip {
+'    -fx-background-radius: 2 2 2 2;
+'    -fx-background-color: linear-gradient(#FFFF99, #FFFF99);
+'    -fx-text-fill: black;
+'    -fx-font-size: 12px;
+'}

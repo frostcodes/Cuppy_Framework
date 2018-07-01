@@ -32,16 +32,17 @@ public anywheresoftware.b4j.objects.PaneWrapper.ConcretePaneWrapper _progressbar
 public anywheresoftware.b4j.objects.PaneWrapper.ConcretePaneWrapper _progresspane = null;
 public b4j.example.cssutils _cssutils = null;
 public Punchline.Tech.Cuppy.Framework.configs _configs = null;
-public Punchline.Tech.Cuppy.Framework.componentsmanager _componentsmanager = null;
 public Punchline.Tech.Cuppy.Framework.stylemanager _stylemanager = null;
-public Punchline.Tech.Cuppy.Framework.controlsutils _controlsutils = null;
 public Punchline.Tech.Cuppy.Framework.cuppyglobals _cuppyglobals = null;
 public Punchline.Tech.Cuppy.Framework.stringutility _stringutility = null;
 public Punchline.Tech.Cuppy.Framework.mathutility _mathutility = null;
 public Punchline.Tech.Cuppy.Framework.datatypeutility _datatypeutility = null;
+public Punchline.Tech.Cuppy.Framework.controlsutils _controlsutils = null;
+public Punchline.Tech.Cuppy.Framework.componentsmanager _componentsmanager = null;
 public Punchline.Tech.Cuppy.Framework.fileutility _fileutility = null;
 public Punchline.Tech.Cuppy.Framework.animationmanager _animationmanager = null;
 public Punchline.Tech.Cuppy.Framework.licensemanager _licensemanager = null;
+public Punchline.Tech.Cuppy.Framework.apputility _apputility = null;
 public String  _base_resize(double _width,double _height) throws Exception{
  //BA.debugLineNum = 35;BA.debugLine="Private Sub Base_Resize (Width As Double, Height A";
  //BA.debugLineNum = 37;BA.debugLine="ProgressPane.PrefWidth = Width";
