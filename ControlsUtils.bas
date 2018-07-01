@@ -45,13 +45,13 @@ End Sub
 
 Public Sub setPaneEffect(PaneObj As Pane, effect As String)
 	 
-	CSSUtils.SetStyleProperty(PaneObj, " -fx-effect" , effect)
+	CSSUtils.SetStyleProperty(PaneObj, "-fx-effect" , effect)
 	
 End Sub
  
 Public Sub setEffect(controlObj As Control, effect As String)
 	 
-	CSSUtils.SetStyleProperty(controlObj, " -fx-effect" , effect)
+	CSSUtils.SetStyleProperty(controlObj, "-fx-effect" , effect)
 	
 	
 End Sub
@@ -60,13 +60,13 @@ End Sub
 
 Public Sub removePaneEffect(PaneObj As Pane)
 	 
-	CSSUtils.SetStyleProperty(PaneObj, " -fx-effect" , "none")
+	CSSUtils.SetStyleProperty(PaneObj, "-fx-effect" , "none")
 	
 End Sub
  
 Public Sub removeEffect(controlObj As Control)
 	 
-	CSSUtils.SetStyleProperty(controlObj, " -fx-effect" ,  "none")
+	CSSUtils.SetStyleProperty(controlObj, "-fx-effect" ,  "none")
 	
 	
 End Sub
@@ -192,3 +192,15 @@ End Sub
 '    -fx-text-fill: black;
 '    -fx-font-size: 12px;
 '}
+
+'
+'
+'	-fx-rotate: 3;
+'	-fx-translate-y: -2;
+'	-fx-background-insets: 20 10 15 80;
+'	-fx-background-color: -fx-app-background;
+'
+'
+'
+'	-fx-effect: dropshadow(three-pass-box, grey, 10, 0, 0, 15);
+'	 
