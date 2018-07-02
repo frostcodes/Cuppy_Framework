@@ -37,12 +37,12 @@ public Punchline.Tech.Cuppy.Framework.cuppyglobals _cuppyglobals = null;
 public Punchline.Tech.Cuppy.Framework.stringutility _stringutility = null;
 public Punchline.Tech.Cuppy.Framework.mathutility _mathutility = null;
 public Punchline.Tech.Cuppy.Framework.datatypeutility _datatypeutility = null;
+public Punchline.Tech.Cuppy.Framework.apputility _apputility = null;
 public Punchline.Tech.Cuppy.Framework.controlsutils _controlsutils = null;
 public Punchline.Tech.Cuppy.Framework.componentsmanager _componentsmanager = null;
 public Punchline.Tech.Cuppy.Framework.fileutility _fileutility = null;
 public Punchline.Tech.Cuppy.Framework.animationmanager _animationmanager = null;
 public Punchline.Tech.Cuppy.Framework.licensemanager _licensemanager = null;
-public Punchline.Tech.Cuppy.Framework.apputility _apputility = null;
 public String  _base_resize(double _width,double _height) throws Exception{
  //BA.debugLineNum = 31;BA.debugLine="Private Sub Base_Resize (Width As Double, Height A";
  //BA.debugLineNum = 33;BA.debugLine="ModalBgPane.PrefWidth = Width";
@@ -95,25 +95,18 @@ _mcallback = _callback;
  //BA.debugLineNum = 21;BA.debugLine="End Sub";
 return "";
 }
-public String  _innerlabel_mousepressed(anywheresoftware.b4j.objects.NodeWrapper.MouseEventWrapper _eventdata) throws Exception{
- //BA.debugLineNum = 99;BA.debugLine="Public Sub InnerLabel_MousePressed (EventData As M";
- //BA.debugLineNum = 101;BA.debugLine="CallSubDelayed2(mCallBack, mEventName & \"_MousePr";
-__c.CallSubDelayed2(ba,_mcallback,_meventname+"_MousePressed",(Object)(_eventdata));
- //BA.debugLineNum = 103;BA.debugLine="End Sub";
-return "";
-}
 public String  _modalbgpane_mousepressed(anywheresoftware.b4j.objects.NodeWrapper.MouseEventWrapper _eventdata) throws Exception{
- //BA.debugLineNum = 107;BA.debugLine="Sub ModalBgPane_MousePressed (EventData As MouseEv";
- //BA.debugLineNum = 109;BA.debugLine="CallSubDelayed2(mCallBack, mEventName & \"_ModalBG";
+ //BA.debugLineNum = 98;BA.debugLine="Sub ModalBgPane_MousePressed (EventData As MouseEv";
+ //BA.debugLineNum = 100;BA.debugLine="CallSubDelayed2(mCallBack, mEventName & \"_ModalBG";
 __c.CallSubDelayed2(ba,_mcallback,_meventname+"_ModalBGPressed",(Object)(_eventdata));
- //BA.debugLineNum = 111;BA.debugLine="End Sub";
+ //BA.debugLineNum = 102;BA.debugLine="End Sub";
 return "";
 }
 public String  _modalpane_mousepressed(anywheresoftware.b4j.objects.NodeWrapper.MouseEventWrapper _eventdata) throws Exception{
- //BA.debugLineNum = 113;BA.debugLine="Sub ModalPane_MousePressed (EventData As MouseEven";
- //BA.debugLineNum = 115;BA.debugLine="CallSubDelayed2(mCallBack, mEventName & \"_ModalPr";
+ //BA.debugLineNum = 104;BA.debugLine="Sub ModalPane_MousePressed (EventData As MouseEven";
+ //BA.debugLineNum = 106;BA.debugLine="CallSubDelayed2(mCallBack, mEventName & \"_ModalPr";
 __c.CallSubDelayed2(ba,_mcallback,_meventname+"_ModalPressed",(Object)(_eventdata));
- //BA.debugLineNum = 117;BA.debugLine="End Sub";
+ //BA.debugLineNum = 108;BA.debugLine="End Sub";
 return "";
 }
 public String  _removeeffects() throws Exception{
@@ -160,12 +153,12 @@ return "";
 }
 public String  _show() throws Exception{
 anywheresoftware.b4j.objects.PaneWrapper.ConcretePaneWrapper _parent = null;
- //BA.debugLineNum = 89;BA.debugLine="Public Sub show";
- //BA.debugLineNum = 91;BA.debugLine="Dim Parent As Pane = mBase.Parent";
+ //BA.debugLineNum = 88;BA.debugLine="Public Sub show";
+ //BA.debugLineNum = 90;BA.debugLine="Dim Parent As Pane = GetBase.Parent";
 _parent = new anywheresoftware.b4j.objects.PaneWrapper.ConcretePaneWrapper();
-_parent.setObject((javafx.scene.layout.Pane)(_mbase.getParent().getObject()));
- //BA.debugLineNum = 92;BA.debugLine="mBase.SetLayoutAnimated(300, 0 , 0,  Parent.PrefW";
-_mbase.SetLayoutAnimated((int) (300),0,0,_parent.getPrefWidth(),_parent.getPrefHeight());
+_parent.setObject((javafx.scene.layout.Pane)(_getbase().getParent().getObject()));
+ //BA.debugLineNum = 92;BA.debugLine="mBase.SetLayoutAnimated(200, 0 , 0,  Parent.Widt";
+_mbase.SetLayoutAnimated((int) (200),0,0,_parent.getWidth(),_parent.getHeight());
  //BA.debugLineNum = 94;BA.debugLine="End Sub";
 return "";
 }

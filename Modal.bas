@@ -90,25 +90,16 @@ End Sub
 
 #Region Extra Functions
 
-
 Public Sub show
 	 
-	Dim Parent As Pane = mBase.Parent
-	mBase.SetLayoutAnimated(300, 0 , 0,  Parent.PrefWidth, Parent.PrefHeight)
-	
+	Dim Parent As Pane = GetBase.Parent
+  
+	 mBase.SetLayoutAnimated(200, 0 , 0,  Parent.Width, Parent.Height)
+	  
 End Sub
 
 #End Region
-
-
-Public Sub InnerLabel_MousePressed (EventData As MouseEvent)
-	  
-	CallSubDelayed2(mCallBack, mEventName & "_MousePressed", EventData) 'ignore
-	 
-End Sub
-
-
-
+ 
 Sub ModalBgPane_MousePressed (EventData As MouseEvent)
 	
 	CallSubDelayed2(mCallBack, mEventName & "_ModalBGPressed", EventData) 'ignore
