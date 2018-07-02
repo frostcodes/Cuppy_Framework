@@ -15,6 +15,9 @@ Sub Class_Globals
 	Private mCallBack As Object 'ignore
 	Private mBase As Pane
 '	Public InnerLabel As Label
+	Private ContentPane As Pane
+	Private TopPane As Pane
+	Private Container As Pane
 End Sub
 
 Public Sub Initialize (Callback As Object, EventName As String)
@@ -34,12 +37,24 @@ Public Sub DesignerCreateView (Base As Pane, Lbl As Label, Props As Map)
 	'InnerLabel.Font = StyleManager.SelectFont("Regular", 12)
 	
 	
-	Dim ParentForm As Form = mBase.Parent.pa
+'	Dim ParentForm As Form = mBase.Parent.pa
+'	
+'	ParentForm.SetFormStyle("UNDECORATED")
+'	
 	
-	ParentForm.SetFormStyle("UNDECORATED")
+	CSSUtils.SetStyleProperty(Container, "-fx-effect", "dropshadow(three-pass-box, derive(gray, -20%), 10, 0, 4, 4)")
+	'CSSUtils.SetStyleProperty(Container, "-fx-background-color", "derive(cadetblue, -20%)")
 	
+	CSSUtils.SetStyleProperty(Container, "-fx-background-insets", "12")
+	CSSUtils.SetStyleProperty(Container, "-fx-background-radius", "6")
 	
-	
+	 
+''	-fx-effect: dropshadow(three-pass-box, derive(cadetblue, -20%), 10, 0, 4, 4);
+'	-fx-background-color: derive(cadetblue, -20%);
+'	-fx-background-insets: 12;
+'	-fx-background-radius: 6;
+'	
+'	
 End Sub
 
 Private Sub Base_Resize (Width As Double, Height As Double)
