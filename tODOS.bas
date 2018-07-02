@@ -22,7 +22,7 @@ End Sub
 '   instaed of something like  CSSUtils.SetStyleProperty SwitchBtn, "-fx-background-color", color)
 	   ' **   add mime types as a cuppy plugin...
 	  
-	   ' **   
+	   ' **   StyleExtender (Apply selected theme propertys to legacy controls)
 '  .NET Framework 4.0 (Client Profile) And later.
 '
 'Controls
@@ -59,4 +59,6 @@ End Sub
 
 '---------------- Dpencies libary
 '*  CSSUtils
-'* 
+'* Java Object
+'* Jfx
+'*Jcore

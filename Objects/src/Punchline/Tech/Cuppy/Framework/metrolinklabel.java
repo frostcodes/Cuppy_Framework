@@ -74,8 +74,8 @@ _mbase = _base;
 _mbase.LoadLayout(ba,"MetroLinkLabelUI");
  //BA.debugLineNum = 25;BA.debugLine="setTextColor(StyleManager.DefaultTheme.Get(\"prima";
 _settextcolor(BA.ObjectToString(_stylemanager._defaulttheme.Get((Object)("primary_text"))));
- //BA.debugLineNum = 26;BA.debugLine="InnerLabel.Font = StyleManager.SelectFont(\"Light\"";
-_innerlabel.setFont(_stylemanager._selectfont("Light",12));
+ //BA.debugLineNum = 26;BA.debugLine="InnerLabel.Font = StyleManager.SelectFont(\"Regula";
+_innerlabel.setFont(_stylemanager._selectfont("Regular",12));
  //BA.debugLineNum = 28;BA.debugLine="End Sub";
 return "";
 }
