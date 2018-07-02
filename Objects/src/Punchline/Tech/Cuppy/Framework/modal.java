@@ -96,17 +96,17 @@ _mcallback = _callback;
 return "";
 }
 public String  _modalbgpane_mousepressed(anywheresoftware.b4j.objects.NodeWrapper.MouseEventWrapper _eventdata) throws Exception{
- //BA.debugLineNum = 98;BA.debugLine="Sub ModalBgPane_MousePressed (EventData As MouseEv";
- //BA.debugLineNum = 100;BA.debugLine="CallSubDelayed2(mCallBack, mEventName & \"_ModalBG";
+ //BA.debugLineNum = 101;BA.debugLine="Sub ModalBgPane_MousePressed (EventData As MouseEv";
+ //BA.debugLineNum = 103;BA.debugLine="CallSubDelayed2(mCallBack, mEventName & \"_ModalBG";
 __c.CallSubDelayed2(ba,_mcallback,_meventname+"_ModalBGPressed",(Object)(_eventdata));
- //BA.debugLineNum = 102;BA.debugLine="End Sub";
+ //BA.debugLineNum = 105;BA.debugLine="End Sub";
 return "";
 }
 public String  _modalpane_mousepressed(anywheresoftware.b4j.objects.NodeWrapper.MouseEventWrapper _eventdata) throws Exception{
- //BA.debugLineNum = 104;BA.debugLine="Sub ModalPane_MousePressed (EventData As MouseEven";
- //BA.debugLineNum = 106;BA.debugLine="CallSubDelayed2(mCallBack, mEventName & \"_ModalPr";
+ //BA.debugLineNum = 107;BA.debugLine="Sub ModalPane_MousePressed (EventData As MouseEven";
+ //BA.debugLineNum = 109;BA.debugLine="CallSubDelayed2(mCallBack, mEventName & \"_ModalPr";
 __c.CallSubDelayed2(ba,_mcallback,_meventname+"_ModalPressed",(Object)(_eventdata));
- //BA.debugLineNum = 108;BA.debugLine="End Sub";
+ //BA.debugLineNum = 111;BA.debugLine="End Sub";
 return "";
 }
 public String  _removeeffects() throws Exception{
@@ -157,9 +157,13 @@ anywheresoftware.b4j.objects.PaneWrapper.ConcretePaneWrapper _parent = null;
  //BA.debugLineNum = 90;BA.debugLine="Dim Parent As Pane = GetBase.Parent";
 _parent = new anywheresoftware.b4j.objects.PaneWrapper.ConcretePaneWrapper();
 _parent.setObject((javafx.scene.layout.Pane)(_getbase().getParent().getObject()));
- //BA.debugLineNum = 92;BA.debugLine="mBase.SetLayoutAnimated(200, 0 , 0,  Parent.Widt";
-_mbase.SetLayoutAnimated((int) (200),0,0,_parent.getWidth(),_parent.getHeight());
- //BA.debugLineNum = 94;BA.debugLine="End Sub";
+ //BA.debugLineNum = 92;BA.debugLine="ModalBgPane.Visible = True";
+_modalbgpane.setVisible(__c.True);
+ //BA.debugLineNum = 93;BA.debugLine="ModalPane.Visible = True";
+_modalpane.setVisible(__c.True);
+ //BA.debugLineNum = 95;BA.debugLine="mBase.SetLayoutAnimated(300, 0 , 0,  Parent.Width";
+_mbase.SetLayoutAnimated((int) (300),0,0,_parent.getWidth(),_parent.getHeight());
+ //BA.debugLineNum = 97;BA.debugLine="End Sub";
 return "";
 }
 public Object callSub(String sub, Object sender, Object[] args) throws Exception {

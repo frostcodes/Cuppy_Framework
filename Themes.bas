@@ -3,7 +3,7 @@ Version=5.51
 ModulesStructureVersion=1
 B4J=true
 @EndOfDesignText@
-
+'Cascading styles and theming for Metro UI
 'This defines all the themes available 
 Sub Class_Globals
 	 

@@ -93,8 +93,11 @@ End Sub
 Public Sub show
 	 
 	Dim Parent As Pane = GetBase.Parent
+	
+	ModalBgPane.Visible = True
+	ModalPane.Visible = True
   
-	 mBase.SetLayoutAnimated(200, 0 , 0,  Parent.Width, Parent.Height)
+	mBase.SetLayoutAnimated(300, 0 , 0,  Parent.Width, Parent.Height)
 	  
 End Sub
 
