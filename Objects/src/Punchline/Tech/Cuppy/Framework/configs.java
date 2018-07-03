@@ -47,8 +47,8 @@ public static String  _process_globals() throws Exception{
 _libraryauthor = "Punchline Technologies";
  //BA.debugLineNum = 6;BA.debugLine="Public LibraryName As String =  \"Cuppy Framework\"";
 _libraryname = "Cuppy Framework";
- //BA.debugLineNum = 7;BA.debugLine="Public LibraryVersion As String =  \"0.9.60\"";
-_libraryversion = "0.9.60";
+ //BA.debugLineNum = 7;BA.debugLine="Public LibraryVersion As String =  \"0.9.80\"";
+_libraryversion = "0.9.80";
  //BA.debugLineNum = 8;BA.debugLine="Public DebugMode As Boolean = True  'are we debug";
 _debugmode = anywheresoftware.b4a.keywords.Common.True;
  //BA.debugLineNum = 12;BA.debugLine="Public AppDir As String = File.DirApp";

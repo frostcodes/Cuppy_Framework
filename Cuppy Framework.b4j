@@ -11,26 +11,26 @@ Module7=StringUtility
 Module8=MathUtility
 Module9=DataTypeUtility
 Module10=MaterialLabel
-Module11=MetroForm
-Module12=MaterialButton
-Module13=Divider
-Module14=MetroLinkLabel
-Module15=Modal
-Module16=AppUtility
-Module17=ControlsUtils
-Module18=AppBar
-Module19=SquareFAB
-Module20=ComponentsManager
-Module21=FileUtility
-Module22=MaterialCheckBox
-Module23=MaterialSwitch
-Module24=MaterialRadioBox
-Module25=MaterialLinearProgressBar
-Module26=FAB
-Module27=MaterialCard
-Module28=Chips
-Module29=AnimationManager
-Module30=LicenseManager
+Module11=MaterialButton
+Module12=Divider
+Module13=MetroLinkLabel
+Module14=Modal
+Module15=AppUtility
+Module16=ControlsUtils
+Module17=AppBar
+Module18=SquareFAB
+Module19=ComponentsManager
+Module20=FileUtility
+Module21=MaterialCheckBox
+Module22=MaterialSwitch
+Module23=MaterialRadioBox
+Module24=MaterialLinearProgressBar
+Module25=FAB
+Module26=MaterialCard
+Module27=Chips
+Module28=AnimationManager
+Module29=LicenseManager
+Module30=BarPreLoader
 Build1=Full,Punchline.Tech.Cuppy.Framework,Full
 NumberOfFiles=15
 File1=AppBarLayout.bjl
@@ -44,7 +44,7 @@ File8=MaterialLabelLayout.bjl
 File9=MaterialLinearProgressBar.bjl
 File10=MaterialRadioBoxLayout.bjl
 File11=MaterialSwitchesLayout.bjl
-File12=MetroFormUI.bjl
+File12=MetroButton.bjl
 File13=MetroLinkLabelUI.bjl
 File14=ModalLayout.bjl
 File15=SquareFABLayout.bjl
@@ -61,7 +61,7 @@ Library4=javaobject
 'Copyright to Oluwaseyi Aderinkomi < Frost Codes >  - seyiaderinkomi@gmail.com
 #LibraryAuthor: Punchline Technologies
 #LibraryName: Cuppy Framework
-#LibraryVersion: 0.960
+#LibraryVersion: 0.980
  
 #End Region
 
