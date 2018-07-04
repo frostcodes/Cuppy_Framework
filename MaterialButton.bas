@@ -71,7 +71,7 @@ Public Sub setBorderRadius(radius As Int)
 End Sub
 
 
-Public Sub setPaneEffect(effect As String)
+Public Sub setEffect(effect As String)
 	
 	ControlsUtils.setEffect(InnerButton, effect)
 	

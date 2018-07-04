@@ -1,31 +1,38 @@
 ﻿Version=5.51
 AppType=JavaFX
-NumberOfModules=23
+NumberOfModules=30
 Module1=Configs
 Module2=tODOS
 Module3=Themes
-Module4=ComponentsManager
+Module4=MetroThemes
 Module5=StyleManager
-Module6=ControlsUtils
-Module7=CuppyGlobals
-Module8=StringUtility
-Module9=NumbersUtility
-Module10=FileUtility
-Module11=MaterialCheckBox
-Module12=MaterialSwitch
-Module13=MaterialRadioBox
-Module14=MaterialButton
-Module15=Divider
-Module16=SquareFAB
-Module17=MaterialLinearProgressBar
-Module18=FAB
-Module19=MaterialCard
-Module20=AppBar
-Module21=Chips
-Module22=AnimationManager
-Module23=LicenseManager
+Module6=CuppyGlobals
+Module7=StringUtility
+Module8=MathUtility
+Module9=DataTypeUtility
+Module10=MaterialLabel
+Module11=MaterialButton
+Module12=Divider
+Module13=MetroLinkLabel
+Module14=Modal
+Module15=AppUtility
+Module16=ControlsUtils
+Module17=AppBar
+Module18=SquareFAB
+Module19=ComponentsManager
+Module20=FileUtility
+Module21=MaterialCheckBox
+Module22=MaterialSwitch
+Module23=MaterialRadioBox
+Module24=MaterialLinearProgressBar
+Module25=FAB
+Module26=MaterialCard
+Module27=Chips
+Module28=AnimationManager
+Module29=LicenseManager
+Module30=BarPreLoader
 Build1=Full,Punchline.Tech.Cuppy.Framework,Full
-NumberOfFiles=11
+NumberOfFiles=15
 File1=AppBarLayout.bjl
 File2=CardLayout.bjl
 File3=ChipsLayout.bjl
@@ -33,14 +40,19 @@ File4=DividerLayout.bjl
 File5=FABLayout.bjl
 File6=MaterialButtonLayout.bjl
 File7=MaterialCheckboxLayout.bjl
-File8=MaterialLinearProgressBar.bjl
-File9=MaterialRadioBoxLayout.bjl
-File10=MaterialSwitchesLayout.bjl
-File11=SquareFABLayout.bjl
-NumberOfLibraries=3
+File8=MaterialLabelLayout.bjl
+File9=MaterialLinearProgressBar.bjl
+File10=MaterialRadioBoxLayout.bjl
+File11=MaterialSwitchesLayout.bjl
+File12=MetroButton.bjl
+File13=MetroLinkLabelUI.bjl
+File14=ModalLayout.bjl
+File15=SquareFABLayout.bjl
+NumberOfLibraries=4
 Library1=jcore
 Library2=jfx
 Library3=cssutils
+Library4=javaobject
 @EndOfDesignText@
 #Region Project Attributes 
 
@@ -49,7 +61,7 @@ Library3=cssutils
 'Copyright to Oluwaseyi Aderinkomi < Frost Codes >  - seyiaderinkomi@gmail.com
 #LibraryAuthor: Punchline Technologies
 #LibraryName: Cuppy Framework
-#LibraryVersion: 0.91
+#LibraryVersion: 0.980
  
 #End Region
 

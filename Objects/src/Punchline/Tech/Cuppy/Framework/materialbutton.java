@@ -31,12 +31,14 @@ public anywheresoftware.b4j.objects.PaneWrapper.ConcretePaneWrapper _mbase = nul
 public anywheresoftware.b4j.objects.ButtonWrapper _innerbutton = null;
 public b4j.example.cssutils _cssutils = null;
 public Punchline.Tech.Cuppy.Framework.configs _configs = null;
-public Punchline.Tech.Cuppy.Framework.componentsmanager _componentsmanager = null;
 public Punchline.Tech.Cuppy.Framework.stylemanager _stylemanager = null;
-public Punchline.Tech.Cuppy.Framework.controlsutils _controlsutils = null;
 public Punchline.Tech.Cuppy.Framework.cuppyglobals _cuppyglobals = null;
 public Punchline.Tech.Cuppy.Framework.stringutility _stringutility = null;
-public Punchline.Tech.Cuppy.Framework.numbersutility _numbersutility = null;
+public Punchline.Tech.Cuppy.Framework.mathutility _mathutility = null;
+public Punchline.Tech.Cuppy.Framework.datatypeutility _datatypeutility = null;
+public Punchline.Tech.Cuppy.Framework.apputility _apputility = null;
+public Punchline.Tech.Cuppy.Framework.controlsutils _controlsutils = null;
+public Punchline.Tech.Cuppy.Framework.componentsmanager _componentsmanager = null;
 public Punchline.Tech.Cuppy.Framework.fileutility _fileutility = null;
 public Punchline.Tech.Cuppy.Framework.animationmanager _animationmanager = null;
 public Punchline.Tech.Cuppy.Framework.licensemanager _licensemanager = null;
@@ -129,8 +131,8 @@ _controlsutils._setborderradius((anywheresoftware.b4j.objects.NodeWrapper.Contro
  //BA.debugLineNum = 66;BA.debugLine="End Sub";
 return "";
 }
-public String  _setpaneeffect(String _effect) throws Exception{
- //BA.debugLineNum = 69;BA.debugLine="Public Sub setPaneEffect(effect As String)";
+public String  _seteffect(String _effect) throws Exception{
+ //BA.debugLineNum = 69;BA.debugLine="Public Sub setEffect(effect As String)";
  //BA.debugLineNum = 71;BA.debugLine="ControlsUtils.setEffect(InnerButton, effect)";
 _controlsutils._seteffect((anywheresoftware.b4j.objects.NodeWrapper.ControlWrapper.ConcreteControlWrapper) anywheresoftware.b4a.AbsObjectWrapper.ConvertToWrapper(new anywheresoftware.b4j.objects.NodeWrapper.ControlWrapper.ConcreteControlWrapper(), (javafx.scene.control.Control)(_innerbutton.getObject())),_effect);
  //BA.debugLineNum = 73;BA.debugLine="End Sub";
