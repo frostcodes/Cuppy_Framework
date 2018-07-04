@@ -32,19 +32,16 @@ End Sub
 
 Public Sub DesignerCreateView (Base As Pane, Lbl As Label, Props As Map)
 	mBase = Base
-	mBase.LoadLayout("ToggleButtonUI")
-	 
-	
+	mBase.LoadLayout("MetroToggleButton")
+	  
 	'TODO: create a designer prorerty for this...
 	setCheckState(UNCHECKED_STATE) 'set initial value
 	  
 End Sub
 
 Private Sub Base_Resize (Width As Double, Height As Double)
- 
-	'we are not handling resizes here...
-	
-	ToggleButton.PrefHeight = Width
+  
+	ToggleButton.PrefHeight = Height
 	ToggleButton.PrefWidth = Width
 	 
 End Sub
@@ -83,7 +80,7 @@ End Sub
  
 Public Sub setPaneEffect(effect As String)
 	
-	ControlsUtils.setPaneEffect(ToggleButton, effect)
+	ControlsUtils.setEffect(ToggleButton, effect)
 	
 End Sub
 
@@ -94,21 +91,25 @@ Public Sub removeEffects()
 End Sub
 
 #End Region
-  
- 
+   
 Public Sub setCheckState(value As Int)
 	 
 	If value = UNCHECKED_STATE Then
 		 
-		 SetBg("white")
+		SetBg("white")
 		setBorder("#D6D6D6", 2)
+		
+		ToggleButton.TextColor = fx.Colors.RGB(91, 91, 91)
 		  
 		CheckedStatus = False
 		  
 	Else if value = CHECKED_STATE Then
 	 
-		SetBg("#FF41B1E1")
+		
 		setBorder("#2EA9DE", 2)
+		SetBg("rgb(65, 177, 225 )")
+		
+		ToggleButton.TextColor = fx.Colors.White
 		 
 		CheckedStatus = True
 		 
@@ -123,9 +124,9 @@ Public Sub checked As Boolean
 
 	Return CheckedStatus
 	 
-End Sub
-  
-Private Sub CheckedStatus_MousePressed (EventData As MouseEvent)
+End Sub 
+
+Sub ToggleButton_MousePressed (EventData As MouseEvent)
 	 
 	If Not(checked) Then
 	
@@ -136,5 +137,5 @@ Private Sub CheckedStatus_MousePressed (EventData As MouseEvent)
 		setCheckState(UNCHECKED_STATE)
  
 	End If
-	 
+	
 End Sub
