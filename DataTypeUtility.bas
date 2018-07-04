@@ -1,7 +1,8 @@
-﻿Type=StaticCode
-Version=5.51
+﻿B4J=true
+Group=Cuppy\Utilities
 ModulesStructureVersion=1
-B4J=true
+Type=StaticCode
+Version=5.51
 @EndOfDesignText@
 'This file contains function for  data types 
 'such as checking their types or conversion of types etc..

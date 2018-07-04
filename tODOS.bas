@@ -1,7 +1,8 @@
-﻿Type=Class
-Version=5.51
+﻿B4J=true
+Group=Cuppy
 ModulesStructureVersion=1
-B4J=true
+Type=Class
+Version=5.51
 @EndOfDesignText@
 Sub Class_Globals
 	Private fx As JFX

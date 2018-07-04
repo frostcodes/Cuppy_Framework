@@ -1,7 +1,8 @@
-﻿Type=StaticCode
-Version=5.51
+﻿B4J=true
+Group=Cuppy\Cuppy Internals\License
 ModulesStructureVersion=1
-B4J=true
+Type=StaticCode
+Version=5.51
 @EndOfDesignText@
 'This manages the developer license  to use this framework...
 Sub Process_Globals

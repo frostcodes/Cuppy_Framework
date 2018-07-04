@@ -33,12 +33,10 @@ public static String _max_value = "";
 public static b4j.example.cssutils _cssutils = null;
 public static Punchline.Tech.Cuppy.Framework.configs _configs = null;
 public static Punchline.Tech.Cuppy.Framework.stylemanager _stylemanager = null;
-public static Punchline.Tech.Cuppy.Framework.cuppyglobals _cuppyglobals = null;
 public static Punchline.Tech.Cuppy.Framework.stringutility _stringutility = null;
 public static Punchline.Tech.Cuppy.Framework.datatypeutility _datatypeutility = null;
 public static Punchline.Tech.Cuppy.Framework.apputility _apputility = null;
 public static Punchline.Tech.Cuppy.Framework.controlsutils _controlsutils = null;
-public static Punchline.Tech.Cuppy.Framework.componentsmanager _componentsmanager = null;
 public static Punchline.Tech.Cuppy.Framework.fileutility _fileutility = null;
 public static Punchline.Tech.Cuppy.Framework.animationmanager _animationmanager = null;
 public static Punchline.Tech.Cuppy.Framework.licensemanager _licensemanager = null;
@@ -162,10 +160,10 @@ _k = (int) (_n.length()-1);
 _multiplier = (int) (1);
  //BA.debugLineNum = 123;BA.debugLine="For i =  k To 0 Step -1";
 {
-final int step7 = (int) (-1);
+final int step7 = -1;
 final int limit7 = (int) (0);
 _i = _k ;
-for (;(step7 > 0 && _i <= limit7) || (step7 < 0 && _i >= limit7) ;_i = ((int)(0 + _i + step7))  ) {
+for (;_i >= limit7 ;_i = _i + step7 ) {
  //BA.debugLineNum = 125;BA.debugLine="st = n.CharAt(i)";
 _st = BA.ObjectToString(_n.charAt(_i));
  //BA.debugLineNum = 126;BA.debugLine="result = chars.IndexOf(st) * multiplier  + resul";

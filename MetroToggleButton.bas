@@ -1,8 +1,8 @@
 ﻿B4J=true
-Group=Cuppy\Controls\Material UI
+Group=Cuppy\Controls\Metro
 ModulesStructureVersion=1
 Type=Class
-Version=5.51
+Version=6.3
 @EndOfDesignText@
 'Custom View class
  
@@ -16,15 +16,13 @@ Sub Class_Globals
 	Private mEventName As String 'ignore
 	Private mCallBack As Object 'ignore
 	Private mBase As Pane
- 
-	Public CheckboxPane As Pane
-	Public CheckedPane As Pane
-	
+  
 	'Checkbox states
 	Public CHECKED_STATE As Int = 0
 	Public UNCHECKED_STATE As Int = 1
-	Public INDETERMINATE_STATE As Int = 2
 	 
+	Private CheckedStatus As Boolean = False
+	Public ToggleButton As Label
 End Sub
 
 Public Sub Initialize (Callback As Object, EventName As String)
@@ -34,20 +32,21 @@ End Sub
 
 Public Sub DesignerCreateView (Base As Pane, Lbl As Label, Props As Map)
 	mBase = Base
-	mBase.LoadLayout("MaterialRadioBoxLayout")
-	'set using theme...
-	'SetBg(StyleManager.DefaultTheme.Get("divider"))
-	setBorder(StyleManager.DefaultTheme.Get("divider"), 2)
-	
-	setCheckedColor(StyleManager.DefaultTheme.Get("primary"))
+	mBase.LoadLayout("ToggleButtonUI")
+	 
 	
 	'TODO: create a designer prorerty for this...
 	setCheckState(UNCHECKED_STATE) 'set initial value
-	 
+	  
 End Sub
 
 Private Sub Base_Resize (Width As Double, Height As Double)
- 'we are not handling resizes for this ..
+ 
+	'we are not handling resizes here...
+	
+	ToggleButton.PrefHeight = Width
+	ToggleButton.PrefWidth = Width
+	 
 End Sub
 
 Public Sub GetBase As Pane
@@ -60,101 +59,82 @@ End Sub
 
 Public Sub SetBg(color As String)
  
-	CSSUtils.SetStyleProperty( CheckboxPane, "-fx-background-color", color)
+	ControlsUtils.setBG(ToggleButton, color)
  
 End Sub
 
 Public Sub setRotationX(angle As Float)
 	
-	ControlsUtils.setPaneRotationX(CheckboxPane, angle) 'rotate
+	ControlsUtils.setRotationX(ToggleButton, angle) 'rotate
 	 
 End Sub
 
 Public Sub setBorder(color As String , width As Int)
 	
-	ControlsUtils.setPaneBorder(CheckboxPane, color, width)
+	ControlsUtils.setBorder(ToggleButton, color, width)
 
 End Sub
  
 Public Sub setBorderRadius(radius As Int)
 	
-	ControlsUtils.setPaneBorderRadius(CheckboxPane, radius)
+	ControlsUtils.setBorderRadius(ToggleButton, radius)
 	
 End Sub
  
 Public Sub setPaneEffect(effect As String)
 	
-	ControlsUtils.setPaneEffect(CheckboxPane, effect)
+	ControlsUtils.setPaneEffect(ToggleButton, effect)
 	
 End Sub
 
 Public Sub removeEffects()
 	
-	ControlsUtils.removePaneEffect(CheckboxPane)
+	ControlsUtils.removeEffect(ToggleButton)
 	
 End Sub
 
 #End Region
   
-Public Sub setCheckedColor(color As String)
-  	
-	CSSUtils.SetStyleProperty( CheckedPane, "-fx-background-color", color)
-	
-End Sub
  
 Public Sub setCheckState(value As Int)
 	 
 	If value = UNCHECKED_STATE Then
-		
-		CheckedPane.Visible = False
-		CheckedPane.SetAlphaAnimated(300, 0 )
-		'SetBg(StyleManager.DefaultTheme.Get("divider"))
-		
 		 
+		 SetBg("white")
+		setBorder("#D6D6D6", 2)
+		  
+		CheckedStatus = False
+		  
 	Else if value = CHECKED_STATE Then
-	
-		CheckedPane.Visible = True
-		CheckedPane.SetAlphaAnimated(300, 1 )
-		'SetBg(StyleManager.DefaultTheme.Get("primary"))
-		
+	 
+		SetBg("#FF41B1E1")
+		setBorder("#2EA9DE", 2)
 		 
-	Else
-			
-		CheckedPane.SetAlphaAnimated(300, 0.6 )
-		CheckedPane.Visible = True
-		'SetBg(StyleManager.DefaultTheme.Get("primary"))
-		
-		 	
+		CheckedStatus = True
+		 
 	End If
 	 
 	'call callback for checked changed status
 	CallSubDelayed2(mCallBack, mEventName & "_CheckedChanged" , value)
-	  
+	 
 End Sub
 
 Public Sub checked As Boolean
 
-	Return CheckedPane.Visible
+	Return CheckedStatus
 	 
 End Sub
-
-Public Sub IsIndeterminate As Boolean
-	
-	Return CheckedPane.Alpha = "0.6"
-	
-End Sub
- 
-Private Sub CheckboxPane_MousePressed (EventData As MouseEvent)
+  
+Private Sub CheckedStatus_MousePressed (EventData As MouseEvent)
 	 
-	If Not(checked) Or IsIndeterminate Then
+	If Not(checked) Then
 	
 		setCheckState(CHECKED_STATE)
 	
 	Else
 	
 		setCheckState(UNCHECKED_STATE)
-		  
+ 
 	End If
-	
-	
+	 
 End Sub

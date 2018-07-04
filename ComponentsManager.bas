@@ -1,7 +1,8 @@
-﻿Type=StaticCode
-Version=5.51
+﻿B4J=true
+Group=Default Group
 ModulesStructureVersion=1
-B4J=true
+Type=StaticCode
+Version=5.51
 @EndOfDesignText@
 'This manages Components
 Sub Process_Globals

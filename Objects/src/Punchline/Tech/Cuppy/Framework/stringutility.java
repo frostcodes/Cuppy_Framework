@@ -26,12 +26,10 @@ public static anywheresoftware.b4j.objects.JFX _fx = null;
 public static b4j.example.cssutils _cssutils = null;
 public static Punchline.Tech.Cuppy.Framework.configs _configs = null;
 public static Punchline.Tech.Cuppy.Framework.stylemanager _stylemanager = null;
-public static Punchline.Tech.Cuppy.Framework.cuppyglobals _cuppyglobals = null;
 public static Punchline.Tech.Cuppy.Framework.mathutility _mathutility = null;
 public static Punchline.Tech.Cuppy.Framework.datatypeutility _datatypeutility = null;
 public static Punchline.Tech.Cuppy.Framework.apputility _apputility = null;
 public static Punchline.Tech.Cuppy.Framework.controlsutils _controlsutils = null;
-public static Punchline.Tech.Cuppy.Framework.componentsmanager _componentsmanager = null;
 public static Punchline.Tech.Cuppy.Framework.fileutility _fileutility = null;
 public static Punchline.Tech.Cuppy.Framework.animationmanager _animationmanager = null;
 public static Punchline.Tech.Cuppy.Framework.licensemanager _licensemanager = null;
@@ -114,7 +112,7 @@ _randomarray = new String[]{BA.NumberToString(1),BA.NumberToString(2),BA.NumberT
 final int step3 = 1;
 final int limit3 = (int) (_pinlength-1);
 _i = (int) (0) ;
-for (;(step3 > 0 && _i <= limit3) || (step3 < 0 && _i >= limit3) ;_i = ((int)(0 + _i + step3))  ) {
+for (;_i <= limit3 ;_i = _i + step3 ) {
  //BA.debugLineNum = 270;BA.debugLine="result = result &  RandomArray( Rnd( 0, Rnd(2, R";
 _result = _result+_randomarray[anywheresoftware.b4a.keywords.Common.Rnd((int) (0),anywheresoftware.b4a.keywords.Common.Rnd((int) (2),(int) (_randomarray.length-1)))];
  }
@@ -319,7 +317,7 @@ if (true) return anywheresoftware.b4a.keywords.Common.False;};
 final int step4 = 1;
 final int limit4 = (int) (4);
 _i = (int) (1) ;
-for (;(step4 > 0 && _i <= limit4) || (step4 < 0 && _i >= limit4) ;_i = ((int)(0 + _i + step4))  ) {
+for (;_i <= limit4 ;_i = _i + step4 ) {
  //BA.debugLineNum = 45;BA.debugLine="If m.Group(i) > 255 Or m.Group(i) < 0 Then Retur";
 if ((double)(Double.parseDouble(_m.Group(_i)))>255 || (double)(Double.parseDouble(_m.Group(_i)))<0) { 
 if (true) return anywheresoftware.b4a.keywords.Common.False;};
@@ -425,7 +423,7 @@ _random = 0;
 final int step3 = 1;
 final int limit3 = (int) (_stringarray.length-1);
 _i = (int) (0) ;
-for (;(step3 > 0 && _i <= limit3) || (step3 < 0 && _i >= limit3) ;_i = ((int)(0 + _i + step3))  ) {
+for (;_i <= limit3 ;_i = _i + step3 ) {
  //BA.debugLineNum = 211;BA.debugLine="Random = Rnd(i, StringArray.Length)";
 _random = anywheresoftware.b4a.keywords.Common.Rnd(_i,_stringarray.length);
  //BA.debugLineNum = 212;BA.debugLine="ArrayVal = StringArray(i)";
@@ -618,7 +616,7 @@ _result = "";
 final int step5 = 1;
 final int limit5 = (int) (_multiplier-1);
 _i = (int) (0) ;
-for (;(step5 > 0 && _i <= limit5) || (step5 < 0 && _i >= limit5) ;_i = ((int)(0 + _i + step5))  ) {
+for (;_i <= limit5 ;_i = _i + step5 ) {
  //BA.debugLineNum = 672;BA.debugLine="result = result & input";
 _result = _result+_input;
  }
@@ -656,7 +654,7 @@ _divval = (int) (_str.length()/(double)_splitlength);
 final int step10 = 1;
 final int limit10 = _divval;
 _i = (int) (0) ;
-for (;(step10 > 0 && _i <= limit10) || (step10 < 0 && _i >= limit10) ;_i = ((int)(0 + _i + step10))  ) {
+for (;_i <= limit10 ;_i = _i + step10 ) {
  //BA.debugLineNum = 758;BA.debugLine="Dim nextVal As Int = i * splitLength";
 _nextval = (int) (_i*_splitlength);
  //BA.debugLineNum = 760;BA.debugLine="If i = DivVal Then";
@@ -694,7 +692,7 @@ _result.Initialize();
 final int step3 = 1;
 final int limit3 = (int) (_text.length()-1);
 _i = (int) (0) ;
-for (;(step3 > 0 && _i <= limit3) || (step3 < 0 && _i >= limit3) ;_i = ((int)(0 + _i + step3))  ) {
+for (;_i <= limit3 ;_i = _i + step3 ) {
  //BA.debugLineNum = 638;BA.debugLine="result.Append(Asc(text.CharAt(i)) & seperator)";
 _result.Append(BA.NumberToString(anywheresoftware.b4a.keywords.Common.Asc(_text.charAt(_i)))+_seperator);
  }
@@ -746,7 +744,7 @@ int _i = 0;
 final int step1 = 1;
 final int limit1 = (int) (_haystack.length()-1);
 _i = (int) (0) ;
-for (;(step1 > 0 && _i <= limit1) || (step1 < 0 && _i >= limit1) ;_i = ((int)(0 + _i + step1))  ) {
+for (;_i <= limit1 ;_i = _i + step1 ) {
  //BA.debugLineNum = 707;BA.debugLine="If charList.IndexOf(haystack.CharAt(i)) >= 0 Th";
 if (_charlist.indexOf(BA.ObjectToString(_haystack.charAt(_i)))>=0) { 
  //BA.debugLineNum = 709;BA.debugLine="Return haystack.SubString(i)";
@@ -772,7 +770,7 @@ _result.Initialize();
 final int step3 = 1;
 final int limit3 = (int) (_str.length()-1);
 _i = (int) (0) ;
-for (;(step3 > 0 && _i <= limit3) || (step3 < 0 && _i >= limit3) ;_i = ((int)(0 + _i + step3))  ) {
+for (;_i <= limit3 ;_i = _i + step3 ) {
  //BA.debugLineNum = 728;BA.debugLine="result.Add(str.CharAt(i))";
 _result.Add((Object)(_str.charAt(_i)));
  }
@@ -913,7 +911,7 @@ _divval = (int) (_str.length()/(double)_limit);
 final int step9 = 1;
 final int limit9 = _divval;
 _i = (int) (0) ;
-for (;(step9 > 0 && _i <= limit9) || (step9 < 0 && _i >= limit9) ;_i = ((int)(0 + _i + step9))  ) {
+for (;_i <= limit9 ;_i = _i + step9 ) {
  //BA.debugLineNum = 606;BA.debugLine="Dim nextVal As Int = i * limit";
 _nextval = (int) (_i*_limit);
  //BA.debugLineNum = 608;BA.debugLine="If i = DivVal Then";

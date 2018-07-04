@@ -1,7 +1,8 @@
-﻿Type=Class
-Version=5.51
+﻿B4J=true
+Group=Cuppy
 ModulesStructureVersion=1
-B4J=true
+Type=Class
+Version=5.51
 @EndOfDesignText@
 'Custom View class
  
@@ -35,34 +36,9 @@ End Sub
 
 
 
-Sub Timer1_Tick
-	'Handle tick events
-	
-	Dim height As Int = ( Rnd(30, 100) / 100 ) *  mBase.PrefHeight
-	
-	Pane1.SetLayoutAnimated( 300 , Pane1.Left, Pane1.Top, Pane1.PrefWidth , height)
-	
-End Sub
- 
-Sub Timer2_Tick
-	 
-	 Dim height As Int = ( Rnd(30, 100) / 100  ) *  mBase.PrefHeight
-	
-	Pane2.SetLayoutAnimated(300 , Pane2.Left, Pane2.Top, Pane2.PrefWidth , height)
-	 
-End Sub
- 
-Sub Timer3_Tick
-	 
-	Dim height As Int =(  Rnd(30, 100) /100 ) *  mBase.PrefHeight
-	
-	Pane3.SetLayoutAnimated(300 , Pane3.Left, Pane3.Top, Pane3.PrefWidth , height)
-	 
-End Sub
-
 Public Sub DesignerCreateView (Base As Pane, Lbl As Label, Props As Map)
 	mBase = Base
-	mBase.LoadLayout("MetroButton")
+	mBase.LoadLayout("BarPreLoaderUI")
 	'set using theme...
  
 	'setTextColor(StyleManager.DefaultTheme.Get("primary_text"))
@@ -90,6 +66,36 @@ Public Sub GetBase As Pane
 End Sub
 
 #End Region
+
+
+
+
+Sub Timer1_Tick
+	'Handle tick events
+	
+	Dim height As Int = ( Rnd(30, 100) / 100 ) *  mBase.PrefHeight
+	
+	Pane1.SetLayoutAnimated( 300 , Pane1.Left, Pane1.Top, Pane1.PrefWidth , height)
+	
+End Sub
+ 
+Sub Timer2_Tick
+	 
+	Dim height As Int = ( Rnd(30, 100) / 100  ) *  mBase.PrefHeight
+	
+	
+	
+	Pane2.SetLayoutAnimated(300 , Pane2.Left, Pane2.Top, Pane2.PrefWidth , height)
+	 
+End Sub
+ 
+Sub Timer3_Tick
+	 
+	Dim height As Int =(  Rnd(30, 100) /100 ) *  mBase.PrefHeight
+	
+	Pane3.SetLayoutAnimated(300 , Pane3.Left, Pane3.Top, Pane3.PrefWidth , height)
+	 
+End Sub
 
 #Region Actions and Effects
  

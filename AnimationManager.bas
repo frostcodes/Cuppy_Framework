@@ -1,7 +1,8 @@
-﻿Type=StaticCode
-Version=5.51
+﻿B4J=true
+Group=Cuppy
 ModulesStructureVersion=1
-B4J=true
+Type=StaticCode
+Version=5.51
 @EndOfDesignText@
 'his manages animations in the framework
 Sub Process_Globals
