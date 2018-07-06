@@ -1,7 +1,8 @@
-﻿Type=StaticCode
-Version=5.51
+﻿B4J=true
+Group=Cuppy
 ModulesStructureVersion=1
-B4J=true
+Type=StaticCode
+Version=5.51
 @EndOfDesignText@
 'This contains codes that are for the app object
 Sub Process_Globals
@@ -17,3 +18,4 @@ Public Sub GetPackageName(Module As Object) As String
 	Dim MoStr As String = ModJo.RunMethod("toString",Null)
 	Return MoStr.SubString2(MoStr.LastIndexOf(" ")+1,MoStr.LastIndexOf("."))
 End Sub
+'

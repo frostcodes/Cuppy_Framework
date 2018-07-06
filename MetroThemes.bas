@@ -1,7 +1,8 @@
-﻿Type=Class
-Version=5.51
+﻿B4J=true
+Group=Default Group
 ModulesStructureVersion=1
-B4J=true
+Type=Class
+Version=5.51
 @EndOfDesignText@
 'Cascading styles and theming for Metro UI
 'This defines all the themes available 

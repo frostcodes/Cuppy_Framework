@@ -1,7 +1,8 @@
-﻿Type=StaticCode
-Version=5.51
+﻿B4J=true
+Group=Cuppy
 ModulesStructureVersion=1
-B4J=true
+Type=StaticCode
+Version=5.51
 @EndOfDesignText@
 'This file defines all the framework configurations 
 Private Sub Process_Globals
@@ -9,7 +10,7 @@ Private Sub Process_Globals
 	'Libary Infos and Behaviour
 	Public LibraryAuthor As String = "Punchline Technologies"
 	Public LibraryName As String =  "Cuppy Framework"
-	Public LibraryVersion As String =  "0.9.80"
+	Public LibraryVersion As String =  "0.9.85"
 	Public DebugMode As Boolean = True  'are we debugging ... or in release mode
 	
 	'Paths

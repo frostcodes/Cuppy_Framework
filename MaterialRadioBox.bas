@@ -1,7 +1,8 @@
-﻿Type=Class
-Version=5.51
+﻿B4J=true
+Group=Cuppy\Controls\Material UI
 ModulesStructureVersion=1
-B4J=true
+Type=Class
+Version=5.51
 @EndOfDesignText@
 'Custom View class
  
