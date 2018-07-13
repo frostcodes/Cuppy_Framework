@@ -40,6 +40,7 @@ public static Punchline.Tech.Cuppy.Framework.fileutility _fileutility = null;
 public static Punchline.Tech.Cuppy.Framework.animationmanager _animationmanager = null;
 public static Punchline.Tech.Cuppy.Framework.licensemanager _licensemanager = null;
 public static Punchline.Tech.Cuppy.Framework.cf_htmlutility _cf_htmlutility = null;
+public static Punchline.Tech.Cuppy.Framework.cf_datageneratorutility _cf_datageneratorutility = null;
 public static String  _process_globals() throws Exception{
  //BA.debugLineNum = 2;BA.debugLine="Private Sub Process_Globals";
  //BA.debugLineNum = 5;BA.debugLine="Public LibraryAuthor As String = \"Punchline Techn";

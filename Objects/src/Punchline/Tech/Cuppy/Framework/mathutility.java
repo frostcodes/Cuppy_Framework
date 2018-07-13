@@ -41,6 +41,7 @@ public static Punchline.Tech.Cuppy.Framework.fileutility _fileutility = null;
 public static Punchline.Tech.Cuppy.Framework.animationmanager _animationmanager = null;
 public static Punchline.Tech.Cuppy.Framework.licensemanager _licensemanager = null;
 public static Punchline.Tech.Cuppy.Framework.cf_htmlutility _cf_htmlutility = null;
+public static Punchline.Tech.Cuppy.Framework.cf_datageneratorutility _cf_datageneratorutility = null;
 public static double  _acosh(double _arg) throws Exception{
  //BA.debugLineNum = 27;BA.debugLine="Public Sub acosh (arg As Double) As Double";
  //BA.debugLineNum = 29;BA.debugLine="Return Logarithm(arg  + Sqrt(arg * arg - 1) , Exp";

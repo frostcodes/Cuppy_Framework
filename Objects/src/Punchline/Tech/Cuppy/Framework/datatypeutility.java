@@ -34,6 +34,7 @@ public static Punchline.Tech.Cuppy.Framework.fileutility _fileutility = null;
 public static Punchline.Tech.Cuppy.Framework.animationmanager _animationmanager = null;
 public static Punchline.Tech.Cuppy.Framework.licensemanager _licensemanager = null;
 public static Punchline.Tech.Cuppy.Framework.cf_htmlutility _cf_htmlutility = null;
+public static Punchline.Tech.Cuppy.Framework.cf_datageneratorutility _cf_datageneratorutility = null;
 public static boolean  _boolval(Object _mixedvar) throws Exception{
  //BA.debugLineNum = 12;BA.debugLine="Public Sub boolval(mixedVar As Object) As Boolean";
  //BA.debugLineNum = 14;BA.debugLine="If mixedVar = False Then";

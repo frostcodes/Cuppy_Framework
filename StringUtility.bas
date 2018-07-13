@@ -222,6 +222,13 @@ Public Sub shuffleArray(StringArray() As String) As String()
 	Return StringArray
 End Sub
 
+'Returns a random list value from a LIST 
+Public Sub RandListValue(ListX As List) As Object
+	
+	Return ListX.Get(Rnd(0, ListX.Size -1))
+	
+End Sub
+
  'This will generate random string 
  'Example:
 '<code>log(StringUtility.generateRandomString(16)) 'This will generate 16 random characters

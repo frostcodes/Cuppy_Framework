@@ -63,6 +63,7 @@ Module28=LicenseManager
 Module29=MaterialSwitch
 Module3=Themes
 Module30=CF_HtmlUtility
+Module31=CF_DataGeneratorUtility
 Module4=StringUtility
 Module5=MathUtility
 Module6=DataTypeUtility
@@ -71,7 +72,7 @@ Module8=MetroToggleButton
 Module9=Modal
 NumberOfFiles=17
 NumberOfLibraries=4
-NumberOfModules=30
+NumberOfModules=31
 Version=6.3
 @EndOfDesignText@
 #Region Project Attributes 

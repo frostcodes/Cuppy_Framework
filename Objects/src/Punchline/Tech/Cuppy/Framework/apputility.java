@@ -34,6 +34,7 @@ public static Punchline.Tech.Cuppy.Framework.fileutility _fileutility = null;
 public static Punchline.Tech.Cuppy.Framework.animationmanager _animationmanager = null;
 public static Punchline.Tech.Cuppy.Framework.licensemanager _licensemanager = null;
 public static Punchline.Tech.Cuppy.Framework.cf_htmlutility _cf_htmlutility = null;
+public static Punchline.Tech.Cuppy.Framework.cf_datageneratorutility _cf_datageneratorutility = null;
 public static String  _getpackagename(Object _module) throws Exception{
 anywheresoftware.b4j.object.JavaObject _modjo = null;
 String _mostr = "";
