@@ -203,57 +203,65 @@ End Sub
 Public Sub hypot(x As Double, y As Double) As Double
 	
 	x = Abs(x)
-	   y = Abs(y)
+	y = Abs(y)
 	'
 	Dim t As Double = Min(x, y)
 	x = Max(x, y)
 	t = t / x
 	
-	Return x * Sqrt(1 + t * t)  
+	Return x * Sqrt(1 + t * t)
  
+End Sub
+ 
+'Calculate the average of a list numbers
+'data Is the List of numbers to calculate their average
+'RoundUp = should value be rounded up or not
+Public Sub NumbersAverage(data As List ,roundUp As Boolean) As Double
+
+	Dim total As Int = 0
+ 
+	'add up values
+       
+	For Each value As Int In data
+	
+		total= total + value
+
+	Next
+ 
+	If roundUp Then
+			 
+'		Round up values
+		Return Ceil(total / data.Size)
+ 
+	Else
+
+		'Do Not Round up values... Return raw
+ 
+		Return total / data.Size
+
+	End If
+ 
+End Sub
+
+'Calculate the average of a list numbers
+'data Is the List of numbers to calculate their average
+'NOTE: result is automatically rounded up
+Public Sub NumbersAverage2(data As List) As Double
+	
+	Return NumbersAverage(data, True)
+	
 End Sub
 
 
 
-'
-'
-'module.exports = function hypot (x, y) {
-'  //  discuss at: http://locutus.io/php/hypot/
-'  // original by: Onno Marsman (https://twitter.com/onnomarsman)
-'  // imprived by: Robert Eisele (http://www.xarg.org/)
-'  //   example 1: hypot(3, 4)
-'  //   returns 1: 5
-'  //   example 2: hypot([], 'a')
-'  //   returns 2: Null
-'
-'  x = Math.abs(x)
-'  y = Math.abs(y)
-'
-'  var t = Math.min(x, y)
-'  x = Math.max(x, y)
-'  t = t / x
-'
-'  Return x * Math.sqrt(1 + t * t) || Null
-'}
+ 
 
-
-'
-'module.exports = function rad2deg (angle) {
-'  //  discuss at: http://locutus.io/php/rad2deg/
-'  // original by: Enrique Gonzalez
-'  // improved by: Brett Zamir (http://brett-zamir.me)
-'  //   example 1: rad2deg(3.141592653589793)
-'  //   returns 1: 180
-'
-'  Return angle * 57.29577951308232 // angle / Math.PI * 180
-'}
+ 
 
 
 
 
-
-
-	 
+ 
 '
 ''TODO:log1p
 '

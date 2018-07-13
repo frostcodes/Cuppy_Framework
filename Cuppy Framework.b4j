@@ -40,37 +40,38 @@ Library2=jfx
 Library3=cssutils
 Library4=javaobject
 Module1=Configs
-Module10=MaterialLabel
-Module11=MaterialButton
-Module12=Divider
-Module13=MetroLinkLabel
-Module14=Modal
-Module15=AppUtility
-Module16=ControlsUtils
-Module17=AppBar
-Module18=SquareFAB
-Module19=FileUtility
+Module10=StyleManager
+Module11=BarPreLoader
+Module12=MaterialLabel
+Module13=MaterialButton
+Module14=Divider
+Module15=MetroLinkLabel
+Module16=AppUtility
+Module17=ControlsUtils
+Module18=AppBar
+Module19=SquareFAB
 Module2=tODOS
-Module20=MaterialCheckBox
-Module21=MaterialRadioBox
-Module22=MaterialLinearProgressBar
-Module23=FAB
-Module24=MaterialCard
-Module25=Chips
-Module26=AnimationManager
-Module27=LicenseManager
-Module28=MaterialSwitch
-Module29=MetroToggleButton
+Module20=FileUtility
+Module21=MaterialCheckBox
+Module22=MaterialRadioBox
+Module23=MaterialLinearProgressBar
+Module24=FAB
+Module25=MaterialCard
+Module26=Chips
+Module27=AnimationManager
+Module28=LicenseManager
+Module29=MaterialSwitch
 Module3=Themes
+Module30=CF_HtmlUtility
 Module4=StringUtility
 Module5=MathUtility
 Module6=DataTypeUtility
 Module7=MetroCircleToggleButton
-Module8=StyleManager
-Module9=BarPreLoader
+Module8=MetroToggleButton
+Module9=Modal
 NumberOfFiles=17
 NumberOfLibraries=4
-NumberOfModules=29
+NumberOfModules=30
 Version=6.3
 @EndOfDesignText@
 #Region Project Attributes 
@@ -96,3 +97,4 @@ End Sub
 Sub Application_Error (Error As Exception, StackTrace As String) As Boolean
 	Return True
 End Sub
+

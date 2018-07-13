@@ -97,7 +97,7 @@ Public Sub show
 	
 	ModalBgPane.Visible = True
 	ModalPane.Visible = True
-  
+	
 	mBase.SetLayoutAnimated(300, 0 , 0,  Parent.Width, Parent.Height)
 	  
 End Sub

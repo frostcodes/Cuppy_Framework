@@ -9,7 +9,7 @@ public static configs mostCurrent = new configs();
 
 public static BA ba;
 static {
-		ba = new  anywheresoftware.b4a.ShellBA("Punchline.Tech.Cuppy.Framework", "Punchline.Tech.Cuppy.Framework.configs", null);
+		ba = new  anywheresoftware.b4j.objects.FxBA("Punchline.Tech.Cuppy.Framework", "Punchline.Tech.Cuppy.Framework.configs", null);
 		ba.loadHtSubs(configs.class);
         if (ba.getClass().getName().endsWith("ShellBA")) {
 			
@@ -21,8 +21,7 @@ static {
 		return configs.class;
 	}
 
- 
-public static anywheresoftware.b4a.keywords.Common __c = null;
+ public static anywheresoftware.b4a.keywords.Common __c = null;
 public static String _libraryauthor = "";
 public static String _libraryname = "";
 public static String _libraryversion = "";
@@ -31,7 +30,6 @@ public static String _appdir = "";
 public static String _robotofontspath = "";
 public static String _licenseserver = "";
 public static b4j.example.cssutils _cssutils = null;
-public static Punchline.Tech.Cuppy.Framework.main _main = null;
 public static Punchline.Tech.Cuppy.Framework.stringutility _stringutility = null;
 public static Punchline.Tech.Cuppy.Framework.mathutility _mathutility = null;
 public static Punchline.Tech.Cuppy.Framework.datatypeutility _datatypeutility = null;
@@ -41,4 +39,23 @@ public static Punchline.Tech.Cuppy.Framework.controlsutils _controlsutils = null
 public static Punchline.Tech.Cuppy.Framework.fileutility _fileutility = null;
 public static Punchline.Tech.Cuppy.Framework.animationmanager _animationmanager = null;
 public static Punchline.Tech.Cuppy.Framework.licensemanager _licensemanager = null;
+public static String  _process_globals() throws Exception{
+ //BA.debugLineNum = 2;BA.debugLine="Private Sub Process_Globals";
+ //BA.debugLineNum = 5;BA.debugLine="Public LibraryAuthor As String = \"Punchline Techn";
+_libraryauthor = "Punchline Technologies";
+ //BA.debugLineNum = 6;BA.debugLine="Public LibraryName As String =  \"Cuppy Framework\"";
+_libraryname = "Cuppy Framework";
+ //BA.debugLineNum = 7;BA.debugLine="Public LibraryVersion As String =  \"0.9.85\"";
+_libraryversion = "0.9.85";
+ //BA.debugLineNum = 8;BA.debugLine="Public DebugMode As Boolean = True  'are we debug";
+_debugmode = anywheresoftware.b4a.keywords.Common.True;
+ //BA.debugLineNum = 12;BA.debugLine="Public AppDir As String = File.DirApp";
+_appdir = anywheresoftware.b4a.keywords.Common.File.getDirApp();
+ //BA.debugLineNum = 13;BA.debugLine="Public RobotoFontsPath As String =  File.Combine(";
+_robotofontspath = anywheresoftware.b4a.keywords.Common.File.Combine(_appdir,"Roboto");
+ //BA.debugLineNum = 19;BA.debugLine="Private LicenseServer As String =\"\" 'ignore";
+_licenseserver = "";
+ //BA.debugLineNum = 24;BA.debugLine="End Sub";
+return "";
+}
 }

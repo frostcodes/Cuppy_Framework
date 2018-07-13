@@ -460,7 +460,7 @@ Public Sub humanize(str As String, separator As String)  As String
 	
 End Sub
 
-'
+'Adds http:// in the event that a protocol prefix is missing from a URL.
 Public Sub prep_url(str As String)  As String
 	
 	 str= str.Trim
@@ -739,8 +739,7 @@ Public Sub strToStrList(str As String) As List
 	
 End Sub
 
- 
- 
+'Splits a string into a List
 Public Sub str_split (str As String, splitLength As Int) As List
 	 
 	Dim chunks As List
@@ -780,38 +779,148 @@ Public Sub str_split (str As String, splitLength As Int) As List
 	Return chunks
 	
 End Sub
+  
+  #Region Alias Improved functions of { String }.IndexOf()
+  
+'Finds the position of the first occurrence
+'of a string inside another string.
+'
+'Note: It is Case-sensitive.
+'It also returns -1 if it could not find text 
+'
+'Alias of inbuilt function { String }.IndexOf()
+Public Sub strpos(haystack As String , find As String) As Int
+  	
+	Return haystack.IndexOf(find)
+	
+End Sub
+   
+'Finds the position of the first occurrence
+'of a string inside another string.
+'
+'Note: It is Case-sensitive. 
+'It also returns -1 if it could not find text 
+'
+'Alias of inbuilt function  { String }.IndexOf2()
+Public Sub strpos2(haystack As String , find As String, start As Int) As Int
+	
+	Return haystack.IndexOf2(find, start)
+	
+End Sub
  
+'Finds the position of the first occurrence
+'of a string inside another string.
+'
+'Note: It is Case-Insensitive.
+'It also returns -1 if it could not find text 
+'
+'Alias of inbuilt function { String }.IndexOf()
+Public Sub stripos(haystack As String , find As String) As Int
+  	
+	haystack = haystack.ToLowerCase
+	find = find.ToLowerCase
+	
+	Return haystack.IndexOf(find)
+	
+End Sub
+   
+'Finds the position of the first occurrence
+'of a string inside another string.
+'
+'Note: It is Case-Insensitive. 
+'It also returns -1 if it could not find text 
+'
+'Alias of inbuilt function  { String }.IndexOf2()
+Public Sub stripos2(haystack As String , find As String, start As Int) As Int
+  	
+	haystack = haystack.ToLowerCase
+	find = find.ToLowerCase
+	
+	Return haystack.IndexOf2(find, start)
+	
+End Sub
  
-'  
+  #End Region
+
+#Region Alias Improved functions of { String }.LastIndexOf()
+  
+'Finds the position of the last occurrence 
+'of a string inside another string.
 '
-'module.exports = function str_split (string, splitLength) { // eslint-disable-line camelcase
-'  //  discuss at: http://locutus.io/php/str_split/
-'  // original by: Martijn Wieringa
-'  // improved by: Brett Zamir (http://brett-zamir.me)
-'  // bugfixed by: Onno Marsman (https://twitter.com/onnomarsman)
-'  //  revised by: Theriault (https://github.com/Theriault)
-'  //  revised by: Rafał Kukawski (http://blog.kukawski.pl)
-'  //    input by: Bjorn Roesbeke (http://www.bjornroesbeke.be/)
-'  //   example 1: str_split('Hello Friend', 3)
-'  //   returns 1: ['Hel', 'lo ', 'Fri', 'end']
+'Note: It is Case-sensitive.
+'It also returns -1 if it could not find text 
 '
-'  If (splitLength === Null) {
-'    splitLength = 1
-'  }
-'  If (string === Null || splitLength < 1) {
-'    Return False
-'  }
+'Alias of inbuilt function { String }.LastIndexOf()
+Public Sub strrpos(haystack As String , find As String) As Int
+  	
+	Return haystack.LastIndexOf(find)
+	
+End Sub
+   
+'Finds the position of the last occurrence 
+'of a string inside another string.
 '
-'  var chunks = []
-'  var pos = 0
-'  var len = string.length
+'Note: It is Case-sensitive. 
+'It also returns -1 if it could not find text 
 '
-'  While (pos < len) {
-'    chunks.push(string.slice(pos, pos += splitLength))
-'  }
+'Alias of inbuilt function  { String }.LastIndexOf()
+Public Sub strrpos2(haystack As String , find As String, start As Int) As Int
+	
+	Return haystack.LastIndexOf2(find, start)
+	
+End Sub
+ 
+'Finds the position of the last occurrence 
+'of a string inside another string.
 '
-'  Return chunks
-'}
+'Note: It is Case-Insensitive.
+'It also returns -1 if it could not find text 
+'
+'Alias of inbuilt function { String }.LastIndexOf()
+Public Sub strripos(haystack As String , find As String) As Int
+  	
+	haystack = haystack.ToLowerCase
+	find = find.ToLowerCase
+	
+	Return haystack.LastIndexOf(find)
+	
+End Sub
+   
+'Finds the position of the last occurrence 
+'of a string inside another string.
+'
+'Note: It is Case-Insensitive. 
+'It also returns -1 if it could not find text 
+'
+'Alias of inbuilt function  { String }.LastIndexOf()
+Public Sub strripos2 (haystack As String , find As String, start As Int) As Int
+  	
+	haystack = haystack.ToLowerCase
+	find = find.ToLowerCase
+	
+	Return haystack.LastIndexOf2(find, start)
+	
+End Sub
+ 
+  #End Region
+  
+'Use this To prepend 0 To value lower than 10
+'Eg 9 would ouput 09, 13 would ouput 13
+Public Sub prepend_zero(num As Int) As Int
+
+		If num < 10 Then
+
+		num = "0" & num
+
+   End If
+
+	Return num
+
+End Sub
+
+
+
+
 
 
  
