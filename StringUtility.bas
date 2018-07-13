@@ -906,15 +906,21 @@ End Sub
   
 'Use this To prepend 0 To value lower than 10
 'Eg 9 would ouput 09, 13 would ouput 13
-Public Sub prepend_zero(num As Int) As Int
+Public Sub prepend_zero(num As Int) As String
 
-		If num < 10 Then
+Log("Num:  " & num)
 
-		num = "0" & num
+	If num < 10 And num > 0 Then
 
-   End If
+		Log("Return:  " & "0" & num)
 
-	Return num
+		Return "0" & num
+
+	Else
+		
+		Return num
+	
+	End If
 
 End Sub
 

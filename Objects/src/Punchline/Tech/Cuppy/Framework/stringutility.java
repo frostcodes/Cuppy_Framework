@@ -33,6 +33,7 @@ public static Punchline.Tech.Cuppy.Framework.controlsutils _controlsutils = null
 public static Punchline.Tech.Cuppy.Framework.fileutility _fileutility = null;
 public static Punchline.Tech.Cuppy.Framework.animationmanager _animationmanager = null;
 public static Punchline.Tech.Cuppy.Framework.licensemanager _licensemanager = null;
+public static Punchline.Tech.Cuppy.Framework.cf_htmlutility _cf_htmlutility = null;
 public static Object  _breakstrat(String _haystack,String _after) throws Exception{
 String _found = "";
  //BA.debugLineNum = 685;BA.debugLine="Public Sub breakStrAt(haystack As String, after As";
@@ -370,17 +371,22 @@ if (true) return _str;
  //BA.debugLineNum = 480;BA.debugLine="End Sub";
 return "";
 }
-public static int  _prepend_zero(int _num) throws Exception{
- //BA.debugLineNum = 903;BA.debugLine="Public Sub prepend_zero(num As Int) As Int";
- //BA.debugLineNum = 905;BA.debugLine="If num < 10 Then";
-if (_num<10) { 
- //BA.debugLineNum = 907;BA.debugLine="num = \"0\" & num";
-_num = (int)(Double.parseDouble("0"+BA.NumberToString(_num)));
+public static String  _prepend_zero(int _num) throws Exception{
+ //BA.debugLineNum = 903;BA.debugLine="Public Sub prepend_zero(num As Int) As String";
+ //BA.debugLineNum = 905;BA.debugLine="Log(\"Num:  \" & num)";
+anywheresoftware.b4a.keywords.Common.Log("Num:  "+BA.NumberToString(_num));
+ //BA.debugLineNum = 907;BA.debugLine="If num < 10 And num > 0 Then";
+if (_num<10 && _num>0) { 
+ //BA.debugLineNum = 909;BA.debugLine="Log(\"Return:  \" & \"0\" & num)";
+anywheresoftware.b4a.keywords.Common.Log("Return:  "+"0"+BA.NumberToString(_num));
+ //BA.debugLineNum = 911;BA.debugLine="Return \"0\" & num";
+if (true) return "0"+BA.NumberToString(_num);
+ }else {
+ //BA.debugLineNum = 915;BA.debugLine="Return num";
+if (true) return BA.NumberToString(_num);
  };
- //BA.debugLineNum = 911;BA.debugLine="Return num";
-if (true) return _num;
- //BA.debugLineNum = 913;BA.debugLine="End Sub";
-return 0;
+ //BA.debugLineNum = 919;BA.debugLine="End Sub";
+return "";
 }
 public static String  _process_globals() throws Exception{
  //BA.debugLineNum = 3;BA.debugLine="Private Sub Process_Globals";

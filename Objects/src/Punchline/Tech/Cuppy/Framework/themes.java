@@ -35,6 +35,7 @@ public Punchline.Tech.Cuppy.Framework.controlsutils _controlsutils = null;
 public Punchline.Tech.Cuppy.Framework.fileutility _fileutility = null;
 public Punchline.Tech.Cuppy.Framework.animationmanager _animationmanager = null;
 public Punchline.Tech.Cuppy.Framework.licensemanager _licensemanager = null;
+public Punchline.Tech.Cuppy.Framework.cf_htmlutility _cf_htmlutility = null;
 public anywheresoftware.b4a.objects.collections.Map  _bluetheme() throws Exception{
 anywheresoftware.b4a.objects.collections.Map _colors = null;
  //BA.debugLineNum = 26;BA.debugLine="Public Sub BlueTheme As Map";
