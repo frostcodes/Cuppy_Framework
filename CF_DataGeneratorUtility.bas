@@ -1196,7 +1196,7 @@ End Sub
 #End Region
  
 'Generates a random Gender Type 
-'@Refer to fullGenderTypesList() 
+'Refer to fullGenderTypesList() 
 Public Sub rand_gender_type() As String
 	 
 	Return StringUtility.RandListValue(fullGenderTypesList)
@@ -1293,3 +1293,26 @@ End Sub
 
 #End Region 
 
+'Generates a random phone number
+'CountryCode = the Country Code to use without the + ; for example,
+'Nigeria is 234, USA is 1 and Indian is 91
+'length = This is how long should the remaining part of the number be
+Public Sub rand_phoneNumber(CountryCode As Int , length As Int) As String
+	
+	Return "+" & CountryCode & StringUtility.generatePinCode(length)
+	 
+End Sub
+ 
+'Generates a random phone number
+'CountryCode = the Country Code to use without the + ; for example,
+'Nigeria is 234, USA is 1 and Indian is 91
+'startsWith = what custom number should phone number start with?
+'length = This is how long should the remaining part of the number be
+'<code> 'Example: would output something like; +2348174795280
+'log(CF_DataGeneratorUtility.rand_phoneNumber2(234, 817, 7))
+'</code>
+Public Sub rand_phoneNumber2(CountryCode As Int , startsWith As Int, length As Int) As String
+	
+	Return "+" & CountryCode & startsWith & StringUtility.generatePinCode(length)
+	 
+End Sub

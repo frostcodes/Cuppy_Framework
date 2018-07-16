@@ -2400,6 +2400,20 @@ if (true) return _st.ToString();
  //BA.debugLineNum = 1238;BA.debugLine="End Sub";
 return "";
 }
+public static String  _rand_phonenumber(int _countrycode,int _length) throws Exception{
+ //BA.debugLineNum = 1294;BA.debugLine="Public Sub rand_phoneNumber(CountryCode As Int , l";
+ //BA.debugLineNum = 1296;BA.debugLine="Return \"+\" & CountryCode & StringUtility.generate";
+if (true) return "+"+BA.NumberToString(_countrycode)+BA.NumberToString(_stringutility._generatepincode(_length));
+ //BA.debugLineNum = 1298;BA.debugLine="End Sub";
+return "";
+}
+public static String  _rand_phonenumber2(int _countrycode,int _startswith,int _length) throws Exception{
+ //BA.debugLineNum = 1308;BA.debugLine="Public Sub rand_phoneNumber2(CountryCode As Int ,";
+ //BA.debugLineNum = 1310;BA.debugLine="Return \"+\" & CountryCode & startsWith & StringUti";
+if (true) return "+"+BA.NumberToString(_countrycode)+BA.NumberToString(_startswith)+BA.NumberToString(_stringutility._generatepincode(_length));
+ //BA.debugLineNum = 1312;BA.debugLine="End Sub";
+return "";
+}
 public static String  _rand_yahoomail(boolean _withnumeric) throws Exception{
  //BA.debugLineNum = 1282;BA.debugLine="Public Sub rand_yahooMail(withNumeric As Boolean)";
  //BA.debugLineNum = 1284;BA.debugLine="Return rand_email(\"yahoo.com\", withNumeric)";
