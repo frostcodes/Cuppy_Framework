@@ -1027,16 +1027,18 @@ Public Sub rand_human_name() As String
  
 End Sub
 
- #End Region
-
 'Generates a random human full name
 Public Sub rand_fullname() As String
 	
 	Return rand_human_name & " " & rand_human_name
 	
 End Sub
- 
-'Generates a random human gender
+
+ #End Region
+
+#Region Human Gender
+
+'Generates a random human Gender and Types
 'between MALE or FEMALE only!
 Public Sub rand_gender() As String
 	
@@ -1047,12 +1049,12 @@ Public Sub rand_gender() As String
 	
 End Sub
 
-#Region fullGenderTypesList: A Full list of Gender Types
+#Region GenderTypesList: A Full list of Gender Types
 
 'Returns a List of the Most accepted Genders in the world
 'This list does not contain MALE or FEMALE just Gender Types
 'FROM: http://genderfluidsupport.tumblr.com/gender
-Public Sub fullGenderTypesList As List
+Public Sub GenderTypesList As List
 	
 	Dim GenderTypes As List
 	GenderTypes.Initialize
@@ -1199,10 +1201,13 @@ End Sub
 'Refer to fullGenderTypesList() 
 Public Sub rand_gender_type() As String
 	 
-	Return StringUtility.RandListValue(fullGenderTypesList)
+	Return StringUtility.RandListValue(GenderTypesList)
 	
 End Sub
 
+ #End Region
+
+#Region Random Dummy Text
 'Generates a random lorem ispum text
 'ParagraphCount =   Is the number of paragraphs to generate
 Public Sub rand_lorem_ispum(ParagraphCount  As Int) As String
@@ -1252,6 +1257,8 @@ Public Sub rand_dummyText(ParagraphCount  As Int) As String
  
 End Sub
  
+ #End Region
+ 
  #Region Random Email Generators
  
 Public Sub rand_email(EmailProvider As String, withNumeric As Boolean) As String
@@ -1293,6 +1300,7 @@ End Sub
 
 #End Region 
 
+#Region Random phone number
 'Generates a random phone number
 'CountryCode = the Country Code to use without the + ; for example,
 'Nigeria is 234, USA is 1 and Indian is 91
@@ -1316,3 +1324,101 @@ Public Sub rand_phoneNumber2(CountryCode As Int , startsWith As Int, length As I
 	Return "+" & CountryCode & startsWith & StringUtility.generatePinCode(length)
 	 
 End Sub
+
+#End Region
+
+#Region Random True or False Value 
+'Generates a random True or False Value
+Public Sub rand_TrueorFalse() As Boolean
+	 
+	If Rnd( Rnd(1, 5), Rnd(6, 10))  < 6 Then
+		
+		Return True
+		
+		Else
+			
+		Return False
+			
+	End If
+	 
+End Sub
+
+'Generates a random True or False Value
+'Alias of rand_TrueorFalse()
+Public Sub rand_BooleanValue() As Boolean
+	 
+	Return rand_TrueorFalse
+	 
+End Sub
+
+#End Region
+ 
+'Generates a random IP address
+Public Sub rand_IpAddress() As String
+	 
+	Return  Rnd(190, 230) & "." & Rnd(13, 200) & "." & Rnd(50, 200) & "." & Rnd(75, 200)
+	
+End Sub
+
+#Region Sports Data Generators
+
+'List of Major Sports around the world
+'NOTE: this list is not A-Z of all sports
+Public Sub majorSportsList As List
+	
+	Dim sports As List
+	sports.Initialize
+	
+	sports.add("Alpine Skiing")
+	sports.add("Athletics")
+	sports.add("Badminton")
+	sports.add("Basketball")
+	sports.add("Bocce")
+	sports.add("Bowling")
+
+	sports.add("Cricket")
+	sports.add("Cross Country Skiing")
+	sports.add("Cycling")
+	sports.add("Equestrian")
+	sports.add("Figure Skating")
+	sports.add("Floorball")
+
+	sports.add("Floor Hockey")
+	sports.add("Football")
+	sports.add("Golf")
+	sports.add("Gymnastics Artistic")
+	sports.add("Gymnastics Rhythmic")
+	sports.add("Handball")
+
+	sports.add("Judo")
+	sports.add("Kayaking")
+	sports.add("Motor Activity Training Program")
+	sports.add("Netball")
+	sports.add("Open Water Swimming")
+	sports.add("Powerlifting")
+	sports.add("Roller Skating")
+
+	sports.add("Sailing")
+	sports.add("Short Track Speed Skating")
+	sports.add("Snowboarding")
+	sports.add("Snowshoeing")
+ 
+	sports.add("Softball")
+	sports.add("Swimming")
+	sports.add("Table Tennis")
+	sports.add("Tennis")
+	sports.add("Triathlon")
+	sports.add("Volleyball")
+
+	Return sports
+	
+End Sub
+
+'Generates a random sport name
+Public Sub rand_sport_name() As String
+	
+	Return StringUtility.RandListValue(majorSportsList)
+	
+End Sub
+
+#End Region
