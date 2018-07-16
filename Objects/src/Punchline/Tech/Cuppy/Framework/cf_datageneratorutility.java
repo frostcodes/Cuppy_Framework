@@ -295,6 +295,24 @@ if (true) return _rand_lorem_ispum(_paragraphcount);
  //BA.debugLineNum = 1247;BA.debugLine="End Sub";
 return "";
 }
+public static String  _rand_email(String _emailprovider,boolean _withnumeric) throws Exception{
+String _name = "";
+ //BA.debugLineNum = 1251;BA.debugLine="Public Sub rand_email(EmailProvider As String, wit";
+ //BA.debugLineNum = 1253;BA.debugLine="Dim name As String = rand_human_name & rand_human";
+_name = _rand_human_name()+_rand_human_name();
+ //BA.debugLineNum = 1254;BA.debugLine="name = name.ToLowerCase";
+_name = _name.toLowerCase();
+ //BA.debugLineNum = 1256;BA.debugLine="If withNumeric Then";
+if (_withnumeric) { 
+ //BA.debugLineNum = 1258;BA.debugLine="Return  name & \"_\" & Rnd(10, 3000) & \"@\" & Email";
+if (true) return _name+"_"+BA.NumberToString(anywheresoftware.b4a.keywords.Common.Rnd((int) (10),(int) (3000)))+"@"+_emailprovider;
+ }else {
+ //BA.debugLineNum = 1262;BA.debugLine="Return name & \"@\" & EmailProvider";
+if (true) return _name+"@"+_emailprovider;
+ };
+ //BA.debugLineNum = 1266;BA.debugLine="End Sub";
+return "";
+}
 public static String  _rand_fullname() throws Exception{
  //BA.debugLineNum = 1027;BA.debugLine="Public Sub rand_fullname() As String";
  //BA.debugLineNum = 1029;BA.debugLine="Return rand_human_name & \" \" & rand_human_name";
@@ -319,6 +337,13 @@ public static String  _rand_gender_type() throws Exception{
  //BA.debugLineNum = 1196;BA.debugLine="Return StringUtility.RandListValue(fullGenderType";
 if (true) return BA.ObjectToString(_stringutility._randlistvalue(_fullgendertypeslist()));
  //BA.debugLineNum = 1198;BA.debugLine="End Sub";
+return "";
+}
+public static String  _rand_gmail(boolean _withnumeric) throws Exception{
+ //BA.debugLineNum = 1272;BA.debugLine="Public Sub rand_gmail(withNumeric As Boolean) As S";
+ //BA.debugLineNum = 1274;BA.debugLine="Return rand_email(\"gmail.com\", withNumeric)";
+if (true) return _rand_email("gmail.com",_withnumeric);
+ //BA.debugLineNum = 1276;BA.debugLine="End Sub";
 return "";
 }
 public static String  _rand_human_name() throws Exception{
@@ -2349,7 +2374,7 @@ _textlist.Add((Object)(("If Lorem Ispum was to be a paragraph,\n"+"    it would 
  //BA.debugLineNum = 1212;BA.debugLine="textList.Add($\"I love Lorem Ispum because it is n";
 _textlist.Add((Object)(("I love Lorem Ispum because it is not an english word\n"+"   but a word used in another language.")));
  //BA.debugLineNum = 1215;BA.debugLine="textList.Add($\"Lorem Ispum is great also but prog";
-_textlist.Add((Object)(("Lorem Ispum is great also but programmers\n"+"    use it is to fill in for a test paragraph")));
+_textlist.Add((Object)(("Lorem Ispum is great also but programmers\n"+"    use it is to fill in for a test paragraph.")));
  //BA.debugLineNum = 1218;BA.debugLine="textList.Add($\"Once tried to understand what is L";
 _textlist.Add((Object)(("Once tried to understand what is Lorem Ispum,\n"+"   well you can google it is it a non-english word.")));
  //BA.debugLineNum = 1221;BA.debugLine="textList.Add($\"Lorem Ispum again and again and ag";
@@ -2373,6 +2398,13 @@ _st.Append(BA.ObjectToString(_stringutility._randlistvalue(_textlist))+" ");
  //BA.debugLineNum = 1236;BA.debugLine="Return st.ToString";
 if (true) return _st.ToString();
  //BA.debugLineNum = 1238;BA.debugLine="End Sub";
+return "";
+}
+public static String  _rand_yahoomail(boolean _withnumeric) throws Exception{
+ //BA.debugLineNum = 1282;BA.debugLine="Public Sub rand_yahooMail(withNumeric As Boolean)";
+ //BA.debugLineNum = 1284;BA.debugLine="Return rand_email(\"yahoo.com\", withNumeric)";
+if (true) return _rand_email("yahoo.com",_withnumeric);
+ //BA.debugLineNum = 1286;BA.debugLine="End Sub";
 return "";
 }
 }

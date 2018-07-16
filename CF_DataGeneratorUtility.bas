@@ -1251,6 +1251,45 @@ Public Sub rand_dummyText(ParagraphCount  As Int) As String
  Return rand_lorem_ispum(ParagraphCount)
  
 End Sub
+ 
+ #Region Random Email Generators
+ 
+Public Sub rand_email(EmailProvider As String, withNumeric As Boolean) As String
+	 
+	Dim name As String = rand_human_name & rand_human_name
+	name = name.ToLowerCase
+	
+	 If withNumeric Then
+	 	
+		Return  name & "_" & Rnd(10, 3000) & "@" & EmailProvider
+		
+		Else
+			
+		Return name & "@" & EmailProvider
+			
+	End If
+	
+End Sub
 
+'Generates a random Gmail address
+'withNumeric = should gmail contain suffixed numbers
+'EG demo_20@gmail.com
+'Quick shortcut Alias of rand_email()
+Public Sub rand_gmail(withNumeric As Boolean) As String
+	 
+	Return rand_email("gmail.com", withNumeric)
+	
+End Sub
 
+'Generates a random Yahoo email address
+'withNumeric = should gmail contain suffixed numbers
+'EG demo_20@yahoo.com
+'Quick shortcut Alias of rand_email()
+Public Sub rand_yahooMail(withNumeric As Boolean) As String
+	 
+	Return rand_email("yahoo.com", withNumeric)
+	
+End Sub
+
+#End Region 
 
