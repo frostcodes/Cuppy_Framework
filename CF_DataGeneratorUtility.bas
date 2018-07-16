@@ -12,12 +12,9 @@ End Sub
  
  #Region rand_human_name : Generates a random real human name 
  
- 
 'Generates a random real human name...
+'List of Names
 'FROM: https://gist.github.com/subodhghulaxe/8148971
-
-
-
 Public Sub rand_human_name() As String
 
 	Dim names As List
@@ -1038,3 +1035,222 @@ Public Sub rand_fullname() As String
 	Return rand_human_name & " " & rand_human_name
 	
 End Sub
+ 
+'Generates a random human gender
+'between MALE or FEMALE only!
+Public Sub rand_gender() As String
+	
+	Dim Genders As  List
+	Genders.Initialize2(Array As String("Male","Female"))
+	
+	Return StringUtility.RandListValue(Genders)
+	
+End Sub
+
+#Region fullGenderTypesList: A Full list of Gender Types
+
+'Returns a List of the Most accepted Genders in the world
+'This list does not contain MALE or FEMALE just Gender Types
+'FROM: http://genderfluidsupport.tumblr.com/gender
+Public Sub fullGenderTypesList As List
+	
+	Dim GenderTypes As List
+	GenderTypes.Initialize
+	
+	GenderTypes.Add("Abimegender")
+	GenderTypes.Add("Adamasgender")
+	GenderTypes.Add("Aerogender")
+	GenderTypes.Add("Aesthetigender")
+	GenderTypes.Add("Affectugender")
+	GenderTypes.Add("Agender")
+	GenderTypes.Add("Agenderflux")
+
+	GenderTypes.Add("Alexigender")
+	GenderTypes.Add("Aliusgender")
+	GenderTypes.Add("Amaregender")
+	GenderTypes.Add("Ambigender")
+	GenderTypes.Add("Ambonec")
+	GenderTypes.Add("Amicagender")
+	GenderTypes.Add("Androgyne")
+	GenderTypes.Add("Anesigender")
+
+	GenderTypes.Add("Angenital")
+	GenderTypes.Add("Anogender")
+	GenderTypes.Add("Anongender")
+	GenderTypes.Add("Antegender")
+	GenderTypes.Add("Anxiegender")
+	GenderTypes.Add("Apagender")
+	GenderTypes.Add("Apconsugender")
+	GenderTypes.Add("Astergender")
+	GenderTypes.Add("Astralgender")
+
+	GenderTypes.Add("Autigender")
+	GenderTypes.Add("Autogender")
+	GenderTypes.Add("Axigender")
+	GenderTypes.Add("Bigender")
+	GenderTypes.Add("Biogender")
+	GenderTypes.Add("Blurgender")
+	GenderTypes.Add("Boyflux")
+	GenderTypes.Add("Burstgender")
+	GenderTypes.Add("Caelgender")
+
+	GenderTypes.Add("Cassgender")
+	GenderTypes.Add("Cassflux")
+	GenderTypes.Add("Cavusgender")
+	GenderTypes.Add("Cendgender")
+	GenderTypes.Add("Ceterofluid")
+	GenderTypes.Add("Ceterogender")
+	GenderTypes.Add("Cisgender")
+	GenderTypes.Add("Cloudgender")
+	GenderTypes.Add("Collgender")
+
+	GenderTypes.Add("Colorgender")
+	GenderTypes.Add("Commogender")
+	GenderTypes.Add("Condigender")
+	GenderTypes.Add("Deliciagender")
+	GenderTypes.Add("Demifluid")
+	GenderTypes.Add("Demiflux")
+	GenderTypes.Add("Demigender")
+	GenderTypes.Add("Domgender")
+	GenderTypes.Add("Demi-vapor")
+
+	GenderTypes.Add("Demi-smoke")
+	GenderTypes.Add("Duragender")
+	GenderTypes.Add("Egogender")
+	GenderTypes.Add("Epicene")
+	GenderTypes.Add("Espigender")
+	GenderTypes.Add("Exgender")
+	GenderTypes.Add("Existigender")
+
+	GenderTypes.Add("Female")
+	GenderTypes.Add("Femfluid")
+	GenderTypes.Add("Femgender")
+	GenderTypes.Add("Fluidflux")
+	GenderTypes.Add("Gemigender")
+	GenderTypes.Add("Genderblank")
+	GenderTypes.Add("Genderflow")
+	GenderTypes.Add("Genderfluid")
+
+	GenderTypes.Add("Genderflux")
+	GenderTypes.Add("Genderfuzz")
+	GenderTypes.Add("Gender Neutral")
+	GenderTypes.Add("Genderpunk")
+	GenderTypes.Add("Genderqueer")
+	GenderTypes.Add("Genderwitched")
+	GenderTypes.Add("Girlflux")
+	GenderTypes.Add("Glassgender")
+
+	GenderTypes.Add("Glimragender")
+	GenderTypes.Add("Greygender")
+	GenderTypes.Add("Gyragender")
+	GenderTypes.Add("Healgender")
+	GenderTypes.Add("Heliogender")
+	GenderTypes.Add("Hemigender")
+	GenderTypes.Add("Horogender")
+	GenderTypes.Add("Hydrogender")
+
+	GenderTypes.Add("Imperigender")
+	GenderTypes.Add("Intergender")
+	GenderTypes.Add("Juxera")
+	GenderTypes.Add("Libragender")
+	GenderTypes.Add("Male")
+	GenderTypes.Add("Magigender")
+	GenderTypes.Add("Mascfluid")
+	GenderTypes.Add("Mascgender")
+
+	GenderTypes.Add("Maverique")
+	GenderTypes.Add("Mirrorgender")
+	GenderTypes.Add("Molligender")
+	GenderTypes.Add("Multigender")
+	GenderTypes.Add("Nanogender")
+	GenderTypes.Add("Neutrois")
+	GenderTypes.Add("Nonbinary")
+
+	GenderTypes.Add("Omnigender")
+	GenderTypes.Add("Oneirogender")
+	GenderTypes.Add("Pangender")
+	GenderTypes.Add("Paragender")
+	GenderTypes.Add("Perigender")
+	GenderTypes.Add("Polygender")
+	GenderTypes.Add("Proxvir")
+
+	GenderTypes.Add("Quoigender")
+	GenderTypes.Add("Subgender")
+	GenderTypes.Add("Surgender")
+	GenderTypes.Add("Systemgender")
+	GenderTypes.Add("Tragender")
+	GenderTypes.Add("Transgender")
+	GenderTypes.Add("Transneutral")
+
+	GenderTypes.Add("Trigender")
+	GenderTypes.Add("Vapogender")
+	GenderTypes.Add("Venngender")
+	GenderTypes.Add("Verangender")
+	GenderTypes.Add("Vibragender")
+	GenderTypes.Add("Vocigender")
+	
+	Return GenderTypes
+	 
+End Sub
+
+#End Region
+ 
+'Generates a random Gender Type 
+'@Refer to fullGenderTypesList() 
+Public Sub rand_gender_type() As String
+	 
+	Return StringUtility.RandListValue(fullGenderTypesList)
+	
+End Sub
+
+'Generates a random lorem ispum text
+'ParagraphCount =   Is the number of paragraphs to generate
+Public Sub rand_lorem_ispum(ParagraphCount  As Int) As String
+
+	Dim textList As List
+	textList.Initialize
+ 
+	textList.Add("Lorem ispum is the beginning of the random text.")
+
+	textList.Add($"If Lorem Ispum was to be a paragraph,
+    it would look like this."$)
+
+	textList.Add($"I love Lorem Ispum because it is not an english word
+   but a word used in another language."$)
+
+	textList.Add($"Lorem Ispum is great also but programmers
+    use it is to fill in for a test paragraph."$)
+
+	textList.Add($"Once tried to understand what is Lorem Ispum,
+   well you can google it is it a non-english word."$)
+
+	textList.Add($"Lorem Ispum again and again and again,
+  it would always be Lorem ispum, Thats all for now!"$)
+
+	textList.Add($"Lorem Ispum was like the story of a man and a woman
+   that fell in love even though it was not real love!"$)
+     
+	Dim st As StringBuilder
+	st.Initialize
+  
+	For i = 1 To ParagraphCount
+ 
+		st.Append(StringUtility.RandListValue(textList) & " ")
+ 
+	Next
+  
+	Return st.ToString
+
+End Sub
+
+'Generates a random dummy text (lorem ispum)
+'ParagraphCount =   Is the number of paragraphs to generate
+'Alias of lorem_ispum()
+Public Sub rand_dummyText(ParagraphCount  As Int) As String
+ 
+ Return rand_lorem_ispum(ParagraphCount)
+ 
+End Sub
+
+
+

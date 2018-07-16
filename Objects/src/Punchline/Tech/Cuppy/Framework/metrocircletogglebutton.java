@@ -37,14 +37,14 @@ public Punchline.Tech.Cuppy.Framework.configs _configs = null;
 public Punchline.Tech.Cuppy.Framework.stringutility _stringutility = null;
 public Punchline.Tech.Cuppy.Framework.mathutility _mathutility = null;
 public Punchline.Tech.Cuppy.Framework.datatypeutility _datatypeutility = null;
+public Punchline.Tech.Cuppy.Framework.fileutility _fileutility = null;
+public Punchline.Tech.Cuppy.Framework.cf_htmlutility _cf_htmlutility = null;
+public Punchline.Tech.Cuppy.Framework.cf_datageneratorutility _cf_datageneratorutility = null;
 public Punchline.Tech.Cuppy.Framework.stylemanager _stylemanager = null;
 public Punchline.Tech.Cuppy.Framework.apputility _apputility = null;
 public Punchline.Tech.Cuppy.Framework.controlsutils _controlsutils = null;
-public Punchline.Tech.Cuppy.Framework.fileutility _fileutility = null;
 public Punchline.Tech.Cuppy.Framework.animationmanager _animationmanager = null;
 public Punchline.Tech.Cuppy.Framework.licensemanager _licensemanager = null;
-public Punchline.Tech.Cuppy.Framework.cf_htmlutility _cf_htmlutility = null;
-public Punchline.Tech.Cuppy.Framework.cf_datageneratorutility _cf_datageneratorutility = null;
 public String  _base_resize(double _width,double _height) throws Exception{
  //BA.debugLineNum = 36;BA.debugLine="Private Sub Base_Resize (Width As Double, Height A";
  //BA.debugLineNum = 40;BA.debugLine="ToggleButton.PrefHeight = Width";
