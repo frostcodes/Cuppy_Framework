@@ -28,8 +28,8 @@ public static Punchline.Tech.Cuppy.Framework.configs _configs = null;
 public static Punchline.Tech.Cuppy.Framework.mathutility _mathutility = null;
 public static Punchline.Tech.Cuppy.Framework.datatypeutility _datatypeutility = null;
 public static Punchline.Tech.Cuppy.Framework.fileutility _fileutility = null;
-public static Punchline.Tech.Cuppy.Framework.cf_htmlutility _cf_htmlutility = null;
 public static Punchline.Tech.Cuppy.Framework.cf_datageneratorutility _cf_datageneratorutility = null;
+public static Punchline.Tech.Cuppy.Framework.cf_htmlutility _cf_htmlutility = null;
 public static Punchline.Tech.Cuppy.Framework.stylemanager _stylemanager = null;
 public static Punchline.Tech.Cuppy.Framework.apputility _apputility = null;
 public static Punchline.Tech.Cuppy.Framework.controlsutils _controlsutils = null;
@@ -350,6 +350,57 @@ _firstchar = _firstchar.toLowerCase();
 if (true) return _firstchar+_str.substring((int) (1));
  //BA.debugLineNum = 424;BA.debugLine="End Sub";
 return "";
+}
+public static anywheresoftware.b4a.objects.collections.Map  _parsequerystring(String _querystring) throws Exception{
+anywheresoftware.b4a.objects.collections.Map _data = null;
+anywheresoftware.b4a.objects.collections.List _temp_list = null;
+int _i = 0;
+anywheresoftware.b4a.objects.collections.List _querylist = null;
+ //BA.debugLineNum = 937;BA.debugLine="Public Sub parseQueryString(QueryString As String)";
+ //BA.debugLineNum = 939;BA.debugLine="Dim Data As Map 'total data";
+_data = new anywheresoftware.b4a.objects.collections.Map();
+ //BA.debugLineNum = 940;BA.debugLine="Data.Initialize";
+_data.Initialize();
+ //BA.debugLineNum = 942;BA.debugLine="Try";
+try { //BA.debugLineNum = 945;BA.debugLine="Dim temp_list As List = Split(QueryString, \"&\")";
+_temp_list = new anywheresoftware.b4a.objects.collections.List();
+_temp_list = _split(_querystring,"&");
+ //BA.debugLineNum = 947;BA.debugLine="For i = 0 To temp_list.Size - 1";
+{
+final int step5 = 1;
+final int limit5 = (int) (_temp_list.getSize()-1);
+_i = (int) (0) ;
+for (;_i <= limit5 ;_i = _i + step5 ) {
+ //BA.debugLineNum = 949;BA.debugLine="Dim QueryList As List = Split(temp_list.Get(i)";
+_querylist = new anywheresoftware.b4a.objects.collections.List();
+_querylist = _split(BA.ObjectToString(_temp_list.Get(_i)),"=");
+ //BA.debugLineNum = 951;BA.debugLine="If Not(Data.ContainsKey(QueryList.Get(0))) Then";
+if (anywheresoftware.b4a.keywords.Common.Not(_data.ContainsKey(_querylist.Get((int) (0))))) { 
+ //BA.debugLineNum = 953;BA.debugLine="Data.Put(QueryList.Get(0), QueryList.Get(1))";
+_data.Put(_querylist.Get((int) (0)),_querylist.Get((int) (1)));
+ };
+ }
+};
+ } 
+       catch (Exception e12) {
+			ba.setLastException(e12); //BA.debugLineNum = 961;BA.debugLine="LogError(\"The parser for < parseQueryString() >";
+anywheresoftware.b4a.keywords.Common.LogError("The parser for < parseQueryString() > got broken. Please check input data");
+ };
+ //BA.debugLineNum = 965;BA.debugLine="Return Data";
+if (true) return _data;
+ //BA.debugLineNum = 967;BA.debugLine="End Sub";
+return null;
+}
+public static anywheresoftware.b4a.objects.collections.Map  _parsequerystringurl(String _url) throws Exception{
+ //BA.debugLineNum = 977;BA.debugLine="Public Sub parseQueryStringUrl(url As String) As M";
+ //BA.debugLineNum = 979;BA.debugLine="url= breakStrAt(url, \"?\") ' Split URL from Query";
+_url = BA.ObjectToString(_breakstrat(_url,"?"));
+ //BA.debugLineNum = 980;BA.debugLine="url =  trim_left_once(url, \"?\")";
+_url = _trim_left_once(_url,"?");
+ //BA.debugLineNum = 982;BA.debugLine="Return parseQueryString(url)";
+if (true) return _parsequerystring(_url);
+ //BA.debugLineNum = 984;BA.debugLine="End Sub";
+return null;
 }
 public static String  _prep_url(String _str) throws Exception{
  //BA.debugLineNum = 465;BA.debugLine="Public Sub prep_url(str As String)  As String";
@@ -928,6 +979,19 @@ public static String  _trim_slashes_once(String _str) throws Exception{
  //BA.debugLineNum = 150;BA.debugLine="Return trim_once( str, \"/\")";
 if (true) return _trim_once(_str,"/");
  //BA.debugLineNum = 152;BA.debugLine="End Sub";
+return "";
+}
+public static String  _truncate(String _txt,int _length) throws Exception{
+ //BA.debugLineNum = 988;BA.debugLine="Public Sub Truncate(txt As String, length As Int)";
+ //BA.debugLineNum = 991;BA.debugLine="If length > txt.Length Then";
+if (_length>_txt.length()) { 
+ //BA.debugLineNum = 992;BA.debugLine="Return txt";
+if (true) return _txt;
+ }else {
+ //BA.debugLineNum = 994;BA.debugLine="Return txt.Substring2(0, length)";
+if (true) return _txt.substring((int) (0),_length);
+ };
+ //BA.debugLineNum = 996;BA.debugLine="End Sub";
 return "";
 }
 public static String  _ucfirst(String _str) throws Exception{

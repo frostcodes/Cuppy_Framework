@@ -125,5 +125,19 @@ Public Sub FormatFileSize(Bytes As Float) As String
        
 	End If
 	 
-	
 End Sub
+ 
+'Fixes path error by replacing // in file
+'or directory paths to /
+ Public Sub FixWinPaths(path As String) As String
+
+        Return path.Replace("//", "/")
+
+End Sub
+
+
+
+
+
+
+

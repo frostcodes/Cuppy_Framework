@@ -28,8 +28,8 @@ public static Punchline.Tech.Cuppy.Framework.configs _configs = null;
 public static Punchline.Tech.Cuppy.Framework.stringutility _stringutility = null;
 public static Punchline.Tech.Cuppy.Framework.mathutility _mathutility = null;
 public static Punchline.Tech.Cuppy.Framework.datatypeutility _datatypeutility = null;
-public static Punchline.Tech.Cuppy.Framework.cf_htmlutility _cf_htmlutility = null;
 public static Punchline.Tech.Cuppy.Framework.cf_datageneratorutility _cf_datageneratorutility = null;
+public static Punchline.Tech.Cuppy.Framework.cf_htmlutility _cf_htmlutility = null;
 public static Punchline.Tech.Cuppy.Framework.stylemanager _stylemanager = null;
 public static Punchline.Tech.Cuppy.Framework.apputility _apputility = null;
 public static Punchline.Tech.Cuppy.Framework.controlsutils _controlsutils = null;
@@ -72,6 +72,13 @@ if (true) return anywheresoftware.b4a.keywords.Common.Bit.InputStreamToBytes((ja
  //BA.debugLineNum = 83;BA.debugLine="End Sub";
 return null;
 }
+public static String  _fixwinpaths(String _path) throws Exception{
+ //BA.debugLineNum = 126;BA.debugLine="Public Sub FixWinPaths(path As String) As String";
+ //BA.debugLineNum = 128;BA.debugLine="Return path.Replace(\"//\", \"/\")";
+if (true) return _path.replace("//","/");
+ //BA.debugLineNum = 130;BA.debugLine="End Sub";
+return "";
+}
 public static String  _formatfilesize(float _bytes) throws Exception{
 String[] _unit = null;
 double _po = 0;
@@ -101,7 +108,7 @@ _si = _bytes/(double)_po;
  //BA.debugLineNum = 118;BA.debugLine="Return NumberFormat(Si, 1, 3) & Unit(I)";
 if (true) return anywheresoftware.b4a.keywords.Common.NumberFormat(_si,(int) (1),(int) (3))+_unit[_i];
  };
- //BA.debugLineNum = 123;BA.debugLine="End Sub";
+ //BA.debugLineNum = 122;BA.debugLine="End Sub";
 return "";
 }
 public static String  _process_globals() throws Exception{

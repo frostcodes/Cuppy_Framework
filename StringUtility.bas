@@ -930,12 +930,80 @@ Log("Num:  " & num)
 	End If
 
 End Sub
+    
+'Helps to parse a Query string into a MAP
+'NOTE: this does not work with urls directly
+'Consider using parseQueryStringUrl() instead for a URL
+'
+'<code> Example: Parse { key1=value1&key2=value2 }
+'Log(StringUtility.parseQueryString	("key1=value1&key2=value2" ))
+' 'This would output a map where key1 & key2 would be the keys
+' 'And the values would be value1 & value2 respectively
+'</code>
+Public Sub parseQueryString(QueryString As String) As Map
+
+	Dim Data As Map 'total data
+	Data.Initialize
+			
+	Try
+ 
+		'parse & first
+		Dim temp_list As List = Split(QueryString, "&")
+
+		For i = 0 To temp_list.Size - 1
+ 
+			Dim QueryList As List = Split(temp_list.Get(i) , "=")
+ 
+			If Not(Data.ContainsKey(QueryList.Get(0))) Then
+  
+				Data.Put(QueryList.Get(0), QueryList.Get(1))
+				 
+			End If
+ 
+		Next
+ 
+	Catch
+		 'TODO: create a config vlue to turn on/off debug errors
+		LogError("The parser for < parseQueryString() > got broken. Please check input data")
+
+	End Try
+ 
+	Return Data
+ 
+End Sub
+
+'Helps to parse a URL with Query string into a MAP
+'
+'<code> Example: Parse { key1=value1&key2=value2 }
+'Log(StringUtility.parseQueryStringUrl("http://urlx.com?key1=value1&key2=value2"))
+' 'This would output a map where key1 & key2 would be the keys
+' 'And the values would be value1 & value2 respectively
+'</code>
+
+Public Sub parseQueryStringUrl(url As String) As Map
+	
+	url= breakStrAt(url, "?") ' Split URL from Query String
+	url =  trim_left_once(url, "?")
+	
+	Return parseQueryString(url)
+	 
+End Sub
+ 
+ 'Helps to truncate text that is 
+ 'longer than a specificied length
+Public Sub Truncate(txt As String, length As Int) As String
+	' If argument is too big, return the original string.
+	' ... Otherwise take a substring from the string's start index.
+	If length > txt.Length Then
+		Return txt
+	Else
+		Return txt.Substring2(0, length)
+	End If
+End Sub
 
 
-
-
-
-
+  
+   
  
 'TODO: add functions:
 

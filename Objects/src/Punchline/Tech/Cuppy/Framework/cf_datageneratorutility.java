@@ -283,7 +283,7 @@ return null;
 }
 public static anywheresoftware.b4a.objects.collections.List  _majorsportslist() throws Exception{
 anywheresoftware.b4a.objects.collections.List _sports = null;
- //BA.debugLineNum = 1361;BA.debugLine="Public Sub majorSportsList As List";
+ //BA.debugLineNum = 1361;BA.debugLine="Public Sub MajorSportsList As List";
  //BA.debugLineNum = 1363;BA.debugLine="Dim sports As List";
 _sports = new anywheresoftware.b4a.objects.collections.List();
  //BA.debugLineNum = 1364;BA.debugLine="sports.Initialize";
@@ -2511,10 +2511,10 @@ if (true) return "+"+BA.NumberToString(_countrycode)+BA.NumberToString(_startswi
 return "";
 }
 public static String  _rand_sport_name() throws Exception{
- //BA.debugLineNum = 1411;BA.debugLine="Public Sub rand_sport_name() As String";
- //BA.debugLineNum = 1413;BA.debugLine="Return StringUtility.RandListValue(majorSportsLis";
+ //BA.debugLineNum = 1412;BA.debugLine="Public Sub rand_sport_name() As String";
+ //BA.debugLineNum = 1414;BA.debugLine="Return StringUtility.RandListValue(MajorSportsLis";
 if (true) return BA.ObjectToString(_stringutility._randlistvalue(_majorsportslist()));
- //BA.debugLineNum = 1415;BA.debugLine="End Sub";
+ //BA.debugLineNum = 1416;BA.debugLine="End Sub";
 return "";
 }
 public static boolean  _rand_trueorfalse() throws Exception{

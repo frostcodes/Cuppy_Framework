@@ -1,5 +1,5 @@
 ﻿B4J=true
-Group=Default Group
+Group=Cuppy\Utilities
 ModulesStructureVersion=1
 Type=StaticCode
 Version=6.3
@@ -1364,7 +1364,7 @@ End Sub
 
 'List of Major Sports around the world
 'NOTE: this list is not A-Z of all sports
-Public Sub majorSportsList As List
+Public Sub MajorSportsList As List
 	
 	Dim sports As List
 	sports.Initialize
@@ -1417,8 +1417,9 @@ End Sub
 'Generates a random sport name
 Public Sub rand_sport_name() As String
 	
-	Return StringUtility.RandListValue(majorSportsList)
+	Return StringUtility.RandListValue(MajorSportsList)
 	
 End Sub
 
 #End Region
+ 
