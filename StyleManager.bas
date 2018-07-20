@@ -10,7 +10,7 @@ Private Sub Process_Globals
 	 Private fx As JFX
 	 
 	Public DefaultFont As Font = SelectFont("Regular" , 12)
-	Public AvailableThemes As Themes 
+	Public AvailableThemes As CFThemes 
  	Public DefaultTheme As Map = AvailableThemes.ThemesList.Get("Blue") 'ignore
 	'Public DefaultTheme As Map = AvailableThemes.ThemesList.Get("Teal") 'ignore
 	

@@ -39,38 +39,40 @@ Library1=jcore
 Library2=jfx
 Library3=cssutils
 Library4=javaobject
-Module1=Configs
-Module10=MaterialLabel
-Module11=MaterialButton
-Module12=Divider
-Module13=MetroLinkLabel
-Module14=Modal
-Module15=AppUtility
-Module16=ControlsUtils
-Module17=AppBar
-Module18=SquareFAB
-Module19=FileUtility
-Module2=tODOS
-Module20=MaterialCheckBox
-Module21=MaterialRadioBox
-Module22=MaterialLinearProgressBar
-Module23=FAB
-Module24=MaterialCard
-Module25=Chips
-Module26=AnimationManager
-Module27=LicenseManager
-Module28=MaterialSwitch
-Module29=MetroToggleButton
-Module3=Themes
-Module4=StringUtility
-Module5=MathUtility
-Module6=DataTypeUtility
-Module7=MetroCircleToggleButton
-Module8=StyleManager
-Module9=BarPreLoader
+Module1=tODOS
+Module10=SquareFAB
+Module11=MaterialCheckBox
+Module12=MaterialRadioBox
+Module13=MaterialLinearProgressBar
+Module14=FAB
+Module15=MaterialCard
+Module16=Chips
+Module17=MaterialSwitch
+Module18=CFThemes
+Module19=CFAnimationManager
+Module2=MetroCircleToggleButton
+Module20=CFBarPreLoader
+Module21=CFConfigs
+Module22=CFLicenseManager
+Module23=CFStyleManager
+Module24=CFAppUtility
+Module25=CFControlsUtils
+Module26=CFHtmlUtility
+Module27=CFDataGeneratorUtility
+Module28=CFDataTypeUtility
+Module29=CFFileUtility
+Module3=MetroToggleButton
+Module30=CFMathUtility
+Module31=CFStringUtility
+Module4=Modal
+Module5=MaterialLabel
+Module6=MaterialButton
+Module7=Divider
+Module8=MetroLinkLabel
+Module9=AppBar
 NumberOfFiles=17
 NumberOfLibraries=4
-NumberOfModules=29
+NumberOfModules=31
 Version=6.3
 @EndOfDesignText@
 #Region Project Attributes 
@@ -80,7 +82,7 @@ Version=6.3
 'Copyright to Oluwaseyi Aderinkomi < Frost Codes >  - seyiaderinkomi@gmail.com
 #LibraryAuthor: Punchline Technologies
 #LibraryName: Cuppy Framework
-#LibraryVersion: 0.985
+#LibraryVersion: 0.994
  
 #End Region
 
@@ -96,3 +98,4 @@ End Sub
 Sub Application_Error (Error As Exception, StackTrace As String) As Boolean
 	Return True
 End Sub
+

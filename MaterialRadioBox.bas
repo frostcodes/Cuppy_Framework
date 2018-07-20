@@ -37,9 +37,9 @@ Public Sub DesignerCreateView (Base As Pane, Lbl As Label, Props As Map)
 	mBase.LoadLayout("MaterialRadioBoxLayout")
 	'set using theme...
 	'SetBg(StyleManager.DefaultTheme.Get("divider"))
-	setBorder(StyleManager.DefaultTheme.Get("divider"), 2)
+	setBorder(CFStyleManager.DefaultTheme.Get("divider"), 2)
 	
-	setCheckedColor(StyleManager.DefaultTheme.Get("primary"))
+	setCheckedColor(CFStyleManager.DefaultTheme.Get("primary"))
 	
 	'TODO: create a designer prorerty for this...
 	setCheckState(UNCHECKED_STATE) 'set initial value
@@ -66,31 +66,31 @@ End Sub
 
 Public Sub setRotationX(angle As Float)
 	
-	ControlsUtils.setPaneRotationX(CheckboxPane, angle) 'rotate
+	CFControlsUtils.setPaneRotationX(CheckboxPane, angle) 'rotate
 	 
 End Sub
 
 Public Sub setBorder(color As String , width As Int)
 	
-	ControlsUtils.setPaneBorder(CheckboxPane, color, width)
+	CFControlsUtils.setPaneBorder(CheckboxPane, color, width)
 
 End Sub
  
 Public Sub setBorderRadius(radius As Int)
 	
-	ControlsUtils.setPaneBorderRadius(CheckboxPane, radius)
+	CFControlsUtils.setPaneBorderRadius(CheckboxPane, radius)
 	
 End Sub
  
 Public Sub setPaneEffect(effect As String)
 	
-	ControlsUtils.setPaneEffect(CheckboxPane, effect)
+	CFControlsUtils.setPaneEffect(CheckboxPane, effect)
 	
 End Sub
 
 Public Sub removeEffects()
 	
-	ControlsUtils.removePaneEffect(CheckboxPane)
+	CFControlsUtils.removePaneEffect(CheckboxPane)
 	
 End Sub
 

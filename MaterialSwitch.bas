@@ -36,7 +36,7 @@ Public Sub DesignerCreateView (Base As Pane, Lbl As Label, Props As Map)
 	mBase = Base
 	mBase.LoadLayout("MaterialSwitchesLayout")
 	'set using theme...
-	setCheckedColor(StyleManager.DefaultTheme.Get("primary"))
+	setCheckedColor(CFStyleManager.DefaultTheme.Get("primary"))
 	
 	'TODO: create a designer prorerty for this...
 	setCheckState(UNCHECKED_STATE) 'set initial value
@@ -71,31 +71,31 @@ End Sub
 
 Public Sub setRotationX(angle As Float)
 	
-	ControlsUtils.setPaneRotationX(SwitchPane, angle) 'rotate
+	CFControlsUtils.setPaneRotationX(SwitchPane, angle) 'rotate
 	 
 End Sub
 
 Public Sub setBorder(color As String , width As Int)
 	
-	ControlsUtils.setPaneBorder(SwitchPane, color, width)
+	CFControlsUtils.setPaneBorder(SwitchPane, color, width)
 
 End Sub
  
 Public Sub setBorderRadius(radius As Int)
 	
-	ControlsUtils.setPaneBorderRadius(SwitchPane, radius)
+	CFControlsUtils.setPaneBorderRadius(SwitchPane, radius)
 	
 End Sub
  
 Public Sub setPaneEffect(effect As String)
 	
-	ControlsUtils.setPaneEffect(SwitchPane, effect)
+	CFControlsUtils.setPaneEffect(SwitchPane, effect)
 	
 End Sub
 
 Public Sub removeEffects()
 	
-	ControlsUtils.removePaneEffect(SwitchPane)
+	CFControlsUtils.removePaneEffect(SwitchPane)
 	
 End Sub
 
@@ -113,13 +113,13 @@ Public Sub setCheckState(value As Int)
 		
 		 SwitchBtn.SetLayoutAnimated(200 , 10, SwitchBtn.Top, SwitchBtn.PrefWidth, SwitchBtn.PrefHeight)
 		SwitchPane.SetAlphaAnimated(200, 1 )
-		SetBg(StyleManager.DefaultTheme.Get("divider"))
+		SetBg(CFStyleManager.DefaultTheme.Get("divider"))
 		  
 	Else if value = CHECKED_STATE Then
 	
 	'Fade effect
 		SwitchPane.SetAlphaAnimated(200, 0.6 )
-		SetBg(ControlsUtils.getPaneBG(SwitchBtn))
+		SetBg(CFControlsUtils.getPaneBG(SwitchBtn))
 		
 		SwitchBtn.SetLayoutAnimated(200 , 23 , SwitchBtn.Top, SwitchBtn.PrefWidth, SwitchBtn.PrefWidth)
 		
@@ -128,7 +128,7 @@ Public Sub setCheckState(value As Int)
 		 
 		SwitchBtn.SetLayoutAnimated(200 , 23 , SwitchBtn.Top, SwitchBtn.PrefWidth, SwitchBtn.PrefWidth)
 		SwitchPane.SetAlphaAnimated(200, 1 )
-		SetBg(StyleManager.DefaultTheme.Get("divider"))
+		SetBg(CFStyleManager.DefaultTheme.Get("divider"))
 		  
 	End If
 	 

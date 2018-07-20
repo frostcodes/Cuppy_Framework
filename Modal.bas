@@ -51,39 +51,39 @@ End Sub
  
 Public Sub SetBg(color As String)
  
-	ControlsUtils.setPaneBG( ModalPane, color)
+	CFControlsUtils.setPaneBG( ModalPane, color)
  
 End Sub
   
 Public Sub setRotationX(angle As Float)
 	
-	ControlsUtils.setPaneRotationX(ModalPane, angle) 'rotate
+	CFControlsUtils.setPaneRotationX(ModalPane, angle) 'rotate
 	 
 End Sub
   
 Public Sub setBorder(color As String , width As Int)
 	
-	ControlsUtils.setPaneBorder(ModalPane, color, width)
+	CFControlsUtils.setPaneBorder(ModalPane, color, width)
 
 End Sub
 
 
 Public Sub setBorderRadius(radius As Int)
 	
-	ControlsUtils.setPaneBorderRadius(ModalPane, radius)
+	CFControlsUtils.setPaneBorderRadius(ModalPane, radius)
 	
 End Sub
 
 
 Public Sub setEffect(effect As String)
 	
-	ControlsUtils.setPaneEffect(ModalPane, effect)
+	CFControlsUtils.setPaneEffect(ModalPane, effect)
 	
 End Sub
 
 Public Sub removeEffects()
 	
-	ControlsUtils.removePaneEffect(ModalPane)
+	CFControlsUtils.removePaneEffect(ModalPane)
 	
 End Sub
 
@@ -97,7 +97,7 @@ Public Sub show
 	
 	ModalBgPane.Visible = True
 	ModalPane.Visible = True
-  
+	
 	mBase.SetLayoutAnimated(300, 0 , 0,  Parent.Width, Parent.Height)
 	  
 End Sub

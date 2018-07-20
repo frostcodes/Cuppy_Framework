@@ -32,8 +32,8 @@ Public Sub DesignerCreateView (Base As Pane, Lbl As Label, Props As Map)
 	mBase = Base
 	mBase.LoadLayout("MaterialLinearProgressBar")
 	'set using theme...
-	SetBg(StyleManager.DefaultTheme.Get("divider"))
-	setProgressColor(StyleManager.DefaultTheme.Get("primary"))
+	SetBg(CFStyleManager.DefaultTheme.Get("divider"))
+	setProgressColor(CFStyleManager.DefaultTheme.Get("primary"))
 	progress(30) 'set initial value
 	
 End Sub
@@ -62,31 +62,31 @@ End Sub
 
 Public Sub setRotationX(angle As Float)
 	
-	ControlsUtils.setPaneRotationX(ProgressPane, angle) 'rotate
+	CFControlsUtils.setPaneRotationX(ProgressPane, angle) 'rotate
 	 
 End Sub
 
 Public Sub setBorder(color As String , width As Int)
 	
-	ControlsUtils.setPaneBorder(ProgressPane, color, width)
+	CFControlsUtils.setPaneBorder(ProgressPane, color, width)
 
 End Sub
  
 Public Sub setBorderRadius(radius As Int)
 	
-	ControlsUtils.setPaneBorderRadius(ProgressPane, radius)
+	CFControlsUtils.setPaneBorderRadius(ProgressPane, radius)
 	
 End Sub
  
 Public Sub setPaneEffect(effect As String)
 	
-	ControlsUtils.setPaneEffect(ProgressPane, effect)
+	CFControlsUtils.setPaneEffect(ProgressPane, effect)
 	
 End Sub
 
 Public Sub removeEffects()
 	
-	ControlsUtils.removePaneEffect(ProgressPane)
+	CFControlsUtils.removePaneEffect(ProgressPane)
 	
 End Sub
 

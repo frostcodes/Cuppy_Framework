@@ -56,37 +56,37 @@ End Sub
 
 Public Sub SetBg(color As String)
  
-	ControlsUtils.setBG(ToggleButton, color)
+	CFControlsUtils.setBG(ToggleButton, color)
  
 End Sub
 
 Public Sub setRotationX(angle As Float)
 	
-	ControlsUtils.setRotationX(ToggleButton, angle) 'rotate
+	CFControlsUtils.setRotationX(ToggleButton, angle) 'rotate
 	 
 End Sub
 
 Public Sub setBorder(color As String , width As Int)
 	
-	ControlsUtils.setBorder(ToggleButton, color, width)
+	CFControlsUtils.setBorder(ToggleButton, color, width)
 
 End Sub
  
 Public Sub setBorderRadius(radius As Int)
 	
-	ControlsUtils.setBorderRadius(ToggleButton, radius)
+	CFControlsUtils.setBorderRadius(ToggleButton, radius)
 	
 End Sub
  
 Public Sub setPaneEffect(effect As String)
 	
-	ControlsUtils.setEffect(ToggleButton, effect)
+	CFControlsUtils.setEffect(ToggleButton, effect)
 	
 End Sub
 
 Public Sub removeEffects()
 	
-	ControlsUtils.removeEffect(ToggleButton)
+	CFControlsUtils.removeEffect(ToggleButton)
 	
 End Sub
 

@@ -28,8 +28,8 @@ Public Sub DesignerCreateView (Base As Pane, Lbl As Label, Props As Map)
 	mBase = Base
 	mBase.LoadLayout("ChipsLayout")
 	'set using theme...
-	SetBg(StyleManager.DefaultTheme.Get("accent"))
-	InnerLabel.Font = StyleManager.SelectFont("Thin", 12)
+	SetBg(CFStyleManager.DefaultTheme.Get("accent"))
+	InnerLabel.Font = CFStyleManager.SelectFont("Thin", 12)
 End Sub
 
 Private Sub Base_Resize (Width As Double, Height As Double)
@@ -55,33 +55,33 @@ End Sub
 
 Public Sub setRotationX(angle As Float)
 	
-	ControlsUtils.setPaneRotationX(InnerPane, angle) 'rotate
+	CFControlsUtils.setPaneRotationX(InnerPane, angle) 'rotate
 	 
 End Sub
   
 Public Sub setBorder(color As String , width As Int)
 	
-	ControlsUtils.setPaneBorder(InnerPane, color, width)
+	CFControlsUtils.setPaneBorder(InnerPane, color, width)
 
 End Sub
 
 
 Sub setBorderRadius(radius As Int)
 	
-	ControlsUtils.setPaneBorderRadius(InnerPane, radius)
+	CFControlsUtils.setPaneBorderRadius(InnerPane, radius)
 	
 End Sub
 
 
 Public Sub setPaneEffect(effect As String)
 	
-	ControlsUtils.setPaneEffect(InnerPane, effect)
+	CFControlsUtils.setPaneEffect(InnerPane, effect)
 	
 End Sub
 
 Public Sub removeEffects()
 	
-	ControlsUtils.removePaneEffect(InnerPane)
+	CFControlsUtils.removePaneEffect(InnerPane)
 	
 End Sub
 

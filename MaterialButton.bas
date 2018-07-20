@@ -27,8 +27,8 @@ Public Sub DesignerCreateView (Base As Pane, Lbl As Label, Props As Map)
 	mBase = Base
 	mBase.LoadLayout("MaterialButtonLayout")
 	'set using theme...
-	SetBg(StyleManager.DefaultTheme.Get("accent"))
-	InnerButton.Font = StyleManager.DefaultFont
+	SetBg(CFStyleManager.DefaultTheme.Get("accent"))
+	InnerButton.Font = CFStyleManager.DefaultFont
 End Sub
 
 Private Sub Base_Resize (Width As Double, Height As Double)
@@ -54,33 +54,33 @@ End Sub
 
 Public Sub setRotationX(angle As Float)
 	
-	ControlsUtils.setRotationX(InnerButton, angle) 'rotate
+	CFControlsUtils.setRotationX(InnerButton, angle) 'rotate
 	 
 End Sub
   
 Public Sub setBorder(color As String , width As Int)
 	
-	ControlsUtils.setBorder(InnerButton, color, width)
+	CFControlsUtils.setBorder(InnerButton, color, width)
 
 End Sub
 
 
 Public Sub setBorderRadius(radius As Int)
 	
-	ControlsUtils.setBorderRadius(InnerButton, radius)
+	CFControlsUtils.setBorderRadius(InnerButton, radius)
 	
 End Sub
 
 
 Public Sub setEffect(effect As String)
 	
-	ControlsUtils.setEffect(InnerButton, effect)
+	CFControlsUtils.setEffect(InnerButton, effect)
 	
 End Sub
 
 Public Sub removeEffects()
 	
-	ControlsUtils.removeEffect(InnerButton)
+	CFControlsUtils.removeEffect(InnerButton)
 	
 End Sub
 
