@@ -1,5 +1,5 @@
 ﻿B4J=true
-Group=Cuppy\Components
+Group=Cuppy\Extra Components
 ModulesStructureVersion=1
 Type=StaticCode
 Version=5.51
@@ -49,6 +49,6 @@ End Sub
 Public Sub SelectFont(font As String,  FontSize As Double ) As Font
 	'tODO: handdle missing font..maybe
  
-	Return  fx.LoadFont(Configs.RobotoFontsPath , FontTypes.Get(font), FontSize)
+	Return  fx.LoadFont(CFConfigs.RobotoFontsPath , FontTypes.Get(font), FontSize)
 	
 End Sub

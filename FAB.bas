@@ -24,7 +24,7 @@ Public Sub DesignerCreateView (Base As Pane, Lbl As Label, Props As Map)
 	mBase = Base
 	mBase.LoadLayout("FABLayout")
 	'set using theme...
-	SetBg(StyleManager.DefaultTheme.Get("accent"))
+	SetBg(CFStyleManager.DefaultTheme.Get("accent"))
 End Sub
 
 Private Sub Base_Resize (Width As Double, Height As Double)
@@ -52,32 +52,32 @@ End Sub
 
 Public Sub setBorder(color As String , width As Int)
 	
-	ControlsUtils.setBorder(FAB_Btn, color, width)
+	CFControlsUtils.setBorder(FAB_Btn, color, width)
 
 End Sub
 
 Public Sub setBorderRadius(radius As Int)
 	
-	ControlsUtils.setBorderRadius(FAB_Btn, radius)
+	CFControlsUtils.setBorderRadius(FAB_Btn, radius)
 	
 End Sub
 
 
 Public Sub setPaneEffect(effect As String)
 	
-	ControlsUtils.setEffect(FAB_Btn, effect)
+	CFControlsUtils.setEffect(FAB_Btn, effect)
 	
 End Sub
 
 Public Sub removeEffects()
 	
-	ControlsUtils.removeEffect(FAB_Btn)
+	CFControlsUtils.removeEffect(FAB_Btn)
 	
 End Sub
  
 Public Sub setRotationX(angle As Float)
 	
-	ControlsUtils.setRotationX(FAB_Btn, angle) 'rotate
+	CFControlsUtils.setRotationX(FAB_Btn, angle) 'rotate
 	 
 End Sub
 

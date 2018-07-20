@@ -27,7 +27,7 @@ Public Sub DesignerCreateView (Base As Pane, Lbl As Label, Props As Map)
 	mBase = Base
 	mBase.LoadLayout("DividerLayout")
 	'set using theme...
-	SetBg(StyleManager.DefaultTheme.Get("divider"))
+	SetBg(CFStyleManager.DefaultTheme.Get("divider"))
 	 
 	 
 	 'BUG: unable to set thickness from designer...
@@ -65,33 +65,33 @@ End Sub
 
 Public Sub setRotationX(angle As Float)
 	
-	ControlsUtils.setPaneRotationX(line, angle) 'rotate
+	CFControlsUtils.setPaneRotationX(line, angle) 'rotate
 	 
 End Sub
   
 Public Sub setBorder(color As String , width As Int)
 	
-	ControlsUtils.setPaneBorder(line, color, width)
+	CFControlsUtils.setPaneBorder(line, color, width)
 
 End Sub
 
 
 Public Sub setBorderRadius(radius As Int)
 	
-	ControlsUtils.setPaneBorderRadius(line, radius)
+	CFControlsUtils.setPaneBorderRadius(line, radius)
 	
 End Sub
 
 
 Public Sub setPaneEffect(effect As String)
 	
-	ControlsUtils.setPaneEffect(line, effect)
+	CFControlsUtils.setPaneEffect(line, effect)
 	 
 End Sub
 
 Public Sub removeEffects()
 	
-	ControlsUtils.removePaneEffect(line)
+	CFControlsUtils.removePaneEffect(line)
 	 
 End Sub
 

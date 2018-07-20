@@ -26,7 +26,7 @@ Public Sub DesignerCreateView (Base As Pane, Lbl As Label, Props As Map)
 	mBase = Base
 	mBase.LoadLayout("AppBarLayout")
 	'set using theme...
-	SetBg(StyleManager.DefaultTheme.Get("primary"))
+	SetBg(CFStyleManager.DefaultTheme.Get("primary"))
 	
 End Sub
 
@@ -53,33 +53,34 @@ End Sub
  
 Public Sub setRotationX(angle As Float)
 	
-	ControlsUtils.setRotationX(Label1, angle) 'rotate
-	ControlsUtils.setPaneRotationX(InnerPane , angle) 'rotate
+	CFControlsUtils.setRotationX(Label1, angle) 'rotate
+	CFControlsUtils.setPaneRotationX(InnerPane , angle) 'rotate
 	 
 End Sub
 
 Public Sub setBorder(color As String , width As Int)
 	
-	ControlsUtils.setBorder(Label1, color, width)
- 	ControlsUtils.setPaneBorder(InnerPane, color, width)
-'	
+	CFControlsUtils.setBorder(Label1, color, width)
+	CFControlsUtils.setPaneBorder(InnerPane, color, width)
+	
 End Sub
 
 Public Sub setBorderRadius(radius As Int)
-	ControlsUtils.setBorderRadius(Label1, radius)
-	ControlsUtils.setPaneBorderRadius(InnerPane, radius)
+	
+	CFControlsUtils.setBorderRadius(Label1, radius)
+	CFControlsUtils.setPaneBorderRadius(InnerPane, radius)
 	
 End Sub
 
 Public Sub setPaneEffect(effect As String)
 	
-	ControlsUtils.setEffect(Label1, effect)
+	CFControlsUtils.setEffect(Label1, effect)
 	
 End Sub
 
 Public Sub removeEffects()
 	
-	ControlsUtils.removeEffect(Label1)
+	CFControlsUtils.removeEffect(Label1)
 	
 End Sub
 

@@ -28,8 +28,8 @@ Public Sub DesignerCreateView (Base As Pane, Lbl As Label, Props As Map)
 	mBase.LoadLayout("MetroLinkLabelUI")
 	'set using theme...
  
-	setTextColor(StyleManager.DefaultTheme.Get("primary_text"))
-	InnerLabel.Font = StyleManager.SelectFont("Regular", 12)
+	setTextColor(CFStyleManager.DefaultTheme.Get("primary_text"))
+	InnerLabel.Font = CFStyleManager.SelectFont("Regular", 12)
 	
 End Sub
 
@@ -50,45 +50,45 @@ End Sub
  
 Public Sub SetBg(color As String)
  
-	ControlsUtils.SetBg( InnerLabel, color)
+	CFControlsUtils.SetBg( InnerLabel, color)
  
 End Sub
 
 Public Sub setTextColor(color As String)
  
-	ControlsUtils.setTextColor (InnerLabel, color)
+	CFControlsUtils.setTextColor (InnerLabel, color)
  
 End Sub
 
 Public Sub setRotationX(angle As Float)
 	
-	ControlsUtils.setRotationX(InnerLabel, angle) 'rotate
+	CFControlsUtils.setRotationX(InnerLabel, angle) 'rotate
 	 
 End Sub
   
 Public Sub setBorder(color As String , width As Int)
 	
-	ControlsUtils.setBorder(InnerLabel, color, width)
+	CFControlsUtils.setBorder(InnerLabel, color, width)
 
 End Sub
 
 
 Public Sub setBorderRadius(radius As Int)
 	
-	ControlsUtils.setBorderRadius(InnerLabel, radius)
+	CFControlsUtils.setBorderRadius(InnerLabel, radius)
 	
 End Sub
 
 
 Public Sub setEffect(effect As String)
 	
-	ControlsUtils.setEffect(InnerLabel, effect)
+	CFControlsUtils.setEffect(InnerLabel, effect)
 	
 End Sub
 
 Public Sub removeEffects()
 	
-	ControlsUtils.removeEffect(InnerLabel)
+	CFControlsUtils.removeEffect(InnerLabel)
 	
 End Sub
 

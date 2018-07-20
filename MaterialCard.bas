@@ -25,7 +25,7 @@ Public Sub DesignerCreateView (Base As Pane, Lbl As Label, Props As Map)
 	mBase = Base
 	mBase.LoadLayout("CardLayout")
 	'set using theme...
-	setBorder(StyleManager.DefaultTheme.Get("divider"), 1)
+	setBorder(CFStyleManager.DefaultTheme.Get("divider"), 1)
 	 
 End Sub
 
@@ -52,13 +52,13 @@ End Sub
 
 Public Sub setRotationX(angle As Float)
 	
-	ControlsUtils.setPaneRotationX(InnerCard, angle) 'rotate
+	CFControlsUtils.setPaneRotationX(InnerCard, angle) 'rotate
 	 
 End Sub
  
 Public Sub setBorder(color As String , width As Int)
 	
-	ControlsUtils.setPaneBorder(InnerCard, color, width)
+	CFControlsUtils.setPaneBorder(InnerCard, color, width)
 
 End Sub
   
@@ -66,20 +66,20 @@ End Sub
   
 Public Sub setBorderRadius(radius As Int)
 	
-	ControlsUtils.setPaneBorderRadius(InnerCard, radius)
+	CFControlsUtils.setPaneBorderRadius(InnerCard, radius)
 	
 End Sub
 
 
 Public Sub setPaneEffect(effect As String)
 	
-	ControlsUtils.setPaneEffect(InnerCard, effect)
+	CFControlsUtils.setPaneEffect(InnerCard, effect)
 	
 End Sub
 
 Public Sub removeEffects()
 	
-	ControlsUtils.removePaneEffect(InnerCard)
+	CFControlsUtils.removePaneEffect(InnerCard)
 	
 End Sub
 
