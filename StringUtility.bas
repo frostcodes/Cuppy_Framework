@@ -915,11 +915,7 @@ End Sub
 'Eg 9 would ouput 09, 13 would ouput 13
 Public Sub prepend_zero(num As Int) As String
 
-Log("Num:  " & num)
-
 	If num < 10 And num > 0 Then
-
-		Log("Return:  " & "0" & num)
 
 		Return "0" & num
 
@@ -930,7 +926,9 @@ Log("Num:  " & num)
 	End If
 
 End Sub
-    
+   
+   #Region  Query String Parsers
+   
 'Helps to parse a Query string into a MAP
 'NOTE: this does not work with urls directly
 'Consider using parseQueryStringUrl() instead for a URL
@@ -989,16 +987,25 @@ Public Sub parseQueryStringUrl(url As String) As Map
 	 
 End Sub
  
+ #End Region
+ 
  'Helps to truncate text that is 
  'longer than a specificied length
 Public Sub Truncate(txt As String, length As Int) As String
+	
 	' If argument is too big, return the original string.
 	' ... Otherwise take a substring from the string's start index.
+	
 	If length > txt.Length Then
+		
 		Return txt
+		 
 	Else
+		
 		Return txt.Substring2(0, length)
+		
 	End If
+	
 End Sub
 
 

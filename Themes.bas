@@ -72,9 +72,6 @@ Public Sub TealTheme As Map
 	Return Colors
 	 
 End Sub
-
-
-
  
 Public Sub SelectTheme(theme As String)
 	 
