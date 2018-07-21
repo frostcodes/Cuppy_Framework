@@ -1,32 +1,32 @@
 ﻿AppType=JavaFX
 Build1=Full,Punchline.Tech.Cuppy.Framework,Full
-File1=AppBarLayout.bjl
-File10=MaterialLinearProgressBar.bjl
-File11=MaterialRadioBoxLayout.bjl
-File12=MaterialSwitchesLayout.bjl
-File13=MetroCircleToggleButtonUI.bjl
-File14=MetroLinkLabelUI.bjl
-File15=MetroToggleButton.bjl
-File16=ModalLayout.bjl
-File17=SquareFABLayout.bjl
-File2=BarPreLoaderUI.bjl
-File3=CardLayout.bjl
-File4=ChipsLayout.bjl
-File5=DividerLayout.bjl
-File6=FABLayout.bjl
-File7=MaterialButtonLayout.bjl
-File8=MaterialCheckboxLayout.bjl
-File9=MaterialLabelLayout.bjl
-FileGroup1=UI Layouts\Material UI
+File1=CFBarPreLoaderUI.bjl
+File10=CFMaterialLinearProgressBarUI.bjl
+File11=CFMaterialRadioBoxUI.bjl
+File12=CFMaterialSquareFABUI.bjl
+File13=CFMaterialSwitchesUI.bjl
+File14=CFMetroCircleToggleButtonUI.bjl
+File15=CFMetroLinkLabelUI.bjl
+File16=CFMetroToggleButtonUI.bjl
+File17=CFModalUI.bjl
+File2=CFMaterialAppBarUI.bjl
+File3=CFMaterialButtonUI.bjl
+File4=CFMaterialCardUI.bjl
+File5=CFMaterialCheckboxUI.bjl
+File6=CFMaterialChipsUI.bjl
+File7=CFMaterialDividerUI.bjl
+File8=CFMaterialFABUI.bjl
+File9=CFMaterialLabelUI.bjl
+FileGroup1=UI Layouts\Preloaders
 FileGroup10=UI Layouts\Material UI
 FileGroup11=UI Layouts\Material UI
 FileGroup12=UI Layouts\Material UI
-FileGroup13=UI Layouts\Metro
+FileGroup13=UI Layouts\Material UI
 FileGroup14=UI Layouts\Metro
 FileGroup15=UI Layouts\Metro
-FileGroup16=UI Layouts\MISC
-FileGroup17=UI Layouts\Material UI
-FileGroup2=UI Layouts\Preloaders
+FileGroup16=UI Layouts\Metro
+FileGroup17=UI Layouts\MISC
+FileGroup2=UI Layouts\Material UI
 FileGroup3=UI Layouts\Material UI
 FileGroup4=UI Layouts\Material UI
 FileGroup5=UI Layouts\Material UI
@@ -46,24 +46,24 @@ Module12=CFDataGeneratorUtility
 Module13=CFAppUtility
 Module14=CFControlsUtils
 Module15=CFHtmlUtility
-Module16=CFAppBar
-Module17=CFMaterialChips
-Module18=CFMaterialDivider
-Module19=CFMaterialFAB
+Module16=CFMaterialChips
+Module17=CFMaterialDivider
+Module18=CFMaterialFAB
+Module19=CFMaterialButton
 Module2=tODOS
-Module20=CFMaterialButton
-Module21=CFMaterialCard
-Module22=CFMaterialCheckBox
-Module23=CFMaterialLabel
-Module24=CFMaterialLinearProgressBar
-Module25=CFMaterialRadioBox
-Module26=CFMaterialSwitch
-Module27=CFModal
-Module28=CFSquareFAB
-Module29=CFMetroCircleToggleButton
+Module20=CFMaterialCard
+Module21=CFMaterialCheckBox
+Module22=CFMaterialLabel
+Module23=CFMaterialLinearProgressBar
+Module24=CFMaterialRadioBox
+Module25=CFMaterialSwitch
+Module26=CFModal
+Module27=CFMetroCircleToggleButton
+Module28=CFMetroLinkLabel
+Module29=CFMetroToggleButton
 Module3=CFThemes
-Module30=CFMetroLinkLabel
-Module31=CFMetroToggleButton
+Module30=CFMaterialSquareFAB
+Module31=CFMaterialAppBar
 Module4=CFStringUtility
 Module5=CFMathUtility
 Module6=CFDataTypeUtility
@@ -82,8 +82,8 @@ Version=6.3
 'Copyright to Oluwaseyi Aderinkomi < Frost Codes >  - seyiaderinkomi@gmail.com
 #LibraryAuthor: Punchline Technologies
 #LibraryName: Cuppy Framework
-#LibraryVersion: 0.994
- 
+#LibraryVersion: 1.0
+  
 #End Region
 
 Sub Process_Globals

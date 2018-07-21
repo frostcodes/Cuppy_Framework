@@ -34,7 +34,7 @@ End Sub
 
 Public Sub DesignerCreateView (Base As Pane, Lbl As Label, Props As Map)
 	mBase = Base
-	mBase.LoadLayout("MaterialCheckboxLayout")
+	mBase.LoadLayout("CFMaterialCheckboxUI")
 	'set using theme...
 	setBorder(CFStyleManager.DefaultTheme.Get("divider"), 2)
 	setCheckedColor(CFStyleManager.DefaultTheme.Get("primary"))

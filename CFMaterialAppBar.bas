@@ -5,8 +5,6 @@ Type=Class
 Version=5.51
 @EndOfDesignText@
 'Custom View class
- 
-#Event: MousePressed (EventData As MouseEvent)
 
 #Region Internal Segment
 
@@ -15,7 +13,8 @@ Sub Class_Globals
 	Private mEventName As String 'ignore
 	Private mCallBack As Object 'ignore
 	Private mBase As Pane
-	Public InnerLabel As Label
+	Private Label1 As Label
+	Public InnerPane As Pane
 End Sub
 
 Public Sub Initialize (Callback As Object, EventName As String)
@@ -25,19 +24,14 @@ End Sub
 
 Public Sub DesignerCreateView (Base As Pane, Lbl As Label, Props As Map)
 	mBase = Base
-	mBase.LoadLayout("CFMaterialLabelUI")
+	mBase.LoadLayout("CFMaterialAppBarUI")
 	'set using theme...
- 
-	setTextColor(CFStyleManager.DefaultTheme.Get("primary_text"))
-	InnerLabel.Font = CFStyleManager.SelectFont("Light", 12)
+	SetBg(CFStyleManager.DefaultTheme.Get("primary"))
 	
 End Sub
 
 Private Sub Base_Resize (Width As Double, Height As Double)
- 
-	InnerLabel.PrefWidth = Width
-	InnerLabel.PrefHeight =  Height
-	 
+	
 End Sub
 
 Public Sub GetBase As Pane
@@ -46,58 +40,48 @@ End Sub
 
 #End Region
 
+
 #Region Actions and Effects
- 
+
+
 Public Sub SetBg(color As String)
- 
-	CFControlsUtils.SetBg( InnerLabel, color)
- 
-End Sub
-
-Public Sub setTextColor(color As String)
- 
-	CFControlsUtils.setTextColor (InnerLabel, color)
+	
+	CSSUtils.SetStyleProperty( Label1, "-fx-background-color", color)
+	CSSUtils.SetStyleProperty( InnerPane, "-fx-background-color", color)
  
 End Sub
-
+ 
 Public Sub setRotationX(angle As Float)
 	
-	CFControlsUtils.setRotationX(InnerLabel, angle) 'rotate
+	CFControlsUtils.setRotationX(Label1, angle) 'rotate
+	CFControlsUtils.setPaneRotationX(InnerPane , angle) 'rotate
 	 
 End Sub
-  
+
 Public Sub setBorder(color As String , width As Int)
 	
-	CFControlsUtils.setBorder(InnerLabel, color, width)
-
+	CFControlsUtils.setBorder(Label1, color, width)
+	CFControlsUtils.setPaneBorder(InnerPane, color, width)
+	
 End Sub
-
 
 Public Sub setBorderRadius(radius As Int)
 	
-	CFControlsUtils.setBorderRadius(InnerLabel, radius)
+	CFControlsUtils.setBorderRadius(Label1, radius)
+	CFControlsUtils.setPaneBorderRadius(InnerPane, radius)
 	
 End Sub
 
-
-Public Sub setEffect(effect As String)
+Public Sub setPaneEffect(effect As String)
 	
-	CFControlsUtils.setEffect(InnerLabel, effect)
+	CFControlsUtils.setEffect(Label1, effect)
 	
 End Sub
 
 Public Sub removeEffects()
 	
-	CFControlsUtils.removeEffect(InnerLabel)
+	CFControlsUtils.removeEffect(Label1)
 	
 End Sub
 
 #End Region
-
-
-Public Sub InnerLabel_MousePressed (EventData As MouseEvent)
-	  
-	CallSubDelayed2(mCallBack, mEventName & "_MousePressed", EventData) 'ignore
-	 
-End Sub
-

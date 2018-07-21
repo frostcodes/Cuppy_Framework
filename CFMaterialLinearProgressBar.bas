@@ -30,7 +30,7 @@ End Sub
 
 Public Sub DesignerCreateView (Base As Pane, Lbl As Label, Props As Map)
 	mBase = Base
-	mBase.LoadLayout("MaterialLinearProgressBar")
+	mBase.LoadLayout("CFMaterialLinearProgressBarUI")
 	'set using theme...
 	SetBg(CFStyleManager.DefaultTheme.Get("divider"))
 	setProgressColor(CFStyleManager.DefaultTheme.Get("primary"))

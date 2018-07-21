@@ -23,7 +23,7 @@ End Sub
 
 Public Sub DesignerCreateView (Base As Pane, Lbl As Label, Props As Map)
 	mBase = Base
-	mBase.LoadLayout("CardLayout")
+	mBase.LoadLayout("CFMaterialCardUI")
 	'set using theme...
 	setBorder(CFStyleManager.DefaultTheme.Get("divider"), 1)
 	 

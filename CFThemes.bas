@@ -24,12 +24,17 @@ Public Sub ThemesList() As Map
 	
 	AvailableThemes.Put("Blue", BlueTheme)
 	AvailableThemes.Put("Teal", TealTheme)
+	
+	AvailableThemes.Put("Gray", GrayTheme)
+	AvailableThemes.Put("Dark", DarkTheme)
 	 
 	Return AvailableThemes
 	
 End Sub
 
-Public Sub BlueTheme As Map
+#Region Themes Mappings
+
+Private Sub BlueTheme As Map
 	
 	Private Colors As Map 'use to store the colors we need 
 	Colors.Initialize
@@ -51,7 +56,7 @@ Public Sub BlueTheme As Map
 	 
 End Sub
  
-Public Sub TealTheme As Map
+Private Sub TealTheme As Map
 	
 	Private Colors As Map 'use to store the colors we need 
 	Colors.Initialize
@@ -73,7 +78,7 @@ Public Sub TealTheme As Map
 	 
 End Sub
  
-Public Sub GrayTheme As Map
+Private Sub GrayTheme As Map
 	
 	Private Colors As Map 'use to store the colors we need 
 	Colors.Initialize
@@ -95,7 +100,7 @@ Public Sub GrayTheme As Map
 	 
 End Sub
  
-Public Sub DarkTheme As Map
+Private Sub DarkTheme As Map
 	
 	Private Colors As Map 'use to store the colors we need 
 	Colors.Initialize
@@ -116,11 +121,8 @@ Public Sub DarkTheme As Map
 	Return Colors
 	 
 End Sub
+
+#End Region
  
-Public Sub SelectTheme(theme As String)
-	 
-	CFStyleManager.DefaultTheme = ThemesList.Get(theme)
-	
-End Sub
 
 

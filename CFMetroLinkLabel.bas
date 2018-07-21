@@ -25,7 +25,7 @@ End Sub
 
 Public Sub DesignerCreateView (Base As Pane, Lbl As Label, Props As Map)
 	mBase = Base
-	mBase.LoadLayout("MetroLinkLabelUI")
+	mBase.LoadLayout("CFMetroLinkLabelUI")
 	'set using theme...
  
 	setTextColor(CFStyleManager.DefaultTheme.Get("primary_text"))

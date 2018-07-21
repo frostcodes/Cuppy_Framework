@@ -25,7 +25,7 @@ End Sub
 
 Public Sub DesignerCreateView (Base As Pane, Lbl As Label, Props As Map)
 	mBase = Base
-	mBase.LoadLayout("DividerLayout")
+	mBase.LoadLayout("CFMaterialDividerUI")
 	'set using theme...
 	SetBg(CFStyleManager.DefaultTheme.Get("divider"))
 	 

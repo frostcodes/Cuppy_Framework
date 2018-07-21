@@ -13,7 +13,6 @@ Private Sub Process_Globals
 	Public AvailableThemes As CFThemes 
  	Public DefaultTheme As Map = AvailableThemes.ThemesList.Get("Blue") 'ignore
 	'Public DefaultTheme As Map = AvailableThemes.ThemesList.Get("Teal") 'ignore
-	
 	 
 End Sub
 
@@ -45,10 +44,31 @@ End Sub
 	 
 End Sub
 
-'returns an instance of a font that can be reused
-Public Sub SelectFont(font As String,  FontSize As Double ) As Font
+'Returns an instance of a font that can be reused
+Public Sub SelectFont(fontName As String,  FontSize As Double ) As Font
 	'tODO: handdle missing font..maybe
  
-	Return  fx.LoadFont(CFConfigs.RobotoFontsPath , FontTypes.Get(font), FontSize)
+	Return  fx.LoadFont(CFConfigs.RobotoFontsPath , FontTypes.Get(fontName), FontSize)
 	
+End Sub
+ 
+'Changes the Default Theme used by Cuppy Framework
+'For styling views and Components
+'
+'Note: The theme name is Case-Insensitive
+Public Sub SelectTheme(theme As String)
+	
+	theme = CFStringUtility.ucfirst(theme)
+	 
+	If AvailableThemes.ThemesList.ContainsKey(theme) Then
+		
+		 DefaultTheme = AvailableThemes.ThemesList.Get(theme)
+	
+	Else
+		
+		LogError("Could not find the selected theme(" & theme & "). Please check the Theme name")
+		ExitApplication
+		
+	End If
+	 
 End Sub

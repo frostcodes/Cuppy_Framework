@@ -34,7 +34,7 @@ End Sub
 
 Public Sub DesignerCreateView (Base As Pane, Lbl As Label, Props As Map)
 	mBase = Base
-	mBase.LoadLayout("MaterialSwitchesLayout")
+	mBase.LoadLayout("CFMaterialSwitchesUI")
 	'set using theme...
 	setCheckedColor(CFStyleManager.DefaultTheme.Get("primary"))
 	

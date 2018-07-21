@@ -34,7 +34,7 @@ End Sub
 
 Public Sub DesignerCreateView (Base As Pane, Lbl As Label, Props As Map)
 	mBase = Base
-	mBase.LoadLayout("MaterialRadioBoxLayout")
+	mBase.LoadLayout("CFMaterialRadioBoxUI")
 	'set using theme...
 	'SetBg(StyleManager.DefaultTheme.Get("divider"))
 	setBorder(CFStyleManager.DefaultTheme.Get("divider"), 2)

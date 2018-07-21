@@ -26,7 +26,7 @@ End Sub
 
 Public Sub DesignerCreateView (Base As Pane, Lbl As Label, Props As Map)
 	mBase = Base
-	mBase.LoadLayout("ChipsLayout")
+	mBase.LoadLayout("CFMaterialChipsUI")
 	'set using theme...
 	SetBg(CFStyleManager.DefaultTheme.Get("accent"))
 	InnerLabel.Font = CFStyleManager.SelectFont("Thin", 12)

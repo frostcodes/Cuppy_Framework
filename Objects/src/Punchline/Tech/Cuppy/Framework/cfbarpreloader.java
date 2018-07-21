@@ -81,8 +81,8 @@ public String  _designercreateview(anywheresoftware.b4j.objects.PaneWrapper.Conc
  //BA.debugLineNum = 33;BA.debugLine="Public Sub DesignerCreateView (Base As Pane, Lbl A";
  //BA.debugLineNum = 34;BA.debugLine="mBase = Base";
 _mbase = _base;
- //BA.debugLineNum = 35;BA.debugLine="mBase.LoadLayout(\"BarPreLoaderUI\")";
-_mbase.LoadLayout(ba,"BarPreLoaderUI");
+ //BA.debugLineNum = 35;BA.debugLine="mBase.LoadLayout(\"CFBarPreLoaderUI\")";
+_mbase.LoadLayout(ba,"CFBarPreLoaderUI");
  //BA.debugLineNum = 41;BA.debugLine="timer1.Initialize(\"Timer1\", 400)";
 _timer1.Initialize(ba,"Timer1",(long) (400));
  //BA.debugLineNum = 42;BA.debugLine="timer1.Enabled = True";

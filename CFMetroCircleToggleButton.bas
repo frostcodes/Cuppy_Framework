@@ -32,7 +32,7 @@ End Sub
 
 Public Sub DesignerCreateView (Base As Pane, Lbl As Label, Props As Map)
 	mBase = Base
-	mBase.LoadLayout("MetroCircleToggleButtonUI")
+	mBase.LoadLayout("CFMetroCircleToggleButtonUI")
 	  
 	'TODO: create a designer prorerty for this...
 	setCheckState(UNCHECKED_STATE) 'set initial value
