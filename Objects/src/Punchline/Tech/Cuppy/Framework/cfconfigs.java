@@ -53,11 +53,11 @@ _libraryversion = 1.0;
 _debugmode = anywheresoftware.b4a.keywords.Common.True;
  //BA.debugLineNum = 12;BA.debugLine="Public AppDir As String = File.DirApp";
 _appdir = anywheresoftware.b4a.keywords.Common.File.getDirApp();
- //BA.debugLineNum = 14;BA.debugLine="Public RobotoFontsPath As String =  File.Combine(";
-_robotofontspath = anywheresoftware.b4a.keywords.Common.File.Combine(_appdir,"Roboto");
- //BA.debugLineNum = 20;BA.debugLine="Private LicenseServer As String =\"\" 'ignore";
+ //BA.debugLineNum = 15;BA.debugLine="Public RobotoFontsPath As String =  File.DirAsset";
+_robotofontspath = anywheresoftware.b4a.keywords.Common.File.getDirAssets();
+ //BA.debugLineNum = 22;BA.debugLine="Private LicenseServer As String =\"\" 'ignore";
 _licenseserver = "";
- //BA.debugLineNum = 25;BA.debugLine="End Sub";
+ //BA.debugLineNum = 27;BA.debugLine="End Sub";
 return "";
 }
 }

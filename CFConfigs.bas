@@ -16,10 +16,7 @@ Private Sub Process_Globals
 	'Paths
 	 
 	Public AppDir As String = File.DirApp
-	'TODO: try adding to assets folder and see if working
-	Public RobotoFontsPath As String =  File.Combine(AppDir , "Roboto") 'ignore
-	
-	
+	 
 	'License Verification....
 	
 	

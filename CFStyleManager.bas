@@ -48,7 +48,7 @@ End Sub
 Public Sub SelectFont(fontName As String,  FontSize As Double ) As Font
 	'tODO: handdle missing font..maybe
  
-	Return  fx.LoadFont(CFConfigs.RobotoFontsPath , FontTypes.Get(fontName), FontSize)
+	Return  fx.LoadFont(File.DirAssets , FontTypes.Get(fontName), FontSize)
 	
 End Sub
  
