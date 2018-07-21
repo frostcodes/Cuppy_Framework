@@ -1,5 +1,5 @@
 ﻿B4J=true
-Group=Cuppy\Extra Components
+Group=Cuppy Framework\Cuppy
 ModulesStructureVersion=1
 Type=Class
 Version=5.51
@@ -62,6 +62,50 @@ Public Sub TealTheme As Map
 	
 	Colors.Put("primary_light","#B2DFDB")
 	Colors.Put("accent","#FF5722")
+	
+	Colors.Put("primary_text","#212121")
+	Colors.Put("secondary_text","#757575")
+	
+	Colors.Put("icons","#FFFFFF")
+	Colors.Put("divider","#BDBDBD")
+	 
+	Return Colors
+	 
+End Sub
+ 
+Public Sub GrayTheme As Map
+	
+	Private Colors As Map 'use to store the colors we need 
+	Colors.Initialize
+	
+	'add colors
+	Colors.Put("primary","#7f8c8d")
+	Colors.Put("primary_dark","#5c6566")
+	
+	Colors.Put("primary_light","#a9a9a9")
+	Colors.Put("accent","#536DFE")
+	
+	Colors.Put("primary_text","#212121")
+	Colors.Put("secondary_text","#757575")
+	
+	Colors.Put("icons","#FFFFFF")
+	Colors.Put("divider","#BDBDBD")
+	 
+	Return Colors
+	 
+End Sub
+ 
+Public Sub DarkTheme As Map
+	
+	Private Colors As Map 'use to store the colors we need 
+	Colors.Initialize
+	
+	'add colors
+	Colors.Put("primary","#2c3e50")
+	Colors.Put("primary_dark","#1b2732")
+	
+	Colors.Put("primary_light","#68696a")
+	Colors.Put("accent","#95a5a6")
 	
 	Colors.Put("primary_text","#212121")
 	Colors.Put("secondary_text","#757575")

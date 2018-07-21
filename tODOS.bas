@@ -1,5 +1,5 @@
 ﻿B4J=true
-Group=Cuppy
+Group=Cuppy Framework
 ModulesStructureVersion=1
 Type=Class
 Version=5.51

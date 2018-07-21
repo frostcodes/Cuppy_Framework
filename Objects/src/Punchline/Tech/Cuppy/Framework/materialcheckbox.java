@@ -34,18 +34,18 @@ public int _checked_state = 0;
 public int _unchecked_state = 0;
 public int _indeterminate_state = 0;
 public b4j.example.cssutils _cssutils = null;
-public Punchline.Tech.Cuppy.Framework.configs _configs = null;
-public Punchline.Tech.Cuppy.Framework.stringutility _stringutility = null;
-public Punchline.Tech.Cuppy.Framework.mathutility _mathutility = null;
-public Punchline.Tech.Cuppy.Framework.datatypeutility _datatypeutility = null;
-public Punchline.Tech.Cuppy.Framework.fileutility _fileutility = null;
-public Punchline.Tech.Cuppy.Framework.cf_datageneratorutility _cf_datageneratorutility = null;
-public Punchline.Tech.Cuppy.Framework.cf_htmlutility _cf_htmlutility = null;
-public Punchline.Tech.Cuppy.Framework.stylemanager _stylemanager = null;
-public Punchline.Tech.Cuppy.Framework.apputility _apputility = null;
-public Punchline.Tech.Cuppy.Framework.controlsutils _controlsutils = null;
-public Punchline.Tech.Cuppy.Framework.animationmanager _animationmanager = null;
-public Punchline.Tech.Cuppy.Framework.licensemanager _licensemanager = null;
+public Punchline.Tech.Cuppy.Framework.cfconfigs _cfconfigs = null;
+public Punchline.Tech.Cuppy.Framework.cfstringutility _cfstringutility = null;
+public Punchline.Tech.Cuppy.Framework.cfmathutility _cfmathutility = null;
+public Punchline.Tech.Cuppy.Framework.cfdatatypeutility _cfdatatypeutility = null;
+public Punchline.Tech.Cuppy.Framework.cffileutility _cffileutility = null;
+public Punchline.Tech.Cuppy.Framework.cfstylemanager _cfstylemanager = null;
+public Punchline.Tech.Cuppy.Framework.cfanimationmanager _cfanimationmanager = null;
+public Punchline.Tech.Cuppy.Framework.cflicensemanager _cflicensemanager = null;
+public Punchline.Tech.Cuppy.Framework.cfdatageneratorutility _cfdatageneratorutility = null;
+public Punchline.Tech.Cuppy.Framework.cfapputility _cfapputility = null;
+public Punchline.Tech.Cuppy.Framework.cfcontrolsutils _cfcontrolsutils = null;
+public Punchline.Tech.Cuppy.Framework.cfhtmlutility _cfhtmlutility = null;
 public String  _base_resize(double _width,double _height) throws Exception{
  //BA.debugLineNum = 41;BA.debugLine="Private Sub Base_Resize (Width As Double, Height A";
  //BA.debugLineNum = 43;BA.debugLine="CheckboxPane.PrefWidth = Width";
@@ -108,10 +108,10 @@ public String  _designercreateview(anywheresoftware.b4j.objects.PaneWrapper.Conc
 _mbase = _base;
  //BA.debugLineNum = 31;BA.debugLine="mBase.LoadLayout(\"MaterialCheckboxLayout\")";
 _mbase.LoadLayout(ba,"MaterialCheckboxLayout");
- //BA.debugLineNum = 33;BA.debugLine="setBorder(StyleManager.DefaultTheme.Get(\"divider\"";
-_setborder(BA.ObjectToString(_stylemanager._defaulttheme.Get((Object)("divider"))),(int) (2));
- //BA.debugLineNum = 34;BA.debugLine="setCheckedColor(StyleManager.DefaultTheme.Get(\"pr";
-_setcheckedcolor(BA.ObjectToString(_stylemanager._defaulttheme.Get((Object)("primary"))));
+ //BA.debugLineNum = 33;BA.debugLine="setBorder(CFStyleManager.DefaultTheme.Get(\"divide";
+_setborder(BA.ObjectToString(_cfstylemanager._defaulttheme.Get((Object)("divider"))),(int) (2));
+ //BA.debugLineNum = 34;BA.debugLine="setCheckedColor(CFStyleManager.DefaultTheme.Get(\"";
+_setcheckedcolor(BA.ObjectToString(_cfstylemanager._defaulttheme.Get((Object)("primary"))));
  //BA.debugLineNum = 37;BA.debugLine="setCheckState(UNCHECKED_STATE) 'set initial value";
 _setcheckstate(_unchecked_state);
  //BA.debugLineNum = 39;BA.debugLine="End Sub";
@@ -143,8 +143,8 @@ return false;
 }
 public String  _removeeffects() throws Exception{
  //BA.debugLineNum = 89;BA.debugLine="Public Sub removeEffects()";
- //BA.debugLineNum = 91;BA.debugLine="ControlsUtils.removePaneEffect(CheckboxPane)";
-_controlsutils._removepaneeffect(_checkboxpane);
+ //BA.debugLineNum = 91;BA.debugLine="CFControlsUtils.removePaneEffect(CheckboxPane)";
+_cfcontrolsutils._removepaneeffect(_checkboxpane);
  //BA.debugLineNum = 93;BA.debugLine="End Sub";
 return "";
 }
@@ -157,15 +157,15 @@ return "";
 }
 public String  _setborder(String _color,int _width) throws Exception{
  //BA.debugLineNum = 71;BA.debugLine="Public Sub setBorder(color As String , width As In";
- //BA.debugLineNum = 73;BA.debugLine="ControlsUtils.setPaneBorder(CheckboxPane, color,";
-_controlsutils._setpaneborder(_checkboxpane,_color,_width);
+ //BA.debugLineNum = 73;BA.debugLine="CFControlsUtils.setPaneBorder(CheckboxPane, color";
+_cfcontrolsutils._setpaneborder(_checkboxpane,_color,_width);
  //BA.debugLineNum = 75;BA.debugLine="End Sub";
 return "";
 }
 public String  _setborderradius(int _radius) throws Exception{
  //BA.debugLineNum = 77;BA.debugLine="Public Sub setBorderRadius(radius As Int)";
- //BA.debugLineNum = 79;BA.debugLine="ControlsUtils.setPaneBorderRadius(CheckboxPane, r";
-_controlsutils._setpaneborderradius(_checkboxpane,_radius);
+ //BA.debugLineNum = 79;BA.debugLine="CFControlsUtils.setPaneBorderRadius(CheckboxPane,";
+_cfcontrolsutils._setpaneborderradius(_checkboxpane,_radius);
  //BA.debugLineNum = 81;BA.debugLine="End Sub";
 return "";
 }
@@ -209,15 +209,15 @@ return "";
 }
 public String  _setpaneeffect(String _effect) throws Exception{
  //BA.debugLineNum = 83;BA.debugLine="Public Sub setPaneEffect(effect As String)";
- //BA.debugLineNum = 85;BA.debugLine="ControlsUtils.setPaneEffect(CheckboxPane, effect)";
-_controlsutils._setpaneeffect(_checkboxpane,_effect);
+ //BA.debugLineNum = 85;BA.debugLine="CFControlsUtils.setPaneEffect(CheckboxPane, effec";
+_cfcontrolsutils._setpaneeffect(_checkboxpane,_effect);
  //BA.debugLineNum = 87;BA.debugLine="End Sub";
 return "";
 }
 public String  _setrotationx(float _angle) throws Exception{
  //BA.debugLineNum = 65;BA.debugLine="Public Sub setRotationX(angle As Float)";
- //BA.debugLineNum = 67;BA.debugLine="ControlsUtils.setPaneRotationX(CheckboxPane, angl";
-_controlsutils._setpanerotationx(_checkboxpane,_angle);
+ //BA.debugLineNum = 67;BA.debugLine="CFControlsUtils.setPaneRotationX(CheckboxPane, an";
+_cfcontrolsutils._setpanerotationx(_checkboxpane,_angle);
  //BA.debugLineNum = 69;BA.debugLine="End Sub";
 return "";
 }

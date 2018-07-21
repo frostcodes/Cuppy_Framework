@@ -33,18 +33,18 @@ public int _unchecked_state = 0;
 public boolean _checkedstatus = false;
 public anywheresoftware.b4j.objects.LabelWrapper _togglebutton = null;
 public b4j.example.cssutils _cssutils = null;
-public Punchline.Tech.Cuppy.Framework.configs _configs = null;
-public Punchline.Tech.Cuppy.Framework.stringutility _stringutility = null;
-public Punchline.Tech.Cuppy.Framework.mathutility _mathutility = null;
-public Punchline.Tech.Cuppy.Framework.datatypeutility _datatypeutility = null;
-public Punchline.Tech.Cuppy.Framework.fileutility _fileutility = null;
-public Punchline.Tech.Cuppy.Framework.cf_datageneratorutility _cf_datageneratorutility = null;
-public Punchline.Tech.Cuppy.Framework.cf_htmlutility _cf_htmlutility = null;
-public Punchline.Tech.Cuppy.Framework.stylemanager _stylemanager = null;
-public Punchline.Tech.Cuppy.Framework.apputility _apputility = null;
-public Punchline.Tech.Cuppy.Framework.controlsutils _controlsutils = null;
-public Punchline.Tech.Cuppy.Framework.animationmanager _animationmanager = null;
-public Punchline.Tech.Cuppy.Framework.licensemanager _licensemanager = null;
+public Punchline.Tech.Cuppy.Framework.cfconfigs _cfconfigs = null;
+public Punchline.Tech.Cuppy.Framework.cfstringutility _cfstringutility = null;
+public Punchline.Tech.Cuppy.Framework.cfmathutility _cfmathutility = null;
+public Punchline.Tech.Cuppy.Framework.cfdatatypeutility _cfdatatypeutility = null;
+public Punchline.Tech.Cuppy.Framework.cffileutility _cffileutility = null;
+public Punchline.Tech.Cuppy.Framework.cfstylemanager _cfstylemanager = null;
+public Punchline.Tech.Cuppy.Framework.cfanimationmanager _cfanimationmanager = null;
+public Punchline.Tech.Cuppy.Framework.cflicensemanager _cflicensemanager = null;
+public Punchline.Tech.Cuppy.Framework.cfdatageneratorutility _cfdatageneratorutility = null;
+public Punchline.Tech.Cuppy.Framework.cfapputility _cfapputility = null;
+public Punchline.Tech.Cuppy.Framework.cfcontrolsutils _cfcontrolsutils = null;
+public Punchline.Tech.Cuppy.Framework.cfhtmlutility _cfhtmlutility = null;
 public String  _base_resize(double _width,double _height) throws Exception{
  //BA.debugLineNum = 36;BA.debugLine="Private Sub Base_Resize (Width As Double, Height A";
  //BA.debugLineNum = 38;BA.debugLine="ToggleButton.PrefHeight = Height";
@@ -112,29 +112,29 @@ return "";
 }
 public String  _removeeffects() throws Exception{
  //BA.debugLineNum = 81;BA.debugLine="Public Sub removeEffects()";
- //BA.debugLineNum = 83;BA.debugLine="ControlsUtils.removeEffect(ToggleButton)";
-_controlsutils._removeeffect((anywheresoftware.b4j.objects.NodeWrapper.ControlWrapper.ConcreteControlWrapper) anywheresoftware.b4a.AbsObjectWrapper.ConvertToWrapper(new anywheresoftware.b4j.objects.NodeWrapper.ControlWrapper.ConcreteControlWrapper(), (javafx.scene.control.Control)(_togglebutton.getObject())));
+ //BA.debugLineNum = 83;BA.debugLine="CFControlsUtils.removeEffect(ToggleButton)";
+_cfcontrolsutils._removeeffect((anywheresoftware.b4j.objects.NodeWrapper.ControlWrapper.ConcreteControlWrapper) anywheresoftware.b4a.AbsObjectWrapper.ConvertToWrapper(new anywheresoftware.b4j.objects.NodeWrapper.ControlWrapper.ConcreteControlWrapper(), (javafx.scene.control.Control)(_togglebutton.getObject())));
  //BA.debugLineNum = 85;BA.debugLine="End Sub";
 return "";
 }
 public String  _setbg(String _color) throws Exception{
  //BA.debugLineNum = 51;BA.debugLine="Public Sub SetBg(color As String)";
- //BA.debugLineNum = 53;BA.debugLine="ControlsUtils.setBG(ToggleButton, color)";
-_controlsutils._setbg((anywheresoftware.b4j.objects.NodeWrapper.ControlWrapper.ConcreteControlWrapper) anywheresoftware.b4a.AbsObjectWrapper.ConvertToWrapper(new anywheresoftware.b4j.objects.NodeWrapper.ControlWrapper.ConcreteControlWrapper(), (javafx.scene.control.Control)(_togglebutton.getObject())),_color);
+ //BA.debugLineNum = 53;BA.debugLine="CFControlsUtils.setBG(ToggleButton, color)";
+_cfcontrolsutils._setbg((anywheresoftware.b4j.objects.NodeWrapper.ControlWrapper.ConcreteControlWrapper) anywheresoftware.b4a.AbsObjectWrapper.ConvertToWrapper(new anywheresoftware.b4j.objects.NodeWrapper.ControlWrapper.ConcreteControlWrapper(), (javafx.scene.control.Control)(_togglebutton.getObject())),_color);
  //BA.debugLineNum = 55;BA.debugLine="End Sub";
 return "";
 }
 public String  _setborder(String _color,int _width) throws Exception{
  //BA.debugLineNum = 63;BA.debugLine="Public Sub setBorder(color As String , width As In";
- //BA.debugLineNum = 65;BA.debugLine="ControlsUtils.setBorder(ToggleButton, color, widt";
-_controlsutils._setborder((anywheresoftware.b4j.objects.NodeWrapper.ControlWrapper.ConcreteControlWrapper) anywheresoftware.b4a.AbsObjectWrapper.ConvertToWrapper(new anywheresoftware.b4j.objects.NodeWrapper.ControlWrapper.ConcreteControlWrapper(), (javafx.scene.control.Control)(_togglebutton.getObject())),_color,_width);
+ //BA.debugLineNum = 65;BA.debugLine="CFControlsUtils.setBorder(ToggleButton, color, wi";
+_cfcontrolsutils._setborder((anywheresoftware.b4j.objects.NodeWrapper.ControlWrapper.ConcreteControlWrapper) anywheresoftware.b4a.AbsObjectWrapper.ConvertToWrapper(new anywheresoftware.b4j.objects.NodeWrapper.ControlWrapper.ConcreteControlWrapper(), (javafx.scene.control.Control)(_togglebutton.getObject())),_color,_width);
  //BA.debugLineNum = 67;BA.debugLine="End Sub";
 return "";
 }
 public String  _setborderradius(int _radius) throws Exception{
  //BA.debugLineNum = 69;BA.debugLine="Public Sub setBorderRadius(radius As Int)";
- //BA.debugLineNum = 71;BA.debugLine="ControlsUtils.setBorderRadius(ToggleButton, radiu";
-_controlsutils._setborderradius((anywheresoftware.b4j.objects.NodeWrapper.ControlWrapper.ConcreteControlWrapper) anywheresoftware.b4a.AbsObjectWrapper.ConvertToWrapper(new anywheresoftware.b4j.objects.NodeWrapper.ControlWrapper.ConcreteControlWrapper(), (javafx.scene.control.Control)(_togglebutton.getObject())),_radius);
+ //BA.debugLineNum = 71;BA.debugLine="CFControlsUtils.setBorderRadius(ToggleButton, rad";
+_cfcontrolsutils._setborderradius((anywheresoftware.b4j.objects.NodeWrapper.ControlWrapper.ConcreteControlWrapper) anywheresoftware.b4a.AbsObjectWrapper.ConvertToWrapper(new anywheresoftware.b4j.objects.NodeWrapper.ControlWrapper.ConcreteControlWrapper(), (javafx.scene.control.Control)(_togglebutton.getObject())),_radius);
  //BA.debugLineNum = 73;BA.debugLine="End Sub";
 return "";
 }
@@ -167,15 +167,15 @@ return "";
 }
 public String  _setpaneeffect(String _effect) throws Exception{
  //BA.debugLineNum = 75;BA.debugLine="Public Sub setPaneEffect(effect As String)";
- //BA.debugLineNum = 77;BA.debugLine="ControlsUtils.setEffect(ToggleButton, effect)";
-_controlsutils._seteffect((anywheresoftware.b4j.objects.NodeWrapper.ControlWrapper.ConcreteControlWrapper) anywheresoftware.b4a.AbsObjectWrapper.ConvertToWrapper(new anywheresoftware.b4j.objects.NodeWrapper.ControlWrapper.ConcreteControlWrapper(), (javafx.scene.control.Control)(_togglebutton.getObject())),_effect);
+ //BA.debugLineNum = 77;BA.debugLine="CFControlsUtils.setEffect(ToggleButton, effect)";
+_cfcontrolsutils._seteffect((anywheresoftware.b4j.objects.NodeWrapper.ControlWrapper.ConcreteControlWrapper) anywheresoftware.b4a.AbsObjectWrapper.ConvertToWrapper(new anywheresoftware.b4j.objects.NodeWrapper.ControlWrapper.ConcreteControlWrapper(), (javafx.scene.control.Control)(_togglebutton.getObject())),_effect);
  //BA.debugLineNum = 79;BA.debugLine="End Sub";
 return "";
 }
 public String  _setrotationx(float _angle) throws Exception{
  //BA.debugLineNum = 57;BA.debugLine="Public Sub setRotationX(angle As Float)";
- //BA.debugLineNum = 59;BA.debugLine="ControlsUtils.setRotationX(ToggleButton, angle) '";
-_controlsutils._setrotationx((anywheresoftware.b4j.objects.NodeWrapper.ControlWrapper.ConcreteControlWrapper) anywheresoftware.b4a.AbsObjectWrapper.ConvertToWrapper(new anywheresoftware.b4j.objects.NodeWrapper.ControlWrapper.ConcreteControlWrapper(), (javafx.scene.control.Control)(_togglebutton.getObject())),_angle);
+ //BA.debugLineNum = 59;BA.debugLine="CFControlsUtils.setRotationX(ToggleButton, angle)";
+_cfcontrolsutils._setrotationx((anywheresoftware.b4j.objects.NodeWrapper.ControlWrapper.ConcreteControlWrapper) anywheresoftware.b4a.AbsObjectWrapper.ConvertToWrapper(new anywheresoftware.b4j.objects.NodeWrapper.ControlWrapper.ConcreteControlWrapper(), (javafx.scene.control.Control)(_togglebutton.getObject())),_angle);
  //BA.debugLineNum = 61;BA.debugLine="End Sub";
 return "";
 }

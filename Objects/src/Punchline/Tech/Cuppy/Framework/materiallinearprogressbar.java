@@ -31,18 +31,18 @@ public anywheresoftware.b4j.objects.PaneWrapper.ConcretePaneWrapper _mbase = nul
 public anywheresoftware.b4j.objects.PaneWrapper.ConcretePaneWrapper _progressbar = null;
 public anywheresoftware.b4j.objects.PaneWrapper.ConcretePaneWrapper _progresspane = null;
 public b4j.example.cssutils _cssutils = null;
-public Punchline.Tech.Cuppy.Framework.configs _configs = null;
-public Punchline.Tech.Cuppy.Framework.stringutility _stringutility = null;
-public Punchline.Tech.Cuppy.Framework.mathutility _mathutility = null;
-public Punchline.Tech.Cuppy.Framework.datatypeutility _datatypeutility = null;
-public Punchline.Tech.Cuppy.Framework.fileutility _fileutility = null;
-public Punchline.Tech.Cuppy.Framework.cf_datageneratorutility _cf_datageneratorutility = null;
-public Punchline.Tech.Cuppy.Framework.cf_htmlutility _cf_htmlutility = null;
-public Punchline.Tech.Cuppy.Framework.stylemanager _stylemanager = null;
-public Punchline.Tech.Cuppy.Framework.apputility _apputility = null;
-public Punchline.Tech.Cuppy.Framework.controlsutils _controlsutils = null;
-public Punchline.Tech.Cuppy.Framework.animationmanager _animationmanager = null;
-public Punchline.Tech.Cuppy.Framework.licensemanager _licensemanager = null;
+public Punchline.Tech.Cuppy.Framework.cfconfigs _cfconfigs = null;
+public Punchline.Tech.Cuppy.Framework.cfstringutility _cfstringutility = null;
+public Punchline.Tech.Cuppy.Framework.cfmathutility _cfmathutility = null;
+public Punchline.Tech.Cuppy.Framework.cfdatatypeutility _cfdatatypeutility = null;
+public Punchline.Tech.Cuppy.Framework.cffileutility _cffileutility = null;
+public Punchline.Tech.Cuppy.Framework.cfstylemanager _cfstylemanager = null;
+public Punchline.Tech.Cuppy.Framework.cfanimationmanager _cfanimationmanager = null;
+public Punchline.Tech.Cuppy.Framework.cflicensemanager _cflicensemanager = null;
+public Punchline.Tech.Cuppy.Framework.cfdatageneratorutility _cfdatageneratorutility = null;
+public Punchline.Tech.Cuppy.Framework.cfapputility _cfapputility = null;
+public Punchline.Tech.Cuppy.Framework.cfcontrolsutils _cfcontrolsutils = null;
+public Punchline.Tech.Cuppy.Framework.cfhtmlutility _cfhtmlutility = null;
 public String  _base_resize(double _width,double _height) throws Exception{
  //BA.debugLineNum = 35;BA.debugLine="Private Sub Base_Resize (Width As Double, Height A";
  //BA.debugLineNum = 37;BA.debugLine="ProgressPane.PrefWidth = Width";
@@ -77,10 +77,10 @@ public String  _designercreateview(anywheresoftware.b4j.objects.PaneWrapper.Conc
 _mbase = _base;
  //BA.debugLineNum = 27;BA.debugLine="mBase.LoadLayout(\"MaterialLinearProgressBar\")";
 _mbase.LoadLayout(ba,"MaterialLinearProgressBar");
- //BA.debugLineNum = 29;BA.debugLine="SetBg(StyleManager.DefaultTheme.Get(\"divider\"))";
-_setbg(BA.ObjectToString(_stylemanager._defaulttheme.Get((Object)("divider"))));
- //BA.debugLineNum = 30;BA.debugLine="setProgressColor(StyleManager.DefaultTheme.Get(\"p";
-_setprogresscolor(BA.ObjectToString(_stylemanager._defaulttheme.Get((Object)("primary"))));
+ //BA.debugLineNum = 29;BA.debugLine="SetBg(CFStyleManager.DefaultTheme.Get(\"divider\"))";
+_setbg(BA.ObjectToString(_cfstylemanager._defaulttheme.Get((Object)("divider"))));
+ //BA.debugLineNum = 30;BA.debugLine="setProgressColor(CFStyleManager.DefaultTheme.Get(";
+_setprogresscolor(BA.ObjectToString(_cfstylemanager._defaulttheme.Get((Object)("primary"))));
  //BA.debugLineNum = 31;BA.debugLine="progress(30) 'set initial value";
 _progress((int) (30));
  //BA.debugLineNum = 33;BA.debugLine="End Sub";
@@ -119,8 +119,8 @@ return "";
 }
 public String  _removeeffects() throws Exception{
  //BA.debugLineNum = 81;BA.debugLine="Public Sub removeEffects()";
- //BA.debugLineNum = 83;BA.debugLine="ControlsUtils.removePaneEffect(ProgressPane)";
-_controlsutils._removepaneeffect(_progresspane);
+ //BA.debugLineNum = 83;BA.debugLine="CFControlsUtils.removePaneEffect(ProgressPane)";
+_cfcontrolsutils._removepaneeffect(_progresspane);
  //BA.debugLineNum = 85;BA.debugLine="End Sub";
 return "";
 }
@@ -133,22 +133,22 @@ return "";
 }
 public String  _setborder(String _color,int _width) throws Exception{
  //BA.debugLineNum = 63;BA.debugLine="Public Sub setBorder(color As String , width As In";
- //BA.debugLineNum = 65;BA.debugLine="ControlsUtils.setPaneBorder(ProgressPane, color,";
-_controlsutils._setpaneborder(_progresspane,_color,_width);
+ //BA.debugLineNum = 65;BA.debugLine="CFControlsUtils.setPaneBorder(ProgressPane, color";
+_cfcontrolsutils._setpaneborder(_progresspane,_color,_width);
  //BA.debugLineNum = 67;BA.debugLine="End Sub";
 return "";
 }
 public String  _setborderradius(int _radius) throws Exception{
  //BA.debugLineNum = 69;BA.debugLine="Public Sub setBorderRadius(radius As Int)";
- //BA.debugLineNum = 71;BA.debugLine="ControlsUtils.setPaneBorderRadius(ProgressPane, r";
-_controlsutils._setpaneborderradius(_progresspane,_radius);
+ //BA.debugLineNum = 71;BA.debugLine="CFControlsUtils.setPaneBorderRadius(ProgressPane,";
+_cfcontrolsutils._setpaneborderradius(_progresspane,_radius);
  //BA.debugLineNum = 73;BA.debugLine="End Sub";
 return "";
 }
 public String  _setpaneeffect(String _effect) throws Exception{
  //BA.debugLineNum = 75;BA.debugLine="Public Sub setPaneEffect(effect As String)";
- //BA.debugLineNum = 77;BA.debugLine="ControlsUtils.setPaneEffect(ProgressPane, effect)";
-_controlsutils._setpaneeffect(_progresspane,_effect);
+ //BA.debugLineNum = 77;BA.debugLine="CFControlsUtils.setPaneEffect(ProgressPane, effec";
+_cfcontrolsutils._setpaneeffect(_progresspane,_effect);
  //BA.debugLineNum = 79;BA.debugLine="End Sub";
 return "";
 }
@@ -161,8 +161,8 @@ return "";
 }
 public String  _setrotationx(float _angle) throws Exception{
  //BA.debugLineNum = 57;BA.debugLine="Public Sub setRotationX(angle As Float)";
- //BA.debugLineNum = 59;BA.debugLine="ControlsUtils.setPaneRotationX(ProgressPane, angl";
-_controlsutils._setpanerotationx(_progresspane,_angle);
+ //BA.debugLineNum = 59;BA.debugLine="CFControlsUtils.setPaneRotationX(ProgressPane, an";
+_cfcontrolsutils._setpanerotationx(_progresspane,_angle);
  //BA.debugLineNum = 61;BA.debugLine="End Sub";
 return "";
 }

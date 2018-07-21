@@ -1,5 +1,5 @@
 ﻿B4J=true
-Group=Cuppy\Cuppy Internals
+Group=Cuppy Framework\Cuppy
 ModulesStructureVersion=1
 Type=StaticCode
 Version=5.51

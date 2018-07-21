@@ -1,5 +1,5 @@
 ﻿B4J=true
-Group=Cuppy\Controls\Cuppy Controls
+Group=Cuppy Framework\Cuppy\Controls
 ModulesStructureVersion=1
 Type=Class
 Version=5.51

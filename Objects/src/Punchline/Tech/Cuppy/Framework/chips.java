@@ -32,18 +32,18 @@ public anywheresoftware.b4j.objects.PaneWrapper.ConcretePaneWrapper _innerbutton
 public anywheresoftware.b4j.objects.LabelWrapper _innerlabel = null;
 public anywheresoftware.b4j.objects.PaneWrapper.ConcretePaneWrapper _innerpane = null;
 public b4j.example.cssutils _cssutils = null;
-public Punchline.Tech.Cuppy.Framework.configs _configs = null;
-public Punchline.Tech.Cuppy.Framework.stringutility _stringutility = null;
-public Punchline.Tech.Cuppy.Framework.mathutility _mathutility = null;
-public Punchline.Tech.Cuppy.Framework.datatypeutility _datatypeutility = null;
-public Punchline.Tech.Cuppy.Framework.fileutility _fileutility = null;
-public Punchline.Tech.Cuppy.Framework.cf_datageneratorutility _cf_datageneratorutility = null;
-public Punchline.Tech.Cuppy.Framework.cf_htmlutility _cf_htmlutility = null;
-public Punchline.Tech.Cuppy.Framework.stylemanager _stylemanager = null;
-public Punchline.Tech.Cuppy.Framework.apputility _apputility = null;
-public Punchline.Tech.Cuppy.Framework.controlsutils _controlsutils = null;
-public Punchline.Tech.Cuppy.Framework.animationmanager _animationmanager = null;
-public Punchline.Tech.Cuppy.Framework.licensemanager _licensemanager = null;
+public Punchline.Tech.Cuppy.Framework.cfconfigs _cfconfigs = null;
+public Punchline.Tech.Cuppy.Framework.cfstringutility _cfstringutility = null;
+public Punchline.Tech.Cuppy.Framework.cfmathutility _cfmathutility = null;
+public Punchline.Tech.Cuppy.Framework.cfdatatypeutility _cfdatatypeutility = null;
+public Punchline.Tech.Cuppy.Framework.cffileutility _cffileutility = null;
+public Punchline.Tech.Cuppy.Framework.cfstylemanager _cfstylemanager = null;
+public Punchline.Tech.Cuppy.Framework.cfanimationmanager _cfanimationmanager = null;
+public Punchline.Tech.Cuppy.Framework.cflicensemanager _cflicensemanager = null;
+public Punchline.Tech.Cuppy.Framework.cfdatageneratorutility _cfdatageneratorutility = null;
+public Punchline.Tech.Cuppy.Framework.cfapputility _cfapputility = null;
+public Punchline.Tech.Cuppy.Framework.cfcontrolsutils _cfcontrolsutils = null;
+public Punchline.Tech.Cuppy.Framework.cfhtmlutility _cfhtmlutility = null;
 public String  _base_resize(double _width,double _height) throws Exception{
  //BA.debugLineNum = 29;BA.debugLine="Private Sub Base_Resize (Width As Double, Height A";
  //BA.debugLineNum = 31;BA.debugLine="InnerPane.PrefWidth = Width";
@@ -78,10 +78,10 @@ public String  _designercreateview(anywheresoftware.b4j.objects.PaneWrapper.Conc
 _mbase = _base;
  //BA.debugLineNum = 23;BA.debugLine="mBase.LoadLayout(\"ChipsLayout\")";
 _mbase.LoadLayout(ba,"ChipsLayout");
- //BA.debugLineNum = 25;BA.debugLine="SetBg(StyleManager.DefaultTheme.Get(\"accent\"))";
-_setbg(BA.ObjectToString(_stylemanager._defaulttheme.Get((Object)("accent"))));
- //BA.debugLineNum = 26;BA.debugLine="InnerLabel.Font = StyleManager.SelectFont(\"Thin\",";
-_innerlabel.setFont(_stylemanager._selectfont("Thin",12));
+ //BA.debugLineNum = 25;BA.debugLine="SetBg(CFStyleManager.DefaultTheme.Get(\"accent\"))";
+_setbg(BA.ObjectToString(_cfstylemanager._defaulttheme.Get((Object)("accent"))));
+ //BA.debugLineNum = 26;BA.debugLine="InnerLabel.Font = CFStyleManager.SelectFont(\"Thin";
+_innerlabel.setFont(_cfstylemanager._selectfont("Thin",12));
  //BA.debugLineNum = 27;BA.debugLine="End Sub";
 return "";
 }
@@ -104,8 +104,8 @@ return "";
 }
 public String  _removeeffects() throws Exception{
  //BA.debugLineNum = 76;BA.debugLine="Public Sub removeEffects()";
- //BA.debugLineNum = 78;BA.debugLine="ControlsUtils.removePaneEffect(InnerPane)";
-_controlsutils._removepaneeffect(_innerpane);
+ //BA.debugLineNum = 78;BA.debugLine="CFControlsUtils.removePaneEffect(InnerPane)";
+_cfcontrolsutils._removepaneeffect(_innerpane);
  //BA.debugLineNum = 80;BA.debugLine="End Sub";
 return "";
 }
@@ -118,29 +118,29 @@ return "";
 }
 public String  _setborder(String _color,int _width) throws Exception{
  //BA.debugLineNum = 56;BA.debugLine="Public Sub setBorder(color As String , width As In";
- //BA.debugLineNum = 58;BA.debugLine="ControlsUtils.setPaneBorder(InnerPane, color, wid";
-_controlsutils._setpaneborder(_innerpane,_color,_width);
+ //BA.debugLineNum = 58;BA.debugLine="CFControlsUtils.setPaneBorder(InnerPane, color, w";
+_cfcontrolsutils._setpaneborder(_innerpane,_color,_width);
  //BA.debugLineNum = 60;BA.debugLine="End Sub";
 return "";
 }
 public String  _setborderradius(int _radius) throws Exception{
  //BA.debugLineNum = 63;BA.debugLine="Sub setBorderRadius(radius As Int)";
- //BA.debugLineNum = 65;BA.debugLine="ControlsUtils.setPaneBorderRadius(InnerPane, radi";
-_controlsutils._setpaneborderradius(_innerpane,_radius);
+ //BA.debugLineNum = 65;BA.debugLine="CFControlsUtils.setPaneBorderRadius(InnerPane, ra";
+_cfcontrolsutils._setpaneborderradius(_innerpane,_radius);
  //BA.debugLineNum = 67;BA.debugLine="End Sub";
 return "";
 }
 public String  _setpaneeffect(String _effect) throws Exception{
  //BA.debugLineNum = 70;BA.debugLine="Public Sub setPaneEffect(effect As String)";
- //BA.debugLineNum = 72;BA.debugLine="ControlsUtils.setPaneEffect(InnerPane, effect)";
-_controlsutils._setpaneeffect(_innerpane,_effect);
+ //BA.debugLineNum = 72;BA.debugLine="CFControlsUtils.setPaneEffect(InnerPane, effect)";
+_cfcontrolsutils._setpaneeffect(_innerpane,_effect);
  //BA.debugLineNum = 74;BA.debugLine="End Sub";
 return "";
 }
 public String  _setrotationx(float _angle) throws Exception{
  //BA.debugLineNum = 50;BA.debugLine="Public Sub setRotationX(angle As Float)";
- //BA.debugLineNum = 52;BA.debugLine="ControlsUtils.setPaneRotationX(InnerPane, angle)";
-_controlsutils._setpanerotationx(_innerpane,_angle);
+ //BA.debugLineNum = 52;BA.debugLine="CFControlsUtils.setPaneRotationX(InnerPane, angle";
+_cfcontrolsutils._setpanerotationx(_innerpane,_angle);
  //BA.debugLineNum = 54;BA.debugLine="End Sub";
 return "";
 }

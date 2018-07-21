@@ -31,18 +31,18 @@ public anywheresoftware.b4j.objects.PaneWrapper.ConcretePaneWrapper _mbase = nul
 public anywheresoftware.b4j.objects.PaneWrapper.ConcretePaneWrapper _modalpane = null;
 public anywheresoftware.b4j.objects.PaneWrapper.ConcretePaneWrapper _modalbgpane = null;
 public b4j.example.cssutils _cssutils = null;
-public Punchline.Tech.Cuppy.Framework.configs _configs = null;
-public Punchline.Tech.Cuppy.Framework.stringutility _stringutility = null;
-public Punchline.Tech.Cuppy.Framework.mathutility _mathutility = null;
-public Punchline.Tech.Cuppy.Framework.datatypeutility _datatypeutility = null;
-public Punchline.Tech.Cuppy.Framework.fileutility _fileutility = null;
-public Punchline.Tech.Cuppy.Framework.cf_datageneratorutility _cf_datageneratorutility = null;
-public Punchline.Tech.Cuppy.Framework.cf_htmlutility _cf_htmlutility = null;
-public Punchline.Tech.Cuppy.Framework.stylemanager _stylemanager = null;
-public Punchline.Tech.Cuppy.Framework.apputility _apputility = null;
-public Punchline.Tech.Cuppy.Framework.controlsutils _controlsutils = null;
-public Punchline.Tech.Cuppy.Framework.animationmanager _animationmanager = null;
-public Punchline.Tech.Cuppy.Framework.licensemanager _licensemanager = null;
+public Punchline.Tech.Cuppy.Framework.cfconfigs _cfconfigs = null;
+public Punchline.Tech.Cuppy.Framework.cfstringutility _cfstringutility = null;
+public Punchline.Tech.Cuppy.Framework.cfmathutility _cfmathutility = null;
+public Punchline.Tech.Cuppy.Framework.cfdatatypeutility _cfdatatypeutility = null;
+public Punchline.Tech.Cuppy.Framework.cffileutility _cffileutility = null;
+public Punchline.Tech.Cuppy.Framework.cfstylemanager _cfstylemanager = null;
+public Punchline.Tech.Cuppy.Framework.cfanimationmanager _cfanimationmanager = null;
+public Punchline.Tech.Cuppy.Framework.cflicensemanager _cflicensemanager = null;
+public Punchline.Tech.Cuppy.Framework.cfdatageneratorutility _cfdatageneratorutility = null;
+public Punchline.Tech.Cuppy.Framework.cfapputility _cfapputility = null;
+public Punchline.Tech.Cuppy.Framework.cfcontrolsutils _cfcontrolsutils = null;
+public Punchline.Tech.Cuppy.Framework.cfhtmlutility _cfhtmlutility = null;
 public String  _base_resize(double _width,double _height) throws Exception{
  //BA.debugLineNum = 31;BA.debugLine="Private Sub Base_Resize (Width As Double, Height A";
  //BA.debugLineNum = 33;BA.debugLine="ModalBgPane.PrefWidth = Width";
@@ -111,43 +111,43 @@ return "";
 }
 public String  _removeeffects() throws Exception{
  //BA.debugLineNum = 78;BA.debugLine="Public Sub removeEffects()";
- //BA.debugLineNum = 80;BA.debugLine="ControlsUtils.removePaneEffect(ModalPane)";
-_controlsutils._removepaneeffect(_modalpane);
+ //BA.debugLineNum = 80;BA.debugLine="CFControlsUtils.removePaneEffect(ModalPane)";
+_cfcontrolsutils._removepaneeffect(_modalpane);
  //BA.debugLineNum = 82;BA.debugLine="End Sub";
 return "";
 }
 public String  _setbg(String _color) throws Exception{
  //BA.debugLineNum = 46;BA.debugLine="Public Sub SetBg(color As String)";
- //BA.debugLineNum = 48;BA.debugLine="ControlsUtils.setPaneBG( ModalPane, color)";
-_controlsutils._setpanebg(_modalpane,_color);
+ //BA.debugLineNum = 48;BA.debugLine="CFControlsUtils.setPaneBG( ModalPane, color)";
+_cfcontrolsutils._setpanebg(_modalpane,_color);
  //BA.debugLineNum = 50;BA.debugLine="End Sub";
 return "";
 }
 public String  _setborder(String _color,int _width) throws Exception{
  //BA.debugLineNum = 58;BA.debugLine="Public Sub setBorder(color As String , width As In";
- //BA.debugLineNum = 60;BA.debugLine="ControlsUtils.setPaneBorder(ModalPane, color, wid";
-_controlsutils._setpaneborder(_modalpane,_color,_width);
+ //BA.debugLineNum = 60;BA.debugLine="CFControlsUtils.setPaneBorder(ModalPane, color, w";
+_cfcontrolsutils._setpaneborder(_modalpane,_color,_width);
  //BA.debugLineNum = 62;BA.debugLine="End Sub";
 return "";
 }
 public String  _setborderradius(int _radius) throws Exception{
  //BA.debugLineNum = 65;BA.debugLine="Public Sub setBorderRadius(radius As Int)";
- //BA.debugLineNum = 67;BA.debugLine="ControlsUtils.setPaneBorderRadius(ModalPane, radi";
-_controlsutils._setpaneborderradius(_modalpane,_radius);
+ //BA.debugLineNum = 67;BA.debugLine="CFControlsUtils.setPaneBorderRadius(ModalPane, ra";
+_cfcontrolsutils._setpaneborderradius(_modalpane,_radius);
  //BA.debugLineNum = 69;BA.debugLine="End Sub";
 return "";
 }
 public String  _seteffect(String _effect) throws Exception{
  //BA.debugLineNum = 72;BA.debugLine="Public Sub setEffect(effect As String)";
- //BA.debugLineNum = 74;BA.debugLine="ControlsUtils.setPaneEffect(ModalPane, effect)";
-_controlsutils._setpaneeffect(_modalpane,_effect);
+ //BA.debugLineNum = 74;BA.debugLine="CFControlsUtils.setPaneEffect(ModalPane, effect)";
+_cfcontrolsutils._setpaneeffect(_modalpane,_effect);
  //BA.debugLineNum = 76;BA.debugLine="End Sub";
 return "";
 }
 public String  _setrotationx(float _angle) throws Exception{
  //BA.debugLineNum = 52;BA.debugLine="Public Sub setRotationX(angle As Float)";
- //BA.debugLineNum = 54;BA.debugLine="ControlsUtils.setPaneRotationX(ModalPane, angle)";
-_controlsutils._setpanerotationx(_modalpane,_angle);
+ //BA.debugLineNum = 54;BA.debugLine="CFControlsUtils.setPaneRotationX(ModalPane, angle";
+_cfcontrolsutils._setpanerotationx(_modalpane,_angle);
  //BA.debugLineNum = 56;BA.debugLine="End Sub";
 return "";
 }

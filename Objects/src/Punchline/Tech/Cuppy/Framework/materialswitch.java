@@ -34,18 +34,18 @@ public int _checked_state = 0;
 public int _unchecked_state = 0;
 public int _indeterminate_state = 0;
 public b4j.example.cssutils _cssutils = null;
-public Punchline.Tech.Cuppy.Framework.configs _configs = null;
-public Punchline.Tech.Cuppy.Framework.stringutility _stringutility = null;
-public Punchline.Tech.Cuppy.Framework.mathutility _mathutility = null;
-public Punchline.Tech.Cuppy.Framework.datatypeutility _datatypeutility = null;
-public Punchline.Tech.Cuppy.Framework.fileutility _fileutility = null;
-public Punchline.Tech.Cuppy.Framework.cf_datageneratorutility _cf_datageneratorutility = null;
-public Punchline.Tech.Cuppy.Framework.cf_htmlutility _cf_htmlutility = null;
-public Punchline.Tech.Cuppy.Framework.stylemanager _stylemanager = null;
-public Punchline.Tech.Cuppy.Framework.apputility _apputility = null;
-public Punchline.Tech.Cuppy.Framework.controlsutils _controlsutils = null;
-public Punchline.Tech.Cuppy.Framework.animationmanager _animationmanager = null;
-public Punchline.Tech.Cuppy.Framework.licensemanager _licensemanager = null;
+public Punchline.Tech.Cuppy.Framework.cfconfigs _cfconfigs = null;
+public Punchline.Tech.Cuppy.Framework.cfstringutility _cfstringutility = null;
+public Punchline.Tech.Cuppy.Framework.cfmathutility _cfmathutility = null;
+public Punchline.Tech.Cuppy.Framework.cfdatatypeutility _cfdatatypeutility = null;
+public Punchline.Tech.Cuppy.Framework.cffileutility _cffileutility = null;
+public Punchline.Tech.Cuppy.Framework.cfstylemanager _cfstylemanager = null;
+public Punchline.Tech.Cuppy.Framework.cfanimationmanager _cfanimationmanager = null;
+public Punchline.Tech.Cuppy.Framework.cflicensemanager _cflicensemanager = null;
+public Punchline.Tech.Cuppy.Framework.cfdatageneratorutility _cfdatageneratorutility = null;
+public Punchline.Tech.Cuppy.Framework.cfapputility _cfapputility = null;
+public Punchline.Tech.Cuppy.Framework.cfcontrolsutils _cfcontrolsutils = null;
+public Punchline.Tech.Cuppy.Framework.cfhtmlutility _cfhtmlutility = null;
 public String  _base_resize(double _width,double _height) throws Exception{
  //BA.debugLineNum = 46;BA.debugLine="Private Sub Base_Resize (Width As Double, Height A";
  //BA.debugLineNum = 50;BA.debugLine="End Sub";
@@ -87,8 +87,8 @@ public String  _designercreateview(anywheresoftware.b4j.objects.PaneWrapper.Conc
 _mbase = _base;
  //BA.debugLineNum = 31;BA.debugLine="mBase.LoadLayout(\"MaterialSwitchesLayout\")";
 _mbase.LoadLayout(ba,"MaterialSwitchesLayout");
- //BA.debugLineNum = 33;BA.debugLine="setCheckedColor(StyleManager.DefaultTheme.Get(\"pr";
-_setcheckedcolor(BA.ObjectToString(_stylemanager._defaulttheme.Get((Object)("primary"))));
+ //BA.debugLineNum = 33;BA.debugLine="setCheckedColor(CFStyleManager.DefaultTheme.Get(\"";
+_setcheckedcolor(BA.ObjectToString(_cfstylemanager._defaulttheme.Get((Object)("primary"))));
  //BA.debugLineNum = 36;BA.debugLine="setCheckState(UNCHECKED_STATE) 'set initial value";
 _setcheckstate(_unchecked_state);
  //BA.debugLineNum = 44;BA.debugLine="End Sub";
@@ -120,8 +120,8 @@ return false;
 }
 public String  _removeeffects() throws Exception{
  //BA.debugLineNum = 90;BA.debugLine="Public Sub removeEffects()";
- //BA.debugLineNum = 92;BA.debugLine="ControlsUtils.removePaneEffect(SwitchPane)";
-_controlsutils._removepaneeffect(_switchpane);
+ //BA.debugLineNum = 92;BA.debugLine="CFControlsUtils.removePaneEffect(SwitchPane)";
+_cfcontrolsutils._removepaneeffect(_switchpane);
  //BA.debugLineNum = 94;BA.debugLine="End Sub";
 return "";
 }
@@ -134,15 +134,15 @@ return "";
 }
 public String  _setborder(String _color,int _width) throws Exception{
  //BA.debugLineNum = 72;BA.debugLine="Public Sub setBorder(color As String , width As In";
- //BA.debugLineNum = 74;BA.debugLine="ControlsUtils.setPaneBorder(SwitchPane, color, wi";
-_controlsutils._setpaneborder(_switchpane,_color,_width);
+ //BA.debugLineNum = 74;BA.debugLine="CFControlsUtils.setPaneBorder(SwitchPane, color,";
+_cfcontrolsutils._setpaneborder(_switchpane,_color,_width);
  //BA.debugLineNum = 76;BA.debugLine="End Sub";
 return "";
 }
 public String  _setborderradius(int _radius) throws Exception{
  //BA.debugLineNum = 78;BA.debugLine="Public Sub setBorderRadius(radius As Int)";
- //BA.debugLineNum = 80;BA.debugLine="ControlsUtils.setPaneBorderRadius(SwitchPane, rad";
-_controlsutils._setpaneborderradius(_switchpane,_radius);
+ //BA.debugLineNum = 80;BA.debugLine="CFControlsUtils.setPaneBorderRadius(SwitchPane, r";
+_cfcontrolsutils._setpaneborderradius(_switchpane,_radius);
  //BA.debugLineNum = 82;BA.debugLine="End Sub";
 return "";
 }
@@ -161,13 +161,13 @@ if (_value==_unchecked_state) {
 _switchbtn.SetLayoutAnimated((int) (200),10,_switchbtn.getTop(),_switchbtn.getPrefWidth(),_switchbtn.getPrefHeight());
  //BA.debugLineNum = 109;BA.debugLine="SwitchPane.SetAlphaAnimated(200, 1 )";
 _switchpane.SetAlphaAnimated((int) (200),1);
- //BA.debugLineNum = 110;BA.debugLine="SetBg(StyleManager.DefaultTheme.Get(\"divider\"))";
-_setbg(BA.ObjectToString(_stylemanager._defaulttheme.Get((Object)("divider"))));
+ //BA.debugLineNum = 110;BA.debugLine="SetBg(CFStyleManager.DefaultTheme.Get(\"divider\")";
+_setbg(BA.ObjectToString(_cfstylemanager._defaulttheme.Get((Object)("divider"))));
  }else if(_value==_checked_state) { 
  //BA.debugLineNum = 115;BA.debugLine="SwitchPane.SetAlphaAnimated(200, 0.6 )";
 _switchpane.SetAlphaAnimated((int) (200),0.6);
- //BA.debugLineNum = 116;BA.debugLine="SetBg(ControlsUtils.getPaneBG(SwitchBtn))";
-_setbg(_controlsutils._getpanebg(_switchbtn));
+ //BA.debugLineNum = 116;BA.debugLine="SetBg(CFControlsUtils.getPaneBG(SwitchBtn))";
+_setbg(_cfcontrolsutils._getpanebg(_switchbtn));
  //BA.debugLineNum = 118;BA.debugLine="SwitchBtn.SetLayoutAnimated(200 , 23 , SwitchBtn";
 _switchbtn.SetLayoutAnimated((int) (200),23,_switchbtn.getTop(),_switchbtn.getPrefWidth(),_switchbtn.getPrefWidth());
  }else {
@@ -175,8 +175,8 @@ _switchbtn.SetLayoutAnimated((int) (200),23,_switchbtn.getTop(),_switchbtn.getPr
 _switchbtn.SetLayoutAnimated((int) (200),23,_switchbtn.getTop(),_switchbtn.getPrefWidth(),_switchbtn.getPrefWidth());
  //BA.debugLineNum = 124;BA.debugLine="SwitchPane.SetAlphaAnimated(200, 1 )";
 _switchpane.SetAlphaAnimated((int) (200),1);
- //BA.debugLineNum = 125;BA.debugLine="SetBg(StyleManager.DefaultTheme.Get(\"divider\"))";
-_setbg(BA.ObjectToString(_stylemanager._defaulttheme.Get((Object)("divider"))));
+ //BA.debugLineNum = 125;BA.debugLine="SetBg(CFStyleManager.DefaultTheme.Get(\"divider\")";
+_setbg(BA.ObjectToString(_cfstylemanager._defaulttheme.Get((Object)("divider"))));
  };
  //BA.debugLineNum = 130;BA.debugLine="CallSubDelayed2(mCallBack, mEventName & \"_Checked";
 __c.CallSubDelayed2(ba,_mcallback,_meventname+"_CheckedChanged",(Object)(_value));
@@ -185,15 +185,15 @@ return "";
 }
 public String  _setpaneeffect(String _effect) throws Exception{
  //BA.debugLineNum = 84;BA.debugLine="Public Sub setPaneEffect(effect As String)";
- //BA.debugLineNum = 86;BA.debugLine="ControlsUtils.setPaneEffect(SwitchPane, effect)";
-_controlsutils._setpaneeffect(_switchpane,_effect);
+ //BA.debugLineNum = 86;BA.debugLine="CFControlsUtils.setPaneEffect(SwitchPane, effect)";
+_cfcontrolsutils._setpaneeffect(_switchpane,_effect);
  //BA.debugLineNum = 88;BA.debugLine="End Sub";
 return "";
 }
 public String  _setrotationx(float _angle) throws Exception{
  //BA.debugLineNum = 66;BA.debugLine="Public Sub setRotationX(angle As Float)";
- //BA.debugLineNum = 68;BA.debugLine="ControlsUtils.setPaneRotationX(SwitchPane, angle)";
-_controlsutils._setpanerotationx(_switchpane,_angle);
+ //BA.debugLineNum = 68;BA.debugLine="CFControlsUtils.setPaneRotationX(SwitchPane, angl";
+_cfcontrolsutils._setpanerotationx(_switchpane,_angle);
  //BA.debugLineNum = 70;BA.debugLine="End Sub";
 return "";
 }
