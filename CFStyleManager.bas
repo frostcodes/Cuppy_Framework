@@ -12,7 +12,6 @@ Private Sub Process_Globals
 	Public DefaultFont As Font = SelectFont("Regular" , 12)
 	Public AvailableThemes As CFThemes 
  	Public DefaultTheme As Map = AvailableThemes.ThemesList.Get("Blue") 'ignore
-	'Public DefaultTheme As Map = AvailableThemes.ThemesList.Get("Teal") 'ignore
 	 
 End Sub
 
@@ -70,5 +69,58 @@ Public Sub SelectTheme(theme As String)
 		ExitApplication
 		
 	End If
+	 
+End Sub
+
+'Allows you to load your Theme from a file 
+'This Returns a map of your theme
+'which you can reuse to set theme in your program
+'
+'NOTE: themes file are checked to validate that
+' required key values are present
+Public Sub LoadThemeFile(Dir As String, FileName As String) As Map
+	
+	'TODO: dynamic caching of themes and fonts when loaded
+	'such that they would be in memomery and returned when dev
+	'tries to reload this way, memory is safed
+	 
+	Dim mapx As Map = File.ReadMap(Dir ,FileName)
+	
+	Dim checklist As List
+	checklist.Initialize
+	 
+	checklist.Add("primary")
+	checklist.Add("primary_dark")
+	
+	checklist.Add("primary_light")
+	checklist.Add("accent")
+	
+	checklist.Add("primary_text")
+	checklist.Add("secondary_text")
+	
+	checklist.Add("icons")
+	checklist.Add("divider")
+	 
+	For Each KeyX As String In checklist
+		
+		'If one key is missing, stop loading of theme...
+		If Not(mapx.ContainsKey(KeyX)) Or CFStringUtility.isEmpty(mapx.Get(KeyX)) Then
+			
+			Dim ErrorStr As StringBuilder
+			ErrorStr.Initialize
+			
+			ErrorStr.Append("Could not load theme file (" & FileName & ") ")
+			ErrorStr.Append("because the theme key (" & KeyX & ") is missing ")
+			ErrorStr.Append("or its value is empty!")
+			 
+			LogError(ErrorStr.ToString)
+			 
+			ExitApplication
+			
+		End If
+		
+	Next
+	
+	Return mapx
 	 
 End Sub

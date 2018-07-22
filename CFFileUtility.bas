@@ -134,10 +134,3 @@ End Sub
         Return path.Replace("//", "/")
 
 End Sub
-
-
-
-
-
-
-

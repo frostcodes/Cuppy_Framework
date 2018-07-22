@@ -11,7 +11,7 @@ End Sub
 'Initializes the object. You can add parameters to this method if needed.
  
  
- ' **  Theming support
+ 
   ' ** Custom Theme support 
    ' **  allow importing of theme from xml file and exporting to xml file 
     ' **  Later allow events for controls

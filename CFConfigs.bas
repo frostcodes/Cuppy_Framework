@@ -11,20 +11,14 @@ Private Sub Process_Globals
 	Public LibraryAuthor As String = "Punchline Technologies"
 	Public LibraryName As String =  "Cuppy Framework"
 	Public LibraryVersion As Double =  1.0
+	Public LibraryCopyright As String =  "Copyright to Oluwaseyi Aderinkomi < Frost Codes >"
+	
 	Public DebugMode As Boolean = True  'are we debugging ... or in release mode
 	
 	'Paths
-	 
 	Public AppDir As String = File.DirApp
 	 
 	'License Verification....
-	
-	
 	Private LicenseServer As String ="" 'ignore
-	
-	
-	
-	
-End Sub
-
- 
+	 
+End Sub 
