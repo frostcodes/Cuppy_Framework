@@ -1,5 +1,5 @@
 ﻿B4J=true
-Group=Cuppy\Utilities
+Group=Cuppy Framework\Cuppy
 ModulesStructureVersion=1
 Type=StaticCode
 Version=5.51
@@ -134,10 +134,3 @@ End Sub
         Return path.Replace("//", "/")
 
 End Sub
-
-
-
-
-
-
-

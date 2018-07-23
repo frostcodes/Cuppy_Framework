@@ -1,5 +1,5 @@
 ﻿B4J=true
-Group=Cuppy\Controls\Cuppy Controls
+Group=Cuppy Framework\Cuppy\Controls
 ModulesStructureVersion=1
 Type=Class
 Version=5.51
@@ -38,7 +38,7 @@ End Sub
 
 Public Sub DesignerCreateView (Base As Pane, Lbl As Label, Props As Map)
 	mBase = Base
-	mBase.LoadLayout("BarPreLoaderUI")
+	mBase.LoadLayout("CFBarPreLoaderUI")
 	'set using theme...
  
 	'setTextColor(StyleManager.DefaultTheme.Get("primary_text"))

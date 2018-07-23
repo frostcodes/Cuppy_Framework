@@ -1,5 +1,5 @@
 ﻿B4J=true
-Group=Cuppy
+Group=Cuppy Framework
 ModulesStructureVersion=1
 Type=Class
 Version=5.51
@@ -11,7 +11,7 @@ End Sub
 'Initializes the object. You can add parameters to this method if needed.
  
  
- ' **  Theming support
+ 
   ' ** Custom Theme support 
    ' **  allow importing of theme from xml file and exporting to xml file 
     ' **  Later allow events for controls
@@ -19,7 +19,7 @@ End Sub
 	  ' **  create abb bar with menu btn...
 	   ' **   Implement font libary to all  components
 	   ' **   Change to using setBG to change background in controls
-	
+	'** set focus to control on click...
 '   instaed of something like  CSSUtils.SetStyleProperty SwitchBtn, "-fx-background-color", color)
 	   ' **   add mime types as a cuppy plugin...
 	  
