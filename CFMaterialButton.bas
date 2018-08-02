@@ -21,6 +21,7 @@ End Sub
 Public Sub Initialize (Callback As Object, EventName As String)
 	mEventName = EventName
 	mCallBack = Callback
+CFStyleManager.ActiveControls.add(EventName)
 End Sub
 
 Public Sub DesignerCreateView (Base As Pane, Lbl As Label, Props As Map)

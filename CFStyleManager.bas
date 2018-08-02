@@ -12,7 +12,12 @@ Private Sub Process_Globals
 	Public DefaultFont As Font = SelectFont("Regular" , 12)
 	Public AvailableThemes As CFThemes 
  	Public DefaultTheme As Map = AvailableThemes.ThemesList.Get("Blue") 'ignore
+	Public ActiveControls As List
+	ActiveControls.Initialize 'ignore : need this , bad pratice maybe so would find a fix later
 	 
+	 'TODO: autoloading fonts,
+	 'Reference cuppy controls so it can be updated all when the style changes 
+	 'allow setting of animation time... 
 End Sub
 
  'Return a list of available fonts for use
@@ -123,4 +128,27 @@ Public Sub LoadThemeFile(Dir As String, FileName As String) As Map
 	
 	Return mapx
 	 
+End Sub
+
+Public Sub ExportTheme(theme As String , Dir As String, FileName As String)
+	 
+	theme = CFStringUtility.ucfirst(theme)
+	 
+	If AvailableThemes.ThemesList.ContainsKey(theme) Then
+		
+		 File.WriteMap(Dir, FileName, AvailableThemes.ThemesList.Get(theme))
+	
+	Else
+		
+		LogError("Could not export theme(" & theme & "). Please check the Theme name")
+		ExitApplication
+		
+	End If
+	
+End Sub
+
+Public Sub ExportCurrentTheme(Dir As String, FileName As String)
+	
+	File.WriteMap(Dir, FileName, DefaultTheme)
+	
 End Sub
