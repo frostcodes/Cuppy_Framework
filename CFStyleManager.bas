@@ -130,6 +130,7 @@ Public Sub LoadThemeFile(Dir As String, FileName As String) As Map
 	 
 End Sub
 
+'Export a theme to a file
 Public Sub ExportTheme(theme As String , Dir As String, FileName As String)
 	 
 	theme = CFStringUtility.ucfirst(theme)
@@ -147,6 +148,7 @@ Public Sub ExportTheme(theme As String , Dir As String, FileName As String)
 	
 End Sub
 
+'Export current theme to a file
 Public Sub ExportCurrentTheme(Dir As String, FileName As String)
 	
 	File.WriteMap(Dir, FileName, DefaultTheme)
