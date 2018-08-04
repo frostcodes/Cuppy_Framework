@@ -23,8 +23,8 @@ Sub Class_Globals
 	Public CheckboxPane As Pane
 	
 	'Checkbox states
-	Public CHECKED_STATE As Int = 0 
-	Public UNCHECKED_STATE As Int = 1
+	Public UNCHECKED_STATE As Int = 0
+	Public CHECKED_STATE As Int = 1 
 	Public INDETERMINATE_STATE As Int = 2
 	 
 End Sub

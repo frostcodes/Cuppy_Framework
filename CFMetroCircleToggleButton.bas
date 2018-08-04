@@ -18,8 +18,8 @@ Sub Class_Globals
 	Private mBase As Pane
   
 	'Checkbox states
-	Public CHECKED_STATE As Int = 0
-	Public UNCHECKED_STATE As Int = 1
+	Public CHECKED_STATE As Int = 1
+	Public UNCHECKED_STATE As Int = 0
 	 
 	Private CheckedStatus As Boolean = False
 	Public ToggleButton As Label

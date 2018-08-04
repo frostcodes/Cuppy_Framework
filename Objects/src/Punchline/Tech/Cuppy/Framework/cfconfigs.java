@@ -47,8 +47,8 @@ public static String  _process_globals() throws Exception{
 _libraryauthor = "Punchline Technologies";
  //BA.debugLineNum = 6;BA.debugLine="Public LibraryName As String =  \"Cuppy Framework\"";
 _libraryname = "Cuppy Framework";
- //BA.debugLineNum = 7;BA.debugLine="Public LibraryVersion As Double =  1.0";
-_libraryversion = 1.0;
+ //BA.debugLineNum = 7;BA.debugLine="Public LibraryVersion As Double =  1.02";
+_libraryversion = 1.02;
  //BA.debugLineNum = 8;BA.debugLine="Public LibraryCopyright As String =  \"Copyright t";
 _librarycopyright = "Copyright to Oluwaseyi Aderinkomi < Frost Codes >";
  //BA.debugLineNum = 10;BA.debugLine="Public DebugMode As Boolean = True  'are we debug";

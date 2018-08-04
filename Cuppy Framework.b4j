@@ -108,11 +108,12 @@ Version=6.3
 'Meta datas ... also defined in Configs for app usage.
 #LcdFontSmoothing: True
 'Copyright to Oluwaseyi Aderinkomi < Frost Codes >  - seyiaderinkomi@gmail.com
+
 'Contributors:
 'Mash Mbanga < Mashy >  - Lead Contributor - anele@mbangas.com
 #LibraryAuthor: Punchline Technologies
 #LibraryName: Cuppy Framework
-#LibraryVersion: 1.0
+#LibraryVersion: 1.02
 #AdditionalJar: FontAwesome
 #AdditionalJar: MaterialIcons
 #AdditionalJar: CFResources.jar
