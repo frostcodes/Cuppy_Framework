@@ -5,6 +5,8 @@ Type=Class
 Version=5.51
 @EndOfDesignText@
 'Custom View class
+ #If trial
+ 
  
 #Event: MousePressed (EventData As MouseEvent)
 
@@ -20,7 +22,7 @@ Sub Class_Globals
 	Private timer2 As Timer
 	Private timer3 As Timer
 	
-	
+	 
 	Private Pane1 As Pane
 	Private Pane2 As Pane
 	Private Pane3 As Pane
@@ -70,7 +72,7 @@ End Sub
 
 
 
-Sub Timer1_Tick
+Private Sub Timer1_Tick
 	'Handle tick events
 	
 	Dim height As Int = ( Rnd(30, 100) / 100 ) *  mBase.PrefHeight
@@ -79,7 +81,7 @@ Sub Timer1_Tick
 	
 End Sub
  
-Sub Timer2_Tick
+Private Sub Timer2_Tick
 	 
 	Dim height As Int = ( Rnd(30, 100) / 100  ) *  mBase.PrefHeight
 	
@@ -89,7 +91,7 @@ Sub Timer2_Tick
 	 
 End Sub
  
-Sub Timer3_Tick
+Private Sub Timer3_Tick
 	 
 	Dim height As Int =(  Rnd(30, 100) /100 ) *  mBase.PrefHeight
 	
@@ -151,4 +153,15 @@ End Sub
 '	CallSubDelayed2(mCallBack, mEventName & "_MousePressed", EventData) 'ignore
 '	 
 'End Sub
+
+
+#Else
+
+#ExcludeFromLibrary: True
+Sub Class_Globals
+
+ End Sub
+
+
+ #End If
 
