@@ -6,6 +6,9 @@ Version=5.51
 @EndOfDesignText@
 'Custom View class
 
+#Event: MousePressed (EventData As MouseEvent)
+#Event: PaneMousePressed (EventData As MouseEvent)
+ 
 #Region Internal Segment
 
 Sub Class_Globals
@@ -85,3 +88,22 @@ Public Sub removeEffects()
 End Sub
 
 #End Region
+
+
+Public Sub Icon(IconText As String)
+	
+	Label1.Text = IconText
+	 
+End Sub
+
+Sub InnerButton_MousePressed (EventData As MouseEvent)
+	
+	CallSubDelayed2(mCallBack, mEventName & "_MousePressed", EventData) 'ignore
+	
+End Sub
+ 
+Sub InnerPane_MousePressed (EventData As MouseEvent)
+	 
+	CallSubDelayed2(mCallBack, mEventName & "_PaneMousePressed", EventData) 'ignore
+	 
+End Sub

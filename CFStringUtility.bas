@@ -353,11 +353,19 @@ Public Sub increment_string(str As String, separator As String , first As Int  )
 	End If
 	  
 End Sub
+
+'Escapes a string by adding
+'a black slash(\) before the value
+Public Sub EscapeString(value As String) As String
+ 
+	Return "\"& value
+ 
+End Sub
  
 'Allow spliting a string by a common delimiter such as , or :
 Sub Split(str As String, delimiter As String) As List
 	Dim t As List
-	t = Regex.Split(delimiter, str)
+	t = Regex.Split(EscapeString(delimiter), str)
 	Return t
 End Sub
 

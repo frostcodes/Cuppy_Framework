@@ -7,6 +7,8 @@ Version=5.51
 'Custom View class
  
 #Event: CheckedChanged(value as int)
+#Event: MouseEntered(EventData As MouseEvent)
+#Event: MouseExited(EventData As MouseEvent)
  
  'TODO: make font adjust when resized
 #Region Internal Segment
@@ -102,7 +104,8 @@ End Sub
   
 Public Sub setCheckedColor(color As String)
   	
-	CSSUtils.SetStyleProperty( CheckedLabel, "-fx-background-color", color)
+	'CSSUtils.SetStyleProperty( CheckedLabel, "-fx-background-color", color)
+	CFControlsUtils.setBG(CheckedLabel, color)
 	
 End Sub
  
@@ -161,5 +164,17 @@ Private Sub CheckboxPane_MousePressed (EventData As MouseEvent)
 		   
 	End If
 	
+	
+End Sub
+
+Sub CheckboxPane_MouseEntered (EventData As MouseEvent)
+	
+	CallSubDelayed2(mCallBack, mEventName & "_MouseEntered" , EventData)
+	
+End Sub
+
+Sub CheckboxPane_MouseExited (EventData As MouseEvent)
+	
+	CallSubDelayed2(mCallBack, mEventName & "_MouseExited" , EventData)
 	
 End Sub

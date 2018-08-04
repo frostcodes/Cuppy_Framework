@@ -5,7 +5,12 @@ Type=Class
 Version=5.51
 @EndOfDesignText@
 'Custom View class
-
+ 
+#Event: Touch (Action As Int, Points as Map)
+#Event: MouseClicked (EventData As MouseEvent)
+#Event: MouseEntered (EventData As MouseEvent)
+#Event: MouseExited (EventData As MouseEvent)
+ 
 #Region Internal Segment
 
 Sub Class_Globals
@@ -62,14 +67,11 @@ Public Sub setBorder(color As String , width As Int)
 
 End Sub
   
-  
-  
 Public Sub setBorderRadius(radius As Int)
 	
 	CFControlsUtils.setPaneBorderRadius(InnerCard, radius)
 	
 End Sub
-
 
 Public Sub setPaneEffect(effect As String)
 	
@@ -84,3 +86,32 @@ Public Sub removeEffects()
 End Sub
 
 #End Region
+ 
+Sub InnerCard_Touch (Action As Int, X As Float, Y As Float)
+	
+	Dim Points As Map
+	Points.Initialize
+	Points.Put("X", X )
+	Points.Put("Y", Y )
+	 
+	CallSubDelayed3( mCallBack, mEventName & "_Touch",  Action, Points) 'ignore
+	
+End Sub
+ 
+Sub InnerCard_MouseEntered (EventData As MouseEvent)
+	
+	CallSubDelayed2(mCallBack, mEventName & "_MouseEntered", EventData) 'ignore
+	
+End Sub
+
+Sub InnerCard_MouseExited (EventData As MouseEvent)
+	
+	CallSubDelayed2(mCallBack, mEventName & "_MouseExited", EventData) 'ignore
+	
+End Sub
+ 
+Sub InnerCard_MouseClicked (EventData As MouseEvent)
+	
+	CallSubDelayed2(mCallBack, mEventName & "_MouseClicked", EventData) 'ignore
+	
+End Sub

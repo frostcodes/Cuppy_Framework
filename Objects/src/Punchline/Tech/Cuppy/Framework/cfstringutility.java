@@ -37,37 +37,37 @@ public static Punchline.Tech.Cuppy.Framework.cfcontrolsutils _cfcontrolsutils = 
 public static Punchline.Tech.Cuppy.Framework.cfhtmlutility _cfhtmlutility = null;
 public static Object  _breakstrat(String _haystack,String _after) throws Exception{
 String _found = "";
- //BA.debugLineNum = 692;BA.debugLine="Public Sub breakStrAt(haystack As String, after As";
- //BA.debugLineNum = 694;BA.debugLine="Dim found As String = \"\"";
+ //BA.debugLineNum = 700;BA.debugLine="Public Sub breakStrAt(haystack As String, after As";
+ //BA.debugLineNum = 702;BA.debugLine="Dim found As String = \"\"";
 _found = "";
- //BA.debugLineNum = 696;BA.debugLine="found= haystack.IndexOf(after)";
+ //BA.debugLineNum = 704;BA.debugLine="found= haystack.IndexOf(after)";
 _found = BA.NumberToString(_haystack.indexOf(_after));
- //BA.debugLineNum = 698;BA.debugLine="If found = -1 Then";
+ //BA.debugLineNum = 706;BA.debugLine="If found = -1 Then";
 if ((_found).equals(BA.NumberToString(-1))) { 
- //BA.debugLineNum = 700;BA.debugLine="Return False";
+ //BA.debugLineNum = 708;BA.debugLine="Return False";
 if (true) return (Object)(anywheresoftware.b4a.keywords.Common.False);
  }else {
- //BA.debugLineNum = 704;BA.debugLine="Return haystack.SubString(found)";
+ //BA.debugLineNum = 712;BA.debugLine="Return haystack.SubString(found)";
 if (true) return (Object)(_haystack.substring((int)(Double.parseDouble(_found))));
  };
- //BA.debugLineNum = 708;BA.debugLine="End Sub";
+ //BA.debugLineNum = 716;BA.debugLine="End Sub";
 return null;
 }
 public static String  _camelize(String _str) throws Exception{
 String _firstchar = "";
 String _result = "";
 String _txt = "";
- //BA.debugLineNum = 431;BA.debugLine="Public Sub camelize(str As String)  As String";
- //BA.debugLineNum = 432;BA.debugLine="Dim firstChar, result As String =\"\"";
+ //BA.debugLineNum = 439;BA.debugLine="Public Sub camelize(str As String)  As String";
+ //BA.debugLineNum = 440;BA.debugLine="Dim firstChar, result As String =\"\"";
 _firstchar = "";
 _result = "";
- //BA.debugLineNum = 434;BA.debugLine="str= str.Replace(\" \", \"_\") 'make all spaces _";
+ //BA.debugLineNum = 442;BA.debugLine="str= str.Replace(\" \", \"_\") 'make all spaces _";
 _str = _str.replace(" ","_");
- //BA.debugLineNum = 436;BA.debugLine="firstChar = str.CharAt(0)";
+ //BA.debugLineNum = 444;BA.debugLine="firstChar = str.CharAt(0)";
 _firstchar = BA.ObjectToString(_str.charAt((int) (0)));
- //BA.debugLineNum = 437;BA.debugLine="firstChar = firstChar.ToLowerCase";
+ //BA.debugLineNum = 445;BA.debugLine="firstChar = firstChar.ToLowerCase";
 _firstchar = _firstchar.toLowerCase();
- //BA.debugLineNum = 439;BA.debugLine="For Each txt As String In explode(\"_\", str)";
+ //BA.debugLineNum = 447;BA.debugLine="For Each txt As String In explode(\"_\", str)";
 {
 final anywheresoftware.b4a.BA.IterableList group5 = _explode("_",_str);
 final int groupLen5 = group5.getSize()
@@ -75,13 +75,13 @@ final int groupLen5 = group5.getSize()
 ;
 for (; index5 < groupLen5;index5++){
 _txt = BA.ObjectToString(group5.Get(index5));
- //BA.debugLineNum = 440;BA.debugLine="result = result & ucfirst(txt)";
+ //BA.debugLineNum = 448;BA.debugLine="result = result & ucfirst(txt)";
 _result = _result+_ucfirst(_txt);
  }
 };
- //BA.debugLineNum = 443;BA.debugLine="Return firstChar & result.SubString(1)";
+ //BA.debugLineNum = 451;BA.debugLine="Return firstChar & result.SubString(1)";
 if (true) return _firstchar+_result.substring((int) (1));
- //BA.debugLineNum = 445;BA.debugLine="End Sub";
+ //BA.debugLineNum = 453;BA.debugLine="End Sub";
 return "";
 }
 public static boolean  _containurl(String _text) throws Exception{
@@ -93,11 +93,18 @@ if (true) return _text.contains("http://") || _text.contains("https://");
  //BA.debugLineNum = 93;BA.debugLine="End Sub";
 return false;
 }
+public static String  _escapestring(String _value) throws Exception{
+ //BA.debugLineNum = 353;BA.debugLine="Public Sub EscapeString(value As String) As String";
+ //BA.debugLineNum = 355;BA.debugLine="Return \"\\\"& value";
+if (true) return "\\"+_value;
+ //BA.debugLineNum = 357;BA.debugLine="End Sub";
+return "";
+}
 public static anywheresoftware.b4a.objects.collections.List  _explode(String _delimiter,String _str) throws Exception{
- //BA.debugLineNum = 360;BA.debugLine="Public Sub explode(delimiter As String ,  str As S";
- //BA.debugLineNum = 362;BA.debugLine="Return Split(str, delimiter)";
+ //BA.debugLineNum = 368;BA.debugLine="Public Sub explode(delimiter As String ,  str As S";
+ //BA.debugLineNum = 370;BA.debugLine="Return Split(str, delimiter)";
 if (true) return _split(_str,_delimiter);
- //BA.debugLineNum = 364;BA.debugLine="End Sub";
+ //BA.debugLineNum = 372;BA.debugLine="End Sub";
 return null;
 }
 public static int  _generatepincode(int _pinlength) throws Exception{
@@ -170,21 +177,21 @@ if (true) return _result.substring((int) (_result.length()-_strlength),_result.l
 return "";
 }
 public static String  _humanize(String _str,String _separator) throws Exception{
- //BA.debugLineNum = 457;BA.debugLine="Public Sub humanize(str As String, separator As St";
- //BA.debugLineNum = 459;BA.debugLine="str= str.ToLowerCase";
+ //BA.debugLineNum = 465;BA.debugLine="Public Sub humanize(str As String, separator As St";
+ //BA.debugLineNum = 467;BA.debugLine="str= str.ToLowerCase";
 _str = _str.toLowerCase();
- //BA.debugLineNum = 460;BA.debugLine="Return ucwords(str.Replace(separator, \" \"))";
+ //BA.debugLineNum = 468;BA.debugLine="Return ucwords(str.Replace(separator, \" \"))";
 if (true) return _ucwords(_str.replace(_separator," "));
- //BA.debugLineNum = 462;BA.debugLine="End Sub";
+ //BA.debugLineNum = 470;BA.debugLine="End Sub";
 return "";
 }
 public static String  _implode(String _separator,anywheresoftware.b4a.objects.collections.List _strlist) throws Exception{
 String _result = "";
 String _str = "";
- //BA.debugLineNum = 367;BA.debugLine="Public Sub implode(separator As String, StrList As";
- //BA.debugLineNum = 368;BA.debugLine="Dim result As String =\"\"";
+ //BA.debugLineNum = 375;BA.debugLine="Public Sub implode(separator As String, StrList As";
+ //BA.debugLineNum = 376;BA.debugLine="Dim result As String =\"\"";
 _result = "";
- //BA.debugLineNum = 370;BA.debugLine="For Each str As String In StrList 'an array";
+ //BA.debugLineNum = 378;BA.debugLine="For Each str As String In StrList 'an array";
 {
 final anywheresoftware.b4a.BA.IterableList group2 = _strlist;
 final int groupLen2 = group2.getSize()
@@ -192,13 +199,13 @@ final int groupLen2 = group2.getSize()
 ;
 for (; index2 < groupLen2;index2++){
 _str = BA.ObjectToString(group2.Get(index2));
- //BA.debugLineNum = 371;BA.debugLine="result = result & str & separator";
+ //BA.debugLineNum = 379;BA.debugLine="result = result & str & separator";
 _result = _result+_str+_separator;
  }
 };
- //BA.debugLineNum = 374;BA.debugLine="Return trim_once(result, separator) ' trim separa";
+ //BA.debugLineNum = 382;BA.debugLine="Return trim_once(result, separator) ' trim separa";
 if (true) return _trim_once(_result,_separator);
- //BA.debugLineNum = 376;BA.debugLine="End Sub";
+ //BA.debugLineNum = 384;BA.debugLine="End Sub";
 return "";
 }
 public static String  _increment_string(String _str,String _separator,int _first) throws Exception{
@@ -331,24 +338,24 @@ if (true) return anywheresoftware.b4a.keywords.Common.True;
 return false;
 }
 public static String  _join(anywheresoftware.b4a.objects.collections.List _strlist,String _separator) throws Exception{
- //BA.debugLineNum = 380;BA.debugLine="Public Sub join(StrList As List,separator As Strin";
- //BA.debugLineNum = 382;BA.debugLine="Return implode(separator, StrList)";
+ //BA.debugLineNum = 388;BA.debugLine="Public Sub join(StrList As List,separator As Strin";
+ //BA.debugLineNum = 390;BA.debugLine="Return implode(separator, StrList)";
 if (true) return _implode(_separator,_strlist);
- //BA.debugLineNum = 384;BA.debugLine="End Sub";
+ //BA.debugLineNum = 392;BA.debugLine="End Sub";
 return "";
 }
 public static String  _lcfirst(String _str) throws Exception{
 String _firstchar = "";
- //BA.debugLineNum = 416;BA.debugLine="Public Sub lcfirst(str As String) As String";
- //BA.debugLineNum = 418;BA.debugLine="Dim firstChar As String =\"\"";
+ //BA.debugLineNum = 424;BA.debugLine="Public Sub lcfirst(str As String) As String";
+ //BA.debugLineNum = 426;BA.debugLine="Dim firstChar As String =\"\"";
 _firstchar = "";
- //BA.debugLineNum = 419;BA.debugLine="firstChar= str.CharAt(0)";
+ //BA.debugLineNum = 427;BA.debugLine="firstChar= str.CharAt(0)";
 _firstchar = BA.ObjectToString(_str.charAt((int) (0)));
- //BA.debugLineNum = 420;BA.debugLine="firstChar = firstChar.ToLowerCase";
+ //BA.debugLineNum = 428;BA.debugLine="firstChar = firstChar.ToLowerCase";
 _firstchar = _firstchar.toLowerCase();
- //BA.debugLineNum = 422;BA.debugLine="Return firstChar & str.SubString(1)";
+ //BA.debugLineNum = 430;BA.debugLine="Return firstChar & str.SubString(1)";
 if (true) return _firstchar+_str.substring((int) (1));
- //BA.debugLineNum = 424;BA.debugLine="End Sub";
+ //BA.debugLineNum = 432;BA.debugLine="End Sub";
 return "";
 }
 public static anywheresoftware.b4a.objects.collections.Map  _parsequerystring(String _querystring) throws Exception{
@@ -356,84 +363,84 @@ anywheresoftware.b4a.objects.collections.Map _data = null;
 anywheresoftware.b4a.objects.collections.List _temp_list = null;
 int _i = 0;
 anywheresoftware.b4a.objects.collections.List _querylist = null;
- //BA.debugLineNum = 935;BA.debugLine="Public Sub parseQueryString(QueryString As String)";
- //BA.debugLineNum = 937;BA.debugLine="Dim Data As Map 'total data";
+ //BA.debugLineNum = 943;BA.debugLine="Public Sub parseQueryString(QueryString As String)";
+ //BA.debugLineNum = 945;BA.debugLine="Dim Data As Map 'total data";
 _data = new anywheresoftware.b4a.objects.collections.Map();
- //BA.debugLineNum = 938;BA.debugLine="Data.Initialize";
+ //BA.debugLineNum = 946;BA.debugLine="Data.Initialize";
 _data.Initialize();
- //BA.debugLineNum = 940;BA.debugLine="Try";
-try { //BA.debugLineNum = 943;BA.debugLine="Dim temp_list As List = Split(QueryString, \"&\")";
+ //BA.debugLineNum = 948;BA.debugLine="Try";
+try { //BA.debugLineNum = 951;BA.debugLine="Dim temp_list As List = Split(QueryString, \"&\")";
 _temp_list = new anywheresoftware.b4a.objects.collections.List();
 _temp_list = _split(_querystring,"&");
- //BA.debugLineNum = 945;BA.debugLine="For i = 0 To temp_list.Size - 1";
+ //BA.debugLineNum = 953;BA.debugLine="For i = 0 To temp_list.Size - 1";
 {
 final int step5 = 1;
 final int limit5 = (int) (_temp_list.getSize()-1);
 _i = (int) (0) ;
 for (;_i <= limit5 ;_i = _i + step5 ) {
- //BA.debugLineNum = 947;BA.debugLine="Dim QueryList As List = Split(temp_list.Get(i)";
+ //BA.debugLineNum = 955;BA.debugLine="Dim QueryList As List = Split(temp_list.Get(i)";
 _querylist = new anywheresoftware.b4a.objects.collections.List();
 _querylist = _split(BA.ObjectToString(_temp_list.Get(_i)),"=");
- //BA.debugLineNum = 949;BA.debugLine="If Not(Data.ContainsKey(QueryList.Get(0))) Then";
+ //BA.debugLineNum = 957;BA.debugLine="If Not(Data.ContainsKey(QueryList.Get(0))) Then";
 if (anywheresoftware.b4a.keywords.Common.Not(_data.ContainsKey(_querylist.Get((int) (0))))) { 
- //BA.debugLineNum = 951;BA.debugLine="Data.Put(QueryList.Get(0), QueryList.Get(1))";
+ //BA.debugLineNum = 959;BA.debugLine="Data.Put(QueryList.Get(0), QueryList.Get(1))";
 _data.Put(_querylist.Get((int) (0)),_querylist.Get((int) (1)));
  };
  }
 };
  } 
        catch (Exception e12) {
-			ba.setLastException(e12); //BA.debugLineNum = 959;BA.debugLine="LogError(\"The parser for < parseQueryString() >";
+			ba.setLastException(e12); //BA.debugLineNum = 967;BA.debugLine="LogError(\"The parser for < parseQueryString() >";
 anywheresoftware.b4a.keywords.Common.LogError("The parser for < parseQueryString() > got broken. Please check input data");
  };
- //BA.debugLineNum = 963;BA.debugLine="Return Data";
+ //BA.debugLineNum = 971;BA.debugLine="Return Data";
 if (true) return _data;
- //BA.debugLineNum = 965;BA.debugLine="End Sub";
+ //BA.debugLineNum = 973;BA.debugLine="End Sub";
 return null;
 }
 public static anywheresoftware.b4a.objects.collections.Map  _parsequerystringurl(String _url) throws Exception{
- //BA.debugLineNum = 975;BA.debugLine="Public Sub parseQueryStringUrl(url As String) As M";
- //BA.debugLineNum = 977;BA.debugLine="url= breakStrAt(url, \"?\") ' Split URL from Query";
+ //BA.debugLineNum = 983;BA.debugLine="Public Sub parseQueryStringUrl(url As String) As M";
+ //BA.debugLineNum = 985;BA.debugLine="url= breakStrAt(url, \"?\") ' Split URL from Query";
 _url = BA.ObjectToString(_breakstrat(_url,"?"));
- //BA.debugLineNum = 978;BA.debugLine="url =  trim_left_once(url, \"?\")";
+ //BA.debugLineNum = 986;BA.debugLine="url =  trim_left_once(url, \"?\")";
 _url = _trim_left_once(_url,"?");
- //BA.debugLineNum = 980;BA.debugLine="Return parseQueryString(url)";
+ //BA.debugLineNum = 988;BA.debugLine="Return parseQueryString(url)";
 if (true) return _parsequerystring(_url);
- //BA.debugLineNum = 982;BA.debugLine="End Sub";
+ //BA.debugLineNum = 990;BA.debugLine="End Sub";
 return null;
 }
 public static String  _prep_url(String _str) throws Exception{
- //BA.debugLineNum = 465;BA.debugLine="Public Sub prep_url(str As String)  As String";
- //BA.debugLineNum = 467;BA.debugLine="str= str.Trim";
+ //BA.debugLineNum = 473;BA.debugLine="Public Sub prep_url(str As String)  As String";
+ //BA.debugLineNum = 475;BA.debugLine="str= str.Trim";
 _str = _str.trim();
- //BA.debugLineNum = 469;BA.debugLine="If isEmpty(str) Or str.EqualsIgnoreCase(\"http://\"";
+ //BA.debugLineNum = 477;BA.debugLine="If isEmpty(str) Or str.EqualsIgnoreCase(\"http://\"";
 if (_isempty(_str) || _str.equalsIgnoreCase("http://")) { 
- //BA.debugLineNum = 471;BA.debugLine="Return  \"\"";
+ //BA.debugLineNum = 479;BA.debugLine="Return  \"\"";
 if (true) return "";
  }else {
- //BA.debugLineNum = 475;BA.debugLine="If Not(str.StartsWith(\"http://\")) Then";
+ //BA.debugLineNum = 483;BA.debugLine="If Not(str.StartsWith(\"http://\")) Then";
 if (anywheresoftware.b4a.keywords.Common.Not(_str.startsWith("http://"))) { 
- //BA.debugLineNum = 477;BA.debugLine="Return \"http://\" & str";
+ //BA.debugLineNum = 485;BA.debugLine="Return \"http://\" & str";
 if (true) return "http://"+_str;
  }else {
- //BA.debugLineNum = 481;BA.debugLine="Return str";
+ //BA.debugLineNum = 489;BA.debugLine="Return str";
 if (true) return _str;
  };
  };
- //BA.debugLineNum = 487;BA.debugLine="End Sub";
+ //BA.debugLineNum = 495;BA.debugLine="End Sub";
 return "";
 }
 public static String  _prepend_zero(int _num) throws Exception{
- //BA.debugLineNum = 910;BA.debugLine="Public Sub prepend_zero(num As Int) As String";
- //BA.debugLineNum = 912;BA.debugLine="If num < 10 And num > 0 Then";
+ //BA.debugLineNum = 918;BA.debugLine="Public Sub prepend_zero(num As Int) As String";
+ //BA.debugLineNum = 920;BA.debugLine="If num < 10 And num > 0 Then";
 if (_num<10 && _num>0) { 
- //BA.debugLineNum = 914;BA.debugLine="Return \"0\" & num";
+ //BA.debugLineNum = 922;BA.debugLine="Return \"0\" & num";
 if (true) return "0"+BA.NumberToString(_num);
  }else {
- //BA.debugLineNum = 918;BA.debugLine="Return num";
+ //BA.debugLineNum = 926;BA.debugLine="Return num";
 if (true) return BA.NumberToString(_num);
  };
- //BA.debugLineNum = 922;BA.debugLine="End Sub";
+ //BA.debugLineNum = 930;BA.debugLine="End Sub";
 return "";
 }
 public static String  _process_globals() throws Exception{
@@ -514,14 +521,14 @@ return null;
 }
 public static anywheresoftware.b4a.objects.collections.List  _split(String _str,String _delimiter) throws Exception{
 anywheresoftware.b4a.objects.collections.List _t = null;
- //BA.debugLineNum = 352;BA.debugLine="Sub Split(str As String, delimiter As String) As L";
- //BA.debugLineNum = 353;BA.debugLine="Dim t As List";
+ //BA.debugLineNum = 360;BA.debugLine="Sub Split(str As String, delimiter As String) As L";
+ //BA.debugLineNum = 361;BA.debugLine="Dim t As List";
 _t = new anywheresoftware.b4a.objects.collections.List();
- //BA.debugLineNum = 354;BA.debugLine="t = Regex.Split(delimiter, str)";
-_t = anywheresoftware.b4a.keywords.Common.ArrayToList(anywheresoftware.b4a.keywords.Common.Regex.Split(_delimiter,_str));
- //BA.debugLineNum = 355;BA.debugLine="Return t";
+ //BA.debugLineNum = 362;BA.debugLine="t = Regex.Split(EscapeString(delimiter), str)";
+_t = anywheresoftware.b4a.keywords.Common.ArrayToList(anywheresoftware.b4a.keywords.Common.Regex.Split(_escapestring(_delimiter),_str));
+ //BA.debugLineNum = 363;BA.debugLine="Return t";
 if (true) return _t;
- //BA.debugLineNum = 356;BA.debugLine="End Sub";
+ //BA.debugLineNum = 364;BA.debugLine="End Sub";
 return null;
 }
 public static String  _sprintf(String _fmt,Object[] _arg) throws Exception{
@@ -536,168 +543,168 @@ String _sres = "";
 String _c = "";
 String _t = "";
 boolean _bdone = false;
- //BA.debugLineNum = 504;BA.debugLine="Public Sub Sprintf(fmt As String, arg() As Object)";
- //BA.debugLineNum = 505;BA.debugLine="Dim ai, fi, i As Int";
+ //BA.debugLineNum = 512;BA.debugLine="Public Sub Sprintf(fmt As String, arg() As Object)";
+ //BA.debugLineNum = 513;BA.debugLine="Dim ai, fi, i As Int";
 _ai = 0;
 _fi = 0;
 _i = 0;
- //BA.debugLineNum = 506;BA.debugLine="Dim exp, wid As Int";
+ //BA.debugLineNum = 514;BA.debugLine="Dim exp, wid As Int";
 _exp = 0;
 _wid = 0;
- //BA.debugLineNum = 507;BA.debugLine="Dim stmp, ptmp, sres, c, t As String";
+ //BA.debugLineNum = 515;BA.debugLine="Dim stmp, ptmp, sres, c, t As String";
 _stmp = "";
 _ptmp = "";
 _sres = "";
 _c = "";
 _t = "";
- //BA.debugLineNum = 508;BA.debugLine="Dim bdone As Boolean";
+ //BA.debugLineNum = 516;BA.debugLine="Dim bdone As Boolean";
 _bdone = false;
- //BA.debugLineNum = 510;BA.debugLine="ai = 0";
+ //BA.debugLineNum = 518;BA.debugLine="ai = 0";
 _ai = (int) (0);
- //BA.debugLineNum = 511;BA.debugLine="fi = 0";
+ //BA.debugLineNum = 519;BA.debugLine="fi = 0";
 _fi = (int) (0);
- //BA.debugLineNum = 512;BA.debugLine="stmp = \"\"";
-_stmp = "";
- //BA.debugLineNum = 513;BA.debugLine="sres = \"\"";
-_sres = "";
- //BA.debugLineNum = 515;BA.debugLine="Do While (fi < fmt.Length)";
-while ((_fi<_fmt.length())) {
- //BA.debugLineNum = 516;BA.debugLine="c = fmt.CharAt(fi)";
-_c = BA.ObjectToString(_fmt.charAt(_fi));
- //BA.debugLineNum = 517;BA.debugLine="fi = fi + 1";
-_fi = (int) (_fi+1);
- //BA.debugLineNum = 519;BA.debugLine="If (c = \"%\") Then";
-if (((_c).equals("%"))) { 
  //BA.debugLineNum = 520;BA.debugLine="stmp = \"\"";
 _stmp = "";
- //BA.debugLineNum = 521;BA.debugLine="ptmp = \"\"";
-_ptmp = "";
- //BA.debugLineNum = 522;BA.debugLine="bdone = False";
-_bdone = anywheresoftware.b4a.keywords.Common.False;
- //BA.debugLineNum = 524;BA.debugLine="Do While ((fi < fmt.Length) And (bdone = False)";
-while (((_fi<_fmt.length()) && (_bdone==anywheresoftware.b4a.keywords.Common.False))) {
- //BA.debugLineNum = 525;BA.debugLine="c = fmt.CharAt(fi)";
+ //BA.debugLineNum = 521;BA.debugLine="sres = \"\"";
+_sres = "";
+ //BA.debugLineNum = 523;BA.debugLine="Do While (fi < fmt.Length)";
+while ((_fi<_fmt.length())) {
+ //BA.debugLineNum = 524;BA.debugLine="c = fmt.CharAt(fi)";
 _c = BA.ObjectToString(_fmt.charAt(_fi));
- //BA.debugLineNum = 526;BA.debugLine="fi = fi + 1";
+ //BA.debugLineNum = 525;BA.debugLine="fi = fi + 1";
 _fi = (int) (_fi+1);
- //BA.debugLineNum = 528;BA.debugLine="If ((IsNumber(c) = True) Or (c = \".\")) Then";
-if (((anywheresoftware.b4a.keywords.Common.IsNumber(_c)==anywheresoftware.b4a.keywords.Common.True) || ((_c).equals(".")))) { 
- //BA.debugLineNum = 529;BA.debugLine="ptmp = ptmp & c";
-_ptmp = _ptmp+_c;
+ //BA.debugLineNum = 527;BA.debugLine="If (c = \"%\") Then";
+if (((_c).equals("%"))) { 
+ //BA.debugLineNum = 528;BA.debugLine="stmp = \"\"";
+_stmp = "";
+ //BA.debugLineNum = 529;BA.debugLine="ptmp = \"\"";
+_ptmp = "";
  //BA.debugLineNum = 530;BA.debugLine="bdone = False";
 _bdone = anywheresoftware.b4a.keywords.Common.False;
+ //BA.debugLineNum = 532;BA.debugLine="Do While ((fi < fmt.Length) And (bdone = False)";
+while (((_fi<_fmt.length()) && (_bdone==anywheresoftware.b4a.keywords.Common.False))) {
+ //BA.debugLineNum = 533;BA.debugLine="c = fmt.CharAt(fi)";
+_c = BA.ObjectToString(_fmt.charAt(_fi));
+ //BA.debugLineNum = 534;BA.debugLine="fi = fi + 1";
+_fi = (int) (_fi+1);
+ //BA.debugLineNum = 536;BA.debugLine="If ((IsNumber(c) = True) Or (c = \".\")) Then";
+if (((anywheresoftware.b4a.keywords.Common.IsNumber(_c)==anywheresoftware.b4a.keywords.Common.True) || ((_c).equals(".")))) { 
+ //BA.debugLineNum = 537;BA.debugLine="ptmp = ptmp & c";
+_ptmp = _ptmp+_c;
+ //BA.debugLineNum = 538;BA.debugLine="bdone = False";
+_bdone = anywheresoftware.b4a.keywords.Common.False;
  }else if(((_c).equals("s"))) { 
- //BA.debugLineNum = 532;BA.debugLine="stmp = arg(ai)";
+ //BA.debugLineNum = 540;BA.debugLine="stmp = arg(ai)";
 _stmp = BA.ObjectToString(_arg[_ai]);
- //BA.debugLineNum = 533;BA.debugLine="ai = ai + 1";
+ //BA.debugLineNum = 541;BA.debugLine="ai = ai + 1";
 _ai = (int) (_ai+1);
- //BA.debugLineNum = 534;BA.debugLine="sres = sres & stmp";
+ //BA.debugLineNum = 542;BA.debugLine="sres = sres & stmp";
 _sres = _sres+_stmp;
- //BA.debugLineNum = 535;BA.debugLine="bdone = True";
+ //BA.debugLineNum = 543;BA.debugLine="bdone = True";
 _bdone = anywheresoftware.b4a.keywords.Common.True;
  }else if(((_c).equals("d"))) { 
- //BA.debugLineNum = 537;BA.debugLine="If (ptmp.Length > 0) Then";
+ //BA.debugLineNum = 545;BA.debugLine="If (ptmp.Length > 0) Then";
 if ((_ptmp.length()>0)) { 
- //BA.debugLineNum = 538;BA.debugLine="t = \" \"";
+ //BA.debugLineNum = 546;BA.debugLine="t = \" \"";
 _t = " ";
- //BA.debugLineNum = 539;BA.debugLine="If (ptmp.CharAt(0) = \"0\") Then";
+ //BA.debugLineNum = 547;BA.debugLine="If (ptmp.CharAt(0) = \"0\") Then";
 if ((_ptmp.charAt((int) (0))==BA.ObjectToChar("0"))) { 
- //BA.debugLineNum = 540;BA.debugLine="t = \"0\"";
+ //BA.debugLineNum = 548;BA.debugLine="t = \"0\"";
 _t = "0";
- //BA.debugLineNum = 541;BA.debugLine="ptmp = ptmp.SubString(1)";
+ //BA.debugLineNum = 549;BA.debugLine="ptmp = ptmp.SubString(1)";
 _ptmp = _ptmp.substring((int) (1));
  };
  };
- //BA.debugLineNum = 545;BA.debugLine="If (ptmp.Length > 0) Then wid = ptmp Else wid";
+ //BA.debugLineNum = 553;BA.debugLine="If (ptmp.Length > 0) Then wid = ptmp Else wid";
 if ((_ptmp.length()>0)) { 
 _wid = (int)(Double.parseDouble(_ptmp));}
 else {
 _wid = (int) (0);};
- //BA.debugLineNum = 547;BA.debugLine="stmp = arg(ai)";
+ //BA.debugLineNum = 555;BA.debugLine="stmp = arg(ai)";
 _stmp = BA.ObjectToString(_arg[_ai]);
- //BA.debugLineNum = 549;BA.debugLine="Do While (stmp.Length < wid)";
+ //BA.debugLineNum = 557;BA.debugLine="Do While (stmp.Length < wid)";
 while ((_stmp.length()<_wid)) {
- //BA.debugLineNum = 550;BA.debugLine="stmp = t & stmp";
+ //BA.debugLineNum = 558;BA.debugLine="stmp = t & stmp";
 _stmp = _t+_stmp;
  }
 ;
- //BA.debugLineNum = 553;BA.debugLine="ai = ai + 1";
+ //BA.debugLineNum = 561;BA.debugLine="ai = ai + 1";
 _ai = (int) (_ai+1);
- //BA.debugLineNum = 554;BA.debugLine="sres = sres & stmp";
+ //BA.debugLineNum = 562;BA.debugLine="sres = sres & stmp";
 _sres = _sres+_stmp;
- //BA.debugLineNum = 555;BA.debugLine="bdone = True";
+ //BA.debugLineNum = 563;BA.debugLine="bdone = True";
 _bdone = anywheresoftware.b4a.keywords.Common.True;
  }else if(((_c).equals("f"))) { 
- //BA.debugLineNum = 557;BA.debugLine="If (ptmp.Length > 0) Then";
+ //BA.debugLineNum = 565;BA.debugLine="If (ptmp.Length > 0) Then";
 if ((_ptmp.length()>0)) { 
- //BA.debugLineNum = 558;BA.debugLine="i = ptmp.IndexOf(\".\")";
+ //BA.debugLineNum = 566;BA.debugLine="i = ptmp.IndexOf(\".\")";
 _i = _ptmp.indexOf(".");
- //BA.debugLineNum = 559;BA.debugLine="If (i >= 0) Then";
+ //BA.debugLineNum = 567;BA.debugLine="If (i >= 0) Then";
 if ((_i>=0)) { 
- //BA.debugLineNum = 560;BA.debugLine="wid = ptmp.SubString2(0, i)";
+ //BA.debugLineNum = 568;BA.debugLine="wid = ptmp.SubString2(0, i)";
 _wid = (int)(Double.parseDouble(_ptmp.substring((int) (0),_i)));
- //BA.debugLineNum = 561;BA.debugLine="exp = ptmp.SubString(i+1)";
+ //BA.debugLineNum = 569;BA.debugLine="exp = ptmp.SubString(i+1)";
 _exp = (int)(Double.parseDouble(_ptmp.substring((int) (_i+1))));
  }else {
- //BA.debugLineNum = 563;BA.debugLine="wid = ptmp";
+ //BA.debugLineNum = 571;BA.debugLine="wid = ptmp";
 _wid = (int)(Double.parseDouble(_ptmp));
- //BA.debugLineNum = 564;BA.debugLine="exp = 0";
+ //BA.debugLineNum = 572;BA.debugLine="exp = 0";
 _exp = (int) (0);
  };
- //BA.debugLineNum = 567;BA.debugLine="stmp = NumberFormat(arg(ai), wid, exp)";
+ //BA.debugLineNum = 575;BA.debugLine="stmp = NumberFormat(arg(ai), wid, exp)";
 _stmp = anywheresoftware.b4a.keywords.Common.NumberFormat((double)(BA.ObjectToNumber(_arg[_ai])),_wid,_exp);
  }else {
- //BA.debugLineNum = 569;BA.debugLine="stmp = arg(ai)";
+ //BA.debugLineNum = 577;BA.debugLine="stmp = arg(ai)";
 _stmp = BA.ObjectToString(_arg[_ai]);
  };
- //BA.debugLineNum = 572;BA.debugLine="ai = ai + 1";
+ //BA.debugLineNum = 580;BA.debugLine="ai = ai + 1";
 _ai = (int) (_ai+1);
- //BA.debugLineNum = 573;BA.debugLine="sres = sres & stmp";
+ //BA.debugLineNum = 581;BA.debugLine="sres = sres & stmp";
 _sres = _sres+_stmp;
- //BA.debugLineNum = 574;BA.debugLine="bdone = True";
+ //BA.debugLineNum = 582;BA.debugLine="bdone = True";
 _bdone = anywheresoftware.b4a.keywords.Common.True;
  }else {
- //BA.debugLineNum = 576;BA.debugLine="ai = ai + 1";
+ //BA.debugLineNum = 584;BA.debugLine="ai = ai + 1";
 _ai = (int) (_ai+1);
  };
  }
 ;
  }else {
- //BA.debugLineNum = 581;BA.debugLine="sres = sres & c";
+ //BA.debugLineNum = 589;BA.debugLine="sres = sres & c";
 _sres = _sres+_c;
  };
  }
 ;
- //BA.debugLineNum = 585;BA.debugLine="Return(sres)";
+ //BA.debugLineNum = 593;BA.debugLine="Return(sres)";
 if (true) return (_sres);
- //BA.debugLineNum = 587;BA.debugLine="End Sub";
+ //BA.debugLineNum = 595;BA.debugLine="End Sub";
 return "";
 }
 public static String  _str_repeat(String _input,int _multiplier) throws Exception{
 String _result = "";
 int _i = 0;
- //BA.debugLineNum = 667;BA.debugLine="Sub str_repeat(input As String, multiplier As Int)";
- //BA.debugLineNum = 669;BA.debugLine="If multiplier < 1 Then";
+ //BA.debugLineNum = 675;BA.debugLine="Sub str_repeat(input As String, multiplier As Int)";
+ //BA.debugLineNum = 677;BA.debugLine="If multiplier < 1 Then";
 if (_multiplier<1) { 
- //BA.debugLineNum = 671;BA.debugLine="Return \"\"";
+ //BA.debugLineNum = 679;BA.debugLine="Return \"\"";
 if (true) return "";
  }else {
- //BA.debugLineNum = 675;BA.debugLine="Dim result As String = \"\"";
+ //BA.debugLineNum = 683;BA.debugLine="Dim result As String = \"\"";
 _result = "";
- //BA.debugLineNum = 677;BA.debugLine="For i = 0 To multiplier - 1";
+ //BA.debugLineNum = 685;BA.debugLine="For i = 0 To multiplier - 1";
 {
 final int step5 = 1;
 final int limit5 = (int) (_multiplier-1);
 _i = (int) (0) ;
 for (;_i <= limit5 ;_i = _i + step5 ) {
- //BA.debugLineNum = 679;BA.debugLine="result = result & input";
+ //BA.debugLineNum = 687;BA.debugLine="result = result & input";
 _result = _result+_input;
  }
 };
- //BA.debugLineNum = 683;BA.debugLine="Return result";
+ //BA.debugLineNum = 691;BA.debugLine="Return result";
 if (true) return _result;
  };
- //BA.debugLineNum = 687;BA.debugLine="End Sub";
+ //BA.debugLineNum = 695;BA.debugLine="End Sub";
 return "";
 }
 public static anywheresoftware.b4a.objects.collections.List  _str_split(String _str,int _splitlength) throws Exception{
@@ -705,74 +712,74 @@ anywheresoftware.b4a.objects.collections.List _chunks = null;
 int _divval = 0;
 int _i = 0;
 int _nextval = 0;
- //BA.debugLineNum = 744;BA.debugLine="Public Sub str_split (str As String, splitLength A";
- //BA.debugLineNum = 746;BA.debugLine="Dim chunks As List";
+ //BA.debugLineNum = 752;BA.debugLine="Public Sub str_split (str As String, splitLength A";
+ //BA.debugLineNum = 754;BA.debugLine="Dim chunks As List";
 _chunks = new anywheresoftware.b4a.objects.collections.List();
- //BA.debugLineNum = 747;BA.debugLine="chunks.Initialize";
+ //BA.debugLineNum = 755;BA.debugLine="chunks.Initialize";
 _chunks.Initialize();
- //BA.debugLineNum = 749;BA.debugLine="If (isEmpty(str) Or splitLength < 1)  Then";
+ //BA.debugLineNum = 757;BA.debugLine="If (isEmpty(str) Or splitLength < 1)  Then";
 if ((_isempty(_str) || _splitlength<1)) { 
- //BA.debugLineNum = 751;BA.debugLine="Return chunks 'empty list";
+ //BA.debugLineNum = 759;BA.debugLine="Return chunks 'empty list";
 if (true) return _chunks;
  }else if(_splitlength==_str.length()) { 
- //BA.debugLineNum = 755;BA.debugLine="chunks.Add(str)";
+ //BA.debugLineNum = 763;BA.debugLine="chunks.Add(str)";
 _chunks.Add((Object)(_str));
- //BA.debugLineNum = 756;BA.debugLine="Return chunks";
+ //BA.debugLineNum = 764;BA.debugLine="Return chunks";
 if (true) return _chunks;
  };
- //BA.debugLineNum = 760;BA.debugLine="Dim DivVal As Int  =  str.Length / splitLength";
+ //BA.debugLineNum = 768;BA.debugLine="Dim DivVal As Int  =  str.Length / splitLength";
 _divval = (int) (_str.length()/(double)_splitlength);
- //BA.debugLineNum = 762;BA.debugLine="For i = 0 To DivVal";
+ //BA.debugLineNum = 770;BA.debugLine="For i = 0 To DivVal";
 {
 final int step10 = 1;
 final int limit10 = _divval;
 _i = (int) (0) ;
 for (;_i <= limit10 ;_i = _i + step10 ) {
- //BA.debugLineNum = 764;BA.debugLine="Dim nextVal As Int = i * splitLength";
+ //BA.debugLineNum = 772;BA.debugLine="Dim nextVal As Int = i * splitLength";
 _nextval = (int) (_i*_splitlength);
- //BA.debugLineNum = 766;BA.debugLine="If i = DivVal Then";
+ //BA.debugLineNum = 774;BA.debugLine="If i = DivVal Then";
 if (_i==_divval) { 
- //BA.debugLineNum = 769;BA.debugLine="chunks.add( str.SubString( nextVal))";
+ //BA.debugLineNum = 777;BA.debugLine="chunks.add( str.SubString( nextVal))";
 _chunks.Add((Object)(_str.substring(_nextval)));
  }else {
- //BA.debugLineNum = 774;BA.debugLine="chunks.add( str.SubString2( nextVal , nextVal +";
+ //BA.debugLineNum = 782;BA.debugLine="chunks.add( str.SubString2( nextVal , nextVal +";
 _chunks.Add((Object)(_str.substring(_nextval,(int) (_nextval+_splitlength))));
  };
  }
 };
- //BA.debugLineNum = 780;BA.debugLine="Return chunks";
+ //BA.debugLineNum = 788;BA.debugLine="Return chunks";
 if (true) return _chunks;
- //BA.debugLineNum = 782;BA.debugLine="End Sub";
+ //BA.debugLineNum = 790;BA.debugLine="End Sub";
 return null;
 }
 public static String  _string2ascii(String _text) throws Exception{
- //BA.debugLineNum = 654;BA.debugLine="Public Sub String2Ascii(text As String) As String";
- //BA.debugLineNum = 657;BA.debugLine="Return String2AsciiWithSeperator(text, \"\")";
+ //BA.debugLineNum = 662;BA.debugLine="Public Sub String2Ascii(text As String) As String";
+ //BA.debugLineNum = 665;BA.debugLine="Return String2AsciiWithSeperator(text, \"\")";
 if (true) return _string2asciiwithseperator(_text,"");
- //BA.debugLineNum = 659;BA.debugLine="End Sub";
+ //BA.debugLineNum = 667;BA.debugLine="End Sub";
 return "";
 }
 public static String  _string2asciiwithseperator(String _text,String _seperator) throws Exception{
 anywheresoftware.b4a.keywords.StringBuilderWrapper _result = null;
 int _i = 0;
- //BA.debugLineNum = 638;BA.debugLine="Public Sub String2AsciiWithSeperator(text As Strin";
- //BA.debugLineNum = 640;BA.debugLine="Dim result As StringBuilder";
+ //BA.debugLineNum = 646;BA.debugLine="Public Sub String2AsciiWithSeperator(text As Strin";
+ //BA.debugLineNum = 648;BA.debugLine="Dim result As StringBuilder";
 _result = new anywheresoftware.b4a.keywords.StringBuilderWrapper();
- //BA.debugLineNum = 641;BA.debugLine="result.Initialize";
+ //BA.debugLineNum = 649;BA.debugLine="result.Initialize";
 _result.Initialize();
- //BA.debugLineNum = 643;BA.debugLine="For i = 0 To text.Length - 1";
+ //BA.debugLineNum = 651;BA.debugLine="For i = 0 To text.Length - 1";
 {
 final int step3 = 1;
 final int limit3 = (int) (_text.length()-1);
 _i = (int) (0) ;
 for (;_i <= limit3 ;_i = _i + step3 ) {
- //BA.debugLineNum = 645;BA.debugLine="result.Append(Asc(text.CharAt(i)) & seperator)";
+ //BA.debugLineNum = 653;BA.debugLine="result.Append(Asc(text.CharAt(i)) & seperator)";
 _result.Append(BA.NumberToString(anywheresoftware.b4a.keywords.Common.Asc(_text.charAt(_i)))+_seperator);
  }
 };
- //BA.debugLineNum = 649;BA.debugLine="Return result.ToString.Trim";
+ //BA.debugLineNum = 657;BA.debugLine="Return result.ToString.Trim";
 if (true) return _result.ToString().trim();
- //BA.debugLineNum = 651;BA.debugLine="End Sub";
+ //BA.debugLineNum = 659;BA.debugLine="End Sub";
 return "";
 }
 public static String  _stringarray2string(String[] _strarray) throws Exception{
@@ -810,119 +817,119 @@ if (true) return _str;
 return "";
 }
 public static int  _stripos(String _haystack,String _find) throws Exception{
- //BA.debugLineNum = 819;BA.debugLine="Public Sub stripos(haystack As String , find As St";
- //BA.debugLineNum = 821;BA.debugLine="haystack = haystack.ToLowerCase";
+ //BA.debugLineNum = 827;BA.debugLine="Public Sub stripos(haystack As String , find As St";
+ //BA.debugLineNum = 829;BA.debugLine="haystack = haystack.ToLowerCase";
 _haystack = _haystack.toLowerCase();
- //BA.debugLineNum = 822;BA.debugLine="find = find.ToLowerCase";
+ //BA.debugLineNum = 830;BA.debugLine="find = find.ToLowerCase";
 _find = _find.toLowerCase();
- //BA.debugLineNum = 824;BA.debugLine="Return haystack.IndexOf(find)";
+ //BA.debugLineNum = 832;BA.debugLine="Return haystack.IndexOf(find)";
 if (true) return _haystack.indexOf(_find);
- //BA.debugLineNum = 826;BA.debugLine="End Sub";
+ //BA.debugLineNum = 834;BA.debugLine="End Sub";
 return 0;
 }
 public static int  _stripos2(String _haystack,String _find,int _start) throws Exception{
- //BA.debugLineNum = 835;BA.debugLine="Public Sub stripos2(haystack As String , find As S";
- //BA.debugLineNum = 837;BA.debugLine="haystack = haystack.ToLowerCase";
+ //BA.debugLineNum = 843;BA.debugLine="Public Sub stripos2(haystack As String , find As S";
+ //BA.debugLineNum = 845;BA.debugLine="haystack = haystack.ToLowerCase";
 _haystack = _haystack.toLowerCase();
- //BA.debugLineNum = 838;BA.debugLine="find = find.ToLowerCase";
+ //BA.debugLineNum = 846;BA.debugLine="find = find.ToLowerCase";
 _find = _find.toLowerCase();
- //BA.debugLineNum = 840;BA.debugLine="Return haystack.IndexOf2(find, start)";
+ //BA.debugLineNum = 848;BA.debugLine="Return haystack.IndexOf2(find, start)";
 if (true) return _haystack.indexOf(_find,_start);
- //BA.debugLineNum = 842;BA.debugLine="End Sub";
+ //BA.debugLineNum = 850;BA.debugLine="End Sub";
 return 0;
 }
 public static Object  _strpbrk(String _haystack,String _charlist) throws Exception{
 int _i = 0;
- //BA.debugLineNum = 710;BA.debugLine="Public Sub strpbrk(haystack As String, charList As";
- //BA.debugLineNum = 712;BA.debugLine="For i = 0 To haystack.Length - 1";
+ //BA.debugLineNum = 718;BA.debugLine="Public Sub strpbrk(haystack As String, charList As";
+ //BA.debugLineNum = 720;BA.debugLine="For i = 0 To haystack.Length - 1";
 {
 final int step1 = 1;
 final int limit1 = (int) (_haystack.length()-1);
 _i = (int) (0) ;
 for (;_i <= limit1 ;_i = _i + step1 ) {
- //BA.debugLineNum = 714;BA.debugLine="If charList.IndexOf(haystack.CharAt(i)) >= 0 Th";
+ //BA.debugLineNum = 722;BA.debugLine="If charList.IndexOf(haystack.CharAt(i)) >= 0 Th";
 if (_charlist.indexOf(BA.ObjectToString(_haystack.charAt(_i)))>=0) { 
- //BA.debugLineNum = 716;BA.debugLine="Return haystack.SubString(i)";
+ //BA.debugLineNum = 724;BA.debugLine="Return haystack.SubString(i)";
 if (true) return (Object)(_haystack.substring(_i));
  };
  }
 };
- //BA.debugLineNum = 722;BA.debugLine="Return False";
+ //BA.debugLineNum = 730;BA.debugLine="Return False";
 if (true) return (Object)(anywheresoftware.b4a.keywords.Common.False);
- //BA.debugLineNum = 724;BA.debugLine="End Sub";
+ //BA.debugLineNum = 732;BA.debugLine="End Sub";
 return null;
 }
 public static int  _strpos(String _haystack,String _find) throws Exception{
- //BA.debugLineNum = 793;BA.debugLine="Public Sub strpos(haystack As String , find As Str";
- //BA.debugLineNum = 795;BA.debugLine="Return haystack.IndexOf(find)";
+ //BA.debugLineNum = 801;BA.debugLine="Public Sub strpos(haystack As String , find As Str";
+ //BA.debugLineNum = 803;BA.debugLine="Return haystack.IndexOf(find)";
 if (true) return _haystack.indexOf(_find);
- //BA.debugLineNum = 797;BA.debugLine="End Sub";
+ //BA.debugLineNum = 805;BA.debugLine="End Sub";
 return 0;
 }
 public static int  _strpos2(String _haystack,String _find,int _start) throws Exception{
- //BA.debugLineNum = 806;BA.debugLine="Public Sub strpos2(haystack As String , find As St";
- //BA.debugLineNum = 808;BA.debugLine="Return haystack.IndexOf2(find, start)";
+ //BA.debugLineNum = 814;BA.debugLine="Public Sub strpos2(haystack As String , find As St";
+ //BA.debugLineNum = 816;BA.debugLine="Return haystack.IndexOf2(find, start)";
 if (true) return _haystack.indexOf(_find,_start);
- //BA.debugLineNum = 810;BA.debugLine="End Sub";
+ //BA.debugLineNum = 818;BA.debugLine="End Sub";
 return 0;
 }
 public static int  _strripos(String _haystack,String _find) throws Exception{
- //BA.debugLineNum = 881;BA.debugLine="Public Sub strripos(haystack As String , find As S";
- //BA.debugLineNum = 883;BA.debugLine="haystack = haystack.ToLowerCase";
+ //BA.debugLineNum = 889;BA.debugLine="Public Sub strripos(haystack As String , find As S";
+ //BA.debugLineNum = 891;BA.debugLine="haystack = haystack.ToLowerCase";
 _haystack = _haystack.toLowerCase();
- //BA.debugLineNum = 884;BA.debugLine="find = find.ToLowerCase";
+ //BA.debugLineNum = 892;BA.debugLine="find = find.ToLowerCase";
 _find = _find.toLowerCase();
- //BA.debugLineNum = 886;BA.debugLine="Return haystack.LastIndexOf(find)";
+ //BA.debugLineNum = 894;BA.debugLine="Return haystack.LastIndexOf(find)";
 if (true) return _haystack.lastIndexOf(_find);
- //BA.debugLineNum = 888;BA.debugLine="End Sub";
+ //BA.debugLineNum = 896;BA.debugLine="End Sub";
 return 0;
 }
 public static int  _strripos2(String _haystack,String _find,int _start) throws Exception{
- //BA.debugLineNum = 897;BA.debugLine="Public Sub strripos2 (haystack As String , find As";
- //BA.debugLineNum = 899;BA.debugLine="haystack = haystack.ToLowerCase";
+ //BA.debugLineNum = 905;BA.debugLine="Public Sub strripos2 (haystack As String , find As";
+ //BA.debugLineNum = 907;BA.debugLine="haystack = haystack.ToLowerCase";
 _haystack = _haystack.toLowerCase();
- //BA.debugLineNum = 900;BA.debugLine="find = find.ToLowerCase";
+ //BA.debugLineNum = 908;BA.debugLine="find = find.ToLowerCase";
 _find = _find.toLowerCase();
- //BA.debugLineNum = 902;BA.debugLine="Return haystack.LastIndexOf2(find, start)";
+ //BA.debugLineNum = 910;BA.debugLine="Return haystack.LastIndexOf2(find, start)";
 if (true) return _haystack.lastIndexOf(_find,_start);
- //BA.debugLineNum = 904;BA.debugLine="End Sub";
+ //BA.debugLineNum = 912;BA.debugLine="End Sub";
 return 0;
 }
 public static int  _strrpos(String _haystack,String _find) throws Exception{
- //BA.debugLineNum = 855;BA.debugLine="Public Sub strrpos(haystack As String , find As St";
- //BA.debugLineNum = 857;BA.debugLine="Return haystack.LastIndexOf(find)";
+ //BA.debugLineNum = 863;BA.debugLine="Public Sub strrpos(haystack As String , find As St";
+ //BA.debugLineNum = 865;BA.debugLine="Return haystack.LastIndexOf(find)";
 if (true) return _haystack.lastIndexOf(_find);
- //BA.debugLineNum = 859;BA.debugLine="End Sub";
+ //BA.debugLineNum = 867;BA.debugLine="End Sub";
 return 0;
 }
 public static int  _strrpos2(String _haystack,String _find,int _start) throws Exception{
- //BA.debugLineNum = 868;BA.debugLine="Public Sub strrpos2(haystack As String , find As S";
- //BA.debugLineNum = 870;BA.debugLine="Return haystack.LastIndexOf2(find, start)";
+ //BA.debugLineNum = 876;BA.debugLine="Public Sub strrpos2(haystack As String , find As S";
+ //BA.debugLineNum = 878;BA.debugLine="Return haystack.LastIndexOf2(find, start)";
 if (true) return _haystack.lastIndexOf(_find,_start);
- //BA.debugLineNum = 872;BA.debugLine="End Sub";
+ //BA.debugLineNum = 880;BA.debugLine="End Sub";
 return 0;
 }
 public static anywheresoftware.b4a.objects.collections.List  _strtostrlist(String _str) throws Exception{
 anywheresoftware.b4a.objects.collections.List _result = null;
 int _i = 0;
- //BA.debugLineNum = 728;BA.debugLine="Public Sub strToStrList(str As String) As List";
- //BA.debugLineNum = 730;BA.debugLine="Dim result As List";
+ //BA.debugLineNum = 736;BA.debugLine="Public Sub strToStrList(str As String) As List";
+ //BA.debugLineNum = 738;BA.debugLine="Dim result As List";
 _result = new anywheresoftware.b4a.objects.collections.List();
- //BA.debugLineNum = 731;BA.debugLine="result.Initialize";
+ //BA.debugLineNum = 739;BA.debugLine="result.Initialize";
 _result.Initialize();
- //BA.debugLineNum = 733;BA.debugLine="For i = 0 To str.Length - 1";
+ //BA.debugLineNum = 741;BA.debugLine="For i = 0 To str.Length - 1";
 {
 final int step3 = 1;
 final int limit3 = (int) (_str.length()-1);
 _i = (int) (0) ;
 for (;_i <= limit3 ;_i = _i + step3 ) {
- //BA.debugLineNum = 735;BA.debugLine="result.Add(str.CharAt(i))";
+ //BA.debugLineNum = 743;BA.debugLine="result.Add(str.CharAt(i))";
 _result.Add((Object)(_str.charAt(_i)));
  }
 };
- //BA.debugLineNum = 739;BA.debugLine="Return result";
+ //BA.debugLineNum = 747;BA.debugLine="Return result";
 if (true) return _result;
- //BA.debugLineNum = 741;BA.debugLine="End Sub";
+ //BA.debugLineNum = 749;BA.debugLine="End Sub";
 return null;
 }
 public static String  _trim_left_once(String _str,String _character) throws Exception{
@@ -978,40 +985,40 @@ if (true) return _trim_once(_str,"/");
 return "";
 }
 public static String  _truncate(String _txt,int _length) throws Exception{
- //BA.debugLineNum = 988;BA.debugLine="Public Sub Truncate(txt As String, length As Int)";
- //BA.debugLineNum = 993;BA.debugLine="If length > txt.Length Then";
+ //BA.debugLineNum = 996;BA.debugLine="Public Sub Truncate(txt As String, length As Int)";
+ //BA.debugLineNum = 1001;BA.debugLine="If length > txt.Length Then";
 if (_length>_txt.length()) { 
- //BA.debugLineNum = 995;BA.debugLine="Return txt";
+ //BA.debugLineNum = 1003;BA.debugLine="Return txt";
 if (true) return _txt;
  }else {
- //BA.debugLineNum = 999;BA.debugLine="Return txt.Substring2(0, length)";
+ //BA.debugLineNum = 1007;BA.debugLine="Return txt.Substring2(0, length)";
 if (true) return _txt.substring((int) (0),_length);
  };
- //BA.debugLineNum = 1003;BA.debugLine="End Sub";
+ //BA.debugLineNum = 1011;BA.debugLine="End Sub";
 return "";
 }
 public static String  _ucfirst(String _str) throws Exception{
 String _firstchar = "";
- //BA.debugLineNum = 405;BA.debugLine="Public Sub ucfirst(str As String) As String";
- //BA.debugLineNum = 407;BA.debugLine="Dim firstChar As String =\"\"";
+ //BA.debugLineNum = 413;BA.debugLine="Public Sub ucfirst(str As String) As String";
+ //BA.debugLineNum = 415;BA.debugLine="Dim firstChar As String =\"\"";
 _firstchar = "";
- //BA.debugLineNum = 408;BA.debugLine="firstChar= str.CharAt(0)";
+ //BA.debugLineNum = 416;BA.debugLine="firstChar= str.CharAt(0)";
 _firstchar = BA.ObjectToString(_str.charAt((int) (0)));
- //BA.debugLineNum = 409;BA.debugLine="firstChar = firstChar.ToUpperCase";
+ //BA.debugLineNum = 417;BA.debugLine="firstChar = firstChar.ToUpperCase";
 _firstchar = _firstchar.toUpperCase();
- //BA.debugLineNum = 411;BA.debugLine="Return firstChar & str.SubString(1)";
+ //BA.debugLineNum = 419;BA.debugLine="Return firstChar & str.SubString(1)";
 if (true) return _firstchar+_str.substring((int) (1));
- //BA.debugLineNum = 413;BA.debugLine="End Sub";
+ //BA.debugLineNum = 421;BA.debugLine="End Sub";
 return "";
 }
 public static String  _ucwords(String _str) throws Exception{
 String _result = "";
 String _txt = "";
 String _firstchar = "";
- //BA.debugLineNum = 388;BA.debugLine="Public Sub ucwords(str As String) As String";
- //BA.debugLineNum = 390;BA.debugLine="Dim result As String =\"\"";
+ //BA.debugLineNum = 396;BA.debugLine="Public Sub ucwords(str As String) As String";
+ //BA.debugLineNum = 398;BA.debugLine="Dim result As String =\"\"";
 _result = "";
- //BA.debugLineNum = 392;BA.debugLine="For Each txt As String In explode(\" \", str)";
+ //BA.debugLineNum = 400;BA.debugLine="For Each txt As String In explode(\" \", str)";
 {
 final anywheresoftware.b4a.BA.IterableList group2 = _explode(" ",_str);
 final int groupLen2 = group2.getSize()
@@ -1019,28 +1026,28 @@ final int groupLen2 = group2.getSize()
 ;
 for (; index2 < groupLen2;index2++){
 _txt = BA.ObjectToString(group2.Get(index2));
- //BA.debugLineNum = 393;BA.debugLine="Dim firstChar As String =\"\"";
+ //BA.debugLineNum = 401;BA.debugLine="Dim firstChar As String =\"\"";
 _firstchar = "";
- //BA.debugLineNum = 394;BA.debugLine="firstChar= txt.CharAt(0)";
+ //BA.debugLineNum = 402;BA.debugLine="firstChar= txt.CharAt(0)";
 _firstchar = BA.ObjectToString(_txt.charAt((int) (0)));
- //BA.debugLineNum = 395;BA.debugLine="firstChar = firstChar.ToUpperCase";
+ //BA.debugLineNum = 403;BA.debugLine="firstChar = firstChar.ToUpperCase";
 _firstchar = _firstchar.toUpperCase();
- //BA.debugLineNum = 397;BA.debugLine="result = result & firstChar & txt.SubString(1) &";
+ //BA.debugLineNum = 405;BA.debugLine="result = result & firstChar & txt.SubString(1) &";
 _result = _result+_firstchar+_txt.substring((int) (1))+" ";
  }
 };
- //BA.debugLineNum = 400;BA.debugLine="Return result";
+ //BA.debugLineNum = 408;BA.debugLine="Return result";
 if (true) return _result;
- //BA.debugLineNum = 402;BA.debugLine="End Sub";
+ //BA.debugLineNum = 410;BA.debugLine="End Sub";
 return "";
 }
 public static String  _underscore(String _str) throws Exception{
- //BA.debugLineNum = 449;BA.debugLine="Public Sub underscore(str As String)  As String";
- //BA.debugLineNum = 451;BA.debugLine="str= str.ToLowerCase";
+ //BA.debugLineNum = 457;BA.debugLine="Public Sub underscore(str As String)  As String";
+ //BA.debugLineNum = 459;BA.debugLine="str= str.ToLowerCase";
 _str = _str.toLowerCase();
- //BA.debugLineNum = 452;BA.debugLine="Return str.Replace(\" \",  \"_\")";
+ //BA.debugLineNum = 460;BA.debugLine="Return str.Replace(\" \",  \"_\")";
 if (true) return _str.replace(" ","_");
- //BA.debugLineNum = 454;BA.debugLine="End Sub";
+ //BA.debugLineNum = 462;BA.debugLine="End Sub";
 return "";
 }
 public static String  _word_wrap(String _str,int _limit) throws Exception{
@@ -1048,46 +1055,46 @@ int _divval = 0;
 anywheresoftware.b4a.keywords.StringBuilderWrapper _stringbuild = null;
 int _i = 0;
 int _nextval = 0;
- //BA.debugLineNum = 594;BA.debugLine="Sub word_wrap(str As String, limit As Int) As Stri";
- //BA.debugLineNum = 596;BA.debugLine="str = str.Trim";
+ //BA.debugLineNum = 602;BA.debugLine="Sub word_wrap(str As String, limit As Int) As Stri";
+ //BA.debugLineNum = 604;BA.debugLine="str = str.Trim";
 _str = _str.trim();
- //BA.debugLineNum = 598;BA.debugLine="If str.Length = limit Then";
+ //BA.debugLineNum = 606;BA.debugLine="If str.Length = limit Then";
 if (_str.length()==_limit) { 
- //BA.debugLineNum = 600;BA.debugLine="Return str";
+ //BA.debugLineNum = 608;BA.debugLine="Return str";
 if (true) return _str;
  }else {
- //BA.debugLineNum = 604;BA.debugLine="Dim DivVal As Int";
+ //BA.debugLineNum = 612;BA.debugLine="Dim DivVal As Int";
 _divval = 0;
- //BA.debugLineNum = 606;BA.debugLine="Dim stringBuild As StringBuilder";
+ //BA.debugLineNum = 614;BA.debugLine="Dim stringBuild As StringBuilder";
 _stringbuild = new anywheresoftware.b4a.keywords.StringBuilderWrapper();
- //BA.debugLineNum = 607;BA.debugLine="stringBuild.Initialize";
+ //BA.debugLineNum = 615;BA.debugLine="stringBuild.Initialize";
 _stringbuild.Initialize();
- //BA.debugLineNum = 609;BA.debugLine="DivVal =  str.Length / limit";
+ //BA.debugLineNum = 617;BA.debugLine="DivVal =  str.Length / limit";
 _divval = (int) (_str.length()/(double)_limit);
- //BA.debugLineNum = 611;BA.debugLine="For i = 0 To DivVal";
+ //BA.debugLineNum = 619;BA.debugLine="For i = 0 To DivVal";
 {
 final int step9 = 1;
 final int limit9 = _divval;
 _i = (int) (0) ;
 for (;_i <= limit9 ;_i = _i + step9 ) {
- //BA.debugLineNum = 613;BA.debugLine="Dim nextVal As Int = i * limit";
+ //BA.debugLineNum = 621;BA.debugLine="Dim nextVal As Int = i * limit";
 _nextval = (int) (_i*_limit);
- //BA.debugLineNum = 615;BA.debugLine="If i = DivVal Then";
+ //BA.debugLineNum = 623;BA.debugLine="If i = DivVal Then";
 if (_i==_divval) { 
- //BA.debugLineNum = 618;BA.debugLine="stringBuild.Append( str.SubString( nextVal).Tr";
+ //BA.debugLineNum = 626;BA.debugLine="stringBuild.Append( str.SubString( nextVal).Tr";
 _stringbuild.Append(_str.substring(_nextval).trim());
  }else {
- //BA.debugLineNum = 623;BA.debugLine="stringBuild.Append( str.SubString2( nextVal ,";
+ //BA.debugLineNum = 631;BA.debugLine="stringBuild.Append( str.SubString2( nextVal ,";
 _stringbuild.Append(_str.substring(_nextval,(int) (_nextval+_limit)).trim());
- //BA.debugLineNum = 624;BA.debugLine="stringBuild.Append( CRLF)";
+ //BA.debugLineNum = 632;BA.debugLine="stringBuild.Append( CRLF)";
 _stringbuild.Append(anywheresoftware.b4a.keywords.Common.CRLF);
  };
  }
 };
- //BA.debugLineNum = 630;BA.debugLine="Return stringBuild.ToString";
+ //BA.debugLineNum = 638;BA.debugLine="Return stringBuild.ToString";
 if (true) return _stringbuild.ToString();
  };
- //BA.debugLineNum = 634;BA.debugLine="End Sub";
+ //BA.debugLineNum = 642;BA.debugLine="End Sub";
 return "";
 }
 }

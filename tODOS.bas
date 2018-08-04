@@ -12,8 +12,7 @@ End Sub
  
  
  
-  ' ** Custom Theme support 
-   ' **  allow importing of theme from xml file and exporting to xml file 
+  'hANDLE CONTROL RESIZE EveNT FOR EXTERNAL use onresize()
     ' **  Later allow events for controls
 	 ' **  Later support deigner view scripts 
 	  ' **  create abb bar with menu btn...
@@ -21,44 +20,27 @@ End Sub
 	   ' **   Change to using setBG to change background in controls
 	'** set focus to control on click...
 '   instaed of something like  CSSUtils.SetStyleProperty SwitchBtn, "-fx-background-color", color)
-	   ' **   add mime types as a cuppy plugin...
-	  
+	   
 	   ' **   StyleExtender (Apply selected theme propertys to legacy controls)
 '  .NET Framework 4.0 (Client Profile) And later.
-'
-'Controls
-'Button
+ 
 'ComboBox
-'Checkbox
-'RadioButton
-'Toggle
-'Label
+ 
 'SelectableLabel
 'Link
-'Panel
+ 
 'ScrollBar
 'Tile
-'ProgressBar
+ 
 'ProgressSpinner
 'TabControl
 'TrackBar
-'UserControl
-'Components
+ 
+ 
 'StyleManager (Cascading styles And theming)
 'StyleExtender (Apply selected theme propertys To legacy controls)
-'ToolTip
-'Screenshots
-'MetroFramework comes with two stock themes, Light And Dark. These themes are complimented by a selection of style colors To allow further customization. You can easily add your own themes (seee themes.xml).
-'
-'Light
-
-
-
-
-
-
-
-'---------------- Dpencies libary
+   
+   '------------ Dpencies libary
 '*  CSSUtils
 '* Java Object
 '* Jfx
