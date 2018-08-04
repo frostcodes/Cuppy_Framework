@@ -10,7 +10,7 @@ End Sub
 
 'Initializes the object. You can add parameters to this method if needed.
  
- 
+ 'Rename metro controls to Material
  'Once a font instance is created with a specific size, to smart cache in a list
  ' like segeo_light12 for 12 px light font or segeo_black22 for 22px black font
   'hANDLE CONTROL RESIZE EveNT FOR EXTERNAL use onresize()
