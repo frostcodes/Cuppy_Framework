@@ -114,3 +114,8 @@ End Sub
 #End Region
 
 'TODO: make vertical divider
+
+
+Sub line_MousePressed (EventData As MouseEvent)
+	
+End Sub

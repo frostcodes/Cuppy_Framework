@@ -30,6 +30,7 @@ Public Sub DesignerCreateView (Base As Pane, Lbl As Label, Props As Map)
  
 	setTextColor(CFStyleManager.DefaultTheme.Get("primary_text"))
 	InnerLabel.Font = CFStyleManager.SelectFont("Regular", 12)
+	InnerLabel.MouseCursor = fx.Cursors.HAND
 	
 End Sub
 

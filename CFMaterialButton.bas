@@ -7,6 +7,8 @@ Version=5.51
 'Custom View class
  
 #Event: MousePressed (EventData As MouseEvent)
+#Event: MouseEntered (EventData As MouseEvent)
+#Event: MouseExited (EventData As MouseEvent)
 
 #Region Internal Segment
 
@@ -21,15 +23,18 @@ End Sub
 Public Sub Initialize (Callback As Object, EventName As String)
 	mEventName = EventName
 	mCallBack = Callback
-CFStyleManager.ActiveControls.add(EventName)
+CFStyleManager.ActiveControls.add(Me)
 End Sub
 
 Public Sub DesignerCreateView (Base As Pane, Lbl As Label, Props As Map)
+	
 	mBase = Base
 	mBase.LoadLayout("CFMaterialButtonUI")
 	'set using theme...
 	SetBg(CFStyleManager.DefaultTheme.Get("accent"))
 	InnerButton.Font = CFStyleManager.DefaultFont
+	InnerButton.MouseCursor = fx.Cursors.HAND
+	
 End Sub
 
 Private Sub Base_Resize (Width As Double, Height As Double)
@@ -93,4 +98,15 @@ Public Sub InnerButton_MousePressed (EventData As MouseEvent)
 	CallSubDelayed2(mCallBack, mEventName & "_MousePressed", EventData) 'ignore
 	 
 End Sub
+ 
+Sub InnerButton_MouseEntered (EventData As MouseEvent)
+	  
+	CallSubDelayed2(mCallBack, mEventName & "_MouseEntered", EventData) 'ignore
+	 
+End Sub
 
+Sub InnerButton_MouseExited (EventData As MouseEvent)
+	  
+	CallSubDelayed2(mCallBack, mEventName & "_MouseExited", EventData) 'ignore
+	 
+End Sub

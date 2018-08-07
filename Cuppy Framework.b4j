@@ -11,8 +11,21 @@ File14=CFMetroCircleToggleButtonUI.bjl
 File15=CFMetroLinkLabelUI.bjl
 File16=CFMetroToggleButtonUI.bjl
 File17=CFModalUI.bjl
+File18=Roboto-Black.ttf
+File19=Roboto-BlackItalic.ttf
 File2=CFMaterialAppBarUI.bjl
+File20=Roboto-Bold.ttf
+File21=Roboto-BoldItalic.ttf
+File22=Roboto-Italic.ttf
+File23=Roboto-LICENSE.txt
+File24=Roboto-Light.ttf
+File25=Roboto-LightItalic.ttf
+File26=Roboto-Medium.ttf
+File27=Roboto-MediumItalic.ttf
+File28=Roboto-Regular.ttf
+File29=Roboto-Thin.ttf
 File3=CFMaterialButtonUI.bjl
+File30=Roboto-ThinItalic.ttf
 File4=CFMaterialCardUI.bjl
 File5=CFMaterialCheckboxUI.bjl
 File6=CFMaterialChipsUI.bjl
@@ -28,8 +41,21 @@ FileGroup14=UI Layouts\Metro
 FileGroup15=UI Layouts\Metro
 FileGroup16=UI Layouts\Metro
 FileGroup17=UI Layouts\MISC
+FileGroup18=Default Group
+FileGroup19=Default Group
 FileGroup2=UI Layouts\Material UI
+FileGroup20=Default Group
+FileGroup21=Default Group
+FileGroup22=Default Group
+FileGroup23=Default Group
+FileGroup24=Default Group
+FileGroup25=Default Group
+FileGroup26=Default Group
+FileGroup27=Default Group
+FileGroup28=Default Group
+FileGroup29=Default Group
 FileGroup3=UI Layouts\Material UI
+FileGroup30=Default Group
 FileGroup4=UI Layouts\Material UI
 FileGroup5=UI Layouts\Material UI
 FileGroup6=UI Layouts\Material UI
@@ -42,20 +68,20 @@ Library2=jfx
 Library3=cssutils
 Library4=javaobject
 Module1=CFConfigs
-Module10=CFMaterialButton
-Module11=CFFileUtility
-Module12=CFMaterialCard
-Module13=CFMaterialCheckBox
-Module14=CFMaterialRadioBox
-Module15=CFMaterialSwitch
-Module16=CFMaterialLinearProgressBar
-Module17=CFMetroLinkLabel
-Module18=CFMaterialAppBar
-Module19=CFMaterialLabel
+Module10=CFMaterialSquareFAB
+Module11=CFBarPreLoader
+Module12=CFMaterialChips
+Module13=CFMaterialFAB
+Module14=CFFileUtility
+Module15=CFMaterialCard
+Module16=CFMaterialRadioBox
+Module17=CFMaterialSwitch
+Module18=CFMaterialLinearProgressBar
+Module19=CFMetroLinkLabel
 Module2=tODOS
-Module20=CFMetroToggleButton
-Module21=CFMetroCircleToggleButton
-Module22=CFStringUtility
+Module20=CFMaterialLabel
+Module21=CFMetroToggleButton
+Module22=CFMetroCircleToggleButton
 Module23=CFMathUtility
 Module24=CFDataTypeUtility
 Module25=CFAnimationManager
@@ -67,12 +93,12 @@ Module3=CFStyleManager
 Module30=CFHtmlUtility
 Module31=CFModal
 Module4=CFThemes
-Module5=CFMaterialSquareFAB
-Module6=CFBarPreLoader
-Module7=CFMaterialChips
-Module8=CFMaterialDivider
-Module9=CFMaterialFAB
-NumberOfFiles=17
+Module5=CFMaterialCheckBox
+Module6=CFMaterialDivider
+Module7=CFStringUtility
+Module8=CFMaterialButton
+Module9=CFMaterialAppBar
+NumberOfFiles=30
 NumberOfLibraries=4
 NumberOfModules=31
 Version=6.3
@@ -82,10 +108,16 @@ Version=6.3
 'Meta datas ... also defined in Configs for app usage.
 #LcdFontSmoothing: True
 'Copyright to Oluwaseyi Aderinkomi < Frost Codes >  - seyiaderinkomi@gmail.com
+
+'Contributors:
+'Mash Mbanga < Mashy >  - Lead Contributor - anele@mbangas.com
 #LibraryAuthor: Punchline Technologies
 #LibraryName: Cuppy Framework
-#LibraryVersion: 1.0
-  
+#LibraryVersion: 1.02
+#AdditionalJar: FontAwesome
+#AdditionalJar: MaterialIcons
+#AdditionalJar: CFResources.jar
+ 
 #End Region
 
 Sub Process_Globals
@@ -93,7 +125,7 @@ Sub Process_Globals
 End Sub
 
 Sub AppStart (form1 As Form, Args() As String)
-  
+   
 End Sub
 
 'Return true to allow the default exceptions handler to handle the uncaught exception.

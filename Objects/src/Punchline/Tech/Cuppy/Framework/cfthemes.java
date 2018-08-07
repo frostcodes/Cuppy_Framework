@@ -27,8 +27,8 @@ public class cfthemes extends B4AClass.ImplB4AClass implements BA.SubDelegator{
 public b4j.example.cssutils _cssutils = null;
 public Punchline.Tech.Cuppy.Framework.cfconfigs _cfconfigs = null;
 public Punchline.Tech.Cuppy.Framework.cfstylemanager _cfstylemanager = null;
-public Punchline.Tech.Cuppy.Framework.cffileutility _cffileutility = null;
 public Punchline.Tech.Cuppy.Framework.cfstringutility _cfstringutility = null;
+public Punchline.Tech.Cuppy.Framework.cffileutility _cffileutility = null;
 public Punchline.Tech.Cuppy.Framework.cfmathutility _cfmathutility = null;
 public Punchline.Tech.Cuppy.Framework.cfdatatypeutility _cfdatatypeutility = null;
 public Punchline.Tech.Cuppy.Framework.cfanimationmanager _cfanimationmanager = null;
