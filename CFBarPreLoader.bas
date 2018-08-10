@@ -8,6 +8,7 @@ Version=5.51
  #If trial
   
 #Event: MousePressed (EventData As MouseEvent)
+
 #RaisesSynchronousEvents: MousePressed (EventData As MouseEvent)
 
 #Region Internal Segment
