@@ -11,8 +11,6 @@ Version=5.51
 'https://material.io/design/components/progress-indicators.html#circular-progress-indicators
 
 #Event: ProgressFinished
-
-#RaisesSynchronousEvents: ProgressFinished
  
 #Region Internal Segment
 

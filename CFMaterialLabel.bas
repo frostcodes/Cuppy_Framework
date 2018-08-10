@@ -7,8 +7,7 @@ Version=5.51
 'Custom View class
  
 #Event: MousePressed (EventData As MouseEvent)
-#RaisesSynchronousEvents: MousePressed (EventData As MouseEvent)
- 
+
 #Region Internal Segment
 
 Sub Class_Globals

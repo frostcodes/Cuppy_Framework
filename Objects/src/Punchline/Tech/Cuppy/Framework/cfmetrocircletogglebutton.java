@@ -46,150 +46,150 @@ public Punchline.Tech.Cuppy.Framework.cfapputility _cfapputility = null;
 public Punchline.Tech.Cuppy.Framework.cfcontrolsutils _cfcontrolsutils = null;
 public Punchline.Tech.Cuppy.Framework.cfhtmlutility _cfhtmlutility = null;
 public String  _base_resize(double _width,double _height) throws Exception{
- //BA.debugLineNum = 39;BA.debugLine="Private Sub Base_Resize (Width As Double, Height A";
- //BA.debugLineNum = 43;BA.debugLine="ToggleButton.PrefHeight = Width";
+ //BA.debugLineNum = 36;BA.debugLine="Private Sub Base_Resize (Width As Double, Height A";
+ //BA.debugLineNum = 40;BA.debugLine="ToggleButton.PrefHeight = Width";
 _togglebutton.setPrefHeight(_width);
- //BA.debugLineNum = 44;BA.debugLine="ToggleButton.PrefWidth = Width";
+ //BA.debugLineNum = 41;BA.debugLine="ToggleButton.PrefWidth = Width";
 _togglebutton.setPrefWidth(_width);
- //BA.debugLineNum = 46;BA.debugLine="End Sub";
+ //BA.debugLineNum = 43;BA.debugLine="End Sub";
 return "";
 }
 public boolean  _checked() throws Exception{
- //BA.debugLineNum = 122;BA.debugLine="Public Sub checked As Boolean";
- //BA.debugLineNum = 124;BA.debugLine="Return CheckedStatus";
+ //BA.debugLineNum = 119;BA.debugLine="Public Sub checked As Boolean";
+ //BA.debugLineNum = 121;BA.debugLine="Return CheckedStatus";
 if (true) return _checkedstatus;
- //BA.debugLineNum = 126;BA.debugLine="End Sub";
+ //BA.debugLineNum = 123;BA.debugLine="End Sub";
 return false;
 }
 public String  _class_globals() throws Exception{
- //BA.debugLineNum = 11;BA.debugLine="Sub Class_Globals";
- //BA.debugLineNum = 12;BA.debugLine="Private fx As JFX";
+ //BA.debugLineNum = 8;BA.debugLine="Sub Class_Globals";
+ //BA.debugLineNum = 9;BA.debugLine="Private fx As JFX";
 _fx = new anywheresoftware.b4j.objects.JFX();
- //BA.debugLineNum = 13;BA.debugLine="Private mEventName As String 'ignore";
+ //BA.debugLineNum = 10;BA.debugLine="Private mEventName As String 'ignore";
 _meventname = "";
- //BA.debugLineNum = 14;BA.debugLine="Private mCallBack As Object 'ignore";
+ //BA.debugLineNum = 11;BA.debugLine="Private mCallBack As Object 'ignore";
 _mcallback = new Object();
- //BA.debugLineNum = 15;BA.debugLine="Private mBase As Pane";
+ //BA.debugLineNum = 12;BA.debugLine="Private mBase As Pane";
 _mbase = new anywheresoftware.b4j.objects.PaneWrapper.ConcretePaneWrapper();
- //BA.debugLineNum = 18;BA.debugLine="Public CHECKED_STATE As Int = 1";
+ //BA.debugLineNum = 15;BA.debugLine="Public CHECKED_STATE As Int = 1";
 _checked_state = (int) (1);
- //BA.debugLineNum = 19;BA.debugLine="Public UNCHECKED_STATE As Int = 0";
+ //BA.debugLineNum = 16;BA.debugLine="Public UNCHECKED_STATE As Int = 0";
 _unchecked_state = (int) (0);
- //BA.debugLineNum = 21;BA.debugLine="Private CheckedStatus As Boolean = False";
+ //BA.debugLineNum = 18;BA.debugLine="Private CheckedStatus As Boolean = False";
 _checkedstatus = __c.False;
- //BA.debugLineNum = 22;BA.debugLine="Public ToggleButton As Label";
+ //BA.debugLineNum = 19;BA.debugLine="Public ToggleButton As Label";
 _togglebutton = new anywheresoftware.b4j.objects.LabelWrapper();
- //BA.debugLineNum = 23;BA.debugLine="End Sub";
+ //BA.debugLineNum = 20;BA.debugLine="End Sub";
 return "";
 }
 public String  _designercreateview(anywheresoftware.b4j.objects.PaneWrapper.ConcretePaneWrapper _base,anywheresoftware.b4j.objects.LabelWrapper _lbl,anywheresoftware.b4a.objects.collections.Map _props) throws Exception{
- //BA.debugLineNum = 30;BA.debugLine="Public Sub DesignerCreateView (Base As Pane, Lbl A";
- //BA.debugLineNum = 31;BA.debugLine="mBase = Base";
+ //BA.debugLineNum = 27;BA.debugLine="Public Sub DesignerCreateView (Base As Pane, Lbl A";
+ //BA.debugLineNum = 28;BA.debugLine="mBase = Base";
 _mbase = _base;
- //BA.debugLineNum = 32;BA.debugLine="mBase.LoadLayout(\"CFMetroCircleToggleButtonUI\")";
+ //BA.debugLineNum = 29;BA.debugLine="mBase.LoadLayout(\"CFMetroCircleToggleButtonUI\")";
 _mbase.LoadLayout(ba,"CFMetroCircleToggleButtonUI");
- //BA.debugLineNum = 35;BA.debugLine="setCheckState(UNCHECKED_STATE) 'set initial value";
+ //BA.debugLineNum = 32;BA.debugLine="setCheckState(UNCHECKED_STATE) 'set initial value";
 _setcheckstate(_unchecked_state);
- //BA.debugLineNum = 37;BA.debugLine="End Sub";
+ //BA.debugLineNum = 34;BA.debugLine="End Sub";
 return "";
 }
 public anywheresoftware.b4j.objects.PaneWrapper.ConcretePaneWrapper  _getbase() throws Exception{
- //BA.debugLineNum = 48;BA.debugLine="Public Sub GetBase As Pane";
- //BA.debugLineNum = 49;BA.debugLine="Return mBase";
+ //BA.debugLineNum = 45;BA.debugLine="Public Sub GetBase As Pane";
+ //BA.debugLineNum = 46;BA.debugLine="Return mBase";
 if (true) return _mbase;
- //BA.debugLineNum = 50;BA.debugLine="End Sub";
+ //BA.debugLineNum = 47;BA.debugLine="End Sub";
 return null;
 }
 public String  _initialize(anywheresoftware.b4a.BA _ba,Object _callback,String _eventname) throws Exception{
 innerInitialize(_ba);
- //BA.debugLineNum = 25;BA.debugLine="Public Sub Initialize (Callback As Object, EventNa";
- //BA.debugLineNum = 26;BA.debugLine="mEventName = EventName";
+ //BA.debugLineNum = 22;BA.debugLine="Public Sub Initialize (Callback As Object, EventNa";
+ //BA.debugLineNum = 23;BA.debugLine="mEventName = EventName";
 _meventname = _eventname;
- //BA.debugLineNum = 27;BA.debugLine="mCallBack = Callback";
+ //BA.debugLineNum = 24;BA.debugLine="mCallBack = Callback";
 _mcallback = _callback;
- //BA.debugLineNum = 28;BA.debugLine="End Sub";
+ //BA.debugLineNum = 25;BA.debugLine="End Sub";
 return "";
 }
 public String  _removeeffects() throws Exception{
- //BA.debugLineNum = 86;BA.debugLine="Public Sub removeEffects()";
- //BA.debugLineNum = 88;BA.debugLine="CFControlsUtils.removeEffect(ToggleButton)";
+ //BA.debugLineNum = 83;BA.debugLine="Public Sub removeEffects()";
+ //BA.debugLineNum = 85;BA.debugLine="CFControlsUtils.removeEffect(ToggleButton)";
 _cfcontrolsutils._removeeffect((anywheresoftware.b4j.objects.NodeWrapper.ControlWrapper.ConcreteControlWrapper) anywheresoftware.b4a.AbsObjectWrapper.ConvertToWrapper(new anywheresoftware.b4j.objects.NodeWrapper.ControlWrapper.ConcreteControlWrapper(), (javafx.scene.control.Control)(_togglebutton.getObject())));
- //BA.debugLineNum = 90;BA.debugLine="End Sub";
+ //BA.debugLineNum = 87;BA.debugLine="End Sub";
 return "";
 }
 public String  _setbg(String _color) throws Exception{
- //BA.debugLineNum = 56;BA.debugLine="Public Sub SetBg(color As String)";
- //BA.debugLineNum = 58;BA.debugLine="CFControlsUtils.setBG(ToggleButton, color)";
+ //BA.debugLineNum = 53;BA.debugLine="Public Sub SetBg(color As String)";
+ //BA.debugLineNum = 55;BA.debugLine="CFControlsUtils.setBG(ToggleButton, color)";
 _cfcontrolsutils._setbg((anywheresoftware.b4j.objects.NodeWrapper.ControlWrapper.ConcreteControlWrapper) anywheresoftware.b4a.AbsObjectWrapper.ConvertToWrapper(new anywheresoftware.b4j.objects.NodeWrapper.ControlWrapper.ConcreteControlWrapper(), (javafx.scene.control.Control)(_togglebutton.getObject())),_color);
- //BA.debugLineNum = 60;BA.debugLine="End Sub";
+ //BA.debugLineNum = 57;BA.debugLine="End Sub";
 return "";
 }
 public String  _setborder(String _color,int _width) throws Exception{
- //BA.debugLineNum = 68;BA.debugLine="Public Sub setBorder(color As String , width As In";
- //BA.debugLineNum = 70;BA.debugLine="CFControlsUtils.setBorder(ToggleButton, color, wi";
+ //BA.debugLineNum = 65;BA.debugLine="Public Sub setBorder(color As String , width As In";
+ //BA.debugLineNum = 67;BA.debugLine="CFControlsUtils.setBorder(ToggleButton, color, wi";
 _cfcontrolsutils._setborder((anywheresoftware.b4j.objects.NodeWrapper.ControlWrapper.ConcreteControlWrapper) anywheresoftware.b4a.AbsObjectWrapper.ConvertToWrapper(new anywheresoftware.b4j.objects.NodeWrapper.ControlWrapper.ConcreteControlWrapper(), (javafx.scene.control.Control)(_togglebutton.getObject())),_color,_width);
- //BA.debugLineNum = 72;BA.debugLine="End Sub";
+ //BA.debugLineNum = 69;BA.debugLine="End Sub";
 return "";
 }
 public String  _setborderradius(int _radius) throws Exception{
- //BA.debugLineNum = 74;BA.debugLine="Public Sub setBorderRadius(radius As Int)";
- //BA.debugLineNum = 76;BA.debugLine="CFControlsUtils.setBorderRadius(ToggleButton, rad";
+ //BA.debugLineNum = 71;BA.debugLine="Public Sub setBorderRadius(radius As Int)";
+ //BA.debugLineNum = 73;BA.debugLine="CFControlsUtils.setBorderRadius(ToggleButton, rad";
 _cfcontrolsutils._setborderradius((anywheresoftware.b4j.objects.NodeWrapper.ControlWrapper.ConcreteControlWrapper) anywheresoftware.b4a.AbsObjectWrapper.ConvertToWrapper(new anywheresoftware.b4j.objects.NodeWrapper.ControlWrapper.ConcreteControlWrapper(), (javafx.scene.control.Control)(_togglebutton.getObject())),_radius);
- //BA.debugLineNum = 78;BA.debugLine="End Sub";
+ //BA.debugLineNum = 75;BA.debugLine="End Sub";
 return "";
 }
 public String  _setcheckstate(int _value) throws Exception{
- //BA.debugLineNum = 94;BA.debugLine="Public Sub setCheckState(value As Int)";
- //BA.debugLineNum = 96;BA.debugLine="If value = UNCHECKED_STATE Then";
+ //BA.debugLineNum = 91;BA.debugLine="Public Sub setCheckState(value As Int)";
+ //BA.debugLineNum = 93;BA.debugLine="If value = UNCHECKED_STATE Then";
 if (_value==_unchecked_state) { 
- //BA.debugLineNum = 98;BA.debugLine="SetBg(\"white\")";
+ //BA.debugLineNum = 95;BA.debugLine="SetBg(\"white\")";
 _setbg("white");
- //BA.debugLineNum = 99;BA.debugLine="setBorder(\"#D6D6D6\", 2)";
+ //BA.debugLineNum = 96;BA.debugLine="setBorder(\"#D6D6D6\", 2)";
 _setborder("#D6D6D6",(int) (2));
- //BA.debugLineNum = 101;BA.debugLine="ToggleButton.TextColor = fx.Colors.RGB(91, 91, 9";
+ //BA.debugLineNum = 98;BA.debugLine="ToggleButton.TextColor = fx.Colors.RGB(91, 91, 9";
 _togglebutton.setTextColor((javafx.scene.paint.Paint)(_fx.Colors.RGB((int) (91),(int) (91),(int) (91))));
- //BA.debugLineNum = 103;BA.debugLine="CheckedStatus = False";
+ //BA.debugLineNum = 100;BA.debugLine="CheckedStatus = False";
 _checkedstatus = __c.False;
  }else if(_value==_checked_state) { 
- //BA.debugLineNum = 108;BA.debugLine="setBorder(\"#2EA9DE\", 2)";
+ //BA.debugLineNum = 105;BA.debugLine="setBorder(\"#2EA9DE\", 2)";
 _setborder("#2EA9DE",(int) (2));
- //BA.debugLineNum = 109;BA.debugLine="SetBg(\"rgb(65, 177, 225 )\")";
+ //BA.debugLineNum = 106;BA.debugLine="SetBg(\"rgb(65, 177, 225 )\")";
 _setbg("rgb(65, 177, 225 )");
- //BA.debugLineNum = 111;BA.debugLine="ToggleButton.TextColor = fx.Colors.White";
+ //BA.debugLineNum = 108;BA.debugLine="ToggleButton.TextColor = fx.Colors.White";
 _togglebutton.setTextColor(_fx.Colors.White);
- //BA.debugLineNum = 113;BA.debugLine="CheckedStatus = True";
+ //BA.debugLineNum = 110;BA.debugLine="CheckedStatus = True";
 _checkedstatus = __c.True;
  };
- //BA.debugLineNum = 118;BA.debugLine="CallSubDelayed2(mCallBack, mEventName & \"_Checked";
+ //BA.debugLineNum = 115;BA.debugLine="CallSubDelayed2(mCallBack, mEventName & \"_Checked";
 __c.CallSubDelayed2(ba,_mcallback,_meventname+"_CheckedChanged",(Object)(_value));
- //BA.debugLineNum = 120;BA.debugLine="End Sub";
+ //BA.debugLineNum = 117;BA.debugLine="End Sub";
 return "";
 }
 public String  _setpaneeffect(String _effect) throws Exception{
- //BA.debugLineNum = 80;BA.debugLine="Public Sub setPaneEffect(effect As String)";
- //BA.debugLineNum = 82;BA.debugLine="CFControlsUtils.setEffect(ToggleButton, effect)";
+ //BA.debugLineNum = 77;BA.debugLine="Public Sub setPaneEffect(effect As String)";
+ //BA.debugLineNum = 79;BA.debugLine="CFControlsUtils.setEffect(ToggleButton, effect)";
 _cfcontrolsutils._seteffect((anywheresoftware.b4j.objects.NodeWrapper.ControlWrapper.ConcreteControlWrapper) anywheresoftware.b4a.AbsObjectWrapper.ConvertToWrapper(new anywheresoftware.b4j.objects.NodeWrapper.ControlWrapper.ConcreteControlWrapper(), (javafx.scene.control.Control)(_togglebutton.getObject())),_effect);
- //BA.debugLineNum = 84;BA.debugLine="End Sub";
+ //BA.debugLineNum = 81;BA.debugLine="End Sub";
 return "";
 }
 public String  _setrotationx(float _angle) throws Exception{
- //BA.debugLineNum = 62;BA.debugLine="Public Sub setRotationX(angle As Float)";
- //BA.debugLineNum = 64;BA.debugLine="CFControlsUtils.setRotationX(ToggleButton, angle)";
+ //BA.debugLineNum = 59;BA.debugLine="Public Sub setRotationX(angle As Float)";
+ //BA.debugLineNum = 61;BA.debugLine="CFControlsUtils.setRotationX(ToggleButton, angle)";
 _cfcontrolsutils._setrotationx((anywheresoftware.b4j.objects.NodeWrapper.ControlWrapper.ConcreteControlWrapper) anywheresoftware.b4a.AbsObjectWrapper.ConvertToWrapper(new anywheresoftware.b4j.objects.NodeWrapper.ControlWrapper.ConcreteControlWrapper(), (javafx.scene.control.Control)(_togglebutton.getObject())),_angle);
- //BA.debugLineNum = 66;BA.debugLine="End Sub";
+ //BA.debugLineNum = 63;BA.debugLine="End Sub";
 return "";
 }
 public String  _togglebutton_mousepressed(anywheresoftware.b4j.objects.NodeWrapper.MouseEventWrapper _eventdata) throws Exception{
- //BA.debugLineNum = 128;BA.debugLine="Sub ToggleButton_MousePressed (EventData As MouseE";
- //BA.debugLineNum = 130;BA.debugLine="If Not(checked) Then";
+ //BA.debugLineNum = 125;BA.debugLine="Sub ToggleButton_MousePressed (EventData As MouseE";
+ //BA.debugLineNum = 127;BA.debugLine="If Not(checked) Then";
 if (__c.Not(_checked())) { 
- //BA.debugLineNum = 132;BA.debugLine="setCheckState(CHECKED_STATE)";
+ //BA.debugLineNum = 129;BA.debugLine="setCheckState(CHECKED_STATE)";
 _setcheckstate(_checked_state);
  }else {
- //BA.debugLineNum = 136;BA.debugLine="setCheckState(UNCHECKED_STATE)";
+ //BA.debugLineNum = 133;BA.debugLine="setCheckState(UNCHECKED_STATE)";
 _setcheckstate(_unchecked_state);
  };
- //BA.debugLineNum = 140;BA.debugLine="End Sub";
+ //BA.debugLineNum = 137;BA.debugLine="End Sub";
 return "";
 }
 public Object callSub(String sub, Object sender, Object[] args) throws Exception {
