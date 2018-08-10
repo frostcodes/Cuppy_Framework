@@ -5,6 +5,15 @@ Type=Class
 Version=5.51
 @EndOfDesignText@
 'Custom View class
+
+#Event: MousePressed (EventData As MouseEvent)
+#Event: MouseEntered (EventData As MouseEvent)
+#Event: MouseExited (EventData As MouseEvent)
+
+#RaisesSynchronousEvents: MousePressed (EventData As MouseEvent)
+#RaisesSynchronousEvents: MouseEntered (EventData As MouseEvent)
+#RaisesSynchronousEvents: MouseExited (EventData As MouseEvent)
+
 #Region Internal Segment
 
 Sub Class_Globals
@@ -87,44 +96,23 @@ End Sub
 
 #End Region
 
-
 'hover effect
-Sub FAB_Btn_MouseMoved (EventData As MouseEvent)
+ 'FAB_Btn.SetAlphaAnimated(300, 0.8)
+ 
+Sub FAB_Btn_MousePressed (EventData As MouseEvent)
 	
-	'FAB_Btn.SetAlphaAnimated(300, 0.8)
- 
-End Sub
- 
-Sub FAB_Btn_MouseReleased (EventData As MouseEvent)
- 
-	'	FAB_Btn.SetAlphaAnimated(300, 0.9)
-	'
-	'	If  EventData.PrimaryButtonDown Then
-	'
-	''		FAB_Btn.SetAlphaAnimated(300, 0.9)
-	'		Log(11147687)
-	'		FAB_Btn.SetAlphaAnimated(200,1)
-	'
-	'
-	'	Else
-	'
-	'		Log(9447687)
-	'	'	FAB_Btn.SetAlphaAnimated(300, 0.9)
-	'
-	' 	FAB_Btn.SetAlphaAnimated(200,1)
-	'
-	'	End If
-	
+	CallSubDelayed2(mCallBack, mEventName & "_MousePressed", EventData)  
 	
 End Sub
 
-Sub FAB_Btn_FocusChanged (HasFocus As Boolean)
-	'
-	'	If Not(HasFocus) Then
-	'
-	'		Log(65447687)
-	'		FAB_Btn.SetAlphaAnimated(200,1)
-	'
-	'	End If
+Sub FAB_Btn_MouseEntered (EventData As MouseEvent)
+	
+	CallSubDelayed2(mCallBack, mEventName & "_MouseEntered", EventData)  
+	
+End Sub
+
+Sub FAB_Btn_MouseExited (EventData As MouseEvent)
+	
+	CallSubDelayed2(mCallBack, mEventName & "_MouseExited", EventData) 
 	
 End Sub

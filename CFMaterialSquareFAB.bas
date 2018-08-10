@@ -6,6 +6,14 @@ Version=5.51
 @EndOfDesignText@
 'Custom View class
 
+#Event: MousePressed (EventData As MouseEvent)
+#Event: MouseEntered (EventData As MouseEvent)
+#Event: MouseExited (EventData As MouseEvent)
+
+#RaisesSynchronousEvents: MousePressed (EventData As MouseEvent)
+#RaisesSynchronousEvents: MouseEntered (EventData As MouseEvent)
+#RaisesSynchronousEvents: MouseExited (EventData As MouseEvent)
+
 #Region Internal Segment
 
 Sub Class_Globals
@@ -84,4 +92,22 @@ Public Sub removeEffects()
 End Sub
 
 #End Region
-  
+
+
+Sub FAB_Btn_MousePressed (EventData As MouseEvent)
+	
+	CallSubDelayed2(mCallBack, mEventName & "_MousePressed", EventData)
+	
+End Sub
+
+Sub FAB_Btn_MouseEntered (EventData As MouseEvent)
+	
+	CallSubDelayed2(mCallBack, mEventName & "_MouseEntered", EventData)
+	
+End Sub
+
+Sub FAB_Btn_MouseExited (EventData As MouseEvent)
+	
+	CallSubDelayed2(mCallBack, mEventName & "_MouseExited", EventData)
+	
+End Sub 
