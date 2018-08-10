@@ -9,6 +9,8 @@ Version=5.51
 #Event: ModalBGPressed (EventData As MouseEvent)
 #Event: ModalPressed (EventData As MouseEvent)
 
+#RaisesSynchronousEvents: ModalBGPressed (EventData As MouseEvent)
+#RaisesSynchronousEvents: ModalPressed (EventData As MouseEvent)
 
 #Region Internal Segment
 
