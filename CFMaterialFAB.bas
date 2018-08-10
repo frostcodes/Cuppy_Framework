@@ -23,8 +23,11 @@ End Sub
 Public Sub DesignerCreateView (Base As Pane, Lbl As Label, Props As Map)
 	mBase = Base
 	mBase.LoadLayout("CFMaterialFABUI")
+	
 	'set using theme...
 	SetBg(CFStyleManager.DefaultTheme.Get("accent"))
+	FAB_Btn.MouseCursor = fx.Cursors.HAND
+	
 End Sub
 
 Private Sub Base_Resize (Width As Double, Height As Double)
