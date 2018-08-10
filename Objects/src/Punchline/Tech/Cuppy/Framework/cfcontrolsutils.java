@@ -22,20 +22,20 @@ static {
 	}
 
  public static anywheresoftware.b4a.keywords.Common __c = null;
-public static anywheresoftware.b4j.objects.JFX _fx = null;
-public static b4j.example.cssutils _cssutils = null;
-public static Punchline.Tech.Cuppy.Framework.cfconfigs _cfconfigs = null;
-public static Punchline.Tech.Cuppy.Framework.cfstylemanager _cfstylemanager = null;
-public static Punchline.Tech.Cuppy.Framework.cfstringutility _cfstringutility = null;
-public static Punchline.Tech.Cuppy.Framework.cffileutility _cffileutility = null;
-public static Punchline.Tech.Cuppy.Framework.cfmathutility _cfmathutility = null;
-public static Punchline.Tech.Cuppy.Framework.cfdatatypeutility _cfdatatypeutility = null;
-public static Punchline.Tech.Cuppy.Framework.cfanimationmanager _cfanimationmanager = null;
-public static Punchline.Tech.Cuppy.Framework.cflicensemanager _cflicensemanager = null;
-public static Punchline.Tech.Cuppy.Framework.cfdatageneratorutility _cfdatageneratorutility = null;
-public static Punchline.Tech.Cuppy.Framework.cfapputility _cfapputility = null;
-public static Punchline.Tech.Cuppy.Framework.cfhtmlutility _cfhtmlutility = null;
-public static String  _addcontroltooltip(anywheresoftware.b4j.objects.NodeWrapper.ControlWrapper.ConcreteControlWrapper _controlobj,String _msg) throws Exception{
+public static anywheresoftware.b4j.objects.JFX _vvvvvvvvvvvvvvvv2 = null;
+public static b4j.example.cssutils _vvvvvvvvvvvvvvvv3 = null;
+public static Punchline.Tech.Cuppy.Framework.cfconfigs _vvvvvvvvvvvvvvvv4 = null;
+public static Punchline.Tech.Cuppy.Framework.cfstylemanager _vvvvvvvvvvvvvvvv5 = null;
+public static Punchline.Tech.Cuppy.Framework.cfstringutility _vvvvvvvvvvvvvvvv6 = null;
+public static Punchline.Tech.Cuppy.Framework.cffileutility _vvvvvvvvvvvvvvvv7 = null;
+public static Punchline.Tech.Cuppy.Framework.cfmathutility _vvvvvvvvvvvvvvvv0 = null;
+public static Punchline.Tech.Cuppy.Framework.cfdatatypeutility _vvvvvvvvvvvvvvvvv1 = null;
+public static Punchline.Tech.Cuppy.Framework.cfanimationmanager _vvvvvvvvvvvvvvvvv2 = null;
+public static Punchline.Tech.Cuppy.Framework.cflicensemanager _vvvvvvvvvvvvvvvvv3 = null;
+public static Punchline.Tech.Cuppy.Framework.cfdatageneratorutility _vvvvvvvvvvvvvvvvv4 = null;
+public static Punchline.Tech.Cuppy.Framework.cfapputility _vvvvvvvvvvvvvvvvv5 = null;
+public static Punchline.Tech.Cuppy.Framework.cfhtmlutility _vvvvvvvvvvvvvvvvv7 = null;
+public static String  _vvvvvvvvvvvvv5(anywheresoftware.b4j.objects.NodeWrapper.ControlWrapper.ConcreteControlWrapper _controlobj,String _msg) throws Exception{
 anywheresoftware.b4j.object.JavaObject _jotooltip = null;
 anywheresoftware.b4j.object.JavaObject _jotooltip2 = null;
  //BA.debugLineNum = 138;BA.debugLine="Public Sub addControlToolTip(ControlObj As Control";
@@ -49,7 +49,7 @@ _jotooltip.RunMethod("install",new Object[]{(Object)(_controlobj.getObject()),(O
  //BA.debugLineNum = 144;BA.debugLine="End Sub";
 return "";
 }
-public static String  _addimageviewtooltip(anywheresoftware.b4j.objects.ImageViewWrapper _controlobj,String _msg) throws Exception{
+public static String  _vvvvvvvvvvvvv6(anywheresoftware.b4j.objects.ImageViewWrapper _controlobj,String _msg) throws Exception{
 anywheresoftware.b4j.object.JavaObject _jotooltip = null;
 anywheresoftware.b4j.object.JavaObject _jotooltip2 = null;
  //BA.debugLineNum = 114;BA.debugLine="Public Sub addImageViewToolTip(ControlObj As Image";
@@ -63,7 +63,7 @@ _jotooltip.RunMethod("install",new Object[]{(Object)(_controlobj.getObject()),(O
  //BA.debugLineNum = 121;BA.debugLine="End Sub";
 return "";
 }
-public static String  _addpanetooltip(anywheresoftware.b4j.objects.PaneWrapper.ConcretePaneWrapper _panelobj,String _msg) throws Exception{
+public static String  _vvvvvvvvvvvvv7(anywheresoftware.b4j.objects.PaneWrapper.ConcretePaneWrapper _panelobj,String _msg) throws Exception{
 anywheresoftware.b4j.object.JavaObject _jotooltip = null;
 anywheresoftware.b4j.object.JavaObject _jotooltip2 = null;
  //BA.debugLineNum = 161;BA.debugLine="Public Sub addPaneToolTip(PanelObj As Pane, msg As";
@@ -77,28 +77,28 @@ _jotooltip.RunMethod("install",new Object[]{(Object)(_panelobj.getObject()),(Obj
  //BA.debugLineNum = 167;BA.debugLine="End Sub";
 return "";
 }
-public static String  _getbg(anywheresoftware.b4j.objects.NodeWrapper.ControlWrapper.ConcreteControlWrapper _controlobj) throws Exception{
+public static String  _vvvvvvvvvvvvv0(anywheresoftware.b4j.objects.NodeWrapper.ControlWrapper.ConcreteControlWrapper _controlobj) throws Exception{
  //BA.debugLineNum = 103;BA.debugLine="Public Sub getBG(controlObj As Control) As String";
  //BA.debugLineNum = 105;BA.debugLine="Return CSSUtils.GetStyleProperty(controlObj, \"-fx";
-if (true) return _cssutils._getstyleproperty((anywheresoftware.b4j.objects.NodeWrapper.ConcreteNodeWrapper) anywheresoftware.b4a.AbsObjectWrapper.ConvertToWrapper(new anywheresoftware.b4j.objects.NodeWrapper.ConcreteNodeWrapper(), (javafx.scene.Node)(_controlobj.getObject())),"-fx-background-color");
+if (true) return _vvvvvvvvvvvvvvvv3._getstyleproperty((anywheresoftware.b4j.objects.NodeWrapper.ConcreteNodeWrapper) anywheresoftware.b4a.AbsObjectWrapper.ConvertToWrapper(new anywheresoftware.b4j.objects.NodeWrapper.ConcreteNodeWrapper(), (javafx.scene.Node)(_controlobj.getObject())),"-fx-background-color");
  //BA.debugLineNum = 107;BA.debugLine="End Sub";
 return "";
 }
-public static String  _getpanebg(anywheresoftware.b4j.objects.PaneWrapper.ConcretePaneWrapper _paneobj) throws Exception{
+public static String  _vvvvvvvvvvvvvv1(anywheresoftware.b4j.objects.PaneWrapper.ConcretePaneWrapper _paneobj) throws Exception{
  //BA.debugLineNum = 97;BA.debugLine="Public Sub getPaneBG(PaneObj As Pane) As String";
  //BA.debugLineNum = 99;BA.debugLine="Return CSSUtils.GetStyleProperty(PaneObj, \"-fx-ba";
-if (true) return _cssutils._getstyleproperty((anywheresoftware.b4j.objects.NodeWrapper.ConcreteNodeWrapper) anywheresoftware.b4a.AbsObjectWrapper.ConvertToWrapper(new anywheresoftware.b4j.objects.NodeWrapper.ConcreteNodeWrapper(), (javafx.scene.Node)(_paneobj.getObject())),"-fx-background-color");
+if (true) return _vvvvvvvvvvvvvvvv3._getstyleproperty((anywheresoftware.b4j.objects.NodeWrapper.ConcreteNodeWrapper) anywheresoftware.b4a.AbsObjectWrapper.ConvertToWrapper(new anywheresoftware.b4j.objects.NodeWrapper.ConcreteNodeWrapper(), (javafx.scene.Node)(_paneobj.getObject())),"-fx-background-color");
  //BA.debugLineNum = 101;BA.debugLine="End Sub";
 return "";
 }
 public static String  _process_globals() throws Exception{
  //BA.debugLineNum = 2;BA.debugLine="Private Sub Process_Globals";
  //BA.debugLineNum = 3;BA.debugLine="Private fx As JFX";
-_fx = new anywheresoftware.b4j.objects.JFX();
+_vvvvvvvvvvvvvvvv2 = new anywheresoftware.b4j.objects.JFX();
  //BA.debugLineNum = 4;BA.debugLine="End Sub";
 return "";
 }
-public static String  _removecontroltooltip(anywheresoftware.b4j.objects.NodeWrapper.ControlWrapper.ConcreteControlWrapper _controlobj) throws Exception{
+public static String  _vvvvvvvvvvvvvv2(anywheresoftware.b4j.objects.NodeWrapper.ControlWrapper.ConcreteControlWrapper _controlobj) throws Exception{
 anywheresoftware.b4j.object.JavaObject _jotooltip = null;
 anywheresoftware.b4j.object.JavaObject _jotooltip2 = null;
  //BA.debugLineNum = 149;BA.debugLine="Public Sub removeControlToolTip(ControlObj As Cont";
@@ -112,14 +112,14 @@ _jotooltip.RunMethod("uninstall",new Object[]{(Object)(_controlobj.getObject()),
  //BA.debugLineNum = 156;BA.debugLine="End Sub";
 return "";
 }
-public static String  _removeeffect(anywheresoftware.b4j.objects.NodeWrapper.ControlWrapper.ConcreteControlWrapper _controlobj) throws Exception{
+public static String  _vvvvvvvvvvvvvv3(anywheresoftware.b4j.objects.NodeWrapper.ControlWrapper.ConcreteControlWrapper _controlobj) throws Exception{
  //BA.debugLineNum = 62;BA.debugLine="Public Sub removeEffect(controlObj As Control)";
  //BA.debugLineNum = 64;BA.debugLine="CSSUtils.SetStyleProperty(controlObj, \"-fx-effect";
-_cssutils._setstyleproperty((anywheresoftware.b4j.objects.NodeWrapper.ConcreteNodeWrapper) anywheresoftware.b4a.AbsObjectWrapper.ConvertToWrapper(new anywheresoftware.b4j.objects.NodeWrapper.ConcreteNodeWrapper(), (javafx.scene.Node)(_controlobj.getObject())),"-fx-effect","none");
+_vvvvvvvvvvvvvvvv3._setstyleproperty((anywheresoftware.b4j.objects.NodeWrapper.ConcreteNodeWrapper) anywheresoftware.b4a.AbsObjectWrapper.ConvertToWrapper(new anywheresoftware.b4j.objects.NodeWrapper.ConcreteNodeWrapper(), (javafx.scene.Node)(_controlobj.getObject())),"-fx-effect","none");
  //BA.debugLineNum = 67;BA.debugLine="End Sub";
 return "";
 }
-public static String  _removeimageviewtooltip(anywheresoftware.b4j.objects.ImageViewWrapper _controlobj) throws Exception{
+public static String  _vvvvvvvvvvvvvv4(anywheresoftware.b4j.objects.ImageViewWrapper _controlobj) throws Exception{
 anywheresoftware.b4j.object.JavaObject _jotooltip = null;
 anywheresoftware.b4j.object.JavaObject _jotooltip2 = null;
  //BA.debugLineNum = 126;BA.debugLine="Public Sub removeImageViewToolTip(ControlObj As Im";
@@ -133,14 +133,14 @@ _jotooltip.RunMethod("uninstall",new Object[]{(Object)(_controlobj.getObject()),
  //BA.debugLineNum = 133;BA.debugLine="End Sub";
 return "";
 }
-public static String  _removepaneeffect(anywheresoftware.b4j.objects.PaneWrapper.ConcretePaneWrapper _paneobj) throws Exception{
+public static String  _vvvvvvvvvvvvvv5(anywheresoftware.b4j.objects.PaneWrapper.ConcretePaneWrapper _paneobj) throws Exception{
  //BA.debugLineNum = 56;BA.debugLine="Public Sub removePaneEffect(PaneObj As Pane)";
  //BA.debugLineNum = 58;BA.debugLine="CSSUtils.SetStyleProperty(PaneObj, \"-fx-effect\" ,";
-_cssutils._setstyleproperty((anywheresoftware.b4j.objects.NodeWrapper.ConcreteNodeWrapper) anywheresoftware.b4a.AbsObjectWrapper.ConvertToWrapper(new anywheresoftware.b4j.objects.NodeWrapper.ConcreteNodeWrapper(), (javafx.scene.Node)(_paneobj.getObject())),"-fx-effect","none");
+_vvvvvvvvvvvvvvvv3._setstyleproperty((anywheresoftware.b4j.objects.NodeWrapper.ConcreteNodeWrapper) anywheresoftware.b4a.AbsObjectWrapper.ConvertToWrapper(new anywheresoftware.b4j.objects.NodeWrapper.ConcreteNodeWrapper(), (javafx.scene.Node)(_paneobj.getObject())),"-fx-effect","none");
  //BA.debugLineNum = 60;BA.debugLine="End Sub";
 return "";
 }
-public static String  _removepanetooltip(anywheresoftware.b4j.objects.PaneWrapper.ConcretePaneWrapper _panelobj) throws Exception{
+public static String  _vvvvvvvvvvvvvv6(anywheresoftware.b4j.objects.PaneWrapper.ConcretePaneWrapper _panelobj) throws Exception{
 anywheresoftware.b4j.object.JavaObject _jotooltip = null;
 anywheresoftware.b4j.object.JavaObject _jotooltip2 = null;
  //BA.debugLineNum = 172;BA.debugLine="Public Sub removePaneToolTip(PanelObj As Pane)";
@@ -154,84 +154,84 @@ _jotooltip.RunMethod("uninstall",new Object[]{(Object)(_panelobj.getObject()),(O
  //BA.debugLineNum = 179;BA.debugLine="End Sub";
 return "";
 }
-public static String  _setbg(anywheresoftware.b4j.objects.NodeWrapper.ControlWrapper.ConcreteControlWrapper _controlobj,String _color) throws Exception{
+public static String  _vvvvvvvvvvvvvv7(anywheresoftware.b4j.objects.NodeWrapper.ControlWrapper.ConcreteControlWrapper _controlobj,String _color) throws Exception{
  //BA.debugLineNum = 78;BA.debugLine="Public Sub setBG(controlObj As Control, color As S";
  //BA.debugLineNum = 80;BA.debugLine="CSSUtils.SetStyleProperty( controlObj, \"-fx-backg";
-_cssutils._setstyleproperty((anywheresoftware.b4j.objects.NodeWrapper.ConcreteNodeWrapper) anywheresoftware.b4a.AbsObjectWrapper.ConvertToWrapper(new anywheresoftware.b4j.objects.NodeWrapper.ConcreteNodeWrapper(), (javafx.scene.Node)(_controlobj.getObject())),"-fx-background-color",_color);
+_vvvvvvvvvvvvvvvv3._setstyleproperty((anywheresoftware.b4j.objects.NodeWrapper.ConcreteNodeWrapper) anywheresoftware.b4a.AbsObjectWrapper.ConvertToWrapper(new anywheresoftware.b4j.objects.NodeWrapper.ConcreteNodeWrapper(), (javafx.scene.Node)(_controlobj.getObject())),"-fx-background-color",_color);
  //BA.debugLineNum = 82;BA.debugLine="End Sub";
 return "";
 }
-public static String  _setborder(anywheresoftware.b4j.objects.NodeWrapper.ControlWrapper.ConcreteControlWrapper _controlobj,String _color,int _width) throws Exception{
+public static String  _vvvvvvvvvvvvvv0(anywheresoftware.b4j.objects.NodeWrapper.ControlWrapper.ConcreteControlWrapper _controlobj,String _color,int _width) throws Exception{
  //BA.debugLineNum = 14;BA.debugLine="Public Sub setBorder(controlObj As Control, color";
  //BA.debugLineNum = 16;BA.debugLine="CSSUtils.SetStyleProperty( controlObj, \"-fx-borde";
-_cssutils._setstyleproperty((anywheresoftware.b4j.objects.NodeWrapper.ConcreteNodeWrapper) anywheresoftware.b4a.AbsObjectWrapper.ConvertToWrapper(new anywheresoftware.b4j.objects.NodeWrapper.ConcreteNodeWrapper(), (javafx.scene.Node)(_controlobj.getObject())),"-fx-border-color",_color);
+_vvvvvvvvvvvvvvvv3._setstyleproperty((anywheresoftware.b4j.objects.NodeWrapper.ConcreteNodeWrapper) anywheresoftware.b4a.AbsObjectWrapper.ConvertToWrapper(new anywheresoftware.b4j.objects.NodeWrapper.ConcreteNodeWrapper(), (javafx.scene.Node)(_controlobj.getObject())),"-fx-border-color",_color);
  //BA.debugLineNum = 17;BA.debugLine="CSSUtils.SetStyleProperty (controlObj, \"-fx-borde";
-_cssutils._setstyleproperty((anywheresoftware.b4j.objects.NodeWrapper.ConcreteNodeWrapper) anywheresoftware.b4a.AbsObjectWrapper.ConvertToWrapper(new anywheresoftware.b4j.objects.NodeWrapper.ConcreteNodeWrapper(), (javafx.scene.Node)(_controlobj.getObject())),"-fx-border-width",BA.NumberToString(_width));
+_vvvvvvvvvvvvvvvv3._setstyleproperty((anywheresoftware.b4j.objects.NodeWrapper.ConcreteNodeWrapper) anywheresoftware.b4a.AbsObjectWrapper.ConvertToWrapper(new anywheresoftware.b4j.objects.NodeWrapper.ConcreteNodeWrapper(), (javafx.scene.Node)(_controlobj.getObject())),"-fx-border-width",BA.NumberToString(_width));
  //BA.debugLineNum = 19;BA.debugLine="End Sub";
 return "";
 }
-public static String  _setborderradius(anywheresoftware.b4j.objects.NodeWrapper.ControlWrapper.ConcreteControlWrapper _controlobj,int _radius) throws Exception{
+public static String  _vvvvvvvvvvvvvvv1(anywheresoftware.b4j.objects.NodeWrapper.ControlWrapper.ConcreteControlWrapper _controlobj,int _radius) throws Exception{
  //BA.debugLineNum = 35;BA.debugLine="Public Sub setBorderRadius(controlObj As Control,";
  //BA.debugLineNum = 37;BA.debugLine="CSSUtils.SetStyleProperty(controlObj, \"-fx-border";
-_cssutils._setstyleproperty((anywheresoftware.b4j.objects.NodeWrapper.ConcreteNodeWrapper) anywheresoftware.b4a.AbsObjectWrapper.ConvertToWrapper(new anywheresoftware.b4j.objects.NodeWrapper.ConcreteNodeWrapper(), (javafx.scene.Node)(_controlobj.getObject())),"-fx-border-radius",BA.NumberToString(_radius));
+_vvvvvvvvvvvvvvvv3._setstyleproperty((anywheresoftware.b4j.objects.NodeWrapper.ConcreteNodeWrapper) anywheresoftware.b4a.AbsObjectWrapper.ConvertToWrapper(new anywheresoftware.b4j.objects.NodeWrapper.ConcreteNodeWrapper(), (javafx.scene.Node)(_controlobj.getObject())),"-fx-border-radius",BA.NumberToString(_radius));
  //BA.debugLineNum = 39;BA.debugLine="End Sub";
 return "";
 }
-public static String  _seteffect(anywheresoftware.b4j.objects.NodeWrapper.ControlWrapper.ConcreteControlWrapper _controlobj,String _effect) throws Exception{
+public static String  _vvvvvvvvvvvvvvv2(anywheresoftware.b4j.objects.NodeWrapper.ControlWrapper.ConcreteControlWrapper _controlobj,String _effect) throws Exception{
  //BA.debugLineNum = 47;BA.debugLine="Public Sub setEffect(controlObj As Control, effect";
  //BA.debugLineNum = 49;BA.debugLine="CSSUtils.SetStyleProperty(controlObj, \"-fx-effect";
-_cssutils._setstyleproperty((anywheresoftware.b4j.objects.NodeWrapper.ConcreteNodeWrapper) anywheresoftware.b4a.AbsObjectWrapper.ConvertToWrapper(new anywheresoftware.b4j.objects.NodeWrapper.ConcreteNodeWrapper(), (javafx.scene.Node)(_controlobj.getObject())),"-fx-effect",_effect);
+_vvvvvvvvvvvvvvvv3._setstyleproperty((anywheresoftware.b4j.objects.NodeWrapper.ConcreteNodeWrapper) anywheresoftware.b4a.AbsObjectWrapper.ConvertToWrapper(new anywheresoftware.b4j.objects.NodeWrapper.ConcreteNodeWrapper(), (javafx.scene.Node)(_controlobj.getObject())),"-fx-effect",_effect);
  //BA.debugLineNum = 52;BA.debugLine="End Sub";
 return "";
 }
-public static String  _setpanebg(anywheresoftware.b4j.objects.PaneWrapper.ConcretePaneWrapper _paneobj,String _color) throws Exception{
+public static String  _vvvvvvvvvvvvvvv3(anywheresoftware.b4j.objects.PaneWrapper.ConcretePaneWrapper _paneobj,String _color) throws Exception{
  //BA.debugLineNum = 71;BA.debugLine="Public Sub setPaneBG(PaneObj As Pane, color As Str";
  //BA.debugLineNum = 73;BA.debugLine="CSSUtils.SetStyleProperty( PaneObj, \"-fx-backgrou";
-_cssutils._setstyleproperty((anywheresoftware.b4j.objects.NodeWrapper.ConcreteNodeWrapper) anywheresoftware.b4a.AbsObjectWrapper.ConvertToWrapper(new anywheresoftware.b4j.objects.NodeWrapper.ConcreteNodeWrapper(), (javafx.scene.Node)(_paneobj.getObject())),"-fx-background-color",_color);
+_vvvvvvvvvvvvvvvv3._setstyleproperty((anywheresoftware.b4j.objects.NodeWrapper.ConcreteNodeWrapper) anywheresoftware.b4a.AbsObjectWrapper.ConvertToWrapper(new anywheresoftware.b4j.objects.NodeWrapper.ConcreteNodeWrapper(), (javafx.scene.Node)(_paneobj.getObject())),"-fx-background-color",_color);
  //BA.debugLineNum = 76;BA.debugLine="End Sub";
 return "";
 }
-public static String  _setpaneborder(anywheresoftware.b4j.objects.PaneWrapper.ConcretePaneWrapper _paneobj,String _color,int _width) throws Exception{
+public static String  _vvvvvvvvvvvvvvv4(anywheresoftware.b4j.objects.PaneWrapper.ConcretePaneWrapper _paneobj,String _color,int _width) throws Exception{
  //BA.debugLineNum = 21;BA.debugLine="Public Sub setPaneBorder(PaneObj As Pane, color As";
  //BA.debugLineNum = 23;BA.debugLine="CSSUtils.SetStyleProperty( PaneObj, \"-fx-border-c";
-_cssutils._setstyleproperty((anywheresoftware.b4j.objects.NodeWrapper.ConcreteNodeWrapper) anywheresoftware.b4a.AbsObjectWrapper.ConvertToWrapper(new anywheresoftware.b4j.objects.NodeWrapper.ConcreteNodeWrapper(), (javafx.scene.Node)(_paneobj.getObject())),"-fx-border-color",_color);
+_vvvvvvvvvvvvvvvv3._setstyleproperty((anywheresoftware.b4j.objects.NodeWrapper.ConcreteNodeWrapper) anywheresoftware.b4a.AbsObjectWrapper.ConvertToWrapper(new anywheresoftware.b4j.objects.NodeWrapper.ConcreteNodeWrapper(), (javafx.scene.Node)(_paneobj.getObject())),"-fx-border-color",_color);
  //BA.debugLineNum = 24;BA.debugLine="CSSUtils.SetStyleProperty (PaneObj, \"-fx-border-w";
-_cssutils._setstyleproperty((anywheresoftware.b4j.objects.NodeWrapper.ConcreteNodeWrapper) anywheresoftware.b4a.AbsObjectWrapper.ConvertToWrapper(new anywheresoftware.b4j.objects.NodeWrapper.ConcreteNodeWrapper(), (javafx.scene.Node)(_paneobj.getObject())),"-fx-border-width",BA.NumberToString(_width));
+_vvvvvvvvvvvvvvvv3._setstyleproperty((anywheresoftware.b4j.objects.NodeWrapper.ConcreteNodeWrapper) anywheresoftware.b4a.AbsObjectWrapper.ConvertToWrapper(new anywheresoftware.b4j.objects.NodeWrapper.ConcreteNodeWrapper(), (javafx.scene.Node)(_paneobj.getObject())),"-fx-border-width",BA.NumberToString(_width));
  //BA.debugLineNum = 26;BA.debugLine="End Sub";
 return "";
 }
-public static String  _setpaneborderradius(anywheresoftware.b4j.objects.PaneWrapper.ConcretePaneWrapper _paneobj,int _radius) throws Exception{
+public static String  _vvvvvvvvvvvvvvv5(anywheresoftware.b4j.objects.PaneWrapper.ConcretePaneWrapper _paneobj,int _radius) throws Exception{
  //BA.debugLineNum = 28;BA.debugLine="Public Sub setPaneBorderRadius(PaneObj As Pane, ra";
  //BA.debugLineNum = 30;BA.debugLine="CSSUtils.SetStyleProperty(PaneObj,\"-fx-border-rad";
-_cssutils._setstyleproperty((anywheresoftware.b4j.objects.NodeWrapper.ConcreteNodeWrapper) anywheresoftware.b4a.AbsObjectWrapper.ConvertToWrapper(new anywheresoftware.b4j.objects.NodeWrapper.ConcreteNodeWrapper(), (javafx.scene.Node)(_paneobj.getObject())),"-fx-border-radius",BA.NumberToString(_radius));
+_vvvvvvvvvvvvvvvv3._setstyleproperty((anywheresoftware.b4j.objects.NodeWrapper.ConcreteNodeWrapper) anywheresoftware.b4a.AbsObjectWrapper.ConvertToWrapper(new anywheresoftware.b4j.objects.NodeWrapper.ConcreteNodeWrapper(), (javafx.scene.Node)(_paneobj.getObject())),"-fx-border-radius",BA.NumberToString(_radius));
  //BA.debugLineNum = 32;BA.debugLine="End Sub";
 return "";
 }
-public static String  _setpaneeffect(anywheresoftware.b4j.objects.PaneWrapper.ConcretePaneWrapper _paneobj,String _effect) throws Exception{
+public static String  _vvvvvvvvvvvvvvv6(anywheresoftware.b4j.objects.PaneWrapper.ConcretePaneWrapper _paneobj,String _effect) throws Exception{
  //BA.debugLineNum = 41;BA.debugLine="Public Sub setPaneEffect(PaneObj As Pane, effect A";
  //BA.debugLineNum = 43;BA.debugLine="CSSUtils.SetStyleProperty(PaneObj, \"-fx-effect\" ,";
-_cssutils._setstyleproperty((anywheresoftware.b4j.objects.NodeWrapper.ConcreteNodeWrapper) anywheresoftware.b4a.AbsObjectWrapper.ConvertToWrapper(new anywheresoftware.b4j.objects.NodeWrapper.ConcreteNodeWrapper(), (javafx.scene.Node)(_paneobj.getObject())),"-fx-effect",_effect);
+_vvvvvvvvvvvvvvvv3._setstyleproperty((anywheresoftware.b4j.objects.NodeWrapper.ConcreteNodeWrapper) anywheresoftware.b4a.AbsObjectWrapper.ConvertToWrapper(new anywheresoftware.b4j.objects.NodeWrapper.ConcreteNodeWrapper(), (javafx.scene.Node)(_paneobj.getObject())),"-fx-effect",_effect);
  //BA.debugLineNum = 45;BA.debugLine="End Sub";
 return "";
 }
-public static String  _setpanerotationx(anywheresoftware.b4j.objects.PaneWrapper.ConcretePaneWrapper _paneobj,float _angle) throws Exception{
+public static String  _vvvvvvvvvvvvvvv7(anywheresoftware.b4j.objects.PaneWrapper.ConcretePaneWrapper _paneobj,float _angle) throws Exception{
  //BA.debugLineNum = 10;BA.debugLine="Public Sub setPaneRotationX(PaneObj As Pane, Angle";
  //BA.debugLineNum = 11;BA.debugLine="CSSUtils.SetStyleProperty(PaneObj, \"-fx-rotate\",";
-_cssutils._setstyleproperty((anywheresoftware.b4j.objects.NodeWrapper.ConcreteNodeWrapper) anywheresoftware.b4a.AbsObjectWrapper.ConvertToWrapper(new anywheresoftware.b4j.objects.NodeWrapper.ConcreteNodeWrapper(), (javafx.scene.Node)(_paneobj.getObject())),"-fx-rotate",BA.NumberToString(_angle));
+_vvvvvvvvvvvvvvvv3._setstyleproperty((anywheresoftware.b4j.objects.NodeWrapper.ConcreteNodeWrapper) anywheresoftware.b4a.AbsObjectWrapper.ConvertToWrapper(new anywheresoftware.b4j.objects.NodeWrapper.ConcreteNodeWrapper(), (javafx.scene.Node)(_paneobj.getObject())),"-fx-rotate",BA.NumberToString(_angle));
  //BA.debugLineNum = 12;BA.debugLine="End Sub";
 return "";
 }
-public static String  _setrotationx(anywheresoftware.b4j.objects.NodeWrapper.ControlWrapper.ConcreteControlWrapper _controlobj,float _angle) throws Exception{
+public static String  _vvvvvvvvvvvvvvv0(anywheresoftware.b4j.objects.NodeWrapper.ControlWrapper.ConcreteControlWrapper _controlobj,float _angle) throws Exception{
  //BA.debugLineNum = 6;BA.debugLine="Public Sub setRotationX(controlObj As Control, Ang";
  //BA.debugLineNum = 7;BA.debugLine="CSSUtils.SetStyleProperty(controlObj, \"-fx-rotate";
-_cssutils._setstyleproperty((anywheresoftware.b4j.objects.NodeWrapper.ConcreteNodeWrapper) anywheresoftware.b4a.AbsObjectWrapper.ConvertToWrapper(new anywheresoftware.b4j.objects.NodeWrapper.ConcreteNodeWrapper(), (javafx.scene.Node)(_controlobj.getObject())),"-fx-rotate",BA.NumberToString(_angle));
+_vvvvvvvvvvvvvvvv3._setstyleproperty((anywheresoftware.b4j.objects.NodeWrapper.ConcreteNodeWrapper) anywheresoftware.b4a.AbsObjectWrapper.ConvertToWrapper(new anywheresoftware.b4j.objects.NodeWrapper.ConcreteNodeWrapper(), (javafx.scene.Node)(_controlobj.getObject())),"-fx-rotate",BA.NumberToString(_angle));
  //BA.debugLineNum = 8;BA.debugLine="End Sub";
 return "";
 }
-public static String  _settextcolor(anywheresoftware.b4j.objects.NodeWrapper.ControlWrapper.ConcreteControlWrapper _controlobj,String _color) throws Exception{
+public static String  _vvvvvvvvvvvvvvvv1(anywheresoftware.b4j.objects.NodeWrapper.ControlWrapper.ConcreteControlWrapper _controlobj,String _color) throws Exception{
  //BA.debugLineNum = 85;BA.debugLine="Public Sub setTextColor(controlObj As Control, col";
  //BA.debugLineNum = 87;BA.debugLine="CSSUtils.SetStyleProperty(controlObj,\"-fx-text-fi";
-_cssutils._setstyleproperty((anywheresoftware.b4j.objects.NodeWrapper.ConcreteNodeWrapper) anywheresoftware.b4a.AbsObjectWrapper.ConvertToWrapper(new anywheresoftware.b4j.objects.NodeWrapper.ConcreteNodeWrapper(), (javafx.scene.Node)(_controlobj.getObject())),"-fx-text-fill",_color);
+_vvvvvvvvvvvvvvvv3._setstyleproperty((anywheresoftware.b4j.objects.NodeWrapper.ConcreteNodeWrapper) anywheresoftware.b4a.AbsObjectWrapper.ConvertToWrapper(new anywheresoftware.b4j.objects.NodeWrapper.ConcreteNodeWrapper(), (javafx.scene.Node)(_controlobj.getObject())),"-fx-text-fill",_color);
  //BA.debugLineNum = 89;BA.debugLine="End Sub";
 return "";
 }

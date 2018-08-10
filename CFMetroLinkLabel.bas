@@ -8,7 +8,7 @@ Version=5.51
  
 #Event: MousePressed (EventData As MouseEvent)
 
-#RaisesSynchronousEvents: MousePressed (EventData As MouseEvent)
+#RaisesSynchronousEvents: MousePressed
 
 #Region Internal Segment
 

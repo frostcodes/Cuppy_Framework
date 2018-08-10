@@ -22,38 +22,38 @@ static {
 	}
 
  public static anywheresoftware.b4a.keywords.Common __c = null;
-public static anywheresoftware.b4j.objects.JFX _fx = null;
-public static anywheresoftware.b4j.objects.JFX.FontWrapper _defaultfont = null;
-public static Punchline.Tech.Cuppy.Framework.cfthemes _availablethemes = null;
-public static anywheresoftware.b4a.objects.collections.Map _defaulttheme = null;
-public static anywheresoftware.b4a.objects.collections.List _activecontrols = null;
-public static b4j.example.cssutils _cssutils = null;
-public static Punchline.Tech.Cuppy.Framework.cfconfigs _cfconfigs = null;
-public static Punchline.Tech.Cuppy.Framework.cfstringutility _cfstringutility = null;
-public static Punchline.Tech.Cuppy.Framework.cffileutility _cffileutility = null;
-public static Punchline.Tech.Cuppy.Framework.cfmathutility _cfmathutility = null;
-public static Punchline.Tech.Cuppy.Framework.cfdatatypeutility _cfdatatypeutility = null;
-public static Punchline.Tech.Cuppy.Framework.cfanimationmanager _cfanimationmanager = null;
-public static Punchline.Tech.Cuppy.Framework.cflicensemanager _cflicensemanager = null;
-public static Punchline.Tech.Cuppy.Framework.cfdatageneratorutility _cfdatageneratorutility = null;
-public static Punchline.Tech.Cuppy.Framework.cfapputility _cfapputility = null;
-public static Punchline.Tech.Cuppy.Framework.cfcontrolsutils _cfcontrolsutils = null;
-public static Punchline.Tech.Cuppy.Framework.cfhtmlutility _cfhtmlutility = null;
-public static String  _exportcurrenttheme(String _dir,String _filename) throws Exception{
+public static anywheresoftware.b4j.objects.JFX _vvvvvvvvvvvvvvvv2 = null;
+public static anywheresoftware.b4j.objects.JFX.FontWrapper _vv3 = null;
+public static Punchline.Tech.Cuppy.Framework.cfthemes _vv4 = null;
+public static anywheresoftware.b4a.objects.collections.Map _vv5 = null;
+public static anywheresoftware.b4a.objects.collections.List _vv6 = null;
+public static b4j.example.cssutils _vvvvvvvvvvvvvvvv3 = null;
+public static Punchline.Tech.Cuppy.Framework.cfconfigs _vvvvvvvvvvvvvvvv4 = null;
+public static Punchline.Tech.Cuppy.Framework.cfstringutility _vvvvvvvvvvvvvvvv6 = null;
+public static Punchline.Tech.Cuppy.Framework.cffileutility _vvvvvvvvvvvvvvvv7 = null;
+public static Punchline.Tech.Cuppy.Framework.cfmathutility _vvvvvvvvvvvvvvvv0 = null;
+public static Punchline.Tech.Cuppy.Framework.cfdatatypeutility _vvvvvvvvvvvvvvvvv1 = null;
+public static Punchline.Tech.Cuppy.Framework.cfanimationmanager _vvvvvvvvvvvvvvvvv2 = null;
+public static Punchline.Tech.Cuppy.Framework.cflicensemanager _vvvvvvvvvvvvvvvvv3 = null;
+public static Punchline.Tech.Cuppy.Framework.cfdatageneratorutility _vvvvvvvvvvvvvvvvv4 = null;
+public static Punchline.Tech.Cuppy.Framework.cfapputility _vvvvvvvvvvvvvvvvv5 = null;
+public static Punchline.Tech.Cuppy.Framework.cfcontrolsutils _vvvvvvvvvvvvvvvvv6 = null;
+public static Punchline.Tech.Cuppy.Framework.cfhtmlutility _vvvvvvvvvvvvvvvvv7 = null;
+public static String  _vv7(String _dir,String _filename) throws Exception{
  //BA.debugLineNum = 146;BA.debugLine="Public Sub ExportCurrentTheme(Dir As String, FileN";
  //BA.debugLineNum = 148;BA.debugLine="File.WriteMap(Dir, FileName, DefaultTheme)";
-anywheresoftware.b4a.keywords.Common.File.WriteMap(_dir,_filename,_defaulttheme);
+anywheresoftware.b4a.keywords.Common.File.WriteMap(_dir,_filename,_vv5);
  //BA.debugLineNum = 150;BA.debugLine="End Sub";
 return "";
 }
-public static String  _exporttheme(String _theme,String _dir,String _filename) throws Exception{
+public static String  _vv0(String _theme,String _dir,String _filename) throws Exception{
  //BA.debugLineNum = 128;BA.debugLine="Public Sub ExportTheme(theme As String , Dir As St";
  //BA.debugLineNum = 130;BA.debugLine="theme = CFStringUtility.ucfirst(theme)";
-_theme = _cfstringutility._ucfirst(_theme);
+_theme = _vvvvvvvvvvvvvvvv6._vvvvvvvv4(_theme);
  //BA.debugLineNum = 132;BA.debugLine="If AvailableThemes.ThemesList.ContainsKey(theme)";
-if (_availablethemes._themeslist().ContainsKey((Object)(_theme))) { 
+if (_vv4._vvvvvvvvvvvvvvvvvvvvv2().ContainsKey((Object)(_theme))) { 
  //BA.debugLineNum = 134;BA.debugLine="File.WriteMap(Dir, FileName, AvailableThemes.Th";
-anywheresoftware.b4a.keywords.Common.File.WriteMap(_dir,_filename,(anywheresoftware.b4a.objects.collections.Map) anywheresoftware.b4a.AbsObjectWrapper.ConvertToWrapper(new anywheresoftware.b4a.objects.collections.Map(), (anywheresoftware.b4a.objects.collections.Map.MyMap)(_availablethemes._themeslist().Get((Object)(_theme)))));
+anywheresoftware.b4a.keywords.Common.File.WriteMap(_dir,_filename,(anywheresoftware.b4a.objects.collections.Map) anywheresoftware.b4a.AbsObjectWrapper.ConvertToWrapper(new anywheresoftware.b4a.objects.collections.Map(), (anywheresoftware.b4a.objects.collections.Map.MyMap)(_vv4._vvvvvvvvvvvvvvvvvvvvv2().Get((Object)(_theme)))));
  }else {
  //BA.debugLineNum = 138;BA.debugLine="LogError(\"Could not export theme(\" & theme & \").";
 anywheresoftware.b4a.keywords.Common.LogError("Could not export theme("+_theme+"). Please check the Theme name");
@@ -63,7 +63,7 @@ anywheresoftware.b4a.keywords.Common.ExitApplication();
  //BA.debugLineNum = 143;BA.debugLine="End Sub";
 return "";
 }
-public static anywheresoftware.b4a.objects.collections.Map  _fonttypes() throws Exception{
+public static anywheresoftware.b4a.objects.collections.Map  _vvv1() throws Exception{
 anywheresoftware.b4a.objects.collections.Map _ftypes = null;
  //BA.debugLineNum = 18;BA.debugLine="Public Sub FontTypes As Map";
  //BA.debugLineNum = 20;BA.debugLine="Dim FTypes As Map";
@@ -99,7 +99,7 @@ if (true) return _ftypes;
  //BA.debugLineNum = 43;BA.debugLine="End Sub";
 return null;
 }
-public static anywheresoftware.b4a.objects.collections.Map  _loadthemefile(String _dir,String _filename) throws Exception{
+public static anywheresoftware.b4a.objects.collections.Map  _vvv2(String _dir,String _filename) throws Exception{
 anywheresoftware.b4a.objects.collections.Map _mapx = null;
 anywheresoftware.b4a.objects.collections.List _checklist = null;
 String _keyx = "";
@@ -137,7 +137,7 @@ final int groupLen12 = group12.getSize()
 for (; index12 < groupLen12;index12++){
 _keyx = BA.ObjectToString(group12.Get(index12));
  //BA.debugLineNum = 106;BA.debugLine="If Not(mapx.ContainsKey(KeyX)) Or CFStringUtilit";
-if (anywheresoftware.b4a.keywords.Common.Not(_mapx.ContainsKey((Object)(_keyx))) || _cfstringutility._isempty(BA.ObjectToString(_mapx.Get((Object)(_keyx))))) { 
+if (anywheresoftware.b4a.keywords.Common.Not(_mapx.ContainsKey((Object)(_keyx))) || _vvvvvvvvvvvvvvvv6._vvvv0(BA.ObjectToString(_mapx.Get((Object)(_keyx))))) { 
  //BA.debugLineNum = 108;BA.debugLine="Dim ErrorStr As StringBuilder";
 _errorstr = new anywheresoftware.b4a.keywords.StringBuilderWrapper();
  //BA.debugLineNum = 109;BA.debugLine="ErrorStr.Initialize";
@@ -163,37 +163,37 @@ return null;
 public static String  _process_globals() throws Exception{
  //BA.debugLineNum = 2;BA.debugLine="Private Sub Process_Globals";
  //BA.debugLineNum = 4;BA.debugLine="Private fx As JFX";
-_fx = new anywheresoftware.b4j.objects.JFX();
+_vvvvvvvvvvvvvvvv2 = new anywheresoftware.b4j.objects.JFX();
  //BA.debugLineNum = 6;BA.debugLine="Public DefaultFont As Font = SelectFont(\"Regular\"";
-_defaultfont = new anywheresoftware.b4j.objects.JFX.FontWrapper();
-_defaultfont = _selectfont("Regular",12);
+_vv3 = new anywheresoftware.b4j.objects.JFX.FontWrapper();
+_vv3 = _vvv3("Regular",12);
  //BA.debugLineNum = 7;BA.debugLine="Public AvailableThemes As CFThemes";
-_availablethemes = new Punchline.Tech.Cuppy.Framework.cfthemes();
+_vv4 = new Punchline.Tech.Cuppy.Framework.cfthemes();
  //BA.debugLineNum = 8;BA.debugLine="Public DefaultTheme As Map = AvailableThemes.The";
-_defaulttheme = new anywheresoftware.b4a.objects.collections.Map();
-_defaulttheme.setObject((anywheresoftware.b4a.objects.collections.Map.MyMap)(_availablethemes._themeslist().Get((Object)("Blue"))));
+_vv5 = new anywheresoftware.b4a.objects.collections.Map();
+_vv5.setObject((anywheresoftware.b4a.objects.collections.Map.MyMap)(_vv4._vvvvvvvvvvvvvvvvvvvvv2().Get((Object)("Blue"))));
  //BA.debugLineNum = 9;BA.debugLine="Public ActiveControls As List";
-_activecontrols = new anywheresoftware.b4a.objects.collections.List();
+_vv6 = new anywheresoftware.b4a.objects.collections.List();
  //BA.debugLineNum = 10;BA.debugLine="ActiveControls.Initialize 'ignore : need this , b";
-_activecontrols.Initialize();
+_vv6.Initialize();
  //BA.debugLineNum = 15;BA.debugLine="End Sub";
 return "";
 }
-public static anywheresoftware.b4j.objects.JFX.FontWrapper  _selectfont(String _fontname,double _fontsize) throws Exception{
+public static anywheresoftware.b4j.objects.JFX.FontWrapper  _vvv3(String _fontname,double _fontsize) throws Exception{
  //BA.debugLineNum = 46;BA.debugLine="Public Sub SelectFont(fontName As String,  FontSiz";
  //BA.debugLineNum = 49;BA.debugLine="Return  fx.LoadFont(File.DirAssets , FontTypes.Ge";
-if (true) return _fx.LoadFont(anywheresoftware.b4a.keywords.Common.File.getDirAssets(),BA.ObjectToString(_fonttypes().Get((Object)(_fontname))),_fontsize);
+if (true) return _vvvvvvvvvvvvvvvv2.LoadFont(anywheresoftware.b4a.keywords.Common.File.getDirAssets(),BA.ObjectToString(_vvv1().Get((Object)(_fontname))),_fontsize);
  //BA.debugLineNum = 51;BA.debugLine="End Sub";
 return null;
 }
-public static String  _selecttheme(String _theme) throws Exception{
+public static String  _vvv4(String _theme) throws Exception{
  //BA.debugLineNum = 57;BA.debugLine="Public Sub SelectTheme(theme As String)";
  //BA.debugLineNum = 59;BA.debugLine="theme = CFStringUtility.ucfirst(theme)";
-_theme = _cfstringutility._ucfirst(_theme);
+_theme = _vvvvvvvvvvvvvvvv6._vvvvvvvv4(_theme);
  //BA.debugLineNum = 61;BA.debugLine="If AvailableThemes.ThemesList.ContainsKey(theme)";
-if (_availablethemes._themeslist().ContainsKey((Object)(_theme))) { 
+if (_vv4._vvvvvvvvvvvvvvvvvvvvv2().ContainsKey((Object)(_theme))) { 
  //BA.debugLineNum = 63;BA.debugLine="DefaultTheme = AvailableThemes.ThemesList.Get(t";
-_defaulttheme.setObject((anywheresoftware.b4a.objects.collections.Map.MyMap)(_availablethemes._themeslist().Get((Object)(_theme))));
+_vv5.setObject((anywheresoftware.b4a.objects.collections.Map.MyMap)(_vv4._vvvvvvvvvvvvvvvvvvvvv2().Get((Object)(_theme))));
  }else {
  //BA.debugLineNum = 67;BA.debugLine="LogError(\"Could not find the selected theme(\" &";
 anywheresoftware.b4a.keywords.Common.LogError("Could not find the selected theme("+_theme+"). Please check the Theme name");

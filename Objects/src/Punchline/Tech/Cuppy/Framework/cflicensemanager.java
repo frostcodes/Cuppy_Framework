@@ -22,23 +22,23 @@ static {
 	}
 
  public static anywheresoftware.b4a.keywords.Common __c = null;
-public static String _licensekey = "";
-public static b4j.example.cssutils _cssutils = null;
-public static Punchline.Tech.Cuppy.Framework.cfconfigs _cfconfigs = null;
-public static Punchline.Tech.Cuppy.Framework.cfstylemanager _cfstylemanager = null;
-public static Punchline.Tech.Cuppy.Framework.cfstringutility _cfstringutility = null;
-public static Punchline.Tech.Cuppy.Framework.cffileutility _cffileutility = null;
-public static Punchline.Tech.Cuppy.Framework.cfmathutility _cfmathutility = null;
-public static Punchline.Tech.Cuppy.Framework.cfdatatypeutility _cfdatatypeutility = null;
-public static Punchline.Tech.Cuppy.Framework.cfanimationmanager _cfanimationmanager = null;
-public static Punchline.Tech.Cuppy.Framework.cfdatageneratorutility _cfdatageneratorutility = null;
-public static Punchline.Tech.Cuppy.Framework.cfapputility _cfapputility = null;
-public static Punchline.Tech.Cuppy.Framework.cfcontrolsutils _cfcontrolsutils = null;
-public static Punchline.Tech.Cuppy.Framework.cfhtmlutility _cfhtmlutility = null;
+public static String _vvvvvvvvvvvvv1 = "";
+public static b4j.example.cssutils _vvvvvvvvvvvvvvvv3 = null;
+public static Punchline.Tech.Cuppy.Framework.cfconfigs _vvvvvvvvvvvvvvvv4 = null;
+public static Punchline.Tech.Cuppy.Framework.cfstylemanager _vvvvvvvvvvvvvvvv5 = null;
+public static Punchline.Tech.Cuppy.Framework.cfstringutility _vvvvvvvvvvvvvvvv6 = null;
+public static Punchline.Tech.Cuppy.Framework.cffileutility _vvvvvvvvvvvvvvvv7 = null;
+public static Punchline.Tech.Cuppy.Framework.cfmathutility _vvvvvvvvvvvvvvvv0 = null;
+public static Punchline.Tech.Cuppy.Framework.cfdatatypeutility _vvvvvvvvvvvvvvvvv1 = null;
+public static Punchline.Tech.Cuppy.Framework.cfanimationmanager _vvvvvvvvvvvvvvvvv2 = null;
+public static Punchline.Tech.Cuppy.Framework.cfdatageneratorutility _vvvvvvvvvvvvvvvvv4 = null;
+public static Punchline.Tech.Cuppy.Framework.cfapputility _vvvvvvvvvvvvvvvvv5 = null;
+public static Punchline.Tech.Cuppy.Framework.cfcontrolsutils _vvvvvvvvvvvvvvvvv6 = null;
+public static Punchline.Tech.Cuppy.Framework.cfhtmlutility _vvvvvvvvvvvvvvvvv7 = null;
 public static String  _process_globals() throws Exception{
  //BA.debugLineNum = 2;BA.debugLine="Sub Process_Globals";
  //BA.debugLineNum = 5;BA.debugLine="Public LicenseKey As String = \"\"";
-_licensekey = "";
+_vvvvvvvvvvvvv1 = "";
  //BA.debugLineNum = 10;BA.debugLine="End Sub";
 return "";
 }

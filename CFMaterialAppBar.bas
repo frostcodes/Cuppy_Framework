@@ -9,8 +9,8 @@ Version=5.51
 #Event: MousePressed (EventData As MouseEvent)
 #Event: PaneMousePressed (EventData As MouseEvent)
 
-#RaisesSynchronousEvents: MousePressed (EventData As MouseEvent)
-#RaisesSynchronousEvents: PaneMousePressed (EventData As MouseEvent)
+#RaisesSynchronousEvents: MousePressed
+#RaisesSynchronousEvents: PaneMousePressed
  
 #Region Internal Segment
 

@@ -11,10 +11,10 @@ Version=5.51
 #Event: MouseEntered (EventData As MouseEvent)
 #Event: MouseExited (EventData As MouseEvent)
 
-#RaisesSynchronousEvents: Touch (Action As Int, Points as Map)
-#RaisesSynchronousEvents: MouseClicked (EventData As MouseEvent)
-#RaisesSynchronousEvents: MouseEntered (EventData As MouseEvent)
-#RaisesSynchronousEvents: MouseExited (EventData As MouseEvent)
+#RaisesSynchronousEvents: Touch
+#RaisesSynchronousEvents: MouseClicked
+#RaisesSynchronousEvents: MouseEntered
+#RaisesSynchronousEvents: MouseExited
  
 #Region Internal Segment
 

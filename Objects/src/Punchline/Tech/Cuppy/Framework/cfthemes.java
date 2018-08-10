@@ -24,20 +24,20 @@ public class cfthemes extends B4AClass.ImplB4AClass implements BA.SubDelegator{
     }
 
  public anywheresoftware.b4a.keywords.Common __c = null;
-public b4j.example.cssutils _cssutils = null;
-public Punchline.Tech.Cuppy.Framework.cfconfigs _cfconfigs = null;
-public Punchline.Tech.Cuppy.Framework.cfstylemanager _cfstylemanager = null;
-public Punchline.Tech.Cuppy.Framework.cfstringutility _cfstringutility = null;
-public Punchline.Tech.Cuppy.Framework.cffileutility _cffileutility = null;
-public Punchline.Tech.Cuppy.Framework.cfmathutility _cfmathutility = null;
-public Punchline.Tech.Cuppy.Framework.cfdatatypeutility _cfdatatypeutility = null;
-public Punchline.Tech.Cuppy.Framework.cfanimationmanager _cfanimationmanager = null;
-public Punchline.Tech.Cuppy.Framework.cflicensemanager _cflicensemanager = null;
-public Punchline.Tech.Cuppy.Framework.cfdatageneratorutility _cfdatageneratorutility = null;
-public Punchline.Tech.Cuppy.Framework.cfapputility _cfapputility = null;
-public Punchline.Tech.Cuppy.Framework.cfcontrolsutils _cfcontrolsutils = null;
-public Punchline.Tech.Cuppy.Framework.cfhtmlutility _cfhtmlutility = null;
-public anywheresoftware.b4a.objects.collections.Map  _bluetheme() throws Exception{
+public b4j.example.cssutils _vvvvvvvvvvvvvvvv3 = null;
+public Punchline.Tech.Cuppy.Framework.cfconfigs _vvvvvvvvvvvvvvvv4 = null;
+public Punchline.Tech.Cuppy.Framework.cfstylemanager _vvvvvvvvvvvvvvvv5 = null;
+public Punchline.Tech.Cuppy.Framework.cfstringutility _vvvvvvvvvvvvvvvv6 = null;
+public Punchline.Tech.Cuppy.Framework.cffileutility _vvvvvvvvvvvvvvvv7 = null;
+public Punchline.Tech.Cuppy.Framework.cfmathutility _vvvvvvvvvvvvvvvv0 = null;
+public Punchline.Tech.Cuppy.Framework.cfdatatypeutility _vvvvvvvvvvvvvvvvv1 = null;
+public Punchline.Tech.Cuppy.Framework.cfanimationmanager _vvvvvvvvvvvvvvvvv2 = null;
+public Punchline.Tech.Cuppy.Framework.cflicensemanager _vvvvvvvvvvvvvvvvv3 = null;
+public Punchline.Tech.Cuppy.Framework.cfdatageneratorutility _vvvvvvvvvvvvvvvvv4 = null;
+public Punchline.Tech.Cuppy.Framework.cfapputility _vvvvvvvvvvvvvvvvv5 = null;
+public Punchline.Tech.Cuppy.Framework.cfcontrolsutils _vvvvvvvvvvvvvvvvv6 = null;
+public Punchline.Tech.Cuppy.Framework.cfhtmlutility _vvvvvvvvvvvvvvvvv7 = null;
+public anywheresoftware.b4a.objects.collections.Map  _vvvvvvvvvvvvvvvvvvvv6() throws Exception{
 anywheresoftware.b4a.objects.collections.Map _colors = null;
  //BA.debugLineNum = 31;BA.debugLine="Private Sub BlueTheme As Map";
  //BA.debugLineNum = 33;BA.debugLine="Private Colors As Map 'use to store the colors we";
@@ -70,7 +70,7 @@ public String  _class_globals() throws Exception{
  //BA.debugLineNum = 5;BA.debugLine="End Sub";
 return "";
 }
-public anywheresoftware.b4a.objects.collections.Map  _darktheme() throws Exception{
+public anywheresoftware.b4a.objects.collections.Map  _vvvvvvvvvvvvvvvvvvvv7() throws Exception{
 anywheresoftware.b4a.objects.collections.Map _colors = null;
  //BA.debugLineNum = 97;BA.debugLine="Private Sub DarkTheme As Map";
  //BA.debugLineNum = 99;BA.debugLine="Private Colors As Map 'use to store the colors we";
@@ -98,7 +98,7 @@ if (true) return _colors;
  //BA.debugLineNum = 117;BA.debugLine="End Sub";
 return null;
 }
-public anywheresoftware.b4a.objects.collections.Map  _graytheme() throws Exception{
+public anywheresoftware.b4a.objects.collections.Map  _vvvvvvvvvvvvvvvvvvvv0() throws Exception{
 anywheresoftware.b4a.objects.collections.Map _colors = null;
  //BA.debugLineNum = 75;BA.debugLine="Private Sub GrayTheme As Map";
  //BA.debugLineNum = 77;BA.debugLine="Private Colors As Map 'use to store the colors we";
@@ -132,7 +132,7 @@ innerInitialize(_ba);
  //BA.debugLineNum = 10;BA.debugLine="End Sub";
 return "";
 }
-public anywheresoftware.b4a.objects.collections.Map  _tealtheme() throws Exception{
+public anywheresoftware.b4a.objects.collections.Map  _vvvvvvvvvvvvvvvvvvvvv1() throws Exception{
 anywheresoftware.b4a.objects.collections.Map _colors = null;
  //BA.debugLineNum = 53;BA.debugLine="Private Sub TealTheme As Map";
  //BA.debugLineNum = 55;BA.debugLine="Private Colors As Map 'use to store the colors we";
@@ -160,7 +160,7 @@ if (true) return _colors;
  //BA.debugLineNum = 73;BA.debugLine="End Sub";
 return null;
 }
-public anywheresoftware.b4a.objects.collections.Map  _themeslist() throws Exception{
+public anywheresoftware.b4a.objects.collections.Map  _vvvvvvvvvvvvvvvvvvvvv2() throws Exception{
 anywheresoftware.b4a.objects.collections.Map _availablethemes = null;
  //BA.debugLineNum = 12;BA.debugLine="Public Sub ThemesList() As Map";
  //BA.debugLineNum = 16;BA.debugLine="Private AvailableThemes As Map";
@@ -168,13 +168,13 @@ _availablethemes = new anywheresoftware.b4a.objects.collections.Map();
  //BA.debugLineNum = 17;BA.debugLine="AvailableThemes.Initialize";
 _availablethemes.Initialize();
  //BA.debugLineNum = 19;BA.debugLine="AvailableThemes.Put(\"Blue\", BlueTheme)";
-_availablethemes.Put((Object)("Blue"),(Object)(_bluetheme().getObject()));
+_availablethemes.Put((Object)("Blue"),(Object)(_vvvvvvvvvvvvvvvvvvvv6().getObject()));
  //BA.debugLineNum = 20;BA.debugLine="AvailableThemes.Put(\"Teal\", TealTheme)";
-_availablethemes.Put((Object)("Teal"),(Object)(_tealtheme().getObject()));
+_availablethemes.Put((Object)("Teal"),(Object)(_vvvvvvvvvvvvvvvvvvvvv1().getObject()));
  //BA.debugLineNum = 22;BA.debugLine="AvailableThemes.Put(\"Gray\", GrayTheme)";
-_availablethemes.Put((Object)("Gray"),(Object)(_graytheme().getObject()));
+_availablethemes.Put((Object)("Gray"),(Object)(_vvvvvvvvvvvvvvvvvvvv0().getObject()));
  //BA.debugLineNum = 23;BA.debugLine="AvailableThemes.Put(\"Dark\", DarkTheme)";
-_availablethemes.Put((Object)("Dark"),(Object)(_darktheme().getObject()));
+_availablethemes.Put((Object)("Dark"),(Object)(_vvvvvvvvvvvvvvvvvvvv7().getObject()));
  //BA.debugLineNum = 25;BA.debugLine="Return AvailableThemes";
 if (true) return _availablethemes;
  //BA.debugLineNum = 27;BA.debugLine="End Sub";
