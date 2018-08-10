@@ -7,8 +7,6 @@ Version=6.3
 'Custom View class
  
 #Event: CheckedChanged(value as int)
-
-#RaisesSynchronousEvents: CheckedChanged(value as int)
  
  'TODO: make font adjust when resized
 #Region Internal Segment

@@ -9,7 +9,7 @@ Version=5.51
 ''''#  Designer    Property: Key: thic kness, DisplayName: thick ness, FieldType: Int, DefaultValue: 1, Description: Set how thick the divider should be
 
 #Region Internal Segment
-'TODO: make orientation property: horizontal/vertical..using rotate 
+
 Sub Class_Globals
 	Private fx As JFX
 	Private mEventName As String 'ignore

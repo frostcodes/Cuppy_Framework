@@ -6,9 +6,9 @@ Version=5.51
 @EndOfDesignText@
 'Custom View class
  #If trial
-  
+ 
+ 
 #Event: MousePressed (EventData As MouseEvent)
-#RaisesSynchronousEvents: MousePressed (EventData As MouseEvent)
 
 #Region Internal Segment
 
@@ -21,10 +21,12 @@ Sub Class_Globals
 	Private timer1 As Timer
 	Private timer2 As Timer
 	Private timer3 As Timer
+	
 	 
 	Private Pane1 As Pane
 	Private Pane2 As Pane
 	Private Pane3 As Pane
+	
 	 
 End Sub
 
@@ -33,7 +35,9 @@ Public Sub Initialize (Callback As Object, EventName As String)
 	mCallBack = Callback
  
 End Sub
- 
+
+
+
 Public Sub DesignerCreateView (Base As Pane, Lbl As Label, Props As Map)
 	mBase = Base
 	mBase.LoadLayout("CFBarPreLoaderUI")
@@ -47,10 +51,12 @@ Public Sub DesignerCreateView (Base As Pane, Lbl As Label, Props As Map)
 
 	timer2.Initialize("Timer2", 400)
 	timer2.Enabled = True
-	 
+	
+	
 	timer3.Initialize("Timer3", 400)
 	timer3.Enabled = True
- 
+
+	
 End Sub
 
 Private Sub Base_Resize (Width As Double, Height As Double)
@@ -78,7 +84,9 @@ End Sub
 Private Sub Timer2_Tick
 	 
 	Dim height As Int = ( Rnd(30, 100) / 100  ) *  mBase.PrefHeight
-	 
+	
+	
+	
 	Pane2.SetLayoutAnimated(300 , Pane2.Left, Pane2.Top, Pane2.PrefWidth , height)
 	 
 End Sub
