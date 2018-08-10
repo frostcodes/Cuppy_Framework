@@ -80,9 +80,9 @@ _vvvvvvvvvvvvvvvvvvv5.LoadLayout(ba,"CFMaterialLinearProgressBarUI");
  //BA.debugLineNum = 31;BA.debugLine="SetBg(CFStyleManager.DefaultTheme.Get(\"divider\"))";
 _vvvvvvvvvvvvvv7(BA.ObjectToString(_vvvvvvvvvvvvvvvv5._vv5.Get((Object)("divider"))));
  //BA.debugLineNum = 32;BA.debugLine="setProgressColor(CFStyleManager.DefaultTheme.Get(";
-_setvvvvvvvvvvvvvvvvvvvvv0(BA.ObjectToString(_vvvvvvvvvvvvvvvv5._vv5.Get((Object)("primary"))));
+_setvvvvvvvvvvvvvvvvvvvvvv3(BA.ObjectToString(_vvvvvvvvvvvvvvvv5._vv5.Get((Object)("primary"))));
  //BA.debugLineNum = 33;BA.debugLine="progress(30) 'set initial value";
-_vvvvvvvvvvvvvvvvvvvvv6((int) (30));
+_vvvvvvvvvvvvvvvvvvvvvv1((int) (30));
  //BA.debugLineNum = 35;BA.debugLine="End Sub";
 return "";
 }
@@ -103,7 +103,7 @@ _vvvvvvvvvvvvvvvvvvv4 = _callback;
  //BA.debugLineNum = 25;BA.debugLine="End Sub";
 return "";
 }
-public String  _vvvvvvvvvvvvvvvvvvvvv6(int _value) throws Exception{
+public String  _vvvvvvvvvvvvvvvvvvvvvv1(int _value) throws Exception{
  //BA.debugLineNum = 97;BA.debugLine="Public Sub progress(value As Int)";
  //BA.debugLineNum = 99;BA.debugLine="If value >= 100 Then";
 if (_value>=100) { 
@@ -152,7 +152,7 @@ _vvvvvvvvvvvvvvvvv6._vvvvvvvvvvvvvvv6(_progresspane,_effect);
  //BA.debugLineNum = 81;BA.debugLine="End Sub";
 return "";
 }
-public String  _setvvvvvvvvvvvvvvvvvvvvv0(String _color) throws Exception{
+public String  _setvvvvvvvvvvvvvvvvvvvvvv3(String _color) throws Exception{
  //BA.debugLineNum = 91;BA.debugLine="Public Sub setProgressColor(color As String)";
  //BA.debugLineNum = 93;BA.debugLine="CSSUtils.SetStyleProperty( ProgressBar, \"-fx-back";
 _vvvvvvvvvvvvvvvv3._setstyleproperty((anywheresoftware.b4j.objects.NodeWrapper.ConcreteNodeWrapper) anywheresoftware.b4a.AbsObjectWrapper.ConvertToWrapper(new anywheresoftware.b4j.objects.NodeWrapper.ConcreteNodeWrapper(), (javafx.scene.Node)(_progressbar.getObject())),"-fx-background-color",_color);

@@ -28,7 +28,7 @@ public static double _v7 = 0;
 public static String _v0 = "";
 public static boolean _vv1 = false;
 public static String _vv2 = "";
-public static String _vvvvvvvvvvvvvvvvvvvvvv1 = "";
+public static String _vvvvvvvvvvvvvvvvvvvvvv4 = "";
 public static b4j.example.cssutils _vvvvvvvvvvvvvvvv3 = null;
 public static Punchline.Tech.Cuppy.Framework.cfstylemanager _vvvvvvvvvvvvvvvv5 = null;
 public static Punchline.Tech.Cuppy.Framework.cfstringutility _vvvvvvvvvvvvvvvv6 = null;
@@ -56,7 +56,7 @@ _vv1 = anywheresoftware.b4a.keywords.Common.True;
  //BA.debugLineNum = 13;BA.debugLine="Public AppDir As String = File.DirApp";
 _vv2 = anywheresoftware.b4a.keywords.Common.File.getDirApp();
  //BA.debugLineNum = 16;BA.debugLine="Private LicenseServer As String =\"\" 'ignore";
-_vvvvvvvvvvvvvvvvvvvvvv1 = "";
+_vvvvvvvvvvvvvvvvvvvvvv4 = "";
  //BA.debugLineNum = 18;BA.debugLine="End Sub";
 return "";
 }

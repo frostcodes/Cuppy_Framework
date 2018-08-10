@@ -214,7 +214,7 @@ __c.CallSubDelayed2(ba,_vvvvvvvvvvvvvvvvvvv4,_vvvvvvvvvvvvvvvvvvv3+"_CheckedChan
  //BA.debugLineNum = 132;BA.debugLine="End Sub";
 return "";
 }
-public String  _setvvvvvvvvvvvvvvvvvvvv5(int _iconcode) throws Exception{
+public String  _setvvvvvvvvvvvvvvvvvvvv0(int _iconcode) throws Exception{
  //BA.debugLineNum = 147;BA.debugLine="Public Sub setIcon(iconCode As Int)";
  //BA.debugLineNum = 149;BA.debugLine="CheckedLabel.Text = Chr(iconCode)";
 _checkedlabel.setText(BA.ObjectToString(__c.Chr(_iconcode)));

@@ -7,9 +7,9 @@ Version=5.51
 'Custom View class
  #If trial
   
-#Event: MousePressed (EventData As MouseEvent)
+'#Event: MousePressed (EventData As MouseEvent)
 
-#RaisesSynchronousEvents: MousePressed
+'#RaisesSynchronousEvents: MousePressed
 
 #Region Internal Segment
 
@@ -18,7 +18,6 @@ Sub Class_Globals
 	Private mEventName As String 'ignore
 	Private mCallBack As Object 'ignore
 	Private mBase As Pane
-	'Public InnerLabel As Label
 	Private timer1 As Timer
 	Private timer2 As Timer
 	Private timer3 As Timer
@@ -147,7 +146,32 @@ End Sub
 '	 
 'End Sub
 
+#Region Control specific actions
 
+Private Sub EnableTimers(enabled As Boolean)
+	
+	timer1.Enabled =  enabled
+	timer2.Enabled =  enabled
+	timer3.Enabled =  enabled
+	
+End Sub
+
+'Starts the Pre Loader
+Public Sub Start()
+	
+	EnableTimers(True)
+	CallSubDelayed(mCallBack, mEventName & "_AnimationStarted" )
+	 
+End Sub
+
+'Stops the Pre Loader
+Public Sub Stop()
+	
+	EnableTimers(False)
+	CallSubDelayed(mCallBack, mEventName & "_AnimationStopped" )
+
+End Sub
+ 
 #Else
 
 #ExcludeFromLibrary: True

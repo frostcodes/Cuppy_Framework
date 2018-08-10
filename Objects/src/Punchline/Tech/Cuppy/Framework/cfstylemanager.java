@@ -51,9 +51,9 @@ public static String  _vv0(String _theme,String _dir,String _filename) throws Ex
  //BA.debugLineNum = 130;BA.debugLine="theme = CFStringUtility.ucfirst(theme)";
 _theme = _vvvvvvvvvvvvvvvv6._vvvvvvvv4(_theme);
  //BA.debugLineNum = 132;BA.debugLine="If AvailableThemes.ThemesList.ContainsKey(theme)";
-if (_vv4._vvvvvvvvvvvvvvvvvvvvv2().ContainsKey((Object)(_theme))) { 
+if (_vv4._vvvvvvvvvvvvvvvvvvvvv5().ContainsKey((Object)(_theme))) { 
  //BA.debugLineNum = 134;BA.debugLine="File.WriteMap(Dir, FileName, AvailableThemes.Th";
-anywheresoftware.b4a.keywords.Common.File.WriteMap(_dir,_filename,(anywheresoftware.b4a.objects.collections.Map) anywheresoftware.b4a.AbsObjectWrapper.ConvertToWrapper(new anywheresoftware.b4a.objects.collections.Map(), (anywheresoftware.b4a.objects.collections.Map.MyMap)(_vv4._vvvvvvvvvvvvvvvvvvvvv2().Get((Object)(_theme)))));
+anywheresoftware.b4a.keywords.Common.File.WriteMap(_dir,_filename,(anywheresoftware.b4a.objects.collections.Map) anywheresoftware.b4a.AbsObjectWrapper.ConvertToWrapper(new anywheresoftware.b4a.objects.collections.Map(), (anywheresoftware.b4a.objects.collections.Map.MyMap)(_vv4._vvvvvvvvvvvvvvvvvvvvv5().Get((Object)(_theme)))));
  }else {
  //BA.debugLineNum = 138;BA.debugLine="LogError(\"Could not export theme(\" & theme & \").";
 anywheresoftware.b4a.keywords.Common.LogError("Could not export theme("+_theme+"). Please check the Theme name");
@@ -171,7 +171,7 @@ _vv3 = _vvv3("Regular",12);
 _vv4 = new Punchline.Tech.Cuppy.Framework.cfthemes();
  //BA.debugLineNum = 8;BA.debugLine="Public DefaultTheme As Map = AvailableThemes.The";
 _vv5 = new anywheresoftware.b4a.objects.collections.Map();
-_vv5.setObject((anywheresoftware.b4a.objects.collections.Map.MyMap)(_vv4._vvvvvvvvvvvvvvvvvvvvv2().Get((Object)("Blue"))));
+_vv5.setObject((anywheresoftware.b4a.objects.collections.Map.MyMap)(_vv4._vvvvvvvvvvvvvvvvvvvvv5().Get((Object)("Blue"))));
  //BA.debugLineNum = 9;BA.debugLine="Public ActiveControls As List";
 _vv6 = new anywheresoftware.b4a.objects.collections.List();
  //BA.debugLineNum = 10;BA.debugLine="ActiveControls.Initialize 'ignore : need this , b";
@@ -191,9 +191,9 @@ public static String  _vvv4(String _theme) throws Exception{
  //BA.debugLineNum = 59;BA.debugLine="theme = CFStringUtility.ucfirst(theme)";
 _theme = _vvvvvvvvvvvvvvvv6._vvvvvvvv4(_theme);
  //BA.debugLineNum = 61;BA.debugLine="If AvailableThemes.ThemesList.ContainsKey(theme)";
-if (_vv4._vvvvvvvvvvvvvvvvvvvvv2().ContainsKey((Object)(_theme))) { 
+if (_vv4._vvvvvvvvvvvvvvvvvvvvv5().ContainsKey((Object)(_theme))) { 
  //BA.debugLineNum = 63;BA.debugLine="DefaultTheme = AvailableThemes.ThemesList.Get(t";
-_vv5.setObject((anywheresoftware.b4a.objects.collections.Map.MyMap)(_vv4._vvvvvvvvvvvvvvvvvvvvv2().Get((Object)(_theme))));
+_vv5.setObject((anywheresoftware.b4a.objects.collections.Map.MyMap)(_vv4._vvvvvvvvvvvvvvvvvvvvv5().Get((Object)(_theme))));
  }else {
  //BA.debugLineNum = 67;BA.debugLine="LogError(\"Could not find the selected theme(\" &";
 anywheresoftware.b4a.keywords.Common.LogError("Could not find the selected theme("+_theme+"). Please check the Theme name");

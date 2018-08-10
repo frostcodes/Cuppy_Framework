@@ -82,7 +82,7 @@ if (true) return _vvvvvvvvvvvvvvvvvvv5;
  //BA.debugLineNum = 47;BA.debugLine="End Sub";
 return null;
 }
-public double  _vvvvvvvvvvvvvvvvvvvvv4() throws Exception{
+public double  _vvvvvvvvvvvvvvvvvvvvv7() throws Exception{
  //BA.debugLineNum = 102;BA.debugLine="Public Sub getSize() As Double";
  //BA.debugLineNum = 104;BA.debugLine="Return line.PrefHeight";
 if (true) return _line.getPrefHeight();
@@ -146,7 +146,7 @@ _vvvvvvvvvvvvvvvvv6._vvvvvvvvvvvvvvv7(_line,_angle);
  //BA.debugLineNum = 64;BA.debugLine="End Sub";
 return "";
 }
-public String  _vvvvvvvvvvvvvvvvvvvvv5(int _sizex) throws Exception{
+public String  _vvvvvvvvvvvvvvvvvvvvv0(int _sizex) throws Exception{
  //BA.debugLineNum = 96;BA.debugLine="Public Sub setSize(sizeX As Int)";
  //BA.debugLineNum = 98;BA.debugLine="line.PrefHeight =  sizeX";
 _line.setPrefHeight(_sizex);
