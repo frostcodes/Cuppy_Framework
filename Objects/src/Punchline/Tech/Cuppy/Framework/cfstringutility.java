@@ -22,20 +22,20 @@ static {
 	}
 
  public static anywheresoftware.b4a.keywords.Common __c = null;
-public static anywheresoftware.b4j.objects.JFX _vvvvvvvvvvvvvvvv2 = null;
-public static b4j.example.cssutils _vvvvvvvvvvvvvvvv3 = null;
-public static Punchline.Tech.Cuppy.Framework.cfconfigs _vvvvvvvvvvvvvvvv4 = null;
-public static Punchline.Tech.Cuppy.Framework.cfstylemanager _vvvvvvvvvvvvvvvv5 = null;
-public static Punchline.Tech.Cuppy.Framework.cffileutility _vvvvvvvvvvvvvvvv7 = null;
-public static Punchline.Tech.Cuppy.Framework.cfmathutility _vvvvvvvvvvvvvvvv0 = null;
-public static Punchline.Tech.Cuppy.Framework.cfdatatypeutility _vvvvvvvvvvvvvvvvv1 = null;
-public static Punchline.Tech.Cuppy.Framework.cfanimationmanager _vvvvvvvvvvvvvvvvv2 = null;
-public static Punchline.Tech.Cuppy.Framework.cflicensemanager _vvvvvvvvvvvvvvvvv3 = null;
-public static Punchline.Tech.Cuppy.Framework.cfdatageneratorutility _vvvvvvvvvvvvvvvvv4 = null;
-public static Punchline.Tech.Cuppy.Framework.cfapputility _vvvvvvvvvvvvvvvvv5 = null;
-public static Punchline.Tech.Cuppy.Framework.cfcontrolsutils _vvvvvvvvvvvvvvvvv6 = null;
-public static Punchline.Tech.Cuppy.Framework.cfhtmlutility _vvvvvvvvvvvvvvvvv7 = null;
-public static Object  _vvv5(String _haystack,String _after) throws Exception{
+public static anywheresoftware.b4j.objects.JFX _fx = null;
+public static b4j.example.cssutils _cssutils = null;
+public static Punchline.Tech.Cuppy.Framework.cfconfigs _cfconfigs = null;
+public static Punchline.Tech.Cuppy.Framework.cfstylemanager _cfstylemanager = null;
+public static Punchline.Tech.Cuppy.Framework.cffileutility _cffileutility = null;
+public static Punchline.Tech.Cuppy.Framework.cfmathutility _cfmathutility = null;
+public static Punchline.Tech.Cuppy.Framework.cfdatatypeutility _cfdatatypeutility = null;
+public static Punchline.Tech.Cuppy.Framework.cfanimationmanager _cfanimationmanager = null;
+public static Punchline.Tech.Cuppy.Framework.cflicensemanager _cflicensemanager = null;
+public static Punchline.Tech.Cuppy.Framework.cfdatageneratorutility _cfdatageneratorutility = null;
+public static Punchline.Tech.Cuppy.Framework.cfapputility _cfapputility = null;
+public static Punchline.Tech.Cuppy.Framework.cfcontrolsutils _cfcontrolsutils = null;
+public static Punchline.Tech.Cuppy.Framework.cfhtmlutility _cfhtmlutility = null;
+public static Object  _breakstrat(String _haystack,String _after) throws Exception{
 String _found = "";
  //BA.debugLineNum = 700;BA.debugLine="Public Sub breakStrAt(haystack As String, after As";
  //BA.debugLineNum = 702;BA.debugLine="Dim found As String = \"\"";
@@ -53,7 +53,7 @@ if (true) return (Object)(_haystack.substring((int)(Double.parseDouble(_found)))
  //BA.debugLineNum = 716;BA.debugLine="End Sub";
 return null;
 }
-public static String  _vvv6(String _str) throws Exception{
+public static String  _camelize(String _str) throws Exception{
 String _firstchar = "";
 String _result = "";
 String _txt = "";
@@ -69,14 +69,14 @@ _firstchar = BA.ObjectToString(_str.charAt((int) (0)));
 _firstchar = _firstchar.toLowerCase();
  //BA.debugLineNum = 447;BA.debugLine="For Each txt As String In explode(\"_\", str)";
 {
-final anywheresoftware.b4a.BA.IterableList group5 = _vvvv1("_",_str);
+final anywheresoftware.b4a.BA.IterableList group5 = _explode("_",_str);
 final int groupLen5 = group5.getSize()
 ;int index5 = 0;
 ;
 for (; index5 < groupLen5;index5++){
 _txt = BA.ObjectToString(group5.Get(index5));
  //BA.debugLineNum = 448;BA.debugLine="result = result & ucfirst(txt)";
-_result = _result+_vvvvvvvv4(_txt);
+_result = _result+_ucfirst(_txt);
  }
 };
  //BA.debugLineNum = 451;BA.debugLine="Return firstChar & result.SubString(1)";
@@ -84,7 +84,7 @@ if (true) return _firstchar+_result.substring((int) (1));
  //BA.debugLineNum = 453;BA.debugLine="End Sub";
 return "";
 }
-public static boolean  _vvv7(String _text) throws Exception{
+public static boolean  _containurl(String _text) throws Exception{
  //BA.debugLineNum = 87;BA.debugLine="Public Sub ContainUrl(text As String) As Boolean";
  //BA.debugLineNum = 89;BA.debugLine="text = text.Trim";
 _text = _text.trim();
@@ -93,21 +93,21 @@ if (true) return _text.contains("http://") || _text.contains("https://");
  //BA.debugLineNum = 93;BA.debugLine="End Sub";
 return false;
 }
-public static String  _vvv0(String _value) throws Exception{
+public static String  _escapestring(String _value) throws Exception{
  //BA.debugLineNum = 353;BA.debugLine="Public Sub EscapeString(value As String) As String";
  //BA.debugLineNum = 355;BA.debugLine="Return \"\\\"& value";
 if (true) return "\\"+_value;
  //BA.debugLineNum = 357;BA.debugLine="End Sub";
 return "";
 }
-public static anywheresoftware.b4a.objects.collections.List  _vvvv1(String _delimiter,String _str) throws Exception{
+public static anywheresoftware.b4a.objects.collections.List  _explode(String _delimiter,String _str) throws Exception{
  //BA.debugLineNum = 368;BA.debugLine="Public Sub explode(delimiter As String ,  str As S";
  //BA.debugLineNum = 370;BA.debugLine="Return Split(str, delimiter)";
-if (true) return _vvvvvv4(_str,_delimiter);
+if (true) return _split(_str,_delimiter);
  //BA.debugLineNum = 372;BA.debugLine="End Sub";
 return null;
 }
-public static int  _vvvv2(int _pinlength) throws Exception{
+public static int  _generatepincode(int _pinlength) throws Exception{
 String _result = "";
 String[] _randomarray = null;
 int _i = 0;
@@ -131,7 +131,7 @@ if (true) return (int)(Double.parseDouble(_result));
  //BA.debugLineNum = 283;BA.debugLine="End Sub";
 return 0;
 }
-public static String  _vvvv3(int _strlength) throws Exception{
+public static String  _generaterandomstring(int _strlength) throws Exception{
 String _rndstring = "";
 int _rndnumber = 0;
  //BA.debugLineNum = 232;BA.debugLine="Public Sub generateRandomString(StrLength As Int)";
@@ -155,7 +155,7 @@ if (true) return _rndstring;
  //BA.debugLineNum = 242;BA.debugLine="End Sub";
 return "";
 }
-public static String  _vvvv4(int _strlength) throws Exception{
+public static String  _generaterandomstring2(int _strlength) throws Exception{
 String[] _randomarray = null;
 String _result = "";
  //BA.debugLineNum = 249;BA.debugLine="Public Sub generateRandomString2(StrLength As Int)";
@@ -164,28 +164,28 @@ _randomarray = new String[]{"!","@","#","$","%"};
  //BA.debugLineNum = 252;BA.debugLine="Dim result As String";
 _result = "";
  //BA.debugLineNum = 255;BA.debugLine="result =  StringArray2String(shuffleArray(RandomA";
-_result = _vvvvvv0(_vvvvvv3(_randomarray));
+_result = _stringarray2string(_shufflearray(_randomarray));
  //BA.debugLineNum = 256;BA.debugLine="result = result  & generateRandomString( Floor( S";
-_result = _result+_vvvv3((int) (anywheresoftware.b4a.keywords.Common.Floor(_strlength/(double)2)));
+_result = _result+_generaterandomstring((int) (anywheresoftware.b4a.keywords.Common.Floor(_strlength/(double)2)));
  //BA.debugLineNum = 257;BA.debugLine="result = result  & StringArray2String(shuffleArra";
-_result = _result+_vvvvvv0(_vvvvvv3(_randomarray));
+_result = _result+_stringarray2string(_shufflearray(_randomarray));
  //BA.debugLineNum = 258;BA.debugLine="result = result  & generateRandomString( Floor( S";
-_result = _result+_vvvv3((int) (anywheresoftware.b4a.keywords.Common.Floor(_strlength/(double)2)));
+_result = _result+_generaterandomstring((int) (anywheresoftware.b4a.keywords.Common.Floor(_strlength/(double)2)));
  //BA.debugLineNum = 261;BA.debugLine="Return  result.SubString2( result.Length - StrLen";
 if (true) return _result.substring((int) (_result.length()-_strlength),_result.length());
  //BA.debugLineNum = 263;BA.debugLine="End Sub";
 return "";
 }
-public static String  _vvvv5(String _str,String _separator) throws Exception{
+public static String  _humanize(String _str,String _separator) throws Exception{
  //BA.debugLineNum = 465;BA.debugLine="Public Sub humanize(str As String, separator As St";
  //BA.debugLineNum = 467;BA.debugLine="str= str.ToLowerCase";
 _str = _str.toLowerCase();
  //BA.debugLineNum = 468;BA.debugLine="Return ucwords(str.Replace(separator, \" \"))";
-if (true) return _vvvvvvvv5(_str.replace(_separator," "));
+if (true) return _ucwords(_str.replace(_separator," "));
  //BA.debugLineNum = 470;BA.debugLine="End Sub";
 return "";
 }
-public static String  _vvvv6(String _separator,anywheresoftware.b4a.objects.collections.List _strlist) throws Exception{
+public static String  _implode(String _separator,anywheresoftware.b4a.objects.collections.List _strlist) throws Exception{
 String _result = "";
 String _str = "";
  //BA.debugLineNum = 375;BA.debugLine="Public Sub implode(separator As String, StrList As";
@@ -244,7 +244,7 @@ if (true) return _str+_separator+BA.NumberToString(_first);
  //BA.debugLineNum = 349;BA.debugLine="End Sub";
 return "";
 }
-public static boolean  _vvvv7(String _emailaddress) throws Exception{
+public static boolean  _isemail(String _emailaddress) throws Exception{
 anywheresoftware.b4a.keywords.Regex.MatcherWrapper _matchemail = null;
  //BA.debugLineNum = 23;BA.debugLine="Public Sub IsEmail(EmailAddress As String) As Bool";
  //BA.debugLineNum = 25;BA.debugLine="Dim MatchEmail As Matcher = Regex.Matcher(\"^(?i)[";
@@ -261,14 +261,14 @@ if (true) return anywheresoftware.b4a.keywords.Common.False;
  //BA.debugLineNum = 33;BA.debugLine="End Sub";
 return false;
 }
-public static boolean  _vvvv0(String _str) throws Exception{
+public static boolean  _isempty(String _str) throws Exception{
  //BA.debugLineNum = 15;BA.debugLine="Public Sub isEmpty(str As String) As Boolean";
  //BA.debugLineNum = 17;BA.debugLine="Return (str.Trim = \"\")";
 if (true) return ((_str.trim()).equals(""));
  //BA.debugLineNum = 19;BA.debugLine="End Sub";
 return false;
 }
-public static boolean  _vvvvv1(String _c) throws Exception{
+public static boolean  _isletter(String _c) throws Exception{
 String _pattern = "";
  //BA.debugLineNum = 54;BA.debugLine="Public Sub IsLetter (c As String) As Boolean";
  //BA.debugLineNum = 56;BA.debugLine="Dim pattern As String = \"\\p{Alpha}\"";
@@ -281,7 +281,7 @@ if (true) return anywheresoftware.b4a.keywords.Common.Regex.IsMatch(_pattern,_c)
  //BA.debugLineNum = 61;BA.debugLine="End Sub";
 return false;
 }
-public static boolean  _vvvvv2(String _text) throws Exception{
+public static boolean  _isletters(String _text) throws Exception{
 String _pattern = "";
  //BA.debugLineNum = 65;BA.debugLine="Public Sub IsLetters (text As String) As Boolean";
  //BA.debugLineNum = 67;BA.debugLine="Dim pattern As String = \"\\p{Alpha}+\"";
@@ -294,14 +294,14 @@ if (true) return anywheresoftware.b4a.keywords.Common.Regex.IsMatch(_pattern,_te
  //BA.debugLineNum = 72;BA.debugLine="End Sub";
 return false;
 }
-public static boolean  _vvvvv3(Object _obj) throws Exception{
+public static boolean  _isnull(Object _obj) throws Exception{
  //BA.debugLineNum = 8;BA.debugLine="Public Sub isNull(obj As Object) As Boolean";
  //BA.debugLineNum = 10;BA.debugLine="Return (obj = Null)";
 if (true) return (_obj== null);
  //BA.debugLineNum = 12;BA.debugLine="End Sub";
 return false;
 }
-public static boolean  _vvvvv4(String _text) throws Exception{
+public static boolean  _isurl(String _text) throws Exception{
  //BA.debugLineNum = 77;BA.debugLine="Public Sub isUrl (text As String) As Boolean";
  //BA.debugLineNum = 79;BA.debugLine="text = text.Trim";
 _text = _text.trim();
@@ -310,7 +310,7 @@ if (true) return _text.startsWith("http://") || _text.startsWith("https://");
  //BA.debugLineNum = 83;BA.debugLine="End Sub";
 return false;
 }
-public static boolean  _vvvvv5(String _ip) throws Exception{
+public static boolean  _isvalidip(String _ip) throws Exception{
 anywheresoftware.b4a.keywords.Regex.MatcherWrapper _m = null;
 int _i = 0;
  //BA.debugLineNum = 37;BA.debugLine="Public Sub IsValidIp(ip As String) As Boolean";
@@ -337,14 +337,14 @@ if (true) return anywheresoftware.b4a.keywords.Common.True;
  //BA.debugLineNum = 50;BA.debugLine="End Sub";
 return false;
 }
-public static String  _vvvvv6(anywheresoftware.b4a.objects.collections.List _strlist,String _separator) throws Exception{
+public static String  _join(anywheresoftware.b4a.objects.collections.List _strlist,String _separator) throws Exception{
  //BA.debugLineNum = 388;BA.debugLine="Public Sub join(StrList As List,separator As Strin";
  //BA.debugLineNum = 390;BA.debugLine="Return implode(separator, StrList)";
-if (true) return _vvvv6(_separator,_strlist);
+if (true) return _implode(_separator,_strlist);
  //BA.debugLineNum = 392;BA.debugLine="End Sub";
 return "";
 }
-public static String  _vvvvv7(String _str) throws Exception{
+public static String  _lcfirst(String _str) throws Exception{
 String _firstchar = "";
  //BA.debugLineNum = 424;BA.debugLine="Public Sub lcfirst(str As String) As String";
  //BA.debugLineNum = 426;BA.debugLine="Dim firstChar As String =\"\"";
@@ -358,7 +358,7 @@ if (true) return _firstchar+_str.substring((int) (1));
  //BA.debugLineNum = 432;BA.debugLine="End Sub";
 return "";
 }
-public static anywheresoftware.b4a.objects.collections.Map  _vvvvv0(String _querystring) throws Exception{
+public static anywheresoftware.b4a.objects.collections.Map  _parsequerystring(String _querystring) throws Exception{
 anywheresoftware.b4a.objects.collections.Map _data = null;
 anywheresoftware.b4a.objects.collections.List _temp_list = null;
 int _i = 0;
@@ -371,7 +371,7 @@ _data.Initialize();
  //BA.debugLineNum = 948;BA.debugLine="Try";
 try { //BA.debugLineNum = 951;BA.debugLine="Dim temp_list As List = Split(QueryString, \"&\")";
 _temp_list = new anywheresoftware.b4a.objects.collections.List();
-_temp_list = _vvvvvv4(_querystring,"&");
+_temp_list = _split(_querystring,"&");
  //BA.debugLineNum = 953;BA.debugLine="For i = 0 To temp_list.Size - 1";
 {
 final int step5 = 1;
@@ -380,7 +380,7 @@ _i = (int) (0) ;
 for (;_i <= limit5 ;_i = _i + step5 ) {
  //BA.debugLineNum = 955;BA.debugLine="Dim QueryList As List = Split(temp_list.Get(i)";
 _querylist = new anywheresoftware.b4a.objects.collections.List();
-_querylist = _vvvvvv4(BA.ObjectToString(_temp_list.Get(_i)),"=");
+_querylist = _split(BA.ObjectToString(_temp_list.Get(_i)),"=");
  //BA.debugLineNum = 957;BA.debugLine="If Not(Data.ContainsKey(QueryList.Get(0))) Then";
 if (anywheresoftware.b4a.keywords.Common.Not(_data.ContainsKey(_querylist.Get((int) (0))))) { 
  //BA.debugLineNum = 959;BA.debugLine="Data.Put(QueryList.Get(0), QueryList.Get(1))";
@@ -398,14 +398,14 @@ if (true) return _data;
  //BA.debugLineNum = 973;BA.debugLine="End Sub";
 return null;
 }
-public static anywheresoftware.b4a.objects.collections.Map  _vvvvvv1(String _url) throws Exception{
+public static anywheresoftware.b4a.objects.collections.Map  _parsequerystringurl(String _url) throws Exception{
  //BA.debugLineNum = 983;BA.debugLine="Public Sub parseQueryStringUrl(url As String) As M";
  //BA.debugLineNum = 985;BA.debugLine="url= breakStrAt(url, \"?\") ' Split URL from Query";
-_url = BA.ObjectToString(_vvv5(_url,"?"));
+_url = BA.ObjectToString(_breakstrat(_url,"?"));
  //BA.debugLineNum = 986;BA.debugLine="url =  trim_left_once(url, \"?\")";
 _url = _trim_left_once(_url,"?");
  //BA.debugLineNum = 988;BA.debugLine="Return parseQueryString(url)";
-if (true) return _vvvvv0(_url);
+if (true) return _parsequerystring(_url);
  //BA.debugLineNum = 990;BA.debugLine="End Sub";
 return null;
 }
@@ -414,7 +414,7 @@ public static String  _prep_url(String _str) throws Exception{
  //BA.debugLineNum = 475;BA.debugLine="str= str.Trim";
 _str = _str.trim();
  //BA.debugLineNum = 477;BA.debugLine="If isEmpty(str) Or str.EqualsIgnoreCase(\"http://\"";
-if (_vvvv0(_str) || _str.equalsIgnoreCase("http://")) { 
+if (_isempty(_str) || _str.equalsIgnoreCase("http://")) { 
  //BA.debugLineNum = 479;BA.debugLine="Return  \"\"";
 if (true) return "";
  }else {
@@ -446,7 +446,7 @@ return "";
 public static String  _process_globals() throws Exception{
  //BA.debugLineNum = 3;BA.debugLine="Private Sub Process_Globals";
  //BA.debugLineNum = 4;BA.debugLine="Private fx As JFX";
-_vvvvvvvvvvvvvvvv2 = new anywheresoftware.b4j.objects.JFX();
+_fx = new anywheresoftware.b4j.objects.JFX();
  //BA.debugLineNum = 5;BA.debugLine="End Sub";
 return "";
 }
@@ -465,7 +465,7 @@ if (true) return _str;
  //BA.debugLineNum = 175;BA.debugLine="End Sub";
 return "";
 }
-public static Object  _vvvvvv2(anywheresoftware.b4a.objects.collections.List _listx) throws Exception{
+public static Object  _randlistvalue(anywheresoftware.b4a.objects.collections.List _listx) throws Exception{
  //BA.debugLineNum = 220;BA.debugLine="Public Sub RandListValue(ListX As List) As Object";
  //BA.debugLineNum = 222;BA.debugLine="Return ListX.Get(Rnd(0, ListX.Size -1))";
 if (true) return _listx.Get(anywheresoftware.b4a.keywords.Common.Rnd((int) (0),(int) (_listx.getSize()-1)));
@@ -489,7 +489,7 @@ if (true) return _str;
  //BA.debugLineNum = 196;BA.debugLine="End Sub";
 return "";
 }
-public static String[]  _vvvvvv3(String[] _stringarray) throws Exception{
+public static String[]  _shufflearray(String[] _stringarray) throws Exception{
 String _arrayval = "";
 int _random = 0;
 int _i = 0;
@@ -519,19 +519,19 @@ if (true) return _stringarray;
  //BA.debugLineNum = 217;BA.debugLine="End Sub";
 return null;
 }
-public static anywheresoftware.b4a.objects.collections.List  _vvvvvv4(String _str,String _delimiter) throws Exception{
+public static anywheresoftware.b4a.objects.collections.List  _split(String _str,String _delimiter) throws Exception{
 anywheresoftware.b4a.objects.collections.List _t = null;
  //BA.debugLineNum = 360;BA.debugLine="Sub Split(str As String, delimiter As String) As L";
  //BA.debugLineNum = 361;BA.debugLine="Dim t As List";
 _t = new anywheresoftware.b4a.objects.collections.List();
  //BA.debugLineNum = 362;BA.debugLine="t = Regex.Split(EscapeString(delimiter), str)";
-_t = anywheresoftware.b4a.keywords.Common.ArrayToList(anywheresoftware.b4a.keywords.Common.Regex.Split(_vvv0(_delimiter),_str));
+_t = anywheresoftware.b4a.keywords.Common.ArrayToList(anywheresoftware.b4a.keywords.Common.Regex.Split(_escapestring(_delimiter),_str));
  //BA.debugLineNum = 363;BA.debugLine="Return t";
 if (true) return _t;
  //BA.debugLineNum = 364;BA.debugLine="End Sub";
 return null;
 }
-public static String  _vvvvvv5(String _fmt,Object[] _arg) throws Exception{
+public static String  _sprintf(String _fmt,Object[] _arg) throws Exception{
 int _ai = 0;
 int _fi = 0;
 int _i = 0;
@@ -718,7 +718,7 @@ _chunks = new anywheresoftware.b4a.objects.collections.List();
  //BA.debugLineNum = 755;BA.debugLine="chunks.Initialize";
 _chunks.Initialize();
  //BA.debugLineNum = 757;BA.debugLine="If (isEmpty(str) Or splitLength < 1)  Then";
-if ((_vvvv0(_str) || _splitlength<1)) { 
+if ((_isempty(_str) || _splitlength<1)) { 
  //BA.debugLineNum = 759;BA.debugLine="Return chunks 'empty list";
 if (true) return _chunks;
  }else if(_splitlength==_str.length()) { 
@@ -752,14 +752,14 @@ if (true) return _chunks;
  //BA.debugLineNum = 790;BA.debugLine="End Sub";
 return null;
 }
-public static String  _vvvvvv6(String _text) throws Exception{
+public static String  _string2ascii(String _text) throws Exception{
  //BA.debugLineNum = 662;BA.debugLine="Public Sub String2Ascii(text As String) As String";
  //BA.debugLineNum = 665;BA.debugLine="Return String2AsciiWithSeperator(text, \"\")";
-if (true) return _vvvvvv7(_text,"");
+if (true) return _string2asciiwithseperator(_text,"");
  //BA.debugLineNum = 667;BA.debugLine="End Sub";
 return "";
 }
-public static String  _vvvvvv7(String _text,String _seperator) throws Exception{
+public static String  _string2asciiwithseperator(String _text,String _seperator) throws Exception{
 anywheresoftware.b4a.keywords.StringBuilderWrapper _result = null;
 int _i = 0;
  //BA.debugLineNum = 646;BA.debugLine="Public Sub String2AsciiWithSeperator(text As Strin";
@@ -782,7 +782,7 @@ if (true) return _result.ToString().trim();
  //BA.debugLineNum = 659;BA.debugLine="End Sub";
 return "";
 }
-public static String  _vvvvvv0(String[] _strarray) throws Exception{
+public static String  _stringarray2string(String[] _strarray) throws Exception{
 String _result = "";
 String _str = "";
  //BA.debugLineNum = 290;BA.debugLine="Public Sub StringArray2String(StrArray() As String";
@@ -816,7 +816,7 @@ if (true) return _str;
  //BA.debugLineNum = 161;BA.debugLine="End Sub";
 return "";
 }
-public static int  _vvvvvvv1(String _haystack,String _find) throws Exception{
+public static int  _stripos(String _haystack,String _find) throws Exception{
  //BA.debugLineNum = 827;BA.debugLine="Public Sub stripos(haystack As String , find As St";
  //BA.debugLineNum = 829;BA.debugLine="haystack = haystack.ToLowerCase";
 _haystack = _haystack.toLowerCase();
@@ -827,7 +827,7 @@ if (true) return _haystack.indexOf(_find);
  //BA.debugLineNum = 834;BA.debugLine="End Sub";
 return 0;
 }
-public static int  _vvvvvvv2(String _haystack,String _find,int _start) throws Exception{
+public static int  _stripos2(String _haystack,String _find,int _start) throws Exception{
  //BA.debugLineNum = 843;BA.debugLine="Public Sub stripos2(haystack As String , find As S";
  //BA.debugLineNum = 845;BA.debugLine="haystack = haystack.ToLowerCase";
 _haystack = _haystack.toLowerCase();
@@ -838,7 +838,7 @@ if (true) return _haystack.indexOf(_find,_start);
  //BA.debugLineNum = 850;BA.debugLine="End Sub";
 return 0;
 }
-public static Object  _vvvvvvv3(String _haystack,String _charlist) throws Exception{
+public static Object  _strpbrk(String _haystack,String _charlist) throws Exception{
 int _i = 0;
  //BA.debugLineNum = 718;BA.debugLine="Public Sub strpbrk(haystack As String, charList As";
  //BA.debugLineNum = 720;BA.debugLine="For i = 0 To haystack.Length - 1";
@@ -859,21 +859,21 @@ if (true) return (Object)(anywheresoftware.b4a.keywords.Common.False);
  //BA.debugLineNum = 732;BA.debugLine="End Sub";
 return null;
 }
-public static int  _vvvvvvv4(String _haystack,String _find) throws Exception{
+public static int  _strpos(String _haystack,String _find) throws Exception{
  //BA.debugLineNum = 801;BA.debugLine="Public Sub strpos(haystack As String , find As Str";
  //BA.debugLineNum = 803;BA.debugLine="Return haystack.IndexOf(find)";
 if (true) return _haystack.indexOf(_find);
  //BA.debugLineNum = 805;BA.debugLine="End Sub";
 return 0;
 }
-public static int  _vvvvvvv5(String _haystack,String _find,int _start) throws Exception{
+public static int  _strpos2(String _haystack,String _find,int _start) throws Exception{
  //BA.debugLineNum = 814;BA.debugLine="Public Sub strpos2(haystack As String , find As St";
  //BA.debugLineNum = 816;BA.debugLine="Return haystack.IndexOf2(find, start)";
 if (true) return _haystack.indexOf(_find,_start);
  //BA.debugLineNum = 818;BA.debugLine="End Sub";
 return 0;
 }
-public static int  _vvvvvvv6(String _haystack,String _find) throws Exception{
+public static int  _strripos(String _haystack,String _find) throws Exception{
  //BA.debugLineNum = 889;BA.debugLine="Public Sub strripos(haystack As String , find As S";
  //BA.debugLineNum = 891;BA.debugLine="haystack = haystack.ToLowerCase";
 _haystack = _haystack.toLowerCase();
@@ -884,7 +884,7 @@ if (true) return _haystack.lastIndexOf(_find);
  //BA.debugLineNum = 896;BA.debugLine="End Sub";
 return 0;
 }
-public static int  _vvvvvvv7(String _haystack,String _find,int _start) throws Exception{
+public static int  _strripos2(String _haystack,String _find,int _start) throws Exception{
  //BA.debugLineNum = 905;BA.debugLine="Public Sub strripos2 (haystack As String , find As";
  //BA.debugLineNum = 907;BA.debugLine="haystack = haystack.ToLowerCase";
 _haystack = _haystack.toLowerCase();
@@ -895,21 +895,21 @@ if (true) return _haystack.lastIndexOf(_find,_start);
  //BA.debugLineNum = 912;BA.debugLine="End Sub";
 return 0;
 }
-public static int  _vvvvvvv0(String _haystack,String _find) throws Exception{
+public static int  _strrpos(String _haystack,String _find) throws Exception{
  //BA.debugLineNum = 863;BA.debugLine="Public Sub strrpos(haystack As String , find As St";
  //BA.debugLineNum = 865;BA.debugLine="Return haystack.LastIndexOf(find)";
 if (true) return _haystack.lastIndexOf(_find);
  //BA.debugLineNum = 867;BA.debugLine="End Sub";
 return 0;
 }
-public static int  _vvvvvvvv1(String _haystack,String _find,int _start) throws Exception{
+public static int  _strrpos2(String _haystack,String _find,int _start) throws Exception{
  //BA.debugLineNum = 876;BA.debugLine="Public Sub strrpos2(haystack As String , find As S";
  //BA.debugLineNum = 878;BA.debugLine="Return haystack.LastIndexOf2(find, start)";
 if (true) return _haystack.lastIndexOf(_find,_start);
  //BA.debugLineNum = 880;BA.debugLine="End Sub";
 return 0;
 }
-public static anywheresoftware.b4a.objects.collections.List  _vvvvvvvv2(String _str) throws Exception{
+public static anywheresoftware.b4a.objects.collections.List  _strtostrlist(String _str) throws Exception{
 anywheresoftware.b4a.objects.collections.List _result = null;
 int _i = 0;
  //BA.debugLineNum = 736;BA.debugLine="Public Sub strToStrList(str As String) As List";
@@ -935,7 +935,7 @@ return null;
 public static String  _trim_left_once(String _str,String _character) throws Exception{
  //BA.debugLineNum = 108;BA.debugLine="Public Sub trim_left_once(str As String, character";
  //BA.debugLineNum = 110;BA.debugLine="If isEmpty(character) Then";
-if (_vvvv0(_character)) { 
+if (_isempty(_character)) { 
  //BA.debugLineNum = 112;BA.debugLine="character = \" \" 'empty space";
 _character = " ";
  };
@@ -963,7 +963,7 @@ return "";
 public static String  _trim_right_once(String _str,String _character) throws Exception{
  //BA.debugLineNum = 127;BA.debugLine="Public Sub trim_right_once(str As String, characte";
  //BA.debugLineNum = 129;BA.debugLine="If isEmpty(character) Then";
-if (_vvvv0(_character)) { 
+if (_isempty(_character)) { 
  //BA.debugLineNum = 131;BA.debugLine="character = \" \" 'empty space";
 _character = " ";
  };
@@ -984,7 +984,7 @@ if (true) return _trim_once(_str,"/");
  //BA.debugLineNum = 152;BA.debugLine="End Sub";
 return "";
 }
-public static String  _vvvvvvvv3(String _txt,int _length) throws Exception{
+public static String  _truncate(String _txt,int _length) throws Exception{
  //BA.debugLineNum = 996;BA.debugLine="Public Sub Truncate(txt As String, length As Int)";
  //BA.debugLineNum = 1001;BA.debugLine="If length > txt.Length Then";
 if (_length>_txt.length()) { 
@@ -997,7 +997,7 @@ if (true) return _txt.substring((int) (0),_length);
  //BA.debugLineNum = 1011;BA.debugLine="End Sub";
 return "";
 }
-public static String  _vvvvvvvv4(String _str) throws Exception{
+public static String  _ucfirst(String _str) throws Exception{
 String _firstchar = "";
  //BA.debugLineNum = 413;BA.debugLine="Public Sub ucfirst(str As String) As String";
  //BA.debugLineNum = 415;BA.debugLine="Dim firstChar As String =\"\"";
@@ -1011,7 +1011,7 @@ if (true) return _firstchar+_str.substring((int) (1));
  //BA.debugLineNum = 421;BA.debugLine="End Sub";
 return "";
 }
-public static String  _vvvvvvvv5(String _str) throws Exception{
+public static String  _ucwords(String _str) throws Exception{
 String _result = "";
 String _txt = "";
 String _firstchar = "";
@@ -1020,7 +1020,7 @@ String _firstchar = "";
 _result = "";
  //BA.debugLineNum = 400;BA.debugLine="For Each txt As String In explode(\" \", str)";
 {
-final anywheresoftware.b4a.BA.IterableList group2 = _vvvv1(" ",_str);
+final anywheresoftware.b4a.BA.IterableList group2 = _explode(" ",_str);
 final int groupLen2 = group2.getSize()
 ;int index2 = 0;
 ;
@@ -1041,7 +1041,7 @@ if (true) return _result;
  //BA.debugLineNum = 410;BA.debugLine="End Sub";
 return "";
 }
-public static String  _vvvvvvvv6(String _str) throws Exception{
+public static String  _underscore(String _str) throws Exception{
  //BA.debugLineNum = 457;BA.debugLine="Public Sub underscore(str As String)  As String";
  //BA.debugLineNum = 459;BA.debugLine="str= str.ToLowerCase";
 _str = _str.toLowerCase();

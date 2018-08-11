@@ -102,7 +102,7 @@ Public Sub InnerLabel_MousePressed (EventData As MouseEvent)
 	
 	fx.ShowExternalDocument(InnerLabel.Text)
 	  
-	CallSubDelayed2(mCallBack, mEventName & "_MousePressed", EventData) 'ignore
+	CallSubDelayed2(mCallBack, mEventName & "_MousePressed", EventData)  
 	 
 End Sub
 

@@ -99,24 +99,24 @@ Sub InnerCard_Touch (Action As Int, X As Float, Y As Float)
 	Points.Put("X", X )
 	Points.Put("Y", Y )
 	 
-	CallSubDelayed3( mCallBack, mEventName & "_Touch",  Action, Points) 'ignore
+	CallSubDelayed3( mCallBack, mEventName & "_Touch",  Action, Points)
 	
 End Sub
  
 Sub InnerCard_MouseEntered (EventData As MouseEvent)
 	
-	CallSubDelayed2(mCallBack, mEventName & "_MouseEntered", EventData) 'ignore
+	CallSubDelayed2(mCallBack, mEventName & "_MouseEntered", EventData)
 	
 End Sub
 
 Sub InnerCard_MouseExited (EventData As MouseEvent)
 	
-	CallSubDelayed2(mCallBack, mEventName & "_MouseExited", EventData) 'ignore
+	CallSubDelayed2(mCallBack, mEventName & "_MouseExited", EventData)
 	
 End Sub
  
 Sub InnerCard_MouseClicked (EventData As MouseEvent)
 	
-	CallSubDelayed2(mCallBack, mEventName & "_MouseClicked", EventData) 'ignore
+	CallSubDelayed2(mCallBack, mEventName & "_MouseClicked", EventData)
 	
 End Sub

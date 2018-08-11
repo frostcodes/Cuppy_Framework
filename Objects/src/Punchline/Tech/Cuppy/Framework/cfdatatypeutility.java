@@ -22,20 +22,20 @@ static {
 	}
 
  public static anywheresoftware.b4a.keywords.Common __c = null;
-public static anywheresoftware.b4j.objects.JFX _vvvvvvvvvvvvvvvv2 = null;
-public static b4j.example.cssutils _vvvvvvvvvvvvvvvv3 = null;
-public static Punchline.Tech.Cuppy.Framework.cfconfigs _vvvvvvvvvvvvvvvv4 = null;
-public static Punchline.Tech.Cuppy.Framework.cfstylemanager _vvvvvvvvvvvvvvvv5 = null;
-public static Punchline.Tech.Cuppy.Framework.cfstringutility _vvvvvvvvvvvvvvvv6 = null;
-public static Punchline.Tech.Cuppy.Framework.cffileutility _vvvvvvvvvvvvvvvv7 = null;
-public static Punchline.Tech.Cuppy.Framework.cfmathutility _vvvvvvvvvvvvvvvv0 = null;
-public static Punchline.Tech.Cuppy.Framework.cfanimationmanager _vvvvvvvvvvvvvvvvv2 = null;
-public static Punchline.Tech.Cuppy.Framework.cflicensemanager _vvvvvvvvvvvvvvvvv3 = null;
-public static Punchline.Tech.Cuppy.Framework.cfdatageneratorutility _vvvvvvvvvvvvvvvvv4 = null;
-public static Punchline.Tech.Cuppy.Framework.cfapputility _vvvvvvvvvvvvvvvvv5 = null;
-public static Punchline.Tech.Cuppy.Framework.cfcontrolsutils _vvvvvvvvvvvvvvvvv6 = null;
-public static Punchline.Tech.Cuppy.Framework.cfhtmlutility _vvvvvvvvvvvvvvvvv7 = null;
-public static boolean  _vvvvvvvvvvv0(Object _mixedvar) throws Exception{
+public static anywheresoftware.b4j.objects.JFX _fx = null;
+public static b4j.example.cssutils _cssutils = null;
+public static Punchline.Tech.Cuppy.Framework.cfconfigs _cfconfigs = null;
+public static Punchline.Tech.Cuppy.Framework.cfstylemanager _cfstylemanager = null;
+public static Punchline.Tech.Cuppy.Framework.cfstringutility _cfstringutility = null;
+public static Punchline.Tech.Cuppy.Framework.cffileutility _cffileutility = null;
+public static Punchline.Tech.Cuppy.Framework.cfmathutility _cfmathutility = null;
+public static Punchline.Tech.Cuppy.Framework.cfanimationmanager _cfanimationmanager = null;
+public static Punchline.Tech.Cuppy.Framework.cflicensemanager _cflicensemanager = null;
+public static Punchline.Tech.Cuppy.Framework.cfdatageneratorutility _cfdatageneratorutility = null;
+public static Punchline.Tech.Cuppy.Framework.cfapputility _cfapputility = null;
+public static Punchline.Tech.Cuppy.Framework.cfcontrolsutils _cfcontrolsutils = null;
+public static Punchline.Tech.Cuppy.Framework.cfhtmlutility _cfhtmlutility = null;
+public static boolean  _boolval(Object _mixedvar) throws Exception{
  //BA.debugLineNum = 12;BA.debugLine="Public Sub boolval(mixedVar As Object) As Boolean";
  //BA.debugLineNum = 14;BA.debugLine="If mixedVar = False Then";
 if ((_mixedvar).equals((Object)(anywheresoftware.b4a.keywords.Common.False))) { 
@@ -65,67 +65,67 @@ return false;
 public static boolean  _is_scalar(Object _mixedvar) throws Exception{
  //BA.debugLineNum = 122;BA.debugLine="Public Sub is_scalar (mixedVar As Object) As Boole";
  //BA.debugLineNum = 124;BA.debugLine="Return isString(mixedVar) Or IsNumber(mixedVar) O";
-if (true) return _vvvvvvvvvvvv7(_mixedvar) || anywheresoftware.b4a.keywords.Common.IsNumber(BA.ObjectToString(_mixedvar)) || _vvvvvvvvvvvv2(_mixedvar);
+if (true) return _isstring(_mixedvar) || anywheresoftware.b4a.keywords.Common.IsNumber(BA.ObjectToString(_mixedvar)) || _isboolean(_mixedvar);
  //BA.debugLineNum = 126;BA.debugLine="End Sub";
 return false;
 }
-public static boolean  _vvvvvvvvvvvv1(Object _obj) throws Exception{
+public static boolean  _isarraylist(Object _obj) throws Exception{
  //BA.debugLineNum = 89;BA.debugLine="Public Sub isArrayList(obj As Object) As Boolean";
  //BA.debugLineNum = 91;BA.debugLine="Return isTypeOf(obj, \"arraylist\")";
-if (true) return _vvvvvvvvvvvv0(_obj,"arraylist");
+if (true) return _istypeof(_obj,"arraylist");
  //BA.debugLineNum = 93;BA.debugLine="End Sub";
 return false;
 }
-public static boolean  _vvvvvvvvvvvv2(Object _obj) throws Exception{
+public static boolean  _isboolean(Object _obj) throws Exception{
  //BA.debugLineNum = 61;BA.debugLine="Public Sub isBoolean(obj As Object) As Boolean";
  //BA.debugLineNum = 63;BA.debugLine="Return isTypeOf(obj, \"boolean\")";
-if (true) return _vvvvvvvvvvvv0(_obj,"boolean");
+if (true) return _istypeof(_obj,"boolean");
  //BA.debugLineNum = 65;BA.debugLine="End Sub";
 return false;
 }
-public static boolean  _vvvvvvvvvvvv3(Object _obj) throws Exception{
+public static boolean  _isdouble(Object _obj) throws Exception{
  //BA.debugLineNum = 82;BA.debugLine="Public Sub isDouble(obj As Object) As Boolean";
  //BA.debugLineNum = 84;BA.debugLine="Return isTypeOf(obj, \"double\")";
-if (true) return _vvvvvvvvvvvv0(_obj,"double");
+if (true) return _istypeof(_obj,"double");
  //BA.debugLineNum = 86;BA.debugLine="End Sub";
 return false;
 }
-public static boolean  _vvvvvvvvvvvv4(Object _obj) throws Exception{
+public static boolean  _isinteger(Object _obj) throws Exception{
  //BA.debugLineNum = 75;BA.debugLine="Public Sub isInteger(obj As Object) As Boolean";
  //BA.debugLineNum = 77;BA.debugLine="Return isTypeOf(obj, \"integer\")";
-if (true) return _vvvvvvvvvvvv0(_obj,"integer");
+if (true) return _istypeof(_obj,"integer");
  //BA.debugLineNum = 79;BA.debugLine="End Sub";
 return false;
 }
-public static boolean  _vvvvvvvvvvvv5(Object _obj) throws Exception{
+public static boolean  _islist(Object _obj) throws Exception{
  //BA.debugLineNum = 97;BA.debugLine="Public Sub isList(obj As Object) As Boolean";
  //BA.debugLineNum = 99;BA.debugLine="Return isArrayList(obj)";
-if (true) return _vvvvvvvvvvvv1(_obj);
+if (true) return _isarraylist(_obj);
  //BA.debugLineNum = 101;BA.debugLine="End Sub";
 return false;
 }
-public static boolean  _vvvvv3(Object _obj) throws Exception{
+public static boolean  _isnull(Object _obj) throws Exception{
  //BA.debugLineNum = 105;BA.debugLine="Public Sub isNull(obj As Object) As Boolean";
  //BA.debugLineNum = 107;BA.debugLine="Return CFStringUtility.isNull(obj)";
-if (true) return _vvvvvvvvvvvvvvvv6._vvvvv3(_obj);
+if (true) return _cfstringutility._isnull(_obj);
  //BA.debugLineNum = 109;BA.debugLine="End Sub";
 return false;
 }
-public static boolean  _vvvvvvvvvvvv6(Object _obj) throws Exception{
+public static boolean  _isobject(Object _obj) throws Exception{
  //BA.debugLineNum = 112;BA.debugLine="Public Sub isObject(obj As Object) As Boolean";
  //BA.debugLineNum = 114;BA.debugLine="Return isTypeOf(obj, \"object\")";
-if (true) return _vvvvvvvvvvvv0(_obj,"object");
+if (true) return _istypeof(_obj,"object");
  //BA.debugLineNum = 116;BA.debugLine="End Sub";
 return false;
 }
-public static boolean  _vvvvvvvvvvvv7(Object _obj) throws Exception{
+public static boolean  _isstring(Object _obj) throws Exception{
  //BA.debugLineNum = 68;BA.debugLine="Public Sub isString(obj As Object) As Boolean";
  //BA.debugLineNum = 70;BA.debugLine="Return isTypeOf(obj, \"string\")";
-if (true) return _vvvvvvvvvvvv0(_obj,"string");
+if (true) return _istypeof(_obj,"string");
  //BA.debugLineNum = 72;BA.debugLine="End Sub";
 return false;
 }
-public static boolean  _vvvvvvvvvvvv0(Object _obj,String _typeof) throws Exception{
+public static boolean  _istypeof(Object _obj,String _typeof) throws Exception{
  //BA.debugLineNum = 54;BA.debugLine="Public Sub isTypeOf(obj As Object , TypeOf As Stri";
  //BA.debugLineNum = 56;BA.debugLine="Return strip_java_type(GetType(obj)) = TypeOf.ToL";
 if (true) return (_strip_java_type(anywheresoftware.b4a.keywords.Common.GetType(_obj))).equals(_typeof.toLowerCase());
@@ -135,7 +135,7 @@ return false;
 public static String  _process_globals() throws Exception{
  //BA.debugLineNum = 6;BA.debugLine="Sub Process_Globals";
  //BA.debugLineNum = 7;BA.debugLine="Private fx As JFX";
-_vvvvvvvvvvvvvvvv2 = new anywheresoftware.b4j.objects.JFX();
+_fx = new anywheresoftware.b4j.objects.JFX();
  //BA.debugLineNum = 8;BA.debugLine="End Sub";
 return "";
 }
@@ -148,11 +148,11 @@ _str = _str.replace("java.util.","");
  //BA.debugLineNum = 41;BA.debugLine="If str.Contains(\"$\") Then";
 if (_str.contains("$")) { 
  //BA.debugLineNum = 43;BA.debugLine="str = CFStringUtility.breakStrAt( str, \"$\")";
-_str = BA.ObjectToString(_vvvvvvvvvvvvvvvv6._vvv5(_str,"$"));
+_str = BA.ObjectToString(_cfstringutility._breakstrat(_str,"$"));
  //BA.debugLineNum = 44;BA.debugLine="str = CFStringUtility.trim_left_once(str, \"$\")";
-_str = _vvvvvvvvvvvvvvvv6._trim_left_once(_str,"$");
+_str = _cfstringutility._trim_left_once(_str,"$");
  //BA.debugLineNum = 45;BA.debugLine="str = CFStringUtility.trim_left_once(str, \"_\")";
-_str = _vvvvvvvvvvvvvvvv6._trim_left_once(_str,"_");
+_str = _cfstringutility._trim_left_once(_str,"_");
  };
  //BA.debugLineNum = 49;BA.debugLine="Return str.ToLowerCase";
 if (true) return _str.toLowerCase();

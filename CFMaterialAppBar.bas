@@ -101,12 +101,12 @@ End Sub
 
 Sub InnerButton_MousePressed (EventData As MouseEvent)
 	
-	CallSubDelayed2(mCallBack, mEventName & "_MousePressed", EventData) 'ignore
+	CallSubDelayed2(mCallBack, mEventName & "_MousePressed", EventData)
 	
 End Sub
  
 Sub InnerPane_MousePressed (EventData As MouseEvent)
 	 
-	CallSubDelayed2(mCallBack, mEventName & "_PaneMousePressed", EventData) 'ignore
+	CallSubDelayed2(mCallBack, mEventName & "_PaneMousePressed", EventData)
 	 
 End Sub

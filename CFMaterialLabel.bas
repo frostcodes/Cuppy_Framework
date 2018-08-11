@@ -98,7 +98,7 @@ End Sub
 
 Public Sub InnerLabel_MousePressed (EventData As MouseEvent)
 	  
-	CallSubDelayed2(mCallBack, mEventName & "_MousePressed", EventData) 'ignore
+	CallSubDelayed2(mCallBack, mEventName & "_MousePressed", EventData)
 	 
 End Sub
 

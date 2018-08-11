@@ -108,12 +108,12 @@ End Sub
  
 Sub ModalBgPane_MousePressed (EventData As MouseEvent)
 	
-	CallSubDelayed2(mCallBack, mEventName & "_ModalBGPressed", EventData) 'ignore
+	CallSubDelayed2(mCallBack, mEventName & "_ModalBGPressed", EventData)  
 	
 End Sub
 
 Sub ModalPane_MousePressed (EventData As MouseEvent)
 	
-	CallSubDelayed2(mCallBack, mEventName & "_ModalPressed", EventData) 'ignore
+	CallSubDelayed2(mCallBack, mEventName & "_ModalPressed", EventData)  
 	
 End Sub
