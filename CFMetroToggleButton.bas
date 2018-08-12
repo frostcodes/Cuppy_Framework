@@ -128,7 +128,7 @@ Public Sub checked As Boolean
 	 
 End Sub 
 
-Sub ToggleButton_MousePressed (EventData As MouseEvent)
+Private Sub ToggleButton_MousePressed (EventData As MouseEvent)
 	 
 	If Not(checked) Then
 	

@@ -97,19 +97,19 @@ End Sub
 #End Region
 
 
-Public Sub InnerButton_MousePressed (EventData As MouseEvent)
+Private Sub InnerButton_MousePressed (EventData As MouseEvent)
 	  
 	CallSubDelayed2(mCallBack, mEventName & "_MousePressed", EventData)
 	 
 End Sub
  
-Sub InnerButton_MouseEntered (EventData As MouseEvent)
+Private Sub InnerButton_MouseEntered (EventData As MouseEvent)
 	  
 	CallSubDelayed2(mCallBack, mEventName & "_MouseEntered", EventData)
 	 
 End Sub
 
-Sub InnerButton_MouseExited (EventData As MouseEvent)
+Private Sub InnerButton_MouseExited (EventData As MouseEvent)
 	  
 	CallSubDelayed2(mCallBack, mEventName & "_MouseExited", EventData)
 	 

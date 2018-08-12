@@ -99,13 +99,13 @@ Public Sub Icon(IconText As String)
 	 
 End Sub
 
-Sub InnerButton_MousePressed (EventData As MouseEvent)
+Private Sub InnerButton_MousePressed (EventData As MouseEvent)
 	
 	CallSubDelayed2(mCallBack, mEventName & "_MousePressed", EventData)
 	
 End Sub
  
-Sub InnerPane_MousePressed (EventData As MouseEvent)
+Private Sub InnerPane_MousePressed (EventData As MouseEvent)
 	 
 	CallSubDelayed2(mCallBack, mEventName & "_PaneMousePressed", EventData)
 	 

@@ -99,19 +99,19 @@ End Sub
 'hover effect
  'FAB_Btn.SetAlphaAnimated(300, 0.8)
  
-Sub FAB_Btn_MousePressed (EventData As MouseEvent)
+Private Sub FAB_Btn_MousePressed (EventData As MouseEvent)
 	
 	CallSubDelayed2(mCallBack, mEventName & "_MousePressed", EventData)  
 	
 End Sub
 
-Sub FAB_Btn_MouseEntered (EventData As MouseEvent)
+Private Sub FAB_Btn_MouseEntered (EventData As MouseEvent)
 	
 	CallSubDelayed2(mCallBack, mEventName & "_MouseEntered", EventData)  
 	
 End Sub
 
-Sub FAB_Btn_MouseExited (EventData As MouseEvent)
+Private Sub FAB_Btn_MouseExited (EventData As MouseEvent)
 	
 	CallSubDelayed2(mCallBack, mEventName & "_MouseExited", EventData) 
 	

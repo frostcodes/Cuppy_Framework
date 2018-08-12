@@ -98,13 +98,11 @@ End Sub
 #End Region
 
 
-Public Sub InnerLabel_MousePressed (EventData As MouseEvent)
+Private Sub InnerLabel_MousePressed (EventData As MouseEvent)
 	
 	fx.ShowExternalDocument(InnerLabel.Text)
 	  
 	CallSubDelayed2(mCallBack, mEventName & "_MousePressed", EventData)  
 	 
 End Sub
-
-
-
+ 
