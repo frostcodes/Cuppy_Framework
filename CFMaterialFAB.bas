@@ -62,32 +62,32 @@ Public Sub SetBg(color As String)
  
 End Sub
 
-Public Sub setBorder(color As String , width As Int)
+Public Sub SetBorder(color As String , width As Int)
 	
 	CFControlsUtils.setBorder(FAB_Btn, color, width)
 
 End Sub
 
-Public Sub setBorderRadius(radius As Int)
+Public Sub SetBorderRadius(radius As Int)
 	
 	CFControlsUtils.setBorderRadius(FAB_Btn, radius)
 	
 End Sub
 
 
-Public Sub setPaneEffect(effect As String)
+Public Sub SetPaneEffect(effect As String)
 	
 	CFControlsUtils.setEffect(FAB_Btn, effect)
 	
 End Sub
 
-Public Sub removeEffects()
+Public Sub RemoveEffects()
 	
 	CFControlsUtils.removeEffect(FAB_Btn)
 	
 End Sub
  
-Public Sub setRotationX(angle As Float)
+Public Sub SetRotationX(angle As Float)
 	
 	CFControlsUtils.setRotationX(FAB_Btn, angle) 'rotate
 	 

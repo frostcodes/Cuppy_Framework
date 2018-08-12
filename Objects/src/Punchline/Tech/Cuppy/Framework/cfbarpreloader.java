@@ -123,7 +123,7 @@ _mcallback = _callback;
 return "";
 }
 public String  _removeeffects() throws Exception{
- //BA.debugLineNum = 129;BA.debugLine="Public Sub removeEffects()";
+ //BA.debugLineNum = 129;BA.debugLine="Public Sub RemoveEffects()";
  //BA.debugLineNum = 133;BA.debugLine="End Sub";
 return "";
 }
@@ -133,27 +133,27 @@ public String  _setbg(String _color) throws Exception{
 return "";
 }
 public String  _setborder(String _color,int _width) throws Exception{
- //BA.debugLineNum = 109;BA.debugLine="Public Sub setBorder(color As String , width As In";
+ //BA.debugLineNum = 109;BA.debugLine="Public Sub SetBorder(color As String , width As In";
  //BA.debugLineNum = 113;BA.debugLine="End Sub";
 return "";
 }
 public String  _setborderradius(int _radius) throws Exception{
- //BA.debugLineNum = 116;BA.debugLine="Public Sub setBorderRadius(radius As Int)";
+ //BA.debugLineNum = 116;BA.debugLine="Public Sub SetBorderRadius(radius As Int)";
  //BA.debugLineNum = 120;BA.debugLine="End Sub";
 return "";
 }
 public String  _seteffect(String _effect) throws Exception{
- //BA.debugLineNum = 123;BA.debugLine="Public Sub setEffect(effect As String)";
+ //BA.debugLineNum = 123;BA.debugLine="Public Sub SetEffect(effect As String)";
  //BA.debugLineNum = 127;BA.debugLine="End Sub";
 return "";
 }
 public String  _setrotationx(float _angle) throws Exception{
- //BA.debugLineNum = 103;BA.debugLine="Public Sub setRotationX(angle As Float)";
+ //BA.debugLineNum = 103;BA.debugLine="Public Sub SetRotationX(angle As Float)";
  //BA.debugLineNum = 107;BA.debugLine="End Sub";
 return "";
 }
 public String  _settextcolor(String _color) throws Exception{
- //BA.debugLineNum = 97;BA.debugLine="Public Sub setTextColor(color As String)";
+ //BA.debugLineNum = 97;BA.debugLine="Public Sub SetTextColor(color As String)";
  //BA.debugLineNum = 101;BA.debugLine="End Sub";
 return "";
 }

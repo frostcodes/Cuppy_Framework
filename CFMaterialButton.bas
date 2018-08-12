@@ -62,33 +62,33 @@ Public Sub SetBg(color As String)
  
 End Sub
 
-Public Sub setRotationX(angle As Float)
+Public Sub SetRotationX(angle As Float)
 	
 	CFControlsUtils.setRotationX(InnerButton, angle) 'rotate
 	 
 End Sub
   
-Public Sub setBorder(color As String , width As Int)
+Public Sub SetBorder(color As String , width As Int)
 	
 	CFControlsUtils.setBorder(InnerButton, color, width)
 
 End Sub
 
 
-Public Sub setBorderRadius(radius As Int)
+Public Sub SetBorderRadius(radius As Int)
 	
 	CFControlsUtils.setBorderRadius(InnerButton, radius)
 	
 End Sub
 
 
-Public Sub setEffect(effect As String)
+Public Sub SetEffect(effect As String)
 	
 	CFControlsUtils.setEffect(InnerButton, effect)
 	
 End Sub
 
-Public Sub removeEffects()
+Public Sub RemoveEffects()
 	
 	CFControlsUtils.removeEffect(InnerButton)
 	

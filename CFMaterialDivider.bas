@@ -63,33 +63,31 @@ Public Sub SetBg(color As String)
  
 End Sub
 
-Public Sub setRotationX(angle As Float)
+Public Sub SetRotationX(angle As Float)
 	
 	CFControlsUtils.setPaneRotationX(line, angle) 'rotate
 	 
 End Sub
   
-Public Sub setBorder(color As String , width As Int)
+Public Sub SetBorder(color As String , width As Int)
 	
 	CFControlsUtils.setPaneBorder(line, color, width)
 
 End Sub
 
-
-Public Sub setBorderRadius(radius As Int)
+Public Sub SetBorderRadius(radius As Int)
 	
 	CFControlsUtils.setPaneBorderRadius(line, radius)
 	
 End Sub
 
-
-Public Sub setPaneEffect(effect As String)
+Public Sub SetPaneEffect(effect As String)
 	
 	CFControlsUtils.setPaneEffect(line, effect)
 	 
 End Sub
 
-Public Sub removeEffects()
+Public Sub RemoveEffects()
 	
 	CFControlsUtils.removePaneEffect(line)
 	 
@@ -99,13 +97,13 @@ End Sub
 
 #Region Control Properties
 
-Public Sub setSize(sizeX As Int)
+Public Sub SetSize(sizeX As Int)
 	
 	line.PrefHeight =  sizeX
 	  
 End Sub
 
-Public Sub getSize() As Double
+Public Sub GetSize() As Double
 	
 	Return line.PrefHeight
 	

@@ -53,33 +53,33 @@ End Sub
 
 #Region Actions and Effects
 
-Public Sub setRotationX(angle As Float)
+Public Sub SetRotationX(angle As Float)
 	
 	CFControlsUtils.setPaneRotationX(InnerPane, angle) 'rotate
 	 
 End Sub
   
-Public Sub setBorder(color As String , width As Int)
+Public Sub SetBorder(color As String , width As Int)
 	
 	CFControlsUtils.setPaneBorder(InnerPane, color, width)
 
 End Sub
 
 
-Sub setBorderRadius(radius As Int)
+Public Sub SetBorderRadius(radius As Int)
 	
 	CFControlsUtils.setPaneBorderRadius(InnerPane, radius)
 	
 End Sub
 
 
-Public Sub setPaneEffect(effect As String)
+Public Sub SetPaneEffect(effect As String)
 	
 	CFControlsUtils.setPaneEffect(InnerPane, effect)
 	
 End Sub
 
-Public Sub removeEffects()
+Public Sub RemoveEffects()
 	
 	CFControlsUtils.removePaneEffect(InnerPane)
 	

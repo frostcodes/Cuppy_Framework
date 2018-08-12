@@ -7,17 +7,18 @@ Version=5.51
 'Static code module
 Private Sub Process_Globals
 	 
-	 Private fx As JFX
+	Private fx As JFX
 	 
 	Public DefaultFont As Font = SelectFont("Regular" , 12)
-	Public AvailableThemes As CFThemes 
- 	Public DefaultTheme As Map = AvailableThemes.ThemesList.Get("Blue") 'ignore
+	Public AvailableThemes As CFThemes
+	Public DefaultTheme As Map = AvailableThemes.ThemesList.Get("Blue") 'ignore
 	Public ActiveControls As List
 	ActiveControls.Initialize 'ignore : need this , bad pratice maybe so would find a fix later
 	 
-	 'TODO: autoloading fonts,
-	 'Reference cuppy controls so it can be updated all when the style changes 
-	 'allow setting of animation time... 
+	'TODO: autoloading fonts,
+	'Allow font caching since they would not change from original instances
+	'Reference cuppy controls so it can be updated all when the style changes
+	'allow setting of animation time...
 End Sub
 
  'Return a list of available fonts for use

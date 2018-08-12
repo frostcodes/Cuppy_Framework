@@ -62,31 +62,31 @@ Public Sub SetBg(color As String)
  
 End Sub
 
-Public Sub setRotationX(angle As Float)
+Public Sub SetRotationX(angle As Float)
 	
 	CFControlsUtils.setPaneRotationX(ProgressPane, angle) 'rotate
 	 
 End Sub
 
-Public Sub setBorder(color As String , width As Int)
+Public Sub SetBorder(color As String , width As Int)
 	
 	CFControlsUtils.setPaneBorder(ProgressPane, color, width)
 
 End Sub
  
-Public Sub setBorderRadius(radius As Int)
+Public Sub SetBorderRadius(radius As Int)
 	
 	CFControlsUtils.setPaneBorderRadius(ProgressPane, radius)
 	
 End Sub
  
-Public Sub setPaneEffect(effect As String)
+Public Sub SetPaneEffect(effect As String)
 	
 	CFControlsUtils.setPaneEffect(ProgressPane, effect)
 	
 End Sub
 
-Public Sub removeEffects()
+Public Sub RemoveEffects()
 	
 	CFControlsUtils.removePaneEffect(ProgressPane)
 	
@@ -94,13 +94,13 @@ End Sub
 
 #End Region
   
-Public Sub setProgressColor(color As String)
+Public Sub SetProgressColor(color As String)
   	
 	CSSUtils.SetStyleProperty( ProgressBar, "-fx-background-color", color)
 	
 End Sub
 
-Public Sub progress(value As Int)
+Public Sub Progress(value As Int)
 	
 	If value >= 100 Then
 		value = 100

@@ -103,7 +103,7 @@ _mcallback = _callback;
 return "";
 }
 public String  _removeeffects() throws Exception{
- //BA.debugLineNum = 76;BA.debugLine="Public Sub removeEffects()";
+ //BA.debugLineNum = 76;BA.debugLine="Public Sub RemoveEffects()";
  //BA.debugLineNum = 78;BA.debugLine="CFControlsUtils.removePaneEffect(InnerPane)";
 _cfcontrolsutils._removepaneeffect(_innerpane);
  //BA.debugLineNum = 80;BA.debugLine="End Sub";
@@ -117,28 +117,28 @@ _cssutils._setstyleproperty((anywheresoftware.b4j.objects.NodeWrapper.ConcreteNo
 return "";
 }
 public String  _setborder(String _color,int _width) throws Exception{
- //BA.debugLineNum = 56;BA.debugLine="Public Sub setBorder(color As String , width As In";
+ //BA.debugLineNum = 56;BA.debugLine="Public Sub SetBorder(color As String , width As In";
  //BA.debugLineNum = 58;BA.debugLine="CFControlsUtils.setPaneBorder(InnerPane, color, w";
 _cfcontrolsutils._setpaneborder(_innerpane,_color,_width);
  //BA.debugLineNum = 60;BA.debugLine="End Sub";
 return "";
 }
 public String  _setborderradius(int _radius) throws Exception{
- //BA.debugLineNum = 63;BA.debugLine="Sub setBorderRadius(radius As Int)";
+ //BA.debugLineNum = 63;BA.debugLine="Public Sub SetBorderRadius(radius As Int)";
  //BA.debugLineNum = 65;BA.debugLine="CFControlsUtils.setPaneBorderRadius(InnerPane, ra";
 _cfcontrolsutils._setpaneborderradius(_innerpane,_radius);
  //BA.debugLineNum = 67;BA.debugLine="End Sub";
 return "";
 }
 public String  _setpaneeffect(String _effect) throws Exception{
- //BA.debugLineNum = 70;BA.debugLine="Public Sub setPaneEffect(effect As String)";
+ //BA.debugLineNum = 70;BA.debugLine="Public Sub SetPaneEffect(effect As String)";
  //BA.debugLineNum = 72;BA.debugLine="CFControlsUtils.setPaneEffect(InnerPane, effect)";
 _cfcontrolsutils._setpaneeffect(_innerpane,_effect);
  //BA.debugLineNum = 74;BA.debugLine="End Sub";
 return "";
 }
 public String  _setrotationx(float _angle) throws Exception{
- //BA.debugLineNum = 50;BA.debugLine="Public Sub setRotationX(angle As Float)";
+ //BA.debugLineNum = 50;BA.debugLine="Public Sub SetRotationX(angle As Float)";
  //BA.debugLineNum = 52;BA.debugLine="CFControlsUtils.setPaneRotationX(InnerPane, angle";
 _cfcontrolsutils._setpanerotationx(_innerpane,_angle);
  //BA.debugLineNum = 54;BA.debugLine="End Sub";

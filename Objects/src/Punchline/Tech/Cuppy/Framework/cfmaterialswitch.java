@@ -52,7 +52,7 @@ public String  _base_resize(double _width,double _height) throws Exception{
 return "";
 }
 public boolean  _checked() throws Exception{
- //BA.debugLineNum = 136;BA.debugLine="Public Sub checked As Boolean";
+ //BA.debugLineNum = 136;BA.debugLine="Public Sub Checked As Boolean";
  //BA.debugLineNum = 138;BA.debugLine="Return SwitchBtn.Left = 23";
 if (true) return _switchbtn.getLeft()==23;
  //BA.debugLineNum = 140;BA.debugLine="End Sub";
@@ -119,7 +119,7 @@ if (true) return _switchbtn.getAlpha()==(double)(Double.parseDouble("0.6"));
 return false;
 }
 public String  _removeeffects() throws Exception{
- //BA.debugLineNum = 92;BA.debugLine="Public Sub removeEffects()";
+ //BA.debugLineNum = 92;BA.debugLine="Public Sub RemoveEffects()";
  //BA.debugLineNum = 94;BA.debugLine="CFControlsUtils.removePaneEffect(SwitchPane)";
 _cfcontrolsutils._removepaneeffect(_switchpane);
  //BA.debugLineNum = 96;BA.debugLine="End Sub";
@@ -133,28 +133,28 @@ _cssutils._setstyleproperty((anywheresoftware.b4j.objects.NodeWrapper.ConcreteNo
 return "";
 }
 public String  _setborder(String _color,int _width) throws Exception{
- //BA.debugLineNum = 74;BA.debugLine="Public Sub setBorder(color As String , width As In";
+ //BA.debugLineNum = 74;BA.debugLine="Public Sub SetBorder(color As String , width As In";
  //BA.debugLineNum = 76;BA.debugLine="CFControlsUtils.setPaneBorder(SwitchPane, color,";
 _cfcontrolsutils._setpaneborder(_switchpane,_color,_width);
  //BA.debugLineNum = 78;BA.debugLine="End Sub";
 return "";
 }
 public String  _setborderradius(int _radius) throws Exception{
- //BA.debugLineNum = 80;BA.debugLine="Public Sub setBorderRadius(radius As Int)";
+ //BA.debugLineNum = 80;BA.debugLine="Public Sub SetBorderRadius(radius As Int)";
  //BA.debugLineNum = 82;BA.debugLine="CFControlsUtils.setPaneBorderRadius(SwitchPane, r";
 _cfcontrolsutils._setpaneborderradius(_switchpane,_radius);
  //BA.debugLineNum = 84;BA.debugLine="End Sub";
 return "";
 }
 public String  _setcheckedcolor(String _color) throws Exception{
- //BA.debugLineNum = 100;BA.debugLine="Public Sub setCheckedColor(color As String)";
+ //BA.debugLineNum = 100;BA.debugLine="Public Sub SetCheckedColor(color As String)";
  //BA.debugLineNum = 102;BA.debugLine="CSSUtils.SetStyleProperty( SwitchBtn, \"-fx-backgr";
 _cssutils._setstyleproperty((anywheresoftware.b4j.objects.NodeWrapper.ConcreteNodeWrapper) anywheresoftware.b4a.AbsObjectWrapper.ConvertToWrapper(new anywheresoftware.b4j.objects.NodeWrapper.ConcreteNodeWrapper(), (javafx.scene.Node)(_switchbtn.getObject())),"-fx-background-color",_color);
  //BA.debugLineNum = 104;BA.debugLine="End Sub";
 return "";
 }
 public String  _setcheckstate(int _value) throws Exception{
- //BA.debugLineNum = 106;BA.debugLine="Public Sub setCheckState(value As Int)";
+ //BA.debugLineNum = 106;BA.debugLine="Public Sub SetCheckState(value As Int)";
  //BA.debugLineNum = 108;BA.debugLine="If value = UNCHECKED_STATE Then";
 if (_value==_unchecked_state) { 
  //BA.debugLineNum = 110;BA.debugLine="SwitchBtn.SetLayoutAnimated(200 , 10, SwitchBtn";
@@ -184,14 +184,14 @@ __c.CallSubDelayed2(ba,_mcallback,_meventname+"_CheckedChanged",(Object)(_value)
 return "";
 }
 public String  _setpaneeffect(String _effect) throws Exception{
- //BA.debugLineNum = 86;BA.debugLine="Public Sub setPaneEffect(effect As String)";
+ //BA.debugLineNum = 86;BA.debugLine="Public Sub SetPaneEffect(effect As String)";
  //BA.debugLineNum = 88;BA.debugLine="CFControlsUtils.setPaneEffect(SwitchPane, effect)";
 _cfcontrolsutils._setpaneeffect(_switchpane,_effect);
  //BA.debugLineNum = 90;BA.debugLine="End Sub";
 return "";
 }
 public String  _setrotationx(float _angle) throws Exception{
- //BA.debugLineNum = 68;BA.debugLine="Public Sub setRotationX(angle As Float)";
+ //BA.debugLineNum = 68;BA.debugLine="Public Sub SetRotationX(angle As Float)";
  //BA.debugLineNum = 70;BA.debugLine="CFControlsUtils.setPaneRotationX(SwitchPane, angl";
 _cfcontrolsutils._setpanerotationx(_switchpane,_angle);
  //BA.debugLineNum = 72;BA.debugLine="End Sub";
@@ -206,9 +206,9 @@ return "";
 }
 public String  _switchpane_mousepressed(anywheresoftware.b4j.objects.NodeWrapper.MouseEventWrapper _eventdata) throws Exception{
  //BA.debugLineNum = 148;BA.debugLine="Private Sub SwitchPane_MousePressed (EventData As";
- //BA.debugLineNum = 150;BA.debugLine="If Not(checked) Or IsIndeterminate Then";
+ //BA.debugLineNum = 150;BA.debugLine="If Not(Checked) Or IsIndeterminate Then";
 if (__c.Not(_checked()) || _isindeterminate()) { 
- //BA.debugLineNum = 152;BA.debugLine="setCheckState(CHECKED_STATE)";
+ //BA.debugLineNum = 152;BA.debugLine="SetCheckState(CHECKED_STATE)";
 _setcheckstate(_checked_state);
  }else {
  //BA.debugLineNum = 156;BA.debugLine="setCheckState(UNCHECKED_STATE)";

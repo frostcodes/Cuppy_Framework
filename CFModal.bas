@@ -57,33 +57,33 @@ Public Sub SetBg(color As String)
  
 End Sub
   
-Public Sub setRotationX(angle As Float)
+Public Sub SetRotationX(angle As Float)
 	
 	CFControlsUtils.setPaneRotationX(ModalPane, angle) 'rotate
 	 
 End Sub
   
-Public Sub setBorder(color As String , width As Int)
+Public Sub SetBorder(color As String , width As Int)
 	
 	CFControlsUtils.setPaneBorder(ModalPane, color, width)
 
 End Sub
 
 
-Public Sub setBorderRadius(radius As Int)
+Public Sub SetBorderRadius(radius As Int)
 	
 	CFControlsUtils.setPaneBorderRadius(ModalPane, radius)
 	
 End Sub
 
 
-Public Sub setEffect(effect As String)
+Public Sub SetEffect(effect As String)
 	
 	CFControlsUtils.setPaneEffect(ModalPane, effect)
 	
 End Sub
 
-Public Sub removeEffects()
+Public Sub RemoveEffects()
 	
 	CFControlsUtils.removePaneEffect(ModalPane)
 	
@@ -93,7 +93,7 @@ End Sub
 
 #Region Extra Functions
 
-Public Sub show
+Public Sub Show
 	 
 	Dim Parent As Pane = GetBase.Parent
 	

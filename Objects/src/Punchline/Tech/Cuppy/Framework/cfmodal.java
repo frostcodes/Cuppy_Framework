@@ -110,7 +110,7 @@ __c.CallSubDelayed2(ba,_mcallback,_meventname+"_ModalPressed",(Object)(_eventdat
 return "";
 }
 public String  _removeeffects() throws Exception{
- //BA.debugLineNum = 80;BA.debugLine="Public Sub removeEffects()";
+ //BA.debugLineNum = 80;BA.debugLine="Public Sub RemoveEffects()";
  //BA.debugLineNum = 82;BA.debugLine="CFControlsUtils.removePaneEffect(ModalPane)";
 _cfcontrolsutils._removepaneeffect(_modalpane);
  //BA.debugLineNum = 84;BA.debugLine="End Sub";
@@ -124,28 +124,28 @@ _cfcontrolsutils._setpanebg(_modalpane,_color);
 return "";
 }
 public String  _setborder(String _color,int _width) throws Exception{
- //BA.debugLineNum = 60;BA.debugLine="Public Sub setBorder(color As String , width As In";
+ //BA.debugLineNum = 60;BA.debugLine="Public Sub SetBorder(color As String , width As In";
  //BA.debugLineNum = 62;BA.debugLine="CFControlsUtils.setPaneBorder(ModalPane, color, w";
 _cfcontrolsutils._setpaneborder(_modalpane,_color,_width);
  //BA.debugLineNum = 64;BA.debugLine="End Sub";
 return "";
 }
 public String  _setborderradius(int _radius) throws Exception{
- //BA.debugLineNum = 67;BA.debugLine="Public Sub setBorderRadius(radius As Int)";
+ //BA.debugLineNum = 67;BA.debugLine="Public Sub SetBorderRadius(radius As Int)";
  //BA.debugLineNum = 69;BA.debugLine="CFControlsUtils.setPaneBorderRadius(ModalPane, ra";
 _cfcontrolsutils._setpaneborderradius(_modalpane,_radius);
  //BA.debugLineNum = 71;BA.debugLine="End Sub";
 return "";
 }
 public String  _seteffect(String _effect) throws Exception{
- //BA.debugLineNum = 74;BA.debugLine="Public Sub setEffect(effect As String)";
+ //BA.debugLineNum = 74;BA.debugLine="Public Sub SetEffect(effect As String)";
  //BA.debugLineNum = 76;BA.debugLine="CFControlsUtils.setPaneEffect(ModalPane, effect)";
 _cfcontrolsutils._setpaneeffect(_modalpane,_effect);
  //BA.debugLineNum = 78;BA.debugLine="End Sub";
 return "";
 }
 public String  _setrotationx(float _angle) throws Exception{
- //BA.debugLineNum = 54;BA.debugLine="Public Sub setRotationX(angle As Float)";
+ //BA.debugLineNum = 54;BA.debugLine="Public Sub SetRotationX(angle As Float)";
  //BA.debugLineNum = 56;BA.debugLine="CFControlsUtils.setPaneRotationX(ModalPane, angle";
 _cfcontrolsutils._setpanerotationx(_modalpane,_angle);
  //BA.debugLineNum = 58;BA.debugLine="End Sub";
@@ -153,7 +153,7 @@ return "";
 }
 public String  _show() throws Exception{
 anywheresoftware.b4j.objects.PaneWrapper.ConcretePaneWrapper _parent = null;
- //BA.debugLineNum = 90;BA.debugLine="Public Sub show";
+ //BA.debugLineNum = 90;BA.debugLine="Public Sub Show";
  //BA.debugLineNum = 92;BA.debugLine="Dim Parent As Pane = GetBase.Parent";
 _parent = new anywheresoftware.b4j.objects.PaneWrapper.ConcretePaneWrapper();
 _parent.setObject((javafx.scene.layout.Pane)(_getbase().getParent().getObject()));
