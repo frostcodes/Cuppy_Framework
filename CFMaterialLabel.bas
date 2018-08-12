@@ -7,7 +7,7 @@ Version=5.51
 'Custom View class
  
 #Event: MousePressed (EventData As MouseEvent)
-#RaisesSynchronousEvents: MousePressed (EventData As MouseEvent)
+#RaisesSynchronousEvents: MousePressed
  
 #Region Internal Segment
 
@@ -98,7 +98,7 @@ End Sub
 
 Public Sub InnerLabel_MousePressed (EventData As MouseEvent)
 	  
-	CallSubDelayed2(mCallBack, mEventName & "_MousePressed", EventData) 'ignore
+	CallSubDelayed2(mCallBack, mEventName & "_MousePressed", EventData)
 	 
 End Sub
 

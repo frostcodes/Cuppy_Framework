@@ -10,9 +10,9 @@ Version=5.51
 #Event: MouseEntered (EventData As MouseEvent)
 #Event: MouseExited (EventData As MouseEvent)
 
-#RaisesSynchronousEvents: MousePressed (EventData As MouseEvent)
-#RaisesSynchronousEvents: MouseEntered (EventData As MouseEvent)
-#RaisesSynchronousEvents: MouseExited (EventData As MouseEvent)
+#RaisesSynchronousEvents: MousePressed
+#RaisesSynchronousEvents: MouseEntered
+#RaisesSynchronousEvents: MouseExited
 
 #Region Internal Segment
 

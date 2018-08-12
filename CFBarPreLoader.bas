@@ -6,10 +6,17 @@ Version=5.51
 @EndOfDesignText@
 'Custom View class
  #If trial
-  
-#Event: MousePressed (EventData As MouseEvent)
+   
+#Event: AnimationStarted
+#Event: AnimationStopped
 
-#RaisesSynchronousEvents: MousePressed (EventData As MouseEvent)
+'#RaisesSynchronousEvents: AnimationStarted
+'#RaisesSynchronousEvents: AnimationStopped
+'  
+  
+'#Event: MousePressed (EventData As MouseEvent)
+
+'#RaisesSynchronousEvents: MousePressed
 
 #Region Internal Segment
 
@@ -18,7 +25,6 @@ Sub Class_Globals
 	Private mEventName As String 'ignore
 	Private mCallBack As Object 'ignore
 	Private mBase As Pane
-	'Public InnerLabel As Label
 	Private timer1 As Timer
 	Private timer2 As Timer
 	Private timer3 As Timer
@@ -44,13 +50,10 @@ Public Sub DesignerCreateView (Base As Pane, Lbl As Label, Props As Map)
 	'InnerLabel.Font = StyleManager.SelectFont("Light", 12)
 	
 	timer1.Initialize("Timer1", 400)
-	timer1.Enabled = True
-
 	timer2.Initialize("Timer2", 400)
-	timer2.Enabled = True
-	 
 	timer3.Initialize("Timer3", 400)
-	timer3.Enabled = True
+	
+	 Start
  
 End Sub
 
@@ -63,14 +66,11 @@ Public Sub GetBase As Pane
 End Sub
 
 #End Region
-
-
-
-
+ 
 Private Sub Timer1_Tick
 	'Handle tick events
 	
-	Dim height As Int = ( Rnd(30, 100) / 100 ) *  mBase.PrefHeight
+	Dim height As Int = (Rnd(30, 100) / 100 ) *  mBase.PrefHeight
 	
 	Pane1.SetLayoutAnimated( 300 , Pane1.Left, Pane1.Top, Pane1.PrefWidth , height)
 	
@@ -78,7 +78,7 @@ End Sub
  
 Private Sub Timer2_Tick
 	 
-	Dim height As Int = ( Rnd(30, 100) / 100  ) *  mBase.PrefHeight
+	Dim height As Int = (Rnd(30, 100) / 100  ) *  mBase.PrefHeight
 	 
 	Pane2.SetLayoutAnimated(300 , Pane2.Left, Pane2.Top, Pane2.PrefWidth , height)
 	 
@@ -86,7 +86,7 @@ End Sub
  
 Private Sub Timer3_Tick
 	 
-	Dim height As Int =(  Rnd(30, 100) /100 ) *  mBase.PrefHeight
+	Dim height As Int = (Rnd(30, 100) /100 ) *  mBase.PrefHeight
 	
 	Pane3.SetLayoutAnimated(300 , Pane3.Left, Pane3.Top, Pane3.PrefWidth , height)
 	 
@@ -143,11 +143,36 @@ End Sub
 '
 'Public Sub InnerLabel_MousePressed (EventData As MouseEvent)
 '	  
-'	CallSubDelayed2(mCallBack, mEventName & "_MousePressed", EventData) 'ignore
+'	CallSubDelayed2(mCallBack, mEventName & "_MousePressed", EventData) 
 '	 
 'End Sub
 
+#Region Control specific actions
 
+Private Sub EnableTimers(enabled As Boolean)
+	
+	timer1.Enabled =  enabled
+	timer2.Enabled =  enabled
+	timer3.Enabled =  enabled
+	
+End Sub
+
+'Starts the Pre Loader
+Public Sub Start()
+	
+	EnableTimers(True)
+	CallSubDelayed(mCallBack, mEventName & "_AnimationStarted" )
+	 
+End Sub
+
+'Stops the Pre Loader
+Public Sub Stop()
+	
+	EnableTimers(False)
+	CallSubDelayed( mCallBack, mEventName & "_AnimationStopped" )
+
+End Sub
+ 
 #Else
 
 #ExcludeFromLibrary: True

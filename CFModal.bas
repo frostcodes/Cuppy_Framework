@@ -9,8 +9,8 @@ Version=5.51
 #Event: ModalBGPressed (EventData As MouseEvent)
 #Event: ModalPressed (EventData As MouseEvent)
 
-#RaisesSynchronousEvents: ModalBGPressed (EventData As MouseEvent)
-#RaisesSynchronousEvents: ModalPressed (EventData As MouseEvent)
+#RaisesSynchronousEvents: ModalBGPressed
+#RaisesSynchronousEvents: ModalPressed
 
 #Region Internal Segment
 
@@ -108,12 +108,12 @@ End Sub
  
 Sub ModalBgPane_MousePressed (EventData As MouseEvent)
 	
-	CallSubDelayed2(mCallBack, mEventName & "_ModalBGPressed", EventData) 'ignore
+	CallSubDelayed2(mCallBack, mEventName & "_ModalBGPressed", EventData)  
 	
 End Sub
 
 Sub ModalPane_MousePressed (EventData As MouseEvent)
 	
-	CallSubDelayed2(mCallBack, mEventName & "_ModalPressed", EventData) 'ignore
+	CallSubDelayed2(mCallBack, mEventName & "_ModalPressed", EventData)  
 	
 End Sub

@@ -10,9 +10,9 @@ Version=5.51
 #Event: MouseEntered(EventData As MouseEvent)
 #Event: MouseExited(EventData As MouseEvent)
 
-#RaisesSynchronousEvents: CheckedChanged(value as int)
-#RaisesSynchronousEvents: MouseEntered(EventData As MouseEvent)
-#RaisesSynchronousEvents: MouseExited(EventData As MouseEvent)
+#RaisesSynchronousEvents: CheckedChanged
+#RaisesSynchronousEvents: MouseEntered
+#RaisesSynchronousEvents: MouseExited
  
  'TODO: make font adjust when resized
 #Region Internal Segment

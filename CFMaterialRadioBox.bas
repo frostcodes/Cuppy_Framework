@@ -8,7 +8,7 @@ Version=5.51
  
 #Event: CheckedChanged(value as int)
 
-#RaisesSynchronousEvents: CheckedChanged(value as int)
+#RaisesSynchronousEvents: CheckedChanged
  
  'TODO: make font adjust when resized
 #Region Internal Segment
