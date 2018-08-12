@@ -7,10 +7,9 @@ Version=5.51
 'This contains codes that are for the app object
 Sub Process_Globals
 	Private fx As JFX
+	
 End Sub
-
-
-
+ 
 'Return the current PackageName
 'FROM: https://www.b4x.com/android/forum/threads/configure-tooltip-timings.76298/
 Public Sub GetPackageName(Module As Object) As String

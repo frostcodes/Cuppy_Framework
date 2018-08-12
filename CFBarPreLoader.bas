@@ -100,39 +100,39 @@ Public Sub SetBg(color As String)
  
 End Sub
 
-Public Sub setTextColor(color As String)
+Public Sub SetTextColor(color As String)
  
 '	ControlsUtils.setTextColor (InnerLabel, color)
  
 End Sub
 
-Public Sub setRotationX(angle As Float)
+Public Sub SetRotationX(angle As Float)
 	
 '	ControlsUtils.setRotationX(InnerLabel, angle) 'rotate
 	 
 End Sub
   
-Public Sub setBorder(color As String , width As Int)
+Public Sub SetBorder(color As String , width As Int)
 	
 '	ControlsUtils.setBorder(InnerLabel, color, width)
 
 End Sub
 
 
-Public Sub setBorderRadius(radius As Int)
+Public Sub SetBorderRadius(radius As Int)
 	
 '	ControlsUtils.setBorderRadius(InnerLabel, radius)
 	
 End Sub
 
 
-Public Sub setEffect(effect As String)
+Public Sub SetEffect(effect As String)
 	
 '	ControlsUtils.setEffect(InnerLabel, effect)
 	
 End Sub
 
-Public Sub removeEffects()
+Public Sub RemoveEffects()
 	
 '	ControlsUtils.removeEffect(InnerLabel)
 	

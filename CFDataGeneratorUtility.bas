@@ -7,7 +7,6 @@ Version=6.3
 'This contains functions that are useful for Generating Random Data
 Sub Process_Globals
 	Private fx As JFX
-	 
 End Sub
  
  #Region rand_human_name : Generates a random real human name 
@@ -15,7 +14,7 @@ End Sub
 'Generates a random real human name...
 'List of Names
 'FROM: https://gist.github.com/subodhghulaxe/8148971
-Public Sub rand_human_name() As String
+Public Sub Rand_Human_Name() As String
 
 	Dim names As List
 	names.Initialize
@@ -1028,9 +1027,9 @@ Public Sub rand_human_name() As String
 End Sub
 
 'Generates a random human full name
-Public Sub rand_fullname() As String
+Public Sub Rand_FullName() As String
 	
-	Return rand_human_name & " " & rand_human_name
+	Return Rand_Human_Name & " " & Rand_Human_Name
 	
 End Sub
 
@@ -1040,7 +1039,7 @@ End Sub
 
 'Generates a random human Gender and Types
 'between MALE or FEMALE only!
-Public Sub rand_gender() As String
+Public Sub Rand_Gender() As String
 	
 	Dim Genders As  List
 	Genders.Initialize2(Array As String("Male","Female"))
@@ -1199,7 +1198,7 @@ End Sub
  
 'Generates a random Gender Type 
 'Refer to fullGenderTypesList() 
-Public Sub rand_gender_type() As String
+Public Sub Rand_Gender_Type() As String
 	 
 	Return CFStringUtility.RandListValue(GenderTypesList)
 	
@@ -1210,7 +1209,7 @@ End Sub
 #Region Random Dummy Text
 'Generates a random lorem ispum text
 'ParagraphCount =   Is the number of paragraphs to generate
-Public Sub rand_lorem_ispum(ParagraphCount  As Int) As String
+Public Sub Rand_Lorem_Ispum(ParagraphCount  As Int) As String
 
 	Dim textList As List
 	textList.Initialize
@@ -1251,9 +1250,9 @@ End Sub
 'Generates a random dummy text (lorem ispum)
 'ParagraphCount =   Is the number of paragraphs to generate
 'Alias of lorem_ispum()
-Public Sub rand_dummyText(ParagraphCount  As Int) As String
+Public Sub Rand_DummyText(ParagraphCount  As Int) As String
  
- Return rand_lorem_ispum(ParagraphCount)
+ Return Rand_Lorem_Ispum(ParagraphCount)
  
 End Sub
  
@@ -1261,9 +1260,9 @@ End Sub
  
  #Region Random Email Generators
  
-Public Sub rand_email(EmailProvider As String, withNumeric As Boolean) As String
+Public Sub Rand_Email(EmailProvider As String, withNumeric As Boolean) As String
 	 
-	Dim name As String = rand_human_name & rand_human_name
+	Dim name As String = Rand_Human_Name & Rand_Human_Name
 	name = name.ToLowerCase
 	
 	 If withNumeric Then
@@ -1282,9 +1281,9 @@ End Sub
 'withNumeric = should gmail contain suffixed numbers
 'EG demo_20@gmail.com
 'Quick shortcut Alias of rand_email()
-Public Sub rand_gmail(withNumeric As Boolean) As String
+Public Sub Rand_Gmail(withNumeric As Boolean) As String
 	 
-	Return rand_email("gmail.com", withNumeric)
+	Return Rand_Email("gmail.com", withNumeric)
 	
 End Sub
 
@@ -1292,9 +1291,9 @@ End Sub
 'withNumeric = should gmail contain suffixed numbers
 'EG demo_20@yahoo.com
 'Quick shortcut Alias of rand_email()
-Public Sub rand_yahooMail(withNumeric As Boolean) As String
+Public Sub Rand_YahooMail(withNumeric As Boolean) As String
 	 
-	Return rand_email("yahoo.com", withNumeric)
+	Return Rand_Email("yahoo.com", withNumeric)
 	
 End Sub
 
@@ -1305,7 +1304,7 @@ End Sub
 'CountryCode = the Country Code to use without the + ; for example,
 'Nigeria is 234, USA is 1 and Indian is 91
 'length = This is how long should the remaining part of the number be
-Public Sub rand_phoneNumber(CountryCode As Int , length As Int) As String
+Public Sub Rand_PhoneNumber(CountryCode As Int , length As Int) As String
 	
 	Return "+" & CountryCode & CFStringUtility.generatePinCode(length)
 	 
@@ -1319,7 +1318,7 @@ End Sub
 '<code> 'Example: would output something like; +2348174795280
 'log(CF_DataGeneratorUtility.rand_phoneNumber2(234, 817, 7))
 '</code>
-Public Sub rand_phoneNumber2(CountryCode As Int , startsWith As Int, length As Int) As String
+Public Sub Rand_PhoneNumber2(CountryCode As Int , startsWith As Int, length As Int) As String
 	
 	Return "+" & CountryCode & startsWith & CFStringUtility.generatePinCode(length)
 	 
@@ -1329,7 +1328,7 @@ End Sub
 
 #Region Random True or False Value 
 'Generates a random True or False Value
-Public Sub rand_TrueorFalse() As Boolean
+Public Sub Rand_TrueorFalse() As Boolean
 	 
 	If Rnd( Rnd(1, 5), Rnd(6, 10))  < 6 Then
 		
@@ -1345,16 +1344,16 @@ End Sub
 
 'Generates a random True or False Value
 'Alias of rand_TrueorFalse()
-Public Sub rand_BooleanValue() As Boolean
+Public Sub Rand_BooleanValue() As Boolean
 	 
-	Return rand_TrueorFalse
+	Return Rand_TrueorFalse
 	 
 End Sub
 
 #End Region
  
 'Generates a random IP address
-Public Sub rand_IpAddress() As String
+Public Sub Rand_IpAddress() As String
 	 
 	Return  Rnd(190, 230) & "." & Rnd(13, 200) & "." & Rnd(50, 200) & "." & Rnd(75, 200)
 	
@@ -1415,7 +1414,7 @@ Public Sub MajorSportsList As List
 End Sub
 
 'Generates a random sport name
-Public Sub rand_sport_name() As String
+Public Sub Rand_Sport_Name() As String
 	
 	Return CFStringUtility.RandListValue(MajorSportsList)
 	

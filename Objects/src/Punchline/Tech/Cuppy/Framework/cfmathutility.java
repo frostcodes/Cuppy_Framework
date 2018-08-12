@@ -22,7 +22,6 @@ static {
 	}
 
  public static anywheresoftware.b4a.keywords.Common __c = null;
-public static anywheresoftware.b4j.objects.JFX _fx = null;
 public static double _exponential_equivalent = 0;
 public static String _negative_infinity = "";
 public static String _positive_infinity = "";
@@ -43,21 +42,21 @@ public static Punchline.Tech.Cuppy.Framework.cfapputility _cfapputility = null;
 public static Punchline.Tech.Cuppy.Framework.cfcontrolsutils _cfcontrolsutils = null;
 public static Punchline.Tech.Cuppy.Framework.cfhtmlutility _cfhtmlutility = null;
 public static double  _acosh(double _arg) throws Exception{
- //BA.debugLineNum = 27;BA.debugLine="Public Sub acosh (arg As Double) As Double";
+ //BA.debugLineNum = 27;BA.debugLine="Public Sub Acosh (arg As Double) As Double";
  //BA.debugLineNum = 29;BA.debugLine="Return Logarithm(arg  + Sqrt(arg * arg - 1) , Exp";
 if (true) return anywheresoftware.b4a.keywords.Common.Logarithm(_arg+anywheresoftware.b4a.keywords.Common.Sqrt(_arg*_arg-1),_exponential_equivalent);
  //BA.debugLineNum = 31;BA.debugLine="End Sub";
 return 0;
 }
 public static double  _asinh(double _arg) throws Exception{
- //BA.debugLineNum = 34;BA.debugLine="Public Sub asinh (arg As Double) As Double";
+ //BA.debugLineNum = 34;BA.debugLine="Public Sub Asinh (arg As Double) As Double";
  //BA.debugLineNum = 36;BA.debugLine="Return Logarithm(arg  + Sqrt(arg * arg + 1) , Exp";
 if (true) return anywheresoftware.b4a.keywords.Common.Logarithm(_arg+anywheresoftware.b4a.keywords.Common.Sqrt(_arg*_arg+1),_exponential_equivalent);
  //BA.debugLineNum = 38;BA.debugLine="End Sub";
 return 0;
 }
 public static double  _atanh(double _arg) throws Exception{
- //BA.debugLineNum = 41;BA.debugLine="Public Sub atanh (arg As Double) As Double";
+ //BA.debugLineNum = 41;BA.debugLine="Public Sub Atanh (arg As Double) As Double";
  //BA.debugLineNum = 43;BA.debugLine="Return 0.5 * Logarithm((1 + arg) / (1 - arg) , Ex";
 if (true) return 0.5*anywheresoftware.b4a.keywords.Common.Logarithm((1+_arg)/(double)(1-_arg),_exponential_equivalent);
  //BA.debugLineNum = 45;BA.debugLine="End Sub";
@@ -66,7 +65,7 @@ return 0;
 public static int  _convertfromdecimal(int _n,int _base) throws Exception{
 int _result = 0;
 int _multiplier = 0;
- //BA.debugLineNum = 76;BA.debugLine="Public Sub ConvertfromDecimal(n As Int, base As In";
+ //BA.debugLineNum = 76;BA.debugLine="Public Sub ConvertFromDecimal(n As Int, base As In";
  //BA.debugLineNum = 78;BA.debugLine="Dim result As Int = 0";
 _result = (int) (0);
  //BA.debugLineNum = 79;BA.debugLine="Dim multiplier As Int = 1";
@@ -89,7 +88,7 @@ return 0;
 public static String  _convertfromdecimal2(int _n,int _base) throws Exception{
 String _chars = "";
 String _result = "";
- //BA.debugLineNum = 95;BA.debugLine="Public Sub ConvertfromDecimal2(n As Int, base As I";
+ //BA.debugLineNum = 95;BA.debugLine="Public Sub ConvertFromDecimal2(n As Int, base As I";
  //BA.debugLineNum = 97;BA.debugLine="Dim chars As  String =\"0123456789ABCDEFGHIJ\"";
 _chars = "0123456789ABCDEFGHIJ";
  //BA.debugLineNum = 98;BA.debugLine="Dim result As String = \"\"";
@@ -112,7 +111,7 @@ int _t = 0;
  //BA.debugLineNum = 137;BA.debugLine="Public Sub ConvertFromTo(n As Int, frombase As Int";
  //BA.debugLineNum = 139;BA.debugLine="Dim t As Int = ConvertToDecimal(n,frombase)";
 _t = _converttodecimal(_n,_frombase);
- //BA.debugLineNum = 140;BA.debugLine="Return ConvertfromDecimal(t,tobase)";
+ //BA.debugLineNum = 140;BA.debugLine="Return ConvertFromDecimal(t,tobase)";
 if (true) return _convertfromdecimal(_t,_tobase);
  //BA.debugLineNum = 142;BA.debugLine="End Sub";
 return 0;
@@ -147,7 +146,7 @@ String _chars = "";
 int _k = 0;
 int _multiplier = 0;
 int _i = 0;
- //BA.debugLineNum = 113;BA.debugLine="Public Sub ConverttoDecimal2( n As String, base As";
+ //BA.debugLineNum = 113;BA.debugLine="Public Sub ConvertToDecimal2( n As String, base As";
  //BA.debugLineNum = 115;BA.debugLine="n = n.ToUpperCase";
 _n = _n.toUpperCase();
  //BA.debugLineNum = 116;BA.debugLine="Dim result As Int = 0";
@@ -180,21 +179,21 @@ if (true) return _result;
 return 0;
 }
 public static double  _cosh(double _arg) throws Exception{
- //BA.debugLineNum = 48;BA.debugLine="Public Sub cosh (arg As Double) As Double";
- //BA.debugLineNum = 50;BA.debugLine="Return (exp(arg) + exp(-arg)) / 2";
+ //BA.debugLineNum = 48;BA.debugLine="Public Sub Cosh (arg As Double) As Double";
+ //BA.debugLineNum = 50;BA.debugLine="Return (Exp(arg) + Exp(-arg)) / 2";
 if (true) return (_exp(_arg)+_exp(-_arg))/(double)2;
  //BA.debugLineNum = 52;BA.debugLine="End Sub";
 return 0;
 }
 public static double  _deg2rad(double _angle) throws Exception{
- //BA.debugLineNum = 182;BA.debugLine="Public Sub deg2rad(angle As Double) As Double";
+ //BA.debugLineNum = 182;BA.debugLine="Public Sub Deg2rad(angle As Double) As Double";
  //BA.debugLineNum = 184;BA.debugLine="Return angle * 0.017453292519943295";
 if (true) return _angle*0.017453292519943295;
  //BA.debugLineNum = 186;BA.debugLine="End Sub";
 return 0;
 }
 public static double  _exp(double _arg) throws Exception{
- //BA.debugLineNum = 146;BA.debugLine="Public Sub exp(arg As Double) As Double";
+ //BA.debugLineNum = 146;BA.debugLine="Public Sub Exp(arg As Double) As Double";
  //BA.debugLineNum = 148;BA.debugLine="Return Power(Exponential_Equivalent, arg)";
 if (true) return anywheresoftware.b4a.keywords.Common.Power(_exponential_equivalent,_arg);
  //BA.debugLineNum = 150;BA.debugLine="End Sub";
@@ -202,7 +201,7 @@ return 0;
 }
 public static double  _hypot(double _x,double _y) throws Exception{
 double _t = 0;
- //BA.debugLineNum = 197;BA.debugLine="Public Sub hypot(x As Double, y As Double) As Doub";
+ //BA.debugLineNum = 197;BA.debugLine="Public Sub Hypot(x As Double, y As Double) As Doub";
  //BA.debugLineNum = 199;BA.debugLine="x = Abs(x)";
 _x = anywheresoftware.b4a.keywords.Common.Abs(_x);
  //BA.debugLineNum = 200;BA.debugLine="y = Abs(y)";
@@ -219,14 +218,14 @@ if (true) return _x*anywheresoftware.b4a.keywords.Common.Sqrt(1+_t*_t);
 return 0;
 }
 public static boolean  _is_finite(String _val) throws Exception{
- //BA.debugLineNum = 175;BA.debugLine="Public Sub is_finite(val As String) As Boolean";
- //BA.debugLineNum = 177;BA.debugLine="Return Not(is_infinite(val))";
+ //BA.debugLineNum = 175;BA.debugLine="Public Sub Is_finite(val As String) As Boolean";
+ //BA.debugLineNum = 177;BA.debugLine="Return Not(Is_infinite(val))";
 if (true) return anywheresoftware.b4a.keywords.Common.Not(_is_infinite(_val));
  //BA.debugLineNum = 179;BA.debugLine="End Sub";
 return false;
 }
 public static boolean  _is_infinite(String _val) throws Exception{
- //BA.debugLineNum = 168;BA.debugLine="Public Sub is_infinite(val As String) As Boolean";
+ //BA.debugLineNum = 168;BA.debugLine="Public Sub Is_infinite(val As String) As Boolean";
  //BA.debugLineNum = 170;BA.debugLine="Return val = POSITIVE_INFINITY Or val = NEGATIVE_";
 if (true) return (_val).equals(_positive_infinity) || (_val).equals(_negative_infinity);
  //BA.debugLineNum = 172;BA.debugLine="End Sub";
@@ -277,8 +276,6 @@ return 0;
 }
 public static String  _process_globals() throws Exception{
  //BA.debugLineNum = 2;BA.debugLine="Sub Process_Globals";
- //BA.debugLineNum = 3;BA.debugLine="Private fx As JFX";
-_fx = new anywheresoftware.b4j.objects.JFX();
  //BA.debugLineNum = 5;BA.debugLine="Public Exponential_Equivalent As Double = 2.71828";
 _exponential_equivalent = 2.718281828459045;
  //BA.debugLineNum = 7;BA.debugLine="Public NEGATIVE_INFINITY As String = \"-Infinity\"";
@@ -297,22 +294,22 @@ _max_value = "1.7976931348623157e+308";
 return "";
 }
 public static double  _rad2deg(double _number) throws Exception{
- //BA.debugLineNum = 189;BA.debugLine="Public Sub rad2deg(number As Double) As Double";
+ //BA.debugLineNum = 189;BA.debugLine="Public Sub Rad2deg(number As Double) As Double";
  //BA.debugLineNum = 191;BA.debugLine="Return number * 57.29577951308232";
 if (true) return _number*57.29577951308232;
  //BA.debugLineNum = 193;BA.debugLine="End Sub";
 return 0;
 }
 public static double  _sinh(double _number) throws Exception{
- //BA.debugLineNum = 161;BA.debugLine="Public Sub sinh(number As Double) As Double";
- //BA.debugLineNum = 163;BA.debugLine="Return (exp(number) - exp(-number)) / 2";
+ //BA.debugLineNum = 161;BA.debugLine="Public Sub Sinh(number As Double) As Double";
+ //BA.debugLineNum = 163;BA.debugLine="Return (Exp(number) - Exp(-number)) / 2";
 if (true) return (_exp(_number)-_exp(-_number))/(double)2;
  //BA.debugLineNum = 165;BA.debugLine="End Sub";
 return 0;
 }
 public static double  _tanh(double _number) throws Exception{
- //BA.debugLineNum = 153;BA.debugLine="Public Sub tanh(number As Double) As Double";
- //BA.debugLineNum = 155;BA.debugLine="Return 1 - 2 / (exp(2 * number) + 1)";
+ //BA.debugLineNum = 153;BA.debugLine="Public Sub Tanh(number As Double) As Double";
+ //BA.debugLineNum = 155;BA.debugLine="Return 1 - 2 / (Exp(2 * number) + 1)";
 if (true) return 1-2/(double)(_exp(2*_number)+1);
  //BA.debugLineNum = 157;BA.debugLine="End Sub";
 return 0;

@@ -83,10 +83,10 @@ if (true) return _mbase;
 return null;
 }
 public double  _getsize() throws Exception{
- //BA.debugLineNum = 102;BA.debugLine="Public Sub getSize() As Double";
- //BA.debugLineNum = 104;BA.debugLine="Return line.PrefHeight";
+ //BA.debugLineNum = 100;BA.debugLine="Public Sub GetSize() As Double";
+ //BA.debugLineNum = 102;BA.debugLine="Return line.PrefHeight";
 if (true) return _line.getPrefHeight();
- //BA.debugLineNum = 106;BA.debugLine="End Sub";
+ //BA.debugLineNum = 104;BA.debugLine="End Sub";
 return 0;
 }
 public String  _initialize(anywheresoftware.b4a.BA _ba,Object _callback,String _eventname) throws Exception{
@@ -99,16 +99,11 @@ _mcallback = _callback;
  //BA.debugLineNum = 18;BA.debugLine="End Sub";
 return "";
 }
-public String  _line_mousepressed(anywheresoftware.b4j.objects.NodeWrapper.MouseEventWrapper _eventdata) throws Exception{
- //BA.debugLineNum = 113;BA.debugLine="Sub line_MousePressed (EventData As MouseEvent)";
- //BA.debugLineNum = 115;BA.debugLine="End Sub";
-return "";
-}
 public String  _removeeffects() throws Exception{
- //BA.debugLineNum = 86;BA.debugLine="Public Sub removeEffects()";
- //BA.debugLineNum = 88;BA.debugLine="CFControlsUtils.removePaneEffect(line)";
+ //BA.debugLineNum = 84;BA.debugLine="Public Sub RemoveEffects()";
+ //BA.debugLineNum = 86;BA.debugLine="CFControlsUtils.removePaneEffect(line)";
 _cfcontrolsutils._removepaneeffect(_line);
- //BA.debugLineNum = 90;BA.debugLine="End Sub";
+ //BA.debugLineNum = 88;BA.debugLine="End Sub";
 return "";
 }
 public String  _setbg(String _color) throws Exception{
@@ -119,38 +114,38 @@ _cssutils._setstyleproperty((anywheresoftware.b4j.objects.NodeWrapper.ConcreteNo
 return "";
 }
 public String  _setborder(String _color,int _width) throws Exception{
- //BA.debugLineNum = 66;BA.debugLine="Public Sub setBorder(color As String , width As In";
+ //BA.debugLineNum = 66;BA.debugLine="Public Sub SetBorder(color As String , width As In";
  //BA.debugLineNum = 68;BA.debugLine="CFControlsUtils.setPaneBorder(line, color, width)";
 _cfcontrolsutils._setpaneborder(_line,_color,_width);
  //BA.debugLineNum = 70;BA.debugLine="End Sub";
 return "";
 }
 public String  _setborderradius(int _radius) throws Exception{
- //BA.debugLineNum = 73;BA.debugLine="Public Sub setBorderRadius(radius As Int)";
- //BA.debugLineNum = 75;BA.debugLine="CFControlsUtils.setPaneBorderRadius(line, radius)";
+ //BA.debugLineNum = 72;BA.debugLine="Public Sub SetBorderRadius(radius As Int)";
+ //BA.debugLineNum = 74;BA.debugLine="CFControlsUtils.setPaneBorderRadius(line, radius)";
 _cfcontrolsutils._setpaneborderradius(_line,_radius);
- //BA.debugLineNum = 77;BA.debugLine="End Sub";
+ //BA.debugLineNum = 76;BA.debugLine="End Sub";
 return "";
 }
 public String  _setpaneeffect(String _effect) throws Exception{
- //BA.debugLineNum = 80;BA.debugLine="Public Sub setPaneEffect(effect As String)";
- //BA.debugLineNum = 82;BA.debugLine="CFControlsUtils.setPaneEffect(line, effect)";
+ //BA.debugLineNum = 78;BA.debugLine="Public Sub SetPaneEffect(effect As String)";
+ //BA.debugLineNum = 80;BA.debugLine="CFControlsUtils.setPaneEffect(line, effect)";
 _cfcontrolsutils._setpaneeffect(_line,_effect);
- //BA.debugLineNum = 84;BA.debugLine="End Sub";
+ //BA.debugLineNum = 82;BA.debugLine="End Sub";
 return "";
 }
 public String  _setrotationx(float _angle) throws Exception{
- //BA.debugLineNum = 60;BA.debugLine="Public Sub setRotationX(angle As Float)";
+ //BA.debugLineNum = 60;BA.debugLine="Public Sub SetRotationX(angle As Float)";
  //BA.debugLineNum = 62;BA.debugLine="CFControlsUtils.setPaneRotationX(line, angle) 'ro";
 _cfcontrolsutils._setpanerotationx(_line,_angle);
  //BA.debugLineNum = 64;BA.debugLine="End Sub";
 return "";
 }
 public String  _setsize(int _sizex) throws Exception{
- //BA.debugLineNum = 96;BA.debugLine="Public Sub setSize(sizeX As Int)";
- //BA.debugLineNum = 98;BA.debugLine="line.PrefHeight =  sizeX";
+ //BA.debugLineNum = 94;BA.debugLine="Public Sub SetSize(sizeX As Int)";
+ //BA.debugLineNum = 96;BA.debugLine="line.PrefHeight =  sizeX";
 _line.setPrefHeight(_sizex);
- //BA.debugLineNum = 100;BA.debugLine="End Sub";
+ //BA.debugLineNum = 98;BA.debugLine="End Sub";
 return "";
 }
 public Object callSub(String sub, Object sender, Object[] args) throws Exception {

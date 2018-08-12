@@ -71,31 +71,31 @@ Public Sub SetBg(color As String)
  
 End Sub
 
-Public Sub setRotationX(angle As Float)
+Public Sub SetRotationX(angle As Float)
 	
 	CFControlsUtils.setPaneRotationX(SwitchPane, angle) 'rotate
 	 
 End Sub
 
-Public Sub setBorder(color As String , width As Int)
+Public Sub SetBorder(color As String , width As Int)
 	
 	CFControlsUtils.setPaneBorder(SwitchPane, color, width)
 
 End Sub
  
-Public Sub setBorderRadius(radius As Int)
+Public Sub SetBorderRadius(radius As Int)
 	
 	CFControlsUtils.setPaneBorderRadius(SwitchPane, radius)
 	
 End Sub
  
-Public Sub setPaneEffect(effect As String)
+Public Sub SetPaneEffect(effect As String)
 	
 	CFControlsUtils.setPaneEffect(SwitchPane, effect)
 	
 End Sub
 
-Public Sub removeEffects()
+Public Sub RemoveEffects()
 	
 	CFControlsUtils.removePaneEffect(SwitchPane)
 	
@@ -103,13 +103,13 @@ End Sub
 
 #End Region
   
-Public Sub setCheckedColor(color As String)
+Public Sub SetCheckedColor(color As String)
   	
 	CSSUtils.SetStyleProperty( SwitchBtn, "-fx-background-color", color)
 	
 End Sub
  
-Public Sub setCheckState(value As Int)
+Public Sub SetCheckState(value As Int)
 	 
 	If value = UNCHECKED_STATE Then
 		
@@ -139,7 +139,7 @@ Public Sub setCheckState(value As Int)
 	 
 End Sub
 
-Public Sub checked As Boolean
+Public Sub Checked As Boolean
 
 	Return SwitchBtn.Left = 23
 	 
@@ -153,9 +153,9 @@ End Sub
  
 Private Sub SwitchPane_MousePressed (EventData As MouseEvent)
 	 
-	If Not(checked) Or IsIndeterminate Then
+	If Not(Checked) Or IsIndeterminate Then
 	
-		setCheckState(CHECKED_STATE)
+		SetCheckState(CHECKED_STATE)
 	
 	Else
 	

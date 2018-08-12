@@ -53,19 +53,19 @@ return "";
 }
 public String  _checkboxpane_mousepressed(anywheresoftware.b4j.objects.NodeWrapper.MouseEventWrapper _eventdata) throws Exception{
  //BA.debugLineNum = 143;BA.debugLine="Private Sub CheckboxPane_MousePressed (EventData A";
- //BA.debugLineNum = 145;BA.debugLine="If Not(checked) Or IsIndeterminate Then";
+ //BA.debugLineNum = 145;BA.debugLine="If Not(Checked) Or IsIndeterminate Then";
 if (__c.Not(_checked()) || _isindeterminate()) { 
- //BA.debugLineNum = 147;BA.debugLine="setCheckState(CHECKED_STATE)";
+ //BA.debugLineNum = 147;BA.debugLine="SetCheckState(CHECKED_STATE)";
 _setcheckstate(_checked_state);
  }else {
- //BA.debugLineNum = 151;BA.debugLine="setCheckState(UNCHECKED_STATE)";
+ //BA.debugLineNum = 151;BA.debugLine="SetCheckState(UNCHECKED_STATE)";
 _setcheckstate(_unchecked_state);
  };
  //BA.debugLineNum = 156;BA.debugLine="End Sub";
 return "";
 }
 public boolean  _checked() throws Exception{
- //BA.debugLineNum = 131;BA.debugLine="Public Sub checked As Boolean";
+ //BA.debugLineNum = 131;BA.debugLine="Public Sub Checked As Boolean";
  //BA.debugLineNum = 133;BA.debugLine="Return CheckedPane.Visible";
 if (true) return _checkedpane.getVisible();
  //BA.debugLineNum = 135;BA.debugLine="End Sub";
@@ -134,7 +134,7 @@ if (true) return _checkedpane.getAlpha()==(double)(Double.parseDouble("0.6"));
 return false;
 }
 public String  _removeeffects() throws Exception{
- //BA.debugLineNum = 87;BA.debugLine="Public Sub removeEffects()";
+ //BA.debugLineNum = 87;BA.debugLine="Public Sub RemoveEffects()";
  //BA.debugLineNum = 89;BA.debugLine="CFControlsUtils.removePaneEffect(CheckboxPane)";
 _cfcontrolsutils._removepaneeffect(_checkboxpane);
  //BA.debugLineNum = 91;BA.debugLine="End Sub";
@@ -148,28 +148,28 @@ _cssutils._setstyleproperty((anywheresoftware.b4j.objects.NodeWrapper.ConcreteNo
 return "";
 }
 public String  _setborder(String _color,int _width) throws Exception{
- //BA.debugLineNum = 69;BA.debugLine="Public Sub setBorder(color As String , width As In";
+ //BA.debugLineNum = 69;BA.debugLine="Public Sub SetBorder(color As String , width As In";
  //BA.debugLineNum = 71;BA.debugLine="CFControlsUtils.setPaneBorder(CheckboxPane, color";
 _cfcontrolsutils._setpaneborder(_checkboxpane,_color,_width);
  //BA.debugLineNum = 73;BA.debugLine="End Sub";
 return "";
 }
 public String  _setborderradius(int _radius) throws Exception{
- //BA.debugLineNum = 75;BA.debugLine="Public Sub setBorderRadius(radius As Int)";
+ //BA.debugLineNum = 75;BA.debugLine="Public Sub SetBorderRadius(radius As Int)";
  //BA.debugLineNum = 77;BA.debugLine="CFControlsUtils.setPaneBorderRadius(CheckboxPane,";
 _cfcontrolsutils._setpaneborderradius(_checkboxpane,_radius);
  //BA.debugLineNum = 79;BA.debugLine="End Sub";
 return "";
 }
 public String  _setcheckedcolor(String _color) throws Exception{
- //BA.debugLineNum = 95;BA.debugLine="Public Sub setCheckedColor(color As String)";
+ //BA.debugLineNum = 95;BA.debugLine="Public Sub SetCheckedColor(color As String)";
  //BA.debugLineNum = 97;BA.debugLine="CSSUtils.SetStyleProperty( CheckedPane, \"-fx-back";
 _cssutils._setstyleproperty((anywheresoftware.b4j.objects.NodeWrapper.ConcreteNodeWrapper) anywheresoftware.b4a.AbsObjectWrapper.ConvertToWrapper(new anywheresoftware.b4j.objects.NodeWrapper.ConcreteNodeWrapper(), (javafx.scene.Node)(_checkedpane.getObject())),"-fx-background-color",_color);
  //BA.debugLineNum = 99;BA.debugLine="End Sub";
 return "";
 }
 public String  _setcheckstate(int _value) throws Exception{
- //BA.debugLineNum = 101;BA.debugLine="Public Sub setCheckState(value As Int)";
+ //BA.debugLineNum = 101;BA.debugLine="Public Sub SetCheckState(value As Int)";
  //BA.debugLineNum = 103;BA.debugLine="If value = UNCHECKED_STATE Then";
 if (_value==_unchecked_state) { 
  //BA.debugLineNum = 105;BA.debugLine="CheckedPane.Visible = False";
@@ -193,14 +193,14 @@ __c.CallSubDelayed2(ba,_mcallback,_meventname+"_CheckedChanged",(Object)(_value)
 return "";
 }
 public String  _setpaneeffect(String _effect) throws Exception{
- //BA.debugLineNum = 81;BA.debugLine="Public Sub setPaneEffect(effect As String)";
+ //BA.debugLineNum = 81;BA.debugLine="Public Sub SetPaneEffect(effect As String)";
  //BA.debugLineNum = 83;BA.debugLine="CFControlsUtils.setPaneEffect(CheckboxPane, effec";
 _cfcontrolsutils._setpaneeffect(_checkboxpane,_effect);
  //BA.debugLineNum = 85;BA.debugLine="End Sub";
 return "";
 }
 public String  _setrotationx(float _angle) throws Exception{
- //BA.debugLineNum = 63;BA.debugLine="Public Sub setRotationX(angle As Float)";
+ //BA.debugLineNum = 63;BA.debugLine="Public Sub SetRotationX(angle As Float)";
  //BA.debugLineNum = 65;BA.debugLine="CFControlsUtils.setPaneRotationX(CheckboxPane, an";
 _cfcontrolsutils._setpanerotationx(_checkboxpane,_angle);
  //BA.debugLineNum = 67;BA.debugLine="End Sub";

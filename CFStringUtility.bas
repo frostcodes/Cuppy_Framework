@@ -11,14 +11,14 @@ Private Sub Process_Globals
 End Sub
 
  'Checks if an object returns NULL
-Public Sub isNull(obj As Object) As Boolean
+Public Sub IsNull(obj As Object) As Boolean
 	
 	Return (obj = Null)
 	
 End Sub
 	
 'Checks if a string is empty
-Public Sub isEmpty(str As String) As Boolean
+Public Sub IsEmpty(str As String) As Boolean
 	
 	Return (str.Trim = "")
 	
@@ -76,18 +76,15 @@ Public Sub IsLetters (text As String) As Boolean
 	Return Regex.IsMatch(pattern, text)
 	
 End Sub
-
-
-
+ 
 'Checks if string is a url
-Public Sub isUrl (text As String) As Boolean
+Public Sub IsUrl (text As String) As Boolean
 	
 	text = text.Trim
 	
 	Return text.StartsWith("http://") Or text.StartsWith("https://")
 	
 End Sub
-
 
 'Checks if string Contains a Url
 Public Sub ContainUrl(text As String) As Boolean
@@ -97,23 +94,21 @@ Public Sub ContainUrl(text As String) As Boolean
 	Return text.Contains("http://") Or text.Contains("https://")
 	
 End Sub
-
-
-
-'Trim a character once at the both sides from a string
-Public Sub trim_once(str As String, character As String) As String
  
-	str = trim_left_once(str, character)
-	str = trim_right_once(str, character)
+'Trim a character once at the both sides from a string
+Public Sub Trim_Once(str As String, character As String) As String
+ 
+	str = Trim_Left_Once(str, character)
+	str = Trim_right_once(str, character)
 		 
 	Return str
 	
 End Sub
 
 'Trim a character once at the left side from a string
-Public Sub trim_left_once(str As String, character As String) As  String
+Public Sub Trim_Left_Once(str As String, character As String) As  String
 	 
-	If isEmpty(character) Then
+	If IsEmpty(character) Then
 		
 		character = " " 'empty space
 		 
@@ -130,9 +125,9 @@ Public Sub trim_left_once(str As String, character As String) As  String
 End Sub
 
 'Trim a character once at the right side from a string
-Public Sub trim_right_once(str As String, character As String) As  String
+Public Sub Trim_Right_Once(str As String, character As String) As  String
 	 
-	If isEmpty(character) Then
+	If IsEmpty(character) Then
 		
 		character = " " 'empty space
 		
@@ -151,14 +146,14 @@ End Sub
 'Trim Slashes once from a string
 'Removes any leading/trailing slashes from a string:
 '/this/that/theother/   becomes:  this/that/theother
-Public Sub trim_slashes_once(str As String) As String
+Public Sub Trim_Slashes_Once(str As String) As String
   
-	Return trim_once( str, "/")
+	Return Trim_Once( str, "/")
 	 
 End Sub
 	
 'Removes single And double quotes from a string
-Public Sub strip_quotes(str As String) As String
+Public Sub Strip_Quotes(str As String) As String
 	
 	str = str.Replace("'", "")
 	str = str.Replace("""","")	
@@ -167,7 +162,7 @@ Public Sub strip_quotes(str As String) As String
 End Sub
  	
 ' Converts single And double quotes To entities
-Public Sub quotes_to_entities(str As String) As String
+Public Sub Quotes_To_Entities(str As String) As String
 	
 	str = str.Replace("\'", "&#39;")
 	str = str.Replace("\""","&quot;")
@@ -184,7 +179,7 @@ End Sub
 ' except those found in http://
 ' http://www.some-site.com//index.php
 ' becomes: http://www.some-site.com/index.php
-Public Sub reduce_double_slashes(str As String) As String
+Public Sub Reduce_Double_Slashes(str As String) As String
 	 
 	If str.ToLowerCase.StartsWith("http://") Then
 		
@@ -208,7 +203,7 @@ End Sub
 'Log(StringUtility.shuffleArray(CardArray))
 '</code>
 'FORM: https://www.b4x.com/android/forum/threads/randomly-shuffle-a-string-array.39435/
-Public Sub shuffleArray(StringArray() As String) As String()
+Public Sub ShuffleArray(StringArray() As String) As String()
 	
     Dim ArrayVal As String
     Dim Random As Int
@@ -235,7 +230,7 @@ End Sub
 ' 'Outputs something like this: Phapk3eN6VmlbGlU
  ' </code>
 'FROM: https://www.b4x.com/android/forum/threads/create-random-string.24403/
-Public Sub generateRandomString(StrLength As Int) As String
+Public Sub GenerateRandomString(StrLength As Int) As String
 	Dim RndString As String
 	Dim RndNumber As Int
 	Do While RndString.Length < StrLength
@@ -252,16 +247,16 @@ End Sub
 '<code>log(StringUtility.generateRandomString2(16)) 'This will generate 16 random characters
 ' 'Outputs something like this: !hap$k3eN6V@mlbG
  ' </code>
-Public Sub generateRandomString2(StrLength As Int) As String
+Public Sub GenerateRandomString2(StrLength As Int) As String
 	
 	Dim RandomArray() As String = Array As String("!","@","#","$","%")
 	Dim result As String
 	
 	'make it with lots of symbols
-	result =  StringArray2String(shuffleArray(RandomArray)) 
-	result = result  & generateRandomString( Floor( StrLength/ 2))
-	result = result  & StringArray2String(shuffleArray(RandomArray))
-	result = result  & generateRandomString( Floor( StrLength/ 2))
+	result =  StringArray2String(ShuffleArray(RandomArray)) 
+	result = result  & GenerateRandomString( Floor( StrLength/ 2))
+	result = result  & StringArray2String(ShuffleArray(RandomArray))
+	result = result  & GenerateRandomString( Floor( StrLength/ 2))
 	
 	'return the length needed
 	Return  result.SubString2( result.Length - StrLength , result.Length)
@@ -273,7 +268,7 @@ End Sub
 '<code>log(StringUtility.generatePinCode(4)) 'This will generate 4 random numbers
 ' 'Outputs something like this: 3760
  ' </code>
- Public Sub generatePinCode(PinLength As Int) As Int
+ Public Sub GeneratePinCode(PinLength As Int) As Int
  	
 	Dim result As String =""
 	Dim RandomArray() As String = Array As String(1,2,3,4,5,6,7,8,9,0)
@@ -313,7 +308,7 @@ End Sub
  'Log(StringUtility.increment_string("test", "_",1)) ' returns: test_1
 'Log(StringUtility.increment_string("test_24", "_",1))  ' returns: test_25
 '</code>
-Public Sub increment_string(str As String, separator As String , first As Int  ) As String
+Public Sub Increment_String(str As String, separator As String , first As Int  ) As String
  	
 	Dim parsed_str, foundInt As String =""
 	Dim IndexOfSeperator  As Int = 0
@@ -371,39 +366,39 @@ End Sub
 
 'ALIAS of : Split() just paramater arrangement that differs
 'Allow spliting a string by a common delimiter such as , or :
-Public Sub explode(delimiter As String ,  str As String ) As List
+Public Sub Explode(delimiter As String ,  str As String ) As List
 	
 	Return Split(str, delimiter)
  
 End Sub
 
 'Join list values into a single string
-Public Sub implode(separator As String, StrList As List) As String
+Public Sub Implode(separator As String, StrList As List) As String
 	Dim result As String =""
 	 
 	For Each str As String In StrList 'an array
 		result = result & str & separator
 		Next
 		
-	Return trim_once(result, separator) ' trim separator just in case
+	Return Trim_Once(result, separator) ' trim separator just in case
 	
 End Sub
 
 'ALIAS of : implode() just paramater arrangement that differs
 'Join list values into a single string
-Public Sub join(StrList As List,separator As String )  As String
+Public Sub Join(StrList As List,separator As String )  As String
 	
-	Return implode(separator, StrList)
+	Return Implode(separator, StrList)
 	
 End Sub
 
 
 'Convert the first character of each word to uppercase
-Public Sub ucwords(str As String) As String
+Public Sub Ucwords(str As String) As String
 	
 	Dim result As String =""
 	
-	For Each txt As String In explode(" ", str)
+	For Each txt As String In Explode(" ", str)
 		Dim firstChar As String =""
 		firstChar= txt.CharAt(0)
 		firstChar = firstChar.ToUpperCase
@@ -416,7 +411,7 @@ Public Sub ucwords(str As String) As String
 End Sub
  
 'converts the first character of a string to uppercase.
-Public Sub ucfirst(str As String) As String
+Public Sub Ucfirst(str As String) As String
  
 	Dim firstChar As String =""
 	firstChar= str.CharAt(0)
@@ -427,7 +422,7 @@ Public Sub ucfirst(str As String) As String
 End Sub
  
 'Make a string's first character lowercase
-Public Sub lcfirst(str As String) As String
+Public Sub Lcfirst(str As String) As String
  
 	Dim firstChar As String =""
 	firstChar= str.CharAt(0)
@@ -442,7 +437,7 @@ End Sub
 '<code>
  'Log(StringUtility.camelize("my_dog_spot")) ' returns: myDogSpot
 '</code>
-Public Sub camelize(str As String)  As String
+Public Sub Camelize(str As String)  As String
 	Dim firstChar, result As String =""
 	
 	str= str.Replace(" ", "_") 'make all spaces _
@@ -450,8 +445,8 @@ Public Sub camelize(str As String)  As String
 	firstChar = str.CharAt(0)
 	firstChar = firstChar.ToLowerCase
 	 
-	For Each txt As String In explode("_", str)
-		result = result & ucfirst(txt)
+	For Each txt As String In Explode("_", str)
+		result = result & Ucfirst(txt)
 	Next
 	 
 	Return firstChar & result.SubString(1)
@@ -460,7 +455,7 @@ End Sub
 
 
 'Takes multiple words separated by spaces and underscores them
-Public Sub underscore(str As String)  As String
+Public Sub Underscore(str As String)  As String
 	
 	str= str.ToLowerCase
 	Return str.Replace(" ",  "_") 
@@ -468,19 +463,19 @@ Public Sub underscore(str As String)  As String
 End Sub
 
 'Takes multiple words separated by the separator and changes them to spaces
-Public Sub humanize(str As String, separator As String)  As String
+Public Sub Humanize(str As String, separator As String)  As String
 	 
 	str= str.ToLowerCase
-	Return ucwords(str.Replace(separator, " "))
+	Return Ucwords(str.Replace(separator, " "))
 	
 End Sub
 
 'Adds http:// in the event that a protocol prefix is missing from a URL.
-Public Sub prep_url(str As String)  As String
+Public Sub Prep_url(str As String)  As String
 	
 	 str= str.Trim
 	 
-	If isEmpty(str) Or str.EqualsIgnoreCase("http://") Then
+	If IsEmpty(str) Or str.EqualsIgnoreCase("http://") Then
 		
 		Return  ""
 		
@@ -605,7 +600,7 @@ End Sub
 'words like Components might get cut off to - 
 ' Compo
 ' nents
-Sub word_wrap(str As String, limit As Int) As String
+Sub Word_Wrap(str As String, limit As Int) As String
 	
 	str = str.Trim
 	 	 
@@ -678,7 +673,7 @@ End Sub
 '
 'NOTE: multiplier has To be greater than Or equal To 0. 
 'If the multiplier Is set To 0, the function will Return an empty string.
-Sub str_repeat(input As String, multiplier As Int) As String
+Sub Str_Repeat(input As String, multiplier As Int) As String
   	 
 	If multiplier < 1 Then
 		
@@ -703,7 +698,7 @@ End Sub
 'Breaks a string at the position a particular string was found 
 'haystack = string to find in
 'after = string to search for then break string at 
-Public Sub breakStrAt(haystack As String, after As String) As Object
+Public Sub BreakStrAt(haystack As String, after As String) As Object
 	
 	Dim found As String = ""
 	
@@ -721,7 +716,7 @@ Public Sub breakStrAt(haystack As String, after As String) As Object
 	
 End Sub
 
-Public Sub strpbrk(haystack As String, charList As String) As Object
+Public Sub Strpbrk(haystack As String, charList As String) As Object
  
 	For i = 0 To haystack.Length - 1
 		 
@@ -739,7 +734,7 @@ End Sub
 
 'Converts a string to a List of characters..
 'Eg ABCD  = [A, B, C, D]
-Public Sub strToStrList(str As String) As List
+Public Sub StrToStrList(str As String) As List
 	
 	Dim result As List
 	result.Initialize
@@ -755,12 +750,12 @@ Public Sub strToStrList(str As String) As List
 End Sub
 
 'Splits a string into a List
-Public Sub str_split (str As String, splitLength As Int) As List
+Public Sub Str_Split (str As String, splitLength As Int) As List
 	 
 	Dim chunks As List
 	chunks.Initialize
 	 
-	If (isEmpty(str) Or splitLength < 1)  Then
+	If (IsEmpty(str) Or splitLength < 1)  Then
 		
 		Return chunks 'empty list
 		
@@ -804,7 +799,7 @@ End Sub
 'It also returns -1 if it could not find text 
 '
 'Alias of inbuilt function { String }.IndexOf()
-Public Sub strpos(haystack As String , find As String) As Int
+Public Sub Strpos(haystack As String , find As String) As Int
   	
 	Return haystack.IndexOf(find)
 	
@@ -817,7 +812,7 @@ End Sub
 'It also returns -1 if it could not find text 
 '
 'Alias of inbuilt function  { String }.IndexOf2()
-Public Sub strpos2(haystack As String , find As String, start As Int) As Int
+Public Sub Strpos2(haystack As String , find As String, start As Int) As Int
 	
 	Return haystack.IndexOf2(find, start)
 	
@@ -830,7 +825,7 @@ End Sub
 'It also returns -1 if it could not find text 
 '
 'Alias of inbuilt function { String }.IndexOf()
-Public Sub stripos(haystack As String , find As String) As Int
+Public Sub Stripos(haystack As String , find As String) As Int
   	
 	haystack = haystack.ToLowerCase
 	find = find.ToLowerCase
@@ -846,7 +841,7 @@ End Sub
 'It also returns -1 if it could not find text 
 '
 'Alias of inbuilt function  { String }.IndexOf2()
-Public Sub stripos2(haystack As String , find As String, start As Int) As Int
+Public Sub Stripos2(haystack As String , find As String, start As Int) As Int
   	
 	haystack = haystack.ToLowerCase
 	find = find.ToLowerCase
@@ -866,7 +861,7 @@ End Sub
 'It also returns -1 if it could not find text 
 '
 'Alias of inbuilt function { String }.LastIndexOf()
-Public Sub strrpos(haystack As String , find As String) As Int
+Public Sub Strrpos(haystack As String , find As String) As Int
   	
 	Return haystack.LastIndexOf(find)
 	
@@ -879,7 +874,7 @@ End Sub
 'It also returns -1 if it could not find text 
 '
 'Alias of inbuilt function  { String }.LastIndexOf()
-Public Sub strrpos2(haystack As String , find As String, start As Int) As Int
+Public Sub Strrpos2(haystack As String , find As String, start As Int) As Int
 	
 	Return haystack.LastIndexOf2(find, start)
 	
@@ -892,7 +887,7 @@ End Sub
 'It also returns -1 if it could not find text 
 '
 'Alias of inbuilt function { String }.LastIndexOf()
-Public Sub strripos(haystack As String , find As String) As Int
+Public Sub Strripos(haystack As String , find As String) As Int
   	
 	haystack = haystack.ToLowerCase
 	find = find.ToLowerCase
@@ -908,7 +903,7 @@ End Sub
 'It also returns -1 if it could not find text 
 '
 'Alias of inbuilt function  { String }.LastIndexOf()
-Public Sub strripos2 (haystack As String , find As String, start As Int) As Int
+Public Sub Strripos2 (haystack As String , find As String, start As Int) As Int
   	
 	haystack = haystack.ToLowerCase
 	find = find.ToLowerCase
@@ -921,7 +916,7 @@ End Sub
   
 'Use this To prepend 0 To value lower than 10
 'Eg 9 would ouput 09, 13 would ouput 13
-Public Sub prepend_zero(num As Int) As String
+Public Sub Prepend_Zero(num As Int) As String
 
 	If num < 10 And num > 0 Then
 
@@ -946,7 +941,7 @@ End Sub
 ' 'This would output a map where key1 & key2 would be the keys
 ' 'And the values would be value1 & value2 respectively
 '</code>
-Public Sub parseQueryString(QueryString As String) As Map
+Public Sub ParseQueryString(QueryString As String) As Map
 
 	Dim Data As Map 'total data
 	Data.Initialize
@@ -969,7 +964,7 @@ Public Sub parseQueryString(QueryString As String) As Map
 		Next
  
 	Catch
-		 'TODO: create a config vlue to turn on/off debug errors
+		 'TODO: create a config value to turn on/off debug errors
 		LogError("The parser for < parseQueryString() > got broken. Please check input data")
 
 	End Try
@@ -986,12 +981,12 @@ End Sub
 ' 'And the values would be value1 & value2 respectively
 '</code>
 
-Public Sub parseQueryStringUrl(url As String) As Map
+Public Sub ParseQueryStringUrl(url As String) As Map
 	
-	url= breakStrAt(url, "?") ' Split URL from Query String
-	url =  trim_left_once(url, "?")
+	url= BreakStrAt(url, "?") ' Split URL from Query String
+	url =  Trim_Left_Once(url, "?")
 	
-	Return parseQueryString(url)
+	Return ParseQueryString(url)
 	 
 End Sub
  
@@ -1014,12 +1009,4 @@ Public Sub Truncate(txt As String, length As Int) As String
 		
 	End If
 	
-End Sub
-
-
-  
-   
- 
-'TODO: add functions:
-
-' 
+End Sub 

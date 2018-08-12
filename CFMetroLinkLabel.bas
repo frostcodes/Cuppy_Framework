@@ -57,39 +57,39 @@ Public Sub SetBg(color As String)
  
 End Sub
 
-Public Sub setTextColor(color As String)
+Public Sub SetTextColor(color As String)
  
 	CFControlsUtils.setTextColor (InnerLabel, color)
  
 End Sub
 
-Public Sub setRotationX(angle As Float)
+Public Sub SetRotationX(angle As Float)
 	
 	CFControlsUtils.setRotationX(InnerLabel, angle) 'rotate
 	 
 End Sub
   
-Public Sub setBorder(color As String , width As Int)
+Public Sub SetBorder(color As String , width As Int)
 	
 	CFControlsUtils.setBorder(InnerLabel, color, width)
 
 End Sub
 
 
-Public Sub setBorderRadius(radius As Int)
+Public Sub SetBorderRadius(radius As Int)
 	
 	CFControlsUtils.setBorderRadius(InnerLabel, radius)
 	
 End Sub
 
 
-Public Sub setEffect(effect As String)
+Public Sub SetEffect(effect As String)
 	
 	CFControlsUtils.setEffect(InnerLabel, effect)
 	
 End Sub
 
-Public Sub removeEffects()
+Public Sub RemoveEffects()
 	
 	CFControlsUtils.removeEffect(InnerLabel)
 	

@@ -104,7 +104,7 @@ _mcallback = _callback;
 return "";
 }
 public String  _progress(int _value) throws Exception{
- //BA.debugLineNum = 97;BA.debugLine="Public Sub progress(value As Int)";
+ //BA.debugLineNum = 97;BA.debugLine="Public Sub Progress(value As Int)";
  //BA.debugLineNum = 99;BA.debugLine="If value >= 100 Then";
 if (_value>=100) { 
  //BA.debugLineNum = 100;BA.debugLine="value = 100";
@@ -118,7 +118,7 @@ _progressbar.SetLayoutAnimated((int) (400),0,0,(_value/(double)100)*_mbase.getPr
 return "";
 }
 public String  _removeeffects() throws Exception{
- //BA.debugLineNum = 83;BA.debugLine="Public Sub removeEffects()";
+ //BA.debugLineNum = 83;BA.debugLine="Public Sub RemoveEffects()";
  //BA.debugLineNum = 85;BA.debugLine="CFControlsUtils.removePaneEffect(ProgressPane)";
 _cfcontrolsutils._removepaneeffect(_progresspane);
  //BA.debugLineNum = 87;BA.debugLine="End Sub";
@@ -132,35 +132,35 @@ _cssutils._setstyleproperty((anywheresoftware.b4j.objects.NodeWrapper.ConcreteNo
 return "";
 }
 public String  _setborder(String _color,int _width) throws Exception{
- //BA.debugLineNum = 65;BA.debugLine="Public Sub setBorder(color As String , width As In";
+ //BA.debugLineNum = 65;BA.debugLine="Public Sub SetBorder(color As String , width As In";
  //BA.debugLineNum = 67;BA.debugLine="CFControlsUtils.setPaneBorder(ProgressPane, color";
 _cfcontrolsutils._setpaneborder(_progresspane,_color,_width);
  //BA.debugLineNum = 69;BA.debugLine="End Sub";
 return "";
 }
 public String  _setborderradius(int _radius) throws Exception{
- //BA.debugLineNum = 71;BA.debugLine="Public Sub setBorderRadius(radius As Int)";
+ //BA.debugLineNum = 71;BA.debugLine="Public Sub SetBorderRadius(radius As Int)";
  //BA.debugLineNum = 73;BA.debugLine="CFControlsUtils.setPaneBorderRadius(ProgressPane,";
 _cfcontrolsutils._setpaneborderradius(_progresspane,_radius);
  //BA.debugLineNum = 75;BA.debugLine="End Sub";
 return "";
 }
 public String  _setpaneeffect(String _effect) throws Exception{
- //BA.debugLineNum = 77;BA.debugLine="Public Sub setPaneEffect(effect As String)";
+ //BA.debugLineNum = 77;BA.debugLine="Public Sub SetPaneEffect(effect As String)";
  //BA.debugLineNum = 79;BA.debugLine="CFControlsUtils.setPaneEffect(ProgressPane, effec";
 _cfcontrolsutils._setpaneeffect(_progresspane,_effect);
  //BA.debugLineNum = 81;BA.debugLine="End Sub";
 return "";
 }
 public String  _setprogresscolor(String _color) throws Exception{
- //BA.debugLineNum = 91;BA.debugLine="Public Sub setProgressColor(color As String)";
+ //BA.debugLineNum = 91;BA.debugLine="Public Sub SetProgressColor(color As String)";
  //BA.debugLineNum = 93;BA.debugLine="CSSUtils.SetStyleProperty( ProgressBar, \"-fx-back";
 _cssutils._setstyleproperty((anywheresoftware.b4j.objects.NodeWrapper.ConcreteNodeWrapper) anywheresoftware.b4a.AbsObjectWrapper.ConvertToWrapper(new anywheresoftware.b4j.objects.NodeWrapper.ConcreteNodeWrapper(), (javafx.scene.Node)(_progressbar.getObject())),"-fx-background-color",_color);
  //BA.debugLineNum = 95;BA.debugLine="End Sub";
 return "";
 }
 public String  _setrotationx(float _angle) throws Exception{
- //BA.debugLineNum = 59;BA.debugLine="Public Sub setRotationX(angle As Float)";
+ //BA.debugLineNum = 59;BA.debugLine="Public Sub SetRotationX(angle As Float)";
  //BA.debugLineNum = 61;BA.debugLine="CFControlsUtils.setPaneRotationX(ProgressPane, an";
 _cfcontrolsutils._setpanerotationx(_progresspane,_angle);
  //BA.debugLineNum = 63;BA.debugLine="End Sub";

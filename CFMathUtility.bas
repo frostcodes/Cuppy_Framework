@@ -6,8 +6,8 @@ Version=5.51
 @EndOfDesignText@
 'This file contain math related functions
 Sub Process_Globals
-	Private fx As JFX
-	'or 2.7182818284590452354 for Exponential equavalent 
+
+	'Real  Exponential equavalent :  2.7182818284590452354
 	Public Exponential_Equivalent As Double = 2.718281828459045 
 	
 	Public NEGATIVE_INFINITY As String = "-Infinity"
@@ -30,30 +30,30 @@ Public Sub IsNan(d As Double) As Boolean
 End Sub
 
 'Inverse hyperbolic cosine
-Public Sub acosh (arg As Double) As Double
+Public Sub Acosh (arg As Double) As Double
 	
 	Return Logarithm(arg  + Sqrt(arg * arg - 1) , Exponential_Equivalent)
 	 
 End Sub
 
 'Inverse hyperbolic sine
-Public Sub asinh (arg As Double) As Double
+Public Sub Asinh (arg As Double) As Double
 	
 	Return Logarithm(arg  + Sqrt(arg * arg + 1) , Exponential_Equivalent)
 	 
 End Sub
 
 'Inverse hyperbolic tangent
-Public Sub atanh (arg As Double) As Double
+Public Sub Atanh (arg As Double) As Double
 	 
 	Return 0.5 * Logarithm((1 + arg) / (1 - arg) , Exponential_Equivalent )
 	 
 End Sub
 
 'Hyperbolic cosine of a number 
-Public Sub cosh (arg As Double) As Double
+Public Sub Cosh (arg As Double) As Double
 	 
-	Return (exp(arg) + exp(-arg)) / 2
+	Return (Exp(arg) + Exp(-arg)) / 2
 	 
 End Sub
  
@@ -79,7 +79,7 @@ End Sub
 
 'Convert decimal integer to any base (2 to 10)
 'FROM: https://www.b4x.com/android/forum/threads/number-base-conversions.39360/
-Public Sub ConvertfromDecimal(n As Int, base As Int) As Int
+Public Sub ConvertFromDecimal(n As Int, base As Int) As Int
 	
 	Dim result As Int = 0
 	Dim multiplier As Int = 1
@@ -98,7 +98,7 @@ End Sub
 
 'Convert decimal integer to any base up to 20, returns string
 'FROM: https://www.b4x.com/android/forum/threads/number-base-conversions.39360/
-Public Sub ConvertfromDecimal2(n As Int, base As Int) As String
+Public Sub ConvertFromDecimal2(n As Int, base As Int) As String
 	
 	Dim chars As  String ="0123456789ABCDEFGHIJ"
 	Dim result As String = ""
@@ -116,7 +116,7 @@ End Sub
 
 'Convert any base up to 20 to decimal integer
 'FROM: https://www.b4x.com/android/forum/threads/number-base-conversions.39360/
-Public Sub ConverttoDecimal2( n As String, base As Int) As Int
+Public Sub ConvertToDecimal2( n As String, base As Int) As Int
 	
 	n = n.ToUpperCase
 	Dim result As Int = 0
@@ -143,56 +143,56 @@ End Sub
 Public Sub ConvertFromTo(n As Int, frombase As Int, tobase As Int) As Int
 	
 	Dim t As Int = ConvertToDecimal(n,frombase)
-	Return ConvertfromDecimal(t,tobase)
+	Return ConvertFromDecimal(t,tobase)
 	
 End Sub
 
 'Calculates the exponent of e
 'Returns e raised to the power of arg
-Public Sub exp(arg As Double) As Double
+Public Sub Exp(arg As Double) As Double
 	
 	Return Power(Exponential_Equivalent, arg)
 	
 End Sub
 'Hyperbolic tangent of a number,
 'which is equal to sinh(x)/cosh(x).
-Public Sub tanh(number As Double) As Double
+Public Sub Tanh(number As Double) As Double
 	
-	Return 1 - 2 / (exp(2 * number) + 1)
+	Return 1 - 2 / (Exp(2 * number) + 1)
 	
 End Sub
 
 'Hyperbolic sine of a number, 
 'which is equal to (exp(number) - exp(-number))/2).
-Public Sub sinh(number As Double) As Double
+Public Sub Sinh(number As Double) As Double
 	 
-	Return (exp(number) - exp(-number)) / 2
+	Return (Exp(number) - Exp(-number)) / 2
 	
 End Sub
  
  'Check whether a value is infinite or not
- Public Sub is_infinite(val As String) As Boolean
+ Public Sub Is_infinite(val As String) As Boolean
  	
 	Return val = POSITIVE_INFINITY Or val = NEGATIVE_INFINITY
 		 
 End Sub
 
 'Check whether a value is finite or not
-Public Sub is_finite(val As String) As Boolean
+Public Sub Is_finite(val As String) As Boolean
  	
-	Return Not(is_infinite(val))
+	Return Not(Is_infinite(val))
 	
 End Sub
 	
 'Converts the number in degrees to the radian equivalent
-Public Sub deg2rad(angle As Double) As Double
+Public Sub Deg2rad(angle As Double) As Double
 	
 	Return angle * 0.017453292519943295
  
 End Sub
 
 'Converts a radian value to a degree value.
-Public Sub rad2deg(number As Double) As Double
+Public Sub Rad2deg(number As Double) As Double
 	
 	Return number * 57.29577951308232
  
@@ -200,7 +200,7 @@ End Sub
 
 'Calculate the length of the hypotenuse 
 'of a right-angle triangle
-Public Sub hypot(x As Double, y As Double) As Double
+Public Sub Hypot(x As Double, y As Double) As Double
 	
 	x = Abs(x)
 	y = Abs(y)

@@ -74,31 +74,31 @@ Public Sub SetBg(color As String)
  
 End Sub
 
-Public Sub setRotationX(angle As Float)
+Public Sub SetRotationX(angle As Float)
 	
-	CFControlsUtils.setPaneRotationX(CheckboxPane, angle) 'rotate
+	CFControlsUtils.SetPaneRotationX(CheckboxPane, angle) 'rotate
 	 
 End Sub
 
-Public Sub setBorder(color As String , width As Int)
+Public Sub SetBorder(color As String , width As Int)
 	
-	CFControlsUtils.setPaneBorder(CheckboxPane, color, width)
+	CFControlsUtils.SetPaneBorder(CheckboxPane, color, width)
 
 End Sub
  
-Public Sub setBorderRadius(radius As Int)
+Public Sub SetBorderRadius(radius As Int)
 	
 	CFControlsUtils.setPaneBorderRadius(CheckboxPane, radius)
 	
 End Sub
  
-Public Sub setPaneEffect(effect As String)
+Public Sub SetPaneEffect(effect As String)
 	
 	CFControlsUtils.setPaneEffect(CheckboxPane, effect)
 	
 End Sub
 
-Public Sub removeEffects()
+Public Sub RemoveEffects()
 	
 	CFControlsUtils.removePaneEffect(CheckboxPane)
 	
@@ -106,13 +106,13 @@ End Sub
 
 #End Region
   
-Public Sub setCheckedColor(color As String)
+Public Sub SetCheckedColor(color As String)
   	
 	 CFControlsUtils.setBG(CheckedLabel, color)
 	
 End Sub
  
-Public Sub setCheckState(value As Int)
+Public Sub SetCheckState(value As Int)
 	 
 	If value = UNCHECKED_STATE Then
 		
@@ -136,7 +136,7 @@ Public Sub setCheckState(value As Int)
 	 
 End Sub
 
-Public Sub checked As Boolean
+Public Sub Checked As Boolean
 
 	Return CheckedLabel.Visible
 	 
@@ -149,7 +149,7 @@ Public Sub IsIndeterminate As Boolean
 End Sub
 
 'TODO: allow setting icon from designer
-Public Sub setIcon(iconCode As Int)
+Public Sub SetIcon(iconCode As Int)
 	
 	CheckedLabel.Text = Chr(iconCode)
 	
@@ -157,13 +157,13 @@ End Sub
    
 Private Sub CheckboxPane_MousePressed (EventData As MouseEvent)
 	 
-	If Not(checked) Or IsIndeterminate Then
+	If Not(Checked) Or IsIndeterminate Then
 	
-		setCheckState(CHECKED_STATE)
+		SetCheckState(CHECKED_STATE)
 	
 	Else
 	
- 	 setCheckState(UNCHECKED_STATE)
+ 	 SetCheckState(UNCHECKED_STATE)
 		   
 	End If
 	

@@ -64,31 +64,31 @@ Public Sub SetBg(color As String)
  
 End Sub
 
-Public Sub setRotationX(angle As Float)
+Public Sub SetRotationX(angle As Float)
 	
 	CFControlsUtils.setRotationX(ToggleButton, angle) 'rotate
 	 
 End Sub
 
-Public Sub setBorder(color As String , width As Int)
+Public Sub SetBorder(color As String , width As Int)
 	
 	CFControlsUtils.setBorder(ToggleButton, color, width)
 
 End Sub
  
-Public Sub setBorderRadius(radius As Int)
+Public Sub SetBorderRadius(radius As Int)
 	
 	CFControlsUtils.setBorderRadius(ToggleButton, radius)
 	
 End Sub
  
-Public Sub setPaneEffect(effect As String)
+Public Sub SetPaneEffect(effect As String)
 	
 	CFControlsUtils.setEffect(ToggleButton, effect)
 	
 End Sub
 
-Public Sub removeEffects()
+Public Sub RemoveEffects()
 	
 	CFControlsUtils.removeEffect(ToggleButton)
 	
@@ -96,12 +96,12 @@ End Sub
 
 #End Region
    
-Public Sub setCheckState(value As Int)
+Public Sub SetCheckState(value As Int)
 	 
 	If value = UNCHECKED_STATE Then
 		 
 		 SetBg("white")
-		setBorder("#D6D6D6", 2)
+		SetBorder("#D6D6D6", 2)
 		
 		ToggleButton.TextColor = fx.Colors.RGB(91, 91, 91)
 		  
@@ -110,7 +110,7 @@ Public Sub setCheckState(value As Int)
 	Else if value = CHECKED_STATE Then
 	 
 		
-		setBorder("#2EA9DE", 2)
+		SetBorder("#2EA9DE", 2)
 		SetBg("rgb(65, 177, 225 )")
 		
 		ToggleButton.TextColor = fx.Colors.White
@@ -124,7 +124,7 @@ Public Sub setCheckState(value As Int)
 	 
 End Sub
 
-Public Sub checked As Boolean
+Public Sub Checked As Boolean
 
 	Return CheckedStatus
 	 
@@ -132,13 +132,13 @@ End Sub
 
 Private Sub ToggleButton_MousePressed (EventData As MouseEvent)
 	 
-	If Not(checked) Then
+	If Not(Checked) Then
 	
-		setCheckState(CHECKED_STATE)
+		SetCheckState(CHECKED_STATE)
 	
 	Else
 	
-		setCheckState(UNCHECKED_STATE)
+		SetCheckState(UNCHECKED_STATE)
  
 	End If
 	

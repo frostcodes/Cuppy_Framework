@@ -15,7 +15,7 @@ End Sub
 
 'Resolves a value type into Boolean
 'Eg 0 is false , 1 is true in Boolean table
-Public Sub boolval(mixedVar As Object) As Boolean
+Public Sub BoolVal(mixedVar As Object) As Boolean
 	
 	If mixedVar = False Then
 		Return False
@@ -38,7 +38,7 @@ Public Sub boolval(mixedVar As Object) As Boolean
 End Sub
 
 'Removes the beginning java type 
-Private Sub strip_java_type(str As String) As String
+Private Sub StripJavaType(str As String) As String
 	
 	str = str.Replace("java.lang.","")
 	str = str.Replace("java.util.","")
@@ -57,67 +57,67 @@ Private Sub strip_java_type(str As String) As String
 End Sub
 
 'Check if an object is the type of a custom or inbuilt data type
-Public Sub isTypeOf(obj As Object , TypeOf As String) As Boolean
+Public Sub IsTypeOf(obj As Object , TypeOf As String) As Boolean
 	 
-	Return strip_java_type(GetType(obj)) = TypeOf.ToLowerCase
+	Return StripJavaType(GetType(obj)) = TypeOf.ToLowerCase
 	
 End Sub
 
-'Checks if an obj is a boolean
-Public Sub isBoolean(obj As Object) As Boolean
+'Checks if an object is a boolean
+Public Sub IsBoolean(obj As Object) As Boolean
 	
-	Return isTypeOf(obj, "boolean")
+	Return IsTypeOf(obj, "boolean")
 	
 End Sub
  
-'Checks if an obj is a string
-Public Sub isString(obj As Object) As Boolean
+'Checks if an object is a string
+Public Sub IsString(obj As Object) As Boolean
 	
-	Return isTypeOf(obj, "string")
+	Return IsTypeOf(obj, "string")
 	
 End Sub
  
-'Checks if an obj is an integer
-Public Sub isInteger(obj As Object) As Boolean
+'Checks if an object is an integer
+Public Sub IsInteger(obj As Object) As Boolean
 	
-	Return isTypeOf(obj, "integer")
-	
-End Sub
-
-'Checks if an obj is an double
-Public Sub isDouble(obj As Object) As Boolean
-	
-	Return isTypeOf(obj, "double")
+	Return IsTypeOf(obj, "integer")
 	
 End Sub
 
-'Checks if an obj is an arraylist
-Public Sub isArrayList(obj As Object) As Boolean
+'Checks if an object is an double
+Public Sub IsDouble(obj As Object) As Boolean
 	
-	Return isTypeOf(obj, "arraylist")
+	Return IsTypeOf(obj, "double")
 	
 End Sub
 
-'Checks if an obj is an arraylist
+'Checks if an object is an arraylist
+Public Sub IsArrayList(obj As Object) As Boolean
+	
+	Return IsTypeOf(obj, "arraylist")
+	
+End Sub
+
+'Checks if an object is an arraylist
 'ALIAS of isArrayList()
-Public Sub isList(obj As Object) As Boolean
+Public Sub IsList(obj As Object) As Boolean
 
-	Return isArrayList(obj)
+	Return IsArrayList(obj)
 	
 End Sub
  
  'Checks if an object returns NULL
  'ALIAS of StringUtility.isNull()
-Public Sub isNull(obj As Object) As Boolean
+Public Sub IsNull(obj As Object) As Boolean
 	
 	Return CFStringUtility.isNull(obj)
 	
 End Sub
 
 'Checks if a value is an  Object
-Public Sub isObject(obj As Object) As Boolean
+Public Sub IsObject(obj As Object) As Boolean
 	
-	Return isTypeOf(obj, "object")
+	Return IsTypeOf(obj, "object")
 	
 End Sub 
  
@@ -125,9 +125,9 @@ End Sub
 'Note : Values which contain boolean, double, 
 'integer, Or string types are scalar.
 ' Array, object, etc are Not scalar.
-Public Sub is_scalar (mixedVar As Object) As Boolean
+Public Sub IsScalar (mixedVar As Object) As Boolean
 	
-	Return isString(mixedVar) Or IsNumber(mixedVar) Or isBoolean(mixedVar)
+	Return IsString(mixedVar) Or IsNumber(mixedVar) Or IsBoolean(mixedVar)
 	  
 End Sub
  
