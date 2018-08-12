@@ -180,7 +180,7 @@ _cfcontrolsutils._setrotationx((anywheresoftware.b4j.objects.NodeWrapper.Control
 return "";
 }
 public String  _togglebutton_mousepressed(anywheresoftware.b4j.objects.NodeWrapper.MouseEventWrapper _eventdata) throws Exception{
- //BA.debugLineNum = 127;BA.debugLine="Sub ToggleButton_MousePressed (EventData As MouseE";
+ //BA.debugLineNum = 127;BA.debugLine="Private Sub ToggleButton_MousePressed (EventData A";
  //BA.debugLineNum = 129;BA.debugLine="If Not(checked) Then";
 if (__c.Not(_checked())) { 
  //BA.debugLineNum = 131;BA.debugLine="setCheckState(CHECKED_STATE)";

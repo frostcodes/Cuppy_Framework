@@ -101,14 +101,14 @@ _mcallback = _callback;
 return "";
 }
 public String  _innerbutton_mousepressed(anywheresoftware.b4j.objects.NodeWrapper.MouseEventWrapper _eventdata) throws Exception{
- //BA.debugLineNum = 96;BA.debugLine="Sub InnerButton_MousePressed (EventData As MouseEv";
+ //BA.debugLineNum = 96;BA.debugLine="Private Sub InnerButton_MousePressed (EventData As";
  //BA.debugLineNum = 98;BA.debugLine="CallSubDelayed2(mCallBack, mEventName & \"_MousePr";
 __c.CallSubDelayed2(ba,_mcallback,_meventname+"_MousePressed",(Object)(_eventdata));
  //BA.debugLineNum = 100;BA.debugLine="End Sub";
 return "";
 }
 public String  _innerpane_mousepressed(anywheresoftware.b4j.objects.NodeWrapper.MouseEventWrapper _eventdata) throws Exception{
- //BA.debugLineNum = 102;BA.debugLine="Sub InnerPane_MousePressed (EventData As MouseEven";
+ //BA.debugLineNum = 102;BA.debugLine="Private Sub InnerPane_MousePressed (EventData As M";
  //BA.debugLineNum = 104;BA.debugLine="CallSubDelayed2(mCallBack, mEventName & \"_PaneMou";
 __c.CallSubDelayed2(ba,_mcallback,_meventname+"_PaneMousePressed",(Object)(_eventdata));
  //BA.debugLineNum = 106;BA.debugLine="End Sub";

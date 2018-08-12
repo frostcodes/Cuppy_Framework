@@ -198,7 +198,7 @@ _cfcontrolsutils._setpanerotationx(_switchpane,_angle);
 return "";
 }
 public String  _switchbtn_mousepressed(anywheresoftware.b4j.objects.NodeWrapper.MouseEventWrapper _eventdata) throws Exception{
- //BA.debugLineNum = 163;BA.debugLine="Sub SwitchBtn_MousePressed (EventData As MouseEven";
+ //BA.debugLineNum = 163;BA.debugLine="Private Sub SwitchBtn_MousePressed (EventData As M";
  //BA.debugLineNum = 165;BA.debugLine="CallSub2(Me , \"SwitchPane_MousePressed\", EventDat";
 __c.CallSubNew2(ba,this,"SwitchPane_MousePressed",(Object)(_eventdata));
  //BA.debugLineNum = 167;BA.debugLine="End Sub";

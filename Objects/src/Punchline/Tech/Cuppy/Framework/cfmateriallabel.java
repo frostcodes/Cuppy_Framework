@@ -97,10 +97,10 @@ _mcallback = _callback;
 return "";
 }
 public String  _innerlabel_mousepressed(anywheresoftware.b4j.objects.NodeWrapper.MouseEventWrapper _eventdata) throws Exception{
- //BA.debugLineNum = 93;BA.debugLine="Public Sub InnerLabel_MousePressed (EventData As M";
- //BA.debugLineNum = 95;BA.debugLine="CallSubDelayed2(mCallBack, mEventName & \"_MousePr";
+ //BA.debugLineNum = 92;BA.debugLine="Private Sub  InnerLabel_MousePressed (EventData As";
+ //BA.debugLineNum = 94;BA.debugLine="CallSubDelayed2(mCallBack, mEventName & \"_MousePr";
 __c.CallSubDelayed2(ba,_mcallback,_meventname+"_MousePressed",(Object)(_eventdata));
- //BA.debugLineNum = 97;BA.debugLine="End Sub";
+ //BA.debugLineNum = 96;BA.debugLine="End Sub";
 return "";
 }
 public String  _removeeffects() throws Exception{

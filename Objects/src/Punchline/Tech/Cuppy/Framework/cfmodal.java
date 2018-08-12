@@ -96,14 +96,14 @@ _mcallback = _callback;
 return "";
 }
 public String  _modalbgpane_mousepressed(anywheresoftware.b4j.objects.NodeWrapper.MouseEventWrapper _eventdata) throws Exception{
- //BA.debugLineNum = 103;BA.debugLine="Sub ModalBgPane_MousePressed (EventData As MouseEv";
+ //BA.debugLineNum = 103;BA.debugLine="Private Sub ModalBgPane_MousePressed (EventData As";
  //BA.debugLineNum = 105;BA.debugLine="CallSubDelayed2(mCallBack, mEventName & \"_ModalBG";
 __c.CallSubDelayed2(ba,_mcallback,_meventname+"_ModalBGPressed",(Object)(_eventdata));
  //BA.debugLineNum = 107;BA.debugLine="End Sub";
 return "";
 }
 public String  _modalpane_mousepressed(anywheresoftware.b4j.objects.NodeWrapper.MouseEventWrapper _eventdata) throws Exception{
- //BA.debugLineNum = 109;BA.debugLine="Sub ModalPane_MousePressed (EventData As MouseEven";
+ //BA.debugLineNum = 109;BA.debugLine="Private Sub ModalPane_MousePressed (EventData As M";
  //BA.debugLineNum = 111;BA.debugLine="CallSubDelayed2(mCallBack, mEventName & \"_ModalPr";
 __c.CallSubDelayed2(ba,_mcallback,_meventname+"_ModalPressed",(Object)(_eventdata));
  //BA.debugLineNum = 113;BA.debugLine="End Sub";

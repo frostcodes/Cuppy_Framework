@@ -99,7 +99,7 @@ _mcallback = _callback;
 return "";
 }
 public String  _innerlabel_mousepressed(anywheresoftware.b4j.objects.NodeWrapper.MouseEventWrapper _eventdata) throws Exception{
- //BA.debugLineNum = 95;BA.debugLine="Public Sub InnerLabel_MousePressed (EventData As M";
+ //BA.debugLineNum = 95;BA.debugLine="Private Sub InnerLabel_MousePressed (EventData As";
  //BA.debugLineNum = 97;BA.debugLine="fx.ShowExternalDocument(InnerLabel.Text)";
 _fx.ShowExternalDocument(_innerlabel.getText());
  //BA.debugLineNum = 99;BA.debugLine="CallSubDelayed2(mCallBack, mEventName & \"_MousePr";

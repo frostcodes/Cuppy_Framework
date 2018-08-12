@@ -101,21 +101,21 @@ _cfstylemanager._activecontrols.Add(this);
 return "";
 }
 public String  _innerbutton_mouseentered(anywheresoftware.b4j.objects.NodeWrapper.MouseEventWrapper _eventdata) throws Exception{
- //BA.debugLineNum = 100;BA.debugLine="Sub InnerButton_MouseEntered (EventData As MouseEv";
+ //BA.debugLineNum = 100;BA.debugLine="Private Sub InnerButton_MouseEntered (EventData As";
  //BA.debugLineNum = 102;BA.debugLine="CallSubDelayed2(mCallBack, mEventName & \"_MouseEn";
 __c.CallSubDelayed2(ba,_mcallback,_meventname+"_MouseEntered",(Object)(_eventdata));
  //BA.debugLineNum = 104;BA.debugLine="End Sub";
 return "";
 }
 public String  _innerbutton_mouseexited(anywheresoftware.b4j.objects.NodeWrapper.MouseEventWrapper _eventdata) throws Exception{
- //BA.debugLineNum = 106;BA.debugLine="Sub InnerButton_MouseExited (EventData As MouseEve";
+ //BA.debugLineNum = 106;BA.debugLine="Private Sub InnerButton_MouseExited (EventData As";
  //BA.debugLineNum = 108;BA.debugLine="CallSubDelayed2(mCallBack, mEventName & \"_MouseEx";
 __c.CallSubDelayed2(ba,_mcallback,_meventname+"_MouseExited",(Object)(_eventdata));
  //BA.debugLineNum = 110;BA.debugLine="End Sub";
 return "";
 }
 public String  _innerbutton_mousepressed(anywheresoftware.b4j.objects.NodeWrapper.MouseEventWrapper _eventdata) throws Exception{
- //BA.debugLineNum = 94;BA.debugLine="Public Sub InnerButton_MousePressed (EventData As";
+ //BA.debugLineNum = 94;BA.debugLine="Private Sub InnerButton_MousePressed (EventData As";
  //BA.debugLineNum = 96;BA.debugLine="CallSubDelayed2(mCallBack, mEventName & \"_MousePr";
 __c.CallSubDelayed2(ba,_mcallback,_meventname+"_MousePressed",(Object)(_eventdata));
  //BA.debugLineNum = 98;BA.debugLine="End Sub";

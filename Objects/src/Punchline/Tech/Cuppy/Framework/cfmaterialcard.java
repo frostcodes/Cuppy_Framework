@@ -95,21 +95,21 @@ _mcallback = _callback;
 return "";
 }
 public String  _innercard_mouseclicked(anywheresoftware.b4j.objects.NodeWrapper.MouseEventWrapper _eventdata) throws Exception{
- //BA.debugLineNum = 112;BA.debugLine="Sub InnerCard_MouseClicked (EventData As MouseEven";
+ //BA.debugLineNum = 112;BA.debugLine="Private Sub InnerCard_MouseClicked (EventData As M";
  //BA.debugLineNum = 114;BA.debugLine="CallSubDelayed2(mCallBack, mEventName & \"_MouseCl";
 __c.CallSubDelayed2(ba,_mcallback,_meventname+"_MouseClicked",(Object)(_eventdata));
  //BA.debugLineNum = 116;BA.debugLine="End Sub";
 return "";
 }
 public String  _innercard_mouseentered(anywheresoftware.b4j.objects.NodeWrapper.MouseEventWrapper _eventdata) throws Exception{
- //BA.debugLineNum = 100;BA.debugLine="Sub InnerCard_MouseEntered (EventData As MouseEven";
+ //BA.debugLineNum = 100;BA.debugLine="Private Sub InnerCard_MouseEntered (EventData As M";
  //BA.debugLineNum = 102;BA.debugLine="CallSubDelayed2(mCallBack, mEventName & \"_MouseEn";
 __c.CallSubDelayed2(ba,_mcallback,_meventname+"_MouseEntered",(Object)(_eventdata));
  //BA.debugLineNum = 104;BA.debugLine="End Sub";
 return "";
 }
 public String  _innercard_mouseexited(anywheresoftware.b4j.objects.NodeWrapper.MouseEventWrapper _eventdata) throws Exception{
- //BA.debugLineNum = 106;BA.debugLine="Sub InnerCard_MouseExited (EventData As MouseEvent";
+ //BA.debugLineNum = 106;BA.debugLine="Private Sub InnerCard_MouseExited (EventData As Mo";
  //BA.debugLineNum = 108;BA.debugLine="CallSubDelayed2(mCallBack, mEventName & \"_MouseEx";
 __c.CallSubDelayed2(ba,_mcallback,_meventname+"_MouseExited",(Object)(_eventdata));
  //BA.debugLineNum = 110;BA.debugLine="End Sub";
@@ -117,7 +117,7 @@ return "";
 }
 public String  _innercard_touch(int _action,float _x,float _y) throws Exception{
 anywheresoftware.b4a.objects.collections.Map _points = null;
- //BA.debugLineNum = 89;BA.debugLine="Sub InnerCard_Touch (Action As Int, X As Float, Y";
+ //BA.debugLineNum = 89;BA.debugLine="Private Sub InnerCard_Touch (Action As Int, X As F";
  //BA.debugLineNum = 91;BA.debugLine="Dim Points As Map";
 _points = new anywheresoftware.b4a.objects.collections.Map();
  //BA.debugLineNum = 92;BA.debugLine="Points.Initialize";

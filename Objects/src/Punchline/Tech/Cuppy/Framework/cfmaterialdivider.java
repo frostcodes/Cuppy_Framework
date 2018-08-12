@@ -99,11 +99,6 @@ _mcallback = _callback;
  //BA.debugLineNum = 18;BA.debugLine="End Sub";
 return "";
 }
-public String  _line_mousepressed(anywheresoftware.b4j.objects.NodeWrapper.MouseEventWrapper _eventdata) throws Exception{
- //BA.debugLineNum = 113;BA.debugLine="Sub line_MousePressed (EventData As MouseEvent)";
- //BA.debugLineNum = 115;BA.debugLine="End Sub";
-return "";
-}
 public String  _removeeffects() throws Exception{
  //BA.debugLineNum = 86;BA.debugLine="Public Sub removeEffects()";
  //BA.debugLineNum = 88;BA.debugLine="CFControlsUtils.removePaneEffect(line)";
