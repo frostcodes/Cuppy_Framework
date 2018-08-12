@@ -166,7 +166,7 @@ Private Sub SwitchPane_MousePressed (EventData As MouseEvent)
 	
 End Sub
 
-Sub SwitchBtn_MousePressed (EventData As MouseEvent)
+Private Sub SwitchBtn_MousePressed (EventData As MouseEvent)
 	
 	CallSub2(Me , "SwitchPane_MousePressed", EventData)
 	

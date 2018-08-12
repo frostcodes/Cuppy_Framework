@@ -115,7 +115,7 @@ End Sub
 
 'TODO: make vertical divider
 
-
-Sub line_MousePressed (EventData As MouseEvent)
-	
-End Sub
+'
+'Private Sub line_MousePressed (EventData As MouseEvent)
+'	
+'End Sub

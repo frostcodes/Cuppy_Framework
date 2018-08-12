@@ -92,7 +92,7 @@ End Sub
 
 #End Region
  
-Sub InnerCard_Touch (Action As Int, X As Float, Y As Float)
+Private Sub InnerCard_Touch (Action As Int, X As Float, Y As Float)
 	
 	Dim Points As Map
 	Points.Initialize
@@ -103,19 +103,19 @@ Sub InnerCard_Touch (Action As Int, X As Float, Y As Float)
 	
 End Sub
  
-Sub InnerCard_MouseEntered (EventData As MouseEvent)
+Private Sub InnerCard_MouseEntered (EventData As MouseEvent)
 	
 	CallSubDelayed2(mCallBack, mEventName & "_MouseEntered", EventData)
 	
 End Sub
 
-Sub InnerCard_MouseExited (EventData As MouseEvent)
+Private Sub InnerCard_MouseExited (EventData As MouseEvent)
 	
 	CallSubDelayed2(mCallBack, mEventName & "_MouseExited", EventData)
 	
 End Sub
  
-Sub InnerCard_MouseClicked (EventData As MouseEvent)
+Private Sub InnerCard_MouseClicked (EventData As MouseEvent)
 	
 	CallSubDelayed2(mCallBack, mEventName & "_MouseClicked", EventData)
 	

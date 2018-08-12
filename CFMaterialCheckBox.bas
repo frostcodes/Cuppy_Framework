@@ -108,8 +108,7 @@ End Sub
   
 Public Sub setCheckedColor(color As String)
   	
-	'CSSUtils.SetStyleProperty( CheckedLabel, "-fx-background-color", color)
-	CFControlsUtils.setBG(CheckedLabel, color)
+	 CFControlsUtils.setBG(CheckedLabel, color)
 	
 End Sub
  
@@ -149,7 +148,7 @@ Public Sub IsIndeterminate As Boolean
 	
 End Sub
 
-'TODO: allow settingicon form designer
+'TODO: allow setting icon from designer
 Public Sub setIcon(iconCode As Int)
 	
 	CheckedLabel.Text = Chr(iconCode)
@@ -171,13 +170,13 @@ Private Sub CheckboxPane_MousePressed (EventData As MouseEvent)
 	
 End Sub
 
-Sub CheckboxPane_MouseEntered (EventData As MouseEvent)
+Private Sub CheckboxPane_MouseEntered (EventData As MouseEvent)
 	
 	CallSubDelayed2(mCallBack, mEventName & "_MouseEntered" , EventData)
 	
 End Sub
 
-Sub CheckboxPane_MouseExited (EventData As MouseEvent)
+Private Sub CheckboxPane_MouseExited (EventData As MouseEvent)
 	
 	CallSubDelayed2(mCallBack, mEventName & "_MouseExited" , EventData)
 	

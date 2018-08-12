@@ -106,13 +106,13 @@ End Sub
 
 #End Region
  
-Sub ModalBgPane_MousePressed (EventData As MouseEvent)
+Private Sub ModalBgPane_MousePressed (EventData As MouseEvent)
 	
 	CallSubDelayed2(mCallBack, mEventName & "_ModalBGPressed", EventData)  
 	
 End Sub
 
-Sub ModalPane_MousePressed (EventData As MouseEvent)
+Private Sub ModalPane_MousePressed (EventData As MouseEvent)
 	
 	CallSubDelayed2(mCallBack, mEventName & "_ModalPressed", EventData)  
 	
