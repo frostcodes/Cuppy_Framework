@@ -26,21 +26,16 @@ public static String _libraryauthor = "";
 public static String _libraryname = "";
 public static double _libraryversion = 0;
 public static String _librarycopyright = "";
-public static boolean _debugmode = false;
-public static String _appdir = "";
-public static String _licenseserver = "";
 public static b4j.example.cssutils _cssutils = null;
 public static Punchline.Tech.Cuppy.Framework.cfstylemanager _cfstylemanager = null;
 public static Punchline.Tech.Cuppy.Framework.cfstringutility _cfstringutility = null;
 public static Punchline.Tech.Cuppy.Framework.cffileutility _cffileutility = null;
 public static Punchline.Tech.Cuppy.Framework.cfmathutility _cfmathutility = null;
 public static Punchline.Tech.Cuppy.Framework.cfdatatypeutility _cfdatatypeutility = null;
-public static Punchline.Tech.Cuppy.Framework.cfanimationmanager _cfanimationmanager = null;
 public static Punchline.Tech.Cuppy.Framework.cflicensemanager _cflicensemanager = null;
 public static Punchline.Tech.Cuppy.Framework.cfdatageneratorutility _cfdatageneratorutility = null;
 public static Punchline.Tech.Cuppy.Framework.cfapputility _cfapputility = null;
 public static Punchline.Tech.Cuppy.Framework.cfcontrolsutils _cfcontrolsutils = null;
-public static Punchline.Tech.Cuppy.Framework.cfhtmlutility _cfhtmlutility = null;
 public static String  _process_globals() throws Exception{
  //BA.debugLineNum = 2;BA.debugLine="Private Sub Process_Globals";
  //BA.debugLineNum = 5;BA.debugLine="Public LibraryAuthor As String = \"Punchline Techn";
@@ -51,13 +46,7 @@ _libraryname = "Cuppy Framework";
 _libraryversion = 1.02;
  //BA.debugLineNum = 8;BA.debugLine="Public LibraryCopyright As String =  \"Copyright t";
 _librarycopyright = "Copyright to Oluwaseyi Aderinkomi < Frost Codes >";
- //BA.debugLineNum = 10;BA.debugLine="Public DebugMode As Boolean = True  'are we debug";
-_debugmode = anywheresoftware.b4a.keywords.Common.True;
- //BA.debugLineNum = 13;BA.debugLine="Public AppDir As String = File.DirApp";
-_appdir = anywheresoftware.b4a.keywords.Common.File.getDirApp();
- //BA.debugLineNum = 16;BA.debugLine="Private LicenseServer As String =\"\" 'ignore";
-_licenseserver = "";
- //BA.debugLineNum = 18;BA.debugLine="End Sub";
+ //BA.debugLineNum = 10;BA.debugLine="End Sub";
 return "";
 }
 }

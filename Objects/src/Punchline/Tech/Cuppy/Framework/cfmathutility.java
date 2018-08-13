@@ -35,12 +35,10 @@ public static Punchline.Tech.Cuppy.Framework.cfstylemanager _cfstylemanager = nu
 public static Punchline.Tech.Cuppy.Framework.cfstringutility _cfstringutility = null;
 public static Punchline.Tech.Cuppy.Framework.cffileutility _cffileutility = null;
 public static Punchline.Tech.Cuppy.Framework.cfdatatypeutility _cfdatatypeutility = null;
-public static Punchline.Tech.Cuppy.Framework.cfanimationmanager _cfanimationmanager = null;
 public static Punchline.Tech.Cuppy.Framework.cflicensemanager _cflicensemanager = null;
 public static Punchline.Tech.Cuppy.Framework.cfdatageneratorutility _cfdatageneratorutility = null;
 public static Punchline.Tech.Cuppy.Framework.cfapputility _cfapputility = null;
 public static Punchline.Tech.Cuppy.Framework.cfcontrolsutils _cfcontrolsutils = null;
-public static Punchline.Tech.Cuppy.Framework.cfhtmlutility _cfhtmlutility = null;
 public static double  _acosh(double _arg) throws Exception{
  //BA.debugLineNum = 27;BA.debugLine="Public Sub Acosh (arg As Double) As Double";
  //BA.debugLineNum = 29;BA.debugLine="Return Logarithm(arg  + Sqrt(arg * arg - 1) , Exp";
