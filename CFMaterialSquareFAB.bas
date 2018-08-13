@@ -34,7 +34,7 @@ Public Sub DesignerCreateView (Base As Pane, Lbl As Label, Props As Map)
 	mBase.LoadLayout("CFMaterialSquareFABUI")
 	'set using theme...
 	SetBg(CFStyleManager.DefaultTheme.Get("accent"))
-	setRotationX(135) 'rotate by default
+	SetRotationX(135) 'rotate by default
 End Sub
 
 Private Sub Base_Resize (Width As Double, Height As Double)
@@ -55,7 +55,7 @@ End Sub
 
 Public Sub SetBg(color As String)
  
-	CSSUtils.SetStyleProperty( FAB_Btn, "-fx-background-color", color)
+	CFControlsUtils.SetBG( FAB_Btn, color)
  
 End Sub
 

@@ -58,7 +58,7 @@ End Sub
  
 Public Sub SetBg(color As String)
  
-	CSSUtils.SetStyleProperty( InnerButton, "-fx-background-color", color)
+	CFControlsUtils.SetBG( InnerButton, color)
  
 End Sub
 

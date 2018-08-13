@@ -72,7 +72,7 @@ public String  _designercreateview(anywheresoftware.b4j.objects.PaneWrapper.Conc
 _mbase = _base;
  //BA.debugLineNum = 30;BA.debugLine="mBase.LoadLayout(\"CFMaterialCardUI\")";
 _mbase.LoadLayout(ba,"CFMaterialCardUI");
- //BA.debugLineNum = 32;BA.debugLine="setBorder(CFStyleManager.DefaultTheme.Get(\"divide";
+ //BA.debugLineNum = 32;BA.debugLine="SetBorder(CFStyleManager.DefaultTheme.Get(\"divide";
 _setborder(BA.ObjectToString(_cfstylemanager._defaulttheme.Get((Object)("divider"))),(int) (1));
  //BA.debugLineNum = 34;BA.debugLine="End Sub";
 return "";
@@ -140,8 +140,8 @@ return "";
 }
 public String  _setbg(String _color) throws Exception{
  //BA.debugLineNum = 51;BA.debugLine="Public Sub SetBg(color As String)";
- //BA.debugLineNum = 53;BA.debugLine="CSSUtils.SetStyleProperty( InnerCard, \"-fx-backgr";
-_cssutils._setstyleproperty((anywheresoftware.b4j.objects.NodeWrapper.ConcreteNodeWrapper) anywheresoftware.b4a.AbsObjectWrapper.ConvertToWrapper(new anywheresoftware.b4j.objects.NodeWrapper.ConcreteNodeWrapper(), (javafx.scene.Node)(_innercard.getObject())),"-fx-background-color",_color);
+ //BA.debugLineNum = 53;BA.debugLine="CFControlsUtils.SetPaneBG( InnerCard, color)";
+_cfcontrolsutils._setpanebg(_innercard,_color);
  //BA.debugLineNum = 55;BA.debugLine="End Sub";
 return "";
 }

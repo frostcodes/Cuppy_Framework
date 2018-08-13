@@ -111,8 +111,8 @@ return "";
 }
 public String  _setbg(String _color) throws Exception{
  //BA.debugLineNum = 40;BA.debugLine="Public Sub SetBg(color As String)";
- //BA.debugLineNum = 42;BA.debugLine="CSSUtils.SetStyleProperty( InnerPane, \"-fx-backgr";
-_cssutils._setstyleproperty((anywheresoftware.b4j.objects.NodeWrapper.ConcreteNodeWrapper) anywheresoftware.b4a.AbsObjectWrapper.ConvertToWrapper(new anywheresoftware.b4j.objects.NodeWrapper.ConcreteNodeWrapper(), (javafx.scene.Node)(_innerpane.getObject())),"-fx-background-color",_color);
+ //BA.debugLineNum = 42;BA.debugLine="CFControlsUtils.SetPaneBG( InnerPane, color)";
+_cfcontrolsutils._setpanebg(_innerpane,_color);
  //BA.debugLineNum = 44;BA.debugLine="End Sub";
 return "";
 }

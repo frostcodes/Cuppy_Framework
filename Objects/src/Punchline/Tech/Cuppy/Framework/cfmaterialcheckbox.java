@@ -122,11 +122,11 @@ public String  _designercreateview(anywheresoftware.b4j.objects.PaneWrapper.Conc
 _mbase = _base;
  //BA.debugLineNum = 37;BA.debugLine="mBase.LoadLayout(\"CFMaterialCheckboxUI\")";
 _mbase.LoadLayout(ba,"CFMaterialCheckboxUI");
- //BA.debugLineNum = 39;BA.debugLine="setBorder(CFStyleManager.DefaultTheme.Get(\"divide";
+ //BA.debugLineNum = 39;BA.debugLine="SetBorder(CFStyleManager.DefaultTheme.Get(\"divide";
 _setborder(BA.ObjectToString(_cfstylemanager._defaulttheme.Get((Object)("divider"))),(int) (2));
- //BA.debugLineNum = 40;BA.debugLine="setCheckedColor(CFStyleManager.DefaultTheme.Get(\"";
+ //BA.debugLineNum = 40;BA.debugLine="SetCheckedColor(CFStyleManager.DefaultTheme.Get(\"";
 _setcheckedcolor(BA.ObjectToString(_cfstylemanager._defaulttheme.Get((Object)("primary"))));
- //BA.debugLineNum = 43;BA.debugLine="setCheckState(UNCHECKED_STATE) 'set initial value";
+ //BA.debugLineNum = 43;BA.debugLine="SetCheckState(UNCHECKED_STATE) 'set initial value";
 _setcheckstate(_unchecked_state);
  //BA.debugLineNum = 45;BA.debugLine="End Sub";
 return "";
@@ -164,8 +164,8 @@ return "";
 }
 public String  _setbg(String _color) throws Exception{
  //BA.debugLineNum = 65;BA.debugLine="Public Sub SetBg(color As String)";
- //BA.debugLineNum = 67;BA.debugLine="CSSUtils.SetStyleProperty( CheckboxPane, \"-fx-bac";
-_cssutils._setstyleproperty((anywheresoftware.b4j.objects.NodeWrapper.ConcreteNodeWrapper) anywheresoftware.b4a.AbsObjectWrapper.ConvertToWrapper(new anywheresoftware.b4j.objects.NodeWrapper.ConcreteNodeWrapper(), (javafx.scene.Node)(_checkboxpane.getObject())),"-fx-background-color",_color);
+ //BA.debugLineNum = 67;BA.debugLine="CFControlsUtils.SetPaneBG( CheckboxPane, color)";
+_cfcontrolsutils._setpanebg(_checkboxpane,_color);
  //BA.debugLineNum = 69;BA.debugLine="End Sub";
 return "";
 }

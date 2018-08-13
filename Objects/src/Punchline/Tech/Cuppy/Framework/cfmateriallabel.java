@@ -72,7 +72,7 @@ public String  _designercreateview(anywheresoftware.b4j.objects.PaneWrapper.Conc
 _mbase = _base;
  //BA.debugLineNum = 23;BA.debugLine="mBase.LoadLayout(\"CFMaterialLabelUI\")";
 _mbase.LoadLayout(ba,"CFMaterialLabelUI");
- //BA.debugLineNum = 26;BA.debugLine="setTextColor(CFStyleManager.DefaultTheme.Get(\"pri";
+ //BA.debugLineNum = 26;BA.debugLine="SetTextColor(CFStyleManager.DefaultTheme.Get(\"pri";
 _settextcolor(BA.ObjectToString(_cfstylemanager._defaulttheme.Get((Object)("primary_text"))));
  //BA.debugLineNum = 27;BA.debugLine="InnerLabel.Font = CFStyleManager.SelectFont(\"Ligh";
 _innerlabel.setFont(_cfstylemanager._selectfont("Light",12));

@@ -42,11 +42,11 @@ Public Sub DesignerCreateView (Base As Pane, Lbl As Label, Props As Map)
 	mBase = Base
 	mBase.LoadLayout("CFMaterialCheckboxUI")
 	'set using theme...
-	setBorder(CFStyleManager.DefaultTheme.Get("divider"), 2)
-	setCheckedColor(CFStyleManager.DefaultTheme.Get("primary"))
+	SetBorder(CFStyleManager.DefaultTheme.Get("divider"), 2)
+	SetCheckedColor(CFStyleManager.DefaultTheme.Get("primary"))
 	
 	'TODO: create a designer prorerty for this...
-	setCheckState(UNCHECKED_STATE) 'set initial value
+	SetCheckState(UNCHECKED_STATE) 'set initial value
 	 
 End Sub
 
@@ -70,7 +70,7 @@ End Sub
 
 Public Sub SetBg(color As String)
  
-	CSSUtils.SetStyleProperty( CheckboxPane, "-fx-background-color", color)
+	CFControlsUtils.SetPaneBG( CheckboxPane, color)
  
 End Sub
 

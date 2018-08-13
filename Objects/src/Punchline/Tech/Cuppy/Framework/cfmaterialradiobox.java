@@ -142,8 +142,8 @@ return "";
 }
 public String  _setbg(String _color) throws Exception{
  //BA.debugLineNum = 57;BA.debugLine="Public Sub SetBg(color As String)";
- //BA.debugLineNum = 59;BA.debugLine="CSSUtils.SetStyleProperty( CheckboxPane, \"-fx-bac";
-_cssutils._setstyleproperty((anywheresoftware.b4j.objects.NodeWrapper.ConcreteNodeWrapper) anywheresoftware.b4a.AbsObjectWrapper.ConvertToWrapper(new anywheresoftware.b4j.objects.NodeWrapper.ConcreteNodeWrapper(), (javafx.scene.Node)(_checkboxpane.getObject())),"-fx-background-color",_color);
+ //BA.debugLineNum = 59;BA.debugLine="CFControlsUtils.SetPaneBG( CheckboxPane, color)";
+_cfcontrolsutils._setpanebg(_checkboxpane,_color);
  //BA.debugLineNum = 61;BA.debugLine="End Sub";
 return "";
 }
@@ -163,8 +163,8 @@ return "";
 }
 public String  _setcheckedcolor(String _color) throws Exception{
  //BA.debugLineNum = 95;BA.debugLine="Public Sub SetCheckedColor(color As String)";
- //BA.debugLineNum = 97;BA.debugLine="CSSUtils.SetStyleProperty( CheckedPane, \"-fx-back";
-_cssutils._setstyleproperty((anywheresoftware.b4j.objects.NodeWrapper.ConcreteNodeWrapper) anywheresoftware.b4a.AbsObjectWrapper.ConvertToWrapper(new anywheresoftware.b4j.objects.NodeWrapper.ConcreteNodeWrapper(), (javafx.scene.Node)(_checkedpane.getObject())),"-fx-background-color",_color);
+ //BA.debugLineNum = 97;BA.debugLine="CFControlsUtils.SetPaneBG( CheckedPane, color)";
+_cfcontrolsutils._setpanebg(_checkedpane,_color);
  //BA.debugLineNum = 99;BA.debugLine="End Sub";
 return "";
 }

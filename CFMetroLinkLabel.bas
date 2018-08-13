@@ -30,7 +30,7 @@ Public Sub DesignerCreateView (Base As Pane, Lbl As Label, Props As Map)
 	mBase.LoadLayout("CFMetroLinkLabelUI")
 	'set using theme...
  
-	setTextColor(CFStyleManager.DefaultTheme.Get("primary_text"))
+	SetTextColor(CFStyleManager.DefaultTheme.Get("primary_text"))
 	InnerLabel.Font = CFStyleManager.SelectFont("Regular", 12)
 	InnerLabel.MouseCursor = fx.Cursors.HAND
 	

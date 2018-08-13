@@ -79,9 +79,9 @@ _mbase = _base;
 _mbase.LoadLayout(ba,"CFMaterialLinearProgressBarUI");
  //BA.debugLineNum = 31;BA.debugLine="SetBg(CFStyleManager.DefaultTheme.Get(\"divider\"))";
 _setbg(BA.ObjectToString(_cfstylemanager._defaulttheme.Get((Object)("divider"))));
- //BA.debugLineNum = 32;BA.debugLine="setProgressColor(CFStyleManager.DefaultTheme.Get(";
+ //BA.debugLineNum = 32;BA.debugLine="SetProgressColor(CFStyleManager.DefaultTheme.Get(";
 _setprogresscolor(BA.ObjectToString(_cfstylemanager._defaulttheme.Get((Object)("primary"))));
- //BA.debugLineNum = 33;BA.debugLine="progress(30) 'set initial value";
+ //BA.debugLineNum = 33;BA.debugLine="Progress(30) 'set initial value";
 _progress((int) (30));
  //BA.debugLineNum = 35;BA.debugLine="End Sub";
 return "";
@@ -126,8 +126,8 @@ return "";
 }
 public String  _setbg(String _color) throws Exception{
  //BA.debugLineNum = 53;BA.debugLine="Public Sub SetBg(color As String)";
- //BA.debugLineNum = 55;BA.debugLine="CSSUtils.SetStyleProperty( ProgressPane, \"-fx-bac";
-_cssutils._setstyleproperty((anywheresoftware.b4j.objects.NodeWrapper.ConcreteNodeWrapper) anywheresoftware.b4a.AbsObjectWrapper.ConvertToWrapper(new anywheresoftware.b4j.objects.NodeWrapper.ConcreteNodeWrapper(), (javafx.scene.Node)(_progresspane.getObject())),"-fx-background-color",_color);
+ //BA.debugLineNum = 55;BA.debugLine="CFControlsUtils.SetPaneBG( ProgressPane, color)";
+_cfcontrolsutils._setpanebg(_progresspane,_color);
  //BA.debugLineNum = 57;BA.debugLine="End Sub";
 return "";
 }
@@ -154,8 +154,8 @@ return "";
 }
 public String  _setprogresscolor(String _color) throws Exception{
  //BA.debugLineNum = 91;BA.debugLine="Public Sub SetProgressColor(color As String)";
- //BA.debugLineNum = 93;BA.debugLine="CSSUtils.SetStyleProperty( ProgressBar, \"-fx-back";
-_cssutils._setstyleproperty((anywheresoftware.b4j.objects.NodeWrapper.ConcreteNodeWrapper) anywheresoftware.b4a.AbsObjectWrapper.ConvertToWrapper(new anywheresoftware.b4j.objects.NodeWrapper.ConcreteNodeWrapper(), (javafx.scene.Node)(_progressbar.getObject())),"-fx-background-color",_color);
+ //BA.debugLineNum = 93;BA.debugLine="CFControlsUtils.SetPaneBG( ProgressBar, color)";
+_cfcontrolsutils._setpanebg(_progressbar,_color);
  //BA.debugLineNum = 95;BA.debugLine="End Sub";
 return "";
 }

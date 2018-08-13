@@ -62,7 +62,7 @@ End Sub
 
 Public Sub SetBg(color As String)
  
-	CSSUtils.SetStyleProperty( CheckboxPane, "-fx-background-color", color)
+	CFControlsUtils.SetPaneBG( CheckboxPane, color)
  
 End Sub
 
@@ -100,7 +100,7 @@ End Sub
   
 Public Sub SetCheckedColor(color As String)
   	
-	CSSUtils.SetStyleProperty( CheckedPane, "-fx-background-color", color)
+	CFControlsUtils.SetPaneBG( CheckedPane, color)
 	
 End Sub
  

@@ -35,7 +35,7 @@ Public Sub DesignerCreateView (Base As Pane, Lbl As Label, Props As Map)
 	mBase = Base
 	mBase.LoadLayout("CFMaterialCardUI")
 	'set using theme...
-	setBorder(CFStyleManager.DefaultTheme.Get("divider"), 1)
+	SetBorder(CFStyleManager.DefaultTheme.Get("divider"), 1)
 	 
 End Sub
 
@@ -56,7 +56,7 @@ End Sub
 
 Public Sub SetBg(color As String)
  
-	CSSUtils.SetStyleProperty( InnerCard, "-fx-background-color", color)
+	CFControlsUtils.SetPaneBG( InnerCard, color)
  
 End Sub
 

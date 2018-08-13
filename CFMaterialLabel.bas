@@ -29,7 +29,7 @@ Public Sub DesignerCreateView (Base As Pane, Lbl As Label, Props As Map)
 	mBase.LoadLayout("CFMaterialLabelUI")
 	'set using theme...
  
-	setTextColor(CFStyleManager.DefaultTheme.Get("primary_text"))
+	SetTextColor(CFStyleManager.DefaultTheme.Get("primary_text"))
 	InnerLabel.Font = CFStyleManager.SelectFont("Light", 12)
 	
 End Sub

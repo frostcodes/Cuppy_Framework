@@ -35,8 +35,8 @@ Public Sub DesignerCreateView (Base As Pane, Lbl As Label, Props As Map)
 	mBase.LoadLayout("CFMaterialLinearProgressBarUI")
 	'set using theme...
 	SetBg(CFStyleManager.DefaultTheme.Get("divider"))
-	setProgressColor(CFStyleManager.DefaultTheme.Get("primary"))
-	progress(30) 'set initial value
+	SetProgressColor(CFStyleManager.DefaultTheme.Get("primary"))
+	Progress(30) 'set initial value
 	
 End Sub
 
@@ -58,7 +58,7 @@ End Sub
 
 Public Sub SetBg(color As String)
  
-	CSSUtils.SetStyleProperty( ProgressPane, "-fx-background-color", color)
+	CFControlsUtils.SetPaneBG( ProgressPane, color)
  
 End Sub
 
@@ -96,7 +96,7 @@ End Sub
   
 Public Sub SetProgressColor(color As String)
   	
-	CSSUtils.SetStyleProperty( ProgressBar, "-fx-background-color", color)
+	CFControlsUtils.SetPaneBG( ProgressBar, color)
 	
 End Sub
 

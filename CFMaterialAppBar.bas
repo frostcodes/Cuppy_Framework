@@ -52,8 +52,8 @@ End Sub
 
 Public Sub SetBg(color As String)
 	
-	CSSUtils.SetStyleProperty( Label1, "-fx-background-color", color)
-	CSSUtils.SetStyleProperty( InnerPane, "-fx-background-color", color)
+	CFControlsUtils.SetBG( Label1,  color)
+	CFControlsUtils.SetPaneBG( InnerPane, color)
  
 End Sub
  
