@@ -29,12 +29,10 @@ public static Punchline.Tech.Cuppy.Framework.cfstylemanager _cfstylemanager = nu
 public static Punchline.Tech.Cuppy.Framework.cfstringutility _cfstringutility = null;
 public static Punchline.Tech.Cuppy.Framework.cfmathutility _cfmathutility = null;
 public static Punchline.Tech.Cuppy.Framework.cfdatatypeutility _cfdatatypeutility = null;
-public static Punchline.Tech.Cuppy.Framework.cfanimationmanager _cfanimationmanager = null;
 public static Punchline.Tech.Cuppy.Framework.cflicensemanager _cflicensemanager = null;
 public static Punchline.Tech.Cuppy.Framework.cfdatageneratorutility _cfdatageneratorutility = null;
 public static Punchline.Tech.Cuppy.Framework.cfapputility _cfapputility = null;
 public static Punchline.Tech.Cuppy.Framework.cfcontrolsutils _cfcontrolsutils = null;
-public static Punchline.Tech.Cuppy.Framework.cfhtmlutility _cfhtmlutility = null;
 public static String  _bytestofile(String _dir,String _filename,byte[] _data) throws Exception{
 anywheresoftware.b4a.objects.streams.File.OutputStreamWrapper _out = null;
  //BA.debugLineNum = 69;BA.debugLine="Public Sub BytesToFile (Dir As String, FileName As";

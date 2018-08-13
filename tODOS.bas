@@ -4,6 +4,9 @@ ModulesStructureVersion=1
 Type=Class
 Version=5.51
 @EndOfDesignText@
+#ExcludeFromLibrary: True
+
+
 Sub Class_Globals
 	Private fx As JFX
 End Sub
@@ -15,7 +18,6 @@ End Sub
 	 
 	'** set focus to control on click...
 	   
-	   ' **   StyleExtender (Apply selected theme propertys to legacy controls)
  
 'ComboBox
  

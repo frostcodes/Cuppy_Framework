@@ -34,11 +34,9 @@ public static Punchline.Tech.Cuppy.Framework.cfstringutility _cfstringutility = 
 public static Punchline.Tech.Cuppy.Framework.cffileutility _cffileutility = null;
 public static Punchline.Tech.Cuppy.Framework.cfmathutility _cfmathutility = null;
 public static Punchline.Tech.Cuppy.Framework.cfdatatypeutility _cfdatatypeutility = null;
-public static Punchline.Tech.Cuppy.Framework.cfanimationmanager _cfanimationmanager = null;
 public static Punchline.Tech.Cuppy.Framework.cflicensemanager _cflicensemanager = null;
 public static Punchline.Tech.Cuppy.Framework.cfdatageneratorutility _cfdatageneratorutility = null;
 public static Punchline.Tech.Cuppy.Framework.cfapputility _cfapputility = null;
-public static Punchline.Tech.Cuppy.Framework.cfhtmlutility _cfhtmlutility = null;
 public static String  _addcontroltooltip(anywheresoftware.b4j.objects.NodeWrapper.ControlWrapper.ConcreteControlWrapper _controlobj,String _msg) throws Exception{
 anywheresoftware.b4j.object.JavaObject _jotooltip = null;
 anywheresoftware.b4j.object.JavaObject _jotooltip2 = null;
