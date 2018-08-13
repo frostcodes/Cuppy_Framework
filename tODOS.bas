@@ -17,10 +17,10 @@ End Sub
     ' **  Later allow events for controls
 	 ' **  Later support deigner view scripts 
 	  ' **  create abb bar with menu btn...
+	  
 	   ' **   Implement font libary to all  components
-	   ' **   Change to using setBG to change background in controls
+	 
 	'** set focus to control on click...
-'   instaed of something like  CSSUtils.SetStyleProperty SwitchBtn, "-fx-background-color", color)
 	   
 	   ' **   StyleExtender (Apply selected theme propertys to legacy controls)
 '  .NET Framework 4.0 (Client Profile) And later.

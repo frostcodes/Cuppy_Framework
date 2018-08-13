@@ -59,7 +59,7 @@ End Sub
 
 Public Sub SetBg(color As String)
  
-	CSSUtils.SetStyleProperty( line, "-fx-background-color", color)
+	CFControlsUtils.SetPaneBG(line  , color)
  
 End Sub
 

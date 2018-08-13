@@ -123,10 +123,10 @@ return "";
 }
 public String  _setbg(String _color) throws Exception{
  //BA.debugLineNum = 47;BA.debugLine="Public Sub SetBg(color As String)";
- //BA.debugLineNum = 49;BA.debugLine="CSSUtils.SetStyleProperty( Label1, \"-fx-backgroun";
-_cssutils._setstyleproperty((anywheresoftware.b4j.objects.NodeWrapper.ConcreteNodeWrapper) anywheresoftware.b4a.AbsObjectWrapper.ConvertToWrapper(new anywheresoftware.b4j.objects.NodeWrapper.ConcreteNodeWrapper(), (javafx.scene.Node)(_label1.getObject())),"-fx-background-color",_color);
- //BA.debugLineNum = 50;BA.debugLine="CSSUtils.SetStyleProperty( InnerPane, \"-fx-backgr";
-_cssutils._setstyleproperty((anywheresoftware.b4j.objects.NodeWrapper.ConcreteNodeWrapper) anywheresoftware.b4a.AbsObjectWrapper.ConvertToWrapper(new anywheresoftware.b4j.objects.NodeWrapper.ConcreteNodeWrapper(), (javafx.scene.Node)(_innerpane.getObject())),"-fx-background-color",_color);
+ //BA.debugLineNum = 49;BA.debugLine="CFControlsUtils.SetBG( Label1,  color)";
+_cfcontrolsutils._setbg((anywheresoftware.b4j.objects.NodeWrapper.ControlWrapper.ConcreteControlWrapper) anywheresoftware.b4a.AbsObjectWrapper.ConvertToWrapper(new anywheresoftware.b4j.objects.NodeWrapper.ControlWrapper.ConcreteControlWrapper(), (javafx.scene.control.Control)(_label1.getObject())),_color);
+ //BA.debugLineNum = 50;BA.debugLine="CFControlsUtils.SetPaneBG( InnerPane, color)";
+_cfcontrolsutils._setpanebg(_innerpane,_color);
  //BA.debugLineNum = 52;BA.debugLine="End Sub";
 return "";
 }

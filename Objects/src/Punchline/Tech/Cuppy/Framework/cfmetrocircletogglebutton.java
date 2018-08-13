@@ -88,7 +88,7 @@ public String  _designercreateview(anywheresoftware.b4j.objects.PaneWrapper.Conc
 _mbase = _base;
  //BA.debugLineNum = 31;BA.debugLine="mBase.LoadLayout(\"CFMetroCircleToggleButtonUI\")";
 _mbase.LoadLayout(ba,"CFMetroCircleToggleButtonUI");
- //BA.debugLineNum = 34;BA.debugLine="setCheckState(UNCHECKED_STATE) 'set initial value";
+ //BA.debugLineNum = 34;BA.debugLine="SetCheckState(UNCHECKED_STATE) 'set initial value";
 _setcheckstate(_unchecked_state);
  //BA.debugLineNum = 36;BA.debugLine="End Sub";
 return "";

@@ -38,10 +38,10 @@ Public Sub DesignerCreateView (Base As Pane, Lbl As Label, Props As Map)
 	mBase = Base
 	mBase.LoadLayout("CFMaterialSwitchesUI")
 	'set using theme...
-	setCheckedColor(CFStyleManager.DefaultTheme.Get("primary"))
+	SetCheckedColor(CFStyleManager.DefaultTheme.Get("primary"))
 	
 	'TODO: create a designer prorerty for this...
-	setCheckState(UNCHECKED_STATE) 'set initial value
+	SetCheckState(UNCHECKED_STATE) 'set initial value
 	 
 	
 	'TODO: add a shadow for SwitchBtn to make it like the intial google material type
@@ -67,7 +67,7 @@ End Sub
 
 Public Sub SetBg(color As String)
  
-	CSSUtils.SetStyleProperty( SwitchPane, "-fx-background-color", color)
+	CFControlsUtils.SetPaneBG( SwitchPane, color)
  
 End Sub
 
@@ -105,7 +105,7 @@ End Sub
   
 Public Sub SetCheckedColor(color As String)
   	
-	CSSUtils.SetStyleProperty( SwitchBtn, "-fx-background-color", color)
+	CFControlsUtils.SetPaneBG( SwitchBtn, color)
 	
 End Sub
  
@@ -113,13 +113,13 @@ Public Sub SetCheckState(value As Int)
 	 
 	If value = UNCHECKED_STATE Then
 		
-		 SwitchBtn.SetLayoutAnimated(200 , 10, SwitchBtn.Top, SwitchBtn.PrefWidth, SwitchBtn.PrefHeight)
+		SwitchBtn.SetLayoutAnimated(200 , 10, SwitchBtn.Top, SwitchBtn.PrefWidth, SwitchBtn.PrefHeight)
 		SwitchPane.SetAlphaAnimated(200, 1 )
 		SetBg(CFStyleManager.DefaultTheme.Get("divider"))
 		  
 	Else if value = CHECKED_STATE Then
 	
-	'Fade effect
+		'Fade effect
 		SwitchPane.SetAlphaAnimated(200, 0.6 )
 		SetBg(CFControlsUtils.getPaneBG(SwitchBtn))
 		
@@ -159,10 +159,9 @@ Private Sub SwitchPane_MousePressed (EventData As MouseEvent)
 	
 	Else
 	
-		setCheckState(UNCHECKED_STATE)
+		SetCheckState(UNCHECKED_STATE)
  
 	End If
-	
 	
 End Sub
 

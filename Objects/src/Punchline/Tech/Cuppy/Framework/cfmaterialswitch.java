@@ -87,9 +87,9 @@ public String  _designercreateview(anywheresoftware.b4j.objects.PaneWrapper.Conc
 _mbase = _base;
  //BA.debugLineNum = 33;BA.debugLine="mBase.LoadLayout(\"CFMaterialSwitchesUI\")";
 _mbase.LoadLayout(ba,"CFMaterialSwitchesUI");
- //BA.debugLineNum = 35;BA.debugLine="setCheckedColor(CFStyleManager.DefaultTheme.Get(\"";
+ //BA.debugLineNum = 35;BA.debugLine="SetCheckedColor(CFStyleManager.DefaultTheme.Get(\"";
 _setcheckedcolor(BA.ObjectToString(_cfstylemanager._defaulttheme.Get((Object)("primary"))));
- //BA.debugLineNum = 38;BA.debugLine="setCheckState(UNCHECKED_STATE) 'set initial value";
+ //BA.debugLineNum = 38;BA.debugLine="SetCheckState(UNCHECKED_STATE) 'set initial value";
 _setcheckstate(_unchecked_state);
  //BA.debugLineNum = 46;BA.debugLine="End Sub";
 return "";
@@ -127,8 +127,8 @@ return "";
 }
 public String  _setbg(String _color) throws Exception{
  //BA.debugLineNum = 62;BA.debugLine="Public Sub SetBg(color As String)";
- //BA.debugLineNum = 64;BA.debugLine="CSSUtils.SetStyleProperty( SwitchPane, \"-fx-backg";
-_cssutils._setstyleproperty((anywheresoftware.b4j.objects.NodeWrapper.ConcreteNodeWrapper) anywheresoftware.b4a.AbsObjectWrapper.ConvertToWrapper(new anywheresoftware.b4j.objects.NodeWrapper.ConcreteNodeWrapper(), (javafx.scene.Node)(_switchpane.getObject())),"-fx-background-color",_color);
+ //BA.debugLineNum = 64;BA.debugLine="CFControlsUtils.SetPaneBG( SwitchPane, color)";
+_cfcontrolsutils._setpanebg(_switchpane,_color);
  //BA.debugLineNum = 66;BA.debugLine="End Sub";
 return "";
 }
@@ -148,8 +148,8 @@ return "";
 }
 public String  _setcheckedcolor(String _color) throws Exception{
  //BA.debugLineNum = 100;BA.debugLine="Public Sub SetCheckedColor(color As String)";
- //BA.debugLineNum = 102;BA.debugLine="CSSUtils.SetStyleProperty( SwitchBtn, \"-fx-backgr";
-_cssutils._setstyleproperty((anywheresoftware.b4j.objects.NodeWrapper.ConcreteNodeWrapper) anywheresoftware.b4a.AbsObjectWrapper.ConvertToWrapper(new anywheresoftware.b4j.objects.NodeWrapper.ConcreteNodeWrapper(), (javafx.scene.Node)(_switchbtn.getObject())),"-fx-background-color",_color);
+ //BA.debugLineNum = 102;BA.debugLine="CFControlsUtils.SetPaneBG( SwitchBtn, color)";
+_cfcontrolsutils._setpanebg(_switchbtn,_color);
  //BA.debugLineNum = 104;BA.debugLine="End Sub";
 return "";
 }
@@ -157,7 +157,7 @@ public String  _setcheckstate(int _value) throws Exception{
  //BA.debugLineNum = 106;BA.debugLine="Public Sub SetCheckState(value As Int)";
  //BA.debugLineNum = 108;BA.debugLine="If value = UNCHECKED_STATE Then";
 if (_value==_unchecked_state) { 
- //BA.debugLineNum = 110;BA.debugLine="SwitchBtn.SetLayoutAnimated(200 , 10, SwitchBtn";
+ //BA.debugLineNum = 110;BA.debugLine="SwitchBtn.SetLayoutAnimated(200 , 10, SwitchBtn.";
 _switchbtn.SetLayoutAnimated((int) (200),10,_switchbtn.getTop(),_switchbtn.getPrefWidth(),_switchbtn.getPrefHeight());
  //BA.debugLineNum = 111;BA.debugLine="SwitchPane.SetAlphaAnimated(200, 1 )";
 _switchpane.SetAlphaAnimated((int) (200),1);
@@ -198,10 +198,10 @@ _cfcontrolsutils._setpanerotationx(_switchpane,_angle);
 return "";
 }
 public String  _switchbtn_mousepressed(anywheresoftware.b4j.objects.NodeWrapper.MouseEventWrapper _eventdata) throws Exception{
- //BA.debugLineNum = 163;BA.debugLine="Private Sub SwitchBtn_MousePressed (EventData As M";
- //BA.debugLineNum = 165;BA.debugLine="CallSub2(Me , \"SwitchPane_MousePressed\", EventDat";
+ //BA.debugLineNum = 162;BA.debugLine="Private Sub SwitchBtn_MousePressed (EventData As M";
+ //BA.debugLineNum = 164;BA.debugLine="CallSub2(Me , \"SwitchPane_MousePressed\", EventDat";
 __c.CallSubNew2(ba,this,"SwitchPane_MousePressed",(Object)(_eventdata));
- //BA.debugLineNum = 167;BA.debugLine="End Sub";
+ //BA.debugLineNum = 166;BA.debugLine="End Sub";
 return "";
 }
 public String  _switchpane_mousepressed(anywheresoftware.b4j.objects.NodeWrapper.MouseEventWrapper _eventdata) throws Exception{
@@ -211,10 +211,10 @@ if (__c.Not(_checked()) || _isindeterminate()) {
  //BA.debugLineNum = 152;BA.debugLine="SetCheckState(CHECKED_STATE)";
 _setcheckstate(_checked_state);
  }else {
- //BA.debugLineNum = 156;BA.debugLine="setCheckState(UNCHECKED_STATE)";
+ //BA.debugLineNum = 156;BA.debugLine="SetCheckState(UNCHECKED_STATE)";
 _setcheckstate(_unchecked_state);
  };
- //BA.debugLineNum = 161;BA.debugLine="End Sub";
+ //BA.debugLineNum = 160;BA.debugLine="End Sub";
 return "";
 }
 public Object callSub(String sub, Object sender, Object[] args) throws Exception {

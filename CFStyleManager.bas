@@ -15,8 +15,7 @@ Private Sub Process_Globals
 	Public ActiveControls As List
 	ActiveControls.Initialize 'ignore : need this , bad pratice maybe so would find a fix later
 	 
-	'TODO: autoloading fonts,
-	'Allow font caching since they would not change from original instances
+	  
 	'Reference cuppy controls so it can be updated all when the style changes
 	'allow setting of animation time...
 End Sub
@@ -51,9 +50,8 @@ End Sub
 
 'Returns an instance of a font that can be reused
 Public Sub SelectFont(fontName As String,  FontSize As Double ) As Font
-	'tODO: handdle missing font..maybe
- 
-	Return  fx.LoadFont(File.DirAssets , FontTypes.Get(fontName), FontSize)
+	 
+	Return fx.LoadFont(File.DirAssets , FontTypes.Get(fontName), FontSize)
 	
 End Sub
  

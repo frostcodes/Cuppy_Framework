@@ -58,7 +58,7 @@ End Sub
 
 Public Sub SetBg(color As String)
  
- CSSUtils.SetStyleProperty( FAB_Btn, "-fx-background-color", color)
+	CFControlsUtils.SetBG( FAB_Btn, color)
  
 End Sub
 
