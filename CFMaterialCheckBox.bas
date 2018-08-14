@@ -156,18 +156,19 @@ Public Sub SetIcon(iconCode As Int)
 End Sub
    
 Private Sub CheckboxPane_MousePressed (EventData As MouseEvent)
-	 
+	
+	CheckboxPane.RequestFocus 'set focus
+	
 	If Not(Checked) Or IsIndeterminate Then
 	
 		SetCheckState(CHECKED_STATE)
 	
 	Else
 	
- 	 SetCheckState(UNCHECKED_STATE)
+		SetCheckState(UNCHECKED_STATE)
 		   
 	End If
-	
-	
+	 
 End Sub
 
 Private Sub CheckboxPane_MouseEntered (EventData As MouseEvent)

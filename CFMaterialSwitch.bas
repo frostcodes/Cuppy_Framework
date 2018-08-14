@@ -152,6 +152,8 @@ Public Sub IsIndeterminate As Boolean
 End Sub
  
 Private Sub SwitchPane_MousePressed (EventData As MouseEvent)
+	
+	SwitchBtn.RequestFocus 'set focus
 	 
 	If Not(Checked) Or IsIndeterminate Then
 	

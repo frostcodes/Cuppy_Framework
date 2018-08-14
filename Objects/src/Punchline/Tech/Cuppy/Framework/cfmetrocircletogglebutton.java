@@ -39,7 +39,6 @@ public Punchline.Tech.Cuppy.Framework.cfstringutility _cfstringutility = null;
 public Punchline.Tech.Cuppy.Framework.cffileutility _cffileutility = null;
 public Punchline.Tech.Cuppy.Framework.cfmathutility _cfmathutility = null;
 public Punchline.Tech.Cuppy.Framework.cfdatatypeutility _cfdatatypeutility = null;
-public Punchline.Tech.Cuppy.Framework.cflicensemanager _cflicensemanager = null;
 public Punchline.Tech.Cuppy.Framework.cfdatageneratorutility _cfdatageneratorutility = null;
 public Punchline.Tech.Cuppy.Framework.cfapputility _cfapputility = null;
 public Punchline.Tech.Cuppy.Framework.cfcontrolsutils _cfcontrolsutils = null;
@@ -179,15 +178,17 @@ return "";
 }
 public String  _togglebutton_mousepressed(anywheresoftware.b4j.objects.NodeWrapper.MouseEventWrapper _eventdata) throws Exception{
  //BA.debugLineNum = 127;BA.debugLine="Private Sub ToggleButton_MousePressed (EventData A";
- //BA.debugLineNum = 129;BA.debugLine="If Not(Checked) Then";
+ //BA.debugLineNum = 129;BA.debugLine="ToggleButton.RequestFocus 'set focus";
+_togglebutton.RequestFocus();
+ //BA.debugLineNum = 131;BA.debugLine="If Not(Checked) Then";
 if (__c.Not(_checked())) { 
- //BA.debugLineNum = 131;BA.debugLine="SetCheckState(CHECKED_STATE)";
+ //BA.debugLineNum = 133;BA.debugLine="SetCheckState(CHECKED_STATE)";
 _setcheckstate(_checked_state);
  }else {
- //BA.debugLineNum = 135;BA.debugLine="SetCheckState(UNCHECKED_STATE)";
+ //BA.debugLineNum = 137;BA.debugLine="SetCheckState(UNCHECKED_STATE)";
 _setcheckstate(_unchecked_state);
  };
- //BA.debugLineNum = 139;BA.debugLine="End Sub";
+ //BA.debugLineNum = 141;BA.debugLine="End Sub";
 return "";
 }
 public Object callSub(String sub, Object sender, Object[] args) throws Exception {

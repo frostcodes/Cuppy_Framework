@@ -36,7 +36,6 @@ public Punchline.Tech.Cuppy.Framework.cfstringutility _cfstringutility = null;
 public Punchline.Tech.Cuppy.Framework.cffileutility _cffileutility = null;
 public Punchline.Tech.Cuppy.Framework.cfmathutility _cfmathutility = null;
 public Punchline.Tech.Cuppy.Framework.cfdatatypeutility _cfdatatypeutility = null;
-public Punchline.Tech.Cuppy.Framework.cflicensemanager _cflicensemanager = null;
 public Punchline.Tech.Cuppy.Framework.cfdatageneratorutility _cfdatageneratorutility = null;
 public Punchline.Tech.Cuppy.Framework.cfapputility _cfapputility = null;
 public Punchline.Tech.Cuppy.Framework.cfcontrolsutils _cfcontrolsutils = null;
@@ -99,24 +98,26 @@ _cfstylemanager._activecontrols.Add(this);
 return "";
 }
 public String  _innerbutton_mouseentered(anywheresoftware.b4j.objects.NodeWrapper.MouseEventWrapper _eventdata) throws Exception{
- //BA.debugLineNum = 100;BA.debugLine="Private Sub InnerButton_MouseEntered (EventData As";
- //BA.debugLineNum = 102;BA.debugLine="CallSubDelayed2(mCallBack, mEventName & \"_MouseEn";
+ //BA.debugLineNum = 101;BA.debugLine="Private Sub InnerButton_MouseEntered (EventData As";
+ //BA.debugLineNum = 103;BA.debugLine="CallSubDelayed2(mCallBack, mEventName & \"_MouseEn";
 __c.CallSubDelayed2(ba,_mcallback,_meventname+"_MouseEntered",(Object)(_eventdata));
- //BA.debugLineNum = 104;BA.debugLine="End Sub";
+ //BA.debugLineNum = 105;BA.debugLine="End Sub";
 return "";
 }
 public String  _innerbutton_mouseexited(anywheresoftware.b4j.objects.NodeWrapper.MouseEventWrapper _eventdata) throws Exception{
- //BA.debugLineNum = 106;BA.debugLine="Private Sub InnerButton_MouseExited (EventData As";
- //BA.debugLineNum = 108;BA.debugLine="CallSubDelayed2(mCallBack, mEventName & \"_MouseEx";
+ //BA.debugLineNum = 107;BA.debugLine="Private Sub InnerButton_MouseExited (EventData As";
+ //BA.debugLineNum = 109;BA.debugLine="CallSubDelayed2(mCallBack, mEventName & \"_MouseEx";
 __c.CallSubDelayed2(ba,_mcallback,_meventname+"_MouseExited",(Object)(_eventdata));
- //BA.debugLineNum = 110;BA.debugLine="End Sub";
+ //BA.debugLineNum = 111;BA.debugLine="End Sub";
 return "";
 }
 public String  _innerbutton_mousepressed(anywheresoftware.b4j.objects.NodeWrapper.MouseEventWrapper _eventdata) throws Exception{
  //BA.debugLineNum = 94;BA.debugLine="Private Sub InnerButton_MousePressed (EventData As";
- //BA.debugLineNum = 96;BA.debugLine="CallSubDelayed2(mCallBack, mEventName & \"_MousePr";
+ //BA.debugLineNum = 96;BA.debugLine="InnerButton.RequestFocus 'set focus";
+_innerbutton.RequestFocus();
+ //BA.debugLineNum = 97;BA.debugLine="CallSubDelayed2(mCallBack, mEventName & \"_MousePr";
 __c.CallSubDelayed2(ba,_mcallback,_meventname+"_MousePressed",(Object)(_eventdata));
- //BA.debugLineNum = 98;BA.debugLine="End Sub";
+ //BA.debugLineNum = 99;BA.debugLine="End Sub";
 return "";
 }
 public String  _removeeffects() throws Exception{

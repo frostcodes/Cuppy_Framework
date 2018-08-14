@@ -33,7 +33,6 @@ public static Punchline.Tech.Cuppy.Framework.cfstringutility _cfstringutility = 
 public static Punchline.Tech.Cuppy.Framework.cffileutility _cffileutility = null;
 public static Punchline.Tech.Cuppy.Framework.cfmathutility _cfmathutility = null;
 public static Punchline.Tech.Cuppy.Framework.cfdatatypeutility _cfdatatypeutility = null;
-public static Punchline.Tech.Cuppy.Framework.cflicensemanager _cflicensemanager = null;
 public static Punchline.Tech.Cuppy.Framework.cfdatageneratorutility _cfdatageneratorutility = null;
 public static Punchline.Tech.Cuppy.Framework.cfapputility _cfapputility = null;
 public static Punchline.Tech.Cuppy.Framework.cfcontrolsutils _cfcontrolsutils = null;

@@ -98,7 +98,8 @@ End Sub
 
 
 Private Sub InnerButton_MousePressed (EventData As MouseEvent)
-	  
+	
+	InnerButton.RequestFocus 'set focus
 	CallSubDelayed2(mCallBack, mEventName & "_MousePressed", EventData)
 	 
 End Sub

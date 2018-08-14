@@ -40,7 +40,6 @@ public Punchline.Tech.Cuppy.Framework.cfstringutility _cfstringutility = null;
 public Punchline.Tech.Cuppy.Framework.cffileutility _cffileutility = null;
 public Punchline.Tech.Cuppy.Framework.cfmathutility _cfmathutility = null;
 public Punchline.Tech.Cuppy.Framework.cfdatatypeutility _cfdatatypeutility = null;
-public Punchline.Tech.Cuppy.Framework.cflicensemanager _cflicensemanager = null;
 public Punchline.Tech.Cuppy.Framework.cfdatageneratorutility _cfdatageneratorutility = null;
 public Punchline.Tech.Cuppy.Framework.cfapputility _cfapputility = null;
 public Punchline.Tech.Cuppy.Framework.cfcontrolsutils _cfcontrolsutils = null;
@@ -58,30 +57,32 @@ _checkedlabel.setPrefHeight(_height);
 return "";
 }
 public String  _checkboxpane_mouseentered(anywheresoftware.b4j.objects.NodeWrapper.MouseEventWrapper _eventdata) throws Exception{
- //BA.debugLineNum = 167;BA.debugLine="Private Sub CheckboxPane_MouseEntered (EventData A";
- //BA.debugLineNum = 169;BA.debugLine="CallSubDelayed2(mCallBack, mEventName & \"_MouseEn";
+ //BA.debugLineNum = 168;BA.debugLine="Private Sub CheckboxPane_MouseEntered (EventData A";
+ //BA.debugLineNum = 170;BA.debugLine="CallSubDelayed2(mCallBack, mEventName & \"_MouseEn";
 __c.CallSubDelayed2(ba,_mcallback,_meventname+"_MouseEntered",(Object)(_eventdata));
- //BA.debugLineNum = 171;BA.debugLine="End Sub";
+ //BA.debugLineNum = 172;BA.debugLine="End Sub";
 return "";
 }
 public String  _checkboxpane_mouseexited(anywheresoftware.b4j.objects.NodeWrapper.MouseEventWrapper _eventdata) throws Exception{
- //BA.debugLineNum = 173;BA.debugLine="Private Sub CheckboxPane_MouseExited (EventData As";
- //BA.debugLineNum = 175;BA.debugLine="CallSubDelayed2(mCallBack, mEventName & \"_MouseEx";
+ //BA.debugLineNum = 174;BA.debugLine="Private Sub CheckboxPane_MouseExited (EventData As";
+ //BA.debugLineNum = 176;BA.debugLine="CallSubDelayed2(mCallBack, mEventName & \"_MouseEx";
 __c.CallSubDelayed2(ba,_mcallback,_meventname+"_MouseExited",(Object)(_eventdata));
- //BA.debugLineNum = 177;BA.debugLine="End Sub";
+ //BA.debugLineNum = 178;BA.debugLine="End Sub";
 return "";
 }
 public String  _checkboxpane_mousepressed(anywheresoftware.b4j.objects.NodeWrapper.MouseEventWrapper _eventdata) throws Exception{
  //BA.debugLineNum = 152;BA.debugLine="Private Sub CheckboxPane_MousePressed (EventData A";
- //BA.debugLineNum = 154;BA.debugLine="If Not(Checked) Or IsIndeterminate Then";
+ //BA.debugLineNum = 154;BA.debugLine="CheckboxPane.RequestFocus 'set focus";
+_checkboxpane.RequestFocus();
+ //BA.debugLineNum = 156;BA.debugLine="If Not(Checked) Or IsIndeterminate Then";
 if (__c.Not(_checked()) || _isindeterminate()) { 
- //BA.debugLineNum = 156;BA.debugLine="SetCheckState(CHECKED_STATE)";
+ //BA.debugLineNum = 158;BA.debugLine="SetCheckState(CHECKED_STATE)";
 _setcheckstate(_checked_state);
  }else {
- //BA.debugLineNum = 160;BA.debugLine="SetCheckState(UNCHECKED_STATE)";
+ //BA.debugLineNum = 162;BA.debugLine="SetCheckState(UNCHECKED_STATE)";
 _setcheckstate(_unchecked_state);
  };
- //BA.debugLineNum = 165;BA.debugLine="End Sub";
+ //BA.debugLineNum = 166;BA.debugLine="End Sub";
 return "";
 }
 public boolean  _checked() throws Exception{
