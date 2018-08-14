@@ -21,6 +21,7 @@ Sub Class_Globals
 	Private mBase As Pane
 	Private Label1 As Label
 	Public InnerPane As Pane
+	Private InnerButton As Button
 End Sub
 
 Public Sub Initialize (Callback As Object, EventName As String)
@@ -101,11 +102,15 @@ End Sub
 
 Private Sub InnerButton_MousePressed (EventData As MouseEvent)
 	
+	InnerButton.RequestFocus 'set focus
+	
 	CallSubDelayed2(mCallBack, mEventName & "_MousePressed", EventData)
 	
 End Sub
  
 Private Sub InnerPane_MousePressed (EventData As MouseEvent)
+	 
+	InnerPane.RequestFocus 'set focus
 	 
 	CallSubDelayed2(mCallBack, mEventName & "_PaneMousePressed", EventData)
 	 

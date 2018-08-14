@@ -36,7 +36,6 @@ public Punchline.Tech.Cuppy.Framework.cfstringutility _cfstringutility = null;
 public Punchline.Tech.Cuppy.Framework.cffileutility _cffileutility = null;
 public Punchline.Tech.Cuppy.Framework.cfmathutility _cfmathutility = null;
 public Punchline.Tech.Cuppy.Framework.cfdatatypeutility _cfdatatypeutility = null;
-public Punchline.Tech.Cuppy.Framework.cflicensemanager _cflicensemanager = null;
 public Punchline.Tech.Cuppy.Framework.cfdatageneratorutility _cfdatageneratorutility = null;
 public Punchline.Tech.Cuppy.Framework.cfapputility _cfapputility = null;
 public Punchline.Tech.Cuppy.Framework.cfcontrolsutils _cfcontrolsutils = null;
@@ -94,9 +93,11 @@ return "";
 }
 public String  _innercard_mouseclicked(anywheresoftware.b4j.objects.NodeWrapper.MouseEventWrapper _eventdata) throws Exception{
  //BA.debugLineNum = 112;BA.debugLine="Private Sub InnerCard_MouseClicked (EventData As M";
- //BA.debugLineNum = 114;BA.debugLine="CallSubDelayed2(mCallBack, mEventName & \"_MouseCl";
+ //BA.debugLineNum = 114;BA.debugLine="InnerCard.RequestFocus 'set focus";
+_innercard.RequestFocus();
+ //BA.debugLineNum = 115;BA.debugLine="CallSubDelayed2(mCallBack, mEventName & \"_MouseCl";
 __c.CallSubDelayed2(ba,_mcallback,_meventname+"_MouseClicked",(Object)(_eventdata));
- //BA.debugLineNum = 116;BA.debugLine="End Sub";
+ //BA.debugLineNum = 117;BA.debugLine="End Sub";
 return "";
 }
 public String  _innercard_mouseentered(anywheresoftware.b4j.objects.NodeWrapper.MouseEventWrapper _eventdata) throws Exception{

@@ -36,7 +36,6 @@ public Punchline.Tech.Cuppy.Framework.cfstringutility _cfstringutility = null;
 public Punchline.Tech.Cuppy.Framework.cffileutility _cffileutility = null;
 public Punchline.Tech.Cuppy.Framework.cfmathutility _cfmathutility = null;
 public Punchline.Tech.Cuppy.Framework.cfdatatypeutility _cfdatatypeutility = null;
-public Punchline.Tech.Cuppy.Framework.cflicensemanager _cflicensemanager = null;
 public Punchline.Tech.Cuppy.Framework.cfdatageneratorutility _cfdatageneratorutility = null;
 public Punchline.Tech.Cuppy.Framework.cfapputility _cfapputility = null;
 public Punchline.Tech.Cuppy.Framework.cfcontrolsutils _cfcontrolsutils = null;
@@ -97,12 +96,14 @@ _mcallback = _callback;
 return "";
 }
 public String  _innerlabel_mousepressed(anywheresoftware.b4j.objects.NodeWrapper.MouseEventWrapper _eventdata) throws Exception{
- //BA.debugLineNum = 95;BA.debugLine="Private Sub InnerLabel_MousePressed (EventData As";
- //BA.debugLineNum = 97;BA.debugLine="fx.ShowExternalDocument(InnerLabel.Text)";
+ //BA.debugLineNum = 94;BA.debugLine="Private Sub InnerLabel_MousePressed (EventData As";
+ //BA.debugLineNum = 96;BA.debugLine="InnerLabel.RequestFocus 'set focus";
+_innerlabel.RequestFocus();
+ //BA.debugLineNum = 98;BA.debugLine="fx.ShowExternalDocument(InnerLabel.Text)";
 _fx.ShowExternalDocument(_innerlabel.getText());
- //BA.debugLineNum = 99;BA.debugLine="CallSubDelayed2(mCallBack, mEventName & \"_MousePr";
+ //BA.debugLineNum = 100;BA.debugLine="CallSubDelayed2(mCallBack, mEventName & \"_MousePr";
 __c.CallSubDelayed2(ba,_mcallback,_meventname+"_MousePressed",(Object)(_eventdata));
- //BA.debugLineNum = 101;BA.debugLine="End Sub";
+ //BA.debugLineNum = 102;BA.debugLine="End Sub";
 return "";
 }
 public String  _removeeffects() throws Exception{

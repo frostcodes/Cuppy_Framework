@@ -96,6 +96,8 @@ End Sub
 
 Private Sub FAB_Btn_MousePressed (EventData As MouseEvent)
 	
+	FAB_Btn.RequestFocus 'set focus
+	
 	CallSubDelayed2(mCallBack, mEventName & "_MousePressed", EventData)
 	
 End Sub

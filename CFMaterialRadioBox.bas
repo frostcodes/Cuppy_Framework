@@ -39,12 +39,12 @@ Public Sub DesignerCreateView (Base As Pane, Lbl As Label, Props As Map)
 	mBase.LoadLayout("CFMaterialRadioBoxUI")
 	'set using theme...
 	'SetBg(StyleManager.DefaultTheme.Get("divider"))
-	setBorder(CFStyleManager.DefaultTheme.Get("divider"), 2)
+	SetBorder(CFStyleManager.DefaultTheme.Get("divider"), 2)
 	
-	setCheckedColor(CFStyleManager.DefaultTheme.Get("primary"))
+	SetCheckedColor(CFStyleManager.DefaultTheme.Get("primary"))
 	
 	'TODO: create a designer prorerty for this...
-	setCheckState(UNCHECKED_STATE) 'set initial value
+	SetCheckState(UNCHECKED_STATE) 'set initial value
 	 
 End Sub
 
@@ -148,6 +148,8 @@ End Sub
  
 Private Sub CheckboxPane_MousePressed (EventData As MouseEvent)
 	 
+	CheckboxPane.RequestFocus 'set focus
+	
 	If Not(Checked) Or IsIndeterminate Then
 	
 		SetCheckState(CHECKED_STATE)
@@ -157,6 +159,5 @@ Private Sub CheckboxPane_MousePressed (EventData As MouseEvent)
 		SetCheckState(UNCHECKED_STATE)
 		  
 	End If
-	
 	
 End Sub

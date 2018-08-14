@@ -32,7 +32,6 @@ public static Punchline.Tech.Cuppy.Framework.cfstringutility _cfstringutility = 
 public static Punchline.Tech.Cuppy.Framework.cffileutility _cffileutility = null;
 public static Punchline.Tech.Cuppy.Framework.cfmathutility _cfmathutility = null;
 public static Punchline.Tech.Cuppy.Framework.cfdatatypeutility _cfdatatypeutility = null;
-public static Punchline.Tech.Cuppy.Framework.cflicensemanager _cflicensemanager = null;
 public static Punchline.Tech.Cuppy.Framework.cfdatageneratorutility _cfdatageneratorutility = null;
 public static Punchline.Tech.Cuppy.Framework.cfapputility _cfapputility = null;
 public static Punchline.Tech.Cuppy.Framework.cfcontrolsutils _cfcontrolsutils = null;
@@ -42,8 +41,8 @@ public static String  _process_globals() throws Exception{
 _libraryauthor = "Punchline Technologies";
  //BA.debugLineNum = 6;BA.debugLine="Public LibraryName As String =  \"Cuppy Framework\"";
 _libraryname = "Cuppy Framework";
- //BA.debugLineNum = 7;BA.debugLine="Public LibraryVersion As Double =  1.02";
-_libraryversion = 1.02;
+ //BA.debugLineNum = 7;BA.debugLine="Public LibraryVersion As Double =  1.03";
+_libraryversion = 1.03;
  //BA.debugLineNum = 8;BA.debugLine="Public LibraryCopyright As String =  \"Copyright t";
 _librarycopyright = "Copyright to Oluwaseyi Aderinkomi < Frost Codes >";
  //BA.debugLineNum = 10;BA.debugLine="End Sub";

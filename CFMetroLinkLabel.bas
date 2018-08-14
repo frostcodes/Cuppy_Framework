@@ -97,8 +97,9 @@ End Sub
 
 #End Region
 
-
 Private Sub InnerLabel_MousePressed (EventData As MouseEvent)
+	
+	InnerLabel.RequestFocus 'set focus
 	
 	fx.ShowExternalDocument(InnerLabel.Text)
 	  

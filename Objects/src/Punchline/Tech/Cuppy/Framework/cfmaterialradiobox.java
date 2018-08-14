@@ -40,7 +40,6 @@ public Punchline.Tech.Cuppy.Framework.cfstringutility _cfstringutility = null;
 public Punchline.Tech.Cuppy.Framework.cffileutility _cffileutility = null;
 public Punchline.Tech.Cuppy.Framework.cfmathutility _cfmathutility = null;
 public Punchline.Tech.Cuppy.Framework.cfdatatypeutility _cfdatatypeutility = null;
-public Punchline.Tech.Cuppy.Framework.cflicensemanager _cflicensemanager = null;
 public Punchline.Tech.Cuppy.Framework.cfdatageneratorutility _cfdatageneratorutility = null;
 public Punchline.Tech.Cuppy.Framework.cfapputility _cfapputility = null;
 public Punchline.Tech.Cuppy.Framework.cfcontrolsutils _cfcontrolsutils = null;
@@ -51,15 +50,17 @@ return "";
 }
 public String  _checkboxpane_mousepressed(anywheresoftware.b4j.objects.NodeWrapper.MouseEventWrapper _eventdata) throws Exception{
  //BA.debugLineNum = 143;BA.debugLine="Private Sub CheckboxPane_MousePressed (EventData A";
- //BA.debugLineNum = 145;BA.debugLine="If Not(Checked) Or IsIndeterminate Then";
+ //BA.debugLineNum = 145;BA.debugLine="CheckboxPane.RequestFocus 'set focus";
+_checkboxpane.RequestFocus();
+ //BA.debugLineNum = 147;BA.debugLine="If Not(Checked) Or IsIndeterminate Then";
 if (__c.Not(_checked()) || _isindeterminate()) { 
- //BA.debugLineNum = 147;BA.debugLine="SetCheckState(CHECKED_STATE)";
+ //BA.debugLineNum = 149;BA.debugLine="SetCheckState(CHECKED_STATE)";
 _setcheckstate(_checked_state);
  }else {
- //BA.debugLineNum = 151;BA.debugLine="SetCheckState(UNCHECKED_STATE)";
+ //BA.debugLineNum = 153;BA.debugLine="SetCheckState(UNCHECKED_STATE)";
 _setcheckstate(_unchecked_state);
  };
- //BA.debugLineNum = 156;BA.debugLine="End Sub";
+ //BA.debugLineNum = 157;BA.debugLine="End Sub";
 return "";
 }
 public boolean  _checked() throws Exception{
@@ -98,11 +99,11 @@ public String  _designercreateview(anywheresoftware.b4j.objects.PaneWrapper.Conc
 _mbase = _base;
  //BA.debugLineNum = 33;BA.debugLine="mBase.LoadLayout(\"CFMaterialRadioBoxUI\")";
 _mbase.LoadLayout(ba,"CFMaterialRadioBoxUI");
- //BA.debugLineNum = 36;BA.debugLine="setBorder(CFStyleManager.DefaultTheme.Get(\"divide";
+ //BA.debugLineNum = 36;BA.debugLine="SetBorder(CFStyleManager.DefaultTheme.Get(\"divide";
 _setborder(BA.ObjectToString(_cfstylemanager._defaulttheme.Get((Object)("divider"))),(int) (2));
- //BA.debugLineNum = 38;BA.debugLine="setCheckedColor(CFStyleManager.DefaultTheme.Get(\"";
+ //BA.debugLineNum = 38;BA.debugLine="SetCheckedColor(CFStyleManager.DefaultTheme.Get(\"";
 _setcheckedcolor(BA.ObjectToString(_cfstylemanager._defaulttheme.Get((Object)("primary"))));
- //BA.debugLineNum = 41;BA.debugLine="setCheckState(UNCHECKED_STATE) 'set initial value";
+ //BA.debugLineNum = 41;BA.debugLine="SetCheckState(UNCHECKED_STATE) 'set initial value";
 _setcheckstate(_unchecked_state);
  //BA.debugLineNum = 43;BA.debugLine="End Sub";
 return "";

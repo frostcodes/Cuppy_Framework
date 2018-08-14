@@ -117,6 +117,7 @@ End Sub
  
 Private Sub InnerCard_MouseClicked (EventData As MouseEvent)
 	
+	InnerCard.RequestFocus 'set focus
 	CallSubDelayed2(mCallBack, mEventName & "_MouseClicked", EventData)
 	
 End Sub

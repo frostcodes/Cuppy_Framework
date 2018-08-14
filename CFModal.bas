@@ -97,6 +97,9 @@ Public Sub Show
 	 
 	Dim Parent As Pane = GetBase.Parent
 	
+	mBase.Enabled = True
+	mBase.Alpha = 1
+	
 	ModalBgPane.Visible = True
 	ModalPane.Visible = True
 	
@@ -104,15 +107,33 @@ Public Sub Show
 	  
 End Sub
 
+Public Sub Hide
+	 
+	mBase.SetAlphaAnimated(300, 0)
+	 
+	Wait For mBase_AnimationCompleted
+
+	ModalBgPane.Visible = False
+	ModalPane.Visible = False
+	
+	mBase.SetSize(0, 0)
+	mBase.Enabled = False
+	  
+End Sub
+
 #End Region
  
 Private Sub ModalBgPane_MousePressed (EventData As MouseEvent)
+	
+	ModalPane.RequestFocus 'set focus
 	
 	CallSubDelayed2(mCallBack, mEventName & "_ModalBGPressed", EventData)  
 	
 End Sub
 
 Private Sub ModalPane_MousePressed (EventData As MouseEvent)
+	
+	ModalPane.RequestFocus 'set focus
 	
 	CallSubDelayed2(mCallBack, mEventName & "_ModalPressed", EventData)  
 	

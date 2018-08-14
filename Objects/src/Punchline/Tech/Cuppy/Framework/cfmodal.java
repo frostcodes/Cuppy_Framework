@@ -37,7 +37,6 @@ public Punchline.Tech.Cuppy.Framework.cfstringutility _cfstringutility = null;
 public Punchline.Tech.Cuppy.Framework.cffileutility _cffileutility = null;
 public Punchline.Tech.Cuppy.Framework.cfmathutility _cfmathutility = null;
 public Punchline.Tech.Cuppy.Framework.cfdatatypeutility _cfdatatypeutility = null;
-public Punchline.Tech.Cuppy.Framework.cflicensemanager _cflicensemanager = null;
 public Punchline.Tech.Cuppy.Framework.cfdatageneratorutility _cfdatageneratorutility = null;
 public Punchline.Tech.Cuppy.Framework.cfapputility _cfapputility = null;
 public Punchline.Tech.Cuppy.Framework.cfcontrolsutils _cfcontrolsutils = null;
@@ -83,6 +82,54 @@ if (true) return _mbase;
  //BA.debugLineNum = 42;BA.debugLine="End Sub";
 return null;
 }
+public void  _hide() throws Exception{
+ResumableSub_Hide rsub = new ResumableSub_Hide(this);
+rsub.resume(ba, null);
+}
+public static class ResumableSub_Hide extends BA.ResumableSub {
+public ResumableSub_Hide(Punchline.Tech.Cuppy.Framework.cfmodal parent) {
+this.parent = parent;
+}
+Punchline.Tech.Cuppy.Framework.cfmodal parent;
+
+@Override
+public void resume(BA ba, Object[] result) throws Exception{
+
+    while (true) {
+        switch (state) {
+            case -1:
+return;
+
+case 0:
+//C
+this.state = -1;
+ //BA.debugLineNum = 106;BA.debugLine="mBase.SetAlphaAnimated(300, 0)";
+parent._mbase.SetAlphaAnimated((int) (300),0);
+ //BA.debugLineNum = 108;BA.debugLine="Wait For mBase_AnimationCompleted";
+parent.__c.WaitFor("mbase_animationcompleted", ba, this, null);
+this.state = 1;
+return;
+case 1:
+//C
+this.state = -1;
+;
+ //BA.debugLineNum = 110;BA.debugLine="ModalBgPane.Visible = False";
+parent._modalbgpane.setVisible(parent.__c.False);
+ //BA.debugLineNum = 111;BA.debugLine="ModalPane.Visible = False";
+parent._modalpane.setVisible(parent.__c.False);
+ //BA.debugLineNum = 113;BA.debugLine="mBase.SetSize(0, 0)";
+parent._mbase.SetSize(0,0);
+ //BA.debugLineNum = 114;BA.debugLine="mBase.Enabled = False";
+parent._mbase.setEnabled(parent.__c.False);
+ //BA.debugLineNum = 116;BA.debugLine="End Sub";
+if (true) break;
+
+            }
+        }
+    }
+}
+public void  _mbase_animationcompleted() throws Exception{
+}
 public String  _initialize(anywheresoftware.b4a.BA _ba,Object _callback,String _eventname) throws Exception{
 innerInitialize(_ba);
  //BA.debugLineNum = 20;BA.debugLine="Public Sub Initialize (Callback As Object, EventNa";
@@ -94,17 +141,21 @@ _mcallback = _callback;
 return "";
 }
 public String  _modalbgpane_mousepressed(anywheresoftware.b4j.objects.NodeWrapper.MouseEventWrapper _eventdata) throws Exception{
- //BA.debugLineNum = 103;BA.debugLine="Private Sub ModalBgPane_MousePressed (EventData As";
- //BA.debugLineNum = 105;BA.debugLine="CallSubDelayed2(mCallBack, mEventName & \"_ModalBG";
+ //BA.debugLineNum = 120;BA.debugLine="Private Sub ModalBgPane_MousePressed (EventData As";
+ //BA.debugLineNum = 122;BA.debugLine="ModalPane.RequestFocus 'set focus";
+_modalpane.RequestFocus();
+ //BA.debugLineNum = 124;BA.debugLine="CallSubDelayed2(mCallBack, mEventName & \"_ModalBG";
 __c.CallSubDelayed2(ba,_mcallback,_meventname+"_ModalBGPressed",(Object)(_eventdata));
- //BA.debugLineNum = 107;BA.debugLine="End Sub";
+ //BA.debugLineNum = 126;BA.debugLine="End Sub";
 return "";
 }
 public String  _modalpane_mousepressed(anywheresoftware.b4j.objects.NodeWrapper.MouseEventWrapper _eventdata) throws Exception{
- //BA.debugLineNum = 109;BA.debugLine="Private Sub ModalPane_MousePressed (EventData As M";
- //BA.debugLineNum = 111;BA.debugLine="CallSubDelayed2(mCallBack, mEventName & \"_ModalPr";
+ //BA.debugLineNum = 128;BA.debugLine="Private Sub ModalPane_MousePressed (EventData As M";
+ //BA.debugLineNum = 130;BA.debugLine="ModalPane.RequestFocus 'set focus";
+_modalpane.RequestFocus();
+ //BA.debugLineNum = 132;BA.debugLine="CallSubDelayed2(mCallBack, mEventName & \"_ModalPr";
 __c.CallSubDelayed2(ba,_mcallback,_meventname+"_ModalPressed",(Object)(_eventdata));
- //BA.debugLineNum = 113;BA.debugLine="End Sub";
+ //BA.debugLineNum = 134;BA.debugLine="End Sub";
 return "";
 }
 public String  _removeeffects() throws Exception{
@@ -155,13 +206,17 @@ anywheresoftware.b4j.objects.PaneWrapper.ConcretePaneWrapper _parent = null;
  //BA.debugLineNum = 92;BA.debugLine="Dim Parent As Pane = GetBase.Parent";
 _parent = new anywheresoftware.b4j.objects.PaneWrapper.ConcretePaneWrapper();
 _parent.setObject((javafx.scene.layout.Pane)(_getbase().getParent().getObject()));
- //BA.debugLineNum = 94;BA.debugLine="ModalBgPane.Visible = True";
+ //BA.debugLineNum = 94;BA.debugLine="mBase.Enabled = True";
+_mbase.setEnabled(__c.True);
+ //BA.debugLineNum = 95;BA.debugLine="mBase.Alpha = 1";
+_mbase.setAlpha(1);
+ //BA.debugLineNum = 97;BA.debugLine="ModalBgPane.Visible = True";
 _modalbgpane.setVisible(__c.True);
- //BA.debugLineNum = 95;BA.debugLine="ModalPane.Visible = True";
+ //BA.debugLineNum = 98;BA.debugLine="ModalPane.Visible = True";
 _modalpane.setVisible(__c.True);
- //BA.debugLineNum = 97;BA.debugLine="mBase.SetLayoutAnimated(300, 0 , 0,  Parent.Width";
+ //BA.debugLineNum = 100;BA.debugLine="mBase.SetLayoutAnimated(300, 0 , 0,  Parent.Width";
 _mbase.SetLayoutAnimated((int) (300),0,0,_parent.getWidth(),_parent.getHeight());
- //BA.debugLineNum = 99;BA.debugLine="End Sub";
+ //BA.debugLineNum = 102;BA.debugLine="End Sub";
 return "";
 }
 public Object callSub(String sub, Object sender, Object[] args) throws Exception {

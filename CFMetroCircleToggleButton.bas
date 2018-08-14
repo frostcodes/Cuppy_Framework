@@ -131,6 +131,8 @@ Public Sub Checked As Boolean
 End Sub 
 
 Private Sub ToggleButton_MousePressed (EventData As MouseEvent)
+	
+	ToggleButton.RequestFocus 'set focus
 	 
 	If Not(Checked) Then
 	

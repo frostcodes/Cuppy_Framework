@@ -83,10 +83,9 @@ Module22=CFFileUtility
 Module23=CFMaterialLinearProgressBar
 Module24=CFMathUtility
 Module25=CFDataTypeUtility
-Module26=CFLicenseManager
-Module27=CFDataGeneratorUtility
-Module28=CFAppUtility
-Module29=CFControlsUtils
+Module26=CFDataGeneratorUtility
+Module27=CFAppUtility
+Module28=CFControlsUtils
 Module3=CFStyleManager
 Module4=CFAnimationManager
 Module5=CFBarPreLoader
@@ -96,7 +95,7 @@ Module8=CFMaterialButton
 Module9=CFMaterialCard
 NumberOfFiles=29
 NumberOfLibraries=4
-NumberOfModules=29
+NumberOfModules=28
 Version=6.3
 @EndOfDesignText@
 #Region Project Attributes 
@@ -109,7 +108,7 @@ Version=6.3
 'Mash Mbanga < Mashy >  - Contributor - anele@mbangas.com
 #LibraryAuthor: Punchline Technologies
 #LibraryName: Cuppy Framework
-#LibraryVersion: 1.02
+#LibraryVersion: 1.03
 #AdditionalJar: FontAwesome
 #AdditionalJar: MaterialIcons
 #AdditionalJar: CFResources.jar

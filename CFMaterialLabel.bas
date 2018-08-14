@@ -96,6 +96,7 @@ End Sub
 
 Private Sub InnerLabel_MousePressed (EventData As MouseEvent)
 	  
+	InnerLabel.RequestFocus 'set focus
 	CallSubDelayed2(mCallBack, mEventName & "_MousePressed", EventData)
 	 
 End Sub
