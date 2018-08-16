@@ -9,10 +9,14 @@ Version=5.51
 #Event: MousePressed (EventData As MouseEvent)
 #Event: MouseEntered (EventData As MouseEvent)
 #Event: MouseExited (EventData As MouseEvent)
+#Event: Resize (Width As Double, Height As Double)
+
 
 #RaisesSynchronousEvents: MousePressed
 #RaisesSynchronousEvents: MouseEntered
 #RaisesSynchronousEvents: MouseExited
+#RaisesSynchronousEvents: Resize
+
 
 #Region Internal Segment
 
@@ -44,6 +48,8 @@ Private Sub Base_Resize (Width As Double, Height As Double)
 	'maintain aspect ratio
 	FAB_Btn.PrefWidth = Width
 	FAB_Btn.PrefHeight = Width
+	CallSubDelayed3(mCallBack, mEventName & "_Resize", Width, Height)
+	
 	 
 End Sub
 

@@ -5,9 +5,12 @@ Type=Class
 Version=5.51
 @EndOfDesignText@
 'Custom View class
- 
+
 #Event: MousePressed (EventData As MouseEvent)
+#Event: Resize (Width As Double, Height As Double)
+
 #RaisesSynchronousEvents: MousePressed
+#RaisesSynchronousEvents: Resize
  
 #Region Internal Segment
 
@@ -38,6 +41,8 @@ Private Sub Base_Resize (Width As Double, Height As Double)
  
 	InnerLabel.PrefWidth = Width
 	InnerLabel.PrefHeight =  Height
+	
+	CallSubDelayed3(mCallBack, mEventName & "_Resize", Width, Height)
 	 
 End Sub
 

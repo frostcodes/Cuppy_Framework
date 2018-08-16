@@ -8,9 +8,11 @@ Version=5.51
 
 #Event: MousePressed (EventData As MouseEvent)
 #Event: PaneMousePressed (EventData As MouseEvent)
+#Event: Resize (Width As Double, Height As Double)
 
 #RaisesSynchronousEvents: MousePressed
 #RaisesSynchronousEvents: PaneMousePressed
+#RaisesSynchronousEvents: Resize
  
 #Region Internal Segment
 
@@ -38,6 +40,8 @@ Public Sub DesignerCreateView (Base As Pane, Lbl As Label, Props As Map)
 End Sub
 
 Private Sub Base_Resize (Width As Double, Height As Double)
+	
+	CallSubDelayed3(mCallBack, mEventName & "_Resize", Width, Height)
 	
 End Sub
 

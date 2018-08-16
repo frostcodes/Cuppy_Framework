@@ -7,8 +7,10 @@ Version=5.51
 'Custom View class
  
 #Event: CheckedChanged(value as int)
-
+#Event: Resize (Width As Double, Height As Double)
+ 
 #RaisesSynchronousEvents: CheckedChanged
+#RaisesSynchronousEvents: Resize
  
  'TODO: make font adjust when resized
 #Region Internal Segment
@@ -52,9 +54,9 @@ Public Sub DesignerCreateView (Base As Pane, Lbl As Label, Props As Map)
 End Sub
 
 Private Sub Base_Resize (Width As Double, Height As Double)
+
+	CallSubDelayed3(mCallBack, mEventName & "_Resize", Width, Height)
  
-	'we are not handling resizes here...
-	 
 End Sub
 
 Public Sub GetBase As Pane

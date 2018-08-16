@@ -9,11 +9,14 @@ Version=5.51
    
 #Event: AnimationStarted
 #Event: AnimationStopped
+#Event: Resize (Width As Double, Height As Double)
 
-'#RaisesSynchronousEvents: AnimationStarted
-'#RaisesSynchronousEvents: AnimationStopped
-'  
-  
+
+#RaisesSynchronousEvents: AnimationStarted
+#RaisesSynchronousEvents: AnimationStopped
+#RaisesSynchronousEvents: Resize
+'
+' 
 '#Event: MousePressed (EventData As MouseEvent)
 
 '#RaisesSynchronousEvents: MousePressed
@@ -36,6 +39,7 @@ Sub Class_Globals
 End Sub
 
 Public Sub Initialize (Callback As Object, EventName As String)
+	
 	mEventName = EventName
 	mCallBack = Callback
  
@@ -58,6 +62,8 @@ Public Sub DesignerCreateView (Base As Pane, Lbl As Label, Props As Map)
 End Sub
 
 Private Sub Base_Resize (Width As Double, Height As Double)
+	
+	CallSubDelayed3(mCallBack, mEventName & "_Resize", Width, Height)
   
 End Sub
 

@@ -11,8 +11,11 @@ Version=5.51
 'https://material.io/design/components/progress-indicators.html#circular-progress-indicators
 
 #Event: ProgressFinished
-
+#Event: Resize (Width As Double, Height As Double)
+ 
 #RaisesSynchronousEvents: ProgressFinished
+#RaisesSynchronousEvents: Resize
+
  
 #Region Internal Segment
 
@@ -45,6 +48,8 @@ Private Sub Base_Resize (Width As Double, Height As Double)
 	ProgressPane.PrefWidth = Width
 	ProgressPane.PrefHeight = Height
 	ProgressBar.PrefHeight = Height
+	
+	CallSubDelayed3(mCallBack, mEventName & "_Resize", Width, Height)
 	 
 End Sub
 

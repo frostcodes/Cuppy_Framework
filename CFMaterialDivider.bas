@@ -7,6 +7,10 @@ Version=5.51
 'Custom View class
  
 ''''#  Designer    Property: Key: thic kness, DisplayName: thick ness, FieldType: Int, DefaultValue: 1, Description: Set how thick the divider should be
+#Event: Resize (Width As Double, Height As Double)
+
+#RaisesSynchronousEvents: Resize
+
 
 #Region Internal Segment
 'TODO: make orientation property: horizontal/vertical..using rotate 
@@ -45,6 +49,8 @@ End Sub
 Private Sub Base_Resize (Width As Double, Height As Double)
  
 	line.PrefWidth = Width
+	
+	CallSubDelayed3(mCallBack, mEventName & "_Resize", Width, Height)
 	 
 End Sub
 
