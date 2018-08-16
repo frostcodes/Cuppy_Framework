@@ -80,7 +80,7 @@ End Sub
 
 Public Sub SetRotationX(angle As Float)
 	
-	CFControlsUtils.SetPaneRotationX(CheckboxPane, angle) 'rotate
+	CFControlsUtils.SetPaneRotation(CheckboxPane, angle) 'rotate
 	 
 End Sub
 

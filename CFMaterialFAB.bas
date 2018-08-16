@@ -95,7 +95,7 @@ End Sub
  
 Public Sub SetRotationX(angle As Float)
 	
-	CFControlsUtils.setRotationX(FAB_Btn, angle) 'rotate
+	CFControlsUtils.setRotation(FAB_Btn, angle) 'rotate
 	 
 End Sub
 

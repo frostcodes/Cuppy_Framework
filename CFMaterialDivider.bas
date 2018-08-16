@@ -71,7 +71,7 @@ End Sub
 
 Public Sub SetRotationX(angle As Float)
 	
-	CFControlsUtils.setPaneRotationX(line, angle) 'rotate
+	CFControlsUtils.setPaneRotation(line, angle) 'rotate
 	 
 End Sub
   

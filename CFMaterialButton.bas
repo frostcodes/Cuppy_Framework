@@ -68,7 +68,7 @@ End Sub
 
 Public Sub SetRotationX(angle As Float)
 	
-	CFControlsUtils.setRotationX(InnerButton, angle) 'rotate
+	CFControlsUtils.setRotation(InnerButton, angle) 'rotate
 	 
 End Sub
   

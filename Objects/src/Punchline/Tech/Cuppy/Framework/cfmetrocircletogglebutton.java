@@ -173,8 +173,8 @@ return "";
 }
 public String  _setrotationx(float _angle) throws Exception{
  //BA.debugLineNum = 65;BA.debugLine="Public Sub SetRotationX(angle As Float)";
- //BA.debugLineNum = 67;BA.debugLine="CFControlsUtils.setRotationX(ToggleButton, angle)";
-_cfcontrolsutils._setrotationx((anywheresoftware.b4j.objects.NodeWrapper.ControlWrapper.ConcreteControlWrapper) anywheresoftware.b4a.AbsObjectWrapper.ConvertToWrapper(new anywheresoftware.b4j.objects.NodeWrapper.ControlWrapper.ConcreteControlWrapper(), (javafx.scene.control.Control)(_togglebutton.getObject())),_angle);
+ //BA.debugLineNum = 67;BA.debugLine="CFControlsUtils.setRotation(ToggleButton, angle)";
+_cfcontrolsutils._setrotation((anywheresoftware.b4j.objects.NodeWrapper.ControlWrapper.ConcreteControlWrapper) anywheresoftware.b4a.AbsObjectWrapper.ConvertToWrapper(new anywheresoftware.b4j.objects.NodeWrapper.ControlWrapper.ConcreteControlWrapper(), (javafx.scene.control.Control)(_togglebutton.getObject())),_angle);
  //BA.debugLineNum = 69;BA.debugLine="End Sub";
 return "";
 }

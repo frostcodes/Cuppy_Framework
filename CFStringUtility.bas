@@ -99,7 +99,7 @@ End Sub
 Public Sub Trim_Once(str As String, character As String) As String
  
 	str = Trim_Left_Once(str, character)
-	str = Trim_right_once(str, character)
+	str = Trim_Right_Once(str, character)
 		 
 	Return str
 	
@@ -169,8 +169,7 @@ Public Sub Quotes_To_Entities(str As String) As String
 	
 	str = str.Replace("'", "&#39;")
 	str = str.Replace("""","&quot;")
-	 
-	
+	  
 	Return str
 	 
 End Sub
@@ -391,7 +390,6 @@ Public Sub Join(StrList As List,separator As String )  As String
 	Return Implode(separator, StrList)
 	
 End Sub
-
 
 'Convert the first character of each word to uppercase
 Public Sub Ucwords(str As String) As String
@@ -715,7 +713,11 @@ Public Sub BreakStrAt(haystack As String, after As String) As Object
 	End If
 	
 End Sub
-
+'Searches a string for any of the specified characters.
+'Note: This function is Case-sensitive.
+'This function returns the rest of the 
+'string from where it found the first occurrence 
+'of a specified character, otherwise it returns False.
 Public Sub Strpbrk(haystack As String, charList As String) As Object
  
 	For i = 0 To haystack.Length - 1
@@ -964,7 +966,7 @@ Public Sub ParseQueryString(QueryString As String) As Map
 		Next
  
 	Catch
-		 'TODO: create a config value to turn on/off debug errors
+
 		LogError("The parser for < parseQueryString() > got broken. Please check input data")
 
 	End Try

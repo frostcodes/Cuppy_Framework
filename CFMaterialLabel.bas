@@ -68,7 +68,7 @@ End Sub
 
 Public Sub SetRotationX(angle As Float)
 	
-	CFControlsUtils.setRotationX(InnerLabel, angle) 'rotate
+	CFControlsUtils.setRotation(InnerLabel, angle) 'rotate
 	 
 End Sub
   

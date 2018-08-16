@@ -163,10 +163,10 @@ return "";
 }
 public String  _setrotationx(float _angle) throws Exception{
  //BA.debugLineNum = 59;BA.debugLine="Public Sub SetRotationX(angle As Float)";
- //BA.debugLineNum = 61;BA.debugLine="CFControlsUtils.setRotationX(Label1, angle) 'rota";
-_cfcontrolsutils._setrotationx((anywheresoftware.b4j.objects.NodeWrapper.ControlWrapper.ConcreteControlWrapper) anywheresoftware.b4a.AbsObjectWrapper.ConvertToWrapper(new anywheresoftware.b4j.objects.NodeWrapper.ControlWrapper.ConcreteControlWrapper(), (javafx.scene.control.Control)(_label1.getObject())),_angle);
- //BA.debugLineNum = 62;BA.debugLine="CFControlsUtils.setPaneRotationX(InnerPane , angl";
-_cfcontrolsutils._setpanerotationx(_innerpane,_angle);
+ //BA.debugLineNum = 61;BA.debugLine="CFControlsUtils.setRotation(Label1, angle) 'rotat";
+_cfcontrolsutils._setrotation((anywheresoftware.b4j.objects.NodeWrapper.ControlWrapper.ConcreteControlWrapper) anywheresoftware.b4a.AbsObjectWrapper.ConvertToWrapper(new anywheresoftware.b4j.objects.NodeWrapper.ControlWrapper.ConcreteControlWrapper(), (javafx.scene.control.Control)(_label1.getObject())),_angle);
+ //BA.debugLineNum = 62;BA.debugLine="CFControlsUtils.setPaneRotation(InnerPane , angle";
+_cfcontrolsutils._setpanerotation(_innerpane,_angle);
  //BA.debugLineNum = 64;BA.debugLine="End Sub";
 return "";
 }

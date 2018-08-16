@@ -70,7 +70,7 @@ End Sub
 
 Public Sub SetRotationX(angle As Float)
 	
-	CFControlsUtils.setRotationX(ToggleButton, angle) 'rotate
+	CFControlsUtils.setRotation(ToggleButton, angle) 'rotate
 	 
 End Sub
 

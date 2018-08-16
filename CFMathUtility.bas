@@ -22,7 +22,7 @@ Sub Process_Globals
 	
 End Sub
 
-'checks if a value is NaN
+'Checks if a value is NaN
 Public Sub IsNan(d As Double) As Boolean
 	
 	Return d <> d
@@ -252,14 +252,7 @@ Public Sub NumbersAverage2(data As List) As Double
 	
 End Sub
 
-
-
  
-
- 
-
-
-
 
  
 '

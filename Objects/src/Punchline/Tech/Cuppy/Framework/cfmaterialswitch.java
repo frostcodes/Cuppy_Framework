@@ -191,8 +191,8 @@ return "";
 }
 public String  _setrotationx(float _angle) throws Exception{
  //BA.debugLineNum = 70;BA.debugLine="Public Sub SetRotationX(angle As Float)";
- //BA.debugLineNum = 72;BA.debugLine="CFControlsUtils.setPaneRotationX(SwitchPane, angl";
-_cfcontrolsutils._setpanerotationx(_switchpane,_angle);
+ //BA.debugLineNum = 72;BA.debugLine="CFControlsUtils.setPaneRotation(SwitchPane, angle";
+_cfcontrolsutils._setpanerotation(_switchpane,_angle);
  //BA.debugLineNum = 74;BA.debugLine="End Sub";
 return "";
 }

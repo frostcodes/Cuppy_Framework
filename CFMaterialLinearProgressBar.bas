@@ -69,7 +69,7 @@ End Sub
 
 Public Sub SetRotationX(angle As Float)
 	
-	CFControlsUtils.setPaneRotationX(ProgressPane, angle) 'rotate
+	CFControlsUtils.setPaneRotation(ProgressPane, angle) 'rotate
 	 
 End Sub
 

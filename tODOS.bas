@@ -12,8 +12,7 @@ Sub Class_Globals
 End Sub
 
  
-  'hANDLE CONTROL RESIZE EveNT FOR EXTERNAL use onresize()
-	 ' **  Later support deigner view scripts 
+    ' **  Later support deigner view scripts 
 	  
  
 'ComboBox
