@@ -10,11 +10,13 @@ Version=5.51
 #Event: MouseClicked (EventData As MouseEvent)
 #Event: MouseEntered (EventData As MouseEvent)
 #Event: MouseExited (EventData As MouseEvent)
+#Event: Resize (Width As Double, Height As Double)
 
 #RaisesSynchronousEvents: Touch
 #RaisesSynchronousEvents: MouseClicked
 #RaisesSynchronousEvents: MouseEntered
 #RaisesSynchronousEvents: MouseExited
+#RaisesSynchronousEvents: Resize
  
 #Region Internal Segment
 
@@ -44,6 +46,8 @@ Private Sub Base_Resize (Width As Double, Height As Double)
 	InnerCard.PrefWidth = Width
 	InnerCard.PrefHeight = Height
 	 
+	CallSubDelayed3(mCallBack, mEventName & "_Resize", Width, Height)
+	
 End Sub
 
 Public Sub GetBase As Pane
@@ -62,7 +66,7 @@ End Sub
 
 Public Sub SetRotationX(angle As Float)
 	
-	CFControlsUtils.setPaneRotationX(InnerCard, angle) 'rotate
+	CFControlsUtils.setPaneRotation(InnerCard, angle) 'rotate
 	 
 End Sub
  

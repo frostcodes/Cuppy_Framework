@@ -1259,7 +1259,7 @@ End Sub
  #End Region
  
  #Region Random Email Generators
- 
+ 'Generates a random email
 Public Sub Rand_Email(EmailProvider As String, withNumeric As Boolean) As String
 	 
 	Dim name As String = Rand_Human_Name & Rand_Human_Name
@@ -1327,6 +1327,7 @@ End Sub
 #End Region
 
 #Region Random True or False Value 
+
 'Generates a random True or False Value
 Public Sub Rand_TrueorFalse() As Boolean
 	 

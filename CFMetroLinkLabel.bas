@@ -7,8 +7,10 @@ Version=5.51
  'Custom View class
  
 #Event: MousePressed (EventData As MouseEvent)
-
+#Event: Resize (Width As Double, Height As Double)
+ 
 #RaisesSynchronousEvents: MousePressed
+#RaisesSynchronousEvents: Resize
 
 #Region Internal Segment
 
@@ -40,6 +42,8 @@ Private Sub Base_Resize (Width As Double, Height As Double)
  
 	InnerLabel.PrefWidth = Width
 	InnerLabel.PrefHeight =  Height
+	
+	CallSubDelayed3(mCallBack, mEventName & "_Resize", Width, Height)
 	 
 End Sub
 
@@ -65,7 +69,7 @@ End Sub
 
 Public Sub SetRotationX(angle As Float)
 	
-	CFControlsUtils.setRotationX(InnerLabel, angle) 'rotate
+	CFControlsUtils.setRotation(InnerLabel, angle) 'rotate
 	 
 End Sub
   

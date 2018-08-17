@@ -9,81 +9,94 @@ Private Sub Process_Globals
 	Private fx As JFX
 End Sub
 
-Public Sub SetRotationX(controlObj As Control, Angle As Float)
+'Rotate a Control
+Public Sub SetRotation(controlObj As Control, Angle As Float)
+	
 	CSSUtils.SetStyleProperty(controlObj, "-fx-rotate", Angle)
+	
 End Sub
- 
-Public Sub SetPaneRotationX(PaneObj As Pane, Angle As Float)
+
+'Rotate a Pane
+Public Sub SetPaneRotation(PaneObj As Pane, Angle As Float)
+	
 	CSSUtils.SetStyleProperty(PaneObj, "-fx-rotate", Angle)
+	
 End Sub
- 
+
+'Set a Control Border color and width
 Public Sub SetBorder(controlObj As Control, color As String , width As Int)
 	
 	CSSUtils.SetStyleProperty( controlObj, "-fx-border-color", color)
 	CSSUtils.SetStyleProperty (controlObj, "-fx-border-width", width)
 	
 End Sub
-	 
+
+'Set a Pane Border color and width
 Public Sub SetPaneBorder(PaneObj As Pane, color As String , width As Int)
 	
 	CSSUtils.SetStyleProperty( PaneObj, "-fx-border-color", color)
 	CSSUtils.SetStyleProperty (PaneObj, "-fx-border-width", width)
 	
 End Sub
-	
+
+'Set a Pane Border radius
 Public Sub SetPaneBorderRadius(PaneObj As Pane, radius As Int)
 	 
 	CSSUtils.SetStyleProperty(PaneObj,"-fx-border-radius", radius)
 	
 End Sub
 
-
+'Set a Control Border radius
 Public Sub SetBorderRadius(controlObj As Control, radius As Int)
 	 
 	CSSUtils.SetStyleProperty(controlObj, "-fx-border-radius", radius)
 	
 End Sub
 
+'Set a Pane effect
 Public Sub SetPaneEffect(PaneObj As Pane, effect As String)
 	 
 	CSSUtils.SetStyleProperty(PaneObj, "-fx-effect" , effect)
 	
 End Sub
- 
+
+'Set a Control effect
 Public Sub SetEffect(controlObj As Control, effect As String)
 	 
 	CSSUtils.SetStyleProperty(controlObj, "-fx-effect" , effect)
-	
-	
+	 
 End Sub
  
+'Removes a Pane effect
 Public Sub RemovePaneEffect(PaneObj As Pane)
 	 
 	CSSUtils.SetStyleProperty(PaneObj, "-fx-effect" , "none")
 	
 End Sub
- 
+
+'Removes a Control effect
 Public Sub RemoveEffect(controlObj As Control)
 	 
 	CSSUtils.SetStyleProperty(controlObj, "-fx-effect" ,  "none")
 	
 	
 End Sub
- 
+
+'Sets a Pane Background color
 Public Sub SetPaneBG(PaneObj As Pane, color As String)
 	 
 	CSSUtils.SetStyleProperty( PaneObj, "-fx-background-color", color)
-	
-	
+	 
 End Sub
- 
+
+'Sets a Control Background color
 Public Sub SetBG(controlObj As Control, color As String)
 	 
 	CSSUtils.SetStyleProperty( controlObj, "-fx-background-color", color)
 	 
 End Sub
 
-
+'Sets a Control text color if supported like a label 
 Public Sub SetTextColor(controlObj As Control, color As String)
 	
 	CSSUtils.SetStyleProperty(controlObj,"-fx-text-fill",  color)
@@ -96,12 +109,15 @@ End Sub
 
 'TODO : make get for all the above...
 
+
+'Get a Pane Background color
 Public Sub GetPaneBG(PaneObj As Pane) As String
 	 
 	Return CSSUtils.GetStyleProperty(PaneObj, "-fx-background-color")
 	 
 End Sub
- 
+
+'Get a Control Background color
 Public Sub GetBG(controlObj As Control) As String
 	 
 	Return CSSUtils.GetStyleProperty(controlObj, "-fx-background-color")

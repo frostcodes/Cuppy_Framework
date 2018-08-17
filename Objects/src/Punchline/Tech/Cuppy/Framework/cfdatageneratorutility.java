@@ -280,84 +280,84 @@ return null;
 }
 public static anywheresoftware.b4a.objects.collections.List  _majorsportslist() throws Exception{
 anywheresoftware.b4a.objects.collections.List _sports = null;
- //BA.debugLineNum = 1360;BA.debugLine="Public Sub MajorSportsList As List";
- //BA.debugLineNum = 1362;BA.debugLine="Dim sports As List";
+ //BA.debugLineNum = 1361;BA.debugLine="Public Sub MajorSportsList As List";
+ //BA.debugLineNum = 1363;BA.debugLine="Dim sports As List";
 _sports = new anywheresoftware.b4a.objects.collections.List();
- //BA.debugLineNum = 1363;BA.debugLine="sports.Initialize";
+ //BA.debugLineNum = 1364;BA.debugLine="sports.Initialize";
 _sports.Initialize();
- //BA.debugLineNum = 1365;BA.debugLine="sports.add(\"Alpine Skiing\")";
+ //BA.debugLineNum = 1366;BA.debugLine="sports.add(\"Alpine Skiing\")";
 _sports.Add((Object)("Alpine Skiing"));
- //BA.debugLineNum = 1366;BA.debugLine="sports.add(\"Athletics\")";
+ //BA.debugLineNum = 1367;BA.debugLine="sports.add(\"Athletics\")";
 _sports.Add((Object)("Athletics"));
- //BA.debugLineNum = 1367;BA.debugLine="sports.add(\"Badminton\")";
+ //BA.debugLineNum = 1368;BA.debugLine="sports.add(\"Badminton\")";
 _sports.Add((Object)("Badminton"));
- //BA.debugLineNum = 1368;BA.debugLine="sports.add(\"Basketball\")";
+ //BA.debugLineNum = 1369;BA.debugLine="sports.add(\"Basketball\")";
 _sports.Add((Object)("Basketball"));
- //BA.debugLineNum = 1369;BA.debugLine="sports.add(\"Bocce\")";
+ //BA.debugLineNum = 1370;BA.debugLine="sports.add(\"Bocce\")";
 _sports.Add((Object)("Bocce"));
- //BA.debugLineNum = 1370;BA.debugLine="sports.add(\"Bowling\")";
+ //BA.debugLineNum = 1371;BA.debugLine="sports.add(\"Bowling\")";
 _sports.Add((Object)("Bowling"));
- //BA.debugLineNum = 1372;BA.debugLine="sports.add(\"Cricket\")";
+ //BA.debugLineNum = 1373;BA.debugLine="sports.add(\"Cricket\")";
 _sports.Add((Object)("Cricket"));
- //BA.debugLineNum = 1373;BA.debugLine="sports.add(\"Cross Country Skiing\")";
+ //BA.debugLineNum = 1374;BA.debugLine="sports.add(\"Cross Country Skiing\")";
 _sports.Add((Object)("Cross Country Skiing"));
- //BA.debugLineNum = 1374;BA.debugLine="sports.add(\"Cycling\")";
+ //BA.debugLineNum = 1375;BA.debugLine="sports.add(\"Cycling\")";
 _sports.Add((Object)("Cycling"));
- //BA.debugLineNum = 1375;BA.debugLine="sports.add(\"Equestrian\")";
+ //BA.debugLineNum = 1376;BA.debugLine="sports.add(\"Equestrian\")";
 _sports.Add((Object)("Equestrian"));
- //BA.debugLineNum = 1376;BA.debugLine="sports.add(\"Figure Skating\")";
+ //BA.debugLineNum = 1377;BA.debugLine="sports.add(\"Figure Skating\")";
 _sports.Add((Object)("Figure Skating"));
- //BA.debugLineNum = 1377;BA.debugLine="sports.add(\"Floorball\")";
+ //BA.debugLineNum = 1378;BA.debugLine="sports.add(\"Floorball\")";
 _sports.Add((Object)("Floorball"));
- //BA.debugLineNum = 1379;BA.debugLine="sports.add(\"Floor Hockey\")";
+ //BA.debugLineNum = 1380;BA.debugLine="sports.add(\"Floor Hockey\")";
 _sports.Add((Object)("Floor Hockey"));
- //BA.debugLineNum = 1380;BA.debugLine="sports.add(\"Football\")";
+ //BA.debugLineNum = 1381;BA.debugLine="sports.add(\"Football\")";
 _sports.Add((Object)("Football"));
- //BA.debugLineNum = 1381;BA.debugLine="sports.add(\"Golf\")";
+ //BA.debugLineNum = 1382;BA.debugLine="sports.add(\"Golf\")";
 _sports.Add((Object)("Golf"));
- //BA.debugLineNum = 1382;BA.debugLine="sports.add(\"Gymnastics Artistic\")";
+ //BA.debugLineNum = 1383;BA.debugLine="sports.add(\"Gymnastics Artistic\")";
 _sports.Add((Object)("Gymnastics Artistic"));
- //BA.debugLineNum = 1383;BA.debugLine="sports.add(\"Gymnastics Rhythmic\")";
+ //BA.debugLineNum = 1384;BA.debugLine="sports.add(\"Gymnastics Rhythmic\")";
 _sports.Add((Object)("Gymnastics Rhythmic"));
- //BA.debugLineNum = 1384;BA.debugLine="sports.add(\"Handball\")";
+ //BA.debugLineNum = 1385;BA.debugLine="sports.add(\"Handball\")";
 _sports.Add((Object)("Handball"));
- //BA.debugLineNum = 1386;BA.debugLine="sports.add(\"Judo\")";
+ //BA.debugLineNum = 1387;BA.debugLine="sports.add(\"Judo\")";
 _sports.Add((Object)("Judo"));
- //BA.debugLineNum = 1387;BA.debugLine="sports.add(\"Kayaking\")";
+ //BA.debugLineNum = 1388;BA.debugLine="sports.add(\"Kayaking\")";
 _sports.Add((Object)("Kayaking"));
- //BA.debugLineNum = 1388;BA.debugLine="sports.add(\"Motor Activity Training Program\")";
+ //BA.debugLineNum = 1389;BA.debugLine="sports.add(\"Motor Activity Training Program\")";
 _sports.Add((Object)("Motor Activity Training Program"));
- //BA.debugLineNum = 1389;BA.debugLine="sports.add(\"Netball\")";
+ //BA.debugLineNum = 1390;BA.debugLine="sports.add(\"Netball\")";
 _sports.Add((Object)("Netball"));
- //BA.debugLineNum = 1390;BA.debugLine="sports.add(\"Open Water Swimming\")";
+ //BA.debugLineNum = 1391;BA.debugLine="sports.add(\"Open Water Swimming\")";
 _sports.Add((Object)("Open Water Swimming"));
- //BA.debugLineNum = 1391;BA.debugLine="sports.add(\"Powerlifting\")";
+ //BA.debugLineNum = 1392;BA.debugLine="sports.add(\"Powerlifting\")";
 _sports.Add((Object)("Powerlifting"));
- //BA.debugLineNum = 1392;BA.debugLine="sports.add(\"Roller Skating\")";
+ //BA.debugLineNum = 1393;BA.debugLine="sports.add(\"Roller Skating\")";
 _sports.Add((Object)("Roller Skating"));
- //BA.debugLineNum = 1394;BA.debugLine="sports.add(\"Sailing\")";
+ //BA.debugLineNum = 1395;BA.debugLine="sports.add(\"Sailing\")";
 _sports.Add((Object)("Sailing"));
- //BA.debugLineNum = 1395;BA.debugLine="sports.add(\"Short Track Speed Skating\")";
+ //BA.debugLineNum = 1396;BA.debugLine="sports.add(\"Short Track Speed Skating\")";
 _sports.Add((Object)("Short Track Speed Skating"));
- //BA.debugLineNum = 1396;BA.debugLine="sports.add(\"Snowboarding\")";
+ //BA.debugLineNum = 1397;BA.debugLine="sports.add(\"Snowboarding\")";
 _sports.Add((Object)("Snowboarding"));
- //BA.debugLineNum = 1397;BA.debugLine="sports.add(\"Snowshoeing\")";
+ //BA.debugLineNum = 1398;BA.debugLine="sports.add(\"Snowshoeing\")";
 _sports.Add((Object)("Snowshoeing"));
- //BA.debugLineNum = 1399;BA.debugLine="sports.add(\"Softball\")";
+ //BA.debugLineNum = 1400;BA.debugLine="sports.add(\"Softball\")";
 _sports.Add((Object)("Softball"));
- //BA.debugLineNum = 1400;BA.debugLine="sports.add(\"Swimming\")";
+ //BA.debugLineNum = 1401;BA.debugLine="sports.add(\"Swimming\")";
 _sports.Add((Object)("Swimming"));
- //BA.debugLineNum = 1401;BA.debugLine="sports.add(\"Table Tennis\")";
+ //BA.debugLineNum = 1402;BA.debugLine="sports.add(\"Table Tennis\")";
 _sports.Add((Object)("Table Tennis"));
- //BA.debugLineNum = 1402;BA.debugLine="sports.add(\"Tennis\")";
+ //BA.debugLineNum = 1403;BA.debugLine="sports.add(\"Tennis\")";
 _sports.Add((Object)("Tennis"));
- //BA.debugLineNum = 1403;BA.debugLine="sports.add(\"Triathlon\")";
+ //BA.debugLineNum = 1404;BA.debugLine="sports.add(\"Triathlon\")";
 _sports.Add((Object)("Triathlon"));
- //BA.debugLineNum = 1404;BA.debugLine="sports.add(\"Volleyball\")";
+ //BA.debugLineNum = 1405;BA.debugLine="sports.add(\"Volleyball\")";
 _sports.Add((Object)("Volleyball"));
- //BA.debugLineNum = 1406;BA.debugLine="Return sports";
+ //BA.debugLineNum = 1407;BA.debugLine="Return sports";
 if (true) return _sports;
- //BA.debugLineNum = 1408;BA.debugLine="End Sub";
+ //BA.debugLineNum = 1409;BA.debugLine="End Sub";
 return null;
 }
 public static String  _process_globals() throws Exception{
@@ -368,10 +368,10 @@ _fx = new anywheresoftware.b4j.objects.JFX();
 return "";
 }
 public static boolean  _rand_booleanvalue() throws Exception{
- //BA.debugLineNum = 1341;BA.debugLine="Public Sub Rand_BooleanValue() As Boolean";
- //BA.debugLineNum = 1343;BA.debugLine="Return Rand_TrueorFalse";
+ //BA.debugLineNum = 1342;BA.debugLine="Public Sub Rand_BooleanValue() As Boolean";
+ //BA.debugLineNum = 1344;BA.debugLine="Return Rand_TrueorFalse";
 if (true) return _rand_trueorfalse();
- //BA.debugLineNum = 1345;BA.debugLine="End Sub";
+ //BA.debugLineNum = 1346;BA.debugLine="End Sub";
 return false;
 }
 public static String  _rand_dummytext(int _paragraphcount) throws Exception{
@@ -2445,10 +2445,10 @@ if (true) return BA.ObjectToString(_cfstringutility._randlistvalue(_names));
 return "";
 }
 public static String  _rand_ipaddress() throws Exception{
- //BA.debugLineNum = 1350;BA.debugLine="Public Sub Rand_IpAddress() As String";
- //BA.debugLineNum = 1352;BA.debugLine="Return  Rnd(190, 230) & \".\" & Rnd(13, 200) & \".\"";
+ //BA.debugLineNum = 1351;BA.debugLine="Public Sub Rand_IpAddress() As String";
+ //BA.debugLineNum = 1353;BA.debugLine="Return  Rnd(190, 230) & \".\" & Rnd(13, 200) & \".\"";
 if (true) return BA.NumberToString(anywheresoftware.b4a.keywords.Common.Rnd((int) (190),(int) (230)))+"."+BA.NumberToString(anywheresoftware.b4a.keywords.Common.Rnd((int) (13),(int) (200)))+"."+BA.NumberToString(anywheresoftware.b4a.keywords.Common.Rnd((int) (50),(int) (200)))+"."+BA.NumberToString(anywheresoftware.b4a.keywords.Common.Rnd((int) (75),(int) (200)));
- //BA.debugLineNum = 1354;BA.debugLine="End Sub";
+ //BA.debugLineNum = 1355;BA.debugLine="End Sub";
 return "";
 }
 public static String  _rand_lorem_ispum(int _paragraphcount) throws Exception{
@@ -2508,23 +2508,23 @@ if (true) return "+"+BA.NumberToString(_countrycode)+BA.NumberToString(_startswi
 return "";
 }
 public static String  _rand_sport_name() throws Exception{
- //BA.debugLineNum = 1411;BA.debugLine="Public Sub Rand_Sport_Name() As String";
- //BA.debugLineNum = 1413;BA.debugLine="Return CFStringUtility.RandListValue(MajorSportsL";
+ //BA.debugLineNum = 1412;BA.debugLine="Public Sub Rand_Sport_Name() As String";
+ //BA.debugLineNum = 1414;BA.debugLine="Return CFStringUtility.RandListValue(MajorSportsL";
 if (true) return BA.ObjectToString(_cfstringutility._randlistvalue(_majorsportslist()));
- //BA.debugLineNum = 1415;BA.debugLine="End Sub";
+ //BA.debugLineNum = 1416;BA.debugLine="End Sub";
 return "";
 }
 public static boolean  _rand_trueorfalse() throws Exception{
- //BA.debugLineNum = 1325;BA.debugLine="Public Sub Rand_TrueorFalse() As Boolean";
- //BA.debugLineNum = 1327;BA.debugLine="If Rnd( Rnd(1, 5), Rnd(6, 10))  < 6 Then";
+ //BA.debugLineNum = 1326;BA.debugLine="Public Sub Rand_TrueorFalse() As Boolean";
+ //BA.debugLineNum = 1328;BA.debugLine="If Rnd( Rnd(1, 5), Rnd(6, 10))  < 6 Then";
 if (anywheresoftware.b4a.keywords.Common.Rnd(anywheresoftware.b4a.keywords.Common.Rnd((int) (1),(int) (5)),anywheresoftware.b4a.keywords.Common.Rnd((int) (6),(int) (10)))<6) { 
- //BA.debugLineNum = 1329;BA.debugLine="Return True";
+ //BA.debugLineNum = 1330;BA.debugLine="Return True";
 if (true) return anywheresoftware.b4a.keywords.Common.True;
  }else {
- //BA.debugLineNum = 1333;BA.debugLine="Return False";
+ //BA.debugLineNum = 1334;BA.debugLine="Return False";
 if (true) return anywheresoftware.b4a.keywords.Common.False;
  };
- //BA.debugLineNum = 1337;BA.debugLine="End Sub";
+ //BA.debugLineNum = 1338;BA.debugLine="End Sub";
 return false;
 }
 public static String  _rand_yahoomail(boolean _withnumeric) throws Exception{

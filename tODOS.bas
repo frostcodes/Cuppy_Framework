@@ -12,12 +12,8 @@ Sub Class_Globals
 End Sub
 
  
-  'hANDLE CONTROL RESIZE EveNT FOR EXTERNAL use onresize()
-	 ' **  Later support deigner view scripts 
-	   ' **   Implement font libary to all  components
-	 
-	'** set focus to control on click...
-	   
+    ' **  Later support deigner view scripts 
+	  
  
 'ComboBox
  

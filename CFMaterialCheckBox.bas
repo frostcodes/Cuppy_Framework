@@ -9,10 +9,12 @@ Version=5.51
 #Event: CheckedChanged(value as int)
 #Event: MouseEntered(EventData As MouseEvent)
 #Event: MouseExited(EventData As MouseEvent)
+#Event: Resize (Width As Double, Height As Double)
 
 #RaisesSynchronousEvents: CheckedChanged
 #RaisesSynchronousEvents: MouseEntered
 #RaisesSynchronousEvents: MouseExited
+#RaisesSynchronousEvents: Resize
  
  'TODO: make font adjust when resized
 #Region Internal Segment
@@ -57,6 +59,8 @@ Private Sub Base_Resize (Width As Double, Height As Double)
 	
 	CheckboxPane.PrefHeight = Height
 	CheckedLabel.PrefHeight = Height
+	
+	CallSubDelayed3(mCallBack, mEventName & "_Resize", Width, Height)
 	 
 End Sub
 
@@ -76,7 +80,7 @@ End Sub
 
 Public Sub SetRotationX(angle As Float)
 	
-	CFControlsUtils.SetPaneRotationX(CheckboxPane, angle) 'rotate
+	CFControlsUtils.SetPaneRotation(CheckboxPane, angle) 'rotate
 	 
 End Sub
 

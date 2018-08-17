@@ -8,9 +8,11 @@ Version=5.51
 
 #Event: MousePressed (EventData As MouseEvent)
 #Event: PaneMousePressed (EventData As MouseEvent)
+#Event: Resize (Width As Double, Height As Double)
 
 #RaisesSynchronousEvents: MousePressed
 #RaisesSynchronousEvents: PaneMousePressed
+#RaisesSynchronousEvents: Resize
  
 #Region Internal Segment
 
@@ -39,6 +41,8 @@ End Sub
 
 Private Sub Base_Resize (Width As Double, Height As Double)
 	
+	CallSubDelayed3(mCallBack, mEventName & "_Resize", Width, Height)
+	
 End Sub
 
 Public Sub GetBase As Pane
@@ -60,8 +64,8 @@ End Sub
  
 Public Sub SetRotationX(angle As Float)
 	
-	CFControlsUtils.setRotationX(Label1, angle) 'rotate
-	CFControlsUtils.setPaneRotationX(InnerPane , angle) 'rotate
+	CFControlsUtils.setRotation(Label1, angle) 'rotate
+	CFControlsUtils.setPaneRotation(InnerPane , angle) 'rotate
 	 
 End Sub
 

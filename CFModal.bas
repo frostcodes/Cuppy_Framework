@@ -8,10 +8,16 @@ Version=5.51
  
 #Event: ModalBGPressed (EventData As MouseEvent)
 #Event: ModalPressed (EventData As MouseEvent)
-
+#Event: Resize (Width As Double, Height As Double)
+#Event: ModalPaneResize (Width As Double, Height As Double)
+#Event: ModalBgPaneResize (Width As Double, Height As Double)
+ 
 #RaisesSynchronousEvents: ModalBGPressed
 #RaisesSynchronousEvents: ModalPressed
-
+#RaisesSynchronousEvents: Resize
+#RaisesSynchronousEvents: ModalPaneResize
+#RaisesSynchronousEvents: ModalBgPaneResize
+  
 #Region Internal Segment
 
 Sub Class_Globals
@@ -31,15 +37,15 @@ End Sub
 Public Sub DesignerCreateView (Base As Pane, Lbl As Label, Props As Map)
 	mBase = Base
 	mBase.LoadLayout("CFModalUI")
-	'set using theme...
- 
-	
+	 
 End Sub
 
 Private Sub Base_Resize (Width As Double, Height As Double)
  
 	ModalBgPane.PrefWidth = Width
 	ModalBgPane.PrefHeight =  Height
+	
+	CallSubDelayed3(mCallBack, mEventName & "_Resize", Width, Height)
 	 
 End Sub
 
@@ -59,7 +65,7 @@ End Sub
   
 Public Sub SetRotationX(angle As Float)
 	
-	CFControlsUtils.setPaneRotationX(ModalPane, angle) 'rotate
+	CFControlsUtils.setPaneRotation(ModalPane, angle) 'rotate
 	 
 End Sub
   
@@ -136,5 +142,17 @@ Private Sub ModalPane_MousePressed (EventData As MouseEvent)
 	ModalPane.RequestFocus 'set focus
 	
 	CallSubDelayed2(mCallBack, mEventName & "_ModalPressed", EventData)  
+	
+End Sub
+
+Sub ModalPane_Resize (Width As Double, Height As Double)
+	
+	CallSubDelayed3(mCallBack, mEventName & "_ModalPaneResize", Width, Height)
+	
+End Sub
+
+Sub ModalBgPane_Resize (Width As Double, Height As Double)
+	
+	CallSubDelayed3(mCallBack, mEventName & "_ModalBgPaneResize", Width, Height)
 	
 End Sub

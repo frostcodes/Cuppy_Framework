@@ -7,8 +7,10 @@ Version=6.3
 'Custom View class
  
 #Event: CheckedChanged(value as int)
-
+#Event: Resize (Width As Double, Height As Double)
+ 
 #RaisesSynchronousEvents: CheckedChanged
+#RaisesSynchronousEvents: Resize
  
  'TODO: make font adjust when resized
 #Region Internal Segment
@@ -45,6 +47,8 @@ Private Sub Base_Resize (Width As Double, Height As Double)
   
 	ToggleButton.PrefHeight = Height
 	ToggleButton.PrefWidth = Width
+	
+	CallSubDelayed3(mCallBack, mEventName & "_Resize", Width, Height)
 	 
 End Sub
 
@@ -64,7 +68,7 @@ End Sub
 
 Public Sub SetRotationX(angle As Float)
 	
-	CFControlsUtils.setRotationX(ToggleButton, angle) 'rotate
+	CFControlsUtils.setRotation(ToggleButton, angle) 'rotate
 	 
 End Sub
 
