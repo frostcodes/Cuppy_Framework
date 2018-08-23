@@ -143,8 +143,8 @@ _cfcontrolsutils._seteffect((anywheresoftware.b4j.objects.NodeWrapper.ConcreteNo
  //BA.debugLineNum = 88;BA.debugLine="End Sub";
 return "";
 }
-public String  _setrotationx(float _angle) throws Exception{
- //BA.debugLineNum = 64;BA.debugLine="Public Sub SetRotationX(angle As Float)";
+public String  _setrotation(float _angle) throws Exception{
+ //BA.debugLineNum = 64;BA.debugLine="Public Sub setRotation(angle As Float)";
  //BA.debugLineNum = 66;BA.debugLine="CFControlsUtils.setRotation(InnerLabel, angle) 'r";
 _cfcontrolsutils._setrotation((anywheresoftware.b4j.objects.NodeWrapper.ConcreteNodeWrapper) anywheresoftware.b4a.AbsObjectWrapper.ConvertToWrapper(new anywheresoftware.b4j.objects.NodeWrapper.ConcreteNodeWrapper(), (javafx.scene.Node)(_innerlabel.getObject())),_angle);
  //BA.debugLineNum = 68;BA.debugLine="End Sub";

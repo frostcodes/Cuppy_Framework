@@ -200,8 +200,8 @@ _cfcontrolsutils._seteffect((anywheresoftware.b4j.objects.NodeWrapper.ConcreteNo
  //BA.debugLineNum = 90;BA.debugLine="End Sub";
 return "";
 }
-public String  _setrotationx(float _angle) throws Exception{
- //BA.debugLineNum = 68;BA.debugLine="Public Sub SetRotationX(angle As Float)";
+public String  _setrotation(float _angle) throws Exception{
+ //BA.debugLineNum = 68;BA.debugLine="Public Sub setRotation(angle As Float)";
  //BA.debugLineNum = 70;BA.debugLine="CFControlsUtils.SetRotation(CheckboxPane, angle)";
 _cfcontrolsutils._setrotation((anywheresoftware.b4j.objects.NodeWrapper.ConcreteNodeWrapper) anywheresoftware.b4a.AbsObjectWrapper.ConvertToWrapper(new anywheresoftware.b4j.objects.NodeWrapper.ConcreteNodeWrapper(), (javafx.scene.Node)(_checkboxpane.getObject())),_angle);
  //BA.debugLineNum = 72;BA.debugLine="End Sub";

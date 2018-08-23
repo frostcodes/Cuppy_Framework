@@ -73,8 +73,8 @@ _mbase = _base;
 _mbase.LoadLayout(ba,"CFMaterialSquareFABUI");
  //BA.debugLineNum = 33;BA.debugLine="SetBg(CFStyleManager.DefaultTheme.Get(\"accent\"))";
 _setbg(BA.ObjectToString(_cfstylemanager._defaulttheme.Get((Object)("accent"))));
- //BA.debugLineNum = 34;BA.debugLine="SetRotationX(135) 'rotate by default";
-_setrotationx((float) (135));
+ //BA.debugLineNum = 34;BA.debugLine="setRotation(135) 'rotate by default";
+_setrotation((float) (135));
  //BA.debugLineNum = 35;BA.debugLine="End Sub";
 return "";
 }
@@ -153,8 +153,8 @@ _cfcontrolsutils._seteffect((anywheresoftware.b4j.objects.NodeWrapper.ConcreteNo
  //BA.debugLineNum = 85;BA.debugLine="End Sub";
 return "";
 }
-public String  _setrotationx(float _angle) throws Exception{
- //BA.debugLineNum = 61;BA.debugLine="Public Sub SetRotationX(angle As Float)";
+public String  _setrotation(float _angle) throws Exception{
+ //BA.debugLineNum = 61;BA.debugLine="Public Sub setRotation(angle As Float)";
  //BA.debugLineNum = 63;BA.debugLine="CFControlsUtils.setRotation(FAB_Btn, angle) 'rota";
 _cfcontrolsutils._setrotation((anywheresoftware.b4j.objects.NodeWrapper.ConcreteNodeWrapper) anywheresoftware.b4a.AbsObjectWrapper.ConvertToWrapper(new anywheresoftware.b4j.objects.NodeWrapper.ConcreteNodeWrapper(), (javafx.scene.Node)(_fab_btn.getObject())),_angle);
  //BA.debugLineNum = 65;BA.debugLine="End Sub";

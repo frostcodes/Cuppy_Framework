@@ -78,7 +78,7 @@ Public Sub SetBg(color As String)
  
 End Sub
 
-Public Sub SetRotationX(angle As Float)
+Public Sub setRotation(angle As Float)
 	
 	CFControlsUtils.SetRotation(CheckboxPane, angle) 'rotate
 	 
