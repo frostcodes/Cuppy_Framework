@@ -63,37 +63,37 @@ End Sub
 
 Public Sub SetBg(color As String)
  
-	CFControlsUtils.SetPaneBG( ProgressPane, color)
+	CFControlsUtils.SetBG( ProgressPane, color)
  
 End Sub
 
 Public Sub SetRotationX(angle As Float)
 	
-	CFControlsUtils.setPaneRotation(ProgressPane, angle) 'rotate
+	CFControlsUtils.SetRotation(ProgressPane, angle) 'rotate
 	 
 End Sub
 
 Public Sub SetBorder(color As String , width As Int)
 	
-	CFControlsUtils.setPaneBorder(ProgressPane, color, width)
+	CFControlsUtils.SetBorder(ProgressPane, color, width)
 
 End Sub
  
 Public Sub SetBorderRadius(radius As Int)
 	
-	CFControlsUtils.setPaneBorderRadius(ProgressPane, radius)
+	CFControlsUtils.SetBorderRadius(ProgressPane, radius)
 	
 End Sub
  
 Public Sub SetPaneEffect(effect As String)
 	
-	CFControlsUtils.setPaneEffect(ProgressPane, effect)
+	CFControlsUtils.SetEffect(ProgressPane, effect)
 	
 End Sub
 
 Public Sub RemoveEffects()
 	
-	CFControlsUtils.removePaneEffect(ProgressPane)
+	CFControlsUtils.RemoveEffect(ProgressPane)
 	
 End Sub
 
@@ -101,7 +101,7 @@ End Sub
   
 Public Sub SetProgressColor(color As String)
   	
-	CFControlsUtils.SetPaneBG( ProgressBar, color)
+	CFControlsUtils.SetBG( ProgressBar, color)
 	
 End Sub
 

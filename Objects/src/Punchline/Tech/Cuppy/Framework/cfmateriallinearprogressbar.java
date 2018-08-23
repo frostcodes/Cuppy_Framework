@@ -118,50 +118,50 @@ return "";
 }
 public String  _removeeffects() throws Exception{
  //BA.debugLineNum = 88;BA.debugLine="Public Sub RemoveEffects()";
- //BA.debugLineNum = 90;BA.debugLine="CFControlsUtils.removePaneEffect(ProgressPane)";
-_cfcontrolsutils._removepaneeffect(_progresspane);
+ //BA.debugLineNum = 90;BA.debugLine="CFControlsUtils.RemoveEffect(ProgressPane)";
+_cfcontrolsutils._removeeffect((anywheresoftware.b4j.objects.NodeWrapper.ConcreteNodeWrapper) anywheresoftware.b4a.AbsObjectWrapper.ConvertToWrapper(new anywheresoftware.b4j.objects.NodeWrapper.ConcreteNodeWrapper(), (javafx.scene.Node)(_progresspane.getObject())));
  //BA.debugLineNum = 92;BA.debugLine="End Sub";
 return "";
 }
 public String  _setbg(String _color) throws Exception{
  //BA.debugLineNum = 58;BA.debugLine="Public Sub SetBg(color As String)";
- //BA.debugLineNum = 60;BA.debugLine="CFControlsUtils.SetPaneBG( ProgressPane, color)";
-_cfcontrolsutils._setpanebg((anywheresoftware.b4j.objects.NodeWrapper.ConcreteNodeWrapper) anywheresoftware.b4a.AbsObjectWrapper.ConvertToWrapper(new anywheresoftware.b4j.objects.NodeWrapper.ConcreteNodeWrapper(), (javafx.scene.Node)(_progresspane.getObject())),_color);
+ //BA.debugLineNum = 60;BA.debugLine="CFControlsUtils.SetBG( ProgressPane, color)";
+_cfcontrolsutils._setbg((anywheresoftware.b4j.objects.NodeWrapper.ConcreteNodeWrapper) anywheresoftware.b4a.AbsObjectWrapper.ConvertToWrapper(new anywheresoftware.b4j.objects.NodeWrapper.ConcreteNodeWrapper(), (javafx.scene.Node)(_progresspane.getObject())),_color);
  //BA.debugLineNum = 62;BA.debugLine="End Sub";
 return "";
 }
 public String  _setborder(String _color,int _width) throws Exception{
  //BA.debugLineNum = 70;BA.debugLine="Public Sub SetBorder(color As String , width As In";
- //BA.debugLineNum = 72;BA.debugLine="CFControlsUtils.setPaneBorder(ProgressPane, color";
-_cfcontrolsutils._setpaneborder(_progresspane,_color,_width);
+ //BA.debugLineNum = 72;BA.debugLine="CFControlsUtils.SetBorder(ProgressPane, color, wi";
+_cfcontrolsutils._setborder((anywheresoftware.b4j.objects.NodeWrapper.ConcreteNodeWrapper) anywheresoftware.b4a.AbsObjectWrapper.ConvertToWrapper(new anywheresoftware.b4j.objects.NodeWrapper.ConcreteNodeWrapper(), (javafx.scene.Node)(_progresspane.getObject())),_color,_width);
  //BA.debugLineNum = 74;BA.debugLine="End Sub";
 return "";
 }
 public String  _setborderradius(int _radius) throws Exception{
  //BA.debugLineNum = 76;BA.debugLine="Public Sub SetBorderRadius(radius As Int)";
- //BA.debugLineNum = 78;BA.debugLine="CFControlsUtils.setPaneBorderRadius(ProgressPane,";
-_cfcontrolsutils._setpaneborderradius(_progresspane,_radius);
+ //BA.debugLineNum = 78;BA.debugLine="CFControlsUtils.SetBorderRadius(ProgressPane, rad";
+_cfcontrolsutils._setborderradius((anywheresoftware.b4j.objects.NodeWrapper.ConcreteNodeWrapper) anywheresoftware.b4a.AbsObjectWrapper.ConvertToWrapper(new anywheresoftware.b4j.objects.NodeWrapper.ConcreteNodeWrapper(), (javafx.scene.Node)(_progresspane.getObject())),_radius);
  //BA.debugLineNum = 80;BA.debugLine="End Sub";
 return "";
 }
 public String  _setpaneeffect(String _effect) throws Exception{
  //BA.debugLineNum = 82;BA.debugLine="Public Sub SetPaneEffect(effect As String)";
- //BA.debugLineNum = 84;BA.debugLine="CFControlsUtils.setPaneEffect(ProgressPane, effec";
-_cfcontrolsutils._setpaneeffect(_progresspane,_effect);
+ //BA.debugLineNum = 84;BA.debugLine="CFControlsUtils.SetEffect(ProgressPane, effect)";
+_cfcontrolsutils._seteffect((anywheresoftware.b4j.objects.NodeWrapper.ConcreteNodeWrapper) anywheresoftware.b4a.AbsObjectWrapper.ConvertToWrapper(new anywheresoftware.b4j.objects.NodeWrapper.ConcreteNodeWrapper(), (javafx.scene.Node)(_progresspane.getObject())),_effect);
  //BA.debugLineNum = 86;BA.debugLine="End Sub";
 return "";
 }
 public String  _setprogresscolor(String _color) throws Exception{
  //BA.debugLineNum = 96;BA.debugLine="Public Sub SetProgressColor(color As String)";
- //BA.debugLineNum = 98;BA.debugLine="CFControlsUtils.SetPaneBG( ProgressBar, color)";
-_cfcontrolsutils._setpanebg((anywheresoftware.b4j.objects.NodeWrapper.ConcreteNodeWrapper) anywheresoftware.b4a.AbsObjectWrapper.ConvertToWrapper(new anywheresoftware.b4j.objects.NodeWrapper.ConcreteNodeWrapper(), (javafx.scene.Node)(_progressbar.getObject())),_color);
+ //BA.debugLineNum = 98;BA.debugLine="CFControlsUtils.SetBG( ProgressBar, color)";
+_cfcontrolsutils._setbg((anywheresoftware.b4j.objects.NodeWrapper.ConcreteNodeWrapper) anywheresoftware.b4a.AbsObjectWrapper.ConvertToWrapper(new anywheresoftware.b4j.objects.NodeWrapper.ConcreteNodeWrapper(), (javafx.scene.Node)(_progressbar.getObject())),_color);
  //BA.debugLineNum = 100;BA.debugLine="End Sub";
 return "";
 }
 public String  _setrotationx(float _angle) throws Exception{
  //BA.debugLineNum = 64;BA.debugLine="Public Sub SetRotationX(angle As Float)";
- //BA.debugLineNum = 66;BA.debugLine="CFControlsUtils.setPaneRotation(ProgressPane, ang";
-_cfcontrolsutils._setpanerotation(_progresspane,_angle);
+ //BA.debugLineNum = 66;BA.debugLine="CFControlsUtils.SetRotation(ProgressPane, angle)";
+_cfcontrolsutils._setrotation((anywheresoftware.b4j.objects.NodeWrapper.ConcreteNodeWrapper) anywheresoftware.b4a.AbsObjectWrapper.ConvertToWrapper(new anywheresoftware.b4j.objects.NodeWrapper.ConcreteNodeWrapper(), (javafx.scene.Node)(_progresspane.getObject())),_angle);
  //BA.debugLineNum = 68;BA.debugLine="End Sub";
 return "";
 }

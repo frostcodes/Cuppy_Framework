@@ -67,37 +67,37 @@ End Sub
 
 Public Sub SetBg(color As String)
  
-	CFControlsUtils.SetPaneBG( CheckboxPane, color)
+	CFControlsUtils.SetBG( CheckboxPane, color)
  
 End Sub
 
 Public Sub SetRotationX(angle As Float)
 	
-	CFControlsUtils.setPaneRotation(CheckboxPane, angle) 'rotate
+	CFControlsUtils.SetRotation(CheckboxPane, angle) 'rotate
 	 
 End Sub
 
 Public Sub SetBorder(color As String , width As Int)
 	
-	CFControlsUtils.setPaneBorder(CheckboxPane, color, width)
+	CFControlsUtils.SetBorder(CheckboxPane, color, width)
 
 End Sub
  
 Public Sub SetBorderRadius(radius As Int)
 	
-	CFControlsUtils.setPaneBorderRadius(CheckboxPane, radius)
+	CFControlsUtils.SetBorderRadius(CheckboxPane, radius)
 	
 End Sub
  
 Public Sub SetPaneEffect(effect As String)
 	
-	CFControlsUtils.setPaneEffect(CheckboxPane, effect)
+	CFControlsUtils.SetEffect(CheckboxPane, effect)
 	
 End Sub
 
 Public Sub RemoveEffects()
 	
-	CFControlsUtils.removePaneEffect(CheckboxPane)
+	CFControlsUtils.RemoveEffect(CheckboxPane)
 	
 End Sub
 
@@ -105,7 +105,7 @@ End Sub
   
 Public Sub SetCheckedColor(color As String)
   	
-	CFControlsUtils.SetPaneBG( CheckedPane, color)
+	CFControlsUtils.SetBG( CheckedPane, color)
 	
 End Sub
  

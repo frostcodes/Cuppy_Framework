@@ -69,37 +69,37 @@ End Sub
 
 Public Sub SetBg(color As String)
  
-	CFControlsUtils.SetPaneBG( SwitchPane, color)
+	CFControlsUtils.SetBG( SwitchPane, color)
  
 End Sub
 
 Public Sub SetRotationX(angle As Float)
 	
-	CFControlsUtils.setPaneRotation(SwitchPane, angle) 'rotate
+	CFControlsUtils.SetRotation(SwitchPane, angle) 'rotate
 	 
 End Sub
 
 Public Sub SetBorder(color As String , width As Int)
 	
-	CFControlsUtils.setPaneBorder(SwitchPane, color, width)
+	CFControlsUtils.SetBorder(SwitchPane, color, width)
 
 End Sub
  
 Public Sub SetBorderRadius(radius As Int)
 	
-	CFControlsUtils.setPaneBorderRadius(SwitchPane, radius)
+	CFControlsUtils.SetBorderRadius(SwitchPane, radius)
 	
 End Sub
  
 Public Sub SetPaneEffect(effect As String)
 	
-	CFControlsUtils.setPaneEffect(SwitchPane, effect)
+	CFControlsUtils.SetEffect(SwitchPane, effect)
 	
 End Sub
 
 Public Sub RemoveEffects()
 	
-	CFControlsUtils.removePaneEffect(SwitchPane)
+	CFControlsUtils.RemoveEffect(SwitchPane)
 	
 End Sub
 
@@ -107,7 +107,7 @@ End Sub
   
 Public Sub SetCheckedColor(color As String)
   	
-	CFControlsUtils.SetPaneBG( SwitchBtn, color)
+	CFControlsUtils.SetBG( SwitchBtn, color)
 	
 End Sub
  
@@ -123,7 +123,7 @@ Public Sub SetCheckState(value As Int)
 	
 		'Fade effect
 		SwitchPane.SetAlphaAnimated(200, 0.6 )
-		SetBg(CFControlsUtils.getPaneBG(SwitchBtn))
+		SetBg(CFControlsUtils.GetBG(SwitchBtn))
 		
 		SwitchBtn.SetLayoutAnimated(200 , 23 , SwitchBtn.Top, SwitchBtn.PrefWidth, SwitchBtn.PrefWidth)
 		

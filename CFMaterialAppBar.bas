@@ -70,28 +70,28 @@ End Sub
 Public Sub SetBg(color As String)
 	
 	CFControlsUtils.SetBG( Label1,  color)
-	CFControlsUtils.SetPaneBG( InnerPane, color)
+	CFControlsUtils.SetBG( InnerPane, color)
  
 End Sub
  
 Public Sub setRotation(angle As Float)
 	
 	CFControlsUtils.setRotation(Label1, angle) 'rotate
-	CFControlsUtils.setPaneRotation(InnerPane , angle) 'rotate
+	CFControlsUtils.setRotation(InnerPane , angle) 'rotate
 	 
 End Sub
 
 Public Sub SetBorder(color As String , width As Int)
 	
 	CFControlsUtils.setBorder(Label1, color, width)
-	CFControlsUtils.setPaneBorder(InnerPane, color, width)
+	CFControlsUtils.setBorder(InnerPane, color, width)
 	
 End Sub
 
 Public Sub SetBorderRadius(radius As Int)
 	
 	CFControlsUtils.setBorderRadius(Label1, radius)
-	CFControlsUtils.setPaneBorderRadius(InnerPane, radius)
+	CFControlsUtils.setBorderRadius(InnerPane, radius)
 	
 End Sub
 

@@ -59,39 +59,39 @@ End Sub
  
 Public Sub SetBg(color As String)
  
-	CFControlsUtils.setPaneBG( ModalPane, color)
+	CFControlsUtils.setBG( ModalPane, color)
  
 End Sub
   
 Public Sub SetRotationX(angle As Float)
 	
-	CFControlsUtils.setPaneRotation(ModalPane, angle) 'rotate
+	CFControlsUtils.setRotation(ModalPane, angle) 'rotate
 	 
 End Sub
   
 Public Sub SetBorder(color As String , width As Int)
 	
-	CFControlsUtils.setPaneBorder(ModalPane, color, width)
+	CFControlsUtils.setBorder(ModalPane, color, width)
 
 End Sub
 
 
 Public Sub SetBorderRadius(radius As Int)
 	
-	CFControlsUtils.setPaneBorderRadius(ModalPane, radius)
+	CFControlsUtils.setBorderRadius(ModalPane, radius)
 	
 End Sub
 
 
 Public Sub SetEffect(effect As String)
 	
-	CFControlsUtils.setPaneEffect(ModalPane, effect)
+	CFControlsUtils.setEffect(ModalPane, effect)
 	
 End Sub
 
 Public Sub RemoveEffects()
 	
-	CFControlsUtils.removePaneEffect(ModalPane)
+	CFControlsUtils.RemoveEffect(ModalPane)
 	
 End Sub
 
