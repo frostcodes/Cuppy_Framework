@@ -78,19 +78,18 @@ End Sub
 Public Sub RemoveEffect(controlObj As Control)
 	 
 	CSSUtils.SetStyleProperty(controlObj, "-fx-effect" ,  "none")
-	
-	
+	 
 End Sub
 
 'Sets a Pane Background color
-Public Sub SetPaneBG(PaneObj As Pane, color As String)
+Public Sub SetPaneBG(PaneObj As Node, color As String)
 	 
 	CSSUtils.SetStyleProperty( PaneObj, "-fx-background-color", color)
 	 
 End Sub
 
 'Sets a Control Background color
-Public Sub SetBG(controlObj As Control, color As String)
+Public Sub SetBG(controlObj As Node, color As String)
 	 
 	CSSUtils.SetStyleProperty( controlObj, "-fx-background-color", color)
 	 

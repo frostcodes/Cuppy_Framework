@@ -14,10 +14,10 @@ End Sub
 Public Sub Initialize
 
 End Sub
+	
+'Return a map of available themes ...
 
 Public Sub ThemesList() As Map
-	
-	'returns a map of available themes ...
 	
 	Private AvailableThemes As Map
 	AvailableThemes.Initialize
@@ -122,7 +122,4 @@ Private Sub DarkTheme As Map
 	 
 End Sub
 
-#End Region
- 
-
-
+#End Region 

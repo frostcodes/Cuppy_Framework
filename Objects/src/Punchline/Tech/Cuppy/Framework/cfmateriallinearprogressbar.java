@@ -126,7 +126,7 @@ return "";
 public String  _setbg(String _color) throws Exception{
  //BA.debugLineNum = 58;BA.debugLine="Public Sub SetBg(color As String)";
  //BA.debugLineNum = 60;BA.debugLine="CFControlsUtils.SetPaneBG( ProgressPane, color)";
-_cfcontrolsutils._setpanebg(_progresspane,_color);
+_cfcontrolsutils._setpanebg((anywheresoftware.b4j.objects.NodeWrapper.ConcreteNodeWrapper) anywheresoftware.b4a.AbsObjectWrapper.ConvertToWrapper(new anywheresoftware.b4j.objects.NodeWrapper.ConcreteNodeWrapper(), (javafx.scene.Node)(_progresspane.getObject())),_color);
  //BA.debugLineNum = 62;BA.debugLine="End Sub";
 return "";
 }
@@ -154,7 +154,7 @@ return "";
 public String  _setprogresscolor(String _color) throws Exception{
  //BA.debugLineNum = 96;BA.debugLine="Public Sub SetProgressColor(color As String)";
  //BA.debugLineNum = 98;BA.debugLine="CFControlsUtils.SetPaneBG( ProgressBar, color)";
-_cfcontrolsutils._setpanebg(_progressbar,_color);
+_cfcontrolsutils._setpanebg((anywheresoftware.b4j.objects.NodeWrapper.ConcreteNodeWrapper) anywheresoftware.b4a.AbsObjectWrapper.ConvertToWrapper(new anywheresoftware.b4j.objects.NodeWrapper.ConcreteNodeWrapper(), (javafx.scene.Node)(_progressbar.getObject())),_color);
  //BA.debugLineNum = 100;BA.debugLine="End Sub";
 return "";
 }

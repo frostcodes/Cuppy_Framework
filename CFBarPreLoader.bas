@@ -15,8 +15,9 @@ Version=5.51
 #RaisesSynchronousEvents: AnimationStarted
 #RaisesSynchronousEvents: AnimationStopped
 #RaisesSynchronousEvents: Resize
-'
-' 
+
+#DesignerProperty: Key: AnimationTime, DisplayName: Animation Time, FieldType: Int, DefaultValue: 400, MinRange: 100, MaxRange: 5000, Description: Time used to complete one animation cycle
+
 '#Event: MousePressed (EventData As MouseEvent)
 
 '#RaisesSynchronousEvents: MousePressed
@@ -35,6 +36,7 @@ Sub Class_Globals
 	Private Pane1 As Pane
 	Private Pane2 As Pane
 	Private Pane3 As Pane
+	Private AnimationTime As Int = 400
 	 
 End Sub
 
@@ -53,9 +55,11 @@ Public Sub DesignerCreateView (Base As Pane, Lbl As Label, Props As Map)
 	'setTextColor(StyleManager.DefaultTheme.Get("primary_text"))
 	'InnerLabel.Font = StyleManager.SelectFont("Light", 12)
 	
-	timer1.Initialize("Timer1", 400)
-	timer2.Initialize("Timer2", 400)
-	timer3.Initialize("Timer3", 400)
+	setAnimationTime(Props.get("AnimationTime"))
+	
+	timer1.Initialize("Timer1", AnimationTime)
+	timer2.Initialize("Timer2", AnimationTime)
+	timer3.Initialize("Timer3", AnimationTime)
 	
 	 Start
  
@@ -99,50 +103,37 @@ Private Sub Timer3_Tick
 End Sub
 
 #Region Actions and Effects
- 
-Public Sub SetBg(color As String)
- 
-'	ControlsUtils.SetBg( InnerLabel, color)
- 
-End Sub
-
-Public Sub SetTextColor(color As String)
- 
-'	ControlsUtils.setTextColor (InnerLabel, color)
- 
-End Sub
-
-Public Sub SetRotationX(angle As Float)
-	
-'	ControlsUtils.setRotationX(InnerLabel, angle) 'rotate
-	 
-End Sub
-  
-Public Sub SetBorder(color As String , width As Int)
-	
-'	ControlsUtils.setBorder(InnerLabel, color, width)
-
-End Sub
-
-
-Public Sub SetBorderRadius(radius As Int)
-	
-'	ControlsUtils.setBorderRadius(InnerLabel, radius)
-	
-End Sub
-
-
-Public Sub SetEffect(effect As String)
-	
-'	ControlsUtils.setEffect(InnerLabel, effect)
-	
-End Sub
-
-Public Sub RemoveEffects()
-	
-'	ControlsUtils.removeEffect(InnerLabel)
-	
-End Sub
+' 
+'Public Sub SetBg(color As String)
+' 
+'	CFControlsUtils.SetBg( mBase, color)
+' 
+'End Sub
+' 
+'
+'Public Sub SetRotation(angle As Float)
+'	
+'	CFControlsUtils.setRotation(mBase, angle) 'rotate
+'	 
+'End Sub
+'  
+'Public Sub SetBorder(color As String , width As Int)
+'
+'	CFControlsUtils.setBorder(mBase, color, width)
+'
+'End Sub
+' 
+'Public Sub SetEffect(effect As String)
+'	
+'	CFControlsUtils.setEffect(mBase, effect)
+'	
+'End Sub
+'
+'Public Sub RemoveEffects()
+'	
+'	CFControlsUtils.removeEffect(mBase)
+'	
+'End Sub
 
 #End Region
 
@@ -177,6 +168,33 @@ Public Sub Stop()
 	EnableTimers(False)
 	CallSubDelayed( mCallBack, mEventName & "_AnimationStopped" )
 
+End Sub
+
+'Set the time required
+'For one cycle of the animation
+Public Sub setAnimationTime(TimeInMS As Int)
+	
+	If  TimeInMS > 5000 Or TimeInMS < 100 Then
+		
+		LogError($"Bar Preloader Animation Time can't be 
+		greater than 5000 or less  than 100. Reseting time to 400 MS"$)
+		
+		AnimationTime = 400
+		
+		Else
+		
+		AnimationTime = TimeInMS
+			
+	End If
+	 
+End Sub
+
+'Get the current time reuired
+'for one cycle of the animation
+Public Sub getAnimationTime As Int 
+	
+	Return AnimationTime
+	
 End Sub
  
 #Else

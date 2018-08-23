@@ -144,7 +144,7 @@ return "";
 public String  _setbg(String _color) throws Exception{
  //BA.debugLineNum = 62;BA.debugLine="Public Sub SetBg(color As String)";
  //BA.debugLineNum = 64;BA.debugLine="CFControlsUtils.SetPaneBG( CheckboxPane, color)";
-_cfcontrolsutils._setpanebg(_checkboxpane,_color);
+_cfcontrolsutils._setpanebg((anywheresoftware.b4j.objects.NodeWrapper.ConcreteNodeWrapper) anywheresoftware.b4a.AbsObjectWrapper.ConvertToWrapper(new anywheresoftware.b4j.objects.NodeWrapper.ConcreteNodeWrapper(), (javafx.scene.Node)(_checkboxpane.getObject())),_color);
  //BA.debugLineNum = 66;BA.debugLine="End Sub";
 return "";
 }
@@ -165,7 +165,7 @@ return "";
 public String  _setcheckedcolor(String _color) throws Exception{
  //BA.debugLineNum = 100;BA.debugLine="Public Sub SetCheckedColor(color As String)";
  //BA.debugLineNum = 102;BA.debugLine="CFControlsUtils.SetPaneBG( CheckedPane, color)";
-_cfcontrolsutils._setpanebg(_checkedpane,_color);
+_cfcontrolsutils._setpanebg((anywheresoftware.b4j.objects.NodeWrapper.ConcreteNodeWrapper) anywheresoftware.b4a.AbsObjectWrapper.ConvertToWrapper(new anywheresoftware.b4j.objects.NodeWrapper.ConcreteNodeWrapper(), (javafx.scene.Node)(_checkedpane.getObject())),_color);
  //BA.debugLineNum = 104;BA.debugLine="End Sub";
 return "";
 }

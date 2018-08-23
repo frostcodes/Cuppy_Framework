@@ -10,7 +10,7 @@ Sub Process_Globals
 	
 End Sub
  
-'Return the current PackageName
+'Return the current Package Name
 'FROM: https://www.b4x.com/android/forum/threads/configure-tooltip-timings.76298/
 Public Sub GetPackageName(Module As Object) As String
 	Dim ModJo As JavaObject = Module

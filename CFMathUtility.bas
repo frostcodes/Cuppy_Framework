@@ -154,6 +154,7 @@ Public Sub Exp(arg As Double) As Double
 	Return Power(Exponential_Equivalent, arg)
 	
 End Sub
+
 'Hyperbolic tangent of a number,
 'which is equal to sinh(x)/cosh(x).
 Public Sub Tanh(number As Double) As Double
@@ -214,8 +215,8 @@ Public Sub Hypot(x As Double, y As Double) As Double
 End Sub
  
 'Calculate the average of a list numbers
-'data Is the List of numbers to calculate their average
-'RoundUp = should value be rounded up or not
+'data = is the List of numbers to calculate their average
+'roundUp = should value be rounded up or not
 Public Sub NumbersAverage(data As List ,roundUp As Boolean) As Double
 
 	Dim total As Int = 0
@@ -244,7 +245,7 @@ Public Sub NumbersAverage(data As List ,roundUp As Boolean) As Double
 End Sub
 
 'Calculate the average of a list numbers
-'data Is the List of numbers to calculate their average
+'data = is the List of numbers to calculate their average
 'NOTE: result is automatically rounded up
 Public Sub NumbersAverage2(data As List) As Double
 	
