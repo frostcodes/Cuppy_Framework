@@ -60,37 +60,37 @@ End Sub
 
 Public Sub SetBg(color As String)
  
-	CFControlsUtils.SetPaneBG( InnerCard, color)
+	CFControlsUtils.SetBG( InnerCard, color)
  
 End Sub
 
-Public Sub SetRotationX(angle As Float)
+Public Sub setRotation(angle As Float)
 	
-	CFControlsUtils.setPaneRotation(InnerCard, angle) 'rotate
+	CFControlsUtils.setRotation(InnerCard, angle) 'rotate
 	 
 End Sub
  
 Public Sub SetBorder(color As String , width As Int)
 	
-	CFControlsUtils.setPaneBorder(InnerCard, color, width)
+	CFControlsUtils.setBorder(InnerCard, color, width)
 
 End Sub
   
 Public Sub SetBorderRadius(radius As Int)
 	
-	CFControlsUtils.setPaneBorderRadius(InnerCard, radius)
+	CFControlsUtils.setBorderRadius(InnerCard, radius)
 	
 End Sub
 
 Public Sub SetPaneEffect(effect As String)
 	
-	CFControlsUtils.setPaneEffect(InnerCard, effect)
+	CFControlsUtils.setEffect(InnerCard, effect)
 	
 End Sub
 
 Public Sub RemoveEffects()
 	
-	CFControlsUtils.removePaneEffect(InnerCard)
+	CFControlsUtils.removeEffect(InnerCard)
 	
 End Sub
 

@@ -77,7 +77,7 @@ Public Sub SelectTheme(theme As String)
 End Sub
 
 'Allows you to load your Theme from a file 
-'This Returns a map of your theme
+'This returns a map of your theme
 'which you can reuse to set theme in your program
 '
 'NOTE: themes file are checked to validate that
@@ -140,7 +140,7 @@ Public Sub ExportTheme(theme As String , Dir As String, FileName As String)
 	
 	Else
 		
-		LogError("Could not export theme(" & theme & "). Please check the Theme name")
+		LogError("Could not export theme(" & theme & "). Please check the Theme name!")
 		ExitApplication
 		
 	End If

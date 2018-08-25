@@ -134,43 +134,43 @@ return "";
 }
 public String  _removeeffects() throws Exception{
  //BA.debugLineNum = 85;BA.debugLine="Public Sub RemoveEffects()";
- //BA.debugLineNum = 87;BA.debugLine="CFControlsUtils.removePaneEffect(InnerCard)";
-_cfcontrolsutils._removepaneeffect(_innercard);
+ //BA.debugLineNum = 87;BA.debugLine="CFControlsUtils.removeEffect(InnerCard)";
+_cfcontrolsutils._removeeffect((anywheresoftware.b4j.objects.NodeWrapper.ConcreteNodeWrapper) anywheresoftware.b4a.AbsObjectWrapper.ConvertToWrapper(new anywheresoftware.b4j.objects.NodeWrapper.ConcreteNodeWrapper(), (javafx.scene.Node)(_innercard.getObject())));
  //BA.debugLineNum = 89;BA.debugLine="End Sub";
 return "";
 }
 public String  _setbg(String _color) throws Exception{
  //BA.debugLineNum = 55;BA.debugLine="Public Sub SetBg(color As String)";
- //BA.debugLineNum = 57;BA.debugLine="CFControlsUtils.SetPaneBG( InnerCard, color)";
-_cfcontrolsutils._setpanebg(_innercard,_color);
+ //BA.debugLineNum = 57;BA.debugLine="CFControlsUtils.SetBG( InnerCard, color)";
+_cfcontrolsutils._setbg((anywheresoftware.b4j.objects.NodeWrapper.ConcreteNodeWrapper) anywheresoftware.b4a.AbsObjectWrapper.ConvertToWrapper(new anywheresoftware.b4j.objects.NodeWrapper.ConcreteNodeWrapper(), (javafx.scene.Node)(_innercard.getObject())),_color);
  //BA.debugLineNum = 59;BA.debugLine="End Sub";
 return "";
 }
 public String  _setborder(String _color,int _width) throws Exception{
  //BA.debugLineNum = 67;BA.debugLine="Public Sub SetBorder(color As String , width As In";
- //BA.debugLineNum = 69;BA.debugLine="CFControlsUtils.setPaneBorder(InnerCard, color, w";
-_cfcontrolsutils._setpaneborder(_innercard,_color,_width);
+ //BA.debugLineNum = 69;BA.debugLine="CFControlsUtils.setBorder(InnerCard, color, width";
+_cfcontrolsutils._setborder((anywheresoftware.b4j.objects.NodeWrapper.ConcreteNodeWrapper) anywheresoftware.b4a.AbsObjectWrapper.ConvertToWrapper(new anywheresoftware.b4j.objects.NodeWrapper.ConcreteNodeWrapper(), (javafx.scene.Node)(_innercard.getObject())),_color,_width);
  //BA.debugLineNum = 71;BA.debugLine="End Sub";
 return "";
 }
 public String  _setborderradius(int _radius) throws Exception{
  //BA.debugLineNum = 73;BA.debugLine="Public Sub SetBorderRadius(radius As Int)";
- //BA.debugLineNum = 75;BA.debugLine="CFControlsUtils.setPaneBorderRadius(InnerCard, ra";
-_cfcontrolsutils._setpaneborderradius(_innercard,_radius);
+ //BA.debugLineNum = 75;BA.debugLine="CFControlsUtils.setBorderRadius(InnerCard, radius";
+_cfcontrolsutils._setborderradius((anywheresoftware.b4j.objects.NodeWrapper.ConcreteNodeWrapper) anywheresoftware.b4a.AbsObjectWrapper.ConvertToWrapper(new anywheresoftware.b4j.objects.NodeWrapper.ConcreteNodeWrapper(), (javafx.scene.Node)(_innercard.getObject())),_radius);
  //BA.debugLineNum = 77;BA.debugLine="End Sub";
 return "";
 }
 public String  _setpaneeffect(String _effect) throws Exception{
  //BA.debugLineNum = 79;BA.debugLine="Public Sub SetPaneEffect(effect As String)";
- //BA.debugLineNum = 81;BA.debugLine="CFControlsUtils.setPaneEffect(InnerCard, effect)";
-_cfcontrolsutils._setpaneeffect(_innercard,_effect);
+ //BA.debugLineNum = 81;BA.debugLine="CFControlsUtils.setEffect(InnerCard, effect)";
+_cfcontrolsutils._seteffect((anywheresoftware.b4j.objects.NodeWrapper.ConcreteNodeWrapper) anywheresoftware.b4a.AbsObjectWrapper.ConvertToWrapper(new anywheresoftware.b4j.objects.NodeWrapper.ConcreteNodeWrapper(), (javafx.scene.Node)(_innercard.getObject())),_effect);
  //BA.debugLineNum = 83;BA.debugLine="End Sub";
 return "";
 }
-public String  _setrotationx(float _angle) throws Exception{
- //BA.debugLineNum = 61;BA.debugLine="Public Sub SetRotationX(angle As Float)";
- //BA.debugLineNum = 63;BA.debugLine="CFControlsUtils.setPaneRotation(InnerCard, angle)";
-_cfcontrolsutils._setpanerotation(_innercard,_angle);
+public String  _setrotation(float _angle) throws Exception{
+ //BA.debugLineNum = 61;BA.debugLine="Public Sub setRotation(angle As Float)";
+ //BA.debugLineNum = 63;BA.debugLine="CFControlsUtils.setRotation(InnerCard, angle) 'ro";
+_cfcontrolsutils._setrotation((anywheresoftware.b4j.objects.NodeWrapper.ConcreteNodeWrapper) anywheresoftware.b4a.AbsObjectWrapper.ConvertToWrapper(new anywheresoftware.b4j.objects.NodeWrapper.ConcreteNodeWrapper(), (javafx.scene.Node)(_innercard.getObject())),_angle);
  //BA.debugLineNum = 65;BA.debugLine="End Sub";
 return "";
 }

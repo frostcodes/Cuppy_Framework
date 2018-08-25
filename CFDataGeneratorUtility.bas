@@ -11,8 +11,8 @@ End Sub
  
  #Region rand_human_name : Generates a random real human name 
  
-'Generates a random real human name...
-'List of Names
+'Generates a random human name...
+'List of Names is
 'FROM: https://gist.github.com/subodhghulaxe/8148971
 Public Sub Rand_Human_Name() As String
 

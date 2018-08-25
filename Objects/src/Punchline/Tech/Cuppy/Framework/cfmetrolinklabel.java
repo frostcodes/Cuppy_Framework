@@ -111,49 +111,49 @@ return "";
 public String  _removeeffects() throws Exception{
  //BA.debugLineNum = 90;BA.debugLine="Public Sub RemoveEffects()";
  //BA.debugLineNum = 92;BA.debugLine="CFControlsUtils.removeEffect(InnerLabel)";
-_cfcontrolsutils._removeeffect((anywheresoftware.b4j.objects.NodeWrapper.ControlWrapper.ConcreteControlWrapper) anywheresoftware.b4a.AbsObjectWrapper.ConvertToWrapper(new anywheresoftware.b4j.objects.NodeWrapper.ControlWrapper.ConcreteControlWrapper(), (javafx.scene.control.Control)(_innerlabel.getObject())));
+_cfcontrolsutils._removeeffect((anywheresoftware.b4j.objects.NodeWrapper.ConcreteNodeWrapper) anywheresoftware.b4a.AbsObjectWrapper.ConvertToWrapper(new anywheresoftware.b4j.objects.NodeWrapper.ConcreteNodeWrapper(), (javafx.scene.Node)(_innerlabel.getObject())));
  //BA.debugLineNum = 94;BA.debugLine="End Sub";
 return "";
 }
 public String  _setbg(String _color) throws Exception{
  //BA.debugLineNum = 52;BA.debugLine="Public Sub SetBg(color As String)";
  //BA.debugLineNum = 54;BA.debugLine="CFControlsUtils.SetBg( InnerLabel, color)";
-_cfcontrolsutils._setbg((anywheresoftware.b4j.objects.NodeWrapper.ControlWrapper.ConcreteControlWrapper) anywheresoftware.b4a.AbsObjectWrapper.ConvertToWrapper(new anywheresoftware.b4j.objects.NodeWrapper.ControlWrapper.ConcreteControlWrapper(), (javafx.scene.control.Control)(_innerlabel.getObject())),_color);
+_cfcontrolsutils._setbg((anywheresoftware.b4j.objects.NodeWrapper.ConcreteNodeWrapper) anywheresoftware.b4a.AbsObjectWrapper.ConvertToWrapper(new anywheresoftware.b4j.objects.NodeWrapper.ConcreteNodeWrapper(), (javafx.scene.Node)(_innerlabel.getObject())),_color);
  //BA.debugLineNum = 56;BA.debugLine="End Sub";
 return "";
 }
 public String  _setborder(String _color,int _width) throws Exception{
  //BA.debugLineNum = 70;BA.debugLine="Public Sub SetBorder(color As String , width As In";
  //BA.debugLineNum = 72;BA.debugLine="CFControlsUtils.setBorder(InnerLabel, color, widt";
-_cfcontrolsutils._setborder((anywheresoftware.b4j.objects.NodeWrapper.ControlWrapper.ConcreteControlWrapper) anywheresoftware.b4a.AbsObjectWrapper.ConvertToWrapper(new anywheresoftware.b4j.objects.NodeWrapper.ControlWrapper.ConcreteControlWrapper(), (javafx.scene.control.Control)(_innerlabel.getObject())),_color,_width);
+_cfcontrolsutils._setborder((anywheresoftware.b4j.objects.NodeWrapper.ConcreteNodeWrapper) anywheresoftware.b4a.AbsObjectWrapper.ConvertToWrapper(new anywheresoftware.b4j.objects.NodeWrapper.ConcreteNodeWrapper(), (javafx.scene.Node)(_innerlabel.getObject())),_color,_width);
  //BA.debugLineNum = 74;BA.debugLine="End Sub";
 return "";
 }
 public String  _setborderradius(int _radius) throws Exception{
  //BA.debugLineNum = 77;BA.debugLine="Public Sub SetBorderRadius(radius As Int)";
  //BA.debugLineNum = 79;BA.debugLine="CFControlsUtils.setBorderRadius(InnerLabel, radiu";
-_cfcontrolsutils._setborderradius((anywheresoftware.b4j.objects.NodeWrapper.ControlWrapper.ConcreteControlWrapper) anywheresoftware.b4a.AbsObjectWrapper.ConvertToWrapper(new anywheresoftware.b4j.objects.NodeWrapper.ControlWrapper.ConcreteControlWrapper(), (javafx.scene.control.Control)(_innerlabel.getObject())),_radius);
+_cfcontrolsutils._setborderradius((anywheresoftware.b4j.objects.NodeWrapper.ConcreteNodeWrapper) anywheresoftware.b4a.AbsObjectWrapper.ConvertToWrapper(new anywheresoftware.b4j.objects.NodeWrapper.ConcreteNodeWrapper(), (javafx.scene.Node)(_innerlabel.getObject())),_radius);
  //BA.debugLineNum = 81;BA.debugLine="End Sub";
 return "";
 }
 public String  _seteffect(String _effect) throws Exception{
  //BA.debugLineNum = 84;BA.debugLine="Public Sub SetEffect(effect As String)";
  //BA.debugLineNum = 86;BA.debugLine="CFControlsUtils.setEffect(InnerLabel, effect)";
-_cfcontrolsutils._seteffect((anywheresoftware.b4j.objects.NodeWrapper.ControlWrapper.ConcreteControlWrapper) anywheresoftware.b4a.AbsObjectWrapper.ConvertToWrapper(new anywheresoftware.b4j.objects.NodeWrapper.ControlWrapper.ConcreteControlWrapper(), (javafx.scene.control.Control)(_innerlabel.getObject())),_effect);
+_cfcontrolsutils._seteffect((anywheresoftware.b4j.objects.NodeWrapper.ConcreteNodeWrapper) anywheresoftware.b4a.AbsObjectWrapper.ConvertToWrapper(new anywheresoftware.b4j.objects.NodeWrapper.ConcreteNodeWrapper(), (javafx.scene.Node)(_innerlabel.getObject())),_effect);
  //BA.debugLineNum = 88;BA.debugLine="End Sub";
 return "";
 }
-public String  _setrotationx(float _angle) throws Exception{
- //BA.debugLineNum = 64;BA.debugLine="Public Sub SetRotationX(angle As Float)";
+public String  _setrotation(float _angle) throws Exception{
+ //BA.debugLineNum = 64;BA.debugLine="Public Sub setRotation(angle As Float)";
  //BA.debugLineNum = 66;BA.debugLine="CFControlsUtils.setRotation(InnerLabel, angle) 'r";
-_cfcontrolsutils._setrotation((anywheresoftware.b4j.objects.NodeWrapper.ControlWrapper.ConcreteControlWrapper) anywheresoftware.b4a.AbsObjectWrapper.ConvertToWrapper(new anywheresoftware.b4j.objects.NodeWrapper.ControlWrapper.ConcreteControlWrapper(), (javafx.scene.control.Control)(_innerlabel.getObject())),_angle);
+_cfcontrolsutils._setrotation((anywheresoftware.b4j.objects.NodeWrapper.ConcreteNodeWrapper) anywheresoftware.b4a.AbsObjectWrapper.ConvertToWrapper(new anywheresoftware.b4j.objects.NodeWrapper.ConcreteNodeWrapper(), (javafx.scene.Node)(_innerlabel.getObject())),_angle);
  //BA.debugLineNum = 68;BA.debugLine="End Sub";
 return "";
 }
 public String  _settextcolor(String _color) throws Exception{
  //BA.debugLineNum = 58;BA.debugLine="Public Sub SetTextColor(color As String)";
  //BA.debugLineNum = 60;BA.debugLine="CFControlsUtils.setTextColor (InnerLabel, color)";
-_cfcontrolsutils._settextcolor((anywheresoftware.b4j.objects.NodeWrapper.ControlWrapper.ConcreteControlWrapper) anywheresoftware.b4a.AbsObjectWrapper.ConvertToWrapper(new anywheresoftware.b4j.objects.NodeWrapper.ControlWrapper.ConcreteControlWrapper(), (javafx.scene.control.Control)(_innerlabel.getObject())),_color);
+_cfcontrolsutils._settextcolor((anywheresoftware.b4j.objects.NodeWrapper.ConcreteNodeWrapper) anywheresoftware.b4a.AbsObjectWrapper.ConvertToWrapper(new anywheresoftware.b4j.objects.NodeWrapper.ConcreteNodeWrapper(), (javafx.scene.Node)(_innerlabel.getObject())),_color);
  //BA.debugLineNum = 62;BA.debugLine="End Sub";
 return "";
 }

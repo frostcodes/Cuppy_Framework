@@ -1,5 +1,5 @@
 ﻿B4J=true
-Group=Cuppy Framework
+Group=Cuppy Framework\Misc
 ModulesStructureVersion=1
 Type=Class
 Version=5.51
@@ -13,7 +13,7 @@ End Sub
 
  
     ' **  Later support deigner view scripts 
-	  
+	  'add support for app bar title and hiding 
  
 'ComboBox
  

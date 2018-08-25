@@ -352,7 +352,7 @@ End Sub
 'a black slash(\) before the value
 Public Sub EscapeString(value As String) As String
  
-	Return "\"& value
+	Return "\" & value
  
 End Sub
  
@@ -667,10 +667,10 @@ End Sub
 	
 'Repeat a string
 'input = The string To be repeated.
-'multiplier = Number of time the input string should be repeated.
+'multiplier = Number of times the input string should be repeated.
 '
-'NOTE: multiplier has To be greater than Or equal To 0. 
-'If the multiplier Is set To 0, the function will Return an empty string.
+'NOTE: multiplier has tp be greater than Or equal to 0. 
+'If the multiplier is set to 0, the function will return an empty string.
 Sub Str_Repeat(input As String, multiplier As Int) As String
   	 
 	If multiplier < 1 Then
@@ -713,6 +713,7 @@ Public Sub BreakStrAt(haystack As String, after As String) As Object
 	End If
 	
 End Sub
+
 'Searches a string for any of the specified characters.
 'Note: This function is Case-sensitive.
 'This function returns the rest of the 
@@ -916,7 +917,7 @@ End Sub
  
   #End Region
   
-'Use this To prepend 0 To value lower than 10
+'Use this To prepend 0 to a value lower than 10
 'Eg 9 would ouput 09, 13 would ouput 13
 Public Sub Prepend_Zero(num As Int) As String
 

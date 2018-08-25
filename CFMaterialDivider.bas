@@ -65,37 +65,37 @@ End Sub
 
 Public Sub SetBg(color As String)
  
-	CFControlsUtils.SetPaneBG(line  , color)
+	CFControlsUtils.SetBG(line, color)
  
 End Sub
 
-Public Sub SetRotationX(angle As Float)
+Public Sub setRotation(angle As Float)
 	
-	CFControlsUtils.setPaneRotation(line, angle) 'rotate
+	CFControlsUtils.SetRotation(line, angle) 'rotate
 	 
 End Sub
   
 Public Sub SetBorder(color As String , width As Int)
 	
-	CFControlsUtils.setPaneBorder(line, color, width)
+	CFControlsUtils.SetBorder(line, color, width)
 
 End Sub
 
 Public Sub SetBorderRadius(radius As Int)
 	
-	CFControlsUtils.setPaneBorderRadius(line, radius)
+	CFControlsUtils.SetBorderRadius(line, radius)
 	
 End Sub
 
 Public Sub SetPaneEffect(effect As String)
 	
-	CFControlsUtils.setPaneEffect(line, effect)
+	CFControlsUtils.SetEffect(line, effect)
 	 
 End Sub
 
 Public Sub RemoveEffects()
 	
-	CFControlsUtils.removePaneEffect(line)
+	CFControlsUtils.RemoveEffect(line)
 	 
 End Sub
 
