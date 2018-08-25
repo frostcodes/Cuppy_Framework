@@ -119,36 +119,36 @@ return false;
 }
 public String  _removeeffects() throws Exception{
  //BA.debugLineNum = 94;BA.debugLine="Public Sub RemoveEffects()";
- //BA.debugLineNum = 96;BA.debugLine="CFControlsUtils.removePaneEffect(SwitchPane)";
-_cfcontrolsutils._removepaneeffect(_switchpane);
+ //BA.debugLineNum = 96;BA.debugLine="CFControlsUtils.RemoveEffect(SwitchPane)";
+_cfcontrolsutils._removeeffect((anywheresoftware.b4j.objects.NodeWrapper.ConcreteNodeWrapper) anywheresoftware.b4a.AbsObjectWrapper.ConvertToWrapper(new anywheresoftware.b4j.objects.NodeWrapper.ConcreteNodeWrapper(), (javafx.scene.Node)(_switchpane.getObject())));
  //BA.debugLineNum = 98;BA.debugLine="End Sub";
 return "";
 }
 public String  _setbg(String _color) throws Exception{
  //BA.debugLineNum = 64;BA.debugLine="Public Sub SetBg(color As String)";
- //BA.debugLineNum = 66;BA.debugLine="CFControlsUtils.SetPaneBG( SwitchPane, color)";
-_cfcontrolsutils._setpanebg(_switchpane,_color);
+ //BA.debugLineNum = 66;BA.debugLine="CFControlsUtils.SetBG( SwitchPane, color)";
+_cfcontrolsutils._setbg((anywheresoftware.b4j.objects.NodeWrapper.ConcreteNodeWrapper) anywheresoftware.b4a.AbsObjectWrapper.ConvertToWrapper(new anywheresoftware.b4j.objects.NodeWrapper.ConcreteNodeWrapper(), (javafx.scene.Node)(_switchpane.getObject())),_color);
  //BA.debugLineNum = 68;BA.debugLine="End Sub";
 return "";
 }
 public String  _setborder(String _color,int _width) throws Exception{
  //BA.debugLineNum = 76;BA.debugLine="Public Sub SetBorder(color As String , width As In";
- //BA.debugLineNum = 78;BA.debugLine="CFControlsUtils.setPaneBorder(SwitchPane, color,";
-_cfcontrolsutils._setpaneborder(_switchpane,_color,_width);
+ //BA.debugLineNum = 78;BA.debugLine="CFControlsUtils.SetBorder(SwitchPane, color, widt";
+_cfcontrolsutils._setborder((anywheresoftware.b4j.objects.NodeWrapper.ConcreteNodeWrapper) anywheresoftware.b4a.AbsObjectWrapper.ConvertToWrapper(new anywheresoftware.b4j.objects.NodeWrapper.ConcreteNodeWrapper(), (javafx.scene.Node)(_switchpane.getObject())),_color,_width);
  //BA.debugLineNum = 80;BA.debugLine="End Sub";
 return "";
 }
 public String  _setborderradius(int _radius) throws Exception{
  //BA.debugLineNum = 82;BA.debugLine="Public Sub SetBorderRadius(radius As Int)";
- //BA.debugLineNum = 84;BA.debugLine="CFControlsUtils.setPaneBorderRadius(SwitchPane, r";
-_cfcontrolsutils._setpaneborderradius(_switchpane,_radius);
+ //BA.debugLineNum = 84;BA.debugLine="CFControlsUtils.SetBorderRadius(SwitchPane, radiu";
+_cfcontrolsutils._setborderradius((anywheresoftware.b4j.objects.NodeWrapper.ConcreteNodeWrapper) anywheresoftware.b4a.AbsObjectWrapper.ConvertToWrapper(new anywheresoftware.b4j.objects.NodeWrapper.ConcreteNodeWrapper(), (javafx.scene.Node)(_switchpane.getObject())),_radius);
  //BA.debugLineNum = 86;BA.debugLine="End Sub";
 return "";
 }
 public String  _setcheckedcolor(String _color) throws Exception{
  //BA.debugLineNum = 102;BA.debugLine="Public Sub SetCheckedColor(color As String)";
- //BA.debugLineNum = 104;BA.debugLine="CFControlsUtils.SetPaneBG( SwitchBtn, color)";
-_cfcontrolsutils._setpanebg(_switchbtn,_color);
+ //BA.debugLineNum = 104;BA.debugLine="CFControlsUtils.SetBG( SwitchBtn, color)";
+_cfcontrolsutils._setbg((anywheresoftware.b4j.objects.NodeWrapper.ConcreteNodeWrapper) anywheresoftware.b4a.AbsObjectWrapper.ConvertToWrapper(new anywheresoftware.b4j.objects.NodeWrapper.ConcreteNodeWrapper(), (javafx.scene.Node)(_switchbtn.getObject())),_color);
  //BA.debugLineNum = 106;BA.debugLine="End Sub";
 return "";
 }
@@ -165,8 +165,8 @@ _setbg(BA.ObjectToString(_cfstylemanager._defaulttheme.Get((Object)("divider")))
  }else if(_value==_checked_state) { 
  //BA.debugLineNum = 119;BA.debugLine="SwitchPane.SetAlphaAnimated(200, 0.6 )";
 _switchpane.SetAlphaAnimated((int) (200),0.6);
- //BA.debugLineNum = 120;BA.debugLine="SetBg(CFControlsUtils.getPaneBG(SwitchBtn))";
-_setbg(_cfcontrolsutils._getpanebg(_switchbtn));
+ //BA.debugLineNum = 120;BA.debugLine="SetBg(CFControlsUtils.GetBG(SwitchBtn))";
+_setbg(_cfcontrolsutils._getbg((anywheresoftware.b4j.objects.NodeWrapper.ConcreteNodeWrapper) anywheresoftware.b4a.AbsObjectWrapper.ConvertToWrapper(new anywheresoftware.b4j.objects.NodeWrapper.ConcreteNodeWrapper(), (javafx.scene.Node)(_switchbtn.getObject()))));
  //BA.debugLineNum = 122;BA.debugLine="SwitchBtn.SetLayoutAnimated(200 , 23 , SwitchBtn";
 _switchbtn.SetLayoutAnimated((int) (200),23,_switchbtn.getTop(),_switchbtn.getPrefWidth(),_switchbtn.getPrefWidth());
  }else {
@@ -184,15 +184,15 @@ return "";
 }
 public String  _setpaneeffect(String _effect) throws Exception{
  //BA.debugLineNum = 88;BA.debugLine="Public Sub SetPaneEffect(effect As String)";
- //BA.debugLineNum = 90;BA.debugLine="CFControlsUtils.setPaneEffect(SwitchPane, effect)";
-_cfcontrolsutils._setpaneeffect(_switchpane,_effect);
+ //BA.debugLineNum = 90;BA.debugLine="CFControlsUtils.SetEffect(SwitchPane, effect)";
+_cfcontrolsutils._seteffect((anywheresoftware.b4j.objects.NodeWrapper.ConcreteNodeWrapper) anywheresoftware.b4a.AbsObjectWrapper.ConvertToWrapper(new anywheresoftware.b4j.objects.NodeWrapper.ConcreteNodeWrapper(), (javafx.scene.Node)(_switchpane.getObject())),_effect);
  //BA.debugLineNum = 92;BA.debugLine="End Sub";
 return "";
 }
-public String  _setrotationx(float _angle) throws Exception{
- //BA.debugLineNum = 70;BA.debugLine="Public Sub SetRotationX(angle As Float)";
- //BA.debugLineNum = 72;BA.debugLine="CFControlsUtils.setPaneRotation(SwitchPane, angle";
-_cfcontrolsutils._setpanerotation(_switchpane,_angle);
+public String  _setrotation(float _angle) throws Exception{
+ //BA.debugLineNum = 70;BA.debugLine="Public Sub setRotation(angle As Float)";
+ //BA.debugLineNum = 72;BA.debugLine="CFControlsUtils.SetRotation(SwitchPane, angle) 'r";
+_cfcontrolsutils._setrotation((anywheresoftware.b4j.objects.NodeWrapper.ConcreteNodeWrapper) anywheresoftware.b4a.AbsObjectWrapper.ConvertToWrapper(new anywheresoftware.b4j.objects.NodeWrapper.ConcreteNodeWrapper(), (javafx.scene.Node)(_switchpane.getObject())),_angle);
  //BA.debugLineNum = 74;BA.debugLine="End Sub";
 return "";
 }

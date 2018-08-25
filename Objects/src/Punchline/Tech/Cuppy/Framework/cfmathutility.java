@@ -183,10 +183,10 @@ if (true) return (_exp(_arg)+_exp(-_arg))/(double)2;
 return 0;
 }
 public static double  _deg2rad(double _angle) throws Exception{
- //BA.debugLineNum = 182;BA.debugLine="Public Sub Deg2rad(angle As Double) As Double";
- //BA.debugLineNum = 184;BA.debugLine="Return angle * 0.017453292519943295";
+ //BA.debugLineNum = 183;BA.debugLine="Public Sub Deg2rad(angle As Double) As Double";
+ //BA.debugLineNum = 185;BA.debugLine="Return angle * 0.017453292519943295";
 if (true) return _angle*0.017453292519943295;
- //BA.debugLineNum = 186;BA.debugLine="End Sub";
+ //BA.debugLineNum = 187;BA.debugLine="End Sub";
 return 0;
 }
 public static double  _exp(double _arg) throws Exception{
@@ -198,34 +198,34 @@ return 0;
 }
 public static double  _hypot(double _x,double _y) throws Exception{
 double _t = 0;
- //BA.debugLineNum = 197;BA.debugLine="Public Sub Hypot(x As Double, y As Double) As Doub";
- //BA.debugLineNum = 199;BA.debugLine="x = Abs(x)";
+ //BA.debugLineNum = 198;BA.debugLine="Public Sub Hypot(x As Double, y As Double) As Doub";
+ //BA.debugLineNum = 200;BA.debugLine="x = Abs(x)";
 _x = anywheresoftware.b4a.keywords.Common.Abs(_x);
- //BA.debugLineNum = 200;BA.debugLine="y = Abs(y)";
+ //BA.debugLineNum = 201;BA.debugLine="y = Abs(y)";
 _y = anywheresoftware.b4a.keywords.Common.Abs(_y);
- //BA.debugLineNum = 202;BA.debugLine="Dim t As Double = Min(x, y)";
+ //BA.debugLineNum = 203;BA.debugLine="Dim t As Double = Min(x, y)";
 _t = anywheresoftware.b4a.keywords.Common.Min(_x,_y);
- //BA.debugLineNum = 203;BA.debugLine="x = Max(x, y)";
+ //BA.debugLineNum = 204;BA.debugLine="x = Max(x, y)";
 _x = anywheresoftware.b4a.keywords.Common.Max(_x,_y);
- //BA.debugLineNum = 204;BA.debugLine="t = t / x";
+ //BA.debugLineNum = 205;BA.debugLine="t = t / x";
 _t = _t/(double)_x;
- //BA.debugLineNum = 206;BA.debugLine="Return x * Sqrt(1 + t * t)";
+ //BA.debugLineNum = 207;BA.debugLine="Return x * Sqrt(1 + t * t)";
 if (true) return _x*anywheresoftware.b4a.keywords.Common.Sqrt(1+_t*_t);
- //BA.debugLineNum = 208;BA.debugLine="End Sub";
+ //BA.debugLineNum = 209;BA.debugLine="End Sub";
 return 0;
 }
 public static boolean  _is_finite(String _val) throws Exception{
- //BA.debugLineNum = 175;BA.debugLine="Public Sub Is_finite(val As String) As Boolean";
- //BA.debugLineNum = 177;BA.debugLine="Return Not(Is_infinite(val))";
+ //BA.debugLineNum = 176;BA.debugLine="Public Sub Is_finite(val As String) As Boolean";
+ //BA.debugLineNum = 178;BA.debugLine="Return Not(Is_infinite(val))";
 if (true) return anywheresoftware.b4a.keywords.Common.Not(_is_infinite(_val));
- //BA.debugLineNum = 179;BA.debugLine="End Sub";
+ //BA.debugLineNum = 180;BA.debugLine="End Sub";
 return false;
 }
 public static boolean  _is_infinite(String _val) throws Exception{
- //BA.debugLineNum = 168;BA.debugLine="Public Sub Is_infinite(val As String) As Boolean";
- //BA.debugLineNum = 170;BA.debugLine="Return val = POSITIVE_INFINITY Or val = NEGATIVE_";
+ //BA.debugLineNum = 169;BA.debugLine="Public Sub Is_infinite(val As String) As Boolean";
+ //BA.debugLineNum = 171;BA.debugLine="Return val = POSITIVE_INFINITY Or val = NEGATIVE_";
 if (true) return (_val).equals(_positive_infinity) || (_val).equals(_negative_infinity);
- //BA.debugLineNum = 172;BA.debugLine="End Sub";
+ //BA.debugLineNum = 173;BA.debugLine="End Sub";
 return false;
 }
 public static boolean  _isnan(double _d) throws Exception{
@@ -238,10 +238,10 @@ return false;
 public static double  _numbersaverage(anywheresoftware.b4a.objects.collections.List _data,boolean _roundup) throws Exception{
 int _total = 0;
 int _value = 0;
- //BA.debugLineNum = 213;BA.debugLine="Public Sub NumbersAverage(data As List ,roundUp As";
- //BA.debugLineNum = 215;BA.debugLine="Dim total As Int = 0";
+ //BA.debugLineNum = 214;BA.debugLine="Public Sub NumbersAverage(data As List ,roundUp As";
+ //BA.debugLineNum = 216;BA.debugLine="Dim total As Int = 0";
 _total = (int) (0);
- //BA.debugLineNum = 219;BA.debugLine="For Each value As Int In data";
+ //BA.debugLineNum = 220;BA.debugLine="For Each value As Int In data";
 {
 final anywheresoftware.b4a.BA.IterableList group2 = _data;
 final int groupLen2 = group2.getSize()
@@ -249,26 +249,26 @@ final int groupLen2 = group2.getSize()
 ;
 for (; index2 < groupLen2;index2++){
 _value = (int)(BA.ObjectToNumber(group2.Get(index2)));
- //BA.debugLineNum = 221;BA.debugLine="total= total + value";
+ //BA.debugLineNum = 222;BA.debugLine="total= total + value";
 _total = (int) (_total+_value);
  }
 };
- //BA.debugLineNum = 225;BA.debugLine="If roundUp Then";
+ //BA.debugLineNum = 226;BA.debugLine="If roundUp Then";
 if (_roundup) { 
- //BA.debugLineNum = 228;BA.debugLine="Return Ceil(total / data.Size)";
+ //BA.debugLineNum = 229;BA.debugLine="Return Ceil(total / data.Size)";
 if (true) return anywheresoftware.b4a.keywords.Common.Ceil(_total/(double)_data.getSize());
  }else {
- //BA.debugLineNum = 234;BA.debugLine="Return total / data.Size";
+ //BA.debugLineNum = 235;BA.debugLine="Return total / data.Size";
 if (true) return _total/(double)_data.getSize();
  };
- //BA.debugLineNum = 238;BA.debugLine="End Sub";
+ //BA.debugLineNum = 239;BA.debugLine="End Sub";
 return 0;
 }
 public static double  _numbersaverage2(anywheresoftware.b4a.objects.collections.List _data) throws Exception{
- //BA.debugLineNum = 243;BA.debugLine="Public Sub NumbersAverage2(data As List) As Double";
- //BA.debugLineNum = 245;BA.debugLine="Return NumbersAverage(data, True)";
+ //BA.debugLineNum = 244;BA.debugLine="Public Sub NumbersAverage2(data As List) As Double";
+ //BA.debugLineNum = 246;BA.debugLine="Return NumbersAverage(data, True)";
 if (true) return _numbersaverage(_data,anywheresoftware.b4a.keywords.Common.True);
- //BA.debugLineNum = 247;BA.debugLine="End Sub";
+ //BA.debugLineNum = 248;BA.debugLine="End Sub";
 return 0;
 }
 public static String  _process_globals() throws Exception{
@@ -291,24 +291,24 @@ _max_value = "1.7976931348623157e+308";
 return "";
 }
 public static double  _rad2deg(double _number) throws Exception{
- //BA.debugLineNum = 189;BA.debugLine="Public Sub Rad2deg(number As Double) As Double";
- //BA.debugLineNum = 191;BA.debugLine="Return number * 57.29577951308232";
+ //BA.debugLineNum = 190;BA.debugLine="Public Sub Rad2deg(number As Double) As Double";
+ //BA.debugLineNum = 192;BA.debugLine="Return number * 57.29577951308232";
 if (true) return _number*57.29577951308232;
- //BA.debugLineNum = 193;BA.debugLine="End Sub";
+ //BA.debugLineNum = 194;BA.debugLine="End Sub";
 return 0;
 }
 public static double  _sinh(double _number) throws Exception{
- //BA.debugLineNum = 161;BA.debugLine="Public Sub Sinh(number As Double) As Double";
- //BA.debugLineNum = 163;BA.debugLine="Return (Exp(number) - Exp(-number)) / 2";
+ //BA.debugLineNum = 162;BA.debugLine="Public Sub Sinh(number As Double) As Double";
+ //BA.debugLineNum = 164;BA.debugLine="Return (Exp(number) - Exp(-number)) / 2";
 if (true) return (_exp(_number)-_exp(-_number))/(double)2;
- //BA.debugLineNum = 165;BA.debugLine="End Sub";
+ //BA.debugLineNum = 166;BA.debugLine="End Sub";
 return 0;
 }
 public static double  _tanh(double _number) throws Exception{
- //BA.debugLineNum = 153;BA.debugLine="Public Sub Tanh(number As Double) As Double";
- //BA.debugLineNum = 155;BA.debugLine="Return 1 - 2 / (Exp(2 * number) + 1)";
+ //BA.debugLineNum = 154;BA.debugLine="Public Sub Tanh(number As Double) As Double";
+ //BA.debugLineNum = 156;BA.debugLine="Return 1 - 2 / (Exp(2 * number) + 1)";
 if (true) return 1-2/(double)(_exp(2*_number)+1);
- //BA.debugLineNum = 157;BA.debugLine="End Sub";
+ //BA.debugLineNum = 158;BA.debugLine="End Sub";
 return 0;
 }
 }

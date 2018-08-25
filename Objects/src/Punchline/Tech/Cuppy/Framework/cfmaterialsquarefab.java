@@ -73,8 +73,8 @@ _mbase = _base;
 _mbase.LoadLayout(ba,"CFMaterialSquareFABUI");
  //BA.debugLineNum = 33;BA.debugLine="SetBg(CFStyleManager.DefaultTheme.Get(\"accent\"))";
 _setbg(BA.ObjectToString(_cfstylemanager._defaulttheme.Get((Object)("accent"))));
- //BA.debugLineNum = 34;BA.debugLine="SetRotationX(135) 'rotate by default";
-_setrotationx((float) (135));
+ //BA.debugLineNum = 34;BA.debugLine="setRotation(135) 'rotate by default";
+_setrotation((float) (135));
  //BA.debugLineNum = 35;BA.debugLine="End Sub";
 return "";
 }
@@ -121,42 +121,42 @@ return "";
 public String  _removeeffects() throws Exception{
  //BA.debugLineNum = 87;BA.debugLine="Public Sub RemoveEffects()";
  //BA.debugLineNum = 89;BA.debugLine="CFControlsUtils.removeEffect(FAB_Btn)";
-_cfcontrolsutils._removeeffect((anywheresoftware.b4j.objects.NodeWrapper.ControlWrapper.ConcreteControlWrapper) anywheresoftware.b4a.AbsObjectWrapper.ConvertToWrapper(new anywheresoftware.b4j.objects.NodeWrapper.ControlWrapper.ConcreteControlWrapper(), (javafx.scene.control.Control)(_fab_btn.getObject())));
+_cfcontrolsutils._removeeffect((anywheresoftware.b4j.objects.NodeWrapper.ConcreteNodeWrapper) anywheresoftware.b4a.AbsObjectWrapper.ConvertToWrapper(new anywheresoftware.b4j.objects.NodeWrapper.ConcreteNodeWrapper(), (javafx.scene.Node)(_fab_btn.getObject())));
  //BA.debugLineNum = 91;BA.debugLine="End Sub";
 return "";
 }
 public String  _setbg(String _color) throws Exception{
  //BA.debugLineNum = 55;BA.debugLine="Public Sub SetBg(color As String)";
  //BA.debugLineNum = 57;BA.debugLine="CFControlsUtils.SetBG( FAB_Btn, color)";
-_cfcontrolsutils._setbg((anywheresoftware.b4j.objects.NodeWrapper.ControlWrapper.ConcreteControlWrapper) anywheresoftware.b4a.AbsObjectWrapper.ConvertToWrapper(new anywheresoftware.b4j.objects.NodeWrapper.ControlWrapper.ConcreteControlWrapper(), (javafx.scene.control.Control)(_fab_btn.getObject())),_color);
+_cfcontrolsutils._setbg((anywheresoftware.b4j.objects.NodeWrapper.ConcreteNodeWrapper) anywheresoftware.b4a.AbsObjectWrapper.ConvertToWrapper(new anywheresoftware.b4j.objects.NodeWrapper.ConcreteNodeWrapper(), (javafx.scene.Node)(_fab_btn.getObject())),_color);
  //BA.debugLineNum = 59;BA.debugLine="End Sub";
 return "";
 }
 public String  _setborder(String _color,int _width) throws Exception{
  //BA.debugLineNum = 67;BA.debugLine="Public Sub SetBorder(color As String , width As In";
  //BA.debugLineNum = 69;BA.debugLine="CFControlsUtils.setBorder(FAB_Btn, color, width)";
-_cfcontrolsutils._setborder((anywheresoftware.b4j.objects.NodeWrapper.ControlWrapper.ConcreteControlWrapper) anywheresoftware.b4a.AbsObjectWrapper.ConvertToWrapper(new anywheresoftware.b4j.objects.NodeWrapper.ControlWrapper.ConcreteControlWrapper(), (javafx.scene.control.Control)(_fab_btn.getObject())),_color,_width);
+_cfcontrolsutils._setborder((anywheresoftware.b4j.objects.NodeWrapper.ConcreteNodeWrapper) anywheresoftware.b4a.AbsObjectWrapper.ConvertToWrapper(new anywheresoftware.b4j.objects.NodeWrapper.ConcreteNodeWrapper(), (javafx.scene.Node)(_fab_btn.getObject())),_color,_width);
  //BA.debugLineNum = 71;BA.debugLine="End Sub";
 return "";
 }
 public String  _setborderradius(int _radius) throws Exception{
  //BA.debugLineNum = 74;BA.debugLine="Public Sub SetBorderRadius(radius As Int)";
  //BA.debugLineNum = 76;BA.debugLine="CFControlsUtils.setBorderRadius(FAB_Btn, radius)";
-_cfcontrolsutils._setborderradius((anywheresoftware.b4j.objects.NodeWrapper.ControlWrapper.ConcreteControlWrapper) anywheresoftware.b4a.AbsObjectWrapper.ConvertToWrapper(new anywheresoftware.b4j.objects.NodeWrapper.ControlWrapper.ConcreteControlWrapper(), (javafx.scene.control.Control)(_fab_btn.getObject())),_radius);
+_cfcontrolsutils._setborderradius((anywheresoftware.b4j.objects.NodeWrapper.ConcreteNodeWrapper) anywheresoftware.b4a.AbsObjectWrapper.ConvertToWrapper(new anywheresoftware.b4j.objects.NodeWrapper.ConcreteNodeWrapper(), (javafx.scene.Node)(_fab_btn.getObject())),_radius);
  //BA.debugLineNum = 78;BA.debugLine="End Sub";
 return "";
 }
 public String  _setpaneeffect(String _effect) throws Exception{
  //BA.debugLineNum = 81;BA.debugLine="Public Sub SetPaneEffect(effect As String)";
  //BA.debugLineNum = 83;BA.debugLine="CFControlsUtils.setEffect(FAB_Btn, effect)";
-_cfcontrolsutils._seteffect((anywheresoftware.b4j.objects.NodeWrapper.ControlWrapper.ConcreteControlWrapper) anywheresoftware.b4a.AbsObjectWrapper.ConvertToWrapper(new anywheresoftware.b4j.objects.NodeWrapper.ControlWrapper.ConcreteControlWrapper(), (javafx.scene.control.Control)(_fab_btn.getObject())),_effect);
+_cfcontrolsutils._seteffect((anywheresoftware.b4j.objects.NodeWrapper.ConcreteNodeWrapper) anywheresoftware.b4a.AbsObjectWrapper.ConvertToWrapper(new anywheresoftware.b4j.objects.NodeWrapper.ConcreteNodeWrapper(), (javafx.scene.Node)(_fab_btn.getObject())),_effect);
  //BA.debugLineNum = 85;BA.debugLine="End Sub";
 return "";
 }
-public String  _setrotationx(float _angle) throws Exception{
- //BA.debugLineNum = 61;BA.debugLine="Public Sub SetRotationX(angle As Float)";
+public String  _setrotation(float _angle) throws Exception{
+ //BA.debugLineNum = 61;BA.debugLine="Public Sub setRotation(angle As Float)";
  //BA.debugLineNum = 63;BA.debugLine="CFControlsUtils.setRotation(FAB_Btn, angle) 'rota";
-_cfcontrolsutils._setrotation((anywheresoftware.b4j.objects.NodeWrapper.ControlWrapper.ConcreteControlWrapper) anywheresoftware.b4a.AbsObjectWrapper.ConvertToWrapper(new anywheresoftware.b4j.objects.NodeWrapper.ControlWrapper.ConcreteControlWrapper(), (javafx.scene.control.Control)(_fab_btn.getObject())),_angle);
+_cfcontrolsutils._setrotation((anywheresoftware.b4j.objects.NodeWrapper.ConcreteNodeWrapper) anywheresoftware.b4a.AbsObjectWrapper.ConvertToWrapper(new anywheresoftware.b4j.objects.NodeWrapper.ConcreteNodeWrapper(), (javafx.scene.Node)(_fab_btn.getObject())),_angle);
  //BA.debugLineNum = 65;BA.debugLine="End Sub";
 return "";
 }

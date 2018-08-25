@@ -13,6 +13,12 @@ Version=5.51
 #RaisesSynchronousEvents: MousePressed
 #RaisesSynchronousEvents: PaneMousePressed
 #RaisesSynchronousEvents: Resize
+
+#DesignerProperty: Key: Title, DisplayName: Form/App BAr Title, FieldType: String, DefaultValue: Form Title
+#DesignerProperty: Key: HideIcon, DisplayName: Hide App Bar icon?, FieldType: Boolean, DefaultValue: False
+#DesignerProperty: Key: HideTitle, DisplayName: Hide Title of App Bar?, FieldType: Boolean, DefaultValue: False
+#DesignerProperty: Key: EnableShadow, DisplayName: Enable App Bar Shadow? , FieldType: Boolean, DefaultValue: True
+
  
 #Region Internal Segment
 
@@ -23,7 +29,8 @@ Sub Class_Globals
 	Private mBase As Pane
 	Private Label1 As Label
 	Public InnerPane As Pane
-	Private InnerButton As Button
+	Public InnerButton As Button
+	Public TitleLabel As Label
 End Sub
 
 Public Sub Initialize (Callback As Object, EventName As String)
@@ -34,8 +41,13 @@ End Sub
 Public Sub DesignerCreateView (Base As Pane, Lbl As Label, Props As Map)
 	mBase = Base
 	mBase.LoadLayout("CFMaterialAppBarUI")
+	
 	'set using theme...
 	SetBg(CFStyleManager.DefaultTheme.Get("primary"))
+	
+	TitleLabel.Font = CFStyleManager.SelectFont("Black", 14)
+	setTitle(Props.Get("Title"))
+	setEnableShadow(Props.Get("EnableShadow"))
 	
 End Sub
 
@@ -58,28 +70,28 @@ End Sub
 Public Sub SetBg(color As String)
 	
 	CFControlsUtils.SetBG( Label1,  color)
-	CFControlsUtils.SetPaneBG( InnerPane, color)
+	CFControlsUtils.SetBG( InnerPane, color)
  
 End Sub
  
-Public Sub SetRotationX(angle As Float)
+Public Sub setRotation(angle As Float)
 	
 	CFControlsUtils.setRotation(Label1, angle) 'rotate
-	CFControlsUtils.setPaneRotation(InnerPane , angle) 'rotate
+	CFControlsUtils.setRotation(InnerPane , angle) 'rotate
 	 
 End Sub
 
 Public Sub SetBorder(color As String , width As Int)
 	
 	CFControlsUtils.setBorder(Label1, color, width)
-	CFControlsUtils.setPaneBorder(InnerPane, color, width)
+	CFControlsUtils.setBorder(InnerPane, color, width)
 	
 End Sub
 
 Public Sub SetBorderRadius(radius As Int)
 	
 	CFControlsUtils.setBorderRadius(Label1, radius)
-	CFControlsUtils.setPaneBorderRadius(InnerPane, radius)
+	CFControlsUtils.setBorderRadius(InnerPane, radius)
 	
 End Sub
 
@@ -97,10 +109,51 @@ End Sub
 
 #End Region
 
-
-Public Sub Icon(IconText As String)
+Public Sub setIcon(IconText As String)
 	
 	Label1.Text = IconText
+	 
+End Sub
+
+Public Sub getIcon As String
+	
+	Return Label1.Text
+	 
+End Sub
+
+Public Sub getTitle As String
+	
+	Return TitleLabel.Text
+	
+End Sub
+
+Public Sub setTitle(Title As String)
+	
+	TitleLabel.Text = Title
+	
+End Sub
+
+Public Sub setHideTitle(BoolVal As Boolean)
+	
+	TitleLabel.Visible = Not(BoolVal)
+	
+End Sub
+
+Public Sub setHideIcon(BoolVal As Boolean)
+	
+	 InnerButton.Visible = Not(BoolVal)
+	
+End Sub
+
+Public Sub setEnableShadow(BoolVal As Boolean)
+	
+	Label1.Visible = BoolVal
+	 
+End Sub
+
+Public Sub getShadowEnabled As Boolean
+	
+	Return Label1.Visible
 	 
 End Sub
 

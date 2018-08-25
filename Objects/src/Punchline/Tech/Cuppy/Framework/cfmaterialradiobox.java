@@ -136,36 +136,36 @@ return false;
 }
 public String  _removeeffects() throws Exception{
  //BA.debugLineNum = 92;BA.debugLine="Public Sub RemoveEffects()";
- //BA.debugLineNum = 94;BA.debugLine="CFControlsUtils.removePaneEffect(CheckboxPane)";
-_cfcontrolsutils._removepaneeffect(_checkboxpane);
+ //BA.debugLineNum = 94;BA.debugLine="CFControlsUtils.RemoveEffect(CheckboxPane)";
+_cfcontrolsutils._removeeffect((anywheresoftware.b4j.objects.NodeWrapper.ConcreteNodeWrapper) anywheresoftware.b4a.AbsObjectWrapper.ConvertToWrapper(new anywheresoftware.b4j.objects.NodeWrapper.ConcreteNodeWrapper(), (javafx.scene.Node)(_checkboxpane.getObject())));
  //BA.debugLineNum = 96;BA.debugLine="End Sub";
 return "";
 }
 public String  _setbg(String _color) throws Exception{
  //BA.debugLineNum = 62;BA.debugLine="Public Sub SetBg(color As String)";
- //BA.debugLineNum = 64;BA.debugLine="CFControlsUtils.SetPaneBG( CheckboxPane, color)";
-_cfcontrolsutils._setpanebg(_checkboxpane,_color);
+ //BA.debugLineNum = 64;BA.debugLine="CFControlsUtils.SetBG( CheckboxPane, color)";
+_cfcontrolsutils._setbg((anywheresoftware.b4j.objects.NodeWrapper.ConcreteNodeWrapper) anywheresoftware.b4a.AbsObjectWrapper.ConvertToWrapper(new anywheresoftware.b4j.objects.NodeWrapper.ConcreteNodeWrapper(), (javafx.scene.Node)(_checkboxpane.getObject())),_color);
  //BA.debugLineNum = 66;BA.debugLine="End Sub";
 return "";
 }
 public String  _setborder(String _color,int _width) throws Exception{
  //BA.debugLineNum = 74;BA.debugLine="Public Sub SetBorder(color As String , width As In";
- //BA.debugLineNum = 76;BA.debugLine="CFControlsUtils.setPaneBorder(CheckboxPane, color";
-_cfcontrolsutils._setpaneborder(_checkboxpane,_color,_width);
+ //BA.debugLineNum = 76;BA.debugLine="CFControlsUtils.SetBorder(CheckboxPane, color, wi";
+_cfcontrolsutils._setborder((anywheresoftware.b4j.objects.NodeWrapper.ConcreteNodeWrapper) anywheresoftware.b4a.AbsObjectWrapper.ConvertToWrapper(new anywheresoftware.b4j.objects.NodeWrapper.ConcreteNodeWrapper(), (javafx.scene.Node)(_checkboxpane.getObject())),_color,_width);
  //BA.debugLineNum = 78;BA.debugLine="End Sub";
 return "";
 }
 public String  _setborderradius(int _radius) throws Exception{
  //BA.debugLineNum = 80;BA.debugLine="Public Sub SetBorderRadius(radius As Int)";
- //BA.debugLineNum = 82;BA.debugLine="CFControlsUtils.setPaneBorderRadius(CheckboxPane,";
-_cfcontrolsutils._setpaneborderradius(_checkboxpane,_radius);
+ //BA.debugLineNum = 82;BA.debugLine="CFControlsUtils.SetBorderRadius(CheckboxPane, rad";
+_cfcontrolsutils._setborderradius((anywheresoftware.b4j.objects.NodeWrapper.ConcreteNodeWrapper) anywheresoftware.b4a.AbsObjectWrapper.ConvertToWrapper(new anywheresoftware.b4j.objects.NodeWrapper.ConcreteNodeWrapper(), (javafx.scene.Node)(_checkboxpane.getObject())),_radius);
  //BA.debugLineNum = 84;BA.debugLine="End Sub";
 return "";
 }
 public String  _setcheckedcolor(String _color) throws Exception{
  //BA.debugLineNum = 100;BA.debugLine="Public Sub SetCheckedColor(color As String)";
- //BA.debugLineNum = 102;BA.debugLine="CFControlsUtils.SetPaneBG( CheckedPane, color)";
-_cfcontrolsutils._setpanebg(_checkedpane,_color);
+ //BA.debugLineNum = 102;BA.debugLine="CFControlsUtils.SetBG( CheckedPane, color)";
+_cfcontrolsutils._setbg((anywheresoftware.b4j.objects.NodeWrapper.ConcreteNodeWrapper) anywheresoftware.b4a.AbsObjectWrapper.ConvertToWrapper(new anywheresoftware.b4j.objects.NodeWrapper.ConcreteNodeWrapper(), (javafx.scene.Node)(_checkedpane.getObject())),_color);
  //BA.debugLineNum = 104;BA.debugLine="End Sub";
 return "";
 }
@@ -195,15 +195,15 @@ return "";
 }
 public String  _setpaneeffect(String _effect) throws Exception{
  //BA.debugLineNum = 86;BA.debugLine="Public Sub SetPaneEffect(effect As String)";
- //BA.debugLineNum = 88;BA.debugLine="CFControlsUtils.setPaneEffect(CheckboxPane, effec";
-_cfcontrolsutils._setpaneeffect(_checkboxpane,_effect);
+ //BA.debugLineNum = 88;BA.debugLine="CFControlsUtils.SetEffect(CheckboxPane, effect)";
+_cfcontrolsutils._seteffect((anywheresoftware.b4j.objects.NodeWrapper.ConcreteNodeWrapper) anywheresoftware.b4a.AbsObjectWrapper.ConvertToWrapper(new anywheresoftware.b4j.objects.NodeWrapper.ConcreteNodeWrapper(), (javafx.scene.Node)(_checkboxpane.getObject())),_effect);
  //BA.debugLineNum = 90;BA.debugLine="End Sub";
 return "";
 }
-public String  _setrotationx(float _angle) throws Exception{
- //BA.debugLineNum = 68;BA.debugLine="Public Sub SetRotationX(angle As Float)";
- //BA.debugLineNum = 70;BA.debugLine="CFControlsUtils.setPaneRotation(CheckboxPane, ang";
-_cfcontrolsutils._setpanerotation(_checkboxpane,_angle);
+public String  _setrotation(float _angle) throws Exception{
+ //BA.debugLineNum = 68;BA.debugLine="Public Sub setRotation(angle As Float)";
+ //BA.debugLineNum = 70;BA.debugLine="CFControlsUtils.SetRotation(CheckboxPane, angle)";
+_cfcontrolsutils._setrotation((anywheresoftware.b4j.objects.NodeWrapper.ConcreteNodeWrapper) anywheresoftware.b4a.AbsObjectWrapper.ConvertToWrapper(new anywheresoftware.b4j.objects.NodeWrapper.ConcreteNodeWrapper(), (javafx.scene.Node)(_checkboxpane.getObject())),_angle);
  //BA.debugLineNum = 72;BA.debugLine="End Sub";
 return "";
 }
