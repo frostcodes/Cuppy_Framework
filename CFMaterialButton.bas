@@ -16,6 +16,8 @@ Version=5.51
 #RaisesSynchronousEvents: MouseExited
 #RaisesSynchronousEvents: Resize
 
+#DesignerProperty: Key: Text, DisplayName: Text to display, FieldType: String, DefaultValue: Button
+
 #Region Internal Segment
 
 Sub Class_Globals
@@ -29,7 +31,7 @@ End Sub
 Public Sub Initialize (Callback As Object, EventName As String)
 	mEventName = EventName
 	mCallBack = Callback
-CFStyleManager.ActiveControls.add(Me)
+'	CFStyleManager.ActiveControls.add(Me)
 End Sub
 
 Public Sub DesignerCreateView (Base As Pane, Lbl As Label, Props As Map)
@@ -40,6 +42,8 @@ Public Sub DesignerCreateView (Base As Pane, Lbl As Label, Props As Map)
 	SetBg(CFStyleManager.DefaultTheme.Get("accent"))
 	InnerButton.Font = CFStyleManager.DefaultFont
 	InnerButton.MouseCursor = fx.Cursors.HAND
+	
+	setText(Props.Get("Text"))
 	
 End Sub
 
@@ -100,6 +104,17 @@ End Sub
 
 #End Region
 
+Public Sub setText(text As String)
+	
+	InnerButton.Text = text
+	
+End Sub
+
+Public Sub getText() As String
+	
+	Return InnerButton.Text
+	
+End Sub
 
 Private Sub InnerButton_MousePressed (EventData As MouseEvent)
 	

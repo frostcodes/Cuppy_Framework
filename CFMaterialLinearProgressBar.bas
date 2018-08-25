@@ -16,6 +16,7 @@ Version=5.51
 #RaisesSynchronousEvents: ProgressFinished
 #RaisesSynchronousEvents: Resize
 
+#DesignerProperty: Key: Progress, DisplayName: Current progress percent, FieldType: Int, DefaultValue: 30, MinRange: 0, MaxRange: 100
  
 #Region Internal Segment
 
@@ -38,8 +39,9 @@ Public Sub DesignerCreateView (Base As Pane, Lbl As Label, Props As Map)
 	mBase.LoadLayout("CFMaterialLinearProgressBarUI")
 	'set using theme...
 	SetBg(CFStyleManager.DefaultTheme.Get("divider"))
-	SetProgressColor(CFStyleManager.DefaultTheme.Get("primary"))
-	Progress(30) 'set initial value
+	setProgressColor(CFStyleManager.DefaultTheme.Get("primary"))
+	
+	setProgress(Props.Get("Progress")) 'set initial progress value
 	
 End Sub
 
@@ -85,7 +87,7 @@ Public Sub SetBorderRadius(radius As Int)
 	
 End Sub
  
-Public Sub SetPaneEffect(effect As String)
+Public Sub SetEffect(effect As String)
 	
 	CFControlsUtils.SetEffect(ProgressPane, effect)
 	
@@ -99,13 +101,13 @@ End Sub
 
 #End Region
   
-Public Sub SetProgressColor(color As String)
+Public Sub setProgressColor(color As String)
   	
 	CFControlsUtils.SetBG( ProgressBar, color)
 	
 End Sub
 
-Public Sub Progress(value As Int)
+Public Sub setProgress(value As Int)
 	
 	If value >= 100 Then
 		value = 100
@@ -115,6 +117,12 @@ Public Sub Progress(value As Int)
 		
 	End If
 	
-	ProgressBar.SetLayoutAnimated(400, 0 ,0 ,(value / 100) * mBase.PrefWidth , mBase.PrefHeight)
+	ProgressBar.SetLayoutAnimated(400, 0 ,0 , (value / 100) * mBase.PrefWidth , mBase.PrefHeight)
+	
+End Sub
+
+Public Sub getProgress()  As Int
+ 
+	Return (ProgressBar.PrefWidth / mBase.PrefWidth ) * 100
 	
 End Sub

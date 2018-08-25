@@ -24,6 +24,7 @@ static {
  public static anywheresoftware.b4a.keywords.Common __c = null;
 public static anywheresoftware.b4j.objects.JFX _fx = null;
 public static b4j.example.cssutils _cssutils = null;
+public static Punchline.Tech.Cuppy.Framework.cfcontrolsutils _cfcontrolsutils = null;
 public static Punchline.Tech.Cuppy.Framework.cfconfigs _cfconfigs = null;
 public static Punchline.Tech.Cuppy.Framework.cfstylemanager _cfstylemanager = null;
 public static Punchline.Tech.Cuppy.Framework.cffileutility _cffileutility = null;
@@ -31,7 +32,6 @@ public static Punchline.Tech.Cuppy.Framework.cfmathutility _cfmathutility = null
 public static Punchline.Tech.Cuppy.Framework.cfdatatypeutility _cfdatatypeutility = null;
 public static Punchline.Tech.Cuppy.Framework.cfdatageneratorutility _cfdatageneratorutility = null;
 public static Punchline.Tech.Cuppy.Framework.cfapputility _cfapputility = null;
-public static Punchline.Tech.Cuppy.Framework.cfcontrolsutils _cfcontrolsutils = null;
 public static Object  _breakstrat(String _haystack,String _after) throws Exception{
 String _found = "";
  //BA.debugLineNum = 693;BA.debugLine="Public Sub BreakStrAt(haystack As String, after As";

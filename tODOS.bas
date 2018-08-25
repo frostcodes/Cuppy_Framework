@@ -13,7 +13,7 @@ End Sub
 
  
     ' **  Later support deigner view scripts 
-	  'add support for app bar title and hiding 
+	'TODO: create a rotation property for all controls
  
 'ComboBox
  

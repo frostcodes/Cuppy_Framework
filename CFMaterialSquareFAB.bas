@@ -38,6 +38,7 @@ Public Sub DesignerCreateView (Base As Pane, Lbl As Label, Props As Map)
 	'set using theme...
 	SetBg(CFStyleManager.DefaultTheme.Get("accent"))
 	setRotation(135) 'rotate by default
+	 
 End Sub
 
 Private Sub Base_Resize (Width As Double, Height As Double)
@@ -84,7 +85,7 @@ Public Sub SetBorderRadius(radius As Int)
 End Sub
 
 
-Public Sub SetPaneEffect(effect As String)
+Public Sub SetEffect(effect As String)
 	
 	CFControlsUtils.setEffect(FAB_Btn, effect)
 	
@@ -98,6 +99,17 @@ End Sub
 
 #End Region
 
+Public Sub setIcon(IconText As String)
+	
+	FAB_Btn.Text = IconText
+	 
+End Sub
+
+Public Sub getIcon As String
+	
+	Return FAB_Btn.Text
+	 
+End Sub
 
 Private Sub FAB_Btn_MousePressed (EventData As MouseEvent)
 	

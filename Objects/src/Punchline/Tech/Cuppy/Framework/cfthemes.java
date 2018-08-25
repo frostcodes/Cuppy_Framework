@@ -25,6 +25,7 @@ public class cfthemes extends B4AClass.ImplB4AClass implements BA.SubDelegator{
 
  public anywheresoftware.b4a.keywords.Common __c = null;
 public b4j.example.cssutils _cssutils = null;
+public Punchline.Tech.Cuppy.Framework.cfcontrolsutils _cfcontrolsutils = null;
 public Punchline.Tech.Cuppy.Framework.cfconfigs _cfconfigs = null;
 public Punchline.Tech.Cuppy.Framework.cfstylemanager _cfstylemanager = null;
 public Punchline.Tech.Cuppy.Framework.cfstringutility _cfstringutility = null;
@@ -33,7 +34,6 @@ public Punchline.Tech.Cuppy.Framework.cfmathutility _cfmathutility = null;
 public Punchline.Tech.Cuppy.Framework.cfdatatypeutility _cfdatatypeutility = null;
 public Punchline.Tech.Cuppy.Framework.cfdatageneratorutility _cfdatageneratorutility = null;
 public Punchline.Tech.Cuppy.Framework.cfapputility _cfapputility = null;
-public Punchline.Tech.Cuppy.Framework.cfcontrolsutils _cfcontrolsutils = null;
 public anywheresoftware.b4a.objects.collections.Map  _bluetheme() throws Exception{
 anywheresoftware.b4a.objects.collections.Map _colors = null;
  //BA.debugLineNum = 31;BA.debugLine="Private Sub BlueTheme As Map";

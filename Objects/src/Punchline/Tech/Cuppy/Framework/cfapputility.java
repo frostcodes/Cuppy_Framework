@@ -24,6 +24,7 @@ static {
  public static anywheresoftware.b4a.keywords.Common __c = null;
 public static anywheresoftware.b4j.objects.JFX _fx = null;
 public static b4j.example.cssutils _cssutils = null;
+public static Punchline.Tech.Cuppy.Framework.cfcontrolsutils _cfcontrolsutils = null;
 public static Punchline.Tech.Cuppy.Framework.cfconfigs _cfconfigs = null;
 public static Punchline.Tech.Cuppy.Framework.cfstylemanager _cfstylemanager = null;
 public static Punchline.Tech.Cuppy.Framework.cfstringutility _cfstringutility = null;
@@ -31,7 +32,6 @@ public static Punchline.Tech.Cuppy.Framework.cffileutility _cffileutility = null
 public static Punchline.Tech.Cuppy.Framework.cfmathutility _cfmathutility = null;
 public static Punchline.Tech.Cuppy.Framework.cfdatatypeutility _cfdatatypeutility = null;
 public static Punchline.Tech.Cuppy.Framework.cfdatageneratorutility _cfdatageneratorutility = null;
-public static Punchline.Tech.Cuppy.Framework.cfcontrolsutils _cfcontrolsutils = null;
 public static String  _getpackagename(Object _module) throws Exception{
 anywheresoftware.b4j.object.JavaObject _modjo = null;
 String _mostr = "";

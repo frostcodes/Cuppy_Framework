@@ -30,6 +30,7 @@ public Object _mcallback = null;
 public anywheresoftware.b4j.objects.PaneWrapper.ConcretePaneWrapper _mbase = null;
 public anywheresoftware.b4j.objects.PaneWrapper.ConcretePaneWrapper _innercard = null;
 public b4j.example.cssutils _cssutils = null;
+public Punchline.Tech.Cuppy.Framework.cfcontrolsutils _cfcontrolsutils = null;
 public Punchline.Tech.Cuppy.Framework.cfconfigs _cfconfigs = null;
 public Punchline.Tech.Cuppy.Framework.cfstylemanager _cfstylemanager = null;
 public Punchline.Tech.Cuppy.Framework.cfstringutility _cfstringutility = null;
@@ -38,7 +39,6 @@ public Punchline.Tech.Cuppy.Framework.cfmathutility _cfmathutility = null;
 public Punchline.Tech.Cuppy.Framework.cfdatatypeutility _cfdatatypeutility = null;
 public Punchline.Tech.Cuppy.Framework.cfdatageneratorutility _cfdatageneratorutility = null;
 public Punchline.Tech.Cuppy.Framework.cfapputility _cfapputility = null;
-public Punchline.Tech.Cuppy.Framework.cfcontrolsutils _cfcontrolsutils = null;
 public String  _base_resize(double _width,double _height) throws Exception{
  //BA.debugLineNum = 38;BA.debugLine="Private Sub Base_Resize (Width As Double, Height A";
  //BA.debugLineNum = 40;BA.debugLine="InnerCard.PrefWidth = Width";
@@ -160,8 +160,8 @@ _cfcontrolsutils._setborderradius((anywheresoftware.b4j.objects.NodeWrapper.Conc
  //BA.debugLineNum = 77;BA.debugLine="End Sub";
 return "";
 }
-public String  _setpaneeffect(String _effect) throws Exception{
- //BA.debugLineNum = 79;BA.debugLine="Public Sub SetPaneEffect(effect As String)";
+public String  _seteffect(String _effect) throws Exception{
+ //BA.debugLineNum = 79;BA.debugLine="Public Sub SetEffect(effect As String)";
  //BA.debugLineNum = 81;BA.debugLine="CFControlsUtils.setEffect(InnerCard, effect)";
 _cfcontrolsutils._seteffect((anywheresoftware.b4j.objects.NodeWrapper.ConcreteNodeWrapper) anywheresoftware.b4a.AbsObjectWrapper.ConvertToWrapper(new anywheresoftware.b4j.objects.NodeWrapper.ConcreteNodeWrapper(), (javafx.scene.Node)(_innercard.getObject())),_effect);
  //BA.debugLineNum = 83;BA.debugLine="End Sub";

@@ -95,7 +95,7 @@ Public Sub SetBorderRadius(radius As Int)
 	
 End Sub
 
-Public Sub SetPaneEffect(effect As String)
+Public Sub SetEffect(effect As String)
 	
 	CFControlsUtils.setEffect(Label1, effect)
 	

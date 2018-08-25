@@ -11,6 +11,8 @@ Version=5.51
 
 #RaisesSynchronousEvents: MousePressed
 #RaisesSynchronousEvents: Resize
+
+#DesignerProperty: Key: Text, DisplayName: Text to display, FieldType: String, DefaultValue: text
  
 #Region Internal Segment
 
@@ -35,6 +37,8 @@ Public Sub DesignerCreateView (Base As Pane, Lbl As Label, Props As Map)
 	SetTextColor(CFStyleManager.DefaultTheme.Get("primary_text"))
 	InnerLabel.Font = CFStyleManager.SelectFont("Light", 12)
 	
+	'set text from designer
+	setText(Props.Get("Text"))
 End Sub
 
 Private Sub Base_Resize (Width As Double, Height As Double)
@@ -98,6 +102,20 @@ Public Sub RemoveEffects()
 End Sub
 
 #End Region
+
+
+Public Sub setText(Text As String)
+	
+	InnerLabel.Text = Text
+	
+End Sub
+
+Public Sub getText() As String
+	
+	Return InnerLabel.Text
+	
+End Sub
+
 
 Private Sub InnerLabel_MousePressed (EventData As MouseEvent)
 	  

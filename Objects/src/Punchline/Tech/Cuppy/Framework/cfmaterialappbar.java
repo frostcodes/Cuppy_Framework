@@ -33,6 +33,7 @@ public anywheresoftware.b4j.objects.PaneWrapper.ConcretePaneWrapper _innerpane =
 public anywheresoftware.b4j.objects.ButtonWrapper _innerbutton = null;
 public anywheresoftware.b4j.objects.LabelWrapper _titlelabel = null;
 public b4j.example.cssutils _cssutils = null;
+public Punchline.Tech.Cuppy.Framework.cfcontrolsutils _cfcontrolsutils = null;
 public Punchline.Tech.Cuppy.Framework.cfconfigs _cfconfigs = null;
 public Punchline.Tech.Cuppy.Framework.cfstylemanager _cfstylemanager = null;
 public Punchline.Tech.Cuppy.Framework.cfstringutility _cfstringutility = null;
@@ -41,7 +42,6 @@ public Punchline.Tech.Cuppy.Framework.cfmathutility _cfmathutility = null;
 public Punchline.Tech.Cuppy.Framework.cfdatatypeutility _cfdatatypeutility = null;
 public Punchline.Tech.Cuppy.Framework.cfdatageneratorutility _cfdatageneratorutility = null;
 public Punchline.Tech.Cuppy.Framework.cfapputility _cfapputility = null;
-public Punchline.Tech.Cuppy.Framework.cfcontrolsutils _cfcontrolsutils = null;
 public String  _base_resize(double _width,double _height) throws Exception{
  //BA.debugLineNum = 48;BA.debugLine="Private Sub Base_Resize (Width As Double, Height A";
  //BA.debugLineNum = 50;BA.debugLine="CallSubDelayed3(mCallBack, mEventName & \"_Resize\"";
@@ -177,6 +177,13 @@ _cfcontrolsutils._setborderradius((anywheresoftware.b4j.objects.NodeWrapper.Conc
  //BA.debugLineNum = 90;BA.debugLine="End Sub";
 return "";
 }
+public String  _seteffect(String _effect) throws Exception{
+ //BA.debugLineNum = 92;BA.debugLine="Public Sub SetEffect(effect As String)";
+ //BA.debugLineNum = 94;BA.debugLine="CFControlsUtils.setEffect(Label1, effect)";
+_cfcontrolsutils._seteffect((anywheresoftware.b4j.objects.NodeWrapper.ConcreteNodeWrapper) anywheresoftware.b4a.AbsObjectWrapper.ConvertToWrapper(new anywheresoftware.b4j.objects.NodeWrapper.ConcreteNodeWrapper(), (javafx.scene.Node)(_label1.getObject())),_effect);
+ //BA.debugLineNum = 96;BA.debugLine="End Sub";
+return "";
+}
 public String  _setenableshadow(boolean _boolval) throws Exception{
  //BA.debugLineNum = 142;BA.debugLine="Public Sub setEnableShadow(BoolVal As Boolean)";
  //BA.debugLineNum = 144;BA.debugLine="Label1.Visible = BoolVal";
@@ -203,13 +210,6 @@ public String  _seticon(String _icontext) throws Exception{
  //BA.debugLineNum = 108;BA.debugLine="Label1.Text = IconText";
 _label1.setText(_icontext);
  //BA.debugLineNum = 110;BA.debugLine="End Sub";
-return "";
-}
-public String  _setpaneeffect(String _effect) throws Exception{
- //BA.debugLineNum = 92;BA.debugLine="Public Sub SetPaneEffect(effect As String)";
- //BA.debugLineNum = 94;BA.debugLine="CFControlsUtils.setEffect(Label1, effect)";
-_cfcontrolsutils._seteffect((anywheresoftware.b4j.objects.NodeWrapper.ConcreteNodeWrapper) anywheresoftware.b4a.AbsObjectWrapper.ConvertToWrapper(new anywheresoftware.b4j.objects.NodeWrapper.ConcreteNodeWrapper(), (javafx.scene.Node)(_label1.getObject())),_effect);
- //BA.debugLineNum = 96;BA.debugLine="End Sub";
 return "";
 }
 public String  _setrotation(float _angle) throws Exception{

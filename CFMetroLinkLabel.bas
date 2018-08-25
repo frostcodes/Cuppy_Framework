@@ -12,6 +12,8 @@ Version=5.51
 #RaisesSynchronousEvents: MousePressed
 #RaisesSynchronousEvents: Resize
 
+#DesignerProperty: Key: Link, DisplayName: Link to open, FieldType: String, DefaultValue: http://, Description: The link can be any type of link : http://, ftp://, file:// etc... The PC default link handler would handle the links
+
 #Region Internal Segment
 
 Sub Class_Globals
@@ -32,9 +34,12 @@ Public Sub DesignerCreateView (Base As Pane, Lbl As Label, Props As Map)
 	mBase.LoadLayout("CFMetroLinkLabelUI")
 	'set using theme...
  
-	SetTextColor(CFStyleManager.DefaultTheme.Get("primary_text"))
+	setTextColor(CFStyleManager.DefaultTheme.Get("primary_text"))
 	InnerLabel.Font = CFStyleManager.SelectFont("Regular", 12)
 	InnerLabel.MouseCursor = fx.Cursors.HAND
+	
+	'set link from designer
+	setLink(Props.Get("Link"))
 	
 End Sub
 
@@ -61,7 +66,7 @@ Public Sub SetBg(color As String)
  
 End Sub
 
-Public Sub SetTextColor(color As String)
+Public Sub setTextColor(color As String)
  
 	CFControlsUtils.setTextColor (InnerLabel, color)
  
@@ -78,15 +83,13 @@ Public Sub SetBorder(color As String , width As Int)
 	CFControlsUtils.setBorder(InnerLabel, color, width)
 
 End Sub
-
-
+ 
 Public Sub SetBorderRadius(radius As Int)
 	
 	CFControlsUtils.setBorderRadius(InnerLabel, radius)
 	
 End Sub
-
-
+ 
 Public Sub SetEffect(effect As String)
 	
 	CFControlsUtils.setEffect(InnerLabel, effect)
@@ -100,6 +103,18 @@ Public Sub RemoveEffects()
 End Sub
 
 #End Region
+
+Public Sub setLink(link As String)
+	
+	InnerLabel.Text = link
+	
+End Sub
+
+Public Sub getLink() As String
+	
+	Return InnerLabel.Text
+	
+End Sub
 
 Private Sub InnerLabel_MousePressed (EventData As MouseEvent)
 	

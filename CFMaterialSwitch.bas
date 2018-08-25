@@ -12,6 +12,8 @@ Version=5.51
 #RaisesSynchronousEvents: CheckedChanged
 #RaisesSynchronousEvents: Resize
  
+#DesignerProperty: Key: CheckedState, DisplayName: Checked State, FieldType: String, DefaultValue: UNCHECKED, List: UNCHECKED|CHECKED|INDETERMINATE
+ 
  'TODO: make font adjust when resized
 #Region Internal Segment
 
@@ -29,6 +31,9 @@ Sub Class_Globals
 	Public CHECKED_STATE As Int = 1
 	Public INDETERMINATE_STATE As Int = 2
 	  
+	'This prevents raising checked event when setting designer checked property
+	Private FirstTime As Boolean = False
+	
 End Sub
 
 Public Sub Initialize (Callback As Object, EventName As String)
@@ -41,14 +46,31 @@ Public Sub DesignerCreateView (Base As Pane, Lbl As Label, Props As Map)
 	mBase.LoadLayout("CFMaterialSwitchesUI")
 	'set using theme...
 	SetCheckedColor(CFStyleManager.DefaultTheme.Get("primary"))
-	
-	'TODO: create a designer prorerty for this...
-	SetCheckState(UNCHECKED_STATE) 'set initial value
 	 
+	 
+'	Set checked state
+	Dim checkedState As String = Props.Get("CheckedState")
+	
+	'set initial value
+	
+	If checkedState = "UNCHECKED" Then
+		
+		SetCheckState(UNCHECKED_STATE)
+	
+	else If checkedState = "CHECKED" Then
+		
+		SetCheckState(CHECKED_STATE)
+		
+	else If checkedState = "INDETERMINATE" Then
+		
+		SetCheckState(INDETERMINATE_STATE)
+	
+		
+	End If
 	
 	'TODO: add a shadow for SwitchBtn to make it like the intial google material type
 
-	'ControlsUtils.setPaneEffect(SwitchBtn, "dropshadow( three-pass-box , rgba(0,0,0,0.4) , 5, 0.0 , 0 , 1 )")
+	'ControlsUtils.SetEffect(SwitchBtn, "dropshadow( three-pass-box , rgba(0,0,0,0.4) , 5, 0.0 , 0 , 1 )")
 	
   
 End Sub
@@ -91,7 +113,7 @@ Public Sub SetBorderRadius(radius As Int)
 	
 End Sub
  
-Public Sub SetPaneEffect(effect As String)
+Public Sub SetEffect(effect As String)
 	
 	CFControlsUtils.SetEffect(SwitchPane, effect)
 	
@@ -135,9 +157,18 @@ Public Sub SetCheckState(value As Int)
 		SetBg(CFStyleManager.DefaultTheme.Get("divider"))
 		  
 	End If
-	 
-	'call callback for checked changed status
-	CallSubDelayed2(mCallBack, mEventName & "_CheckedChanged" , value)
+	
+	If FirstTime Then
+		
+		'call callback for checked changed status
+		CallSubDelayed2(mCallBack, mEventName & "_CheckedChanged" , value)
+
+	Else
+			
+		FirstTime = True
+		
+	End If
+	
 	 
 End Sub
 

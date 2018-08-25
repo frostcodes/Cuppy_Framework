@@ -12,6 +12,8 @@ Version=6.3
 #RaisesSynchronousEvents: CheckedChanged
 #RaisesSynchronousEvents: Resize
  
+#DesignerProperty: Key: CheckedState, DisplayName: Checked State, FieldType: String, DefaultValue: UNCHECKED, List: UNCHECKED|CHECKED
+ 
  'TODO: make font adjust when resized
 #Region Internal Segment
 
@@ -27,6 +29,10 @@ Sub Class_Globals
 	 
 	Private CheckedStatus As Boolean = False
 	Public ToggleButton As Label
+	
+	'This prevents raising checked event when setting designer checked property
+	Private FirstTime As Boolean = False
+	 
 End Sub
 
 Public Sub Initialize (Callback As Object, EventName As String)
@@ -41,6 +47,21 @@ Public Sub DesignerCreateView (Base As Pane, Lbl As Label, Props As Map)
 	'TODO: create a designer prorerty for this...
 	SetCheckState(UNCHECKED_STATE) 'set initial value
 	  
+'	Set checked state
+	Dim checkedState As String = Props.Get("CheckedState")
+	
+	'set initial value
+	
+	If checkedState = "UNCHECKED" Then
+		
+		SetCheckState(UNCHECKED_STATE)
+	
+	else If checkedState = "CHECKED" Then
+		
+		SetCheckState(CHECKED_STATE)
+	 
+	End If
+	 
 End Sub
 
 Private Sub Base_Resize (Width As Double, Height As Double)
@@ -84,7 +105,7 @@ Public Sub SetBorderRadius(radius As Int)
 	
 End Sub
  
-Public Sub SetPaneEffect(effect As String)
+Public Sub SetEffect(effect As String)
 	
 	CFControlsUtils.setEffect(ToggleButton, effect)
 	
@@ -120,10 +141,17 @@ Public Sub SetCheckState(value As Int)
 		CheckedStatus = True
 		 
 	End If
-	 
-	'call callback for checked changed status
-	CallSubDelayed2(mCallBack, mEventName & "_CheckedChanged" , value)
-	 
+	
+	If FirstTime Then
+		
+		'call callback for checked changed status
+		CallSubDelayed2(mCallBack, mEventName & "_CheckedChanged" , value)
+
+	Else
+			
+		FirstTime = True
+		
+	End If
 End Sub
 
 Public Sub Checked As Boolean

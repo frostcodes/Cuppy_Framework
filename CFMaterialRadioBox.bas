@@ -13,6 +13,8 @@ Version=5.51
 #RaisesSynchronousEvents: CheckedChanged
 #RaisesSynchronousEvents: Resize
  
+#DesignerProperty: Key: CheckedState, DisplayName: Checked State, FieldType: String, DefaultValue: UNCHECKED, List: UNCHECKED|CHECKED|INDETERMINATE
+ 
  'TODO: make font adjust when resized
 #Region Internal Segment
 
@@ -29,7 +31,9 @@ Sub Class_Globals
 	Public UNCHECKED_STATE As Int = 0
 	Public CHECKED_STATE As Int = 1
 	Public INDETERMINATE_STATE As Int = 2
-	 
+	
+	'This prevents raising checked event when setting designer checked property
+	Private FirstTime As Boolean = False
 End Sub
 
 Public Sub Initialize (Callback As Object, EventName As String)
@@ -46,9 +50,26 @@ Public Sub DesignerCreateView (Base As Pane, Lbl As Label, Props As Map)
 	
 	SetCheckedColor(CFStyleManager.DefaultTheme.Get("primary"))
 	
-	'TODO: create a designer prorerty for this...
-	SetCheckState(UNCHECKED_STATE) 'set initial value
-	 
+	
+'	Set checked state
+	Dim checkedState As String = Props.Get("CheckedState")
+	
+	'set initial value
+	
+	If checkedState = "UNCHECKED" Then
+		
+		SetCheckState(UNCHECKED_STATE)
+	
+	else If checkedState = "CHECKED" Then
+		
+		SetCheckState(CHECKED_STATE)
+		
+	else If checkedState = "INDETERMINATE" Then
+		
+		SetCheckState(INDETERMINATE_STATE)
+	
+		
+	End If
 End Sub
 
 Private Sub Base_Resize (Width As Double, Height As Double)
@@ -89,7 +110,7 @@ Public Sub SetBorderRadius(radius As Int)
 	
 End Sub
  
-Public Sub SetPaneEffect(effect As String)
+Public Sub SetEffect(effect As String)
 	
 	CFControlsUtils.SetEffect(CheckboxPane, effect)
 	
@@ -115,28 +136,30 @@ Public Sub SetCheckState(value As Int)
 		
 		CheckedPane.Visible = False
 		CheckedPane.SetAlphaAnimated(300, 0 )
-		'SetBg(StyleManager.DefaultTheme.Get("divider"))
-		
 		 
 	Else if value = CHECKED_STATE Then
 	
 		CheckedPane.Visible = True
 		CheckedPane.SetAlphaAnimated(300, 1 )
-		'SetBg(StyleManager.DefaultTheme.Get("primary"))
-		
 		 
 	Else
 			
 		CheckedPane.SetAlphaAnimated(300, 0.6 )
 		CheckedPane.Visible = True
-		'SetBg(StyleManager.DefaultTheme.Get("primary"))
 		
-		 	
 	End If
 	 
-	'call callback for checked changed status
-	CallSubDelayed2(mCallBack, mEventName & "_CheckedChanged" , value)
-	  
+	If FirstTime Then
+		
+		'call callback for checked changed status
+		CallSubDelayed2(mCallBack, mEventName & "_CheckedChanged" , value)
+
+	Else
+			
+		FirstTime = True
+		
+	End If
+	
 End Sub
 
 Public Sub Checked As Boolean

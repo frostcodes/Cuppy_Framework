@@ -6,11 +6,11 @@ Version=5.51
 @EndOfDesignText@
 'Custom View class
  
-''''#  Designer    Property: Key: thic kness, DisplayName: thick ness, FieldType: Int, DefaultValue: 1, Description: Set how thick the divider should be
 #Event: Resize (Width As Double, Height As Double)
 
 #RaisesSynchronousEvents: Resize
 
+#DesignerProperty: Key: DividerOrientation, DisplayName: Orientation, FieldType: String, DefaultValue: Horizontal, List: Horizontal|Vertical
 
 #Region Internal Segment
 'TODO: make orientation property: horizontal/vertical..using rotate 
@@ -20,6 +20,7 @@ Sub Class_Globals
 	Private mCallBack As Object 'ignore
 	Private mBase As Pane
 	Public line As Pane
+	 
 End Sub
 '
 Public Sub Initialize (Callback As Object, EventName As String)
@@ -33,25 +34,15 @@ Public Sub DesignerCreateView (Base As Pane, Lbl As Label, Props As Map)
 	'set using theme...
 	SetBg(CFStyleManager.DefaultTheme.Get("divider"))
 	 
-	 
-	 'BUG: unable to set thickness from designer...
-'	Dim thick As Double =  Props.Get("thickness")
-'	line.SetSize(mBase.Width, thick)
-'	 
-'	 
-'	Log("Thick:  " & thick)
-'	
-'	Log("Thick2:  " & Thickness)
-'	
-'	 
-End Sub
+End  Sub
 
 Private Sub Base_Resize (Width As Double, Height As Double)
- 
-	line.PrefWidth = Width
+  
+		line.PrefWidth = Width
+		line.PrefHeight = Height
 	
-	CallSubDelayed3(mCallBack, mEventName & "_Resize", Width, Height)
-	 
+		CallSubDelayed3(mCallBack, mEventName & "_Resize", Width, Height)
+  
 End Sub
 
 Public Sub GetBase As Pane
@@ -87,7 +78,7 @@ Public Sub SetBorderRadius(radius As Int)
 	
 End Sub
 
-Public Sub SetPaneEffect(effect As String)
+Public Sub SetEffect(effect As String)
 	
 	CFControlsUtils.SetEffect(line, effect)
 	 
@@ -103,23 +94,32 @@ End Sub
 
 #Region Control Properties
 
-Public Sub SetSize(sizeX As Int)
+Public Sub setThickness(size As Double)
 	
-	line.PrefHeight =  sizeX
+'	line.PrefHeight =  size
+	mBase.PrefHeight =  size
 	  
 End Sub
 
-Public Sub GetSize() As Double
+Public Sub getThickness() As Double
 	
 	Return line.PrefHeight
+	
+End Sub
+ 
+Public Sub setOrientation(Orientation As String)
+	 
+	DividerOrientation = Orientation
+	  
+End Sub
+
+Public Sub getOrientation() As String
+	
+	Return DividerOrientation
 	
 End Sub
 
 #End Region
 
 'TODO: make vertical divider
-
-'
-'Private Sub line_MousePressed (EventData As MouseEvent)
-'	
-'End Sub
+ 

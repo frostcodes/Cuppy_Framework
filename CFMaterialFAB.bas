@@ -49,7 +49,6 @@ Private Sub Base_Resize (Width As Double, Height As Double)
 	FAB_Btn.PrefWidth = Width
 	FAB_Btn.PrefHeight = Width
 	CallSubDelayed3(mCallBack, mEventName & "_Resize", Width, Height)
-	
 	 
 End Sub
 
@@ -81,7 +80,7 @@ Public Sub SetBorderRadius(radius As Int)
 End Sub
 
 
-Public Sub SetPaneEffect(effect As String)
+Public Sub SetEffect(effect As String)
 	
 	CFControlsUtils.setEffect(FAB_Btn, effect)
 	
@@ -101,6 +100,19 @@ End Sub
 
 
 #End Region
+
+
+Public Sub setIcon(IconText As String)
+	
+	FAB_Btn.Text = IconText
+	 
+End Sub
+
+Public Sub getIcon As String
+	
+	Return FAB_Btn.Text
+	 
+End Sub
 
 'hover effect
  'FAB_Btn.SetAlphaAnimated(300, 0.8)
