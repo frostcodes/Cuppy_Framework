@@ -12,8 +12,13 @@ Sub Class_Globals
 End Sub
 
  
-    ' **  Later support deigner view scripts 
 	'TODO: create a rotation property for all controls
+ 'make a debugger moduke that supports things like deprecated 
+ 'and stack error location with component name
+'		LogError("Material Divider cannot have an Orientation of value: " & Orientation & " in " & mEventName)
+ 
+ 
+ 
  
 'ComboBox
  

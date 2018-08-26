@@ -41,16 +41,16 @@ public Punchline.Tech.Cuppy.Framework.cfdatatypeutility _cfdatatypeutility = nul
 public Punchline.Tech.Cuppy.Framework.cfdatageneratorutility _cfdatageneratorutility = null;
 public Punchline.Tech.Cuppy.Framework.cfapputility _cfapputility = null;
 public String  _base_resize(double _width,double _height) throws Exception{
- //BA.debugLineNum = 43;BA.debugLine="Private Sub Base_Resize (Width As Double, Height A";
- //BA.debugLineNum = 45;BA.debugLine="ProgressPane.PrefWidth = Width";
+ //BA.debugLineNum = 42;BA.debugLine="Private Sub Base_Resize (Width As Double, Height A";
+ //BA.debugLineNum = 44;BA.debugLine="ProgressPane.PrefWidth = Width";
 _progresspane.setPrefWidth(_width);
- //BA.debugLineNum = 46;BA.debugLine="ProgressPane.PrefHeight = Height";
+ //BA.debugLineNum = 45;BA.debugLine="ProgressPane.PrefHeight = Height";
 _progresspane.setPrefHeight(_height);
- //BA.debugLineNum = 47;BA.debugLine="ProgressBar.PrefHeight = Height";
+ //BA.debugLineNum = 46;BA.debugLine="ProgressBar.PrefHeight = Height";
 _progressbar.setPrefHeight(_height);
- //BA.debugLineNum = 49;BA.debugLine="CallSubDelayed3(mCallBack, mEventName & \"_Resize\"";
+ //BA.debugLineNum = 48;BA.debugLine="CallSubDelayed3(mCallBack, mEventName & \"_Resize\"";
 __c.CallSubDelayed3(ba,_mcallback,_meventname+"_Resize",(Object)(_width),(Object)(_height));
- //BA.debugLineNum = 51;BA.debugLine="End Sub";
+ //BA.debugLineNum = 50;BA.debugLine="End Sub";
 return "";
 }
 public String  _class_globals() throws Exception{
@@ -82,21 +82,21 @@ _setbg(BA.ObjectToString(_cfstylemanager._defaulttheme.Get((Object)("divider")))
 _setprogresscolor(BA.ObjectToString(_cfstylemanager._defaulttheme.Get((Object)("primary"))));
  //BA.debugLineNum = 38;BA.debugLine="setProgress(Props.Get(\"Progress\")) 'set initial p";
 _setprogress((int)(BA.ObjectToNumber(_props.Get((Object)("Progress")))));
- //BA.debugLineNum = 41;BA.debugLine="End Sub";
+ //BA.debugLineNum = 40;BA.debugLine="End Sub";
 return "";
 }
 public anywheresoftware.b4j.objects.PaneWrapper.ConcretePaneWrapper  _getbase() throws Exception{
- //BA.debugLineNum = 53;BA.debugLine="Public Sub GetBase As Pane";
- //BA.debugLineNum = 54;BA.debugLine="Return mBase";
+ //BA.debugLineNum = 52;BA.debugLine="Public Sub GetBase As Pane";
+ //BA.debugLineNum = 53;BA.debugLine="Return mBase";
 if (true) return _mbase;
- //BA.debugLineNum = 55;BA.debugLine="End Sub";
+ //BA.debugLineNum = 54;BA.debugLine="End Sub";
 return null;
 }
 public int  _getprogress() throws Exception{
- //BA.debugLineNum = 119;BA.debugLine="Public Sub getProgress()  As Int";
- //BA.debugLineNum = 121;BA.debugLine="Return (ProgressBar.PrefWidth / mBase.PrefWidth )";
+ //BA.debugLineNum = 118;BA.debugLine="Public Sub getProgress()  As Int";
+ //BA.debugLineNum = 120;BA.debugLine="Return (ProgressBar.PrefWidth / mBase.PrefWidth )";
 if (true) return (int) ((_progressbar.getPrefWidth()/(double)_mbase.getPrefWidth())*100);
- //BA.debugLineNum = 123;BA.debugLine="End Sub";
+ //BA.debugLineNum = 122;BA.debugLine="End Sub";
 return 0;
 }
 public String  _initialize(anywheresoftware.b4a.BA _ba,Object _callback,String _eventname) throws Exception{
@@ -110,66 +110,66 @@ _mcallback = _callback;
 return "";
 }
 public String  _removeeffects() throws Exception{
- //BA.debugLineNum = 91;BA.debugLine="Public Sub RemoveEffects()";
- //BA.debugLineNum = 93;BA.debugLine="CFControlsUtils.RemoveEffect(ProgressPane)";
+ //BA.debugLineNum = 90;BA.debugLine="Public Sub RemoveEffects()";
+ //BA.debugLineNum = 92;BA.debugLine="CFControlsUtils.RemoveEffect(ProgressPane)";
 _cfcontrolsutils._removeeffect((anywheresoftware.b4j.objects.NodeWrapper.ConcreteNodeWrapper) anywheresoftware.b4a.AbsObjectWrapper.ConvertToWrapper(new anywheresoftware.b4j.objects.NodeWrapper.ConcreteNodeWrapper(), (javafx.scene.Node)(_progresspane.getObject())));
- //BA.debugLineNum = 95;BA.debugLine="End Sub";
+ //BA.debugLineNum = 94;BA.debugLine="End Sub";
 return "";
 }
 public String  _setbg(String _color) throws Exception{
- //BA.debugLineNum = 61;BA.debugLine="Public Sub SetBg(color As String)";
- //BA.debugLineNum = 63;BA.debugLine="CFControlsUtils.SetBG( ProgressPane, color)";
+ //BA.debugLineNum = 60;BA.debugLine="Public Sub SetBg(color As String)";
+ //BA.debugLineNum = 62;BA.debugLine="CFControlsUtils.SetBG( ProgressPane, color)";
 _cfcontrolsutils._setbg((anywheresoftware.b4j.objects.NodeWrapper.ConcreteNodeWrapper) anywheresoftware.b4a.AbsObjectWrapper.ConvertToWrapper(new anywheresoftware.b4j.objects.NodeWrapper.ConcreteNodeWrapper(), (javafx.scene.Node)(_progresspane.getObject())),_color);
- //BA.debugLineNum = 65;BA.debugLine="End Sub";
+ //BA.debugLineNum = 64;BA.debugLine="End Sub";
 return "";
 }
 public String  _setborder(String _color,int _width) throws Exception{
- //BA.debugLineNum = 73;BA.debugLine="Public Sub SetBorder(color As String , width As In";
- //BA.debugLineNum = 75;BA.debugLine="CFControlsUtils.SetBorder(ProgressPane, color, wi";
+ //BA.debugLineNum = 72;BA.debugLine="Public Sub SetBorder(color As String , width As In";
+ //BA.debugLineNum = 74;BA.debugLine="CFControlsUtils.SetBorder(ProgressPane, color, wi";
 _cfcontrolsutils._setborder((anywheresoftware.b4j.objects.NodeWrapper.ConcreteNodeWrapper) anywheresoftware.b4a.AbsObjectWrapper.ConvertToWrapper(new anywheresoftware.b4j.objects.NodeWrapper.ConcreteNodeWrapper(), (javafx.scene.Node)(_progresspane.getObject())),_color,_width);
- //BA.debugLineNum = 77;BA.debugLine="End Sub";
+ //BA.debugLineNum = 76;BA.debugLine="End Sub";
 return "";
 }
 public String  _setborderradius(int _radius) throws Exception{
- //BA.debugLineNum = 79;BA.debugLine="Public Sub SetBorderRadius(radius As Int)";
- //BA.debugLineNum = 81;BA.debugLine="CFControlsUtils.SetBorderRadius(ProgressPane, rad";
+ //BA.debugLineNum = 78;BA.debugLine="Public Sub SetBorderRadius(radius As Int)";
+ //BA.debugLineNum = 80;BA.debugLine="CFControlsUtils.SetBorderRadius(ProgressPane, rad";
 _cfcontrolsutils._setborderradius((anywheresoftware.b4j.objects.NodeWrapper.ConcreteNodeWrapper) anywheresoftware.b4a.AbsObjectWrapper.ConvertToWrapper(new anywheresoftware.b4j.objects.NodeWrapper.ConcreteNodeWrapper(), (javafx.scene.Node)(_progresspane.getObject())),_radius);
- //BA.debugLineNum = 83;BA.debugLine="End Sub";
+ //BA.debugLineNum = 82;BA.debugLine="End Sub";
 return "";
 }
 public String  _seteffect(String _effect) throws Exception{
- //BA.debugLineNum = 85;BA.debugLine="Public Sub SetEffect(effect As String)";
- //BA.debugLineNum = 87;BA.debugLine="CFControlsUtils.SetEffect(ProgressPane, effect)";
+ //BA.debugLineNum = 84;BA.debugLine="Public Sub SetEffect(effect As String)";
+ //BA.debugLineNum = 86;BA.debugLine="CFControlsUtils.SetEffect(ProgressPane, effect)";
 _cfcontrolsutils._seteffect((anywheresoftware.b4j.objects.NodeWrapper.ConcreteNodeWrapper) anywheresoftware.b4a.AbsObjectWrapper.ConvertToWrapper(new anywheresoftware.b4j.objects.NodeWrapper.ConcreteNodeWrapper(), (javafx.scene.Node)(_progresspane.getObject())),_effect);
- //BA.debugLineNum = 89;BA.debugLine="End Sub";
+ //BA.debugLineNum = 88;BA.debugLine="End Sub";
 return "";
 }
 public String  _setprogress(int _value) throws Exception{
- //BA.debugLineNum = 105;BA.debugLine="Public Sub setProgress(value As Int)";
- //BA.debugLineNum = 107;BA.debugLine="If value >= 100 Then";
+ //BA.debugLineNum = 104;BA.debugLine="Public Sub setProgress(value As Int)";
+ //BA.debugLineNum = 106;BA.debugLine="If value >= 100 Then";
 if (_value>=100) { 
- //BA.debugLineNum = 108;BA.debugLine="value = 100";
+ //BA.debugLineNum = 107;BA.debugLine="value = 100";
 _value = (int) (100);
- //BA.debugLineNum = 111;BA.debugLine="CallSub(mCallBack, mEventName & \"_ProgressFinish";
+ //BA.debugLineNum = 110;BA.debugLine="CallSub(mCallBack, mEventName & \"_ProgressFinish";
 __c.CallSubNew(ba,_mcallback,_meventname+"_ProgressFinished");
  };
- //BA.debugLineNum = 115;BA.debugLine="ProgressBar.SetLayoutAnimated(400, 0 ,0 , (value";
+ //BA.debugLineNum = 114;BA.debugLine="ProgressBar.SetLayoutAnimated(400, 0 ,0 , (value";
 _progressbar.SetLayoutAnimated((int) (400),0,0,(_value/(double)100)*_mbase.getPrefWidth(),_mbase.getPrefHeight());
- //BA.debugLineNum = 117;BA.debugLine="End Sub";
+ //BA.debugLineNum = 116;BA.debugLine="End Sub";
 return "";
 }
 public String  _setprogresscolor(String _color) throws Exception{
- //BA.debugLineNum = 99;BA.debugLine="Public Sub setProgressColor(color As String)";
- //BA.debugLineNum = 101;BA.debugLine="CFControlsUtils.SetBG( ProgressBar, color)";
+ //BA.debugLineNum = 98;BA.debugLine="Public Sub setProgressColor(color As String)";
+ //BA.debugLineNum = 100;BA.debugLine="CFControlsUtils.SetBG( ProgressBar, color)";
 _cfcontrolsutils._setbg((anywheresoftware.b4j.objects.NodeWrapper.ConcreteNodeWrapper) anywheresoftware.b4a.AbsObjectWrapper.ConvertToWrapper(new anywheresoftware.b4j.objects.NodeWrapper.ConcreteNodeWrapper(), (javafx.scene.Node)(_progressbar.getObject())),_color);
- //BA.debugLineNum = 103;BA.debugLine="End Sub";
+ //BA.debugLineNum = 102;BA.debugLine="End Sub";
 return "";
 }
 public String  _setrotation(float _angle) throws Exception{
- //BA.debugLineNum = 67;BA.debugLine="Public Sub setRotation(angle As Float)";
- //BA.debugLineNum = 69;BA.debugLine="CFControlsUtils.SetRotation(ProgressPane, angle)";
+ //BA.debugLineNum = 66;BA.debugLine="Public Sub setRotation(angle As Float)";
+ //BA.debugLineNum = 68;BA.debugLine="CFControlsUtils.SetRotation(ProgressPane, angle)";
 _cfcontrolsutils._setrotation((anywheresoftware.b4j.objects.NodeWrapper.ConcreteNodeWrapper) anywheresoftware.b4a.AbsObjectWrapper.ConvertToWrapper(new anywheresoftware.b4j.objects.NodeWrapper.ConcreteNodeWrapper(), (javafx.scene.Node)(_progresspane.getObject())),_angle);
- //BA.debugLineNum = 71;BA.debugLine="End Sub";
+ //BA.debugLineNum = 70;BA.debugLine="End Sub";
 return "";
 }
 public Object callSub(String sub, Object sender, Object[] args) throws Exception {

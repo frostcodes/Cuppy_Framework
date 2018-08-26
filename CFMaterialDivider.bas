@@ -10,7 +10,7 @@ Version=5.51
 
 #RaisesSynchronousEvents: Resize
 
-#DesignerProperty: Key: DividerOrientation, DisplayName: Orientation, FieldType: String, DefaultValue: Horizontal, List: Horizontal|Vertical
+'#DesignerProperty: Key: DividerOrientation, DisplayName: Orientation, FieldType: String, DefaultValue: Horizontal, List: Horizontal|Vertical
 
 #Region Internal Segment
 'TODO: make orientation property: horizontal/vertical..using rotate 
@@ -20,7 +20,12 @@ Sub Class_Globals
 	Private mCallBack As Object 'ignore
 	Private mBase As Pane
 	Public line As Pane
-	 
+	
+'	Private DividerOrientation As String 'Orientation of the divider
+'	
+'	Public HORIZONTAL_ORIENTATION As String = "HORIZONTAL"
+'	Public VERTICAL_ORIENTATION As String = "VERTICAL"
+'	
 End Sub
 '
 Public Sub Initialize (Callback As Object, EventName As String)
@@ -33,6 +38,8 @@ Public Sub DesignerCreateView (Base As Pane, Lbl As Label, Props As Map)
 	mBase.LoadLayout("CFMaterialDividerUI")
 	'set using theme...
 	SetBg(CFStyleManager.DefaultTheme.Get("divider"))
+	
+'	setOrientation(Props.Get("DividerOrientation"))
 	 
 End  Sub
 
@@ -60,11 +67,12 @@ Public Sub SetBg(color As String)
  
 End Sub
 
-Public Sub setRotation(angle As Float)
-	
-	CFControlsUtils.SetRotation(line, angle) 'rotate
-	 
-End Sub
+'Public Sub setRotation(angle As Float)
+'	
+'	CFControlsUtils.SetRotation(line, angle) 'rotate
+'	CFControlsUtils.SetRotation(GetBase, angle) 'rotate
+'	
+'End Sub
   
 Public Sub SetBorder(color As String , width As Int)
 	
@@ -106,18 +114,37 @@ Public Sub getThickness() As Double
 	Return line.PrefHeight
 	
 End Sub
- 
-Public Sub setOrientation(Orientation As String)
-	 
-	DividerOrientation = Orientation
-	  
-End Sub
-
-Public Sub getOrientation() As String
-	
-	Return DividerOrientation
-	
-End Sub
+' 
+' 'Get or Set Orientation of the divider...
+' 'Either: horizontal or vertical
+'Public Sub setOrientation(Orientation As String)
+'	 
+'	DividerOrientation = Orientation.ToUpperCase
+'	
+'	If DividerOrientation = HORIZONTAL_ORIENTATION Then
+'		
+'		setRotation(0)
+'		Log("zero:")
+'		
+'	Else If DividerOrientation = VERTICAL_ORIENTATION Then
+'	
+'		setRotation(270)
+'		
+'		Else
+'			
+'		LogError("Material Divider cannot have an Orientation of value: " & Orientation & " in " & mEventName)
+'	
+'	End If
+'	
+'	Log(DividerOrientation)
+' 
+'End Sub
+'
+'Public Sub getOrientation() As String
+'	
+'	Return DividerOrientation
+'	
+'End Sub
 
 #End Region
 
