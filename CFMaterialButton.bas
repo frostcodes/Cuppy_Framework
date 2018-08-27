@@ -16,7 +16,7 @@ Version=5.51
 #RaisesSynchronousEvents: MouseExited
 #RaisesSynchronousEvents: Resize
 
-#DesignerProperty: Key: Text, DisplayName: Text to display, FieldType: String, DefaultValue: Button
+#DesignerProperty: Key: Text, DisplayName: Text, FieldType: String, DefaultValue: Button ...
 
 #Region Internal Segment
 

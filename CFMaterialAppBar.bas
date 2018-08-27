@@ -14,7 +14,7 @@ Version=5.51
 #RaisesSynchronousEvents: PaneMousePressed
 #RaisesSynchronousEvents: Resize
 
-#DesignerProperty: Key: Title, DisplayName: Form/App BAr Title, FieldType: String, DefaultValue: Form Title
+#DesignerProperty: Key: Title, DisplayName: Title, FieldType: String, DefaultValue: Form Title
 #DesignerProperty: Key: HideIcon, DisplayName: Hide App Bar icon?, FieldType: Boolean, DefaultValue: False
 #DesignerProperty: Key: HideTitle, DisplayName: Hide Title of App Bar?, FieldType: Boolean, DefaultValue: False
 #DesignerProperty: Key: EnableShadow, DisplayName: Enable App Bar Shadow? , FieldType: Boolean, DefaultValue: True

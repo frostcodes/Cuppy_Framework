@@ -1,7 +1,6 @@
 ﻿AppType=JavaFX
-Build1=Full,Punchline.Tech.Cuppy.Framework,Full,Trial,Free
+Build1=Full,Punchline.Tech.Cuppy.Framework,Full,Free
 Build2=Free,Punchline.Tech.Cuppy.Framework,Free
-Build3=Trial,Punchline.Tech.Cuppy.Framework,Free,Trial
 File1=CFBarPreLoaderUI.bjl
 File10=CFMaterialRadioBoxUI.bjl
 File11=CFMaterialSquareFABUI.bjl
@@ -106,6 +105,7 @@ Version=6.3
 
 'Contributors:
 'Mash Mbanga < Mashy >  - Contributor - anele@mbangas.com
+
 #LibraryAuthor: Punchline Technologies
 #LibraryName: Cuppy Framework
 #LibraryVersion: 1.03
@@ -127,4 +127,4 @@ End Sub
 Sub Application_Error (Error As Exception, StackTrace As String) As Boolean
 	Return True
 End Sub
-
+ 

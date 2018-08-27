@@ -12,7 +12,7 @@ Version=5.51
 #RaisesSynchronousEvents: MousePressed
 #RaisesSynchronousEvents: Resize
 
-#DesignerProperty: Key: Text, DisplayName: Text to display, FieldType: String, DefaultValue: text
+#DesignerProperty: Key: Text, DisplayName: Text, FieldType: String, DefaultValue: text
  
 #Region Internal Segment
 
