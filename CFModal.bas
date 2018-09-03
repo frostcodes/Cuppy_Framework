@@ -5,6 +5,17 @@ Type=Class
 Version=5.51
 @EndOfDesignText@
 'Custom View class
+
+ #If Free
+ 
+'Remove from Library if Free version
+ 
+#ExcludeFromLibrary: True
+Sub Class_Globals
+
+End Sub
+
+ #Else
  
 #Event: ModalBGPressed (EventData As MouseEvent)
 #Event: ModalPressed (EventData As MouseEvent)
@@ -156,3 +167,5 @@ Sub ModalBgPane_Resize (Width As Double, Height As Double)
 	CallSubDelayed3(mCallBack, mEventName & "_ModalBgPaneResize", Width, Height)
 	
 End Sub
+
+#End if

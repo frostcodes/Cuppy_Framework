@@ -9,7 +9,18 @@ Version=5.51
 'TODO: implement indeterminate progress bar 
 'TODO: circular progress bar
 'https://material.io/design/components/progress-indicators.html#circular-progress-indicators
+ 
+#If Free
+ 
+'Remove from Library if Free version
+ 
+#ExcludeFromLibrary: True
+Sub Class_Globals
 
+End Sub
+
+ #Else
+ 
 #Event: ProgressFinished
 #Event: Resize (Width As Double, Height As Double)
  
@@ -126,3 +137,5 @@ Public Sub getProgress()  As Int
 	Return (ProgressBar.PrefWidth / mBase.PrefWidth ) * 100
 	
 End Sub
+
+#End if

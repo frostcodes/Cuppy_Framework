@@ -60,12 +60,21 @@ End Sub
 '
 'Note: The theme name is Case-Insensitive
 Public Sub SelectTheme(theme As String)
+
+#If Free
+  
+	LogDebug("To have access to all the inbuilt thems, You need to donate!")
+	LogDebug("To have access to all the inbuilt thems, You need to donate!")
+  
+
+ #End
+ 
 	
 	theme = CFStringUtility.ucfirst(theme)
 	 
 	If AvailableThemes.ThemesList.ContainsKey(theme) Then
 		
-		 DefaultTheme = AvailableThemes.ThemesList.Get(theme)
+		DefaultTheme = AvailableThemes.ThemesList.Get(theme)
 	
 	Else
 		
@@ -76,6 +85,11 @@ Public Sub SelectTheme(theme As String)
 	 
 End Sub
 
+ #If Full
+ 
+'Remove from Library if Free version
+   
+   
 'Allows you to load your Theme from a file 
 'This returns a map of your theme
 'which you can reuse to set theme in your program
@@ -153,3 +167,5 @@ Public Sub ExportCurrentTheme(Dir As String, FileName As String)
 	File.WriteMap(Dir, FileName, DefaultTheme)
 	
 End Sub
+
+#End if

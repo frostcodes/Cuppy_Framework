@@ -82,7 +82,11 @@ Private Sub TealTheme As Map
 	Return Colors
 	 
 End Sub
+
+ #If Full
  
+'Remove from Library if Free version
+   
 Private Sub GrayTheme As Map
 	
 	Private Colors As Map 'use to store the colors we need 
@@ -192,5 +196,7 @@ Private Sub AmberTheme As Map
 	Return Colors
 	 
 End Sub
+
+#End If
  
 #End Region 

@@ -13,4 +13,40 @@ Private Sub Process_Globals
 	Public LibraryVersion As Double =  1.03
 	Public LibraryCopyright As String =  "Copyright to Oluwaseyi Aderinkomi < Frost Codes >"
 	 
-End Sub 
+	Private DonationLink as String = ""
+End Sub
+
+
+#If Full
+
+'Is Cuppy Framework Free Version?
+Public Sub IsFreeVersion As Boolean
+	 	
+	Return False
+		
+End Sub
+
+'Is Cuppy Framework Full Version?	 	 
+Public Sub IsFullVersion As Boolean
+	 	
+	Return True
+		
+End Sub
+
+#Else If Free
+
+'Is Cuppy Framework Free Version?
+Public Sub IsFreeVersion As Boolean
+	 	
+	Return True
+	 
+End Sub
+	 
+'Is Cuppy Framework Full Version?	 	 
+Public Sub IsFullVersion As Boolean
+	 	
+	Return False
+		
+End Sub
+
+	#End If

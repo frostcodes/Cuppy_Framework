@@ -5,6 +5,16 @@ Type=Class
 Version=5.51
 @EndOfDesignText@
 'Custom View class
+  #If Free
+ 
+'Remove from Library if Free version
+ 
+#ExcludeFromLibrary: True
+Sub Class_Globals
+
+End Sub
+
+ #Else
  
 #Event: CheckedChanged(value as int)
 #Event: MouseEntered(EventData As MouseEvent)
@@ -216,3 +226,5 @@ Private Sub CheckboxPane_MouseExited (EventData As MouseEvent)
 	CallSubDelayed2(mCallBack, mEventName & "_MouseExited" , EventData)
 	
 End Sub
+
+#End if

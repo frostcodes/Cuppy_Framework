@@ -5,12 +5,20 @@ Type=Class
 Version=5.51
 @EndOfDesignText@
 'Custom View class
- #If trial
-   
+ #If Free
+ 
+'Remove from Library if Free version
+ 
+#ExcludeFromLibrary: True
+Sub Class_Globals
+
+End Sub
+
+ #Else
+ 
 #Event: AnimationStarted
 #Event: AnimationStopped
 #Event: Resize (Width As Double, Height As Double)
-
 
 #RaisesSynchronousEvents: AnimationStarted
 #RaisesSynchronousEvents: AnimationStopped
@@ -196,14 +204,5 @@ Public Sub getAnimationTime As Int
 	Return AnimationTime
 	
 End Sub
- 
-#Else
-
-#ExcludeFromLibrary: True
-Sub Class_Globals
-
- End Sub
-
-
- #End If
-
+  
+#End If 

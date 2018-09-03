@@ -8,8 +8,7 @@ Version=5.51
  
 #Event: CheckedChanged(value as int)
 #Event: Resize (Width As Double, Height As Double)
-
-
+ 
 #RaisesSynchronousEvents: CheckedChanged
 #RaisesSynchronousEvents: Resize
  
