@@ -25,6 +25,11 @@ Public Sub ThemesList() As Map
 	AvailableThemes.Put("Blue", BlueTheme)
 	AvailableThemes.Put("Teal", TealTheme)
 	
+	
+#If Full
+ 
+	'Remove from Library if Free version
+   
 	AvailableThemes.Put("Gray", GrayTheme)
 	AvailableThemes.Put("Dark", DarkTheme)
 	
@@ -32,6 +37,8 @@ Public Sub ThemesList() As Map
 	AvailableThemes.Put("Pink", PinkTheme)
 	
 	AvailableThemes.Put("Amber", AmberTheme)
+	
+#End if
 	 
 	Return AvailableThemes
 	
@@ -197,6 +204,8 @@ Private Sub AmberTheme As Map
 	 
 End Sub
 
-#End If
  
 #End Region 
+
+#End If
+

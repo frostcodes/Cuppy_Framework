@@ -13,9 +13,14 @@ Private Sub Process_Globals
 	Public LibraryVersion As Double =  1.03
 	Public LibraryCopyright As String =  "Copyright to Oluwaseyi Aderinkomi < Frost Codes >"
 	 
-	Private DonationLink as String = ""
+	 
 End Sub
 
+Public Sub DonationLink As String
+	
+	Return "http://punchlinetech.com/product/cuppy-framework-free/#FullCuppyFramework"
+	 
+End Sub
 
 #If Full
 

@@ -63,13 +63,15 @@ Public Sub SelectTheme(theme As String)
 
 #If Free
   
-	LogDebug("To have access to all the inbuilt thems, You need to donate!")
-	LogDebug("To have access to all the inbuilt thems, You need to donate!")
+  'Advice developers to donate to have access to all themes
   
-
- #End
- 
-	
+	LogDebug($"To have access to all the inbuilt themes,
+	You need to donate! Donation link: ${CRLF}
+	${CFConfigs.DonationLink}
+	"$)
+  
+#End if
+  
 	theme = CFStringUtility.ucfirst(theme)
 	 
 	If AvailableThemes.ThemesList.ContainsKey(theme) Then
@@ -169,3 +171,4 @@ Public Sub ExportCurrentTheme(Dir As String, FileName As String)
 End Sub
 
 #End if
+
