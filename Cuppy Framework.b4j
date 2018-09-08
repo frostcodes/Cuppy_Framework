@@ -9,21 +9,23 @@ File13=CFMetroCircleToggleButtonUI.bjl
 File14=CFMetroLinkLabelUI.bjl
 File15=CFMetroToggleButtonUI.bjl
 File16=CFModalUI.bjl
-File17=Roboto-Black.ttf
-File18=Roboto-BlackItalic.ttf
-File19=Roboto-Bold.ttf
+File17=CFPluginRendererUI.bjl
+File18=full-cuppy-framework-required.png
+File19=Roboto-Black.ttf
 File2=CFMaterialAppBarUI.bjl
-File20=Roboto-BoldItalic.ttf
-File21=Roboto-Italic.ttf
-File22=Roboto-LICENSE.txt
-File23=Roboto-Light.ttf
-File24=Roboto-LightItalic.ttf
-File25=Roboto-Medium.ttf
-File26=Roboto-MediumItalic.ttf
-File27=Roboto-Regular.ttf
-File28=Roboto-Thin.ttf
-File29=Roboto-ThinItalic.ttf
+File20=Roboto-BlackItalic.ttf
+File21=Roboto-Bold.ttf
+File22=Roboto-BoldItalic.ttf
+File23=Roboto-Italic.ttf
+File24=Roboto-LICENSE.txt
+File25=Roboto-Light.ttf
+File26=Roboto-LightItalic.ttf
+File27=Roboto-Medium.ttf
+File28=Roboto-MediumItalic.ttf
+File29=Roboto-Regular.ttf
 File3=CFMaterialButtonUI.bjl
+File30=Roboto-Thin.ttf
+File31=Roboto-ThinItalic.ttf
 File4=CFMaterialCardUI.bjl
 File5=CFMaterialCheckboxUI.bjl
 File6=CFMaterialDividerUI.bjl
@@ -38,8 +40,8 @@ FileGroup13=UI Layouts\Metro
 FileGroup14=UI Layouts\Metro
 FileGroup15=UI Layouts\Metro
 FileGroup16=UI Layouts\MISC
-FileGroup17=Assets\Fonts\Roboto
-FileGroup18=Assets\Fonts\Roboto
+FileGroup17=UI Layouts\MISC
+FileGroup18=Default Group
 FileGroup19=Assets\Fonts\Roboto
 FileGroup2=UI Layouts\Material UI
 FileGroup20=Assets\Fonts\Roboto
@@ -53,6 +55,8 @@ FileGroup27=Assets\Fonts\Roboto
 FileGroup28=Assets\Fonts\Roboto
 FileGroup29=Assets\Fonts\Roboto
 FileGroup3=UI Layouts\Material UI
+FileGroup30=Assets\Fonts\Roboto
+FileGroup31=Assets\Fonts\Roboto
 FileGroup4=UI Layouts\Material UI
 FileGroup5=UI Layouts\Material UI
 FileGroup6=UI Layouts\Material UI
@@ -65,34 +69,34 @@ Library2=jfx
 Library3=cssutils
 Library4=javaobject
 Module1=tODOS
-Module10=CFMetroToggleButton
-Module11=CFMaterialFAB
-Module12=CFMaterialCheckBox
-Module13=CFMaterialButton
-Module14=CFMaterialRadioBox
-Module15=CFMaterialSquareFAB
-Module16=CFMaterialSwitch
-Module17=CFMetroCircleToggleButton
-Module18=CFMaterialLinearProgressBar
-Module19=CFMaterialCard
+Module10=CFMetroLinkLabel
+Module11=CFMaterialLabel
+Module12=CFMetroToggleButton
+Module13=CFMaterialFAB
+Module14=CFMaterialCheckBox
+Module15=CFMaterialButton
+Module16=CFMaterialRadioBox
+Module17=CFMaterialSquareFAB
+Module18=CFMaterialSwitch
+Module19=CFMetroCircleToggleButton
 Module2=CFConfigs
-Module20=CFAnimationManager
-Module21=CFBarPreLoader
-Module22=CFMaterialAppBar
-Module23=CFStringUtility
+Module20=CFMaterialLinearProgressBar
+Module21=CFMaterialCard
+Module22=CFAnimationManager
+Module23=CFMaterialAppBar
 Module24=CFFileUtility
 Module25=CFMathUtility
 Module26=CFDataTypeUtility
 Module27=CFDataGeneratorUtility
 Module28=CFAppUtility
-Module3=CFThemes
+Module3=CFBarPreLoader
 Module4=CFStyleManager
-Module5=CFMaterialDivider
-Module6=CFControlsUtils
-Module7=CFModal
-Module8=CFMetroLinkLabel
-Module9=CFMaterialLabel
-NumberOfFiles=29
+Module5=CFStringUtility
+Module6=CFThemes
+Module7=CFMaterialDivider
+Module8=CFControlsUtils
+Module9=CFModal
+NumberOfFiles=31
 NumberOfLibraries=4
 NumberOfModules=28
 Version=6.3
@@ -127,4 +131,22 @@ End Sub
 Sub Application_Error (Error As Exception, StackTrace As String) As Boolean
 	Return True
 End Sub
+
+
+#Region Ignored Subs...
+
+'This are Dummy Subs to hide errors of assets that were not used here
+'This assets are required by other Cuppy core Libraries 
+'All subs here must be PUBLIC!
+ 
+ Public Sub HideCfPluginRendererUI
+ 	
+	Dim DummyPane As Pane
+	DummyPane.Initialize("DummyPane")
+	DummyPane.LoadLayout("CFPluginRendererUI")
+	
+End Sub
+  
+ #End Region
+ 
  

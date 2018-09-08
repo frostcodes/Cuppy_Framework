@@ -22,51 +22,58 @@ static {
 	}
 
  public static anywheresoftware.b4a.keywords.Common __c = null;
-public static String _v5 = "";
-public static String _v6 = "";
-public static double _v7 = 0;
-public static String _v0 = "";
-public static b4j.example.cssutils _vvvvvvvvvvvvvvv5 = null;
-public static Punchline.Tech.Cuppy.Framework.cfstylemanager _vvvvvvvvvvvvvvv7 = null;
-public static Punchline.Tech.Cuppy.Framework.cfcontrolsutils _vvvvvvvvvvvvvvv0 = null;
-public static Punchline.Tech.Cuppy.Framework.cfstringutility _vvvvvvvvvvvvvvvv2 = null;
-public static Punchline.Tech.Cuppy.Framework.cffileutility _vvvvvvvvvvvvvvvv3 = null;
-public static Punchline.Tech.Cuppy.Framework.cfmathutility _vvvvvvvvvvvvvvvv4 = null;
-public static Punchline.Tech.Cuppy.Framework.cfdatatypeutility _vvvvvvvvvvvvvvvv5 = null;
-public static Punchline.Tech.Cuppy.Framework.cfdatageneratorutility _vvvvvvvvvvvvvvvv6 = null;
-public static Punchline.Tech.Cuppy.Framework.cfapputility _vvvvvvvvvvvvvvvv7 = null;
-public static String  _vv1() throws Exception{
- //BA.debugLineNum = 13;BA.debugLine="Public Sub DonationLink As String";
- //BA.debugLineNum = 15;BA.debugLine="Return \"http://punchlinetech.com/product/cuppy-fr";
+public static String _libraryauthor = "";
+public static String _libraryname = "";
+public static double _libraryversion = 0;
+public static String _librarycopyright = "";
+public static b4j.example.cssutils _cssutils = null;
+public static Punchline.Tech.Cuppy.Framework.cfstylemanager _cfstylemanager = null;
+public static Punchline.Tech.Cuppy.Framework.cfstringutility _cfstringutility = null;
+public static Punchline.Tech.Cuppy.Framework.cfcontrolsutils _cfcontrolsutils = null;
+public static Punchline.Tech.Cuppy.Framework.cffileutility _cffileutility = null;
+public static Punchline.Tech.Cuppy.Framework.cfmathutility _cfmathutility = null;
+public static Punchline.Tech.Cuppy.Framework.cfdatatypeutility _cfdatatypeutility = null;
+public static Punchline.Tech.Cuppy.Framework.cfdatageneratorutility _cfdatageneratorutility = null;
+public static Punchline.Tech.Cuppy.Framework.cfapputility _cfapputility = null;
+public static String  _donationlink() throws Exception{
+ //BA.debugLineNum = 12;BA.debugLine="Public Sub DonationLink As String";
+ //BA.debugLineNum = 14;BA.debugLine="Return \"http://punchlinetech.com/product/cuppy-fr";
 if (true) return "http://punchlinetech.com/product/cuppy-framework-free/#FullCuppyFramework";
- //BA.debugLineNum = 17;BA.debugLine="End Sub";
+ //BA.debugLineNum = 16;BA.debugLine="End Sub";
 return "";
 }
-public static boolean  _vv2() throws Exception{
- //BA.debugLineNum = 38;BA.debugLine="Public Sub IsFreeVersion As Boolean";
- //BA.debugLineNum = 40;BA.debugLine="Return True";
-if (true) return anywheresoftware.b4a.keywords.Common.True;
- //BA.debugLineNum = 42;BA.debugLine="End Sub";
+public static String  _fullcuppyrequiredimageurl() throws Exception{
+ //BA.debugLineNum = 19;BA.debugLine="Public Sub FullCuppyRequiredImageUrl As String";
+ //BA.debugLineNum = 21;BA.debugLine="Return File.GetUri(File.DirAssets, \"full-cuppy-fr";
+if (true) return anywheresoftware.b4a.keywords.Common.File.GetUri(anywheresoftware.b4a.keywords.Common.File.getDirAssets(),"full-cuppy-framework-required.png");
+ //BA.debugLineNum = 23;BA.debugLine="End Sub";
+return "";
+}
+public static boolean  _isfreeversion() throws Exception{
+ //BA.debugLineNum = 29;BA.debugLine="Public Sub IsFreeVersion As Boolean";
+ //BA.debugLineNum = 31;BA.debugLine="Return False";
+if (true) return anywheresoftware.b4a.keywords.Common.False;
+ //BA.debugLineNum = 33;BA.debugLine="End Sub";
 return false;
 }
-public static boolean  _vv3() throws Exception{
- //BA.debugLineNum = 45;BA.debugLine="Public Sub IsFullVersion As Boolean";
- //BA.debugLineNum = 47;BA.debugLine="Return False";
-if (true) return anywheresoftware.b4a.keywords.Common.False;
- //BA.debugLineNum = 49;BA.debugLine="End Sub";
+public static boolean  _isfullversion() throws Exception{
+ //BA.debugLineNum = 36;BA.debugLine="Public Sub IsFullVersion As Boolean";
+ //BA.debugLineNum = 38;BA.debugLine="Return True";
+if (true) return anywheresoftware.b4a.keywords.Common.True;
+ //BA.debugLineNum = 40;BA.debugLine="End Sub";
 return false;
 }
 public static String  _process_globals() throws Exception{
  //BA.debugLineNum = 2;BA.debugLine="Private Sub Process_Globals";
  //BA.debugLineNum = 5;BA.debugLine="Public LibraryAuthor As String = \"Punchline Techn";
-_v5 = "Punchline Technologies";
+_libraryauthor = "Punchline Technologies";
  //BA.debugLineNum = 6;BA.debugLine="Public LibraryName As String =  \"Cuppy Framework\"";
-_v6 = "Cuppy Framework";
+_libraryname = "Cuppy Framework";
  //BA.debugLineNum = 7;BA.debugLine="Public LibraryVersion As Double =  1.03";
-_v7 = 1.03;
+_libraryversion = 1.03;
  //BA.debugLineNum = 8;BA.debugLine="Public LibraryCopyright As String =  \"Copyright t";
-_v0 = "Copyright to Oluwaseyi Aderinkomi < Frost Codes >";
- //BA.debugLineNum = 11;BA.debugLine="End Sub";
+_librarycopyright = "Copyright to Oluwaseyi Aderinkomi < Frost Codes >";
+ //BA.debugLineNum = 10;BA.debugLine="End Sub";
 return "";
 }
 }

@@ -24,17 +24,45 @@ public class cfthemes extends B4AClass.ImplB4AClass implements BA.SubDelegator{
     }
 
  public anywheresoftware.b4a.keywords.Common __c = null;
-public b4j.example.cssutils _vvvvvvvvvvvvvvv5 = null;
-public Punchline.Tech.Cuppy.Framework.cfconfigs _vvvvvvvvvvvvvvv6 = null;
-public Punchline.Tech.Cuppy.Framework.cfstylemanager _vvvvvvvvvvvvvvv7 = null;
-public Punchline.Tech.Cuppy.Framework.cfcontrolsutils _vvvvvvvvvvvvvvv0 = null;
-public Punchline.Tech.Cuppy.Framework.cfstringutility _vvvvvvvvvvvvvvvv2 = null;
-public Punchline.Tech.Cuppy.Framework.cffileutility _vvvvvvvvvvvvvvvv3 = null;
-public Punchline.Tech.Cuppy.Framework.cfmathutility _vvvvvvvvvvvvvvvv4 = null;
-public Punchline.Tech.Cuppy.Framework.cfdatatypeutility _vvvvvvvvvvvvvvvv5 = null;
-public Punchline.Tech.Cuppy.Framework.cfdatageneratorutility _vvvvvvvvvvvvvvvv6 = null;
-public Punchline.Tech.Cuppy.Framework.cfapputility _vvvvvvvvvvvvvvvv7 = null;
-public anywheresoftware.b4a.objects.collections.Map  _vvvvvvvvvvvvvvv2() throws Exception{
+public b4j.example.cssutils _cssutils = null;
+public Punchline.Tech.Cuppy.Framework.cfconfigs _cfconfigs = null;
+public Punchline.Tech.Cuppy.Framework.cfstylemanager _cfstylemanager = null;
+public Punchline.Tech.Cuppy.Framework.cfstringutility _cfstringutility = null;
+public Punchline.Tech.Cuppy.Framework.cfcontrolsutils _cfcontrolsutils = null;
+public Punchline.Tech.Cuppy.Framework.cffileutility _cffileutility = null;
+public Punchline.Tech.Cuppy.Framework.cfmathutility _cfmathutility = null;
+public Punchline.Tech.Cuppy.Framework.cfdatatypeutility _cfdatatypeutility = null;
+public Punchline.Tech.Cuppy.Framework.cfdatageneratorutility _cfdatageneratorutility = null;
+public Punchline.Tech.Cuppy.Framework.cfapputility _cfapputility = null;
+public anywheresoftware.b4a.objects.collections.Map  _ambertheme() throws Exception{
+anywheresoftware.b4a.objects.collections.Map _colors = null;
+ //BA.debugLineNum = 179;BA.debugLine="Private Sub AmberTheme As Map";
+ //BA.debugLineNum = 181;BA.debugLine="Private Colors As Map 'use to store the colors we";
+_colors = new anywheresoftware.b4a.objects.collections.Map();
+ //BA.debugLineNum = 182;BA.debugLine="Colors.Initialize";
+_colors.Initialize();
+ //BA.debugLineNum = 185;BA.debugLine="Colors.Put(\"primary\",\"#FFC107\")";
+_colors.Put((Object)("primary"),(Object)("#FFC107"));
+ //BA.debugLineNum = 186;BA.debugLine="Colors.Put(\"primary_dark\",\"#FFA000\")";
+_colors.Put((Object)("primary_dark"),(Object)("#FFA000"));
+ //BA.debugLineNum = 188;BA.debugLine="Colors.Put(\"primary_light\",\"#FFECB3\")";
+_colors.Put((Object)("primary_light"),(Object)("#FFECB3"));
+ //BA.debugLineNum = 189;BA.debugLine="Colors.Put(\"accent\",\"#03A9F4\")";
+_colors.Put((Object)("accent"),(Object)("#03A9F4"));
+ //BA.debugLineNum = 191;BA.debugLine="Colors.Put(\"primary_text\",\"#212121\")";
+_colors.Put((Object)("primary_text"),(Object)("#212121"));
+ //BA.debugLineNum = 192;BA.debugLine="Colors.Put(\"secondary_text\",\"#757575\")";
+_colors.Put((Object)("secondary_text"),(Object)("#757575"));
+ //BA.debugLineNum = 194;BA.debugLine="Colors.Put(\"icons\",\"#FFFFFF\")";
+_colors.Put((Object)("icons"),(Object)("#FFFFFF"));
+ //BA.debugLineNum = 195;BA.debugLine="Colors.Put(\"divider\",\"#BDBDBD\")";
+_colors.Put((Object)("divider"),(Object)("#BDBDBD"));
+ //BA.debugLineNum = 197;BA.debugLine="Return Colors";
+if (true) return _colors;
+ //BA.debugLineNum = 199;BA.debugLine="End Sub";
+return null;
+}
+public anywheresoftware.b4a.objects.collections.Map  _bluetheme() throws Exception{
 anywheresoftware.b4a.objects.collections.Map _colors = null;
  //BA.debugLineNum = 43;BA.debugLine="Private Sub BlueTheme As Map";
  //BA.debugLineNum = 45;BA.debugLine="Private Colors As Map 'use to store the colors we";
@@ -67,13 +95,125 @@ public String  _class_globals() throws Exception{
  //BA.debugLineNum = 5;BA.debugLine="End Sub";
 return "";
 }
+public anywheresoftware.b4a.objects.collections.Map  _darktheme() throws Exception{
+anywheresoftware.b4a.objects.collections.Map _colors = null;
+ //BA.debugLineNum = 113;BA.debugLine="Private Sub DarkTheme As Map";
+ //BA.debugLineNum = 115;BA.debugLine="Private Colors As Map 'use to store the colors we";
+_colors = new anywheresoftware.b4a.objects.collections.Map();
+ //BA.debugLineNum = 116;BA.debugLine="Colors.Initialize";
+_colors.Initialize();
+ //BA.debugLineNum = 119;BA.debugLine="Colors.Put(\"primary\",\"#2c3e50\")";
+_colors.Put((Object)("primary"),(Object)("#2c3e50"));
+ //BA.debugLineNum = 120;BA.debugLine="Colors.Put(\"primary_dark\",\"#1b2732\")";
+_colors.Put((Object)("primary_dark"),(Object)("#1b2732"));
+ //BA.debugLineNum = 122;BA.debugLine="Colors.Put(\"primary_light\",\"#68696a\")";
+_colors.Put((Object)("primary_light"),(Object)("#68696a"));
+ //BA.debugLineNum = 123;BA.debugLine="Colors.Put(\"accent\",\"#95a5a6\")";
+_colors.Put((Object)("accent"),(Object)("#95a5a6"));
+ //BA.debugLineNum = 125;BA.debugLine="Colors.Put(\"primary_text\",\"#212121\")";
+_colors.Put((Object)("primary_text"),(Object)("#212121"));
+ //BA.debugLineNum = 126;BA.debugLine="Colors.Put(\"secondary_text\",\"#757575\")";
+_colors.Put((Object)("secondary_text"),(Object)("#757575"));
+ //BA.debugLineNum = 128;BA.debugLine="Colors.Put(\"icons\",\"#FFFFFF\")";
+_colors.Put((Object)("icons"),(Object)("#FFFFFF"));
+ //BA.debugLineNum = 129;BA.debugLine="Colors.Put(\"divider\",\"#BDBDBD\")";
+_colors.Put((Object)("divider"),(Object)("#BDBDBD"));
+ //BA.debugLineNum = 131;BA.debugLine="Return Colors";
+if (true) return _colors;
+ //BA.debugLineNum = 133;BA.debugLine="End Sub";
+return null;
+}
+public anywheresoftware.b4a.objects.collections.Map  _graytheme() throws Exception{
+anywheresoftware.b4a.objects.collections.Map _colors = null;
+ //BA.debugLineNum = 91;BA.debugLine="Private Sub GrayTheme As Map";
+ //BA.debugLineNum = 93;BA.debugLine="Private Colors As Map 'use to store the colors we";
+_colors = new anywheresoftware.b4a.objects.collections.Map();
+ //BA.debugLineNum = 94;BA.debugLine="Colors.Initialize";
+_colors.Initialize();
+ //BA.debugLineNum = 97;BA.debugLine="Colors.Put(\"primary\",\"#7f8c8d\")";
+_colors.Put((Object)("primary"),(Object)("#7f8c8d"));
+ //BA.debugLineNum = 98;BA.debugLine="Colors.Put(\"primary_dark\",\"#5c6566\")";
+_colors.Put((Object)("primary_dark"),(Object)("#5c6566"));
+ //BA.debugLineNum = 100;BA.debugLine="Colors.Put(\"primary_light\",\"#a9a9a9\")";
+_colors.Put((Object)("primary_light"),(Object)("#a9a9a9"));
+ //BA.debugLineNum = 101;BA.debugLine="Colors.Put(\"accent\",\"#536DFE\")";
+_colors.Put((Object)("accent"),(Object)("#536DFE"));
+ //BA.debugLineNum = 103;BA.debugLine="Colors.Put(\"primary_text\",\"#212121\")";
+_colors.Put((Object)("primary_text"),(Object)("#212121"));
+ //BA.debugLineNum = 104;BA.debugLine="Colors.Put(\"secondary_text\",\"#757575\")";
+_colors.Put((Object)("secondary_text"),(Object)("#757575"));
+ //BA.debugLineNum = 106;BA.debugLine="Colors.Put(\"icons\",\"#FFFFFF\")";
+_colors.Put((Object)("icons"),(Object)("#FFFFFF"));
+ //BA.debugLineNum = 107;BA.debugLine="Colors.Put(\"divider\",\"#BDBDBD\")";
+_colors.Put((Object)("divider"),(Object)("#BDBDBD"));
+ //BA.debugLineNum = 109;BA.debugLine="Return Colors";
+if (true) return _colors;
+ //BA.debugLineNum = 111;BA.debugLine="End Sub";
+return null;
+}
 public String  _initialize(anywheresoftware.b4a.BA _ba) throws Exception{
 innerInitialize(_ba);
  //BA.debugLineNum = 8;BA.debugLine="Public Sub Initialize";
  //BA.debugLineNum = 10;BA.debugLine="End Sub";
 return "";
 }
-public anywheresoftware.b4a.objects.collections.Map  _vvvvvvvvvvvvvvv3() throws Exception{
+public anywheresoftware.b4a.objects.collections.Map  _pinktheme() throws Exception{
+anywheresoftware.b4a.objects.collections.Map _colors = null;
+ //BA.debugLineNum = 157;BA.debugLine="Private Sub PinkTheme As Map";
+ //BA.debugLineNum = 159;BA.debugLine="Private Colors As Map 'use to store the colors we";
+_colors = new anywheresoftware.b4a.objects.collections.Map();
+ //BA.debugLineNum = 160;BA.debugLine="Colors.Initialize";
+_colors.Initialize();
+ //BA.debugLineNum = 163;BA.debugLine="Colors.Put(\"primary\",\"#E91E63\")";
+_colors.Put((Object)("primary"),(Object)("#E91E63"));
+ //BA.debugLineNum = 164;BA.debugLine="Colors.Put(\"primary_dark\",\"#C2185B\")";
+_colors.Put((Object)("primary_dark"),(Object)("#C2185B"));
+ //BA.debugLineNum = 166;BA.debugLine="Colors.Put(\"primary_light\",\"#F8BBD0\")";
+_colors.Put((Object)("primary_light"),(Object)("#F8BBD0"));
+ //BA.debugLineNum = 167;BA.debugLine="Colors.Put(\"accent\",\"#FF9800\")";
+_colors.Put((Object)("accent"),(Object)("#FF9800"));
+ //BA.debugLineNum = 169;BA.debugLine="Colors.Put(\"primary_text\",\"#212121\")";
+_colors.Put((Object)("primary_text"),(Object)("#212121"));
+ //BA.debugLineNum = 170;BA.debugLine="Colors.Put(\"secondary_text\",\"#757575\")";
+_colors.Put((Object)("secondary_text"),(Object)("#757575"));
+ //BA.debugLineNum = 172;BA.debugLine="Colors.Put(\"icons\",\"#FFFFFF\")";
+_colors.Put((Object)("icons"),(Object)("#FFFFFF"));
+ //BA.debugLineNum = 173;BA.debugLine="Colors.Put(\"divider\",\"#BDBDBD\")";
+_colors.Put((Object)("divider"),(Object)("#BDBDBD"));
+ //BA.debugLineNum = 175;BA.debugLine="Return Colors";
+if (true) return _colors;
+ //BA.debugLineNum = 177;BA.debugLine="End Sub";
+return null;
+}
+public anywheresoftware.b4a.objects.collections.Map  _purpletheme() throws Exception{
+anywheresoftware.b4a.objects.collections.Map _colors = null;
+ //BA.debugLineNum = 135;BA.debugLine="Private Sub PurpleTheme As Map";
+ //BA.debugLineNum = 137;BA.debugLine="Private Colors As Map 'use to store the colors we";
+_colors = new anywheresoftware.b4a.objects.collections.Map();
+ //BA.debugLineNum = 138;BA.debugLine="Colors.Initialize";
+_colors.Initialize();
+ //BA.debugLineNum = 141;BA.debugLine="Colors.Put(\"primary\",\"#673AB7\")";
+_colors.Put((Object)("primary"),(Object)("#673AB7"));
+ //BA.debugLineNum = 142;BA.debugLine="Colors.Put(\"primary_dark\",\"#512DA8\")";
+_colors.Put((Object)("primary_dark"),(Object)("#512DA8"));
+ //BA.debugLineNum = 144;BA.debugLine="Colors.Put(\"primary_light\",\"#D1C4E9\")";
+_colors.Put((Object)("primary_light"),(Object)("#D1C4E9"));
+ //BA.debugLineNum = 145;BA.debugLine="Colors.Put(\"accent\",\"#536DFE\")";
+_colors.Put((Object)("accent"),(Object)("#536DFE"));
+ //BA.debugLineNum = 147;BA.debugLine="Colors.Put(\"primary_text\",\"#212121\")";
+_colors.Put((Object)("primary_text"),(Object)("#212121"));
+ //BA.debugLineNum = 148;BA.debugLine="Colors.Put(\"secondary_text\",\"#757575\")";
+_colors.Put((Object)("secondary_text"),(Object)("#757575"));
+ //BA.debugLineNum = 150;BA.debugLine="Colors.Put(\"icons\",\"#FFFFFF\")";
+_colors.Put((Object)("icons"),(Object)("#FFFFFF"));
+ //BA.debugLineNum = 151;BA.debugLine="Colors.Put(\"divider\",\"#BDBDBD\")";
+_colors.Put((Object)("divider"),(Object)("#BDBDBD"));
+ //BA.debugLineNum = 153;BA.debugLine="Return Colors";
+if (true) return _colors;
+ //BA.debugLineNum = 155;BA.debugLine="End Sub";
+return null;
+}
+public anywheresoftware.b4a.objects.collections.Map  _tealtheme() throws Exception{
 anywheresoftware.b4a.objects.collections.Map _colors = null;
  //BA.debugLineNum = 65;BA.debugLine="Private Sub TealTheme As Map";
  //BA.debugLineNum = 67;BA.debugLine="Private Colors As Map 'use to store the colors we";
@@ -101,7 +241,7 @@ if (true) return _colors;
  //BA.debugLineNum = 85;BA.debugLine="End Sub";
 return null;
 }
-public anywheresoftware.b4a.objects.collections.Map  _vvvvvvvvvvvvvvv4() throws Exception{
+public anywheresoftware.b4a.objects.collections.Map  _themeslist() throws Exception{
 anywheresoftware.b4a.objects.collections.Map _availablethemes = null;
  //BA.debugLineNum = 14;BA.debugLine="Public Sub ThemesList() As Map";
  //BA.debugLineNum = 16;BA.debugLine="Private AvailableThemes As Map";
@@ -109,9 +249,19 @@ _availablethemes = new anywheresoftware.b4a.objects.collections.Map();
  //BA.debugLineNum = 17;BA.debugLine="AvailableThemes.Initialize";
 _availablethemes.Initialize();
  //BA.debugLineNum = 19;BA.debugLine="AvailableThemes.Put(\"Blue\", BlueTheme)";
-_availablethemes.Put((Object)("Blue"),(Object)(_vvvvvvvvvvvvvvv2().getObject()));
+_availablethemes.Put((Object)("Blue"),(Object)(_bluetheme().getObject()));
  //BA.debugLineNum = 20;BA.debugLine="AvailableThemes.Put(\"Teal\", TealTheme)";
-_availablethemes.Put((Object)("Teal"),(Object)(_vvvvvvvvvvvvvvv3().getObject()));
+_availablethemes.Put((Object)("Teal"),(Object)(_tealtheme().getObject()));
+ //BA.debugLineNum = 27;BA.debugLine="AvailableThemes.Put(\"Gray\", GrayTheme)";
+_availablethemes.Put((Object)("Gray"),(Object)(_graytheme().getObject()));
+ //BA.debugLineNum = 28;BA.debugLine="AvailableThemes.Put(\"Dark\", DarkTheme)";
+_availablethemes.Put((Object)("Dark"),(Object)(_darktheme().getObject()));
+ //BA.debugLineNum = 30;BA.debugLine="AvailableThemes.Put(\"Purple\", PurpleTheme)";
+_availablethemes.Put((Object)("Purple"),(Object)(_purpletheme().getObject()));
+ //BA.debugLineNum = 31;BA.debugLine="AvailableThemes.Put(\"Pink\", PinkTheme)";
+_availablethemes.Put((Object)("Pink"),(Object)(_pinktheme().getObject()));
+ //BA.debugLineNum = 33;BA.debugLine="AvailableThemes.Put(\"Amber\", AmberTheme)";
+_availablethemes.Put((Object)("Amber"),(Object)(_ambertheme().getObject()));
  //BA.debugLineNum = 37;BA.debugLine="Return AvailableThemes";
 if (true) return _availablethemes;
  //BA.debugLineNum = 39;BA.debugLine="End Sub";
