@@ -45,7 +45,7 @@ Public Sub DesignerCreateView (Base As Pane, Lbl As Label, Props As Map)
 	mBase = Base
 	mBase.LoadLayout("CFMaterialSwitchesUI")
 	'set using theme...
-	SetCheckedColor(CFStyleManager.DefaultTheme.Get("primary"))
+	setCheckedColor(CFStyleManager.DefaultTheme.Get("primary"))
 	 
 	 
 '	Set checked state
@@ -55,11 +55,11 @@ Public Sub DesignerCreateView (Base As Pane, Lbl As Label, Props As Map)
 	
 	If checkedState = "UNCHECKED" Then
 		
-		SetCheckState(UNCHECKED_STATE)
+		setCheckState(UNCHECKED_STATE)
 	
 	else If checkedState = "CHECKED" Then
 		
-		SetCheckState(CHECKED_STATE)
+		setCheckState(CHECKED_STATE)
 		
 	else If checkedState = "INDETERMINATE" Then
 		
@@ -139,13 +139,13 @@ Public Sub setCheckState(value As Int)
 		
 		SwitchBtn.SetLayoutAnimated(200 , 10, SwitchBtn.Top, SwitchBtn.PrefWidth, SwitchBtn.PrefHeight)
 		SwitchPane.SetAlphaAnimated(200, 1 )
-		SetBg(CFStyleManager.DefaultTheme.Get("divider"))
+		setBg(CFStyleManager.DefaultTheme.Get("divider"))
 		  
 	Else if value = CHECKED_STATE Then
 	
 		'Fade effect
 		SwitchPane.SetAlphaAnimated(200, 0.6 )
-		SetBg(CFControlsUtils.GetBG(SwitchBtn))
+		setBg(CFControlsUtils.GetBG(SwitchBtn))
 		
 		SwitchBtn.SetLayoutAnimated(200 , 23 , SwitchBtn.Top, SwitchBtn.PrefWidth, SwitchBtn.PrefWidth)
 		
@@ -154,7 +154,7 @@ Public Sub setCheckState(value As Int)
 		 
 		SwitchBtn.SetLayoutAnimated(200 , 23 , SwitchBtn.Top, SwitchBtn.PrefWidth, SwitchBtn.PrefWidth)
 		SwitchPane.SetAlphaAnimated(200, 1 )
-		SetBg(CFStyleManager.DefaultTheme.Get("divider"))
+		setBg(CFStyleManager.DefaultTheme.Get("divider"))
 		  
 	End If
 	

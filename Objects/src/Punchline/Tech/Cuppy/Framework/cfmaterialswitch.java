@@ -90,16 +90,16 @@ String _checkedstate = "";
 _mbase = _base;
  //BA.debugLineNum = 40;BA.debugLine="mBase.LoadLayout(\"CFMaterialSwitchesUI\")";
 _mbase.LoadLayout(ba,"CFMaterialSwitchesUI");
- //BA.debugLineNum = 42;BA.debugLine="SetCheckedColor(CFStyleManager.DefaultTheme.Get(\"";
+ //BA.debugLineNum = 42;BA.debugLine="setCheckedColor(CFStyleManager.DefaultTheme.Get(\"";
 _setcheckedcolor(BA.ObjectToString(_cfstylemanager._defaulttheme.Get((Object)("primary"))));
  //BA.debugLineNum = 46;BA.debugLine="Dim checkedState As String = Props.Get(\"CheckedSt";
 _checkedstate = BA.ObjectToString(_props.Get((Object)("CheckedState")));
  //BA.debugLineNum = 50;BA.debugLine="If checkedState = \"UNCHECKED\" Then";
 if ((_checkedstate).equals("UNCHECKED")) { 
- //BA.debugLineNum = 52;BA.debugLine="SetCheckState(UNCHECKED_STATE)";
+ //BA.debugLineNum = 52;BA.debugLine="setCheckState(UNCHECKED_STATE)";
 _setcheckstate(_unchecked_state);
  }else if((_checkedstate).equals("CHECKED")) { 
- //BA.debugLineNum = 56;BA.debugLine="SetCheckState(CHECKED_STATE)";
+ //BA.debugLineNum = 56;BA.debugLine="setCheckState(CHECKED_STATE)";
 _setcheckstate(_checked_state);
  }else if((_checkedstate).equals("INDETERMINATE")) { 
  //BA.debugLineNum = 60;BA.debugLine="SetCheckState(INDETERMINATE_STATE)";
@@ -175,12 +175,12 @@ if (_value==_unchecked_state) {
 _switchbtn.SetLayoutAnimated((int) (200),10,_switchbtn.getTop(),_switchbtn.getPrefWidth(),_switchbtn.getPrefHeight());
  //BA.debugLineNum = 135;BA.debugLine="SwitchPane.SetAlphaAnimated(200, 1 )";
 _switchpane.SetAlphaAnimated((int) (200),1);
- //BA.debugLineNum = 136;BA.debugLine="SetBg(CFStyleManager.DefaultTheme.Get(\"divider\")";
+ //BA.debugLineNum = 136;BA.debugLine="setBg(CFStyleManager.DefaultTheme.Get(\"divider\")";
 _setbg(BA.ObjectToString(_cfstylemanager._defaulttheme.Get((Object)("divider"))));
  }else if(_value==_checked_state) { 
  //BA.debugLineNum = 141;BA.debugLine="SwitchPane.SetAlphaAnimated(200, 0.6 )";
 _switchpane.SetAlphaAnimated((int) (200),0.6);
- //BA.debugLineNum = 142;BA.debugLine="SetBg(CFControlsUtils.GetBG(SwitchBtn))";
+ //BA.debugLineNum = 142;BA.debugLine="setBg(CFControlsUtils.GetBG(SwitchBtn))";
 _setbg(_cfcontrolsutils._getbg((anywheresoftware.b4j.objects.NodeWrapper.ConcreteNodeWrapper) anywheresoftware.b4a.AbsObjectWrapper.ConvertToWrapper(new anywheresoftware.b4j.objects.NodeWrapper.ConcreteNodeWrapper(), (javafx.scene.Node)(_switchbtn.getObject()))));
  //BA.debugLineNum = 144;BA.debugLine="SwitchBtn.SetLayoutAnimated(200 , 23 , SwitchBtn";
 _switchbtn.SetLayoutAnimated((int) (200),23,_switchbtn.getTop(),_switchbtn.getPrefWidth(),_switchbtn.getPrefWidth());
@@ -189,7 +189,7 @@ _switchbtn.SetLayoutAnimated((int) (200),23,_switchbtn.getTop(),_switchbtn.getPr
 _switchbtn.SetLayoutAnimated((int) (200),23,_switchbtn.getTop(),_switchbtn.getPrefWidth(),_switchbtn.getPrefWidth());
  //BA.debugLineNum = 150;BA.debugLine="SwitchPane.SetAlphaAnimated(200, 1 )";
 _switchpane.SetAlphaAnimated((int) (200),1);
- //BA.debugLineNum = 151;BA.debugLine="SetBg(CFStyleManager.DefaultTheme.Get(\"divider\")";
+ //BA.debugLineNum = 151;BA.debugLine="setBg(CFStyleManager.DefaultTheme.Get(\"divider\")";
 _setbg(BA.ObjectToString(_cfstylemanager._defaulttheme.Get((Object)("divider"))));
  };
  //BA.debugLineNum = 155;BA.debugLine="If FirstTime Then";

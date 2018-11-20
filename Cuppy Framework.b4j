@@ -123,16 +123,6 @@ Sub Process_Globals
  
 End Sub
 
-Sub AppStart (form1 As Form, Args() As String)
-   
-End Sub
-
-'Return true to allow the default exceptions handler to handle the uncaught exception.
-Sub Application_Error (Error As Exception, StackTrace As String) As Boolean
-	Return True
-End Sub
-
-
 #Region Ignored Subs...
 
 'This are Dummy Subs to hide errors of assets that were not used here

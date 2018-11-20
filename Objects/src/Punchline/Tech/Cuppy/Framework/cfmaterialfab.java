@@ -71,7 +71,7 @@ public String  _designercreateview(anywheresoftware.b4j.objects.PaneWrapper.Conc
 _mbase = _base;
  //BA.debugLineNum = 32;BA.debugLine="mBase.LoadLayout(\"CFMaterialFABUI\")";
 _mbase.LoadLayout(ba,"CFMaterialFABUI");
- //BA.debugLineNum = 35;BA.debugLine="SetBg(CFStyleManager.DefaultTheme.Get(\"accent\"))";
+ //BA.debugLineNum = 35;BA.debugLine="setBg(CFStyleManager.DefaultTheme.Get(\"accent\"))";
 _setbg(BA.ObjectToString(_cfstylemanager._defaulttheme.Get((Object)("accent"))));
  //BA.debugLineNum = 36;BA.debugLine="FAB_Btn.MouseCursor = fx.Cursors.HAND";
 _fab_btn.setMouseCursor(_fx.Cursors.HAND);

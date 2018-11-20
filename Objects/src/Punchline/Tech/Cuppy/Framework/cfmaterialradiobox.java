@@ -105,21 +105,21 @@ String _checkedstate = "";
 _mbase = _base;
  //BA.debugLineNum = 39;BA.debugLine="mBase.LoadLayout(\"CFMaterialRadioBoxUI\")";
 _mbase.LoadLayout(ba,"CFMaterialRadioBoxUI");
- //BA.debugLineNum = 42;BA.debugLine="SetBorder(CFStyleManager.DefaultTheme.Get(\"divide";
+ //BA.debugLineNum = 42;BA.debugLine="setBorder(CFStyleManager.DefaultTheme.Get(\"divide";
 _setborder(BA.ObjectToString(_cfstylemanager._defaulttheme.Get((Object)("divider"))),(int) (2));
- //BA.debugLineNum = 44;BA.debugLine="SetCheckedColor(CFStyleManager.DefaultTheme.Get(\"";
+ //BA.debugLineNum = 44;BA.debugLine="setCheckedColor(CFStyleManager.DefaultTheme.Get(\"";
 _setcheckedcolor(BA.ObjectToString(_cfstylemanager._defaulttheme.Get((Object)("primary"))));
  //BA.debugLineNum = 48;BA.debugLine="Dim checkedState As String = Props.Get(\"CheckedSt";
 _checkedstate = BA.ObjectToString(_props.Get((Object)("CheckedState")));
  //BA.debugLineNum = 52;BA.debugLine="If checkedState = \"UNCHECKED\" Then";
 if ((_checkedstate).equals("UNCHECKED")) { 
- //BA.debugLineNum = 54;BA.debugLine="SetCheckState(UNCHECKED_STATE)";
+ //BA.debugLineNum = 54;BA.debugLine="setCheckState(UNCHECKED_STATE)";
 _setcheckstate(_unchecked_state);
  }else if((_checkedstate).equals("CHECKED")) { 
- //BA.debugLineNum = 58;BA.debugLine="SetCheckState(CHECKED_STATE)";
+ //BA.debugLineNum = 58;BA.debugLine="setCheckState(CHECKED_STATE)";
 _setcheckstate(_checked_state);
  }else if((_checkedstate).equals("INDETERMINATE")) { 
- //BA.debugLineNum = 62;BA.debugLine="SetCheckState(INDETERMINATE_STATE)";
+ //BA.debugLineNum = 62;BA.debugLine="setCheckState(INDETERMINATE_STATE)";
 _setcheckstate(_indeterminate_state);
  };
  //BA.debugLineNum = 66;BA.debugLine="End Sub";

@@ -4,42 +4,64 @@ ModulesStructureVersion=1
 Type=StaticCode
 Version=5.51
 @EndOfDesignText@
-'Static code module
+'Style Manager for Cuppy Framework UI
 Private Sub Process_Globals
 	 
 	Private fx As JFX
 	 
-	Public DefaultFont As Font = SelectFont("Regular" , 12)
-	Public AvailableThemes As CFThemes
-	Public DefaultTheme As Map = AvailableThemes.ThemesList.Get("Blue") 'ignore
-	Public ActiveControls As List
-	ActiveControls.Initialize 'ignore : need this , bad pratice maybe so would find a fix later
-	 
-	 
-	 #Region Fonts
-	 
-	Public const BLACK_FONT As Font = SelectFont("Black", 12)
-	Public const BLACK_ITALIC_FONT As Font = SelectFont("BlackItalic", 12)
+	Private AvailableThemes As CFThemes
+	AvailableThemes.Initialize 'ignore
 	
-	Public const BOLD_FONT As Font = SelectFont("Bold", 12)
-	Public const BOLD_ITALIC_FONT As Font = SelectFont("BoldItalic", 12)
-	 
-	Public const LIGHT_FONT As Font = SelectFont("Light", 12)
-	Public const LIGHT_ITALIC_FONT As Font = SelectFont("LightItalic", 12)
+	Public DefaultTheme As Map = AvailableThemes.ThemesList.Get(BLUE_THEME) 'ignore
 	
-	Public const REGULAR_FONT As Font = SelectFont("Regular", 12)
-	Public const ITALIC_FONT As Font = SelectFont("Italic", 12)
+'	Public ActiveControls As List
+'	ActiveControls.Initialize 'ignore : need this , bad pratice maybe so would find a fix later
+'	 
 	 
-	Public const MEDIUM_FONT As Font = SelectFont("Medium", 12)
-	Public const MEDIUM_ITALIC_FONT As Font = SelectFont("MediumItalic", 12)
+#Region Available Fonts
+	  
+	Public const FONT_BLACK As Font = SelectFont("Black", 12)
+	Public const FONT_BLACK_ITALIC As Font = SelectFont("BlackItalic", 12)
+	
+	Public const FONT_BOLD As Font = SelectFont("Bold", 12)
+	Public const FONT_BOLD_ITALIC As Font = SelectFont("BoldItalic", 12)
 	 
-	Public const THIN_FONT As Font = SelectFont("Thin", 12)
-	Public const THIN_ITALIC_FONT As Font = SelectFont("ThinItalic", 12)
+	Public const FONT_LIGHT As Font = SelectFont("Light", 12)
+	Public const FONT_LIGHT_ITALIC As Font = SelectFont("LightItalic", 12)
+	
+	Public const FONT_REGULAR_FONT, DEFAULT As Font = SelectFont("Regular", 12)
+	Public const FONT_ITALIC As Font = SelectFont("Italic", 12)
 	 
-	 #End Region
+	Public const FONT_MEDIUM As Font = SelectFont("Medium", 12)
+	Public const FONT_MEDIUM_ITALIC As Font = SelectFont("MediumItalic", 12)
+	 
+	Public const FONT_THIN As Font = SelectFont("Thin", 12)
+	Public const FONT_THIN_ITALIC As Font = SelectFont("ThinItalic", 12)
+	 
+ #End Region
+	 
+ #Region Available Themes
+  
+	Public const BLUE_THEME As String = "Blue"
+	Public const TEAL_THEME As String = "Teal"
+	
+	#If Full
+ 
+	'Remove from Library if Free version
+	
+	Public const GRAY_THEME As String = "Gray"
+	Public const DARK_THEME As String = "Dark"
+	Public const Purple_THEME As String = "Purple"
+	Public const Pink_THEME As String = "Pink"
+	Public const Amber_THEME As String = "Amber"
+	
+	#End If
+
+ #End Region 
 	  
 	'Reference cuppy controls so it can be updated all when the style changes
 	'allow setting of animation time...
+	
 End Sub
 
  'Return a list of available fonts for use
@@ -95,28 +117,27 @@ End Sub
 'For styling views and Components
 '
 'Note: The theme name is Case-Insensitive
-Public Sub SelectTheme(theme As String)
+Public Sub SelectTheme(Theme As String)
 
 #If Free
   
-  'Advice developers to donate to have access to all themes
+	'Advice developers to donate to have access to all themes
   
 	LogDebug($"To have access to all the inbuilt themes,
 	You need to donate! Donation link: ${CRLF}
-	${CFConfigs.DonationLink}
-	"$)
+	${CFConfigs.DonationLink}"$)
   
 #End if
   
-	theme = CFStringUtility.ucfirst(theme)
+	Theme = CFStringUtility.ucfirst(Theme)
 	 
-	If AvailableThemes.ThemesList.ContainsKey(theme) Then
+	If AvailableThemes.ThemesList.ContainsKey(Theme) Then
 		
-		DefaultTheme = AvailableThemes.ThemesList.Get(theme)
+		DefaultTheme = AvailableThemes.ThemesList.Get(Theme)
 	
 	Else
 		
-		LogError("Could not find the selected theme(" & theme & "). Please check the Theme name")
+		LogError("Could not find the selected theme(" & Theme & "). Please check the Theme name")
 		ExitApplication
 		
 	End If

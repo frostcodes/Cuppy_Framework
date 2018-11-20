@@ -45,9 +45,9 @@ Public Sub DesignerCreateView (Base As Pane, Lbl As Label, Props As Map)
 	mBase.LoadLayout("CFMaterialRadioBoxUI")
 	'set using theme...
 	'SetBg(StyleManager.DefaultTheme.Get("divider"))
-	SetBorder(CFStyleManager.DefaultTheme.Get("divider"), 2)
+	setBorder(CFStyleManager.DefaultTheme.Get("divider"), 2)
 	
-	SetCheckedColor(CFStyleManager.DefaultTheme.Get("primary"))
+	setCheckedColor(CFStyleManager.DefaultTheme.Get("primary"))
 	
 	
 '	Set checked state
@@ -57,15 +57,15 @@ Public Sub DesignerCreateView (Base As Pane, Lbl As Label, Props As Map)
 	
 	If checkedState = "UNCHECKED" Then
 		
-		SetCheckState(UNCHECKED_STATE)
+		setCheckState(UNCHECKED_STATE)
 	
 	else If checkedState = "CHECKED" Then
 		
-		SetCheckState(CHECKED_STATE)
+		setCheckState(CHECKED_STATE)
 		
 	else If checkedState = "INDETERMINATE" Then
 		
-		SetCheckState(INDETERMINATE_STATE)
+		setCheckState(INDETERMINATE_STATE)
 	
 		
 	End If

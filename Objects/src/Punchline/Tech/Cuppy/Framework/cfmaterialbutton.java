@@ -71,10 +71,10 @@ public String  _designercreateview(anywheresoftware.b4j.objects.PaneWrapper.Conc
 _mbase = _base;
  //BA.debugLineNum = 34;BA.debugLine="mBase.LoadLayout(\"CFMaterialButtonUI\")";
 _mbase.LoadLayout(ba,"CFMaterialButtonUI");
- //BA.debugLineNum = 36;BA.debugLine="SetBg(CFStyleManager.DefaultTheme.Get(\"accent\"))";
+ //BA.debugLineNum = 36;BA.debugLine="setBg(CFStyleManager.DefaultTheme.Get(\"accent\"))";
 _setbg(BA.ObjectToString(_cfstylemanager._defaulttheme.Get((Object)("accent"))));
- //BA.debugLineNum = 37;BA.debugLine="InnerButton.Font = CFStyleManager.DefaultFont";
-_innerbutton.setFont(_cfstylemanager._defaultfont);
+ //BA.debugLineNum = 37;BA.debugLine="InnerButton.Font = CFStyleManager.DEFAULT_FONT";
+_innerbutton.setFont(_cfstylemanager._default_font);
  //BA.debugLineNum = 38;BA.debugLine="InnerButton.MouseCursor = fx.Cursors.HAND";
 _innerbutton.setMouseCursor(_fx.Cursors.HAND);
  //BA.debugLineNum = 40;BA.debugLine="setText(Props.Get(\"Text\"))";

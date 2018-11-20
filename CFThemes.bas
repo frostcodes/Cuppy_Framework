@@ -10,13 +10,12 @@ Sub Class_Globals
 	 
 End Sub
 
-'Initializes the object. You can add parameters to this method if needed.
+'Initializes the object.
 Public Sub Initialize
 
 End Sub
 	
-'Return a map of available themes ...
-
+'Return a map of available themes
 Public Sub ThemesList() As Map
 	
 	Private AvailableThemes As Map

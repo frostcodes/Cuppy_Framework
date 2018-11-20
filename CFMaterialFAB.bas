@@ -38,7 +38,7 @@ Public Sub DesignerCreateView (Base As Pane, Lbl As Label, Props As Map)
 	mBase.LoadLayout("CFMaterialFABUI")
 	
 	'set using theme...
-	SetBg(CFStyleManager.DefaultTheme.Get("accent"))
+	setBg(CFStyleManager.DefaultTheme.Get("accent"))
 	FAB_Btn.MouseCursor = fx.Cursors.HAND
 	
 End Sub

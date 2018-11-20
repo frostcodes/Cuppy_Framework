@@ -1,7 +1,9 @@
 Changelog:
 ===========
 ### 1.035
-* Added Fonts constant to CfStyleManager
+* Added available Fonts to CfStyleManager
+* Added available Themes to CfStyleManager
+* Added 
 
 ### 1.032
 *  
