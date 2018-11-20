@@ -1041,10 +1041,27 @@ End Sub
 'between MALE or FEMALE only!
 Public Sub Rand_Gender() As String
 	
-	Dim Genders As  List
-	Genders.Initialize2(Array As String("Male","Female"))
+	Dim Genders As List
+	Genders.Initialize
 	
-	Return CFStringUtility.RandListValue(Genders)
+	'Because List contains 2 items, seedling is poor so we repeat list to improve seedling/randomness
+	Genders.Add("Male")
+	Genders.Add("Female")
+	Genders.Add("Male")
+	
+	Genders.Add("Female")
+	Genders.Add("Female")
+	Genders.Add("Male")
+	
+	Genders.Add("Male")
+	Genders.Add("Male")
+	Genders.Add("Female")
+	
+	Genders.Add("Female")
+	Genders.Add("Male")
+	Genders.Add("Female")
+
+Return CFStringUtility.RandListValue(Genders)
 	
 End Sub
 

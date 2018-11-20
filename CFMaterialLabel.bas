@@ -58,13 +58,13 @@ End Sub
 
 #Region Actions and Effects
  
-Public Sub SetBg(color As String)
+Public Sub setBg(color As String)
  
 	CFControlsUtils.SetBg( InnerLabel, color)
  
 End Sub
 
-Public Sub SetTextColor(color As String)
+Public Sub setTextColor(color As String)
  
 	CFControlsUtils.setTextColor (InnerLabel, color)
  
@@ -76,20 +76,20 @@ Public Sub setRotation(angle As Float)
 	 
 End Sub
   
-Public Sub SetBorder(color As String , width As Int)
+Public Sub setBorder(color As String , width As Int)
 	
 	CFControlsUtils.setBorder(InnerLabel, color, width)
 
 End Sub
 
-Public Sub SetBorderRadius(radius As Int)
+Public Sub setBorderRadius(radius As Int)
 	
 	CFControlsUtils.setBorderRadius(InnerLabel, radius)
 	
 End Sub
 
 
-Public Sub SetEffect(effect As String)
+Public Sub setEffect(effect As String)
 	
 	CFControlsUtils.setEffect(InnerLabel, effect)
 	

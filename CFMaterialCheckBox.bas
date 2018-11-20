@@ -59,8 +59,8 @@ Public Sub DesignerCreateView (Base As Pane, Lbl As Label, Props As Map)
 	mBase = Base
 	mBase.LoadLayout("CFMaterialCheckboxUI")
 	'set using theme...
-	SetBorder(CFStyleManager.DefaultTheme.Get("divider"), 2)
-	SetCheckedColor(CFStyleManager.DefaultTheme.Get("primary"))
+	setBorder(CFStyleManager.DefaultTheme.Get("divider"), 2)
+	setCheckedColor(CFStyleManager.DefaultTheme.Get("primary"))
 	
 '	Set checked state
 	Dim checkedState As String = Props.Get("CheckedState")
@@ -69,15 +69,15 @@ Public Sub DesignerCreateView (Base As Pane, Lbl As Label, Props As Map)
 	
 	If checkedState = "UNCHECKED" Then
 		
-		SetCheckState(UNCHECKED_STATE)
+		setCheckState(UNCHECKED_STATE)
 	
 	else If checkedState = "CHECKED" Then
 		
-		SetCheckState(CHECKED_STATE)
+		setCheckState(CHECKED_STATE)
 		
 	else If checkedState = "INDETERMINATE" Then
 		
-		SetCheckState(INDETERMINATE_STATE)
+		setCheckState(INDETERMINATE_STATE)
 	
 		
 	End If
@@ -104,7 +104,7 @@ End Sub
 
 #Region Actions and Effects
 
-Public Sub SetBg(color As String)
+Public Sub setBg(color As String)
  
 	CFControlsUtils.SetBG( CheckboxPane, color)
  
@@ -116,19 +116,19 @@ Public Sub setRotation(angle As Float)
 	 
 End Sub
 
-Public Sub SetBorder(color As String , width As Int)
+Public Sub setBorder(color As String , width As Int)
 	
 	CFControlsUtils.SetBorder(CheckboxPane, color, width)
 
 End Sub
  
-Public Sub SetBorderRadius(radius As Int)
+Public Sub setBorderRadius(radius As Int)
 	
 	CFControlsUtils.SetBorderRadius(CheckboxPane, radius)
 	
 End Sub
  
-Public Sub SetEffect(effect As String)
+Public Sub setEffect(effect As String)
 	
 	CFControlsUtils.SetEffect(CheckboxPane, effect)
 	
@@ -142,13 +142,13 @@ End Sub
 
 #End Region
   
-Public Sub SetCheckedColor(color As String)
+Public Sub setCheckedColor(color As String)
   	
 	 CFControlsUtils.setBG(CheckedLabel, color)
 	
 End Sub
  
-Public Sub SetCheckState(value As Int)
+Public Sub setCheckState(value As Int)
 	 
 	If value = UNCHECKED_STATE Then
 		
@@ -193,10 +193,18 @@ Public Sub IsIndeterminate As Boolean
 End Sub
 
 'TODO: allow setting icon from designer
-Public Sub SetIcon(iconCode As Int)
+Public Sub setIcon(iconCode As Int)
 	
 	CheckedLabel.Text = Chr(iconCode)
 	
+End Sub
+
+'Adds to a parent
+Public Sub AddToParent(Parent As Pane, Left As Int, Top As Int, Width As Int, Height As Int) 
+	
+	mBase.Initialize("mBase") 
+	Parent.AddNode(mBase, Left, Top, Width, Height)  
+
 End Sub
    
 Private Sub CheckboxPane_MousePressed (EventData As MouseEvent)
@@ -205,11 +213,11 @@ Private Sub CheckboxPane_MousePressed (EventData As MouseEvent)
 	
 	If Not(Checked) Or IsIndeterminate Then
 	
-		SetCheckState(CHECKED_STATE)
+		setCheckState(CHECKED_STATE)
 	
 	Else
 	
-		SetCheckState(UNCHECKED_STATE)
+		setCheckState(UNCHECKED_STATE)
 		   
 	End If
 	 

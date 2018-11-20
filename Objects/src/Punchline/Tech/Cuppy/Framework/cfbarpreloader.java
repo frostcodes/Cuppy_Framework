@@ -37,13 +37,13 @@ public anywheresoftware.b4j.objects.PaneWrapper.ConcretePaneWrapper _pane3 = nul
 public int _animationtime = 0;
 public b4j.example.cssutils _cssutils = null;
 public Punchline.Tech.Cuppy.Framework.cfconfigs _cfconfigs = null;
-public Punchline.Tech.Cuppy.Framework.cfstylemanager _cfstylemanager = null;
 public Punchline.Tech.Cuppy.Framework.cfstringutility _cfstringutility = null;
-public Punchline.Tech.Cuppy.Framework.cfcontrolsutils _cfcontrolsutils = null;
+public Punchline.Tech.Cuppy.Framework.cfdatageneratorutility _cfdatageneratorutility = null;
 public Punchline.Tech.Cuppy.Framework.cffileutility _cffileutility = null;
+public Punchline.Tech.Cuppy.Framework.cfstylemanager _cfstylemanager = null;
+public Punchline.Tech.Cuppy.Framework.cfcontrolsutils _cfcontrolsutils = null;
 public Punchline.Tech.Cuppy.Framework.cfmathutility _cfmathutility = null;
 public Punchline.Tech.Cuppy.Framework.cfdatatypeutility _cfdatatypeutility = null;
-public Punchline.Tech.Cuppy.Framework.cfdatageneratorutility _cfdatageneratorutility = null;
 public Punchline.Tech.Cuppy.Framework.cfapputility _cfapputility = null;
 public String  _base_resize(double _width,double _height) throws Exception{
  //BA.debugLineNum = 70;BA.debugLine="Private Sub Base_Resize (Width As Double, Height A";

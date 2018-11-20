@@ -9,7 +9,7 @@ Version=5.51
 Private Sub Process_Globals
 	
 	Private fx As JFX
-	  
+	 
 End Sub
   
   #Region TODO:refactor  the below... same function , second is just recursive
@@ -25,17 +25,14 @@ End Sub
 Public Sub SizeOfCurrentFilesInFolder(dir As String) As Long
 	
 	Dim total As Long
-	
-	For Each filename As String In File.ListFiles(dir)
-		
-		If File.IsDirectory(dir, filename) = False Then
-			
-			total = total + File.Size(dir , filename)
-			
-		End If
-		
+	dir = CFStringUtility.Trim_Slashes_Once(dir)
+
+	For Each filename As String In FilesInFolder(dir, False)
+		 
+		total = total + File.Size("" , filename)
+		  
 	Next
-	
+	 
 	Return total
 	
 End Sub
@@ -49,27 +46,55 @@ End Sub
 Public Sub SizeOfFilesInFolder(dir As String) As Long
 	
 	Dim total As Long
-	
-	For Each filename As String In File.ListFiles(dir)
-		
-		If File.IsDirectory(dir, filename) = False Then
-			
-			total = total + File.Size(dir, filename)
-		
-		Else
-			
-			total = total + SizeOfFilesInFolder(dir & "\" & filename)
-			
-		End If
+	dir = CFStringUtility.Trim_Slashes_Once(dir)
+ 
+	For Each filename As String In FilesInFolder(dir, True)
+	 
+		total = total + File.Size("" , filename)
 		
 	Next
-	
+	 
 	Return total
 	
 End Sub
 
 #End Region
-  
+
+'All all files in a parent folder
+'set IncludeSubDir to true to includes files in sub folders
+Public Sub FilesInFolder(dir As String, IncludeSubDir As Boolean) As List
+
+	Dim files As List
+	files.Initialize
+	
+	dir = CFStringUtility.Trim_Slashes_Once(dir)
+	
+	For Each filename As String In File.ListFiles(dir)
+		
+		If File.IsDirectory(dir, filename) = False Then
+			
+			files.Add(FixWinPaths(dir & "\" & filename))
+		
+		Else if IncludeSubDir Then
+			
+			files.AddAll(FilesInFolder(FixWinPaths(dir & "\" & filename), True))
+			
+		End If
+		
+	Next
+	
+	Return files
+	
+End Sub
+
+'All all files in a parent folder
+'Note: this includes files in sub folders
+Public Sub FilesInFolder2(dir As String) As List
+	
+	Return FilesInFolder(dir, True)
+	
+End Sub
+
 'Write an array of bytes to a file
 'FROM: https://www.b4x.com/android/forum/threads/b4x-bytes-to-file.70111/#content
 Public Sub BytesToFile (Dir As String, FileName As String, Data() As Byte)
@@ -129,8 +154,10 @@ End Sub
  
 'Fixes path error by replacing // in file
 'or directory paths to /
- Public Sub FixWinPaths(path As String) As String
+Public Sub FixWinPaths(path As String) As String
 
-        Return path.Replace("//", "/")
+	Return path.Replace("//", "/")
 
 End Sub
+
+ 

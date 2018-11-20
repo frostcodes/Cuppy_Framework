@@ -156,7 +156,7 @@ End Sub
 Public Sub Strip_Quotes(str As String) As String
 	
 	str = str.Replace("'", "")
-	str = str.Replace("""","")	
+	str = str.Replace("""","")
 	Return str
 	 
 End Sub
@@ -185,13 +185,13 @@ Public Sub Reduce_Double_Slashes(str As String) As String
 		str = str.Replace("//" ,"/")
 		str =  str.Replace("http:/" ,"http://")  'fix back http://
 
-		Else
+	Else
 			
 		str = str.Replace("//" ,"/")
 		
 	End If
 	
-	 Return str
+	Return str
 	 
 End Sub
  
@@ -204,15 +204,15 @@ End Sub
 'FORM: https://www.b4x.com/android/forum/threads/randomly-shuffle-a-string-array.39435/
 Public Sub ShuffleArray(StringArray() As String) As String()
 	
-    Dim ArrayVal As String
-    Dim Random As Int
+	Dim ArrayVal As String
+	Dim Random As Int
  
-    For i = 0 To StringArray.Length - 1
-       Random = Rnd(i, StringArray.Length)
-       ArrayVal = StringArray(i)
-       StringArray(i) = StringArray(Random)
-       StringArray(Random) = ArrayVal
-    Next
+	For i = 0 To StringArray.Length - 1
+		Random = Rnd(i, StringArray.Length)
+		ArrayVal = StringArray(i)
+		StringArray(i) = StringArray(Random)
+		StringArray(Random) = ArrayVal
+	Next
 	Return StringArray
 End Sub
 
@@ -252,7 +252,7 @@ Public Sub GenerateRandomString2(StrLength As Int) As String
 	Dim result As String
 	
 	'make it with lots of symbols
-	result =  StringArray2String(ShuffleArray(RandomArray)) 
+	result =  StringArray2String(ShuffleArray(RandomArray))
 	result = result  & GenerateRandomString( Floor( StrLength/ 2))
 	result = result  & StringArray2String(ShuffleArray(RandomArray))
 	result = result  & GenerateRandomString( Floor( StrLength/ 2))
@@ -267,7 +267,7 @@ End Sub
 '<code>log(StringUtility.generatePinCode(4)) 'This will generate 4 random numbers
 ' 'Outputs something like this: 3760
  ' </code>
- Public Sub GeneratePinCode(PinLength As Int) As Int
+Public Sub GeneratePinCode(PinLength As Int) As Int
  	
 	Dim result As String =""
 	Dim RandomArray() As String = Array As String(1,2,3,4,5,6,7,8,9,0)
@@ -317,7 +317,7 @@ Public Sub Increment_String(str As String, separator As String , first As Int  )
 	If  IndexOfSeperator <> 0 Then
 		'we have a separator
 		 
-		 foundInt = str.SubString((IndexOfSeperator +1) ) 
+		foundInt = str.SubString((IndexOfSeperator +1) )
 		   
 		'check if we have a valid INT
 		 
@@ -334,7 +334,7 @@ Public Sub Increment_String(str As String, separator As String , first As Int  )
 			 
 		Else
 				
-			'not valid	
+			'not valid
 			Return str & separator & first
 			 	
 		End If
@@ -377,7 +377,7 @@ Public Sub Implode(separator As String, StrList As List) As String
 	 
 	For Each str As String In StrList 'an array
 		result = result & str & separator
-		Next
+	Next
 		
 	Return Trim_Once(result, separator) ' trim separator just in case
 	
@@ -396,12 +396,13 @@ Public Sub Ucwords(str As String) As String
 	
 	Dim result As String =""
 	
-	For Each txt As String In Explode(" ", str)
+	For Each txt As String In Explode(" ", str.ToLowerCase)
 		Dim firstChar As String =""
 		firstChar= txt.CharAt(0)
 		firstChar = firstChar.ToUpperCase
 		
 		result = result & firstChar & txt.SubString(1) & " "
+		
 	Next
 	
 	Return result
@@ -410,6 +411,8 @@ End Sub
  
 'converts the first character of a string to uppercase.
 Public Sub Ucfirst(str As String) As String
+ 
+	str = str.ToLowerCase
  
 	Dim firstChar As String =""
 	firstChar= str.CharAt(0)
@@ -456,7 +459,7 @@ End Sub
 Public Sub Underscore(str As String)  As String
 	
 	str= str.ToLowerCase
-	Return str.Replace(" ",  "_") 
+	Return str.Replace(" ",  "_")
 	
 End Sub
 
@@ -471,13 +474,17 @@ End Sub
 'Adds http:// in the event that a protocol prefix is missing from a URL.
 Public Sub Prep_url(str As String)  As String
 	
-	 str= str.Trim
+	str = str.Trim
 	 
 	If IsEmpty(str) Or str.EqualsIgnoreCase("http://") Then
 		
 		Return  ""
 		
-		Else
+	Else If str.StartsWith("#") Then
+			
+		Return str
+		
+	Else
 			
 		If Not(str.StartsWith("http://")) Then
 		  
@@ -677,9 +684,9 @@ Sub Str_Repeat(input As String, multiplier As Int) As String
 		
 		Return ""
 		
-		Else
+	Else
 		 
-		 Dim result As String = ""
+		Dim result As String = ""
 		 
 		For i = 0 To multiplier - 1
 			 
@@ -723,9 +730,9 @@ Public Sub Strpbrk(haystack As String, charList As String) As Object
  
 	For i = 0 To haystack.Length - 1
 		 
-		 If charList.IndexOf(haystack.CharAt(i)) >= 0 Then
+		If charList.IndexOf(haystack.CharAt(i)) >= 0 Then
 		 	 
-			  Return haystack.SubString(i)
+			Return haystack.SubString(i)
 			
 		End If
 		  
@@ -1012,4 +1019,70 @@ Public Sub Truncate(txt As String, length As Int) As String
 		
 	End If
 	
-End Sub 
+End Sub
+
+'Returns a day of a date with the english suffix
+'Example 2nd or 4th 
+Public Sub DateOrdinal(date As Int) As String
+  	
+	Dim sufixes() As String = Array As String("th", "st", "nd", "rd", "th", "th","th", "th", "th", "th")
+	Dim iVal As String = date
+	Dim val As Int =  (date Mod 100)
+	If val = 11 Or val =  12 Or val = 13 Then
+       
+		Return iVal & "th"
+			
+	Else
+
+		Return iVal & sufixes(date Mod 10)
+			
+	End If
+
+End Sub
+
+'Returns the current date in a nice format
+'Example:  October 5th, 2018
+Public Sub NicelyFormattedDate As String
+	
+	DateTime.DateFormat = "MMMM '" & DateOrdinal(DateTime.GetDayOfMonth(DateTime.Now)) & "', yyyy"
+	Return DateTime.Date(DateTime.Now)
+
+End Sub
+
+'Converts Newlines to Html <br> tag
+Public Sub Nl2Br(text As String) As String
+	
+	Return text.Replace(CRLF, "<br>")
+	
+End Sub
+
+'Makes a word Plural if need be 
+'If the count is more than one then it addes the suffix to the text
+'Eg if the count of available examples in a list is 1
+'it returns 'Example' if not you can set to return 'Examples'
+'Example:
+'<code>
+'Dim examples As Map = CreateMap("January": 1, "February": 2)
+'	Log("We have " & (examples.Size) & " " &  CFStringUtility.Plurify("example", examples.Size, "s"))
+'	'returns: We have 2 examples
+'
+'	Dim examples2 As Map = CreateMap("January": 1)
+'	Log("We have " & (examples2.Size) & " " & CFStringUtility.Plurify("example", examples2.Size, "s"))
+'	'returns: We have 1 example
+'</code>
+Public Sub Plurify(text As String, count As Int, suffix As String) As String
+	
+	If count < 2 Then
+		
+		Return text
+		
+	Else
+		
+		Return text & suffix
+			
+	End If
+	
+End Sub
+
+
+

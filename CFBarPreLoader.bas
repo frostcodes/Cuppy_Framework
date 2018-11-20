@@ -112,26 +112,26 @@ End Sub
 
 #Region Actions and Effects
 ' 
-'Public Sub SetBg(color As String)
+'Public Sub setBg(color As String)
 ' 
 '	CFControlsUtils.SetBg( mBase, color)
 ' 
 'End Sub
 ' 
 '
-'Public Sub SetRotation(angle As Float)
+'Public Sub setRotation(angle As Float)
 '	
 '	CFControlsUtils.setRotation(mBase, angle) 'rotate
 '	 
 'End Sub
 '  
-'Public Sub SetBorder(color As String , width As Int)
+'Public Sub setBorder(color As String , width As Int)
 '
 '	CFControlsUtils.setBorder(mBase, color, width)
 '
 'End Sub
 ' 
-'Public Sub SetEffect(effect As String)
+'Public Sub setEffect(effect As String)
 '	
 '	CFControlsUtils.setEffect(mBase, effect)
 '	

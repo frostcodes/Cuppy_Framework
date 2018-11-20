@@ -69,37 +69,37 @@ Library2=jfx
 Library3=cssutils
 Library4=javaobject
 Module1=tODOS
-Module10=CFMetroLinkLabel
-Module11=CFMaterialLabel
-Module12=CFMetroToggleButton
-Module13=CFMaterialFAB
-Module14=CFMaterialCheckBox
-Module15=CFMaterialButton
-Module16=CFMaterialRadioBox
-Module17=CFMaterialSquareFAB
-Module18=CFMaterialSwitch
-Module19=CFMetroCircleToggleButton
+Module10=CFStyleManager
+Module11=CFMaterialDivider
+Module12=CFControlsUtils
+Module13=CFModal
+Module14=CFMetroLinkLabel
+Module15=CFMaterialLabel
+Module16=CFMetroToggleButton
+Module17=CFMaterialFAB
+Module18=CFMaterialButton
+Module19=CFMaterialRadioBox
 Module2=CFConfigs
-Module20=CFMaterialLinearProgressBar
-Module21=CFMaterialCard
-Module22=CFAnimationManager
-Module23=CFMaterialAppBar
-Module24=CFFileUtility
-Module25=CFMathUtility
-Module26=CFDataTypeUtility
-Module27=CFDataGeneratorUtility
+Module20=CFMaterialSquareFAB
+Module21=CFMaterialSwitch
+Module22=CFMetroCircleToggleButton
+Module23=CFMaterialLinearProgressBar
+Module24=CFMaterialCard
+Module25=CFAnimationManager
+Module26=CFMathUtility
+Module27=CFDataTypeUtility
 Module28=CFAppUtility
-Module3=CFBarPreLoader
-Module4=CFStyleManager
-Module5=CFStringUtility
+Module3=CFMaterialAppBar
+Module4=CFStringUtility
+Module5=CFDataGeneratorUtility
 Module6=CFThemes
-Module7=CFMaterialDivider
-Module8=CFControlsUtils
-Module9=CFModal
+Module7=CFFileUtility
+Module8=CFMaterialCheckBox
+Module9=CFBarPreLoader
 NumberOfFiles=31
 NumberOfLibraries=4
 NumberOfModules=28
-Version=6.3
+Version=6.51
 @EndOfDesignText@
 #Region Project Attributes 
 
@@ -112,7 +112,7 @@ Version=6.3
 
 #LibraryAuthor: Punchline Technologies
 #LibraryName: Cuppy Framework
-#LibraryVersion: 1.03
+#LibraryVersion: 1.033
 #AdditionalJar: FontAwesome
 #AdditionalJar: MaterialIcons
 #AdditionalJar: CFResources.jar
@@ -120,7 +120,7 @@ Version=6.3
 #End Region
 
 Sub Process_Globals
-
+ 
 End Sub
 
 Sub AppStart (form1 As Form, Args() As String)

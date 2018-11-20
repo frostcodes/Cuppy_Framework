@@ -68,7 +68,7 @@ End Sub
 
 #Region Actions and Effects
  
-Public Sub SetBg(color As String)
+Public Sub setBg(color As String)
  
 	CFControlsUtils.setBG( ModalPane, color)
  
@@ -80,21 +80,21 @@ Public Sub setRotation(angle As Float)
 	 
 End Sub
   
-Public Sub SetBorder(color As String , width As Int)
+Public Sub setBorder(color As String , width As Int)
 	
 	CFControlsUtils.setBorder(ModalPane, color, width)
 
 End Sub
 
 
-Public Sub SetBorderRadius(radius As Int)
+Public Sub setBorderRadius(radius As Int)
 	
 	CFControlsUtils.setBorderRadius(ModalPane, radius)
 	
 End Sub
 
 
-Public Sub SetEffect(effect As String)
+Public Sub setEffect(effect As String)
 	
 	CFControlsUtils.setEffect(ModalPane, effect)
 	

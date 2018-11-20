@@ -31,13 +31,13 @@ public anywheresoftware.b4j.objects.PaneWrapper.ConcretePaneWrapper _mbase = nul
 public anywheresoftware.b4j.objects.LabelWrapper _innerlabel = null;
 public b4j.example.cssutils _cssutils = null;
 public Punchline.Tech.Cuppy.Framework.cfconfigs _cfconfigs = null;
-public Punchline.Tech.Cuppy.Framework.cfstylemanager _cfstylemanager = null;
 public Punchline.Tech.Cuppy.Framework.cfstringutility _cfstringutility = null;
-public Punchline.Tech.Cuppy.Framework.cfcontrolsutils _cfcontrolsutils = null;
+public Punchline.Tech.Cuppy.Framework.cfdatageneratorutility _cfdatageneratorutility = null;
 public Punchline.Tech.Cuppy.Framework.cffileutility _cffileutility = null;
+public Punchline.Tech.Cuppy.Framework.cfstylemanager _cfstylemanager = null;
+public Punchline.Tech.Cuppy.Framework.cfcontrolsutils _cfcontrolsutils = null;
 public Punchline.Tech.Cuppy.Framework.cfmathutility _cfmathutility = null;
 public Punchline.Tech.Cuppy.Framework.cfdatatypeutility _cfdatatypeutility = null;
-public Punchline.Tech.Cuppy.Framework.cfdatageneratorutility _cfdatageneratorutility = null;
 public Punchline.Tech.Cuppy.Framework.cfapputility _cfapputility = null;
 public String  _base_resize(double _width,double _height) throws Exception{
  //BA.debugLineNum = 40;BA.debugLine="Private Sub Base_Resize (Width As Double, Height A";
@@ -125,28 +125,28 @@ _cfcontrolsutils._removeeffect((anywheresoftware.b4j.objects.NodeWrapper.Concret
 return "";
 }
 public String  _setbg(String _color) throws Exception{
- //BA.debugLineNum = 57;BA.debugLine="Public Sub SetBg(color As String)";
+ //BA.debugLineNum = 57;BA.debugLine="Public Sub setBg(color As String)";
  //BA.debugLineNum = 59;BA.debugLine="CFControlsUtils.SetBg( InnerLabel, color)";
 _cfcontrolsutils._setbg((anywheresoftware.b4j.objects.NodeWrapper.ConcreteNodeWrapper) anywheresoftware.b4a.AbsObjectWrapper.ConvertToWrapper(new anywheresoftware.b4j.objects.NodeWrapper.ConcreteNodeWrapper(), (javafx.scene.Node)(_innerlabel.getObject())),_color);
  //BA.debugLineNum = 61;BA.debugLine="End Sub";
 return "";
 }
 public String  _setborder(String _color,int _width) throws Exception{
- //BA.debugLineNum = 75;BA.debugLine="Public Sub SetBorder(color As String , width As In";
+ //BA.debugLineNum = 75;BA.debugLine="Public Sub setBorder(color As String , width As In";
  //BA.debugLineNum = 77;BA.debugLine="CFControlsUtils.setBorder(InnerLabel, color, widt";
 _cfcontrolsutils._setborder((anywheresoftware.b4j.objects.NodeWrapper.ConcreteNodeWrapper) anywheresoftware.b4a.AbsObjectWrapper.ConvertToWrapper(new anywheresoftware.b4j.objects.NodeWrapper.ConcreteNodeWrapper(), (javafx.scene.Node)(_innerlabel.getObject())),_color,_width);
  //BA.debugLineNum = 79;BA.debugLine="End Sub";
 return "";
 }
 public String  _setborderradius(int _radius) throws Exception{
- //BA.debugLineNum = 81;BA.debugLine="Public Sub SetBorderRadius(radius As Int)";
+ //BA.debugLineNum = 81;BA.debugLine="Public Sub setBorderRadius(radius As Int)";
  //BA.debugLineNum = 83;BA.debugLine="CFControlsUtils.setBorderRadius(InnerLabel, radiu";
 _cfcontrolsutils._setborderradius((anywheresoftware.b4j.objects.NodeWrapper.ConcreteNodeWrapper) anywheresoftware.b4a.AbsObjectWrapper.ConvertToWrapper(new anywheresoftware.b4j.objects.NodeWrapper.ConcreteNodeWrapper(), (javafx.scene.Node)(_innerlabel.getObject())),_radius);
  //BA.debugLineNum = 85;BA.debugLine="End Sub";
 return "";
 }
 public String  _seteffect(String _effect) throws Exception{
- //BA.debugLineNum = 87;BA.debugLine="Public Sub SetEffect(effect As String)";
+ //BA.debugLineNum = 87;BA.debugLine="Public Sub setEffect(effect As String)";
  //BA.debugLineNum = 89;BA.debugLine="CFControlsUtils.setEffect(InnerLabel, effect)";
 _cfcontrolsutils._seteffect((anywheresoftware.b4j.objects.NodeWrapper.ConcreteNodeWrapper) anywheresoftware.b4a.AbsObjectWrapper.ConvertToWrapper(new anywheresoftware.b4j.objects.NodeWrapper.ConcreteNodeWrapper(), (javafx.scene.Node)(_innerlabel.getObject())),_effect);
  //BA.debugLineNum = 91;BA.debugLine="End Sub";

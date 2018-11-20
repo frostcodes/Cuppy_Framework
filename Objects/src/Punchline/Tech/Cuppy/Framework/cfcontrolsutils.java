@@ -29,12 +29,12 @@ static {
 public static anywheresoftware.b4j.objects.JFX _fx = null;
 public static b4j.example.cssutils _cssutils = null;
 public static Punchline.Tech.Cuppy.Framework.cfconfigs _cfconfigs = null;
-public static Punchline.Tech.Cuppy.Framework.cfstylemanager _cfstylemanager = null;
 public static Punchline.Tech.Cuppy.Framework.cfstringutility _cfstringutility = null;
+public static Punchline.Tech.Cuppy.Framework.cfdatageneratorutility _cfdatageneratorutility = null;
 public static Punchline.Tech.Cuppy.Framework.cffileutility _cffileutility = null;
+public static Punchline.Tech.Cuppy.Framework.cfstylemanager _cfstylemanager = null;
 public static Punchline.Tech.Cuppy.Framework.cfmathutility _cfmathutility = null;
 public static Punchline.Tech.Cuppy.Framework.cfdatatypeutility _cfdatatypeutility = null;
-public static Punchline.Tech.Cuppy.Framework.cfdatageneratorutility _cfdatageneratorutility = null;
 public static Punchline.Tech.Cuppy.Framework.cfapputility _cfapputility = null;
 public static String  _addcontroltooltip(anywheresoftware.b4j.objects.NodeWrapper.ConcreteNodeWrapper _controlobj,String _msg) throws Exception{
 anywheresoftware.b4j.object.JavaObject _jotooltip = null;
@@ -166,14 +166,14 @@ _jotooltip.RunMethod("uninstall",new Object[]{(Object)(_panelobj.getObject()),(O
 return "";
 }
 public static String  _setbg(anywheresoftware.b4j.objects.NodeWrapper.ConcreteNodeWrapper _controlobj,String _color) throws Exception{
- //BA.debugLineNum = 43;BA.debugLine="Public Sub SetBG(controlObj As Node, color As Stri";
+ //BA.debugLineNum = 43;BA.debugLine="Public Sub setBG(controlObj As Node, color As Stri";
  //BA.debugLineNum = 45;BA.debugLine="CSSUtils.SetStyleProperty( controlObj, \"-fx-backg";
 _cssutils._setstyleproperty(_controlobj,"-fx-background-color",_color);
  //BA.debugLineNum = 47;BA.debugLine="End Sub";
 return "";
 }
 public static String  _setborder(anywheresoftware.b4j.objects.NodeWrapper.ConcreteNodeWrapper _controlobj,String _color,int _width) throws Exception{
- //BA.debugLineNum = 14;BA.debugLine="Public Sub SetBorder(controlObj As Node, color As";
+ //BA.debugLineNum = 14;BA.debugLine="Public Sub setBorder(controlObj As Node, color As";
  //BA.debugLineNum = 16;BA.debugLine="CSSUtils.SetStyleProperty( controlObj, \"-fx-borde";
 _cssutils._setstyleproperty(_controlobj,"-fx-border-color",_color);
  //BA.debugLineNum = 17;BA.debugLine="CSSUtils.SetStyleProperty (controlObj, \"-fx-borde";
@@ -182,28 +182,28 @@ _cssutils._setstyleproperty(_controlobj,"-fx-border-width",BA.NumberToString(_wi
 return "";
 }
 public static String  _setborderradius(anywheresoftware.b4j.objects.NodeWrapper.ConcreteNodeWrapper _controlobj,int _radius) throws Exception{
- //BA.debugLineNum = 22;BA.debugLine="Public Sub SetBorderRadius(controlObj As Node, rad";
+ //BA.debugLineNum = 22;BA.debugLine="Public Sub setBorderRadius(controlObj As Node, rad";
  //BA.debugLineNum = 24;BA.debugLine="CSSUtils.SetStyleProperty(controlObj, \"-fx-border";
 _cssutils._setstyleproperty(_controlobj,"-fx-border-radius",BA.NumberToString(_radius));
  //BA.debugLineNum = 26;BA.debugLine="End Sub";
 return "";
 }
 public static String  _seteffect(anywheresoftware.b4j.objects.NodeWrapper.ConcreteNodeWrapper _controlobj,String _effect) throws Exception{
- //BA.debugLineNum = 29;BA.debugLine="Public Sub SetEffect(controlObj As Node, effect As";
+ //BA.debugLineNum = 29;BA.debugLine="Public Sub setEffect(controlObj As Node, effect As";
  //BA.debugLineNum = 31;BA.debugLine="CSSUtils.SetStyleProperty(controlObj, \"-fx-effect";
 _cssutils._setstyleproperty(_controlobj,"-fx-effect",_effect);
  //BA.debugLineNum = 33;BA.debugLine="End Sub";
 return "";
 }
 public static String  _setrotation(anywheresoftware.b4j.objects.NodeWrapper.ConcreteNodeWrapper _controlobj,float _angle) throws Exception{
- //BA.debugLineNum = 7;BA.debugLine="Public Sub SetRotation(controlObj As Node, Angle A";
+ //BA.debugLineNum = 7;BA.debugLine="Public Sub setRotation(controlObj As Node, Angle A";
  //BA.debugLineNum = 9;BA.debugLine="CSSUtils.SetStyleProperty(controlObj, \"-fx-rotate";
 _cssutils._setstyleproperty(_controlobj,"-fx-rotate",BA.NumberToString(_angle));
  //BA.debugLineNum = 11;BA.debugLine="End Sub";
 return "";
 }
 public static String  _settextcolor(anywheresoftware.b4j.objects.NodeWrapper.ConcreteNodeWrapper _controlobj,String _color) throws Exception{
- //BA.debugLineNum = 50;BA.debugLine="Public Sub SetTextColor(controlObj As Node, color";
+ //BA.debugLineNum = 50;BA.debugLine="Public Sub setTextColor(controlObj As Node, color";
  //BA.debugLineNum = 52;BA.debugLine="CSSUtils.SetStyleProperty(controlObj,\"-fx-text-fi";
 _cssutils._setstyleproperty(_controlobj,"-fx-text-fill",_color);
  //BA.debugLineNum = 54;BA.debugLine="End Sub";

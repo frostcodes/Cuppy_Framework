@@ -10,14 +10,14 @@ Private Sub Process_Globals
 End Sub
 
 'Rotate a Control
-Public Sub SetRotation(controlObj As Node, Angle As Float)
+Public Sub setRotation(controlObj As Node, Angle As Float)
 	
 	CSSUtils.SetStyleProperty(controlObj, "-fx-rotate", Angle)
 	
 End Sub
   
 'Set a Control Border color and width
-Public Sub SetBorder(controlObj As Node, color As String , width As Int)
+Public Sub setBorder(controlObj As Node, color As String , width As Int)
 	
 	CSSUtils.SetStyleProperty( controlObj, "-fx-border-color", color)
 	CSSUtils.SetStyleProperty (controlObj, "-fx-border-width", width)
@@ -25,14 +25,14 @@ Public Sub SetBorder(controlObj As Node, color As String , width As Int)
 End Sub
  
 'Set a Control Border radiusNode
-Public Sub SetBorderRadius(controlObj As Node, radius As Int)
+Public Sub setBorderRadius(controlObj As Node, radius As Int)
 	 
 	CSSUtils.SetStyleProperty(controlObj, "-fx-border-radius", radius)
 	
 End Sub
 
 'Set a Control effect
-Public Sub SetEffect(controlObj As Node, effect As String)
+Public Sub setEffect(controlObj As Node, effect As String)
 	 
 	CSSUtils.SetStyleProperty(controlObj, "-fx-effect" , effect)
 	 
@@ -46,14 +46,14 @@ Public Sub RemoveEffect(controlObj As Node)
 End Sub
  
 'Sets a Control Background color
-Public Sub SetBG(controlObj As Node, color As String)
+Public Sub setBG(controlObj As Node, color As String)
 	 
 	CSSUtils.SetStyleProperty( controlObj, "-fx-background-color", color)
 	 
 End Sub
 
 'Sets a Control text color if supported like a label 
-Public Sub SetTextColor(controlObj As Node, color As String)
+Public Sub setTextColor(controlObj As Node, color As String)
 	
 	CSSUtils.SetStyleProperty(controlObj,"-fx-text-fill",  color)
 	 

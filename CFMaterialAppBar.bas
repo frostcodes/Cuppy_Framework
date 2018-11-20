@@ -43,12 +43,15 @@ Public Sub DesignerCreateView (Base As Pane, Lbl As Label, Props As Map)
 	mBase.LoadLayout("CFMaterialAppBarUI")
 	
 	'set using theme...
-	SetBg(CFStyleManager.DefaultTheme.Get("primary"))
-	
+	setBg(CFStyleManager.DefaultTheme.Get("primary"))
 	TitleLabel.Font = CFStyleManager.SelectFont("Black", 14)
+	
 	setTitle(Props.Get("Title"))
 	setEnableShadow(Props.Get("EnableShadow"))
 	
+	setHideIcon(Props.Get("HideIcon"))
+	setHideTitle(Props.Get("HideTitle"))
+	 
 End Sub
 
 Private Sub Base_Resize (Width As Double, Height As Double)
@@ -67,7 +70,7 @@ End Sub
 #Region Actions and Effects
 
 
-Public Sub SetBg(color As String)
+Public Sub setBg(color As String)
 	
 	CFControlsUtils.SetBG( Label1,  color)
 	CFControlsUtils.SetBG( InnerPane, color)
@@ -81,21 +84,21 @@ Public Sub setRotation(angle As Float)
 	 
 End Sub
 
-Public Sub SetBorder(color As String , width As Int)
+Public Sub setBorder(color As String , width As Int)
 	
 	CFControlsUtils.setBorder(Label1, color, width)
 	CFControlsUtils.setBorder(InnerPane, color, width)
 	
 End Sub
 
-Public Sub SetBorderRadius(radius As Int)
+Public Sub setBorderRadius(radius As Int)
 	
 	CFControlsUtils.setBorderRadius(Label1, radius)
 	CFControlsUtils.setBorderRadius(InnerPane, radius)
 	
 End Sub
 
-Public Sub SetEffect(effect As String)
+Public Sub setEffect(effect As String)
 	
 	CFControlsUtils.setEffect(Label1, effect)
 	
@@ -109,15 +112,17 @@ End Sub
 
 #End Region
 
+'The app bar Icon
 Public Sub setIcon(IconText As String)
 	
-	Label1.Text = IconText
+	InnerButton.Text = IconText
 	 
 End Sub
 
+'The app bar Icon
 Public Sub getIcon As String
 	
-	Return Label1.Text
+	Return InnerButton.Text
 	 
 End Sub
 

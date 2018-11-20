@@ -36,14 +36,23 @@ public int _indeterminate_state = 0;
 public boolean _firsttime = false;
 public b4j.example.cssutils _cssutils = null;
 public Punchline.Tech.Cuppy.Framework.cfconfigs _cfconfigs = null;
-public Punchline.Tech.Cuppy.Framework.cfstylemanager _cfstylemanager = null;
 public Punchline.Tech.Cuppy.Framework.cfstringutility _cfstringutility = null;
-public Punchline.Tech.Cuppy.Framework.cfcontrolsutils _cfcontrolsutils = null;
+public Punchline.Tech.Cuppy.Framework.cfdatageneratorutility _cfdatageneratorutility = null;
 public Punchline.Tech.Cuppy.Framework.cffileutility _cffileutility = null;
+public Punchline.Tech.Cuppy.Framework.cfstylemanager _cfstylemanager = null;
+public Punchline.Tech.Cuppy.Framework.cfcontrolsutils _cfcontrolsutils = null;
 public Punchline.Tech.Cuppy.Framework.cfmathutility _cfmathutility = null;
 public Punchline.Tech.Cuppy.Framework.cfdatatypeutility _cfdatatypeutility = null;
-public Punchline.Tech.Cuppy.Framework.cfdatageneratorutility _cfdatageneratorutility = null;
 public Punchline.Tech.Cuppy.Framework.cfapputility _cfapputility = null;
+public String  _addtoparent(anywheresoftware.b4j.objects.PaneWrapper.ConcretePaneWrapper _parent,int _left,int _top,int _width,int _height) throws Exception{
+ //BA.debugLineNum = 197;BA.debugLine="Public Sub AddToParent(Parent As Pane, Left As Int";
+ //BA.debugLineNum = 199;BA.debugLine="mBase.Initialize(\"mBase\")";
+_mbase.Initialize(ba,"mBase");
+ //BA.debugLineNum = 200;BA.debugLine="Parent.AddNode(mBase, Left, Top, Width, Height)";
+_parent.AddNode((javafx.scene.Node)(_mbase.getObject()),_left,_top,_width,_height);
+ //BA.debugLineNum = 202;BA.debugLine="End Sub";
+return "";
+}
 public String  _base_resize(double _width,double _height) throws Exception{
  //BA.debugLineNum = 81;BA.debugLine="Private Sub Base_Resize (Width As Double, Height A";
  //BA.debugLineNum = 83;BA.debugLine="CheckboxPane.PrefWidth = Width";
@@ -60,32 +69,32 @@ __c.CallSubDelayed3(ba,_mcallback,_meventname+"_Resize",(Object)(_width),(Object
 return "";
 }
 public String  _checkboxpane_mouseentered(anywheresoftware.b4j.objects.NodeWrapper.MouseEventWrapper _eventdata) throws Exception{
- //BA.debugLineNum = 212;BA.debugLine="Private Sub CheckboxPane_MouseEntered (EventData A";
- //BA.debugLineNum = 214;BA.debugLine="CallSubDelayed2(mCallBack, mEventName & \"_MouseEn";
+ //BA.debugLineNum = 220;BA.debugLine="Private Sub CheckboxPane_MouseEntered (EventData A";
+ //BA.debugLineNum = 222;BA.debugLine="CallSubDelayed2(mCallBack, mEventName & \"_MouseEn";
 __c.CallSubDelayed2(ba,_mcallback,_meventname+"_MouseEntered",(Object)(_eventdata));
- //BA.debugLineNum = 216;BA.debugLine="End Sub";
+ //BA.debugLineNum = 224;BA.debugLine="End Sub";
 return "";
 }
 public String  _checkboxpane_mouseexited(anywheresoftware.b4j.objects.NodeWrapper.MouseEventWrapper _eventdata) throws Exception{
- //BA.debugLineNum = 218;BA.debugLine="Private Sub CheckboxPane_MouseExited (EventData As";
- //BA.debugLineNum = 220;BA.debugLine="CallSubDelayed2(mCallBack, mEventName & \"_MouseEx";
+ //BA.debugLineNum = 226;BA.debugLine="Private Sub CheckboxPane_MouseExited (EventData As";
+ //BA.debugLineNum = 228;BA.debugLine="CallSubDelayed2(mCallBack, mEventName & \"_MouseEx";
 __c.CallSubDelayed2(ba,_mcallback,_meventname+"_MouseExited",(Object)(_eventdata));
- //BA.debugLineNum = 222;BA.debugLine="End Sub";
+ //BA.debugLineNum = 230;BA.debugLine="End Sub";
 return "";
 }
 public String  _checkboxpane_mousepressed(anywheresoftware.b4j.objects.NodeWrapper.MouseEventWrapper _eventdata) throws Exception{
- //BA.debugLineNum = 196;BA.debugLine="Private Sub CheckboxPane_MousePressed (EventData A";
- //BA.debugLineNum = 198;BA.debugLine="CheckboxPane.RequestFocus 'set focus";
+ //BA.debugLineNum = 204;BA.debugLine="Private Sub CheckboxPane_MousePressed (EventData A";
+ //BA.debugLineNum = 206;BA.debugLine="CheckboxPane.RequestFocus 'set focus";
 _checkboxpane.RequestFocus();
- //BA.debugLineNum = 200;BA.debugLine="If Not(Checked) Or IsIndeterminate Then";
+ //BA.debugLineNum = 208;BA.debugLine="If Not(Checked) Or IsIndeterminate Then";
 if (__c.Not(_checked()) || _isindeterminate()) { 
- //BA.debugLineNum = 202;BA.debugLine="SetCheckState(CHECKED_STATE)";
+ //BA.debugLineNum = 210;BA.debugLine="setCheckState(CHECKED_STATE)";
 _setcheckstate(_checked_state);
  }else {
- //BA.debugLineNum = 206;BA.debugLine="SetCheckState(UNCHECKED_STATE)";
+ //BA.debugLineNum = 214;BA.debugLine="setCheckState(UNCHECKED_STATE)";
 _setcheckstate(_unchecked_state);
  };
- //BA.debugLineNum = 210;BA.debugLine="End Sub";
+ //BA.debugLineNum = 218;BA.debugLine="End Sub";
 return "";
 }
 public boolean  _checked() throws Exception{
@@ -127,21 +136,21 @@ String _checkedstate = "";
 _mbase = _base;
  //BA.debugLineNum = 54;BA.debugLine="mBase.LoadLayout(\"CFMaterialCheckboxUI\")";
 _mbase.LoadLayout(ba,"CFMaterialCheckboxUI");
- //BA.debugLineNum = 56;BA.debugLine="SetBorder(CFStyleManager.DefaultTheme.Get(\"divide";
+ //BA.debugLineNum = 56;BA.debugLine="setBorder(CFStyleManager.DefaultTheme.Get(\"divide";
 _setborder(BA.ObjectToString(_cfstylemanager._defaulttheme.Get((Object)("divider"))),(int) (2));
- //BA.debugLineNum = 57;BA.debugLine="SetCheckedColor(CFStyleManager.DefaultTheme.Get(\"";
+ //BA.debugLineNum = 57;BA.debugLine="setCheckedColor(CFStyleManager.DefaultTheme.Get(\"";
 _setcheckedcolor(BA.ObjectToString(_cfstylemanager._defaulttheme.Get((Object)("primary"))));
  //BA.debugLineNum = 60;BA.debugLine="Dim checkedState As String = Props.Get(\"CheckedSt";
 _checkedstate = BA.ObjectToString(_props.Get((Object)("CheckedState")));
  //BA.debugLineNum = 64;BA.debugLine="If checkedState = \"UNCHECKED\" Then";
 if ((_checkedstate).equals("UNCHECKED")) { 
- //BA.debugLineNum = 66;BA.debugLine="SetCheckState(UNCHECKED_STATE)";
+ //BA.debugLineNum = 66;BA.debugLine="setCheckState(UNCHECKED_STATE)";
 _setcheckstate(_unchecked_state);
  }else if((_checkedstate).equals("CHECKED")) { 
- //BA.debugLineNum = 70;BA.debugLine="SetCheckState(CHECKED_STATE)";
+ //BA.debugLineNum = 70;BA.debugLine="setCheckState(CHECKED_STATE)";
 _setcheckstate(_checked_state);
  }else if((_checkedstate).equals("INDETERMINATE")) { 
- //BA.debugLineNum = 74;BA.debugLine="SetCheckState(INDETERMINATE_STATE)";
+ //BA.debugLineNum = 74;BA.debugLine="setCheckState(INDETERMINATE_STATE)";
 _setcheckstate(_indeterminate_state);
  };
  //BA.debugLineNum = 79;BA.debugLine="End Sub";
@@ -179,35 +188,35 @@ _cfcontrolsutils._removeeffect((anywheresoftware.b4j.objects.NodeWrapper.Concret
 return "";
 }
 public String  _setbg(String _color) throws Exception{
- //BA.debugLineNum = 101;BA.debugLine="Public Sub SetBg(color As String)";
+ //BA.debugLineNum = 101;BA.debugLine="Public Sub setBg(color As String)";
  //BA.debugLineNum = 103;BA.debugLine="CFControlsUtils.SetBG( CheckboxPane, color)";
 _cfcontrolsutils._setbg((anywheresoftware.b4j.objects.NodeWrapper.ConcreteNodeWrapper) anywheresoftware.b4a.AbsObjectWrapper.ConvertToWrapper(new anywheresoftware.b4j.objects.NodeWrapper.ConcreteNodeWrapper(), (javafx.scene.Node)(_checkboxpane.getObject())),_color);
  //BA.debugLineNum = 105;BA.debugLine="End Sub";
 return "";
 }
 public String  _setborder(String _color,int _width) throws Exception{
- //BA.debugLineNum = 113;BA.debugLine="Public Sub SetBorder(color As String , width As In";
+ //BA.debugLineNum = 113;BA.debugLine="Public Sub setBorder(color As String , width As In";
  //BA.debugLineNum = 115;BA.debugLine="CFControlsUtils.SetBorder(CheckboxPane, color, wi";
 _cfcontrolsutils._setborder((anywheresoftware.b4j.objects.NodeWrapper.ConcreteNodeWrapper) anywheresoftware.b4a.AbsObjectWrapper.ConvertToWrapper(new anywheresoftware.b4j.objects.NodeWrapper.ConcreteNodeWrapper(), (javafx.scene.Node)(_checkboxpane.getObject())),_color,_width);
  //BA.debugLineNum = 117;BA.debugLine="End Sub";
 return "";
 }
 public String  _setborderradius(int _radius) throws Exception{
- //BA.debugLineNum = 119;BA.debugLine="Public Sub SetBorderRadius(radius As Int)";
+ //BA.debugLineNum = 119;BA.debugLine="Public Sub setBorderRadius(radius As Int)";
  //BA.debugLineNum = 121;BA.debugLine="CFControlsUtils.SetBorderRadius(CheckboxPane, rad";
 _cfcontrolsutils._setborderradius((anywheresoftware.b4j.objects.NodeWrapper.ConcreteNodeWrapper) anywheresoftware.b4a.AbsObjectWrapper.ConvertToWrapper(new anywheresoftware.b4j.objects.NodeWrapper.ConcreteNodeWrapper(), (javafx.scene.Node)(_checkboxpane.getObject())),_radius);
  //BA.debugLineNum = 123;BA.debugLine="End Sub";
 return "";
 }
 public String  _setcheckedcolor(String _color) throws Exception{
- //BA.debugLineNum = 139;BA.debugLine="Public Sub SetCheckedColor(color As String)";
+ //BA.debugLineNum = 139;BA.debugLine="Public Sub setCheckedColor(color As String)";
  //BA.debugLineNum = 141;BA.debugLine="CFControlsUtils.setBG(CheckedLabel, color)";
 _cfcontrolsutils._setbg((anywheresoftware.b4j.objects.NodeWrapper.ConcreteNodeWrapper) anywheresoftware.b4a.AbsObjectWrapper.ConvertToWrapper(new anywheresoftware.b4j.objects.NodeWrapper.ConcreteNodeWrapper(), (javafx.scene.Node)(_checkedlabel.getObject())),_color);
  //BA.debugLineNum = 143;BA.debugLine="End Sub";
 return "";
 }
 public String  _setcheckstate(int _value) throws Exception{
- //BA.debugLineNum = 145;BA.debugLine="Public Sub SetCheckState(value As Int)";
+ //BA.debugLineNum = 145;BA.debugLine="Public Sub setCheckState(value As Int)";
  //BA.debugLineNum = 147;BA.debugLine="If value = UNCHECKED_STATE Then";
 if (_value==_unchecked_state) { 
  //BA.debugLineNum = 149;BA.debugLine="CheckedLabel.Visible = False";
@@ -237,14 +246,14 @@ _firsttime = __c.True;
 return "";
 }
 public String  _seteffect(String _effect) throws Exception{
- //BA.debugLineNum = 125;BA.debugLine="Public Sub SetEffect(effect As String)";
+ //BA.debugLineNum = 125;BA.debugLine="Public Sub setEffect(effect As String)";
  //BA.debugLineNum = 127;BA.debugLine="CFControlsUtils.SetEffect(CheckboxPane, effect)";
 _cfcontrolsutils._seteffect((anywheresoftware.b4j.objects.NodeWrapper.ConcreteNodeWrapper) anywheresoftware.b4a.AbsObjectWrapper.ConvertToWrapper(new anywheresoftware.b4j.objects.NodeWrapper.ConcreteNodeWrapper(), (javafx.scene.Node)(_checkboxpane.getObject())),_effect);
  //BA.debugLineNum = 129;BA.debugLine="End Sub";
 return "";
 }
 public String  _seticon(int _iconcode) throws Exception{
- //BA.debugLineNum = 190;BA.debugLine="Public Sub SetIcon(iconCode As Int)";
+ //BA.debugLineNum = 190;BA.debugLine="Public Sub setIcon(iconCode As Int)";
  //BA.debugLineNum = 192;BA.debugLine="CheckedLabel.Text = Chr(iconCode)";
 _checkedlabel.setText(BA.ObjectToString(__c.Chr(_iconcode)));
  //BA.debugLineNum = 194;BA.debugLine="End Sub";
