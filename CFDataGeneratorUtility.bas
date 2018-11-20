@@ -5,7 +5,7 @@ Type=StaticCode
 Version=6.3
 @EndOfDesignText@
 'This contains functions that are useful for Generating Random Data
-Sub Process_Globals
+Private Sub Process_Globals
 	Private fx As JFX
 End Sub
  
@@ -14,7 +14,7 @@ End Sub
 'Generates a random human name...
 'List of Names is
 'FROM: https://gist.github.com/subodhghulaxe/8148971
-Public Sub Rand_Human_Name() As String
+Public Sub Rand_Human_Name As String
 
 	Dim names As List
 	names.Initialize
@@ -1027,7 +1027,7 @@ Public Sub Rand_Human_Name() As String
 End Sub
 
 'Generates a random human full name
-Public Sub Rand_FullName() As String
+Public Sub Rand_Full_Name As String
 	
 	Return Rand_Human_Name & " " & Rand_Human_Name
 	
@@ -1039,7 +1039,7 @@ End Sub
 
 'Generates a random human Gender and Types
 'between MALE or FEMALE only!
-Public Sub Rand_Gender() As String
+Public Sub Rand_Gender As String
 	
 	Dim Genders As List
 	Genders.Initialize
@@ -1215,7 +1215,7 @@ End Sub
  
 'Generates a random Gender Type 
 'Refer to fullGenderTypesList() 
-Public Sub Rand_Gender_Type() As String
+Public Sub Rand_Gender_Type As String
 	 
 	Return CFStringUtility.RandListValue(GenderTypesList)
 	
@@ -1267,7 +1267,7 @@ End Sub
 'Generates a random dummy text (lorem ispum)
 'ParagraphCount =   Is the number of paragraphs to generate
 'Alias of lorem_ispum()
-Public Sub Rand_DummyText(ParagraphCount  As Int) As String
+Public Sub Rand_Dummy_Text(ParagraphCount  As Int) As String
  
  Return Rand_Lorem_Ispum(ParagraphCount)
  
@@ -1308,7 +1308,7 @@ End Sub
 'withNumeric = should gmail contain suffixed numbers
 'EG demo_20@yahoo.com
 'Quick shortcut Alias of rand_email()
-Public Sub Rand_YahooMail(withNumeric As Boolean) As String
+Public Sub Rand_Yahoo_Mail(withNumeric As Boolean) As String
 	 
 	Return Rand_Email("yahoo.com", withNumeric)
 	
@@ -1321,7 +1321,7 @@ End Sub
 'CountryCode = the Country Code to use without the + ; for example,
 'Nigeria is 234, USA is 1 and Indian is 91
 'length = This is how long should the remaining part of the number be
-Public Sub Rand_PhoneNumber(CountryCode As Int , length As Int) As String
+Public Sub Rand_Phone_Number(CountryCode As Int , length As Int) As String
 	
 	Return "+" & CountryCode & CFStringUtility.generatePinCode(length)
 	 
@@ -1335,7 +1335,7 @@ End Sub
 '<code> 'Example: would output something like; +2348174795280
 'log(CF_DataGeneratorUtility.rand_phoneNumber2(234, 817, 7))
 '</code>
-Public Sub Rand_PhoneNumber2(CountryCode As Int , startsWith As Int, length As Int) As String
+Public Sub Rand_Phone_Number2(CountryCode As Int , startsWith As Int, length As Int) As String
 	
 	Return "+" & CountryCode & startsWith & CFStringUtility.generatePinCode(length)
 	 
@@ -1346,7 +1346,7 @@ End Sub
 #Region Random True or False Value 
 
 'Generates a random True or False Value
-Public Sub Rand_TrueorFalse() As Boolean
+Public Sub Rand_True_Or_False As Boolean
 	 
 	If Rnd( Rnd(1, 5), Rnd(6, 10))  < 6 Then
 		
@@ -1361,17 +1361,17 @@ Public Sub Rand_TrueorFalse() As Boolean
 End Sub
 
 'Generates a random True or False Value
-'Alias of rand_TrueorFalse()
-Public Sub Rand_BooleanValue() As Boolean
+'Alias of Rand_True_Or_False()
+Public Sub Rand_Boolean_Value As Boolean
 	 
-	Return Rand_TrueorFalse
+	Return Rand_True_Or_False
 	 
 End Sub
 
 #End Region
  
 'Generates a random IP address
-Public Sub Rand_IpAddress() As String
+Public Sub Rand_Ip_Address As String
 	 
 	Return  Rnd(190, 230) & "." & Rnd(13, 200) & "." & Rnd(50, 200) & "." & Rnd(75, 200)
 	
@@ -1440,3 +1440,55 @@ End Sub
 
 #End Region
  
+'Generates a random home address
+'using a street address format
+Public Sub Rand_Home_Address As String
+	 
+	Return  $"${Rnd(1, 999)} ${Rand_Human_Name} Street"$
+	
+End Sub
+
+'Generates a random home address
+'using an Estate house address format
+Public Sub Rand_Home_Address2 As String
+	 
+	Return  $"Block ${Rnd(1, 130)} flat ${Rnd(1, 10)}, ${Rand_Human_Name} Estate"$
+	
+End Sub
+  
+'Generates a random company name
+Public Sub Rand_Company_Name As String
+	 
+	Dim values As List
+	values.Initialize
+	
+	values.AddAll(Array("Technologies", "& Sons","Clothings","Softwares","Enterprises"))
+	values.AddAll(Array("Industries","System","Inc","Motors","& Co.", "Foods","Properties"))
+	values.AddAll(Array("Brands","Digital","Logistics","Holdings","Labs"))
+	
+	Return  Rand_Human_Name & " " & CFStringUtility.RandListValue(values)
+	
+End Sub
+ 
+'Generates a random job Occupation
+Public Sub Rand_Occupation As String
+	 
+	Dim values As List
+	values.Initialize
+	
+	values.AddAll(Array("Cleaner", "Make-up artist","Cashier","Banker","Manager"))
+	values.AddAll(Array("Dentist","Doctor","Teacher","Web Developer","Lawyer", "Assistant","Sales man"))
+	values.AddAll(Array("Graphics Designer","Digital Marketer","Musician","Blogger","Bartender"))
+	
+	Return  Rand_Human_Name & " " & CFStringUtility.RandListValue(values)
+	
+End Sub
+
+'Generates a random job title
+Public Sub Rand_Job_Title As String
+	  
+	Return Rand_Occupation
+	
+End Sub
+	
+	

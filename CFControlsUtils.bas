@@ -86,10 +86,7 @@ Public Sub GetBorderRadius(controlObj As Node) As Int
 	Return CSSUtils.GetStyleProperty(controlObj, "-fx-border-radius")
 	
 End Sub
-
-
-
-
+ 
 'Set additional effects applied to the Control
 Public Sub SetEffect(controlObj As Node, effect As String)
 	 
@@ -125,12 +122,8 @@ Public Sub GetTextColor(controlObj As Node) As String
 	Return CSSUtils.GetStyleProperty(controlObj, "-fx-text-fill")
 	 
 End Sub
-
-
-
-
-
-
+ 
+ 
  #Region Add/remove Tooltip
  
 'Add tooltip to an Image View
