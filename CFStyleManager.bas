@@ -29,7 +29,7 @@ Private Sub Process_Globals
 	Public const FONT_LIGHT As Font = SelectFont("Light", 12)
 	Public const FONT_LIGHT_ITALIC As Font = SelectFont("LightItalic", 12)
 	
-	Public const FONT_REGULAR_FONT, DEFAULT As Font = SelectFont("Regular", 12)
+	Public const FONT_REGULAR_FONT As Font = SelectFont("Regular", 12)
 	Public const FONT_ITALIC As Font = SelectFont("Italic", 12)
 	 
 	Public const FONT_MEDIUM As Font = SelectFont("Medium", 12)
@@ -42,18 +42,18 @@ Private Sub Process_Globals
 	 
  #Region Available Themes
   
-	Public const BLUE_THEME As String = "Blue"
-	Public const TEAL_THEME As String = "Teal"
+	Public const THEME_BLUE As String = "Blue"
+	Public const THEME_TEAL As String = "Teal"
 	
 	#If Full
  
 	'Remove from Library if Free version
 	
-	Public const GRAY_THEME As String = "Gray"
-	Public const DARK_THEME As String = "Dark"
-	Public const Purple_THEME As String = "Purple"
-	Public const Pink_THEME As String = "Pink"
-	Public const Amber_THEME As String = "Amber"
+	Public const THEME_GRAY As String = "Gray"
+	Public const THEME_DARK As String = "Dark"
+	Public const THEME_Purple As String = "Purple"
+	Public const THEME_Pink As String = "Pink"
+	Public const THEME_Amber As String = "Amber"
 	
 	#End If
 

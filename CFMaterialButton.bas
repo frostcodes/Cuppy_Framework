@@ -40,7 +40,7 @@ Public Sub DesignerCreateView (Base As Pane, Lbl As Label, Props As Map)
 	mBase.LoadLayout("CFMaterialButtonUI")
 	'set using theme...
 	setBg(CFStyleManager.DefaultTheme.Get("accent"))
-	InnerButton.Font = CFStyleManager.DEFAULT_FONT
+	InnerButton.Font = CFStyleManager.FONT_REGULAR_FONT
 	InnerButton.MouseCursor = fx.Cursors.HAND
 	
 	setText(Props.Get("Text"))

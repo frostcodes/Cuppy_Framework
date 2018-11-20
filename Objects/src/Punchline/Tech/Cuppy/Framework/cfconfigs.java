@@ -50,17 +50,17 @@ if (true) return anywheresoftware.b4a.keywords.Common.File.GetUri(anywheresoftwa
 return "";
 }
 public static boolean  _isfreeversion() throws Exception{
- //BA.debugLineNum = 45;BA.debugLine="Public Sub IsFreeVersion As Boolean";
- //BA.debugLineNum = 47;BA.debugLine="Return True";
-if (true) return anywheresoftware.b4a.keywords.Common.True;
- //BA.debugLineNum = 49;BA.debugLine="End Sub";
+ //BA.debugLineNum = 29;BA.debugLine="Public Sub IsFreeVersion As Boolean";
+ //BA.debugLineNum = 31;BA.debugLine="Return False";
+if (true) return anywheresoftware.b4a.keywords.Common.False;
+ //BA.debugLineNum = 33;BA.debugLine="End Sub";
 return false;
 }
 public static boolean  _isfullversion() throws Exception{
- //BA.debugLineNum = 52;BA.debugLine="Public Sub IsFullVersion As Boolean";
- //BA.debugLineNum = 54;BA.debugLine="Return False";
-if (true) return anywheresoftware.b4a.keywords.Common.False;
- //BA.debugLineNum = 56;BA.debugLine="End Sub";
+ //BA.debugLineNum = 36;BA.debugLine="Public Sub IsFullVersion As Boolean";
+ //BA.debugLineNum = 38;BA.debugLine="Return True";
+if (true) return anywheresoftware.b4a.keywords.Common.True;
+ //BA.debugLineNum = 40;BA.debugLine="End Sub";
 return false;
 }
 public static String  _process_globals() throws Exception{
