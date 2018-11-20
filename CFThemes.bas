@@ -6,7 +6,7 @@ Version=5.51
 @EndOfDesignText@
 'Cascading styles and theming for Material UI
 'This defines all the themes available 
-Sub Class_Globals
+Private Sub Class_Globals
 	 
 End Sub
 

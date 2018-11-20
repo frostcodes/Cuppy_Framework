@@ -8,64 +8,27 @@ Version=5.51
 Private Sub Process_Globals
 	Private fx As JFX
 End Sub
-
-'Rotate a Control
-Public Sub setRotation(controlObj As Node, Angle As Float)
+ 
+'Set the Rotation a Control
+Public Sub SetRotation(controlObj As Node, Angle As Float)
 	
 	CSSUtils.SetStyleProperty(controlObj, "-fx-rotate", Angle)
 	
 End Sub
   
-'Set a Control Border color and width
-Public Sub setBorder(controlObj As Node, color As String , width As Int)
+'Get the Rotation a Control
+Public Sub GetRotation(controlObj As Node) As Float
 	
-	CSSUtils.SetStyleProperty( controlObj, "-fx-border-color", color)
-	CSSUtils.SetStyleProperty (controlObj, "-fx-border-width", width)
-	
-End Sub
- 
-'Set a Control Border radiusNode
-Public Sub setBorderRadius(controlObj As Node, radius As Int)
-	 
-	CSSUtils.SetStyleProperty(controlObj, "-fx-border-radius", radius)
+	Return CSSUtils.GetStyleProperty(controlObj, "-fx-rotate")
 	
 End Sub
 
-'Set a Control effect
-Public Sub setEffect(controlObj As Node, effect As String)
-	 
-	CSSUtils.SetStyleProperty(controlObj, "-fx-effect" , effect)
-	 
-End Sub
-
-'Removes a Control effect
-Public Sub RemoveEffect(controlObj As Node)
-	 
-	CSSUtils.SetStyleProperty(controlObj, "-fx-effect" ,  "none")
-	 
-End Sub
- 
 'Sets a Control Background color
-Public Sub setBG(controlObj As Node, color As String)
+Public Sub SetBG(controlObj As Node, color As String)
 	 
 	CSSUtils.SetStyleProperty( controlObj, "-fx-background-color", color)
 	 
 End Sub
-
-'Sets a Control text color if supported like a label 
-Public Sub setTextColor(controlObj As Node, color As String)
-	
-	CSSUtils.SetStyleProperty(controlObj,"-fx-text-fill",  color)
-	 
-End Sub
-
-
-
-
-
-'TODO : make get for all the above...
-
- 
 
 'Get a Control Background color
 Public Sub GetBG(controlObj As Node) As String
@@ -73,6 +36,100 @@ Public Sub GetBG(controlObj As Node) As String
 	Return CSSUtils.GetStyleProperty(controlObj, "-fx-background-color")
 	 
 End Sub
+  
+'Set a Control Border color
+Public Sub SetBorderColor(controlObj As Node, color As String)
+	
+	CSSUtils.SetStyleProperty( controlObj, "-fx-border-color", color)
+	
+End Sub
+ 
+'Get a Control Border color
+Public Sub GetBorderColor(controlObj As Node) As String
+	
+	Return CSSUtils.GetStyleProperty( controlObj, "-fx-border-color")
+	
+End Sub
+ 
+'Set a Control Border width
+Public Sub SetBorderWidth(controlObj As Node, width As Int)
+	
+	CSSUtils.SetStyleProperty (controlObj, "-fx-border-width", width)
+	
+End Sub
+ 
+'Get a Control Border width
+Public Sub GetBorderWidth(controlObj As Node) As Int
+	
+	Return CSSUtils.GetStyleProperty (controlObj, "-fx-border-width")
+	
+End Sub
+  
+'Set a Control Border color and width
+Public Sub SetBorder(controlObj As Node, color As String , width As Int)
+	
+	SetBorderColor( controlObj, color)
+	SetBorderWidth(controlObj, width)
+	
+End Sub
+  
+'Set a Control Border radius
+Public Sub SetBorderRadius(controlObj As Node, radius As Int)
+	 
+	CSSUtils.SetStyleProperty(controlObj, "-fx-border-radius", radius)
+	
+End Sub
+
+'Get a Control Border radius
+Public Sub GetBorderRadius(controlObj As Node) As Int
+	 
+	Return CSSUtils.GetStyleProperty(controlObj, "-fx-border-radius")
+	
+End Sub
+
+
+
+
+'Set additional effects applied to the Control
+Public Sub SetEffect(controlObj As Node, effect As String)
+	 
+	CSSUtils.SetStyleProperty(controlObj, "-fx-effect" , effect)
+	 
+End Sub
+
+'Get the additional effects applied to the Control
+Public Sub GetEffect(controlObj As Node) As String
+	 
+	Return CSSUtils.GetStyleProperty(controlObj, "-fx-effect")
+	 
+End Sub
+
+'Removes additional effects applied to the Control
+Public Sub RemoveEffect(controlObj As Node)
+	 
+	CSSUtils.SetStyleProperty(controlObj, "-fx-effect" ,  "none")
+	 
+End Sub
+ 
+
+'Sets a Control text color if supported like a label 
+Public Sub SetTextColor(controlObj As Node, color As String)
+	
+	CSSUtils.SetStyleProperty(controlObj, "-fx-text-fill",  color)
+	 
+End Sub
+ 
+'Gets a Control text color if supported like a label 
+Public Sub GetTextColor(controlObj As Node) As String
+	
+	Return CSSUtils.GetStyleProperty(controlObj, "-fx-text-fill")
+	 
+End Sub
+
+
+
+
+
 
  #Region Add/remove Tooltip
  

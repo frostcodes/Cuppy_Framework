@@ -7,7 +7,6 @@ Version=5.51
 'This contains codes that are for the app object
 Sub Process_Globals
 	Private fx As JFX
-	
 End Sub
  
 'Return the current Package Name

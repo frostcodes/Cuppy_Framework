@@ -12,11 +12,12 @@ Private Sub Process_Globals
 	Private AvailableThemes As CFThemes
 	AvailableThemes.Initialize 'ignore
 	
-	Public DefaultTheme As Map = AvailableThemes.ThemesList.Get(BLUE_THEME) 'ignore
+	Public DefaultTheme As Map = AvailableThemes.ThemesList.Get(THEME_BLUE) 'ignore
 	
 '	Public ActiveControls As List
 '	ActiveControls.Initialize 'ignore : need this , bad pratice maybe so would find a fix later
 '	 
+
 	 
 #Region Available Fonts
 	  
@@ -51,9 +52,9 @@ Private Sub Process_Globals
 	
 	Public const THEME_GRAY As String = "Gray"
 	Public const THEME_DARK As String = "Dark"
-	Public const THEME_Purple As String = "Purple"
-	Public const THEME_Pink As String = "Pink"
-	Public const THEME_Amber As String = "Amber"
+	Public const THEME_PURPLE As String = "Purple"
+	Public const THEME_PINK As String = "Pink"
+	Public const THEME_AMBER As String = "Amber"
 	
 	#End If
 
@@ -124,8 +125,8 @@ Public Sub SelectTheme(Theme As String)
 	'Advice developers to donate to have access to all themes
   
 	LogDebug($"To have access to all the inbuilt themes,
-	You need to donate! Donation link: ${CRLF}
-	${CFConfigs.DonationLink}"$)
+You need to donate! Donation link: ${CRLF}
+${CFConfigs.DonationLink}"$)
   
 #End if
   
@@ -157,10 +158,6 @@ End Sub
 ' required key values are present
 Public Sub LoadThemeFile(Dir As String, FileName As String) As Map
 	
-	'TODO: dynamic caching of themes and fonts when loaded
-	'such that they would be in memory and returned when dev
-	'tries to reload this way, memory is saved
-	 
 	Dim mapx As Map = File.ReadMap(Dir ,FileName)
 	
 	Dim checklist As List
