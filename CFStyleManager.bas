@@ -15,13 +15,35 @@ Private Sub Process_Globals
 	Public ActiveControls As List
 	ActiveControls.Initialize 'ignore : need this , bad pratice maybe so would find a fix later
 	 
+	 
+	 #Region Fonts
+	 
+	Public const BLACK_FONT As Font = SelectFont("Black", 12)
+	Public const BLACK_ITALIC_FONT As Font = SelectFont("BlackItalic", 12)
+	
+	Public const BOLD_FONT As Font = SelectFont("Bold", 12)
+	Public const BOLD_ITALIC_FONT As Font = SelectFont("BoldItalic", 12)
+	 
+	Public const LIGHT_FONT As Font = SelectFont("Light", 12)
+	Public const LIGHT_ITALIC_FONT As Font = SelectFont("LightItalic", 12)
+	
+	Public const REGULAR_FONT As Font = SelectFont("Regular", 12)
+	Public const ITALIC_FONT As Font = SelectFont("Italic", 12)
+	 
+	Public const MEDIUM_FONT As Font = SelectFont("Medium", 12)
+	Public const MEDIUM_ITALIC_FONT As Font = SelectFont("MediumItalic", 12)
+	 
+	Public const THIN_FONT As Font = SelectFont("Thin", 12)
+	Public const THIN_ITALIC_FONT As Font = SelectFont("ThinItalic", 12)
+	 
+	 #End Region
 	  
 	'Reference cuppy controls so it can be updated all when the style changes
 	'allow setting of animation time...
 End Sub
 
  'Return a list of available fonts for use
- Public Sub FontTypes As Map
+ Private Sub FontTypes As Map
  	
 	Dim FTypes As Map
 	FTypes.Initialize
@@ -50,9 +72,23 @@ End Sub
 
 'Returns an instance of a font that can be reused
 Public Sub SelectFont(fontName As String,  FontSize As Double ) As Font
-	 
+	  
 	Return fx.LoadFont(File.DirAssets , FontTypes.Get(fontName), FontSize)
 	
+End Sub
+
+'Create a new font object from an existing font
+Public Sub ScaleFont(FamilyName As String,Size As Double) As Font
+	
+	Return fx.CreateFont(FamilyName, Size, False, False)
+	 
+End Sub
+
+'Create a new font object from an existing font
+Public Sub ScaleFont2(FamilyName As String,Size As Double, Bold As Boolean, Italic As Boolean) As Font
+	
+	Return fx.CreateFont(FamilyName , Size, Bold, Italic)
+	 
 End Sub
  
 'Changes the Default Theme used by Cuppy Framework
@@ -101,8 +137,8 @@ End Sub
 Public Sub LoadThemeFile(Dir As String, FileName As String) As Map
 	
 	'TODO: dynamic caching of themes and fonts when loaded
-	'such that they would be in memomery and returned when dev
-	'tries to reload this way, memory is safed
+	'such that they would be in memory and returned when dev
+	'tries to reload this way, memory is saved
 	 
 	Dim mapx As Map = File.ReadMap(Dir ,FileName)
 	
