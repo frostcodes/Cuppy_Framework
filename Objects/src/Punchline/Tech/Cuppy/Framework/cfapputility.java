@@ -22,17 +22,17 @@ static {
 	}
 
  public static anywheresoftware.b4a.keywords.Common __c = null;
-public static anywheresoftware.b4j.objects.JFX _vvvvvvvvvvvvvvvvvvv7 = null;
-public static b4j.example.cssutils _vvvvvvvvvvvvvvvvvvvv3 = null;
-public static Punchline.Tech.Cuppy.Framework.cfconfigs _vvvvvvvvvvvvvvvvvvvv4 = null;
-public static Punchline.Tech.Cuppy.Framework.cfstringutility _vvvvvvvvvvvvvvvvvvvv5 = null;
-public static Punchline.Tech.Cuppy.Framework.cfdatageneratorutility _vvvvvvvvvvvvvvvvvvvv6 = null;
-public static Punchline.Tech.Cuppy.Framework.cffileutility _vvvvvvvvvvvvvvvvvvvv7 = null;
-public static Punchline.Tech.Cuppy.Framework.cfstylemanager _vvvvvvvvvvvvvvvvvvvv0 = null;
-public static Punchline.Tech.Cuppy.Framework.cfcontrolsutils _vvvvvvvvvvvvvvvvvvvvv1 = null;
-public static Punchline.Tech.Cuppy.Framework.cfmathutility _vvvvvvvvvvvvvvvvvvvvv3 = null;
-public static Punchline.Tech.Cuppy.Framework.cfdatatypeutility _vvvvvvvvvvvvvvvvvvvvv4 = null;
-public static String  _vvvvvvvvvvvvvvvvv1(Object _module) throws Exception{
+public static anywheresoftware.b4j.objects.JFX _vvvvvvvvvvvvvvvvvvv1 = null;
+public static b4j.example.cssutils _vvvvvvvvvvvvvvvvvvv5 = null;
+public static Punchline.Tech.Cuppy.Framework.cfconfigs _vvvvvvvvvvvvvvvvvvv6 = null;
+public static Punchline.Tech.Cuppy.Framework.cfstringutility _vvvvvvvvvvvvvvvvvvv7 = null;
+public static Punchline.Tech.Cuppy.Framework.cfdatageneratorutility _vvvvvvvvvvvvvvvvvvv0 = null;
+public static Punchline.Tech.Cuppy.Framework.cffileutility _vvvvvvvvvvvvvvvvvvvv1 = null;
+public static Punchline.Tech.Cuppy.Framework.cfstylemanager _vvvvvvvvvvvvvvvvvvvv2 = null;
+public static Punchline.Tech.Cuppy.Framework.cfcontrolsutils _vvvvvvvvvvvvvvvvvvvv3 = null;
+public static Punchline.Tech.Cuppy.Framework.cfmathutility _vvvvvvvvvvvvvvvvvvvv5 = null;
+public static Punchline.Tech.Cuppy.Framework.cfdatatypeutility _vvvvvvvvvvvvvvvvvvvv6 = null;
+public static String  _vvvvvvvvvvvvvvvv3(Object _module) throws Exception{
 anywheresoftware.b4j.object.JavaObject _modjo = null;
 String _mostr = "";
  //BA.debugLineNum = 8;BA.debugLine="Public Sub GetPackageName(Module As Object) As Str";
@@ -49,7 +49,7 @@ return "";
 public static String  _process_globals() throws Exception{
  //BA.debugLineNum = 2;BA.debugLine="Sub Process_Globals";
  //BA.debugLineNum = 3;BA.debugLine="Private fx As JFX";
-_vvvvvvvvvvvvvvvvvvv7 = new anywheresoftware.b4j.objects.JFX();
+_vvvvvvvvvvvvvvvvvvv1 = new anywheresoftware.b4j.objects.JFX();
  //BA.debugLineNum = 4;BA.debugLine="End Sub";
 return "";
 }

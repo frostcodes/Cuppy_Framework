@@ -4,11 +4,11 @@ ModulesStructureVersion=1
 Type=StaticCode
 Version=5.51
 @EndOfDesignText@
-'This file contain math related functions
-Sub Process_Globals
+'This contain math related functions
+Private Sub Process_Globals
 
 	'Real  Exponential equavalent :  2.7182818284590452354
-	Public Exponential_Equivalent As Double = 2.718281828459045 
+	Public EXPONENTIAL_EQUIVALENT As Double = 2.718281828459045 
 	
 	Public NEGATIVE_INFINITY As String = "-Infinity"
 	Public POSITIVE_INFINITY As String = "Infinity"
@@ -32,21 +32,21 @@ End Sub
 'Inverse hyperbolic cosine
 Public Sub Acosh (arg As Double) As Double
 	
-	Return Logarithm(arg  + Sqrt(arg * arg - 1) , Exponential_Equivalent)
+	Return Logarithm(arg  + Sqrt(arg * arg - 1) , EXPONENTIAL_EQUIVALENT)
 	 
 End Sub
 
 'Inverse hyperbolic sine
 Public Sub Asinh (arg As Double) As Double
 	
-	Return Logarithm(arg  + Sqrt(arg * arg + 1) , Exponential_Equivalent)
+	Return Logarithm(arg  + Sqrt(arg * arg + 1) , EXPONENTIAL_EQUIVALENT)
 	 
 End Sub
 
 'Inverse hyperbolic tangent
 Public Sub Atanh (arg As Double) As Double
 	 
-	Return 0.5 * Logarithm((1 + arg) / (1 - arg) , Exponential_Equivalent )
+	Return 0.5 * Logarithm((1 + arg) / (1 - arg) , EXPONENTIAL_EQUIVALENT )
 	 
 End Sub
 
@@ -151,7 +151,7 @@ End Sub
 'Returns e raised to the power of arg
 Public Sub Exp(arg As Double) As Double
 	
-	Return Power(Exponential_Equivalent, arg)
+	Return Power(EXPONENTIAL_EQUIVALENT, arg)
 	
 End Sub
 

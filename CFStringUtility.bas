@@ -4,8 +4,7 @@ ModulesStructureVersion=1
 Type=StaticCode
 Version=5.51
 @EndOfDesignText@
-'This file contain Utility sub/functions for string manipulation 
-
+'This contain Utilies for string manipulation 
 Private Sub Process_Globals
 	Private fx As JFX
 End Sub
@@ -1083,6 +1082,4 @@ Public Sub Plurify(text As String, count As Int, suffix As String) As String
 	End If
 	
 End Sub
-
-
 

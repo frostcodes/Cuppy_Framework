@@ -22,16 +22,16 @@ static {
 	}
 
  public static anywheresoftware.b4a.keywords.Common __c = null;
-public static anywheresoftware.b4j.objects.JFX _vvvvvvvvvvvvvvvvvvv7 = null;
-public static b4j.example.cssutils _vvvvvvvvvvvvvvvvvvvv3 = null;
-public static Punchline.Tech.Cuppy.Framework.cfconfigs _vvvvvvvvvvvvvvvvvvvv4 = null;
-public static Punchline.Tech.Cuppy.Framework.cfstringutility _vvvvvvvvvvvvvvvvvvvv5 = null;
-public static Punchline.Tech.Cuppy.Framework.cfdatageneratorutility _vvvvvvvvvvvvvvvvvvvv6 = null;
-public static Punchline.Tech.Cuppy.Framework.cfstylemanager _vvvvvvvvvvvvvvvvvvvv0 = null;
-public static Punchline.Tech.Cuppy.Framework.cfcontrolsutils _vvvvvvvvvvvvvvvvvvvvv1 = null;
-public static Punchline.Tech.Cuppy.Framework.cfmathutility _vvvvvvvvvvvvvvvvvvvvv3 = null;
-public static Punchline.Tech.Cuppy.Framework.cfdatatypeutility _vvvvvvvvvvvvvvvvvvvvv4 = null;
-public static Punchline.Tech.Cuppy.Framework.cfapputility _vvvvvvvvvvvvvvvvvvvvv5 = null;
+public static anywheresoftware.b4j.objects.JFX _vvvvvvvvvvvvvvvvvvv1 = null;
+public static b4j.example.cssutils _vvvvvvvvvvvvvvvvvvv5 = null;
+public static Punchline.Tech.Cuppy.Framework.cfconfigs _vvvvvvvvvvvvvvvvvvv6 = null;
+public static Punchline.Tech.Cuppy.Framework.cfstringutility _vvvvvvvvvvvvvvvvvvv7 = null;
+public static Punchline.Tech.Cuppy.Framework.cfdatageneratorutility _vvvvvvvvvvvvvvvvvvv0 = null;
+public static Punchline.Tech.Cuppy.Framework.cfstylemanager _vvvvvvvvvvvvvvvvvvvv2 = null;
+public static Punchline.Tech.Cuppy.Framework.cfcontrolsutils _vvvvvvvvvvvvvvvvvvvv3 = null;
+public static Punchline.Tech.Cuppy.Framework.cfmathutility _vvvvvvvvvvvvvvvvvvvv5 = null;
+public static Punchline.Tech.Cuppy.Framework.cfdatatypeutility _vvvvvvvvvvvvvvvvvvvv6 = null;
+public static Punchline.Tech.Cuppy.Framework.cfapputility _vvvvvvvvvvvvvvvvvvvv7 = null;
 public static String  _vvvvvvvv5(String _dir,String _filename,byte[] _data) throws Exception{
 anywheresoftware.b4a.objects.streams.File.OutputStreamWrapper _out = null;
  //BA.debugLineNum = 94;BA.debugLine="Public Sub BytesToFile (Dir As String, FileName As";
@@ -71,7 +71,7 @@ _files = new anywheresoftware.b4a.objects.collections.List();
  //BA.debugLineNum = 62;BA.debugLine="files.Initialize";
 _files.Initialize();
  //BA.debugLineNum = 64;BA.debugLine="dir = CFStringUtility.Trim_Slashes_Once(dir)";
-_dir = _vvvvvvvvvvvvvvvvvvvv5._trim_slashes_once(_dir);
+_dir = _vvvvvvvvvvvvvvvvvvv7._trim_slashes_once(_dir);
  //BA.debugLineNum = 66;BA.debugLine="For Each filename As String In File.ListFiles(dir";
 {
 final anywheresoftware.b4a.BA.IterableList group4 = anywheresoftware.b4a.keywords.Common.File.ListFiles(_dir);
@@ -151,7 +151,7 @@ return "";
 public static String  _process_globals() throws Exception{
  //BA.debugLineNum = 3;BA.debugLine="Private Sub Process_Globals";
  //BA.debugLineNum = 5;BA.debugLine="Private fx As JFX";
-_vvvvvvvvvvvvvvvvvvv7 = new anywheresoftware.b4j.objects.JFX();
+_vvvvvvvvvvvvvvvvvvv1 = new anywheresoftware.b4j.objects.JFX();
  //BA.debugLineNum = 7;BA.debugLine="End Sub";
 return "";
 }
@@ -162,7 +162,7 @@ String _filename = "";
  //BA.debugLineNum = 21;BA.debugLine="Dim total As Long";
 _total = 0L;
  //BA.debugLineNum = 22;BA.debugLine="dir = CFStringUtility.Trim_Slashes_Once(dir)";
-_dir = _vvvvvvvvvvvvvvvvvvvv5._trim_slashes_once(_dir);
+_dir = _vvvvvvvvvvvvvvvvvvv7._trim_slashes_once(_dir);
  //BA.debugLineNum = 24;BA.debugLine="For Each filename As String In FilesInFolder(dir,";
 {
 final anywheresoftware.b4a.BA.IterableList group3 = _vvvvvvvv7(_dir,anywheresoftware.b4a.keywords.Common.False);
@@ -187,7 +187,7 @@ String _filename = "";
  //BA.debugLineNum = 42;BA.debugLine="Dim total As Long";
 _total = 0L;
  //BA.debugLineNum = 43;BA.debugLine="dir = CFStringUtility.Trim_Slashes_Once(dir)";
-_dir = _vvvvvvvvvvvvvvvvvvvv5._trim_slashes_once(_dir);
+_dir = _vvvvvvvvvvvvvvvvvvv7._trim_slashes_once(_dir);
  //BA.debugLineNum = 45;BA.debugLine="For Each filename As String In FilesInFolder(dir,";
 {
 final anywheresoftware.b4a.BA.IterableList group3 = _vvvvvvvv7(_dir,anywheresoftware.b4a.keywords.Common.True);

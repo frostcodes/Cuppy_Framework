@@ -5,11 +5,8 @@ Type=StaticCode
 Version=5.51
 @EndOfDesignText@
 'This file contains function for  data types 
-'such as checking their types or conversion of types etc..
- 
-'TODO: create a sub that contain info of module header.. like mod_info or info() for all modules
-
-Sub Process_Globals
+'such as checking their types or conversion of types
+Private Sub Process_Globals
 	Private fx As JFX
 End Sub
 
@@ -62,52 +59,9 @@ Public Sub IsTypeOf(obj As Object , TypeOf As String) As Boolean
 	Return StripJavaType(GetType(obj)) = TypeOf.ToLowerCase
 	
 End Sub
-
-'Checks if an object is a boolean
-Public Sub IsBoolean(obj As Object) As Boolean
-	
-	Return IsTypeOf(obj, "boolean")
-	
-End Sub
- 
-'Checks if an object is a string
-Public Sub IsString(obj As Object) As Boolean
-	
-	Return IsTypeOf(obj, "string")
-	
-End Sub
- 
-'Checks if an object is an integer
-Public Sub IsInteger(obj As Object) As Boolean
-	
-	Return IsTypeOf(obj, "integer")
-	
-End Sub
-
-'Checks if an object is an double
-Public Sub IsDouble(obj As Object) As Boolean
-	
-	Return IsTypeOf(obj, "double")
-	
-End Sub
-
-'Checks if an object is an arraylist
-Public Sub IsArrayList(obj As Object) As Boolean
-	
-	Return IsTypeOf(obj, "arraylist")
-	
-End Sub
-
-'Checks if an object is an arraylist
-'ALIAS of isArrayList()
-Public Sub IsList(obj As Object) As Boolean
-
-	Return IsArrayList(obj)
-	
-End Sub
  
  'Checks if an object returns NULL
- 'ALIAS of StringUtility.isNull()
+ 'ALIAS of CFStringUtility.isNull()
 Public Sub IsNull(obj As Object) As Boolean
 	
 	Return CFStringUtility.isNull(obj)
@@ -124,10 +78,10 @@ End Sub
 'Check whether a variable Is a scalar. 
 'Note : Values which contain boolean, double, 
 'integer, Or string types are scalar.
-' Array, object, etc are Not scalar.
+'Array, object, etc are Not scalar.
 Public Sub IsScalar (mixedVar As Object) As Boolean
 	
-	Return IsString(mixedVar) Or IsNumber(mixedVar) Or IsBoolean(mixedVar)
+	Return mixedVar Is String Or IsNumber(mixedVar) Or mixedVar Is Boolean
 	  
 End Sub
  
