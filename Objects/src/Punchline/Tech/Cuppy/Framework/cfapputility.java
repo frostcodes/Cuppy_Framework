@@ -1,4 +1,4 @@
-package Punchline.Tech.Cuppy.Framework;
+package punchline.tech.cuppy.framework;
 
 
 import anywheresoftware.b4a.BA;
@@ -9,12 +9,12 @@ public static cfapputility mostCurrent = new cfapputility();
 
 public static BA ba;
 static {
-		ba = new  anywheresoftware.b4j.objects.FxBA("Punchline.Tech.Cuppy.Framework", "Punchline.Tech.Cuppy.Framework.cfapputility", null);
+		ba = new  anywheresoftware.b4j.objects.FxBA("punchline.tech.cuppy.framework", "punchline.tech.cuppy.framework.cfapputility", null);
 		ba.loadHtSubs(cfapputility.class);
         if (ba.getClass().getName().endsWith("ShellBA")) {
 			
 			ba.raiseEvent2(null, true, "SHELL", false);
-			ba.raiseEvent2(null, true, "CREATE", true, "Punchline.Tech.Cuppy.Framework.cfapputility", ba);
+			ba.raiseEvent2(null, true, "CREATE", true, "punchline.tech.cuppy.framework.cfapputility", ba);
 		}
 	}
     public static Class<?> getObject() {
@@ -22,17 +22,17 @@ static {
 	}
 
  public static anywheresoftware.b4a.keywords.Common __c = null;
-public static anywheresoftware.b4j.objects.JFX _vvvvvvvvvvvvvvvvvvv1 = null;
-public static b4j.example.cssutils _vvvvvvvvvvvvvvvvvvv5 = null;
-public static Punchline.Tech.Cuppy.Framework.cfconfigs _vvvvvvvvvvvvvvvvvvv6 = null;
-public static Punchline.Tech.Cuppy.Framework.cfstringutility _vvvvvvvvvvvvvvvvvvv7 = null;
-public static Punchline.Tech.Cuppy.Framework.cfdatageneratorutility _vvvvvvvvvvvvvvvvvvv0 = null;
-public static Punchline.Tech.Cuppy.Framework.cffileutility _vvvvvvvvvvvvvvvvvvvv1 = null;
-public static Punchline.Tech.Cuppy.Framework.cfstylemanager _vvvvvvvvvvvvvvvvvvvv2 = null;
-public static Punchline.Tech.Cuppy.Framework.cfcontrolsutils _vvvvvvvvvvvvvvvvvvvv3 = null;
-public static Punchline.Tech.Cuppy.Framework.cfmathutility _vvvvvvvvvvvvvvvvvvvv5 = null;
-public static Punchline.Tech.Cuppy.Framework.cfdatatypeutility _vvvvvvvvvvvvvvvvvvvv6 = null;
-public static String  _vvvvvvvvvvvvvvvv3(Object _module) throws Exception{
+public static anywheresoftware.b4j.objects.JFX _fx = null;
+public static b4j.example.cssutils _cssutils = null;
+public static punchline.tech.cuppy.framework.cfstylemanager _cfstylemanager = null;
+public static punchline.tech.cuppy.framework.cfstringutility _cfstringutility = null;
+public static punchline.tech.cuppy.framework.cfdatageneratorutility _cfdatageneratorutility = null;
+public static punchline.tech.cuppy.framework.cfconfigs _cfconfigs = null;
+public static punchline.tech.cuppy.framework.cffileutility _cffileutility = null;
+public static punchline.tech.cuppy.framework.cfcontrolsutils _cfcontrolsutils = null;
+public static punchline.tech.cuppy.framework.cfmathutility _cfmathutility = null;
+public static punchline.tech.cuppy.framework.cfdatatypeutility _cfdatatypeutility = null;
+public static String  _getpackagename(Object _module) throws Exception{
 anywheresoftware.b4j.object.JavaObject _modjo = null;
 String _mostr = "";
  //BA.debugLineNum = 8;BA.debugLine="Public Sub GetPackageName(Module As Object) As Str";
@@ -49,7 +49,7 @@ return "";
 public static String  _process_globals() throws Exception{
  //BA.debugLineNum = 2;BA.debugLine="Sub Process_Globals";
  //BA.debugLineNum = 3;BA.debugLine="Private fx As JFX";
-_vvvvvvvvvvvvvvvvvvv1 = new anywheresoftware.b4j.objects.JFX();
+_fx = new anywheresoftware.b4j.objects.JFX();
  //BA.debugLineNum = 4;BA.debugLine="End Sub";
 return "";
 }

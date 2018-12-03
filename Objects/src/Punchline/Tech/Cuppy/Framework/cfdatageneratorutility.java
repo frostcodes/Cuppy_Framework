@@ -1,4 +1,4 @@
-package Punchline.Tech.Cuppy.Framework;
+package punchline.tech.cuppy.framework;
 
 
 import anywheresoftware.b4a.BA;
@@ -9,12 +9,12 @@ public static cfdatageneratorutility mostCurrent = new cfdatageneratorutility();
 
 public static BA ba;
 static {
-		ba = new  anywheresoftware.b4j.objects.FxBA("Punchline.Tech.Cuppy.Framework", "Punchline.Tech.Cuppy.Framework.cfdatageneratorutility", null);
+		ba = new  anywheresoftware.b4j.objects.FxBA("punchline.tech.cuppy.framework", "punchline.tech.cuppy.framework.cfdatageneratorutility", null);
 		ba.loadHtSubs(cfdatageneratorutility.class);
         if (ba.getClass().getName().endsWith("ShellBA")) {
 			
 			ba.raiseEvent2(null, true, "SHELL", false);
-			ba.raiseEvent2(null, true, "CREATE", true, "Punchline.Tech.Cuppy.Framework.cfdatageneratorutility", ba);
+			ba.raiseEvent2(null, true, "CREATE", true, "punchline.tech.cuppy.framework.cfdatageneratorutility", ba);
 		}
 	}
     public static Class<?> getObject() {
@@ -22,17 +22,17 @@ static {
 	}
 
  public static anywheresoftware.b4a.keywords.Common __c = null;
-public static anywheresoftware.b4j.objects.JFX _vvvvvvvvvvvvvvvvvvv1 = null;
-public static b4j.example.cssutils _vvvvvvvvvvvvvvvvvvv5 = null;
-public static Punchline.Tech.Cuppy.Framework.cfconfigs _vvvvvvvvvvvvvvvvvvv6 = null;
-public static Punchline.Tech.Cuppy.Framework.cfstringutility _vvvvvvvvvvvvvvvvvvv7 = null;
-public static Punchline.Tech.Cuppy.Framework.cffileutility _vvvvvvvvvvvvvvvvvvvv1 = null;
-public static Punchline.Tech.Cuppy.Framework.cfstylemanager _vvvvvvvvvvvvvvvvvvvv2 = null;
-public static Punchline.Tech.Cuppy.Framework.cfcontrolsutils _vvvvvvvvvvvvvvvvvvvv3 = null;
-public static Punchline.Tech.Cuppy.Framework.cfmathutility _vvvvvvvvvvvvvvvvvvvv5 = null;
-public static Punchline.Tech.Cuppy.Framework.cfdatatypeutility _vvvvvvvvvvvvvvvvvvvv6 = null;
-public static Punchline.Tech.Cuppy.Framework.cfapputility _vvvvvvvvvvvvvvvvvvvv7 = null;
-public static anywheresoftware.b4a.objects.collections.List  _vvvvvvvv3() throws Exception{
+public static anywheresoftware.b4j.objects.JFX _fx = null;
+public static b4j.example.cssutils _cssutils = null;
+public static punchline.tech.cuppy.framework.cfstylemanager _cfstylemanager = null;
+public static punchline.tech.cuppy.framework.cfstringutility _cfstringutility = null;
+public static punchline.tech.cuppy.framework.cfconfigs _cfconfigs = null;
+public static punchline.tech.cuppy.framework.cffileutility _cffileutility = null;
+public static punchline.tech.cuppy.framework.cfcontrolsutils _cfcontrolsutils = null;
+public static punchline.tech.cuppy.framework.cfmathutility _cfmathutility = null;
+public static punchline.tech.cuppy.framework.cfdatatypeutility _cfdatatypeutility = null;
+public static punchline.tech.cuppy.framework.cfapputility _cfapputility = null;
+public static anywheresoftware.b4a.objects.collections.List  _gendertypeslist() throws Exception{
 anywheresoftware.b4a.objects.collections.List _gendertypes = null;
  //BA.debugLineNum = 1067;BA.debugLine="Public Sub GenderTypesList As List";
  //BA.debugLineNum = 1069;BA.debugLine="Dim GenderTypes As List";
@@ -278,7 +278,7 @@ if (true) return _gendertypes;
  //BA.debugLineNum = 1206;BA.debugLine="End Sub";
 return null;
 }
-public static anywheresoftware.b4a.objects.collections.List  _vvvvvvvv4() throws Exception{
+public static anywheresoftware.b4a.objects.collections.List  _majorsportslist() throws Exception{
 anywheresoftware.b4a.objects.collections.List _sports = null;
  //BA.debugLineNum = 1378;BA.debugLine="Public Sub MajorSportsList As List";
  //BA.debugLineNum = 1380;BA.debugLine="Dim sports As List";
@@ -363,7 +363,7 @@ return null;
 public static String  _process_globals() throws Exception{
  //BA.debugLineNum = 2;BA.debugLine="Private Sub Process_Globals";
  //BA.debugLineNum = 3;BA.debugLine="Private fx As JFX";
-_vvvvvvvvvvvvvvvvvvv1 = new anywheresoftware.b4j.objects.JFX();
+_fx = new anywheresoftware.b4j.objects.JFX();
  //BA.debugLineNum = 4;BA.debugLine="End Sub";
 return "";
 }
@@ -388,7 +388,7 @@ _values.AddAll(anywheresoftware.b4a.keywords.Common.ArrayToList(new Object[]{(Ob
  //BA.debugLineNum = 1461;BA.debugLine="values.AddAll(Array(\"Brands\",\"Digital\",\"Logistics";
 _values.AddAll(anywheresoftware.b4a.keywords.Common.ArrayToList(new Object[]{(Object)("Brands"),(Object)("Digital"),(Object)("Logistics"),(Object)("Holdings"),(Object)("Labs")}));
  //BA.debugLineNum = 1463;BA.debugLine="Return  Rand_Human_Name & \" \" & CFStringUtility.R";
-if (true) return _rand_human_name()+" "+BA.ObjectToString(_vvvvvvvvvvvvvvvvvvv7._vvvvv6(_values));
+if (true) return _rand_human_name()+" "+BA.ObjectToString(_cfstringutility._randlistvalue(_values));
  //BA.debugLineNum = 1465;BA.debugLine="End Sub";
 return "";
 }
@@ -456,14 +456,14 @@ _genders.Add((Object)("Male"));
  //BA.debugLineNum = 1056;BA.debugLine="Genders.Add(\"Female\")";
 _genders.Add((Object)("Female"));
  //BA.debugLineNum = 1058;BA.debugLine="Return CFStringUtility.RandListValue(Genders)";
-if (true) return BA.ObjectToString(_vvvvvvvvvvvvvvvvvvv7._vvvvv6(_genders));
+if (true) return BA.ObjectToString(_cfstringutility._randlistvalue(_genders));
  //BA.debugLineNum = 1060;BA.debugLine="End Sub";
 return "";
 }
 public static String  _rand_gender_type() throws Exception{
  //BA.debugLineNum = 1212;BA.debugLine="Public Sub Rand_Gender_Type As String";
  //BA.debugLineNum = 1214;BA.debugLine="Return CFStringUtility.RandListValue(GenderTypesL";
-if (true) return BA.ObjectToString(_vvvvvvvvvvvvvvvvvvv7._vvvvv6(_vvvvvvvv3()));
+if (true) return BA.ObjectToString(_cfstringutility._randlistvalue(_gendertypeslist()));
  //BA.debugLineNum = 1216;BA.debugLine="End Sub";
 return "";
 }
@@ -2496,7 +2496,7 @@ _names.Add((Object)("Zamora"));
  //BA.debugLineNum = 1017;BA.debugLine="names.Add(\"Zimmerman\")";
 _names.Add((Object)("Zimmerman"));
  //BA.debugLineNum = 1019;BA.debugLine="Return CFStringUtility.RandListValue(names)";
-if (true) return BA.ObjectToString(_vvvvvvvvvvvvvvvvvvv7._vvvvv6(_names));
+if (true) return BA.ObjectToString(_cfstringutility._randlistvalue(_names));
  //BA.debugLineNum = 1021;BA.debugLine="End Sub";
 return "";
 }
@@ -2548,7 +2548,7 @@ final int limit12 = _paragraphcount;
 _i = (int) (1) ;
 for (;_i <= limit12 ;_i = _i + step12 ) {
  //BA.debugLineNum = 1253;BA.debugLine="st.Append(CFStringUtility.RandListValue(textList";
-_st.Append(BA.ObjectToString(_vvvvvvvvvvvvvvvvvvv7._vvvvv6(_textlist))+" ");
+_st.Append(BA.ObjectToString(_cfstringutility._randlistvalue(_textlist))+" ");
  }
 };
  //BA.debugLineNum = 1257;BA.debugLine="Return st.ToString";
@@ -2569,29 +2569,29 @@ _values.AddAll(anywheresoftware.b4a.keywords.Common.ArrayToList(new Object[]{(Ob
 _values.AddAll(anywheresoftware.b4a.keywords.Common.ArrayToList(new Object[]{(Object)("Dentist"),(Object)("Doctor"),(Object)("Teacher"),(Object)("Web Developer"),(Object)("Lawyer"),(Object)("Assistant"),(Object)("Sales man")}));
  //BA.debugLineNum = 1475;BA.debugLine="values.AddAll(Array(\"Graphics Designer\",\"Digital";
 _values.AddAll(anywheresoftware.b4a.keywords.Common.ArrayToList(new Object[]{(Object)("Graphics Designer"),(Object)("Digital Marketer"),(Object)("Musician"),(Object)("Blogger"),(Object)("Bartender")}));
- //BA.debugLineNum = 1477;BA.debugLine="Return  Rand_Human_Name & \" \" & CFStringUtility.R";
-if (true) return _rand_human_name()+" "+BA.ObjectToString(_vvvvvvvvvvvvvvvvvvv7._vvvvv6(_values));
+ //BA.debugLineNum = 1477;BA.debugLine="Return CFStringUtility.RandListValue(values)";
+if (true) return BA.ObjectToString(_cfstringutility._randlistvalue(_values));
  //BA.debugLineNum = 1479;BA.debugLine="End Sub";
 return "";
 }
 public static String  _rand_phone_number(int _countrycode,int _length) throws Exception{
  //BA.debugLineNum = 1318;BA.debugLine="Public Sub Rand_Phone_Number(CountryCode As Int ,";
  //BA.debugLineNum = 1320;BA.debugLine="Return \"+\" & CountryCode & CFStringUtility.genera";
-if (true) return "+"+BA.NumberToString(_countrycode)+BA.NumberToString(_vvvvvvvvvvvvvvvvvvv7._vvv3(_length));
+if (true) return "+"+BA.NumberToString(_countrycode)+BA.NumberToString(_cfstringutility._generatepincode(_length));
  //BA.debugLineNum = 1322;BA.debugLine="End Sub";
 return "";
 }
 public static String  _rand_phone_number2(int _countrycode,int _startswith,int _length) throws Exception{
  //BA.debugLineNum = 1332;BA.debugLine="Public Sub Rand_Phone_Number2(CountryCode As Int ,";
  //BA.debugLineNum = 1334;BA.debugLine="Return \"+\" & CountryCode & startsWith & CFStringU";
-if (true) return "+"+BA.NumberToString(_countrycode)+BA.NumberToString(_startswith)+BA.NumberToString(_vvvvvvvvvvvvvvvvvvv7._vvv3(_length));
+if (true) return "+"+BA.NumberToString(_countrycode)+BA.NumberToString(_startswith)+BA.NumberToString(_cfstringutility._generatepincode(_length));
  //BA.debugLineNum = 1336;BA.debugLine="End Sub";
 return "";
 }
 public static String  _rand_sport_name() throws Exception{
  //BA.debugLineNum = 1429;BA.debugLine="Public Sub Rand_Sport_Name() As String";
  //BA.debugLineNum = 1431;BA.debugLine="Return CFStringUtility.RandListValue(MajorSportsL";
-if (true) return BA.ObjectToString(_vvvvvvvvvvvvvvvvvvv7._vvvvv6(_vvvvvvvv4()));
+if (true) return BA.ObjectToString(_cfstringutility._randlistvalue(_majorsportslist()));
  //BA.debugLineNum = 1433;BA.debugLine="End Sub";
 return "";
 }

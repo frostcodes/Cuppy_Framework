@@ -18,9 +18,16 @@ End Sub
  
  
  
+ 'USE this universally for colors
+' 
+'Public Sub setTextColor(color As String)
+' 
+'	CFControlsUtils.setTextColor (InnerLabel, color)
+' 
+'End Sub
  
 'ComboBox
- 
+ 'Context Menu
 'SelectableLabel
  
 'ScrollBar

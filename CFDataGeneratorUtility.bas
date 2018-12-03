@@ -1480,7 +1480,7 @@ Public Sub Rand_Occupation As String
 	values.AddAll(Array("Dentist","Doctor","Teacher","Web Developer","Lawyer", "Assistant","Sales man"))
 	values.AddAll(Array("Graphics Designer","Digital Marketer","Musician","Blogger","Bartender"))
 	
-	Return  Rand_Human_Name & " " & CFStringUtility.RandListValue(values)
+	Return CFStringUtility.RandListValue(values)
 	
 End Sub
 

@@ -12,7 +12,7 @@ Private Sub Process_Globals
 	Private AvailableThemes As CFThemes
 	AvailableThemes.Initialize 'ignore
 	
-	Public DefaultTheme As Map = AvailableThemes.ThemesList.Get(THEME_BLUE) 'ignore
+	Public DefaultTheme As Map
 	
 '	Public ActiveControls As List
 '	ActiveControls.Initialize 'ignore : need this , bad pratice maybe so would find a fix later
@@ -30,7 +30,7 @@ Private Sub Process_Globals
 	Public const FONT_LIGHT As Font = SelectFont("Light", 12)
 	Public const FONT_LIGHT_ITALIC As Font = SelectFont("LightItalic", 12)
 	
-	Public const FONT_REGULAR_FONT As Font = SelectFont("Regular", 12)
+	Public const FONT_REGULAR As Font = SelectFont("Regular", 12)
 	Public const FONT_ITALIC As Font = SelectFont("Italic", 12)
 	 
 	Public const FONT_MEDIUM As Font = SelectFont("Medium", 12)
@@ -59,6 +59,10 @@ Private Sub Process_Globals
 	#End If
 
  #End Region 
+ 
+ 'Default Theme
+	SelectTheme(THEME_BLUE) 'ignore
+ 
 	  
 	'Reference cuppy controls so it can be updated all when the style changes
 	'allow setting of animation time...

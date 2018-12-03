@@ -354,11 +354,31 @@ Public Sub EscapeString(value As String) As String
 	Return "\" & value
  
 End Sub
+
+'fix a delimiter i.e. escape a delimiter
+Public Sub FixDelimiter(sValue As String) As String
+	
+	If sValue = "|" Then sValue = "\|"
+	If sValue = "." Then sValue = "\."
+	If sValue = "\" Then sValue = "\\"
+	If sValue = "^" Then sValue = "\^"
+	If sValue = "$" Then sValue = "\$"
+	If sValue = "?" Then sValue = "\?"
+	If sValue = "*" Then sValue = "\*"
+	If sValue = "+" Then sValue = "\+"
+	If sValue = "(" Then sValue = "\("
+	If sValue = ")" Then sValue = "\)"
+	If sValue = "[" Then sValue = "\["
+	If sValue = "{" Then sValue = "\{"
+	If sValue = ";" Then sValue = "\;"
+	Return sValue
+	
+End Sub
  
 'Allow spliting a string by a common delimiter such as , or :
 Sub Split(str As String, delimiter As String) As List
 	Dim t As List
-	t = Regex.Split(EscapeString(delimiter), str)
+	t = Regex.Split(FixDelimiter(delimiter), str)
 	Return t
 End Sub
 

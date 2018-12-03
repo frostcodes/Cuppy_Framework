@@ -1,4 +1,4 @@
-package Punchline.Tech.Cuppy.Framework;
+package punchline.tech.cuppy.framework;
 
 
 import anywheresoftware.b4a.BA;
@@ -9,12 +9,12 @@ public static cffileutility mostCurrent = new cffileutility();
 
 public static BA ba;
 static {
-		ba = new  anywheresoftware.b4j.objects.FxBA("Punchline.Tech.Cuppy.Framework", "Punchline.Tech.Cuppy.Framework.cffileutility", null);
+		ba = new  anywheresoftware.b4j.objects.FxBA("punchline.tech.cuppy.framework", "punchline.tech.cuppy.framework.cffileutility", null);
 		ba.loadHtSubs(cffileutility.class);
         if (ba.getClass().getName().endsWith("ShellBA")) {
 			
 			ba.raiseEvent2(null, true, "SHELL", false);
-			ba.raiseEvent2(null, true, "CREATE", true, "Punchline.Tech.Cuppy.Framework.cffileutility", ba);
+			ba.raiseEvent2(null, true, "CREATE", true, "punchline.tech.cuppy.framework.cffileutility", ba);
 		}
 	}
     public static Class<?> getObject() {
@@ -22,17 +22,17 @@ static {
 	}
 
  public static anywheresoftware.b4a.keywords.Common __c = null;
-public static anywheresoftware.b4j.objects.JFX _vvvvvvvvvvvvvvvvvvv1 = null;
-public static b4j.example.cssutils _vvvvvvvvvvvvvvvvvvv5 = null;
-public static Punchline.Tech.Cuppy.Framework.cfconfigs _vvvvvvvvvvvvvvvvvvv6 = null;
-public static Punchline.Tech.Cuppy.Framework.cfstringutility _vvvvvvvvvvvvvvvvvvv7 = null;
-public static Punchline.Tech.Cuppy.Framework.cfdatageneratorutility _vvvvvvvvvvvvvvvvvvv0 = null;
-public static Punchline.Tech.Cuppy.Framework.cfstylemanager _vvvvvvvvvvvvvvvvvvvv2 = null;
-public static Punchline.Tech.Cuppy.Framework.cfcontrolsutils _vvvvvvvvvvvvvvvvvvvv3 = null;
-public static Punchline.Tech.Cuppy.Framework.cfmathutility _vvvvvvvvvvvvvvvvvvvv5 = null;
-public static Punchline.Tech.Cuppy.Framework.cfdatatypeutility _vvvvvvvvvvvvvvvvvvvv6 = null;
-public static Punchline.Tech.Cuppy.Framework.cfapputility _vvvvvvvvvvvvvvvvvvvv7 = null;
-public static String  _vvvvvvvv5(String _dir,String _filename,byte[] _data) throws Exception{
+public static anywheresoftware.b4j.objects.JFX _fx = null;
+public static b4j.example.cssutils _cssutils = null;
+public static punchline.tech.cuppy.framework.cfstylemanager _cfstylemanager = null;
+public static punchline.tech.cuppy.framework.cfstringutility _cfstringutility = null;
+public static punchline.tech.cuppy.framework.cfdatageneratorutility _cfdatageneratorutility = null;
+public static punchline.tech.cuppy.framework.cfconfigs _cfconfigs = null;
+public static punchline.tech.cuppy.framework.cfcontrolsutils _cfcontrolsutils = null;
+public static punchline.tech.cuppy.framework.cfmathutility _cfmathutility = null;
+public static punchline.tech.cuppy.framework.cfdatatypeutility _cfdatatypeutility = null;
+public static punchline.tech.cuppy.framework.cfapputility _cfapputility = null;
+public static String  _bytestofile(String _dir,String _filename,byte[] _data) throws Exception{
 anywheresoftware.b4a.objects.streams.File.OutputStreamWrapper _out = null;
  //BA.debugLineNum = 94;BA.debugLine="Public Sub BytesToFile (Dir As String, FileName As";
  //BA.debugLineNum = 96;BA.debugLine="Dim out As OutputStream = File.OpenOutput(Dir, Fi";
@@ -45,7 +45,7 @@ _out.Close();
  //BA.debugLineNum = 100;BA.debugLine="End Sub";
 return "";
 }
-public static anywheresoftware.b4j.objects.ImageViewWrapper.ImageWrapper  _vvvvvvvv6(byte[] _bytes) throws Exception{
+public static anywheresoftware.b4j.objects.ImageViewWrapper.ImageWrapper  _bytestoimage(byte[] _bytes) throws Exception{
 anywheresoftware.b4a.objects.streams.File.InputStreamWrapper _in = null;
 anywheresoftware.b4j.objects.ImageViewWrapper.ImageWrapper _bmp = null;
  //BA.debugLineNum = 111;BA.debugLine="Public Sub BytesToImage(bytes() As Byte) As Image";
@@ -62,7 +62,7 @@ if (true) return _bmp;
  //BA.debugLineNum = 121;BA.debugLine="End Sub";
 return null;
 }
-public static anywheresoftware.b4a.objects.collections.List  _vvvvvvvv7(String _dir,boolean _includesubdir) throws Exception{
+public static anywheresoftware.b4a.objects.collections.List  _filesinfolder(String _dir,boolean _includesubdir) throws Exception{
 anywheresoftware.b4a.objects.collections.List _files = null;
 String _filename = "";
  //BA.debugLineNum = 59;BA.debugLine="Public Sub FilesInFolder(dir As String, IncludeSub";
@@ -71,7 +71,7 @@ _files = new anywheresoftware.b4a.objects.collections.List();
  //BA.debugLineNum = 62;BA.debugLine="files.Initialize";
 _files.Initialize();
  //BA.debugLineNum = 64;BA.debugLine="dir = CFStringUtility.Trim_Slashes_Once(dir)";
-_dir = _vvvvvvvvvvvvvvvvvvv7._trim_slashes_once(_dir);
+_dir = _cfstringutility._trim_slashes_once(_dir);
  //BA.debugLineNum = 66;BA.debugLine="For Each filename As String In File.ListFiles(dir";
 {
 final anywheresoftware.b4a.BA.IterableList group4 = anywheresoftware.b4a.keywords.Common.File.ListFiles(_dir);
@@ -83,10 +83,10 @@ _filename = BA.ObjectToString(group4.Get(index4));
  //BA.debugLineNum = 68;BA.debugLine="If File.IsDirectory(dir, filename) = False Then";
 if (anywheresoftware.b4a.keywords.Common.File.IsDirectory(_dir,_filename)==anywheresoftware.b4a.keywords.Common.False) { 
  //BA.debugLineNum = 70;BA.debugLine="files.Add(FixWinPaths(dir & \"\\\" & filename))";
-_files.Add((Object)(_vvvvvvvvv2(_dir+"\\"+_filename)));
+_files.Add((Object)(_fixwinpaths(_dir+"\\"+_filename)));
  }else if(_includesubdir) { 
  //BA.debugLineNum = 74;BA.debugLine="files.AddAll(FilesInFolder(FixWinPaths(dir & \"\\";
-_files.AddAll(_vvvvvvvv7(_vvvvvvvvv2(_dir+"\\"+_filename),anywheresoftware.b4a.keywords.Common.True));
+_files.AddAll(_filesinfolder(_fixwinpaths(_dir+"\\"+_filename),anywheresoftware.b4a.keywords.Common.True));
  };
  }
 };
@@ -95,28 +95,28 @@ if (true) return _files;
  //BA.debugLineNum = 82;BA.debugLine="End Sub";
 return null;
 }
-public static anywheresoftware.b4a.objects.collections.List  _vvvvvvvv0(String _dir) throws Exception{
+public static anywheresoftware.b4a.objects.collections.List  _filesinfolder2(String _dir) throws Exception{
  //BA.debugLineNum = 86;BA.debugLine="Public Sub FilesInFolder2(dir As String) As List";
  //BA.debugLineNum = 88;BA.debugLine="Return FilesInFolder(dir, True)";
-if (true) return _vvvvvvvv7(_dir,anywheresoftware.b4a.keywords.Common.True);
+if (true) return _filesinfolder(_dir,anywheresoftware.b4a.keywords.Common.True);
  //BA.debugLineNum = 90;BA.debugLine="End Sub";
 return null;
 }
-public static byte[]  _vvvvvvvvv1(String _dir,String _filename) throws Exception{
+public static byte[]  _filetobytes(String _dir,String _filename) throws Exception{
  //BA.debugLineNum = 104;BA.debugLine="Public Sub FileToBytes (Dir As String, FileName As";
  //BA.debugLineNum = 106;BA.debugLine="Return Bit.InputStreamToBytes(File.OpenInput(Dir,";
 if (true) return anywheresoftware.b4a.keywords.Common.Bit.InputStreamToBytes((java.io.InputStream)(anywheresoftware.b4a.keywords.Common.File.OpenInput(_dir,_filename).getObject()));
  //BA.debugLineNum = 108;BA.debugLine="End Sub";
 return null;
 }
-public static String  _vvvvvvvvv2(String _path) throws Exception{
+public static String  _fixwinpaths(String _path) throws Exception{
  //BA.debugLineNum = 151;BA.debugLine="Public Sub FixWinPaths(path As String) As String";
  //BA.debugLineNum = 153;BA.debugLine="Return path.Replace(\"//\", \"/\")";
 if (true) return _path.replace("//","/");
  //BA.debugLineNum = 155;BA.debugLine="End Sub";
 return "";
 }
-public static String  _vvvvvvvvv3(float _bytes) throws Exception{
+public static String  _formatfilesize(float _bytes) throws Exception{
 String[] _unit = null;
 double _po = 0;
 double _si = 0;
@@ -151,21 +151,21 @@ return "";
 public static String  _process_globals() throws Exception{
  //BA.debugLineNum = 3;BA.debugLine="Private Sub Process_Globals";
  //BA.debugLineNum = 5;BA.debugLine="Private fx As JFX";
-_vvvvvvvvvvvvvvvvvvv1 = new anywheresoftware.b4j.objects.JFX();
+_fx = new anywheresoftware.b4j.objects.JFX();
  //BA.debugLineNum = 7;BA.debugLine="End Sub";
 return "";
 }
-public static long  _vvvvvvvvv4(String _dir) throws Exception{
+public static long  _sizeofcurrentfilesinfolder(String _dir) throws Exception{
 long _total = 0L;
 String _filename = "";
  //BA.debugLineNum = 19;BA.debugLine="Public Sub SizeOfCurrentFilesInFolder(dir As Strin";
  //BA.debugLineNum = 21;BA.debugLine="Dim total As Long";
 _total = 0L;
  //BA.debugLineNum = 22;BA.debugLine="dir = CFStringUtility.Trim_Slashes_Once(dir)";
-_dir = _vvvvvvvvvvvvvvvvvvv7._trim_slashes_once(_dir);
+_dir = _cfstringutility._trim_slashes_once(_dir);
  //BA.debugLineNum = 24;BA.debugLine="For Each filename As String In FilesInFolder(dir,";
 {
-final anywheresoftware.b4a.BA.IterableList group3 = _vvvvvvvv7(_dir,anywheresoftware.b4a.keywords.Common.False);
+final anywheresoftware.b4a.BA.IterableList group3 = _filesinfolder(_dir,anywheresoftware.b4a.keywords.Common.False);
 final int groupLen3 = group3.getSize()
 ;int index3 = 0;
 ;
@@ -180,17 +180,17 @@ if (true) return _total;
  //BA.debugLineNum = 32;BA.debugLine="End Sub";
 return 0L;
 }
-public static long  _vvvvvvvvv5(String _dir) throws Exception{
+public static long  _sizeoffilesinfolder(String _dir) throws Exception{
 long _total = 0L;
 String _filename = "";
  //BA.debugLineNum = 40;BA.debugLine="Public Sub SizeOfFilesInFolder(dir As String) As L";
  //BA.debugLineNum = 42;BA.debugLine="Dim total As Long";
 _total = 0L;
  //BA.debugLineNum = 43;BA.debugLine="dir = CFStringUtility.Trim_Slashes_Once(dir)";
-_dir = _vvvvvvvvvvvvvvvvvvv7._trim_slashes_once(_dir);
+_dir = _cfstringutility._trim_slashes_once(_dir);
  //BA.debugLineNum = 45;BA.debugLine="For Each filename As String In FilesInFolder(dir,";
 {
-final anywheresoftware.b4a.BA.IterableList group3 = _vvvvvvvv7(_dir,anywheresoftware.b4a.keywords.Common.True);
+final anywheresoftware.b4a.BA.IterableList group3 = _filesinfolder(_dir,anywheresoftware.b4a.keywords.Common.True);
 final int groupLen3 = group3.getSize()
 ;int index3 = 0;
 ;
