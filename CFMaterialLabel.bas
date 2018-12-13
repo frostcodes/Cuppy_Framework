@@ -65,10 +65,16 @@ End Sub
 
 #Region Actions and Effects
  
-Public Sub setBg(color As String)
+Public Sub setBackgroundColor(color As String)
  
-	CFControlsUtils.SetBg( InnerLabel, color)
+	CFControlsUtils.setBackgroundColor( InnerLabel, color)
  
+End Sub
+
+Public Sub getBackgroundColor As String
+  	
+	Return CFControlsUtils.GetBackgroundColor(InnerLabel)
+	
 End Sub
 
 Public Sub setTextColor(color As String)
@@ -208,7 +214,7 @@ Public Sub getTop As Double
 	
 End Sub
   
-'Get or set the Node Parent
+'Get the Node Parent
 Public Sub getParent As Node
 	
 	Return mBase.Parent

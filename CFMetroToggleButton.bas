@@ -81,10 +81,16 @@ End Sub
 
 #Region Actions and Effects
 
-Public Sub setBg(color As String)
+Public Sub setBackgroundColor(color As String)
  
-	CFControlsUtils.setBG(ToggleButton, color)
+	CFControlsUtils.setBackgroundColor(ToggleButton, color)
  
+End Sub
+
+Public Sub getBackgroundColor As String
+  	
+	Return CFControlsUtils.GetBackgroundColor(ToggleButton)
+	
 End Sub
 
 Public Sub setRotation(angle As Float)
@@ -129,7 +135,7 @@ Public Sub setCheckState(value As Int)
 	 
 	If value = UNCHECKED_STATE Then
 		 
-		setBg("white")
+		setBackgroundColor("white")
 		setBorder("#D6D6D6", 2)
 		
 		ToggleButton.TextColor = fx.Colors.RGB(91, 91, 91)
@@ -140,7 +146,7 @@ Public Sub setCheckState(value As Int)
 	 
 		
 		setBorder("#2EA9DE", 2)
-		setBg("rgb(65, 177, 225 )")
+		setBackgroundColor("rgb(65, 177, 225 )")
 		
 		ToggleButton.TextColor = fx.Colors.White
 		 
@@ -228,7 +234,7 @@ Public Sub getTop As Double
 	
 End Sub
   
-'Get or set the Node Parent
+'Get the Node Parent
 Public Sub getParent As Node
 	
 	Return mBase.Parent

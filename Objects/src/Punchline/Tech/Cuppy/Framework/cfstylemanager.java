@@ -45,72 +45,72 @@ public static String _theme_purple = "";
 public static String _theme_pink = "";
 public static String _theme_amber = "";
 public static b4j.example.cssutils _cssutils = null;
+public static punchline.tech.cuppy.framework.cfcontrolsutils _cfcontrolsutils = null;
 public static punchline.tech.cuppy.framework.cfstringutility _cfstringutility = null;
 public static punchline.tech.cuppy.framework.cfdatageneratorutility _cfdatageneratorutility = null;
+public static punchline.tech.cuppy.framework.cfapputility _cfapputility = null;
 public static punchline.tech.cuppy.framework.cfconfigs _cfconfigs = null;
 public static punchline.tech.cuppy.framework.cffileutility _cffileutility = null;
-public static punchline.tech.cuppy.framework.cfcontrolsutils _cfcontrolsutils = null;
 public static punchline.tech.cuppy.framework.cfmathutility _cfmathutility = null;
 public static punchline.tech.cuppy.framework.cfdatatypeutility _cfdatatypeutility = null;
-public static punchline.tech.cuppy.framework.cfapputility _cfapputility = null;
 public static String  _exportcurrenttheme(String _dir,String _filename) throws Exception{
- //BA.debugLineNum = 219;BA.debugLine="Public Sub ExportCurrentTheme(Dir As String, FileN";
- //BA.debugLineNum = 221;BA.debugLine="File.WriteMap(Dir, FileName, DefaultTheme)";
+ //BA.debugLineNum = 220;BA.debugLine="Public Sub ExportCurrentTheme(Dir As String, FileN";
+ //BA.debugLineNum = 222;BA.debugLine="File.WriteMap(Dir, FileName, DefaultTheme)";
 anywheresoftware.b4a.keywords.Common.File.WriteMap(_dir,_filename,_defaulttheme);
- //BA.debugLineNum = 223;BA.debugLine="End Sub";
+ //BA.debugLineNum = 224;BA.debugLine="End Sub";
 return "";
 }
 public static String  _exporttheme(String _theme,String _dir,String _filename) throws Exception{
- //BA.debugLineNum = 201;BA.debugLine="Public Sub ExportTheme(theme As String , Dir As St";
- //BA.debugLineNum = 203;BA.debugLine="theme = CFStringUtility.ucfirst(theme)";
+ //BA.debugLineNum = 202;BA.debugLine="Public Sub ExportTheme(theme As String , Dir As St";
+ //BA.debugLineNum = 204;BA.debugLine="theme = CFStringUtility.ucfirst(theme)";
 _theme = _cfstringutility._ucfirst(_theme);
- //BA.debugLineNum = 205;BA.debugLine="If AvailableThemes.ThemesList.ContainsKey(theme)";
+ //BA.debugLineNum = 206;BA.debugLine="If AvailableThemes.ThemesList.ContainsKey(theme)";
 if (_availablethemes._themeslist().ContainsKey((Object)(_theme))) { 
- //BA.debugLineNum = 207;BA.debugLine="File.WriteMap(Dir, FileName, AvailableThemes.Th";
+ //BA.debugLineNum = 208;BA.debugLine="File.WriteMap(Dir, FileName, AvailableThemes.Th";
 anywheresoftware.b4a.keywords.Common.File.WriteMap(_dir,_filename,(anywheresoftware.b4a.objects.collections.Map) anywheresoftware.b4a.AbsObjectWrapper.ConvertToWrapper(new anywheresoftware.b4a.objects.collections.Map(), (anywheresoftware.b4a.objects.collections.Map.MyMap)(_availablethemes._themeslist().Get((Object)(_theme)))));
  }else {
- //BA.debugLineNum = 211;BA.debugLine="LogError(\"Could not export theme(\" & theme & \").";
+ //BA.debugLineNum = 212;BA.debugLine="LogError(\"Could not export theme(\" & theme & \").";
 anywheresoftware.b4a.keywords.Common.LogError("Could not export theme("+_theme+"). Please check the Theme name!");
- //BA.debugLineNum = 212;BA.debugLine="ExitApplication";
+ //BA.debugLineNum = 213;BA.debugLine="ExitApplication";
 anywheresoftware.b4a.keywords.Common.ExitApplication();
  };
- //BA.debugLineNum = 216;BA.debugLine="End Sub";
+ //BA.debugLineNum = 217;BA.debugLine="End Sub";
 return "";
 }
 public static anywheresoftware.b4a.objects.collections.Map  _fonttypes() throws Exception{
 anywheresoftware.b4a.objects.collections.Map _ftypes = null;
- //BA.debugLineNum = 67;BA.debugLine="Private Sub FontTypes As Map";
- //BA.debugLineNum = 69;BA.debugLine="Dim FTypes As Map";
+ //BA.debugLineNum = 68;BA.debugLine="Private Sub FontTypes As Map";
+ //BA.debugLineNum = 70;BA.debugLine="Dim FTypes As Map";
 _ftypes = new anywheresoftware.b4a.objects.collections.Map();
- //BA.debugLineNum = 70;BA.debugLine="FTypes.Initialize";
+ //BA.debugLineNum = 71;BA.debugLine="FTypes.Initialize";
 _ftypes.Initialize();
- //BA.debugLineNum = 72;BA.debugLine="FTypes.Put(\"Black\",\"Roboto-Black.ttf\")";
+ //BA.debugLineNum = 73;BA.debugLine="FTypes.Put(\"Black\",\"Roboto-Black.ttf\")";
 _ftypes.Put((Object)("Black"),(Object)("Roboto-Black.ttf"));
- //BA.debugLineNum = 73;BA.debugLine="FTypes.Put(\"BlackItalic\",\"Roboto-BlackItalic.ttf\"";
+ //BA.debugLineNum = 74;BA.debugLine="FTypes.Put(\"BlackItalic\",\"Roboto-BlackItalic.ttf\"";
 _ftypes.Put((Object)("BlackItalic"),(Object)("Roboto-BlackItalic.ttf"));
- //BA.debugLineNum = 75;BA.debugLine="FTypes.Put(\"Bold\",\"Roboto-Bold.ttf\")";
+ //BA.debugLineNum = 76;BA.debugLine="FTypes.Put(\"Bold\",\"Roboto-Bold.ttf\")";
 _ftypes.Put((Object)("Bold"),(Object)("Roboto-Bold.ttf"));
- //BA.debugLineNum = 76;BA.debugLine="FTypes.Put(\"BoldItalic\",\"Roboto-BoldItalic.ttf\")";
+ //BA.debugLineNum = 77;BA.debugLine="FTypes.Put(\"BoldItalic\",\"Roboto-BoldItalic.ttf\")";
 _ftypes.Put((Object)("BoldItalic"),(Object)("Roboto-BoldItalic.ttf"));
- //BA.debugLineNum = 78;BA.debugLine="FTypes.Put(\"Italic\",\"Roboto-Italic.ttf\")";
+ //BA.debugLineNum = 79;BA.debugLine="FTypes.Put(\"Italic\",\"Roboto-Italic.ttf\")";
 _ftypes.Put((Object)("Italic"),(Object)("Roboto-Italic.ttf"));
- //BA.debugLineNum = 79;BA.debugLine="FTypes.Put(\"Light\",\"Roboto-Light.ttf\")";
+ //BA.debugLineNum = 80;BA.debugLine="FTypes.Put(\"Light\",\"Roboto-Light.ttf\")";
 _ftypes.Put((Object)("Light"),(Object)("Roboto-Light.ttf"));
- //BA.debugLineNum = 81;BA.debugLine="FTypes.Put(\"LightItalic\",\"Roboto-LightItalic.ttf\"";
+ //BA.debugLineNum = 82;BA.debugLine="FTypes.Put(\"LightItalic\",\"Roboto-LightItalic.ttf\"";
 _ftypes.Put((Object)("LightItalic"),(Object)("Roboto-LightItalic.ttf"));
- //BA.debugLineNum = 82;BA.debugLine="FTypes.Put(\"Medium\",\"Roboto-Medium.ttf\")";
+ //BA.debugLineNum = 83;BA.debugLine="FTypes.Put(\"Medium\",\"Roboto-Medium.ttf\")";
 _ftypes.Put((Object)("Medium"),(Object)("Roboto-Medium.ttf"));
- //BA.debugLineNum = 84;BA.debugLine="FTypes.Put(\"MediumItalic\",\"Roboto-MediumItalic.tt";
+ //BA.debugLineNum = 85;BA.debugLine="FTypes.Put(\"MediumItalic\",\"Roboto-MediumItalic.tt";
 _ftypes.Put((Object)("MediumItalic"),(Object)("Roboto-MediumItalic.ttf"));
- //BA.debugLineNum = 85;BA.debugLine="FTypes.Put(\"Regular\",\"Roboto-Regular.ttf\")";
+ //BA.debugLineNum = 86;BA.debugLine="FTypes.Put(\"Regular\",\"Roboto-Regular.ttf\")";
 _ftypes.Put((Object)("Regular"),(Object)("Roboto-Regular.ttf"));
- //BA.debugLineNum = 87;BA.debugLine="FTypes.Put(\"Thin\",\"Roboto-Thin.ttf\")";
+ //BA.debugLineNum = 88;BA.debugLine="FTypes.Put(\"Thin\",\"Roboto-Thin.ttf\")";
 _ftypes.Put((Object)("Thin"),(Object)("Roboto-Thin.ttf"));
- //BA.debugLineNum = 88;BA.debugLine="FTypes.Put(\"ThinItalic\",\"Roboto-ThinItalic.ttf\")";
+ //BA.debugLineNum = 89;BA.debugLine="FTypes.Put(\"ThinItalic\",\"Roboto-ThinItalic.ttf\")";
 _ftypes.Put((Object)("ThinItalic"),(Object)("Roboto-ThinItalic.ttf"));
- //BA.debugLineNum = 90;BA.debugLine="Return FTypes";
+ //BA.debugLineNum = 91;BA.debugLine="Return FTypes";
 if (true) return _ftypes;
- //BA.debugLineNum = 92;BA.debugLine="End Sub";
+ //BA.debugLineNum = 93;BA.debugLine="End Sub";
 return null;
 }
 public static anywheresoftware.b4a.objects.collections.Map  _loadthemefile(String _dir,String _filename) throws Exception{
@@ -118,31 +118,31 @@ anywheresoftware.b4a.objects.collections.Map _mapx = null;
 anywheresoftware.b4a.objects.collections.List _checklist = null;
 String _keyx = "";
 anywheresoftware.b4a.keywords.StringBuilderWrapper _errorstr = null;
- //BA.debugLineNum = 157;BA.debugLine="Public Sub LoadThemeFile(Dir As String, FileName A";
- //BA.debugLineNum = 159;BA.debugLine="Dim mapx As Map = File.ReadMap(Dir ,FileName)";
+ //BA.debugLineNum = 158;BA.debugLine="Public Sub LoadThemeFile(Dir As String, FileName A";
+ //BA.debugLineNum = 160;BA.debugLine="Dim mapx As Map = File.ReadMap(Dir ,FileName)";
 _mapx = new anywheresoftware.b4a.objects.collections.Map();
 _mapx = anywheresoftware.b4a.keywords.Common.File.ReadMap(_dir,_filename);
- //BA.debugLineNum = 161;BA.debugLine="Dim checklist As List";
+ //BA.debugLineNum = 162;BA.debugLine="Dim checklist As List";
 _checklist = new anywheresoftware.b4a.objects.collections.List();
- //BA.debugLineNum = 162;BA.debugLine="checklist.Initialize";
+ //BA.debugLineNum = 163;BA.debugLine="checklist.Initialize";
 _checklist.Initialize();
- //BA.debugLineNum = 164;BA.debugLine="checklist.Add(\"primary\")";
+ //BA.debugLineNum = 165;BA.debugLine="checklist.Add(\"primary\")";
 _checklist.Add((Object)("primary"));
- //BA.debugLineNum = 165;BA.debugLine="checklist.Add(\"primary_dark\")";
+ //BA.debugLineNum = 166;BA.debugLine="checklist.Add(\"primary_dark\")";
 _checklist.Add((Object)("primary_dark"));
- //BA.debugLineNum = 167;BA.debugLine="checklist.Add(\"primary_light\")";
+ //BA.debugLineNum = 168;BA.debugLine="checklist.Add(\"primary_light\")";
 _checklist.Add((Object)("primary_light"));
- //BA.debugLineNum = 168;BA.debugLine="checklist.Add(\"accent\")";
+ //BA.debugLineNum = 169;BA.debugLine="checklist.Add(\"accent\")";
 _checklist.Add((Object)("accent"));
- //BA.debugLineNum = 170;BA.debugLine="checklist.Add(\"primary_text\")";
+ //BA.debugLineNum = 171;BA.debugLine="checklist.Add(\"primary_text\")";
 _checklist.Add((Object)("primary_text"));
- //BA.debugLineNum = 171;BA.debugLine="checklist.Add(\"secondary_text\")";
+ //BA.debugLineNum = 172;BA.debugLine="checklist.Add(\"secondary_text\")";
 _checklist.Add((Object)("secondary_text"));
- //BA.debugLineNum = 173;BA.debugLine="checklist.Add(\"icons\")";
+ //BA.debugLineNum = 174;BA.debugLine="checklist.Add(\"icons\")";
 _checklist.Add((Object)("icons"));
- //BA.debugLineNum = 174;BA.debugLine="checklist.Add(\"divider\")";
+ //BA.debugLineNum = 175;BA.debugLine="checklist.Add(\"divider\")";
 _checklist.Add((Object)("divider"));
- //BA.debugLineNum = 176;BA.debugLine="For Each KeyX As String In checklist";
+ //BA.debugLineNum = 177;BA.debugLine="For Each KeyX As String In checklist";
 {
 final anywheresoftware.b4a.BA.IterableList group12 = _checklist;
 final int groupLen12 = group12.getSize()
@@ -150,28 +150,28 @@ final int groupLen12 = group12.getSize()
 ;
 for (; index12 < groupLen12;index12++){
 _keyx = BA.ObjectToString(group12.Get(index12));
- //BA.debugLineNum = 179;BA.debugLine="If Not(mapx.ContainsKey(KeyX)) Or CFStringUtilit";
+ //BA.debugLineNum = 180;BA.debugLine="If Not(mapx.ContainsKey(KeyX)) Or CFStringUtilit";
 if (anywheresoftware.b4a.keywords.Common.Not(_mapx.ContainsKey((Object)(_keyx))) || _cfstringutility._isempty(BA.ObjectToString(_mapx.Get((Object)(_keyx))))) { 
- //BA.debugLineNum = 181;BA.debugLine="Dim ErrorStr As StringBuilder";
+ //BA.debugLineNum = 182;BA.debugLine="Dim ErrorStr As StringBuilder";
 _errorstr = new anywheresoftware.b4a.keywords.StringBuilderWrapper();
- //BA.debugLineNum = 182;BA.debugLine="ErrorStr.Initialize";
+ //BA.debugLineNum = 183;BA.debugLine="ErrorStr.Initialize";
 _errorstr.Initialize();
- //BA.debugLineNum = 184;BA.debugLine="ErrorStr.Append(\"Could not load theme file (\" &";
+ //BA.debugLineNum = 185;BA.debugLine="ErrorStr.Append(\"Could not load theme file (\" &";
 _errorstr.Append("Could not load theme file ("+_filename+") ");
- //BA.debugLineNum = 185;BA.debugLine="ErrorStr.Append(\"because the theme key (\" & Key";
+ //BA.debugLineNum = 186;BA.debugLine="ErrorStr.Append(\"because the theme key (\" & Key";
 _errorstr.Append("because the theme key ("+_keyx+") is missing ");
- //BA.debugLineNum = 186;BA.debugLine="ErrorStr.Append(\"or its value is empty!\")";
+ //BA.debugLineNum = 187;BA.debugLine="ErrorStr.Append(\"or its value is empty!\")";
 _errorstr.Append("or its value is empty!");
- //BA.debugLineNum = 188;BA.debugLine="LogError(ErrorStr.ToString)";
+ //BA.debugLineNum = 189;BA.debugLine="LogError(ErrorStr.ToString)";
 anywheresoftware.b4a.keywords.Common.LogError(_errorstr.ToString());
- //BA.debugLineNum = 190;BA.debugLine="ExitApplication";
+ //BA.debugLineNum = 191;BA.debugLine="ExitApplication";
 anywheresoftware.b4a.keywords.Common.ExitApplication();
  };
  }
 };
- //BA.debugLineNum = 196;BA.debugLine="Return mapx";
+ //BA.debugLineNum = 197;BA.debugLine="Return mapx";
 if (true) return _mapx;
- //BA.debugLineNum = 198;BA.debugLine="End Sub";
+ //BA.debugLineNum = 199;BA.debugLine="End Sub";
 return null;
 }
 public static String  _process_globals() throws Exception{
@@ -236,45 +236,45 @@ _theme_pink = "Pink";
 _theme_amber = "Amber";
  //BA.debugLineNum = 58;BA.debugLine="SelectTheme(THEME_BLUE) 'ignore";
 _selecttheme(_theme_blue);
- //BA.debugLineNum = 64;BA.debugLine="End Sub";
+ //BA.debugLineNum = 65;BA.debugLine="End Sub";
 return "";
 }
 public static anywheresoftware.b4j.objects.JFX.FontWrapper  _scalefont(String _familyname,double _size) throws Exception{
- //BA.debugLineNum = 102;BA.debugLine="Public Sub ScaleFont(FamilyName As String,Size As";
- //BA.debugLineNum = 104;BA.debugLine="Return fx.CreateFont(FamilyName, Size, False, Fal";
+ //BA.debugLineNum = 103;BA.debugLine="Public Sub ScaleFont(FamilyName As String,Size As";
+ //BA.debugLineNum = 105;BA.debugLine="Return fx.CreateFont(FamilyName, Size, False, Fal";
 if (true) return _fx.CreateFont(_familyname,_size,anywheresoftware.b4a.keywords.Common.False,anywheresoftware.b4a.keywords.Common.False);
- //BA.debugLineNum = 106;BA.debugLine="End Sub";
+ //BA.debugLineNum = 107;BA.debugLine="End Sub";
 return null;
 }
 public static anywheresoftware.b4j.objects.JFX.FontWrapper  _scalefont2(String _familyname,double _size,boolean _bold,boolean _italic) throws Exception{
- //BA.debugLineNum = 109;BA.debugLine="Public Sub ScaleFont2(FamilyName As String,Size As";
- //BA.debugLineNum = 111;BA.debugLine="Return fx.CreateFont(FamilyName , Size, Bold, Ita";
+ //BA.debugLineNum = 110;BA.debugLine="Public Sub ScaleFont2(FamilyName As String,Size As";
+ //BA.debugLineNum = 112;BA.debugLine="Return fx.CreateFont(FamilyName , Size, Bold, Ita";
 if (true) return _fx.CreateFont(_familyname,_size,_bold,_italic);
- //BA.debugLineNum = 113;BA.debugLine="End Sub";
+ //BA.debugLineNum = 114;BA.debugLine="End Sub";
 return null;
 }
 public static anywheresoftware.b4j.objects.JFX.FontWrapper  _selectfont(String _fontname,double _fontsize) throws Exception{
- //BA.debugLineNum = 95;BA.debugLine="Public Sub SelectFont(fontName As String,  FontSiz";
- //BA.debugLineNum = 97;BA.debugLine="Return fx.LoadFont(File.DirAssets , FontTypes.Get";
+ //BA.debugLineNum = 96;BA.debugLine="Public Sub SelectFont(fontName As String,  FontSiz";
+ //BA.debugLineNum = 98;BA.debugLine="Return fx.LoadFont(File.DirAssets , FontTypes.Get";
 if (true) return _fx.LoadFont(anywheresoftware.b4a.keywords.Common.File.getDirAssets(),BA.ObjectToString(_fonttypes().Get((Object)(_fontname))),_fontsize);
- //BA.debugLineNum = 99;BA.debugLine="End Sub";
+ //BA.debugLineNum = 100;BA.debugLine="End Sub";
 return null;
 }
 public static String  _selecttheme(String _theme) throws Exception{
- //BA.debugLineNum = 119;BA.debugLine="Public Sub SelectTheme(Theme As String)";
- //BA.debugLineNum = 131;BA.debugLine="Theme = CFStringUtility.ucfirst(Theme)";
+ //BA.debugLineNum = 120;BA.debugLine="Public Sub SelectTheme(Theme As String)";
+ //BA.debugLineNum = 132;BA.debugLine="Theme = CFStringUtility.ucfirst(Theme)";
 _theme = _cfstringutility._ucfirst(_theme);
- //BA.debugLineNum = 133;BA.debugLine="If AvailableThemes.ThemesList.ContainsKey(Theme)";
+ //BA.debugLineNum = 134;BA.debugLine="If AvailableThemes.ThemesList.ContainsKey(Theme)";
 if (_availablethemes._themeslist().ContainsKey((Object)(_theme))) { 
- //BA.debugLineNum = 135;BA.debugLine="DefaultTheme = AvailableThemes.ThemesList.Get(Th";
+ //BA.debugLineNum = 136;BA.debugLine="DefaultTheme = AvailableThemes.ThemesList.Get(Th";
 _defaulttheme.setObject((anywheresoftware.b4a.objects.collections.Map.MyMap)(_availablethemes._themeslist().Get((Object)(_theme))));
  }else {
- //BA.debugLineNum = 139;BA.debugLine="LogError(\"Could not find the selected theme(\" &";
+ //BA.debugLineNum = 140;BA.debugLine="LogError(\"Could not find the selected theme(\" &";
 anywheresoftware.b4a.keywords.Common.LogError("Could not find the selected theme("+_theme+"). Please check the Theme name");
- //BA.debugLineNum = 140;BA.debugLine="ExitApplication";
+ //BA.debugLineNum = 141;BA.debugLine="ExitApplication";
 anywheresoftware.b4a.keywords.Common.ExitApplication();
  };
- //BA.debugLineNum = 144;BA.debugLine="End Sub";
+ //BA.debugLineNum = 145;BA.debugLine="End Sub";
 return "";
 }
 }

@@ -69,36 +69,37 @@ Library2=jfx
 Library3=cssutils
 Library4=javaobject
 Module1=tODOS
-Module10=CFFileUtility
-Module11=CFMaterialCheckBox
-Module12=CFBarPreLoader
-Module13=CFMaterialDivider
-Module14=CFControlsUtils
-Module15=CFMetroLinkLabel
-Module16=CFMaterialLabel
-Module17=CFMetroToggleButton
-Module18=CFMaterialFAB
-Module19=CFMaterialRadioBox
-Module2=CFMaterialAppBar
-Module20=CFMaterialSquareFAB
-Module21=CFMaterialSwitch
-Module22=CFMetroCircleToggleButton
-Module23=CFMaterialLinearProgressBar
-Module24=CFMaterialCard
-Module25=CFAnimationManager
-Module26=CFMathUtility
-Module27=CFDataTypeUtility
-Module28=CFAppUtility
-Module3=CFStyleManager
-Module4=CFMaterialButton
-Module5=CFModal
-Module6=CFStringUtility
-Module7=CFDataGeneratorUtility
-Module8=CFConfigs
-Module9=CFThemes
+Module10=CFStyleManager
+Module11=CFMaterialAppBar
+Module12=CFMaterialButton
+Module13=CFModal
+Module14=CFConfigs
+Module15=CFThemes
+Module16=CFFileUtility
+Module17=CFMaterialCheckBox
+Module18=CFMaterialDivider
+Module19=CFMetroLinkLabel
+Module2=CFControlsUtils
+Module20=CFMaterialLabel
+Module21=CFMetroToggleButton
+Module22=CFMaterialFAB
+Module23=CFMaterialRadioBox
+Module24=CFMaterialSquareFAB
+Module25=CFMetroCircleToggleButton
+Module26=CFMaterialCard
+Module27=CFAnimationManager
+Module28=CFMathUtility
+Module29=CFDataTypeUtility
+Module3=CFMaterialLinearProgressBar
+Module4=CFStringUtility
+Module5=CFDataGeneratorUtility
+Module6=CFAppUtility
+Module7=CFBarPreLoader
+Module8=CFMaterialSwitch
+Module9=CFMaterialTab
 NumberOfFiles=31
 NumberOfLibraries=4
-NumberOfModules=28
+NumberOfModules=29
 Version=6.51
 @EndOfDesignText@
 #Region Project Attributes 
@@ -120,7 +121,7 @@ Version=6.51
 #End Region
 
 Sub Process_Globals
- 
+
 End Sub
 
 #Region Ignored Subs...

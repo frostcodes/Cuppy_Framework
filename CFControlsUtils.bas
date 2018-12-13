@@ -7,6 +7,8 @@ Version=5.51
 'This file contains function that are useful for controls and views
 Private Sub Process_Globals
 	Private fx As JFX
+	Type TextMetric(Width As Double, Height As Double)
+	
 End Sub
  
 'Set the Rotation a Control
@@ -24,14 +26,14 @@ Public Sub GetRotation(controlObj As Node) As Float
 End Sub
 
 'Sets a Control Background color
-Public Sub SetBG(controlObj As Node, color As String)
+Public Sub SetBackgroundColor(controlObj As Node, color As String)
 	 
 	CSSUtils.SetStyleProperty( controlObj, "-fx-background-color", color)
 	 
 End Sub
 
 'Get a Control Background color
-Public Sub GetBG(controlObj As Node) As String
+Public Sub GetBackgroundColor(controlObj As Node) As String
 	 
 	Return CSSUtils.GetStyleProperty(controlObj, "-fx-background-color")
 	 
@@ -226,6 +228,17 @@ Public Sub ConfigureTooltip(OpenDelay As Long,VisibleDuration As Long,CloseDelay
 		Log($"*******${CRLF}Tooltip Configuration failed${CRLF}*******"$)
 	End If
 
+End Sub
+
+Public Sub MeasureText(Text As String,TFont As Font) As TextMetric
+	Dim TM As TextMetric
+	TM.Initialize
+	Dim T As JavaObject
+	T.InitializeNewInstance("javafx.scene.text.Text",Array(Text))
+	T.RunMethod("setFont",Array(TFont))
+	TM.Width = T.RunMethod("prefWidth",Array(-1.0))
+	TM.Height = T.RunMethod("prefHeight",Array(TM.Width))
+	Return TM
 End Sub
 
 

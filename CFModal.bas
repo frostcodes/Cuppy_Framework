@@ -72,10 +72,16 @@ End Sub
 
 #Region Actions and Effects
  
-Public Sub setBg(color As String)
+Public Sub setBackgroundColor(color As String)
  
-	CFControlsUtils.setBG( ModalPane, color)
+	CFControlsUtils.SetBackgroundColor( ModalPane, color)
  
+End Sub
+
+Public Sub getBackgroundColor As String
+  	
+	Return CFControlsUtils.GetBackgroundColor(ModalPane)
+	
 End Sub
   
 Public Sub setRotation(angle As Float)
@@ -215,7 +221,7 @@ Public Sub getTop As Double
 	
 End Sub
   
-'Get or set the Node Parent
+'Get the Node Parent
 Public Sub getParent As Node
 	
 	Return mBase.Parent

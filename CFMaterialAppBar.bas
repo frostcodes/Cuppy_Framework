@@ -43,7 +43,7 @@ Public Sub DesignerCreateView (Base As Pane, Lbl As Label, Props As Map)
 	mBase.LoadLayout("CFMaterialAppBarUI")
 	
 	'set using theme...
-	setBg(CFStyleManager.DefaultTheme.Get("primary"))
+	setBackgroundColor(CFStyleManager.DefaultTheme.Get("primary"))
 	TitleLabel.Font = CFStyleManager.SelectFont("Black", 14)
 	
 	setTitle(Props.Get("Title"))
@@ -131,7 +131,7 @@ Public Sub getTop As Double
 	
 End Sub
   
-'Get or set the Node Parent
+'Get the Node Parent
 Public Sub getParent As Node
 	
 	Return mBase.Parent
@@ -192,13 +192,19 @@ End Sub
 #Region Actions and Effects
 
 
-Public Sub setBg(color As String)
+Public Sub setBackgroundColor(color As String)
 	
-	CFControlsUtils.SetBG( Label1,  color)
-	CFControlsUtils.SetBG( InnerPane, color)
+	CFControlsUtils.SetBackgroundColor( Label1,  color)
+	CFControlsUtils.SetBackgroundColor( InnerPane, color)
  
 End Sub
  
+Public Sub getBackgroundColor As String
+  	
+	Return CFControlsUtils.GetBackgroundColor(InnerPane)
+	
+End Sub
+  
 Public Sub setRotation(angle As Float)
 	
 	CFControlsUtils.setRotation(Label1, angle) 'rotate

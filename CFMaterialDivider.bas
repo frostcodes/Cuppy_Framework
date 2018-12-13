@@ -13,7 +13,8 @@ Version=5.51
 '#DesignerProperty: Key: DividerOrientation, DisplayName: Orientation, FieldType: String, DefaultValue: Horizontal, List: Horizontal|Vertical
 
 #Region Internal Segment
-'TODO: make orientation property: horizontal/vertical..using rotate 
+
+ 
 Sub Class_Globals
 	Private fx As JFX
 	Private mEventName As String 'ignore
@@ -38,7 +39,7 @@ Public Sub DesignerCreateView (Base As Pane, Lbl As Label, Props As Map)
 	mBase.LoadLayout("CFMaterialDividerUI")
 	
 	'set using theme...
-	setBg(CFStyleManager.DefaultTheme.Get("divider"))
+	setBackgroundColor(CFStyleManager.DefaultTheme.Get("divider"))
 	setTag(Lbl.Tag)
 	setAlpha(Lbl.Alpha)
 '	setOrientation(Props.Get("DividerOrientation"))
@@ -63,10 +64,16 @@ End Sub
 
 #Region Actions and Effects
 
-Public Sub setBg(color As String)
+Public Sub setBackgroundColor(color As String)
  
-	CFControlsUtils.SetBG(line, color)
+	CFControlsUtils.setBackgroundColor(line, color)
  
+End Sub
+
+Public Sub getBackgroundColor As String
+  	
+	Return CFControlsUtils.GetBackgroundColor(line)
+	
 End Sub
 
 'Public Sub setRotation(angle As Float)
@@ -223,7 +230,7 @@ Public Sub getTop As Double
 	
 End Sub
   
-'Get or set the Node Parent
+'Get the Node Parent
 Public Sub getParent As Node
 	
 	Return mBase.Parent
@@ -278,3 +285,10 @@ End Sub
 '	
 
 #End Region
+
+
+
+
+
+
+'TODO: make orientation property: horizontal/vertical..using rotate 

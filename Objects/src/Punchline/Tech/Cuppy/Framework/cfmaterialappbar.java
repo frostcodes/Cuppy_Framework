@@ -33,15 +33,15 @@ public anywheresoftware.b4j.objects.PaneWrapper.ConcretePaneWrapper _innerpane =
 public anywheresoftware.b4j.objects.ButtonWrapper _innerbutton = null;
 public anywheresoftware.b4j.objects.LabelWrapper _titlelabel = null;
 public b4j.example.cssutils _cssutils = null;
-public punchline.tech.cuppy.framework.cfstylemanager _cfstylemanager = null;
+public punchline.tech.cuppy.framework.cfcontrolsutils _cfcontrolsutils = null;
 public punchline.tech.cuppy.framework.cfstringutility _cfstringutility = null;
 public punchline.tech.cuppy.framework.cfdatageneratorutility _cfdatageneratorutility = null;
+public punchline.tech.cuppy.framework.cfapputility _cfapputility = null;
+public punchline.tech.cuppy.framework.cfstylemanager _cfstylemanager = null;
 public punchline.tech.cuppy.framework.cfconfigs _cfconfigs = null;
 public punchline.tech.cuppy.framework.cffileutility _cffileutility = null;
-public punchline.tech.cuppy.framework.cfcontrolsutils _cfcontrolsutils = null;
 public punchline.tech.cuppy.framework.cfmathutility _cfmathutility = null;
 public punchline.tech.cuppy.framework.cfdatatypeutility _cfdatatypeutility = null;
-public punchline.tech.cuppy.framework.cfapputility _cfapputility = null;
 public String  _base_resize(double _width,double _height) throws Exception{
  //BA.debugLineNum = 54;BA.debugLine="Private Sub Base_Resize (Width As Double, Height A";
  //BA.debugLineNum = 56;BA.debugLine="CallSubDelayed3(mCallBack, mEventName & \"_Resize\"";
@@ -76,8 +76,8 @@ public String  _designercreateview(anywheresoftware.b4j.objects.PaneWrapper.Conc
 _mbase = _base;
  //BA.debugLineNum = 37;BA.debugLine="mBase.LoadLayout(\"CFMaterialAppBarUI\")";
 _mbase.LoadLayout(ba,"CFMaterialAppBarUI");
- //BA.debugLineNum = 40;BA.debugLine="setBg(CFStyleManager.DefaultTheme.Get(\"primary\"))";
-_setbg(BA.ObjectToString(_cfstylemanager._defaulttheme.Get((Object)("primary"))));
+ //BA.debugLineNum = 40;BA.debugLine="setBackgroundColor(CFStyleManager.DefaultTheme.Ge";
+_setbackgroundcolor(BA.ObjectToString(_cfstylemanager._defaulttheme.Get((Object)("primary"))));
  //BA.debugLineNum = 41;BA.debugLine="TitleLabel.Font = CFStyleManager.SelectFont(\"Blac";
 _titlelabel.setFont(_cfstylemanager._selectfont("Black",14));
  //BA.debugLineNum = 43;BA.debugLine="setTitle(Props.Get(\"Title\"))";
@@ -102,6 +102,13 @@ if (true) return _mbase.getAlpha();
  //BA.debugLineNum = 99;BA.debugLine="End Sub";
 return 0;
 }
+public String  _getbackgroundcolor() throws Exception{
+ //BA.debugLineNum = 196;BA.debugLine="Public Sub getBackgroundColor As String";
+ //BA.debugLineNum = 198;BA.debugLine="Return CFControlsUtils.GetBackgroundColor(InnerPa";
+if (true) return _cfcontrolsutils._getbackgroundcolor((anywheresoftware.b4j.objects.NodeWrapper.ConcreteNodeWrapper) anywheresoftware.b4a.AbsObjectWrapper.ConvertToWrapper(new anywheresoftware.b4j.objects.NodeWrapper.ConcreteNodeWrapper(), (javafx.scene.Node)(_innerpane.getObject())));
+ //BA.debugLineNum = 200;BA.debugLine="End Sub";
+return "";
+}
 public anywheresoftware.b4j.objects.PaneWrapper.ConcretePaneWrapper  _getbase() throws Exception{
  //BA.debugLineNum = 60;BA.debugLine="Public Sub GetBase As Pane";
  //BA.debugLineNum = 61;BA.debugLine="Return mBase";
@@ -110,10 +117,10 @@ if (true) return _mbase;
 return null;
 }
 public String  _geteffect(String _effect) throws Exception{
- //BA.debugLineNum = 223;BA.debugLine="Public Sub getEffect(effect As String) As String";
- //BA.debugLineNum = 225;BA.debugLine="Return CFControlsUtils.GetEffect(Label1)";
+ //BA.debugLineNum = 229;BA.debugLine="Public Sub getEffect(effect As String) As String";
+ //BA.debugLineNum = 231;BA.debugLine="Return CFControlsUtils.GetEffect(Label1)";
 if (true) return _cfcontrolsutils._geteffect((anywheresoftware.b4j.objects.NodeWrapper.ConcreteNodeWrapper) anywheresoftware.b4a.AbsObjectWrapper.ConvertToWrapper(new anywheresoftware.b4j.objects.NodeWrapper.ConcreteNodeWrapper(), (javafx.scene.Node)(_label1.getObject())));
- //BA.debugLineNum = 227;BA.debugLine="End Sub";
+ //BA.debugLineNum = 233;BA.debugLine="End Sub";
 return "";
 }
 public boolean  _getenabled() throws Exception{
@@ -131,10 +138,10 @@ if (true) return _mbase.getPrefHeight();
 return 0;
 }
 public String  _geticon() throws Exception{
- //BA.debugLineNum = 245;BA.debugLine="Public Sub getIcon As String";
- //BA.debugLineNum = 247;BA.debugLine="Return InnerButton.Text";
+ //BA.debugLineNum = 251;BA.debugLine="Public Sub getIcon As String";
+ //BA.debugLineNum = 253;BA.debugLine="Return InnerButton.Text";
 if (true) return _innerbutton.getText();
- //BA.debugLineNum = 249;BA.debugLine="End Sub";
+ //BA.debugLineNum = 255;BA.debugLine="End Sub";
 return "";
 }
 public double  _getleft() throws Exception{
@@ -152,10 +159,10 @@ if (true) return _mbase.getParent();
 return null;
 }
 public boolean  _getshadowenabled() throws Exception{
- //BA.debugLineNum = 281;BA.debugLine="Public Sub getShadowEnabled As Boolean";
- //BA.debugLineNum = 283;BA.debugLine="Return Label1.Visible";
+ //BA.debugLineNum = 287;BA.debugLine="Public Sub getShadowEnabled As Boolean";
+ //BA.debugLineNum = 289;BA.debugLine="Return Label1.Visible";
 if (true) return _label1.getVisible();
- //BA.debugLineNum = 285;BA.debugLine="End Sub";
+ //BA.debugLineNum = 291;BA.debugLine="End Sub";
 return false;
 }
 public Object  _gettag() throws Exception{
@@ -166,10 +173,10 @@ if (true) return _mbase.getTag();
 return null;
 }
 public String  _gettitle() throws Exception{
- //BA.debugLineNum = 251;BA.debugLine="Public Sub getTitle As String";
- //BA.debugLineNum = 253;BA.debugLine="Return TitleLabel.Text";
+ //BA.debugLineNum = 257;BA.debugLine="Public Sub getTitle As String";
+ //BA.debugLineNum = 259;BA.debugLine="Return TitleLabel.Text";
 if (true) return _titlelabel.getText();
- //BA.debugLineNum = 255;BA.debugLine="End Sub";
+ //BA.debugLineNum = 261;BA.debugLine="End Sub";
 return "";
 }
 public double  _gettop() throws Exception{
@@ -204,28 +211,28 @@ _mcallback = _callback;
 return "";
 }
 public String  _innerbutton_mousepressed(anywheresoftware.b4j.objects.NodeWrapper.MouseEventWrapper _eventdata) throws Exception{
- //BA.debugLineNum = 287;BA.debugLine="Private Sub InnerButton_MousePressed (EventData As";
- //BA.debugLineNum = 289;BA.debugLine="InnerButton.RequestFocus 'set focus";
+ //BA.debugLineNum = 293;BA.debugLine="Private Sub InnerButton_MousePressed (EventData As";
+ //BA.debugLineNum = 295;BA.debugLine="InnerButton.RequestFocus 'set focus";
 _innerbutton.RequestFocus();
- //BA.debugLineNum = 291;BA.debugLine="CallSubDelayed2(mCallBack, mEventName & \"_MousePr";
+ //BA.debugLineNum = 297;BA.debugLine="CallSubDelayed2(mCallBack, mEventName & \"_MousePr";
 __c.CallSubDelayed2(ba,_mcallback,_meventname+"_MousePressed",(Object)(_eventdata));
- //BA.debugLineNum = 293;BA.debugLine="End Sub";
+ //BA.debugLineNum = 299;BA.debugLine="End Sub";
 return "";
 }
 public String  _innerpane_mousepressed(anywheresoftware.b4j.objects.NodeWrapper.MouseEventWrapper _eventdata) throws Exception{
- //BA.debugLineNum = 295;BA.debugLine="Private Sub InnerPane_MousePressed (EventData As M";
- //BA.debugLineNum = 297;BA.debugLine="InnerPane.RequestFocus 'set focus";
+ //BA.debugLineNum = 301;BA.debugLine="Private Sub InnerPane_MousePressed (EventData As M";
+ //BA.debugLineNum = 303;BA.debugLine="InnerPane.RequestFocus 'set focus";
 _innerpane.RequestFocus();
- //BA.debugLineNum = 299;BA.debugLine="CallSubDelayed2(mCallBack, mEventName & \"_PaneMou";
+ //BA.debugLineNum = 305;BA.debugLine="CallSubDelayed2(mCallBack, mEventName & \"_PaneMou";
 __c.CallSubDelayed2(ba,_mcallback,_meventname+"_PaneMousePressed",(Object)(_eventdata));
- //BA.debugLineNum = 301;BA.debugLine="End Sub";
+ //BA.debugLineNum = 307;BA.debugLine="End Sub";
 return "";
 }
 public String  _removeeffects() throws Exception{
- //BA.debugLineNum = 229;BA.debugLine="Public Sub RemoveEffects()";
- //BA.debugLineNum = 231;BA.debugLine="CFControlsUtils.removeEffect(Label1)";
+ //BA.debugLineNum = 235;BA.debugLine="Public Sub RemoveEffects()";
+ //BA.debugLineNum = 237;BA.debugLine="CFControlsUtils.removeEffect(Label1)";
 _cfcontrolsutils._removeeffect((anywheresoftware.b4j.objects.NodeWrapper.ConcreteNodeWrapper) anywheresoftware.b4a.AbsObjectWrapper.ConvertToWrapper(new anywheresoftware.b4j.objects.NodeWrapper.ConcreteNodeWrapper(), (javafx.scene.Node)(_label1.getObject())));
- //BA.debugLineNum = 233;BA.debugLine="End Sub";
+ //BA.debugLineNum = 239;BA.debugLine="End Sub";
 return "";
 }
 public String  _removenodefromparent() throws Exception{
@@ -242,38 +249,38 @@ _mbase.setAlpha(_alpha);
  //BA.debugLineNum = 105;BA.debugLine="End Sub";
 return "";
 }
-public String  _setbg(String _color) throws Exception{
- //BA.debugLineNum = 189;BA.debugLine="Public Sub setBg(color As String)";
- //BA.debugLineNum = 191;BA.debugLine="CFControlsUtils.SetBG( Label1,  color)";
-_cfcontrolsutils._setbg((anywheresoftware.b4j.objects.NodeWrapper.ConcreteNodeWrapper) anywheresoftware.b4a.AbsObjectWrapper.ConvertToWrapper(new anywheresoftware.b4j.objects.NodeWrapper.ConcreteNodeWrapper(), (javafx.scene.Node)(_label1.getObject())),_color);
- //BA.debugLineNum = 192;BA.debugLine="CFControlsUtils.SetBG( InnerPane, color)";
-_cfcontrolsutils._setbg((anywheresoftware.b4j.objects.NodeWrapper.ConcreteNodeWrapper) anywheresoftware.b4a.AbsObjectWrapper.ConvertToWrapper(new anywheresoftware.b4j.objects.NodeWrapper.ConcreteNodeWrapper(), (javafx.scene.Node)(_innerpane.getObject())),_color);
+public String  _setbackgroundcolor(String _color) throws Exception{
+ //BA.debugLineNum = 189;BA.debugLine="Public Sub setBackgroundColor(color As String)";
+ //BA.debugLineNum = 191;BA.debugLine="CFControlsUtils.SetBackgroundColor( Label1,  colo";
+_cfcontrolsutils._setbackgroundcolor((anywheresoftware.b4j.objects.NodeWrapper.ConcreteNodeWrapper) anywheresoftware.b4a.AbsObjectWrapper.ConvertToWrapper(new anywheresoftware.b4j.objects.NodeWrapper.ConcreteNodeWrapper(), (javafx.scene.Node)(_label1.getObject())),_color);
+ //BA.debugLineNum = 192;BA.debugLine="CFControlsUtils.SetBackgroundColor( InnerPane, co";
+_cfcontrolsutils._setbackgroundcolor((anywheresoftware.b4j.objects.NodeWrapper.ConcreteNodeWrapper) anywheresoftware.b4a.AbsObjectWrapper.ConvertToWrapper(new anywheresoftware.b4j.objects.NodeWrapper.ConcreteNodeWrapper(), (javafx.scene.Node)(_innerpane.getObject())),_color);
  //BA.debugLineNum = 194;BA.debugLine="End Sub";
 return "";
 }
 public String  _setborder(String _color,int _width) throws Exception{
- //BA.debugLineNum = 203;BA.debugLine="Public Sub setBorder(color As String , width As In";
- //BA.debugLineNum = 205;BA.debugLine="CFControlsUtils.setBorder(Label1, color, width)";
+ //BA.debugLineNum = 209;BA.debugLine="Public Sub setBorder(color As String , width As In";
+ //BA.debugLineNum = 211;BA.debugLine="CFControlsUtils.setBorder(Label1, color, width)";
 _cfcontrolsutils._setborder((anywheresoftware.b4j.objects.NodeWrapper.ConcreteNodeWrapper) anywheresoftware.b4a.AbsObjectWrapper.ConvertToWrapper(new anywheresoftware.b4j.objects.NodeWrapper.ConcreteNodeWrapper(), (javafx.scene.Node)(_label1.getObject())),_color,_width);
- //BA.debugLineNum = 206;BA.debugLine="CFControlsUtils.setBorder(InnerPane, color, width";
+ //BA.debugLineNum = 212;BA.debugLine="CFControlsUtils.setBorder(InnerPane, color, width";
 _cfcontrolsutils._setborder((anywheresoftware.b4j.objects.NodeWrapper.ConcreteNodeWrapper) anywheresoftware.b4a.AbsObjectWrapper.ConvertToWrapper(new anywheresoftware.b4j.objects.NodeWrapper.ConcreteNodeWrapper(), (javafx.scene.Node)(_innerpane.getObject())),_color,_width);
- //BA.debugLineNum = 208;BA.debugLine="End Sub";
+ //BA.debugLineNum = 214;BA.debugLine="End Sub";
 return "";
 }
 public String  _setborderradius(int _radius) throws Exception{
- //BA.debugLineNum = 210;BA.debugLine="Public Sub setBorderRadius(radius As Int)";
- //BA.debugLineNum = 212;BA.debugLine="CFControlsUtils.setBorderRadius(Label1, radius)";
+ //BA.debugLineNum = 216;BA.debugLine="Public Sub setBorderRadius(radius As Int)";
+ //BA.debugLineNum = 218;BA.debugLine="CFControlsUtils.setBorderRadius(Label1, radius)";
 _cfcontrolsutils._setborderradius((anywheresoftware.b4j.objects.NodeWrapper.ConcreteNodeWrapper) anywheresoftware.b4a.AbsObjectWrapper.ConvertToWrapper(new anywheresoftware.b4j.objects.NodeWrapper.ConcreteNodeWrapper(), (javafx.scene.Node)(_label1.getObject())),_radius);
- //BA.debugLineNum = 213;BA.debugLine="CFControlsUtils.setBorderRadius(InnerPane, radius";
+ //BA.debugLineNum = 219;BA.debugLine="CFControlsUtils.setBorderRadius(InnerPane, radius";
 _cfcontrolsutils._setborderradius((anywheresoftware.b4j.objects.NodeWrapper.ConcreteNodeWrapper) anywheresoftware.b4a.AbsObjectWrapper.ConvertToWrapper(new anywheresoftware.b4j.objects.NodeWrapper.ConcreteNodeWrapper(), (javafx.scene.Node)(_innerpane.getObject())),_radius);
- //BA.debugLineNum = 215;BA.debugLine="End Sub";
+ //BA.debugLineNum = 221;BA.debugLine="End Sub";
 return "";
 }
 public String  _seteffect(String _effect) throws Exception{
- //BA.debugLineNum = 217;BA.debugLine="Public Sub setEffect(effect As String)";
- //BA.debugLineNum = 219;BA.debugLine="CFControlsUtils.setEffect(Label1, effect)";
+ //BA.debugLineNum = 223;BA.debugLine="Public Sub setEffect(effect As String)";
+ //BA.debugLineNum = 225;BA.debugLine="CFControlsUtils.setEffect(Label1, effect)";
 _cfcontrolsutils._seteffect((anywheresoftware.b4j.objects.NodeWrapper.ConcreteNodeWrapper) anywheresoftware.b4a.AbsObjectWrapper.ConvertToWrapper(new anywheresoftware.b4j.objects.NodeWrapper.ConcreteNodeWrapper(), (javafx.scene.Node)(_label1.getObject())),_effect);
- //BA.debugLineNum = 221;BA.debugLine="End Sub";
+ //BA.debugLineNum = 227;BA.debugLine="End Sub";
 return "";
 }
 public String  _setenabled(boolean _enabled) throws Exception{
@@ -284,40 +291,40 @@ _mbase.setEnabled(_enabled);
 return "";
 }
 public String  _setenableshadow(boolean _boolval) throws Exception{
- //BA.debugLineNum = 275;BA.debugLine="Public Sub setEnableShadow(BoolVal As Boolean)";
- //BA.debugLineNum = 277;BA.debugLine="Label1.Visible = BoolVal";
+ //BA.debugLineNum = 281;BA.debugLine="Public Sub setEnableShadow(BoolVal As Boolean)";
+ //BA.debugLineNum = 283;BA.debugLine="Label1.Visible = BoolVal";
 _label1.setVisible(_boolval);
- //BA.debugLineNum = 279;BA.debugLine="End Sub";
+ //BA.debugLineNum = 285;BA.debugLine="End Sub";
 return "";
 }
 public String  _sethideicon(boolean _boolval) throws Exception{
- //BA.debugLineNum = 269;BA.debugLine="Public Sub setHideIcon(BoolVal As Boolean)";
- //BA.debugLineNum = 271;BA.debugLine="InnerButton.Visible = Not(BoolVal)";
+ //BA.debugLineNum = 275;BA.debugLine="Public Sub setHideIcon(BoolVal As Boolean)";
+ //BA.debugLineNum = 277;BA.debugLine="InnerButton.Visible = Not(BoolVal)";
 _innerbutton.setVisible(__c.Not(_boolval));
- //BA.debugLineNum = 273;BA.debugLine="End Sub";
+ //BA.debugLineNum = 279;BA.debugLine="End Sub";
 return "";
 }
 public String  _sethidetitle(boolean _boolval) throws Exception{
- //BA.debugLineNum = 263;BA.debugLine="Public Sub setHideTitle(BoolVal As Boolean)";
- //BA.debugLineNum = 265;BA.debugLine="TitleLabel.Visible = Not(BoolVal)";
+ //BA.debugLineNum = 269;BA.debugLine="Public Sub setHideTitle(BoolVal As Boolean)";
+ //BA.debugLineNum = 271;BA.debugLine="TitleLabel.Visible = Not(BoolVal)";
 _titlelabel.setVisible(__c.Not(_boolval));
- //BA.debugLineNum = 267;BA.debugLine="End Sub";
+ //BA.debugLineNum = 273;BA.debugLine="End Sub";
 return "";
 }
 public String  _seticon(String _icontext) throws Exception{
- //BA.debugLineNum = 238;BA.debugLine="Public Sub setIcon(IconText As String)";
- //BA.debugLineNum = 240;BA.debugLine="InnerButton.Text = IconText";
+ //BA.debugLineNum = 244;BA.debugLine="Public Sub setIcon(IconText As String)";
+ //BA.debugLineNum = 246;BA.debugLine="InnerButton.Text = IconText";
 _innerbutton.setText(_icontext);
- //BA.debugLineNum = 242;BA.debugLine="End Sub";
+ //BA.debugLineNum = 248;BA.debugLine="End Sub";
 return "";
 }
 public String  _setrotation(float _angle) throws Exception{
- //BA.debugLineNum = 196;BA.debugLine="Public Sub setRotation(angle As Float)";
- //BA.debugLineNum = 198;BA.debugLine="CFControlsUtils.setRotation(Label1, angle) 'rotat";
+ //BA.debugLineNum = 202;BA.debugLine="Public Sub setRotation(angle As Float)";
+ //BA.debugLineNum = 204;BA.debugLine="CFControlsUtils.setRotation(Label1, angle) 'rotat";
 _cfcontrolsutils._setrotation((anywheresoftware.b4j.objects.NodeWrapper.ConcreteNodeWrapper) anywheresoftware.b4a.AbsObjectWrapper.ConvertToWrapper(new anywheresoftware.b4j.objects.NodeWrapper.ConcreteNodeWrapper(), (javafx.scene.Node)(_label1.getObject())),_angle);
- //BA.debugLineNum = 199;BA.debugLine="CFControlsUtils.setRotation(InnerPane , angle) 'r";
+ //BA.debugLineNum = 205;BA.debugLine="CFControlsUtils.setRotation(InnerPane , angle) 'r";
 _cfcontrolsutils._setrotation((anywheresoftware.b4j.objects.NodeWrapper.ConcreteNodeWrapper) anywheresoftware.b4a.AbsObjectWrapper.ConvertToWrapper(new anywheresoftware.b4j.objects.NodeWrapper.ConcreteNodeWrapper(), (javafx.scene.Node)(_innerpane.getObject())),_angle);
- //BA.debugLineNum = 201;BA.debugLine="End Sub";
+ //BA.debugLineNum = 207;BA.debugLine="End Sub";
 return "";
 }
 public String  _settag(Object _tag) throws Exception{
@@ -328,10 +335,10 @@ _mbase.setTag(_tag);
 return "";
 }
 public String  _settitle(String _title) throws Exception{
- //BA.debugLineNum = 257;BA.debugLine="Public Sub setTitle(Title As String)";
- //BA.debugLineNum = 259;BA.debugLine="TitleLabel.Text = Title";
+ //BA.debugLineNum = 263;BA.debugLine="Public Sub setTitle(Title As String)";
+ //BA.debugLineNum = 265;BA.debugLine="TitleLabel.Text = Title";
 _titlelabel.setText(_title);
- //BA.debugLineNum = 261;BA.debugLine="End Sub";
+ //BA.debugLineNum = 267;BA.debugLine="End Sub";
 return "";
 }
 public String  _setvisible(boolean _visible) throws Exception{

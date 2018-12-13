@@ -90,12 +90,18 @@ End Sub
 
 #Region Actions and Effects
 
-Public Sub setBg(color As String)
+Public Sub setBackgroundColor(color As String)
  
-	CFControlsUtils.SetBG( SwitchPane, color)
+	CFControlsUtils.SetBackgroundColor( SwitchPane, color)
  
 End Sub
-
+ 
+Public Sub getBackgroundColor As String
+  	
+	Return CFControlsUtils.GetBackgroundColor(SwitchPane)
+	
+End Sub
+  
 Public Sub setRotation(angle As Float)
 	
 	CFControlsUtils.SetRotation(SwitchPane, angle) 'rotate
@@ -137,7 +143,7 @@ End Sub
   
 Public Sub setCheckedColor(color As String)
   	
-	CFControlsUtils.SetBG( SwitchBtn, color)
+	CFControlsUtils.SetBackgroundColor( SwitchBtn, color)
 	
 End Sub
  
@@ -147,22 +153,21 @@ Public Sub setCheckState(value As Int)
 		
 		SwitchBtn.SetLayoutAnimated(200 , 10, SwitchBtn.Top, SwitchBtn.PrefWidth, SwitchBtn.PrefHeight)
 		SwitchPane.SetAlphaAnimated(200, 1 )
-		setBg(CFStyleManager.DefaultTheme.Get("divider"))
+		setBackgroundColor(CFStyleManager.DefaultTheme.Get("divider"))
 		  
 	Else if value = CHECKED_STATE Then
 	
 		'Fade effect
 		SwitchPane.SetAlphaAnimated(200, 0.6 )
-		setBg(CFControlsUtils.GetBG(SwitchBtn))
+		setBackgroundColor(CFControlsUtils.getBackgroundColor(SwitchBtn))
 		
 		SwitchBtn.SetLayoutAnimated(200 , 23 , SwitchBtn.Top, SwitchBtn.PrefWidth, SwitchBtn.PrefWidth)
 		
 	Else
-			
 		 
 		SwitchBtn.SetLayoutAnimated(200 , 23 , SwitchBtn.Top, SwitchBtn.PrefWidth, SwitchBtn.PrefWidth)
 		SwitchPane.SetAlphaAnimated(200, 1 )
-		setBg(CFStyleManager.DefaultTheme.Get("divider"))
+		setBackgroundColor(CFStyleManager.DefaultTheme.Get("divider"))
 		  
 	End If
 	
@@ -254,7 +259,7 @@ Public Sub getTop As Double
 	
 End Sub
   
-'Get or set the Node Parent
+'Get the Node Parent
 Public Sub getParent As Node
 	
 	Return mBase.Parent

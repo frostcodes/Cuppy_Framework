@@ -198,7 +198,8 @@ End Sub
 'Example:
 '<code> 
 'Dim CardArray() As String = Array As String(1, 2, 3, 4, 5, 6, 7, 8, 9)
-'Log(StringUtility.shuffleArray(CardArray))
+
+'Log(CFStringUtility.shuffleArray(CardArray))
 '</code>
 'FORM: https://www.b4x.com/android/forum/threads/randomly-shuffle-a-string-array.39435/
 Public Sub ShuffleArray(StringArray() As String) As String()
@@ -221,12 +222,12 @@ Public Sub RandListValue(ListX As List) As Object
 	Return ListX.Get(Rnd(0, ListX.Size -1))
 	
 End Sub
-
- 'This will generate random string 
- 'Example:
-'<code>log(StringUtility.generateRandomString(16)) 'This will generate 16 random characters
+  
+'This will generate random string 
+'Example:
+'<code>log(CFStringUtility.generateRandomString(16)) 'This will generate 16 random characters
 ' 'Outputs something like this: Phapk3eN6VmlbGlU
- ' </code>
+' </code>
 'FROM: https://www.b4x.com/android/forum/threads/create-random-string.24403/
 Public Sub GenerateRandomString(StrLength As Int) As String
 	Dim RndString As String
@@ -242,7 +243,7 @@ End Sub
  
  'This will generate random string but with symbols always
  'Example:
-'<code>log(StringUtility.generateRandomString2(16)) 'This will generate 16 random characters
+'<code>log(CFStringUtility.generateRandomString2(16)) 'This will generate 16 random characters
 ' 'Outputs something like this: !hap$k3eN6V@mlbG
  ' </code>
 Public Sub GenerateRandomString2(StrLength As Int) As String
@@ -263,7 +264,7 @@ End Sub
  
 'This will generate random numeric codes
 'Example:
-'<code>log(StringUtility.generatePinCode(4)) 'This will generate 4 random numbers
+'<code>log(CFStringUtility.generatePinCode(4)) 'This will generate 4 random numbers
 ' 'Outputs something like this: 3760
  ' </code>
 Public Sub GeneratePinCode(PinLength As Int) As Int
@@ -284,7 +285,7 @@ End Sub
  'Convert an array of strings to a single string
  'Example:
  '<code>Dim RandomArray() As String = Array As String("A","B","C")
- 'log(StringUtility.StringArray2String(RandomArray)) 'would produce ABC
+ 'log(CFStringUtility.StringArray2String(RandomArray)) 'would produce ABC
  '</code>
 Public Sub StringArray2String(StrArray() As String) As String
  	
@@ -303,8 +304,8 @@ End Sub
 'first = Which number should be used For the first dupe increment
 'Example:
 '<code>
- 'Log(StringUtility.increment_string("test", "_",1)) ' returns: test_1
-'Log(StringUtility.increment_string("test_24", "_",1))  ' returns: test_25
+ 'Log(CFStringUtility.increment_string("test", "_",1)) ' returns: test_1
+'Log(CFStringUtility.increment_string("test_24", "_",1))  ' returns: test_25
 '</code>
 Public Sub Increment_String(str As String, separator As String , first As Int  ) As String
  	
@@ -455,7 +456,7 @@ End Sub
 'Takes multiple words separated by spaces Or underscores And camelizes them
 'Example:
 '<code>
- 'Log(StringUtility.camelize("my_dog_spot")) ' returns: myDogSpot
+ 'Log(CFStringUtility.camelize("my_dog_spot")) ' returns: myDogSpot
 '</code>
 Public Sub Camelize(str As String)  As String
 	Dim firstChar, result As String =""
@@ -529,7 +530,7 @@ End Sub
 'Example:
 '<code>
 'Dim RandomArray() As String = Array As String("sam", 1,2,3,4,5,6,7,8,9,0)
-'Log(StringUtility.Sprintf("Hi %s , how are you %d .. %d .. %d", RandomArray))
+'Log(CFStringUtility.Sprintf("Hi %s , how are you %d .. %d .. %d", RandomArray))
 'Returns:  Hi sam , how are you 1 .. 2 .. 3
 '</code>
 '
@@ -966,7 +967,7 @@ End Sub
 'Consider using parseQueryStringUrl() instead for a URL
 '
 '<code> Example: Parse { key1=value1&key2=value2 }
-'Log(StringUtility.parseQueryString	("key1=value1&key2=value2" ))
+'Log(CFStringUtility.parseQueryString	("key1=value1&key2=value2" ))
 ' 'This would output a map where key1 & key2 would be the keys
 ' 'And the values would be value1 & value2 respectively
 '</code>
@@ -1005,7 +1006,7 @@ End Sub
 'Helps to parse a URL with Query string into a MAP
 '
 '<code> Example: Parse { key1=value1&key2=value2 }
-'Log(StringUtility.parseQueryStringUrl("http://urlx.com?key1=value1&key2=value2"))
+'Log(CFStringUtility.parseQueryStringUrl("http://urlx.com?key1=value1&key2=value2"))
 ' 'This would output a map where key1 & key2 would be the keys
 ' 'And the values would be value1 & value2 respectively
 '</code>
@@ -1103,3 +1104,71 @@ Public Sub Plurify(text As String, count As Int, suffix As String) As String
 	
 End Sub
 
+'
+' Perform the ROT13 transform on a string
+'
+'The ROT13 encoding shifts every
+'letter 13 places in the alphabet. 
+'Numeric And non-alphabetical characters 
+'remains untouched.
+'
+'Tip: Encoding And decoding are done by 
+'the same function.
+'If you pass an encoded string As argument,
+'the original string will be returned.
+'
+'Example:
+'<code>
+'Log(CFStringUtility.Str_Rot13("Hello World")) 'Returns: Uryyb Jbeyq
+'Log(CFStringUtility.Str_Rot13("Uryyb Jbeyq")) 'Returns: Hello World
+'</code>
+Public Sub Str_Rot13(str As String) As String
+
+	Dim FromStr, ToStr As String
+	
+	FromStr = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
+	ToStr = "nopqrstuvwxyzabcdefghijklmNOPQRSTUVWXYZABCDEFGHIJKLM"
+	  
+	Return Strtr(str, FromStr, ToStr)
+	
+End Sub
+
+'The Strtr() function translates 
+'certain characters in a string.
+'
+'Note: If the from And To parameters 
+'are different in length, 
+'both will be formatted To the length
+'of the shortest.
+'
+'Example:
+'<code>
+'Log(CFStringUtility.Strtr("Hilla Warld","ia","eo")) 'Returns: Hello World
+'Log(CFStringUtility.Strtr("Hello World","eo","ia")) 'Returns: Hilla Warld
+'</code>
+Public Sub Strtr(Str As String, FromStringList As String, ToStringList As String) As String
+	
+	Dim result As StringBuilder
+	result.Initialize
+	
+	Dim count As Int = Str.Length -1
+
+	For i = 0 To count
+		
+		Dim CurrentChar As Char = Str.CharAt(i)
+		
+		If FromStringList.Contains(CurrentChar) Then
+		
+			result.Append(ToStringList.CharAt(FromStringList.IndexOf(CurrentChar))) 'reverse lookup
+		
+		Else
+			
+			result.Append(CurrentChar)
+		
+		End If
+		
+	Next
+	
+	Return result.ToString
+	
+End Sub

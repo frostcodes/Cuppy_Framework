@@ -30,14 +30,14 @@ public static String _min_safe_integer = "";
 public static String _min_value = "";
 public static String _max_value = "";
 public static b4j.example.cssutils _cssutils = null;
-public static punchline.tech.cuppy.framework.cfstylemanager _cfstylemanager = null;
+public static punchline.tech.cuppy.framework.cfcontrolsutils _cfcontrolsutils = null;
 public static punchline.tech.cuppy.framework.cfstringutility _cfstringutility = null;
 public static punchline.tech.cuppy.framework.cfdatageneratorutility _cfdatageneratorutility = null;
+public static punchline.tech.cuppy.framework.cfapputility _cfapputility = null;
+public static punchline.tech.cuppy.framework.cfstylemanager _cfstylemanager = null;
 public static punchline.tech.cuppy.framework.cfconfigs _cfconfigs = null;
 public static punchline.tech.cuppy.framework.cffileutility _cffileutility = null;
-public static punchline.tech.cuppy.framework.cfcontrolsutils _cfcontrolsutils = null;
 public static punchline.tech.cuppy.framework.cfdatatypeutility _cfdatatypeutility = null;
-public static punchline.tech.cuppy.framework.cfapputility _cfapputility = null;
 public static double  _acosh(double _arg) throws Exception{
  //BA.debugLineNum = 27;BA.debugLine="Public Sub Acosh (arg As Double) As Double";
  //BA.debugLineNum = 29;BA.debugLine="Return Logarithm(arg  + Sqrt(arg * arg - 1) , EXP";

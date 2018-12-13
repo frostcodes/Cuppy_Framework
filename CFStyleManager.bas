@@ -63,6 +63,7 @@ Private Sub Process_Globals
  'Default Theme
 	SelectTheme(THEME_BLUE) 'ignore
  
+  
 	  
 	'Reference cuppy controls so it can be updated all when the style changes
 	'allow setting of animation time...

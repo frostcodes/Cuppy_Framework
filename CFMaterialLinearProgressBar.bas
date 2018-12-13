@@ -38,6 +38,18 @@ Sub Class_Globals
 	Private mBase As Pane
 	Public ProgressBar As Pane
 	Public ProgressPane As Pane
+	Public ProgressPercentageText As Label
+	
+	#Region Progress States
+	
+	Public const STATE_ACTIVE As String = "#888888"
+	Public const STATE_SUCCESS As String = "#21BA45"
+	
+	Public const STATE_WARNING As String = "#F2C037"
+	Public const STATE_ERROR As String = "#DB2828"
+	
+	#End Region
+	
 End Sub
 
 Public Sub Initialize (Callback As Object, EventName As String)
@@ -49,13 +61,15 @@ Public Sub DesignerCreateView (Base As Pane, Lbl As Label, Props As Map)
 	mBase = Base
 	mBase.LoadLayout("CFMaterialLinearProgressBarUI")
 	'set using theme...
-	setBg(CFStyleManager.DefaultTheme.Get("divider"))
+	setBackgroundColor(CFStyleManager.DefaultTheme.Get("divider"))
 	setProgressColor(CFStyleManager.DefaultTheme.Get("primary"))
 	
 	setProgress(Props.Get("Progress")) 'set initial progress value
 	
 	setTag(Lbl.Tag)
 	setAlpha(Lbl.Alpha)
+	
+	ProgressPercentageText.Font = CFStyleManager.FONT_BOLD
 	
 End Sub
 
@@ -76,13 +90,7 @@ End Sub
 #End Region
 
 #Region Actions and Effects
-
-Public Sub setBg(color As String)
  
-	CFControlsUtils.SetBG( ProgressPane, color)
- 
-End Sub
-
 Public Sub setRotation(angle As Float)
 	
 	CFControlsUtils.SetRotation(ProgressPane, angle) 'rotate
@@ -121,9 +129,58 @@ End Sub
 
 #End Region
   
+'Get or Set the Progress bar color
 Public Sub setProgressColor(color As String)
   	
-	CFControlsUtils.SetBG( ProgressBar, color)
+	CFControlsUtils.setBackgroundColor(ProgressBar, color)
+	
+End Sub
+
+Public Sub getProgressColor As String
+  	
+	Return	CFControlsUtils.getBackgroundColor(ProgressBar)
+	
+End Sub
+ 
+'Get or Set the Progress bar background color
+Public Sub setBackgroundColor(color As String)
+  	
+	CFControlsUtils.setBackgroundColor(ProgressPane, color)
+	
+End Sub
+
+Public Sub getBackgroundColor As String
+  	
+	Return CFControlsUtils.GetBackgroundColor(ProgressPane)
+	
+End Sub
+ 
+'Set the Progress bar color according to state 
+Public Sub setProgressState(State As String)
+  	
+	setProgressColor(State)
+	
+End Sub
+  
+'Should progress bar have its background color inverted
+Public Sub setInvertBackground(BoolVal As Boolean)
+	
+	If BoolVal Then
+		
+		CFControlsUtils.setBackgroundColor(ProgressPane, "#2D2E2F")
+		
+	End If
+	
+End Sub
+
+'Should progress bar have its background light colored
+Public Sub setUseLightBackground(BoolVal As Boolean)
+	
+	If BoolVal Then
+		
+		CFControlsUtils.setBackgroundColor(ProgressPane, "#E5E5E5")
+		
+	End If
 	
 End Sub
 
@@ -133,12 +190,13 @@ Public Sub setProgress(value As Int)
 		value = 100
 		
 		'call callback for progress finished...
-		CallSub(mCallBack, mEventName & "_ProgressFinished")  
+		CallSub(mCallBack, mEventName & "_ProgressFinished")
 		
 	End If
 	
 	ProgressBar.SetLayoutAnimated(300, 0 ,0 , (value / 100) * mBase.PrefWidth , mBase.PrefHeight)
-	
+	ProgressPercentageText.Left = ProgressBar.PrefWidth - 8
+	Log(ProgressBar.PrefWidth - 8)
 End Sub
 
 Public Sub getProgress()  As Int
@@ -147,8 +205,18 @@ Public Sub getProgress()  As Int
 	
 End Sub
 
-#End if
+'Get or set if the progress percentage is shown
+Public Sub setShowProgressPercentageText(BoolVal As Boolean)
+	 
+	ProgressPercentageText.Visible = BoolVal
+		
+End Sub
 
+Public Sub getShowProgressPercentageText As Boolean
+	 
+	Return ProgressPercentageText.Visible
+		
+End Sub
 
 #Region General Functions and Properties
 
@@ -212,7 +280,7 @@ Public Sub getTop As Double
 	
 End Sub
   
-'Get or set the Node Parent
+'Get the Node Parent
 Public Sub getParent As Node
 	
 	Return mBase.Parent
@@ -267,4 +335,5 @@ End Sub
 '	
 
 #End Region
-
+#End if
+ 

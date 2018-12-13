@@ -38,7 +38,7 @@ Public Sub DesignerCreateView (Base As Pane, Lbl As Label, Props As Map)
 	mBase.LoadLayout("CFMaterialFABUI")
 	
 	'set using theme...
-	setBg(CFStyleManager.DefaultTheme.Get("accent"))
+	setBackgroundColor(CFStyleManager.DefaultTheme.Get("accent"))
 	FAB_Btn.MouseCursor = fx.Cursors.HAND
 	
 	setTag(Lbl.Tag)
@@ -64,10 +64,16 @@ End Sub
 #Region Actions and Effects
 
 
-Public Sub setBg(color As String)
+Public Sub setBackgroundColor(color As String)
  
-	CFControlsUtils.SetBG( FAB_Btn, color)
+	CFControlsUtils.setBackgroundColor( FAB_Btn, color)
  
+End Sub
+
+Public Sub getBackgroundColor As String
+  	
+	Return CFControlsUtils.GetBackgroundColor(FAB_Btn)
+	
 End Sub
 
 Public Sub setBorder(color As String , width As Int)
@@ -185,7 +191,7 @@ Public Sub getTop As Double
 	
 End Sub
   
-'Get or set the Node Parent
+'Get the Node Parent
 Public Sub getParent As Node
 	
 	Return mBase.Parent
