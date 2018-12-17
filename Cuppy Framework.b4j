@@ -1,7 +1,6 @@
 ﻿AppType=JavaFX
-Build1=Full,Punchline.Tech.Cuppy.Framework,Full,Trial,Free
+Build1=Full,punchline.tech.cuppy.framework,Full
 Build2=Free,Punchline.Tech.Cuppy.Framework,Free
-Build3=Trial,Punchline.Tech.Cuppy.Framework,Free,Trial
 File1=CFBarPreLoaderUI.bjl
 File10=CFMaterialRadioBoxUI.bjl
 File11=CFMaterialSquareFABUI.bjl
@@ -10,21 +9,23 @@ File13=CFMetroCircleToggleButtonUI.bjl
 File14=CFMetroLinkLabelUI.bjl
 File15=CFMetroToggleButtonUI.bjl
 File16=CFModalUI.bjl
-File17=Roboto-Black.ttf
-File18=Roboto-BlackItalic.ttf
-File19=Roboto-Bold.ttf
+File17=CFPluginRendererUI.bjl
+File18=full-cuppy-framework-required.png
+File19=Roboto-Black.ttf
 File2=CFMaterialAppBarUI.bjl
-File20=Roboto-BoldItalic.ttf
-File21=Roboto-Italic.ttf
-File22=Roboto-LICENSE.txt
-File23=Roboto-Light.ttf
-File24=Roboto-LightItalic.ttf
-File25=Roboto-Medium.ttf
-File26=Roboto-MediumItalic.ttf
-File27=Roboto-Regular.ttf
-File28=Roboto-Thin.ttf
-File29=Roboto-ThinItalic.ttf
+File20=Roboto-BlackItalic.ttf
+File21=Roboto-Bold.ttf
+File22=Roboto-BoldItalic.ttf
+File23=Roboto-Italic.ttf
+File24=Roboto-LICENSE.txt
+File25=Roboto-Light.ttf
+File26=Roboto-LightItalic.ttf
+File27=Roboto-Medium.ttf
+File28=Roboto-MediumItalic.ttf
+File29=Roboto-Regular.ttf
 File3=CFMaterialButtonUI.bjl
+File30=Roboto-Thin.ttf
+File31=Roboto-ThinItalic.ttf
 File4=CFMaterialCardUI.bjl
 File5=CFMaterialCheckboxUI.bjl
 File6=CFMaterialDividerUI.bjl
@@ -39,8 +40,8 @@ FileGroup13=UI Layouts\Metro
 FileGroup14=UI Layouts\Metro
 FileGroup15=UI Layouts\Metro
 FileGroup16=UI Layouts\MISC
-FileGroup17=Assets\Fonts\Roboto
-FileGroup18=Assets\Fonts\Roboto
+FileGroup17=UI Layouts\MISC
+FileGroup18=Default Group
 FileGroup19=Assets\Fonts\Roboto
 FileGroup2=UI Layouts\Material UI
 FileGroup20=Assets\Fonts\Roboto
@@ -54,6 +55,8 @@ FileGroup27=Assets\Fonts\Roboto
 FileGroup28=Assets\Fonts\Roboto
 FileGroup29=Assets\Fonts\Roboto
 FileGroup3=UI Layouts\Material UI
+FileGroup30=Assets\Fonts\Roboto
+FileGroup31=Assets\Fonts\Roboto
 FileGroup4=UI Layouts\Material UI
 FileGroup5=UI Layouts\Material UI
 FileGroup6=UI Layouts\Material UI
@@ -66,37 +69,38 @@ Library2=jfx
 Library3=cssutils
 Library4=javaobject
 Module1=tODOS
-Module10=CFMaterialCard
-Module11=CFMaterialLabel
-Module12=CFMaterialAppBar
-Module13=CFMaterialRadioBox
-Module14=CFMaterialSquareFAB
-Module15=CFMaterialSwitch
-Module16=CFMetroCircleToggleButton
-Module17=CFMetroToggleButton
-Module18=CFMaterialCheckBox
-Module19=CFMaterialDivider
-Module2=CFModal
-Module20=CFStringUtility
-Module21=CFMaterialFAB
-Module22=CFFileUtility
-Module23=CFMaterialLinearProgressBar
-Module24=CFMathUtility
-Module25=CFDataTypeUtility
-Module26=CFDataGeneratorUtility
-Module27=CFAppUtility
-Module28=CFControlsUtils
-Module3=CFThemes
-Module4=CFConfigs
-Module5=CFStyleManager
-Module6=CFAnimationManager
+Module10=CFStyleManager
+Module11=CFMaterialAppBar
+Module12=CFMaterialButton
+Module13=CFModal
+Module14=CFConfigs
+Module15=CFThemes
+Module16=CFFileUtility
+Module17=CFMaterialCheckBox
+Module18=CFMaterialDivider
+Module19=CFMetroLinkLabel
+Module2=CFControlsUtils
+Module20=CFMaterialLabel
+Module21=CFMetroToggleButton
+Module22=CFMaterialFAB
+Module23=CFMaterialRadioBox
+Module24=CFMaterialSquareFAB
+Module25=CFMetroCircleToggleButton
+Module26=CFMaterialCard
+Module27=CFAnimationManager
+Module28=CFMathUtility
+Module29=CFDataTypeUtility
+Module3=CFMaterialLinearProgressBar
+Module4=CFStringUtility
+Module5=CFDataGeneratorUtility
+Module6=CFAppUtility
 Module7=CFBarPreLoader
-Module8=CFMetroLinkLabel
-Module9=CFMaterialButton
-NumberOfFiles=29
+Module8=CFMaterialSwitch
+Module9=CFMaterialTab
+NumberOfFiles=31
 NumberOfLibraries=4
-NumberOfModules=28
-Version=6.3
+NumberOfModules=29
+Version=6.51
 @EndOfDesignText@
 #Region Project Attributes 
 
@@ -106,25 +110,34 @@ Version=6.3
 
 'Contributors:
 'Mash Mbanga < Mashy >  - Contributor - anele@mbangas.com
+
 #LibraryAuthor: Punchline Technologies
-#LibraryName: Cuppy Framework
-#LibraryVersion: 1.03
+#LibraryName: CuppyFramework
+#LibraryVersion: 1.035
 #AdditionalJar: FontAwesome
 #AdditionalJar: MaterialIcons
 #AdditionalJar: CFResources.jar
- 
+
 #End Region
 
 Sub Process_Globals
 
 End Sub
 
-Sub AppStart (form1 As Form, Args() As String)
-   
-End Sub
+#Region Ignored Subs...
 
-'Return true to allow the default exceptions handler to handle the uncaught exception.
-Sub Application_Error (Error As Exception, StackTrace As String) As Boolean
-	Return True
+'This are Dummy Subs to hide errors of assets that were not used here
+'This assets are required by other Cuppy core Libraries 
+'All subs here must be PUBLIC!
+ 
+ Public Sub HideCfPluginRendererUI
+ 	
+	Dim DummyPane As Pane
+	DummyPane.Initialize("DummyPane")
+	DummyPane.LoadLayout("CFPluginRendererUI")
+	
 End Sub
-
+  
+ #End Region
+ 
+ 

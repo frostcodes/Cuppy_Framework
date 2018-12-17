@@ -12,6 +12,8 @@ Version=5.51
 #RaisesSynchronousEvents: CheckedChanged
 #RaisesSynchronousEvents: Resize
  
+#DesignerProperty: Key: CheckedState, DisplayName: Checked State, FieldType: String, DefaultValue: UNCHECKED, List: UNCHECKED|CHECKED|INDETERMINATE
+ 
  'TODO: make font adjust when resized
 #Region Internal Segment
 
@@ -29,6 +31,9 @@ Sub Class_Globals
 	Public CHECKED_STATE As Int = 1
 	Public INDETERMINATE_STATE As Int = 2
 	  
+	'This prevents raising checked event when setting designer checked property
+	Private FirstTime As Boolean = False
+	
 End Sub
 
 Public Sub Initialize (Callback As Object, EventName As String)
@@ -40,17 +45,35 @@ Public Sub DesignerCreateView (Base As Pane, Lbl As Label, Props As Map)
 	mBase = Base
 	mBase.LoadLayout("CFMaterialSwitchesUI")
 	'set using theme...
-	SetCheckedColor(CFStyleManager.DefaultTheme.Get("primary"))
-	
-	'TODO: create a designer prorerty for this...
-	SetCheckState(UNCHECKED_STATE) 'set initial value
+	setCheckedColor(CFStyleManager.DefaultTheme.Get("primary"))
 	 
+	 
+'	Set checked state
+	Dim checkedState As String = Props.Get("CheckedState")
+	
+	'set initial value
+	
+	If checkedState = "UNCHECKED" Then
+		
+		setCheckState(UNCHECKED_STATE)
+	
+	else If checkedState = "CHECKED" Then
+		
+		setCheckState(CHECKED_STATE)
+		
+	else If checkedState = "INDETERMINATE" Then
+		
+		setCheckState(INDETERMINATE_STATE)
+	 
+	End If
 	
 	'TODO: add a shadow for SwitchBtn to make it like the intial google material type
 
-	'ControlsUtils.setPaneEffect(SwitchBtn, "dropshadow( three-pass-box , rgba(0,0,0,0.4) , 5, 0.0 , 0 , 1 )")
+	'ControlsUtils.SetEffect(SwitchBtn, "dropshadow( three-pass-box , rgba(0,0,0,0.4) , 5, 0.0 , 0 , 1 )")
 	
-  
+	setTag(Lbl.Tag)
+	setAlpha(Lbl.Alpha)
+	
 End Sub
 
 Private Sub Base_Resize (Width As Double, Height As Double)
@@ -67,35 +90,48 @@ End Sub
 
 #Region Actions and Effects
 
-Public Sub SetBg(color As String)
+Public Sub setBackgroundColor(color As String)
  
-	CFControlsUtils.SetBG( SwitchPane, color)
+	CFControlsUtils.SetBackgroundColor( SwitchPane, color)
  
 End Sub
-
+ 
+Public Sub getBackgroundColor As String
+  	
+	Return CFControlsUtils.GetBackgroundColor(SwitchPane)
+	
+End Sub
+  
 Public Sub setRotation(angle As Float)
 	
 	CFControlsUtils.SetRotation(SwitchPane, angle) 'rotate
 	 
 End Sub
 
-Public Sub SetBorder(color As String , width As Int)
+Public Sub setBorder(color As String , width As Int)
 	
 	CFControlsUtils.SetBorder(SwitchPane, color, width)
 
 End Sub
  
-Public Sub SetBorderRadius(radius As Int)
+Public Sub setBorderRadius(radius As Int)
 	
 	CFControlsUtils.SetBorderRadius(SwitchPane, radius)
 	
 End Sub
  
-Public Sub SetPaneEffect(effect As String)
+Public Sub setEffect(effect As String)
 	
 	CFControlsUtils.SetEffect(SwitchPane, effect)
 	
 End Sub
+ 
+Public Sub getEffect(effect As String) As String
+	
+	Return CFControlsUtils.GetEffect(SwitchPane)
+	
+End Sub
+
 
 Public Sub RemoveEffects()
 	
@@ -105,39 +141,47 @@ End Sub
 
 #End Region
   
-Public Sub SetCheckedColor(color As String)
+Public Sub setCheckedColor(color As String)
   	
-	CFControlsUtils.SetBG( SwitchBtn, color)
+	CFControlsUtils.SetBackgroundColor( SwitchBtn, color)
 	
 End Sub
  
-Public Sub SetCheckState(value As Int)
+Public Sub setCheckState(value As Int)
 	 
 	If value = UNCHECKED_STATE Then
 		
 		SwitchBtn.SetLayoutAnimated(200 , 10, SwitchBtn.Top, SwitchBtn.PrefWidth, SwitchBtn.PrefHeight)
 		SwitchPane.SetAlphaAnimated(200, 1 )
-		SetBg(CFStyleManager.DefaultTheme.Get("divider"))
+		setBackgroundColor(CFStyleManager.DefaultTheme.Get("divider"))
 		  
 	Else if value = CHECKED_STATE Then
 	
 		'Fade effect
 		SwitchPane.SetAlphaAnimated(200, 0.6 )
-		SetBg(CFControlsUtils.GetBG(SwitchBtn))
+		setBackgroundColor(CFControlsUtils.getBackgroundColor(SwitchBtn))
 		
 		SwitchBtn.SetLayoutAnimated(200 , 23 , SwitchBtn.Top, SwitchBtn.PrefWidth, SwitchBtn.PrefWidth)
 		
 	Else
-			
 		 
 		SwitchBtn.SetLayoutAnimated(200 , 23 , SwitchBtn.Top, SwitchBtn.PrefWidth, SwitchBtn.PrefWidth)
 		SwitchPane.SetAlphaAnimated(200, 1 )
-		SetBg(CFStyleManager.DefaultTheme.Get("divider"))
+		setBackgroundColor(CFStyleManager.DefaultTheme.Get("divider"))
 		  
 	End If
-	 
-	'call callback for checked changed status
-	CallSubDelayed2(mCallBack, mEventName & "_CheckedChanged" , value)
+	
+	If FirstTime Then
+		
+		'call callback for checked changed status
+		CallSubDelayed2(mCallBack, mEventName & "_CheckedChanged" , value)
+
+	Else
+			
+		FirstTime = True
+		
+	End If
+	
 	 
 End Sub
 
@@ -153,17 +197,135 @@ Public Sub IsIndeterminate As Boolean
 	
 End Sub
  
+ #Region General Functions and Properties
+
+'Get or set whether Node is Enabled?
+Public Sub getEnabled As Boolean
+	
+	Return mBase.Enabled
+	
+End Sub
+
+Public Sub setEnabled(Enabled As Boolean)
+	
+	mBase.Enabled = Enabled
+
+End Sub
+ 
+'Get or set whether Node is Visible?
+Public Sub getVisible As Boolean
+	
+	Return mBase.Visible
+	
+End Sub
+
+Public Sub setVisible(Visible As Boolean)
+	
+	mBase.Visible = Visible
+
+End Sub
+ 
+'Get or set the Node Alpha level: 0 - transparent, 1 - Fully Opaque
+Public Sub getAlpha As Double
+	
+	Return mBase.Alpha
+	
+End Sub
+
+Public Sub setAlpha(Alpha As Double)
+	
+	mBase.Alpha = Alpha
+
+End Sub
+ 
+'Get the Node Height
+Public Sub getHeight As Double
+	
+	Return mBase.PrefHeight
+	
+End Sub
+  
+'Get the Node Width
+Public Sub getWidth As Double
+	
+	Return mBase.PrefWidth
+	
+End Sub
+ 
+'Get the top property of the Node (related to its parent)
+Public Sub getTop As Double
+	
+	Return mBase.Top
+	
+End Sub
+  
+'Get the Node Parent
+Public Sub getParent As Node
+	
+	Return mBase.Parent
+	 
+End Sub
+  
+'Get or set the Node tag.
+'This is placeholder for any object you need to tie to the node
+Public Sub getTag As Object
+	
+	Return mBase.Tag
+	
+End Sub
+
+Public Sub setTag(Tag As Object)
+	
+	mBase.Tag = Tag
+
+End Sub
+ 
+'Get the Left property of the Node (related to its parent)
+Public Sub getLeft As Double
+	
+	Return mBase.Left
+	
+End Sub
+   
+'FUNCTIONS
+
+'Removes the node from its parent
+Public Sub RemoveNodeFromParent
+	
+	mBase.RemoveNodeFromParent
+	
+End Sub
+
+'Captures the node appearance and returns the rendered image
+Public Sub Snapshot As Image
+	
+	Return mBase.Snapshot
+	
+End Sub
+ 
+'Similar to Snapshot. Allow you to set the background color
+Public Sub Snapshot2(BackgroundColor As Paint) As Image
+	
+	Return mBase.Snapshot2(BackgroundColor)
+	
+End Sub
+  
+'tooltip
+'	
+
+#End Region
+ 
 Private Sub SwitchPane_MousePressed (EventData As MouseEvent)
 	
 	SwitchBtn.RequestFocus 'set focus
 	 
 	If Not(Checked) Or IsIndeterminate Then
 	
-		SetCheckState(CHECKED_STATE)
+		setCheckState(CHECKED_STATE)
 	
 	Else
 	
-		SetCheckState(UNCHECKED_STATE)
+		setCheckState(UNCHECKED_STATE)
  
 	End If
 	

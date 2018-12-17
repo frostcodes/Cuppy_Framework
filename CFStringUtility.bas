@@ -4,8 +4,7 @@ ModulesStructureVersion=1
 Type=StaticCode
 Version=5.51
 @EndOfDesignText@
-'This file contain Utility sub/functions for string manipulation 
-
+'This contain Utilies for string manipulation 
 Private Sub Process_Globals
 	Private fx As JFX
 End Sub
@@ -156,7 +155,7 @@ End Sub
 Public Sub Strip_Quotes(str As String) As String
 	
 	str = str.Replace("'", "")
-	str = str.Replace("""","")	
+	str = str.Replace("""","")
 	Return str
 	 
 End Sub
@@ -185,13 +184,13 @@ Public Sub Reduce_Double_Slashes(str As String) As String
 		str = str.Replace("//" ,"/")
 		str =  str.Replace("http:/" ,"http://")  'fix back http://
 
-		Else
+	Else
 			
 		str = str.Replace("//" ,"/")
 		
 	End If
 	
-	 Return str
+	Return str
 	 
 End Sub
  
@@ -199,20 +198,21 @@ End Sub
 'Example:
 '<code> 
 'Dim CardArray() As String = Array As String(1, 2, 3, 4, 5, 6, 7, 8, 9)
-'Log(StringUtility.shuffleArray(CardArray))
+
+'Log(CFStringUtility.shuffleArray(CardArray))
 '</code>
 'FORM: https://www.b4x.com/android/forum/threads/randomly-shuffle-a-string-array.39435/
 Public Sub ShuffleArray(StringArray() As String) As String()
 	
-    Dim ArrayVal As String
-    Dim Random As Int
+	Dim ArrayVal As String
+	Dim Random As Int
  
-    For i = 0 To StringArray.Length - 1
-       Random = Rnd(i, StringArray.Length)
-       ArrayVal = StringArray(i)
-       StringArray(i) = StringArray(Random)
-       StringArray(Random) = ArrayVal
-    Next
+	For i = 0 To StringArray.Length - 1
+		Random = Rnd(i, StringArray.Length)
+		ArrayVal = StringArray(i)
+		StringArray(i) = StringArray(Random)
+		StringArray(Random) = ArrayVal
+	Next
 	Return StringArray
 End Sub
 
@@ -222,12 +222,12 @@ Public Sub RandListValue(ListX As List) As Object
 	Return ListX.Get(Rnd(0, ListX.Size -1))
 	
 End Sub
-
- 'This will generate random string 
- 'Example:
-'<code>log(StringUtility.generateRandomString(16)) 'This will generate 16 random characters
+  
+'This will generate random string 
+'Example:
+'<code>log(CFStringUtility.generateRandomString(16)) 'This will generate 16 random characters
 ' 'Outputs something like this: Phapk3eN6VmlbGlU
- ' </code>
+' </code>
 'FROM: https://www.b4x.com/android/forum/threads/create-random-string.24403/
 Public Sub GenerateRandomString(StrLength As Int) As String
 	Dim RndString As String
@@ -243,7 +243,7 @@ End Sub
  
  'This will generate random string but with symbols always
  'Example:
-'<code>log(StringUtility.generateRandomString2(16)) 'This will generate 16 random characters
+'<code>log(CFStringUtility.generateRandomString2(16)) 'This will generate 16 random characters
 ' 'Outputs something like this: !hap$k3eN6V@mlbG
  ' </code>
 Public Sub GenerateRandomString2(StrLength As Int) As String
@@ -252,7 +252,7 @@ Public Sub GenerateRandomString2(StrLength As Int) As String
 	Dim result As String
 	
 	'make it with lots of symbols
-	result =  StringArray2String(ShuffleArray(RandomArray)) 
+	result =  StringArray2String(ShuffleArray(RandomArray))
 	result = result  & GenerateRandomString( Floor( StrLength/ 2))
 	result = result  & StringArray2String(ShuffleArray(RandomArray))
 	result = result  & GenerateRandomString( Floor( StrLength/ 2))
@@ -264,10 +264,10 @@ End Sub
  
 'This will generate random numeric codes
 'Example:
-'<code>log(StringUtility.generatePinCode(4)) 'This will generate 4 random numbers
+'<code>log(CFStringUtility.generatePinCode(4)) 'This will generate 4 random numbers
 ' 'Outputs something like this: 3760
  ' </code>
- Public Sub GeneratePinCode(PinLength As Int) As Int
+Public Sub GeneratePinCode(PinLength As Int) As Int
  	
 	Dim result As String =""
 	Dim RandomArray() As String = Array As String(1,2,3,4,5,6,7,8,9,0)
@@ -285,7 +285,7 @@ End Sub
  'Convert an array of strings to a single string
  'Example:
  '<code>Dim RandomArray() As String = Array As String("A","B","C")
- 'log(StringUtility.StringArray2String(RandomArray)) 'would produce ABC
+ 'log(CFStringUtility.StringArray2String(RandomArray)) 'would produce ABC
  '</code>
 Public Sub StringArray2String(StrArray() As String) As String
  	
@@ -304,8 +304,8 @@ End Sub
 'first = Which number should be used For the first dupe increment
 'Example:
 '<code>
- 'Log(StringUtility.increment_string("test", "_",1)) ' returns: test_1
-'Log(StringUtility.increment_string("test_24", "_",1))  ' returns: test_25
+ 'Log(CFStringUtility.increment_string("test", "_",1)) ' returns: test_1
+'Log(CFStringUtility.increment_string("test_24", "_",1))  ' returns: test_25
 '</code>
 Public Sub Increment_String(str As String, separator As String , first As Int  ) As String
  	
@@ -317,7 +317,7 @@ Public Sub Increment_String(str As String, separator As String , first As Int  )
 	If  IndexOfSeperator <> 0 Then
 		'we have a separator
 		 
-		 foundInt = str.SubString((IndexOfSeperator +1) ) 
+		foundInt = str.SubString((IndexOfSeperator +1) )
 		   
 		'check if we have a valid INT
 		 
@@ -334,7 +334,7 @@ Public Sub Increment_String(str As String, separator As String , first As Int  )
 			 
 		Else
 				
-			'not valid	
+			'not valid
 			Return str & separator & first
 			 	
 		End If
@@ -355,11 +355,31 @@ Public Sub EscapeString(value As String) As String
 	Return "\" & value
  
 End Sub
+
+'fix a delimiter i.e. escape a delimiter
+Public Sub FixDelimiter(sValue As String) As String
+	
+	If sValue = "|" Then sValue = "\|"
+	If sValue = "." Then sValue = "\."
+	If sValue = "\" Then sValue = "\\"
+	If sValue = "^" Then sValue = "\^"
+	If sValue = "$" Then sValue = "\$"
+	If sValue = "?" Then sValue = "\?"
+	If sValue = "*" Then sValue = "\*"
+	If sValue = "+" Then sValue = "\+"
+	If sValue = "(" Then sValue = "\("
+	If sValue = ")" Then sValue = "\)"
+	If sValue = "[" Then sValue = "\["
+	If sValue = "{" Then sValue = "\{"
+	If sValue = ";" Then sValue = "\;"
+	Return sValue
+	
+End Sub
  
 'Allow spliting a string by a common delimiter such as , or :
 Sub Split(str As String, delimiter As String) As List
 	Dim t As List
-	t = Regex.Split(EscapeString(delimiter), str)
+	t = Regex.Split(FixDelimiter(delimiter), str)
 	Return t
 End Sub
 
@@ -377,7 +397,7 @@ Public Sub Implode(separator As String, StrList As List) As String
 	 
 	For Each str As String In StrList 'an array
 		result = result & str & separator
-		Next
+	Next
 		
 	Return Trim_Once(result, separator) ' trim separator just in case
 	
@@ -396,12 +416,13 @@ Public Sub Ucwords(str As String) As String
 	
 	Dim result As String =""
 	
-	For Each txt As String In Explode(" ", str)
+	For Each txt As String In Explode(" ", str.ToLowerCase)
 		Dim firstChar As String =""
 		firstChar= txt.CharAt(0)
 		firstChar = firstChar.ToUpperCase
 		
 		result = result & firstChar & txt.SubString(1) & " "
+		
 	Next
 	
 	Return result
@@ -410,6 +431,8 @@ End Sub
  
 'converts the first character of a string to uppercase.
 Public Sub Ucfirst(str As String) As String
+ 
+	str = str.ToLowerCase
  
 	Dim firstChar As String =""
 	firstChar= str.CharAt(0)
@@ -433,7 +456,7 @@ End Sub
 'Takes multiple words separated by spaces Or underscores And camelizes them
 'Example:
 '<code>
- 'Log(StringUtility.camelize("my_dog_spot")) ' returns: myDogSpot
+ 'Log(CFStringUtility.camelize("my_dog_spot")) ' returns: myDogSpot
 '</code>
 Public Sub Camelize(str As String)  As String
 	Dim firstChar, result As String =""
@@ -456,7 +479,7 @@ End Sub
 Public Sub Underscore(str As String)  As String
 	
 	str= str.ToLowerCase
-	Return str.Replace(" ",  "_") 
+	Return str.Replace(" ",  "_")
 	
 End Sub
 
@@ -471,13 +494,17 @@ End Sub
 'Adds http:// in the event that a protocol prefix is missing from a URL.
 Public Sub Prep_url(str As String)  As String
 	
-	 str= str.Trim
+	str = str.Trim
 	 
 	If IsEmpty(str) Or str.EqualsIgnoreCase("http://") Then
 		
 		Return  ""
 		
-		Else
+	Else If str.StartsWith("#") Then
+			
+		Return str
+		
+	Else
 			
 		If Not(str.StartsWith("http://")) Then
 		  
@@ -503,7 +530,7 @@ End Sub
 'Example:
 '<code>
 'Dim RandomArray() As String = Array As String("sam", 1,2,3,4,5,6,7,8,9,0)
-'Log(StringUtility.Sprintf("Hi %s , how are you %d .. %d .. %d", RandomArray))
+'Log(CFStringUtility.Sprintf("Hi %s , how are you %d .. %d .. %d", RandomArray))
 'Returns:  Hi sam , how are you 1 .. 2 .. 3
 '</code>
 '
@@ -677,9 +704,9 @@ Sub Str_Repeat(input As String, multiplier As Int) As String
 		
 		Return ""
 		
-		Else
+	Else
 		 
-		 Dim result As String = ""
+		Dim result As String = ""
 		 
 		For i = 0 To multiplier - 1
 			 
@@ -723,9 +750,9 @@ Public Sub Strpbrk(haystack As String, charList As String) As Object
  
 	For i = 0 To haystack.Length - 1
 		 
-		 If charList.IndexOf(haystack.CharAt(i)) >= 0 Then
+		If charList.IndexOf(haystack.CharAt(i)) >= 0 Then
 		 	 
-			  Return haystack.SubString(i)
+			Return haystack.SubString(i)
 			
 		End If
 		  
@@ -940,7 +967,7 @@ End Sub
 'Consider using parseQueryStringUrl() instead for a URL
 '
 '<code> Example: Parse { key1=value1&key2=value2 }
-'Log(StringUtility.parseQueryString	("key1=value1&key2=value2" ))
+'Log(CFStringUtility.parseQueryString	("key1=value1&key2=value2" ))
 ' 'This would output a map where key1 & key2 would be the keys
 ' 'And the values would be value1 & value2 respectively
 '</code>
@@ -979,7 +1006,7 @@ End Sub
 'Helps to parse a URL with Query string into a MAP
 '
 '<code> Example: Parse { key1=value1&key2=value2 }
-'Log(StringUtility.parseQueryStringUrl("http://urlx.com?key1=value1&key2=value2"))
+'Log(CFStringUtility.parseQueryStringUrl("http://urlx.com?key1=value1&key2=value2"))
 ' 'This would output a map where key1 & key2 would be the keys
 ' 'And the values would be value1 & value2 respectively
 '</code>
@@ -1012,4 +1039,136 @@ Public Sub Truncate(txt As String, length As Int) As String
 		
 	End If
 	
-End Sub 
+End Sub
+
+'Returns a day of a date with the english suffix
+'Example 2nd or 4th 
+Public Sub DateOrdinal(date As Int) As String
+  	
+	Dim sufixes() As String = Array As String("th", "st", "nd", "rd", "th", "th","th", "th", "th", "th")
+	Dim iVal As String = date
+	Dim val As Int =  (date Mod 100)
+	If val = 11 Or val =  12 Or val = 13 Then
+       
+		Return iVal & "th"
+			
+	Else
+
+		Return iVal & sufixes(date Mod 10)
+			
+	End If
+
+End Sub
+
+'Returns the current date in a nice format
+'Example:  October 5th, 2018
+Public Sub NicelyFormattedDate As String
+	
+	DateTime.DateFormat = "MMMM '" & DateOrdinal(DateTime.GetDayOfMonth(DateTime.Now)) & "', yyyy"
+	Return DateTime.Date(DateTime.Now)
+
+End Sub
+
+'Converts Newlines to Html <br> tag
+Public Sub Nl2Br(text As String) As String
+	
+	Return text.Replace(CRLF, "<br>")
+	
+End Sub
+
+'Makes a word Plural if need be 
+'If the count is more than one then it addes the suffix to the text
+'Eg if the count of available examples in a list is 1
+'it returns 'Example' if not you can set to return 'Examples'
+'Example:
+'<code>
+'Dim examples As Map = CreateMap("January": 1, "February": 2)
+'	Log("We have " & (examples.Size) & " " &  CFStringUtility.Plurify("example", examples.Size, "s"))
+'	'returns: We have 2 examples
+'
+'	Dim examples2 As Map = CreateMap("January": 1)
+'	Log("We have " & (examples2.Size) & " " & CFStringUtility.Plurify("example", examples2.Size, "s"))
+'	'returns: We have 1 example
+'</code>
+Public Sub Plurify(text As String, count As Int, suffix As String) As String
+	
+	If count < 2 Then
+		
+		Return text
+		
+	Else
+		
+		Return text & suffix
+			
+	End If
+	
+End Sub
+
+'
+' Perform the ROT13 transform on a string
+'
+'The ROT13 encoding shifts every
+'letter 13 places in the alphabet. 
+'Numeric And non-alphabetical characters 
+'remains untouched.
+'
+'Tip: Encoding And decoding are done by 
+'the same function.
+'If you pass an encoded string As argument,
+'the original string will be returned.
+'
+'Example:
+'<code>
+'Log(CFStringUtility.Str_Rot13("Hello World")) 'Returns: Uryyb Jbeyq
+'Log(CFStringUtility.Str_Rot13("Uryyb Jbeyq")) 'Returns: Hello World
+'</code>
+Public Sub Str_Rot13(str As String) As String
+
+	Dim FromStr, ToStr As String
+	
+	FromStr = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
+	ToStr = "nopqrstuvwxyzabcdefghijklmNOPQRSTUVWXYZABCDEFGHIJKLM"
+	  
+	Return Strtr(str, FromStr, ToStr)
+	
+End Sub
+
+'The Strtr() function translates 
+'certain characters in a string.
+'
+'Note: If the from And To parameters 
+'are different in length, 
+'both will be formatted To the length
+'of the shortest.
+'
+'Example:
+'<code>
+'Log(CFStringUtility.Strtr("Hilla Warld","ia","eo")) 'Returns: Hello World
+'Log(CFStringUtility.Strtr("Hello World","eo","ia")) 'Returns: Hilla Warld
+'</code>
+Public Sub Strtr(Str As String, FromStringList As String, ToStringList As String) As String
+	
+	Dim result As StringBuilder
+	result.Initialize
+	
+	Dim count As Int = Str.Length -1
+
+	For i = 0 To count
+		
+		Dim CurrentChar As Char = Str.CharAt(i)
+		
+		If FromStringList.Contains(CurrentChar) Then
+		
+			result.Append(ToStringList.CharAt(FromStringList.IndexOf(CurrentChar))) 'reverse lookup
+		
+		Else
+			
+			result.Append(CurrentChar)
+		
+		End If
+		
+	Next
+	
+	Return result.ToString
+	
+End Sub

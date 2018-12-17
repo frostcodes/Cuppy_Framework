@@ -1,4 +1,4 @@
-package Punchline.Tech.Cuppy.Framework;
+package punchline.tech.cuppy.framework;
 
 
 import anywheresoftware.b4a.BA;
@@ -9,12 +9,12 @@ public static cfmathutility mostCurrent = new cfmathutility();
 
 public static BA ba;
 static {
-		ba = new  anywheresoftware.b4j.objects.FxBA("Punchline.Tech.Cuppy.Framework", "Punchline.Tech.Cuppy.Framework.cfmathutility", null);
+		ba = new  anywheresoftware.b4j.objects.FxBA("punchline.tech.cuppy.framework", "punchline.tech.cuppy.framework.cfmathutility", null);
 		ba.loadHtSubs(cfmathutility.class);
         if (ba.getClass().getName().endsWith("ShellBA")) {
 			
 			ba.raiseEvent2(null, true, "SHELL", false);
-			ba.raiseEvent2(null, true, "CREATE", true, "Punchline.Tech.Cuppy.Framework.cfmathutility", ba);
+			ba.raiseEvent2(null, true, "CREATE", true, "punchline.tech.cuppy.framework.cfmathutility", ba);
 		}
 	}
     public static Class<?> getObject() {
@@ -30,31 +30,31 @@ public static String _min_safe_integer = "";
 public static String _min_value = "";
 public static String _max_value = "";
 public static b4j.example.cssutils _cssutils = null;
-public static Punchline.Tech.Cuppy.Framework.cfconfigs _cfconfigs = null;
-public static Punchline.Tech.Cuppy.Framework.cfstylemanager _cfstylemanager = null;
-public static Punchline.Tech.Cuppy.Framework.cfstringutility _cfstringutility = null;
-public static Punchline.Tech.Cuppy.Framework.cffileutility _cffileutility = null;
-public static Punchline.Tech.Cuppy.Framework.cfdatatypeutility _cfdatatypeutility = null;
-public static Punchline.Tech.Cuppy.Framework.cfdatageneratorutility _cfdatageneratorutility = null;
-public static Punchline.Tech.Cuppy.Framework.cfapputility _cfapputility = null;
-public static Punchline.Tech.Cuppy.Framework.cfcontrolsutils _cfcontrolsutils = null;
+public static punchline.tech.cuppy.framework.cfcontrolsutils _cfcontrolsutils = null;
+public static punchline.tech.cuppy.framework.cfstringutility _cfstringutility = null;
+public static punchline.tech.cuppy.framework.cfdatageneratorutility _cfdatageneratorutility = null;
+public static punchline.tech.cuppy.framework.cfapputility _cfapputility = null;
+public static punchline.tech.cuppy.framework.cfstylemanager _cfstylemanager = null;
+public static punchline.tech.cuppy.framework.cfconfigs _cfconfigs = null;
+public static punchline.tech.cuppy.framework.cffileutility _cffileutility = null;
+public static punchline.tech.cuppy.framework.cfdatatypeutility _cfdatatypeutility = null;
 public static double  _acosh(double _arg) throws Exception{
  //BA.debugLineNum = 27;BA.debugLine="Public Sub Acosh (arg As Double) As Double";
- //BA.debugLineNum = 29;BA.debugLine="Return Logarithm(arg  + Sqrt(arg * arg - 1) , Exp";
+ //BA.debugLineNum = 29;BA.debugLine="Return Logarithm(arg  + Sqrt(arg * arg - 1) , EXP";
 if (true) return anywheresoftware.b4a.keywords.Common.Logarithm(_arg+anywheresoftware.b4a.keywords.Common.Sqrt(_arg*_arg-1),_exponential_equivalent);
  //BA.debugLineNum = 31;BA.debugLine="End Sub";
 return 0;
 }
 public static double  _asinh(double _arg) throws Exception{
  //BA.debugLineNum = 34;BA.debugLine="Public Sub Asinh (arg As Double) As Double";
- //BA.debugLineNum = 36;BA.debugLine="Return Logarithm(arg  + Sqrt(arg * arg + 1) , Exp";
+ //BA.debugLineNum = 36;BA.debugLine="Return Logarithm(arg  + Sqrt(arg * arg + 1) , EXP";
 if (true) return anywheresoftware.b4a.keywords.Common.Logarithm(_arg+anywheresoftware.b4a.keywords.Common.Sqrt(_arg*_arg+1),_exponential_equivalent);
  //BA.debugLineNum = 38;BA.debugLine="End Sub";
 return 0;
 }
 public static double  _atanh(double _arg) throws Exception{
  //BA.debugLineNum = 41;BA.debugLine="Public Sub Atanh (arg As Double) As Double";
- //BA.debugLineNum = 43;BA.debugLine="Return 0.5 * Logarithm((1 + arg) / (1 - arg) , Ex";
+ //BA.debugLineNum = 43;BA.debugLine="Return 0.5 * Logarithm((1 + arg) / (1 - arg) , EX";
 if (true) return 0.5*anywheresoftware.b4a.keywords.Common.Logarithm((1+_arg)/(double)(1-_arg),_exponential_equivalent);
  //BA.debugLineNum = 45;BA.debugLine="End Sub";
 return 0;
@@ -191,7 +191,7 @@ return 0;
 }
 public static double  _exp(double _arg) throws Exception{
  //BA.debugLineNum = 146;BA.debugLine="Public Sub Exp(arg As Double) As Double";
- //BA.debugLineNum = 148;BA.debugLine="Return Power(Exponential_Equivalent, arg)";
+ //BA.debugLineNum = 148;BA.debugLine="Return Power(EXPONENTIAL_EQUIVALENT, arg)";
 if (true) return anywheresoftware.b4a.keywords.Common.Power(_exponential_equivalent,_arg);
  //BA.debugLineNum = 150;BA.debugLine="End Sub";
 return 0;
@@ -272,8 +272,8 @@ if (true) return _numbersaverage(_data,anywheresoftware.b4a.keywords.Common.True
 return 0;
 }
 public static String  _process_globals() throws Exception{
- //BA.debugLineNum = 2;BA.debugLine="Sub Process_Globals";
- //BA.debugLineNum = 5;BA.debugLine="Public Exponential_Equivalent As Double = 2.71828";
+ //BA.debugLineNum = 2;BA.debugLine="Private Sub Process_Globals";
+ //BA.debugLineNum = 5;BA.debugLine="Public EXPONENTIAL_EQUIVALENT As Double = 2.71828";
 _exponential_equivalent = 2.718281828459045;
  //BA.debugLineNum = 7;BA.debugLine="Public NEGATIVE_INFINITY As String = \"-Infinity\"";
 _negative_infinity = "-Infinity";

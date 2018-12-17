@@ -5,6 +5,17 @@ Type=Class
 Version=5.51
 @EndOfDesignText@
 'Custom View class
+
+ #If Free
+ 
+'Remove from Library if Free version
+ 
+#ExcludeFromLibrary: True
+Sub Class_Globals
+
+End Sub
+
+ #Else
  
 #Event: ModalBGPressed (EventData As MouseEvent)
 #Event: ModalPressed (EventData As MouseEvent)
@@ -32,12 +43,16 @@ End Sub
 Public Sub Initialize (Callback As Object, EventName As String)
 	mEventName = EventName
 	mCallBack = Callback
+	mBase.Initialize(mEventName)
 End Sub
 
 Public Sub DesignerCreateView (Base As Pane, Lbl As Label, Props As Map)
 	mBase = Base
 	mBase.LoadLayout("CFModalUI")
-	 
+	  
+	setTag(Lbl.Tag)
+	setAlpha(Lbl.Alpha)
+	
 End Sub
 
 Private Sub Base_Resize (Width As Double, Height As Double)
@@ -57,10 +72,16 @@ End Sub
 
 #Region Actions and Effects
  
-Public Sub SetBg(color As String)
+Public Sub setBackgroundColor(color As String)
  
-	CFControlsUtils.setBG( ModalPane, color)
+	CFControlsUtils.SetBackgroundColor( ModalPane, color)
  
+End Sub
+
+Public Sub getBackgroundColor As String
+  	
+	Return CFControlsUtils.GetBackgroundColor(ModalPane)
+	
 End Sub
   
 Public Sub setRotation(angle As Float)
@@ -69,26 +90,32 @@ Public Sub setRotation(angle As Float)
 	 
 End Sub
   
-Public Sub SetBorder(color As String , width As Int)
+Public Sub setBorder(color As String , width As Int)
 	
 	CFControlsUtils.setBorder(ModalPane, color, width)
 
 End Sub
 
 
-Public Sub SetBorderRadius(radius As Int)
+Public Sub setBorderRadius(radius As Int)
 	
 	CFControlsUtils.setBorderRadius(ModalPane, radius)
 	
 End Sub
 
 
-Public Sub SetEffect(effect As String)
+Public Sub setEffect(effect As String)
 	
 	CFControlsUtils.setEffect(ModalPane, effect)
 	
 End Sub
-
+ 
+Public Sub getEffect(effect As String) As String
+	
+	Return CFControlsUtils.GetEffect(ModalPane)
+	
+End Sub
+ 
 Public Sub RemoveEffects()
 	
 	CFControlsUtils.RemoveEffect(ModalPane)
@@ -116,7 +143,7 @@ End Sub
 Public Sub Hide
 	 
 	mBase.SetAlphaAnimated(300, 0)
-	 
+  
 	Wait For mBase_AnimationCompleted
 
 	ModalBgPane.Visible = False
@@ -124,10 +151,131 @@ Public Sub Hide
 	
 	mBase.SetSize(0, 0)
 	mBase.Enabled = False
-	  
+	
+'	ModalBgPane.Enabled = False
+'	ModalPane.Enabled = False
+
 End Sub
 
 #End Region
+
+#Region General Functions and Properties
+
+'Get or set whether Node is Enabled?
+Public Sub getEnabled As Boolean
+	
+	Return mBase.Enabled
+	
+End Sub
+
+Public Sub setEnabled(Enabled As Boolean)
+	
+	mBase.Enabled = Enabled
+
+End Sub
+ 
+'Get or set whether Node is Visible?
+Public Sub getVisible As Boolean
+	
+	Return mBase.Visible
+	
+End Sub
+
+Public Sub setVisible(Visible As Boolean)
+	
+	mBase.Visible = Visible
+
+End Sub
+ 
+'Get or set the Node Alpha level: 0 - transparent, 1 - Fully Opaque
+Public Sub getAlpha As Double
+	
+	Return mBase.Alpha
+	
+End Sub
+
+Public Sub setAlpha(Alpha As Double)
+	
+	mBase.Alpha = Alpha
+
+End Sub
+ 
+'Get the Node Height
+Public Sub getHeight As Double
+	
+	Return mBase.PrefHeight
+	
+End Sub
+  
+'Get the Node Width
+Public Sub getWidth As Double
+	
+	Return mBase.PrefWidth
+	
+End Sub
+ 
+'Get the top property of the Node (related to its parent)
+Public Sub getTop As Double
+	
+	Return mBase.Top
+	
+End Sub
+  
+'Get the Node Parent
+Public Sub getParent As Node
+	
+	Return mBase.Parent
+	 
+End Sub
+  
+'Get or set the Node tag.
+'This is placeholder for any object you need to tie to the node
+Public Sub getTag As Object
+	
+	Return mBase.Tag
+	
+End Sub
+
+Public Sub setTag(Tag As Object)
+	
+	mBase.Tag = Tag
+
+End Sub
+ 
+'Get the Left property of the Node (related to its parent)
+Public Sub getLeft As Double
+	
+	Return mBase.Left
+	
+End Sub
+   
+'FUNCTIONS
+
+'Removes the node from its parent
+Public Sub RemoveNodeFromParent
+	
+	mBase.RemoveNodeFromParent
+	
+End Sub
+
+'Captures the node appearance and returns the rendered image
+Public Sub Snapshot As Image
+	
+	Return mBase.Snapshot
+	
+End Sub
+ 
+'Similar to Snapshot. Allow you to set the background color
+Public Sub Snapshot2(BackgroundColor As Paint) As Image
+	
+	Return mBase.Snapshot2(BackgroundColor)
+	
+End Sub
+  
+'tooltip
+'	
+
+'#End Region
  
 Private Sub ModalBgPane_MousePressed (EventData As MouseEvent)
 	
@@ -156,3 +304,5 @@ Sub ModalBgPane_Resize (Width As Double, Height As Double)
 	CallSubDelayed3(mCallBack, mEventName & "_ModalBgPaneResize", Width, Height)
 	
 End Sub
+
+#End if

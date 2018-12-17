@@ -8,10 +8,11 @@ Version=5.51
  
 #Event: CheckedChanged(value as int)
 #Event: Resize (Width As Double, Height As Double)
-
-
+ 
 #RaisesSynchronousEvents: CheckedChanged
 #RaisesSynchronousEvents: Resize
+ 
+#DesignerProperty: Key: CheckedState, DisplayName: Checked State, FieldType: String, DefaultValue: UNCHECKED, List: UNCHECKED|CHECKED|INDETERMINATE
  
  'TODO: make font adjust when resized
 #Region Internal Segment
@@ -29,7 +30,9 @@ Sub Class_Globals
 	Public UNCHECKED_STATE As Int = 0
 	Public CHECKED_STATE As Int = 1
 	Public INDETERMINATE_STATE As Int = 2
-	 
+	
+	'This prevents raising checked event when setting designer checked property
+	Private FirstTime As Boolean = False
 End Sub
 
 Public Sub Initialize (Callback As Object, EventName As String)
@@ -42,13 +45,33 @@ Public Sub DesignerCreateView (Base As Pane, Lbl As Label, Props As Map)
 	mBase.LoadLayout("CFMaterialRadioBoxUI")
 	'set using theme...
 	'SetBg(StyleManager.DefaultTheme.Get("divider"))
-	SetBorder(CFStyleManager.DefaultTheme.Get("divider"), 2)
+	setBorder(CFStyleManager.DefaultTheme.Get("divider"), 2)
 	
-	SetCheckedColor(CFStyleManager.DefaultTheme.Get("primary"))
+	setCheckedColor(CFStyleManager.DefaultTheme.Get("primary"))
 	
-	'TODO: create a designer prorerty for this...
-	SetCheckState(UNCHECKED_STATE) 'set initial value
+	
+'	Set checked state
+	Dim checkedState As String = Props.Get("CheckedState")
+	
+	'set initial value
+	
+	If checkedState = "UNCHECKED" Then
+		
+		setCheckState(UNCHECKED_STATE)
+	
+	else If checkedState = "CHECKED" Then
+		
+		setCheckState(CHECKED_STATE)
+		
+	else If checkedState = "INDETERMINATE" Then
+		
+		setCheckState(INDETERMINATE_STATE)
 	 
+	End If
+	
+	setTag(Lbl.Tag)
+	setAlpha(Lbl.Alpha)
+	
 End Sub
 
 Private Sub Base_Resize (Width As Double, Height As Double)
@@ -65,10 +88,16 @@ End Sub
 
 #Region Actions and Effects
 
-Public Sub SetBg(color As String)
+Public Sub setBackgroundColor(color As String)
  
-	CFControlsUtils.SetBG( CheckboxPane, color)
+	CFControlsUtils.SetBackgroundColor( CheckboxPane, color)
  
+End Sub
+
+Public Sub getBackgroundColor As String
+  	
+	Return CFControlsUtils.GetBackgroundColor(CheckboxPane)
+	
 End Sub
 
 Public Sub setRotation(angle As Float)
@@ -77,24 +106,30 @@ Public Sub setRotation(angle As Float)
 	 
 End Sub
 
-Public Sub SetBorder(color As String , width As Int)
+Public Sub setBorder(color As String , width As Int)
 	
 	CFControlsUtils.SetBorder(CheckboxPane, color, width)
 
 End Sub
  
-Public Sub SetBorderRadius(radius As Int)
+Public Sub setBorderRadius(radius As Int)
 	
 	CFControlsUtils.SetBorderRadius(CheckboxPane, radius)
 	
 End Sub
  
-Public Sub SetPaneEffect(effect As String)
+Public Sub setEffect(effect As String)
 	
 	CFControlsUtils.SetEffect(CheckboxPane, effect)
 	
 End Sub
-
+ 
+Public Sub getEffect(effect As String) As String
+	
+	Return CFControlsUtils.GetEffect(CheckboxPane)
+	
+End Sub
+ 
 Public Sub RemoveEffects()
 	
 	CFControlsUtils.RemoveEffect(CheckboxPane)
@@ -103,40 +138,42 @@ End Sub
 
 #End Region
   
-Public Sub SetCheckedColor(color As String)
+Public Sub setCheckedColor(color As String)
   	
-	CFControlsUtils.SetBG( CheckedPane, color)
+	CFControlsUtils.setBackgroundColor( CheckedPane, color)
 	
 End Sub
  
-Public Sub SetCheckState(value As Int)
+Public Sub setCheckState(value As Int)
 	 
 	If value = UNCHECKED_STATE Then
 		
 		CheckedPane.Visible = False
 		CheckedPane.SetAlphaAnimated(300, 0 )
-		'SetBg(StyleManager.DefaultTheme.Get("divider"))
-		
 		 
 	Else if value = CHECKED_STATE Then
 	
 		CheckedPane.Visible = True
 		CheckedPane.SetAlphaAnimated(300, 1 )
-		'SetBg(StyleManager.DefaultTheme.Get("primary"))
-		
 		 
 	Else
 			
 		CheckedPane.SetAlphaAnimated(300, 0.6 )
 		CheckedPane.Visible = True
-		'SetBg(StyleManager.DefaultTheme.Get("primary"))
 		
-		 	
 	End If
 	 
-	'call callback for checked changed status
-	CallSubDelayed2(mCallBack, mEventName & "_CheckedChanged" , value)
-	  
+	If FirstTime Then
+		
+		'call callback for checked changed status
+		CallSubDelayed2(mCallBack, mEventName & "_CheckedChanged" , value)
+
+	Else
+			
+		FirstTime = True
+		
+	End If
+	
 End Sub
 
 Public Sub Checked As Boolean
@@ -157,12 +194,131 @@ Private Sub CheckboxPane_MousePressed (EventData As MouseEvent)
 	
 	If Not(Checked) Or IsIndeterminate Then
 	
-		SetCheckState(CHECKED_STATE)
+		setCheckState(CHECKED_STATE)
 	
 	Else
 	
-		SetCheckState(UNCHECKED_STATE)
+		setCheckState(UNCHECKED_STATE)
 		  
 	End If
 	
 End Sub
+
+
+#Region General Functions and Properties
+
+'Get or set whether Node is Enabled?
+Public Sub getEnabled As Boolean
+	
+	Return mBase.Enabled
+	
+End Sub
+
+Public Sub setEnabled(Enabled As Boolean)
+	
+	mBase.Enabled = Enabled
+
+End Sub
+ 
+'Get or set whether Node is Visible?
+Public Sub getVisible As Boolean
+	
+	Return mBase.Visible
+	
+End Sub
+
+Public Sub setVisible(Visible As Boolean)
+	
+	mBase.Visible = Visible
+
+End Sub
+ 
+'Get or set the Node Alpha level: 0 - transparent, 1 - Fully Opaque
+Public Sub getAlpha As Double
+	
+	Return mBase.Alpha
+	
+End Sub
+
+Public Sub setAlpha(Alpha As Double)
+	
+	mBase.Alpha = Alpha
+
+End Sub
+ 
+'Get the Node Height
+Public Sub getHeight As Double
+	
+	Return mBase.PrefHeight
+	
+End Sub
+  
+'Get the Node Width
+Public Sub getWidth As Double
+	
+	Return mBase.PrefWidth
+	
+End Sub
+ 
+'Get the top property of the Node (related to its parent)
+Public Sub getTop As Double
+	
+	Return mBase.Top
+	
+End Sub
+  
+'Get the Node Parent
+Public Sub getParent As Node
+	
+	Return mBase.Parent
+	 
+End Sub
+  
+'Get or set the Node tag.
+'This is placeholder for any object you need to tie to the node
+Public Sub getTag As Object
+	
+	Return mBase.Tag
+	
+End Sub
+
+Public Sub setTag(Tag As Object)
+	
+	mBase.Tag = Tag
+
+End Sub
+ 
+'Get the Left property of the Node (related to its parent)
+Public Sub getLeft As Double
+	
+	Return mBase.Left
+	
+End Sub
+   
+'FUNCTIONS
+
+'Removes the node from its parent
+Public Sub RemoveNodeFromParent
+	
+	mBase.RemoveNodeFromParent
+	
+End Sub
+
+'Captures the node appearance and returns the rendered image
+Public Sub Snapshot As Image
+	
+	Return mBase.Snapshot
+	
+End Sub
+ 
+'Similar to Snapshot. Allow you to set the background color
+Public Sub Snapshot2(BackgroundColor As Paint) As Image
+	
+	Return mBase.Snapshot2(BackgroundColor)
+	
+End Sub
+  
+'tooltip
+'	
+
+#End Region
