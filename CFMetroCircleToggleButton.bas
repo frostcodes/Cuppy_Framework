@@ -6,7 +6,7 @@ Version=6.3
 @EndOfDesignText@
 'Custom View class
  
-#Event: CheckedChanged(value as int)
+#Event: CheckedChanged(state as int)
 #Event: Resize (Width As Double, Height As Double)
 
 #RaisesSynchronousEvents: CheckedChanged
@@ -31,7 +31,8 @@ Sub Class_Globals
 	Public ToggleButton As Label
 	
 	'This prevents raising checked event when setting designer checked property
-	Private FirstTime As Boolean = False
+	Private FirstTimeSetted As Boolean = False
+	Private PrivateCheckState As Int
 	 
 End Sub
 
@@ -132,9 +133,10 @@ End Sub
 
 #End Region
    
-Public Sub setCheckState(value As Int)
+'Get/set the check state
+Public Sub setCheckState(state As Int)
 	 
-	If value = UNCHECKED_STATE Then
+	If state = UNCHECKED_STATE Then
 		 
 		setBackgroundColor("white")
 		setBorder("#D6D6D6", 2)
@@ -143,7 +145,7 @@ Public Sub setCheckState(value As Int)
 		  
 		CheckedStatus = False
 		  
-	Else if value = CHECKED_STATE Then
+	Else if state = CHECKED_STATE Then
 	 
 		
 		setBorder("#2EA9DE", 2)
@@ -155,16 +157,24 @@ Public Sub setCheckState(value As Int)
 		 
 	End If
 	 
-	If FirstTime Then
+	If FirstTimeSetted Then
 		
 		'call callback for checked changed status
-		CallSubDelayed2(mCallBack, mEventName & "_CheckedChanged" , value)
+		CallSubDelayed2(mCallBack, mEventName & "_CheckedChanged" , state)
 
 	Else
 			
-		FirstTime = True
+		FirstTimeSetted = True
 		
 	End If
+	
+	PrivateCheckState = state
+	
+End Sub
+
+Public Sub getCheckState As Int
+	
+	Return PrivateCheckState
 	
 End Sub
 

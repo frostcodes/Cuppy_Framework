@@ -16,7 +16,7 @@ End Sub
 
  #Else
  
-#Event: CheckedChanged(value as int)
+#Event: CheckedChanged(state as int)
 #Event: MouseEntered(EventData As MouseEvent)
 #Event: MouseExited(EventData As MouseEvent)
 #Event: Resize (Width As Double, Height As Double)
@@ -42,12 +42,12 @@ Sub Class_Globals
 	
 	'Checkbox states
 	Public UNCHECKED_STATE As Int = 0
-	Public CHECKED_STATE As Int = 1 
+	Public CHECKED_STATE As Int = 1
 	Public INDETERMINATE_STATE As Int = 2
 	
 	'This prevents raising checked event when setting designer checked property
-	 Private FirstTime As Boolean = False 
-	 
+	Private FirstTimeSetted As Boolean = False
+	Private PrivateCheckState As Int
 	 
 End Sub
 
@@ -162,36 +162,45 @@ Public Sub setCheckedColor(color As String)
 	 CFControlsUtils.SetBackgroundColor(CheckedLabel, color)
 	
 End Sub
- 
-Public Sub setCheckState(value As Int)
+
+'Get/set the check state
+Public Sub setCheckState(state As Int)
 	 
-	If value = UNCHECKED_STATE Then
+		If state = UNCHECKED_STATE Then
 		
-		CheckedLabel.Visible = False
-		CheckedLabel.SetAlphaAnimated(300, 0 )
+			CheckedLabel.Visible = False
+			CheckedLabel.SetAlphaAnimated(300, 0 )
 		 
-	Else if value = CHECKED_STATE Then
+		Else if state = CHECKED_STATE Then
 	
-		CheckedLabel.Visible = True
-		CheckedLabel.SetAlphaAnimated(300, 1 )
+			CheckedLabel.Visible = True
+			CheckedLabel.SetAlphaAnimated(300, 1 )
 		 
 		Else
 			
-		CheckedLabel.SetAlphaAnimated(300, 0.6 )
-		CheckedLabel.Visible = True
+			CheckedLabel.SetAlphaAnimated(300, 0.6 )
+			CheckedLabel.Visible = True
 		 	
-	End If
+		End If
 	 
-	If FirstTime Then 
+		If FirstTimeSetted Then
 		
-		'call callback for checked changed status
-		CallSubDelayed2(mCallBack, mEventName & "_CheckedChanged" , value)
+			'call callback for checked changed status
+			CallSubDelayed2(mCallBack, mEventName & "_CheckedChanged" , state)
 
 		Else
 			
-		FirstTime = True
+			FirstTimeSetted = True
 		
-	End If
+		End If
+		
+	PrivateCheckState = state
+	
+End Sub
+
+Public Sub getCheckState As Int
+	
+	Return PrivateCheckState
 	
 End Sub
 
@@ -372,3 +381,22 @@ Private Sub CheckboxPane_MouseExited (EventData As MouseEvent)
 End Sub
 
 #End if
+
+#Region Control Binders
+ 
+'Control Event Name
+Public Sub getEventName As String
+	
+	Return mEventName
+	
+End Sub
+
+'Control Call Back
+Public Sub getCallBack As Object
+	
+	Return mCallBack
+	
+End Sub
+ 
+
+#End Region

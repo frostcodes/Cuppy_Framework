@@ -230,15 +230,22 @@ Public Sub ConfigureTooltip(OpenDelay As Long,VisibleDuration As Long,CloseDelay
 
 End Sub
 
+'Measure the required Height and Width a text needs to display well
 Public Sub MeasureText(Text As String,TFont As Font) As TextMetric
+	
 	Dim TM As TextMetric
 	TM.Initialize
+	
 	Dim T As JavaObject
+	
 	T.InitializeNewInstance("javafx.scene.text.Text",Array(Text))
 	T.RunMethod("setFont",Array(TFont))
+	
 	TM.Width = T.RunMethod("prefWidth",Array(-1.0))
 	TM.Height = T.RunMethod("prefHeight",Array(TM.Width))
+	
 	Return TM
+	
 End Sub
 
 

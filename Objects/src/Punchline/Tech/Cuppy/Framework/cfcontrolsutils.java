@@ -31,10 +31,10 @@ public static b4j.example.cssutils _cssutils = null;
 public static punchline.tech.cuppy.framework.cfstringutility _cfstringutility = null;
 public static punchline.tech.cuppy.framework.cfdatageneratorutility _cfdatageneratorutility = null;
 public static punchline.tech.cuppy.framework.cfapputility _cfapputility = null;
+public static punchline.tech.cuppy.framework.cfmathutility _cfmathutility = null;
 public static punchline.tech.cuppy.framework.cfstylemanager _cfstylemanager = null;
 public static punchline.tech.cuppy.framework.cfconfigs _cfconfigs = null;
 public static punchline.tech.cuppy.framework.cffileutility _cffileutility = null;
-public static punchline.tech.cuppy.framework.cfmathutility _cfmathutility = null;
 public static punchline.tech.cuppy.framework.cfdatatypeutility _cfdatatypeutility = null;
 public static class _textmetric{
 public boolean IsInitialized;
@@ -167,24 +167,24 @@ return "";
 public static punchline.tech.cuppy.framework.cfcontrolsutils._textmetric  _measuretext(String _text,anywheresoftware.b4j.objects.JFX.FontWrapper _tfont) throws Exception{
 punchline.tech.cuppy.framework.cfcontrolsutils._textmetric _tm = null;
 anywheresoftware.b4j.object.JavaObject _t = null;
- //BA.debugLineNum = 227;BA.debugLine="Public Sub MeasureText(Text As String,TFont As Fon";
- //BA.debugLineNum = 228;BA.debugLine="Dim TM As TextMetric";
+ //BA.debugLineNum = 228;BA.debugLine="Public Sub MeasureText(Text As String,TFont As Fon";
+ //BA.debugLineNum = 230;BA.debugLine="Dim TM As TextMetric";
 _tm = new punchline.tech.cuppy.framework.cfcontrolsutils._textmetric();
- //BA.debugLineNum = 229;BA.debugLine="TM.Initialize";
+ //BA.debugLineNum = 231;BA.debugLine="TM.Initialize";
 _tm.Initialize();
- //BA.debugLineNum = 230;BA.debugLine="Dim T As JavaObject";
+ //BA.debugLineNum = 233;BA.debugLine="Dim T As JavaObject";
 _t = new anywheresoftware.b4j.object.JavaObject();
- //BA.debugLineNum = 231;BA.debugLine="T.InitializeNewInstance(\"javafx.scene.text.Text\",";
+ //BA.debugLineNum = 235;BA.debugLine="T.InitializeNewInstance(\"javafx.scene.text.Text\",";
 _t.InitializeNewInstance("javafx.scene.text.Text",new Object[]{(Object)(_text)});
- //BA.debugLineNum = 232;BA.debugLine="T.RunMethod(\"setFont\",Array(TFont))";
+ //BA.debugLineNum = 236;BA.debugLine="T.RunMethod(\"setFont\",Array(TFont))";
 _t.RunMethod("setFont",new Object[]{(Object)(_tfont.getObject())});
- //BA.debugLineNum = 233;BA.debugLine="TM.Width = T.RunMethod(\"prefWidth\",Array(-1.0))";
+ //BA.debugLineNum = 238;BA.debugLine="TM.Width = T.RunMethod(\"prefWidth\",Array(-1.0))";
 _tm.Width = (double)(BA.ObjectToNumber(_t.RunMethod("prefWidth",new Object[]{(Object)(-1.0)})));
- //BA.debugLineNum = 234;BA.debugLine="TM.Height = T.RunMethod(\"prefHeight\",Array(TM.Wid";
+ //BA.debugLineNum = 239;BA.debugLine="TM.Height = T.RunMethod(\"prefHeight\",Array(TM.Wid";
 _tm.Height = (double)(BA.ObjectToNumber(_t.RunMethod("prefHeight",new Object[]{(Object)(_tm.Width)})));
- //BA.debugLineNum = 235;BA.debugLine="Return TM";
+ //BA.debugLineNum = 241;BA.debugLine="Return TM";
 if (true) return _tm;
- //BA.debugLineNum = 236;BA.debugLine="End Sub";
+ //BA.debugLineNum = 243;BA.debugLine="End Sub";
 return null;
 }
 public static String  _process_globals() throws Exception{

@@ -28,9 +28,9 @@ public static punchline.tech.cuppy.framework.cfcontrolsutils _cfcontrolsutils = 
 public static punchline.tech.cuppy.framework.cfstringutility _cfstringutility = null;
 public static punchline.tech.cuppy.framework.cfdatageneratorutility _cfdatageneratorutility = null;
 public static punchline.tech.cuppy.framework.cfapputility _cfapputility = null;
+public static punchline.tech.cuppy.framework.cfmathutility _cfmathutility = null;
 public static punchline.tech.cuppy.framework.cfstylemanager _cfstylemanager = null;
 public static punchline.tech.cuppy.framework.cfconfigs _cfconfigs = null;
-public static punchline.tech.cuppy.framework.cfmathutility _cfmathutility = null;
 public static punchline.tech.cuppy.framework.cfdatatypeutility _cfdatatypeutility = null;
 public static String  _bytestofile(String _dir,String _filename,byte[] _data) throws Exception{
 anywheresoftware.b4a.objects.streams.File.OutputStreamWrapper _out = null;

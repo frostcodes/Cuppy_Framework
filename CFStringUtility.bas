@@ -1127,7 +1127,7 @@ Public Sub Str_Rot13(str As String) As String
 	Dim FromStr, ToStr As String
 	
 	FromStr = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
-	ToStr = "nopqrstuvwxyzabcdefghijklmNOPQRSTUVWXYZABCDEFGHIJKLM"
+	ToStr 	= "nopqrstuvwxyzabcdefghijklmNOPQRSTUVWXYZABCDEFGHIJKLM"
 	  
 	Return Strtr(str, FromStr, ToStr)
 	

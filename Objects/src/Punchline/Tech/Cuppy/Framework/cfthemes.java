@@ -29,10 +29,10 @@ public punchline.tech.cuppy.framework.cfcontrolsutils _cfcontrolsutils = null;
 public punchline.tech.cuppy.framework.cfstringutility _cfstringutility = null;
 public punchline.tech.cuppy.framework.cfdatageneratorutility _cfdatageneratorutility = null;
 public punchline.tech.cuppy.framework.cfapputility _cfapputility = null;
+public punchline.tech.cuppy.framework.cfmathutility _cfmathutility = null;
 public punchline.tech.cuppy.framework.cfstylemanager _cfstylemanager = null;
 public punchline.tech.cuppy.framework.cfconfigs _cfconfigs = null;
 public punchline.tech.cuppy.framework.cffileutility _cffileutility = null;
-public punchline.tech.cuppy.framework.cfmathutility _cfmathutility = null;
 public punchline.tech.cuppy.framework.cfdatatypeutility _cfdatatypeutility = null;
 public anywheresoftware.b4a.objects.collections.Map  _ambertheme() throws Exception{
 anywheresoftware.b4a.objects.collections.Map _colors = null;

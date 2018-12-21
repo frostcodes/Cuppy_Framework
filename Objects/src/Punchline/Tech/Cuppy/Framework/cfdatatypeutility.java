@@ -28,10 +28,10 @@ public static punchline.tech.cuppy.framework.cfcontrolsutils _cfcontrolsutils = 
 public static punchline.tech.cuppy.framework.cfstringutility _cfstringutility = null;
 public static punchline.tech.cuppy.framework.cfdatageneratorutility _cfdatageneratorutility = null;
 public static punchline.tech.cuppy.framework.cfapputility _cfapputility = null;
+public static punchline.tech.cuppy.framework.cfmathutility _cfmathutility = null;
 public static punchline.tech.cuppy.framework.cfstylemanager _cfstylemanager = null;
 public static punchline.tech.cuppy.framework.cfconfigs _cfconfigs = null;
 public static punchline.tech.cuppy.framework.cffileutility _cffileutility = null;
-public static punchline.tech.cuppy.framework.cfmathutility _cfmathutility = null;
 public static boolean  _boolval(Object _mixedvar) throws Exception{
  //BA.debugLineNum = 9;BA.debugLine="Public Sub BoolVal(mixedVar As Object) As Boolean";
  //BA.debugLineNum = 11;BA.debugLine="If mixedVar = False Then";
