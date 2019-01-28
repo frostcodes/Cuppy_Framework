@@ -10,6 +10,9 @@ Sub Class_Globals
 	Private fx As JFX
 End Sub
 
+'CREATE LIVE VUE WHERE WE  WOULD HAVE A DEV FOR Full verion and free
+'And have the production verionusing #IF
+
 '#Region Actions and Effects : to ceate getters for all there
 
 'Add comment for all getter and setters and properties 
@@ -22,8 +25,8 @@ End Sub
 ' 
 '	CFControlsUtils.setTextColor (InnerLabel, color)
 ' 
-'End Sub
  '
+'End Sub
  
  
  
@@ -45,7 +48,4 @@ End Sub
 'TabControl
 'TrackBar
  
- 
-'StyleManager (Cascading styles And theming)
-'StyleExtender (Apply selected theme propertys To legacy controls)
-   
+  

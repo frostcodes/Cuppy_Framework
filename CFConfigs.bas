@@ -8,10 +8,10 @@ Version=5.51
 Private Sub Process_Globals
  
 	'Libary Infos and Behaviour
-	Public LibraryAuthor As String = "Punchline Technologies"
-	Public LibraryName As String =  "Cuppy Framework"
-	Public LibraryVersion As Double =  1.03
-	Public LibraryCopyright As String =  "Copyright to Oluwaseyi Aderinkomi < Frost Codes >"
+	Public const LibraryAuthor As String = "Punchline Technologies"
+	Public const LibraryName As String =  "Cuppy Framework"
+	Public const LibraryVersion As Double =  1.03
+	Public const LibraryCopyright As String =  "Copyright to Oluwaseyi Aderinkomi < Frost Codes >"
 	  
 End Sub
 

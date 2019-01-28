@@ -6,7 +6,7 @@ Version=5.51
 @EndOfDesignText@
 'Custom View class
  
-#Event: CheckedChanged(value as int)
+#Event: CheckedChanged(state as int)
 #Event: Resize (Width As Double, Height As Double)
  
 #RaisesSynchronousEvents: CheckedChanged
@@ -30,9 +30,12 @@ Sub Class_Globals
 	Public UNCHECKED_STATE As Int = 0
 	Public CHECKED_STATE As Int = 1
 	Public INDETERMINATE_STATE As Int = 2
-	
+
 	'This prevents raising checked event when setting designer checked property
-	Private FirstTime As Boolean = False
+	Private FirstTimeSetted As Boolean = False
+	Private ChoiceControlBinderObj As CFRadioBoxChoiceBinder 'Allows Binding
+	Private PrivateCheckState As Int
+	
 End Sub
 
 Public Sub Initialize (Callback As Object, EventName As String)
@@ -69,6 +72,7 @@ Public Sub DesignerCreateView (Base As Pane, Lbl As Label, Props As Map)
 	 
 	End If
 	
+	
 	setTag(Lbl.Tag)
 	setAlpha(Lbl.Alpha)
 	
@@ -76,7 +80,7 @@ End Sub
 
 Private Sub Base_Resize (Width As Double, Height As Double)
   
-  CallSubDelayed3(mCallBack, mEventName & "_Resize", Width, Height)
+	CallSubDelayed3(mCallBack, mEventName & "_Resize", Width, Height)
  
 End Sub
 
@@ -118,6 +122,24 @@ Public Sub setBorderRadius(radius As Int)
 	
 End Sub
  
+Public Sub getBorderColor As String
+	
+	Return CFControlsUtils.GetBorderColor(CheckboxPane)
+	
+End Sub
+
+Public Sub getBorderWidth As Int
+	
+	Return CFControlsUtils.GetBorderWidth(CheckboxPane)
+	
+End Sub
+
+Public Sub getBorderRadius As Int
+	
+	Return CFControlsUtils.GetBorderRadius(CheckboxPane)
+	
+End Sub
+ 
 Public Sub setEffect(effect As String)
 	
 	CFControlsUtils.SetEffect(CheckboxPane, effect)
@@ -140,39 +162,56 @@ End Sub
   
 Public Sub setCheckedColor(color As String)
   	
-	CFControlsUtils.setBackgroundColor( CheckedPane, color)
+	CFControlsUtils.setBackgroundColor(CheckedPane, color)
 	
 End Sub
  
-Public Sub setCheckState(value As Int)
-	 
-	If value = UNCHECKED_STATE Then
-		
-		CheckedPane.Visible = False
-		CheckedPane.SetAlphaAnimated(300, 0 )
-		 
-	Else if value = CHECKED_STATE Then
+'Get/set the check state
+Public Sub setCheckState(state As Int)
 	
-		CheckedPane.Visible = True
-		CheckedPane.SetAlphaAnimated(300, 1 )
-		 
-	Else
-			
-		CheckedPane.SetAlphaAnimated(300, 0.6 )
-		CheckedPane.Visible = True
-		
-	End If
-	 
-	If FirstTime Then
-		
-		'call callback for checked changed status
-		CallSubDelayed2(mCallBack, mEventName & "_CheckedChanged" , value)
+	If getHasChoiceBinder And ChoiceControlBinderObj.IsControlBinded(Me) Then
+	 	
+		ChoiceControlBinderObj.TriggerState(Me, state)
 
 	Else
-			
-		FirstTime = True
+			 
+		If state = UNCHECKED_STATE Then
 		
+			CheckedPane.Visible = False
+			CheckedPane.SetAlphaAnimated(300, 0 )
+		 
+		Else if state = CHECKED_STATE Then
+	
+			CheckedPane.Visible = True
+			CheckedPane.SetAlphaAnimated(300, 1 )
+		 
+		Else
+			
+			CheckedPane.SetAlphaAnimated(300, 0.6 )
+			CheckedPane.Visible = True
+		
+		End If
+	 
+		If FirstTimeSetted Then
+		
+			'call callback for checked changed status
+			CallSubDelayed2(mCallBack, mEventName & "_CheckedChanged" , state)
+
+		Else
+			
+			FirstTimeSetted = True
+		
+		End If
+	
 	End If
+	
+	PrivateCheckState = state
+
+End Sub
+
+Public Sub getCheckState As Int
+	
+	Return PrivateCheckState
 	
 End Sub
 
@@ -299,7 +338,7 @@ End Sub
 
 'Removes the node from its parent
 Public Sub RemoveNodeFromParent
-	
+	 
 	mBase.RemoveNodeFromParent
 	
 End Sub
@@ -322,3 +361,66 @@ End Sub
 '	
 
 #End Region
+
+
+#Region Control Binders
+
+'Gets/Sets the Choice Binder
+'
+'You can handle the binded event like this:
+'<code>
+'Sub BinderEventName_CheckedControlChanged(Selected As CFMaterialRadioBox)
+'	
+'	Log(Selected.EventName)
+'	
+'End Sub
+'</code>
+Public Sub setChoiceBinder(ControlChoiceBinder As CFRadioBoxChoiceBinder)
+	
+	ChoiceControlBinderObj = ControlChoiceBinder
+	ChoiceControlBinderObj.BindControl(Me)
+	
+End Sub
+
+Public Sub getChoiceBinder As CFRadioBoxChoiceBinder
+	
+	Return ChoiceControlBinderObj
+	
+End Sub
+
+Public Sub getHasChoiceBinder As Boolean
+	
+	Return ChoiceControlBinderObj.IsInitialized
+	
+End Sub
+
+'This removes the control from been binded
+Public Sub UnBindFromChoiceBinder
+	
+	If getHasChoiceBinder Then
+		
+		getChoiceBinder.UnBindControl(Me)
+		
+	End If
+	
+	FirstTimeSetted = True
+	
+End Sub
+	
+'Control Event Name
+Public Sub getEventName As String
+	
+	Return mEventName
+	
+End Sub
+
+'Control Call Back
+Public Sub getCallBack As Object
+	
+	Return mCallBack
+	
+End Sub
+ 
+
+#End Region
+

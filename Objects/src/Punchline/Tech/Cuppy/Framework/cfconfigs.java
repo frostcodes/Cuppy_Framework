@@ -31,9 +31,9 @@ public static punchline.tech.cuppy.framework.cfcontrolsutils _cfcontrolsutils = 
 public static punchline.tech.cuppy.framework.cfstringutility _cfstringutility = null;
 public static punchline.tech.cuppy.framework.cfdatageneratorutility _cfdatageneratorutility = null;
 public static punchline.tech.cuppy.framework.cfapputility _cfapputility = null;
+public static punchline.tech.cuppy.framework.cfmathutility _cfmathutility = null;
 public static punchline.tech.cuppy.framework.cfstylemanager _cfstylemanager = null;
 public static punchline.tech.cuppy.framework.cffileutility _cffileutility = null;
-public static punchline.tech.cuppy.framework.cfmathutility _cfmathutility = null;
 public static punchline.tech.cuppy.framework.cfdatatypeutility _cfdatatypeutility = null;
 public static String  _donationlink() throws Exception{
  //BA.debugLineNum = 12;BA.debugLine="Public Sub DonationLink As String";
@@ -65,13 +65,13 @@ return false;
 }
 public static String  _process_globals() throws Exception{
  //BA.debugLineNum = 2;BA.debugLine="Private Sub Process_Globals";
- //BA.debugLineNum = 5;BA.debugLine="Public LibraryAuthor As String = \"Punchline Techn";
+ //BA.debugLineNum = 5;BA.debugLine="Public const LibraryAuthor As String = \"Punchline";
 _libraryauthor = "Punchline Technologies";
- //BA.debugLineNum = 6;BA.debugLine="Public LibraryName As String =  \"Cuppy Framework\"";
+ //BA.debugLineNum = 6;BA.debugLine="Public const LibraryName As String =  \"Cuppy Fram";
 _libraryname = "Cuppy Framework";
- //BA.debugLineNum = 7;BA.debugLine="Public LibraryVersion As Double =  1.03";
+ //BA.debugLineNum = 7;BA.debugLine="Public const LibraryVersion As Double =  1.03";
 _libraryversion = 1.03;
- //BA.debugLineNum = 8;BA.debugLine="Public LibraryCopyright As String =  \"Copyright t";
+ //BA.debugLineNum = 8;BA.debugLine="Public const LibraryCopyright As String =  \"Copyr";
 _librarycopyright = "Copyright to Oluwaseyi Aderinkomi < Frost Codes >";
  //BA.debugLineNum = 10;BA.debugLine="End Sub";
 return "";

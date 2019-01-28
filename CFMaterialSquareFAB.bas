@@ -93,6 +93,23 @@ Public Sub setBorderRadius(radius As Int)
 	
 End Sub
 
+Public Sub getBorderColor As String
+	
+	Return CFControlsUtils.GetBorderColor(FAB_Btn)
+	
+End Sub
+
+Public Sub getBorderWidth As Int
+	
+	Return CFControlsUtils.GetBorderWidth(FAB_Btn)
+	
+End Sub
+
+Public Sub getBorderRadius As Int
+	
+	Return CFControlsUtils.GetBorderRadius(FAB_Btn)
+	
+End Sub
 
 Public Sub setEffect(effect As String)
 	

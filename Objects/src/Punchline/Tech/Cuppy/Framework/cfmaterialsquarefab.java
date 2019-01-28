@@ -30,14 +30,14 @@ public Object _mcallback = null;
 public anywheresoftware.b4j.objects.PaneWrapper.ConcretePaneWrapper _mbase = null;
 public anywheresoftware.b4j.objects.LabelWrapper _fab_btn = null;
 public b4j.example.cssutils _cssutils = null;
+public punchline.tech.cuppy.framework.cfconfigs _cfconfigs = null;
 public punchline.tech.cuppy.framework.cfcontrolsutils _cfcontrolsutils = null;
 public punchline.tech.cuppy.framework.cfstringutility _cfstringutility = null;
 public punchline.tech.cuppy.framework.cfdatageneratorutility _cfdatageneratorutility = null;
 public punchline.tech.cuppy.framework.cfapputility _cfapputility = null;
-public punchline.tech.cuppy.framework.cfstylemanager _cfstylemanager = null;
-public punchline.tech.cuppy.framework.cfconfigs _cfconfigs = null;
-public punchline.tech.cuppy.framework.cffileutility _cffileutility = null;
 public punchline.tech.cuppy.framework.cfmathutility _cfmathutility = null;
+public punchline.tech.cuppy.framework.cfstylemanager _cfstylemanager = null;
+public punchline.tech.cuppy.framework.cffileutility _cffileutility = null;
 public punchline.tech.cuppy.framework.cfdatatypeutility _cfdatatypeutility = null;
 public String  _base_resize(double _width,double _height) throws Exception{
  //BA.debugLineNum = 41;BA.debugLine="Private Sub Base_Resize (Width As Double, Height A";
@@ -83,33 +83,33 @@ _setalpha(_lbl.getAlpha());
 return "";
 }
 public String  _fab_btn_mouseentered(anywheresoftware.b4j.objects.NodeWrapper.MouseEventWrapper _eventdata) throws Exception{
- //BA.debugLineNum = 250;BA.debugLine="Private Sub FAB_Btn_MouseEntered (EventData As Mou";
- //BA.debugLineNum = 252;BA.debugLine="CallSubDelayed2(mCallBack, mEventName & \"_MouseEn";
+ //BA.debugLineNum = 267;BA.debugLine="Private Sub FAB_Btn_MouseEntered (EventData As Mou";
+ //BA.debugLineNum = 269;BA.debugLine="CallSubDelayed2(mCallBack, mEventName & \"_MouseEn";
 __c.CallSubDelayed2(ba,_mcallback,_meventname+"_MouseEntered",(Object)(_eventdata));
- //BA.debugLineNum = 254;BA.debugLine="End Sub";
+ //BA.debugLineNum = 271;BA.debugLine="End Sub";
 return "";
 }
 public String  _fab_btn_mouseexited(anywheresoftware.b4j.objects.NodeWrapper.MouseEventWrapper _eventdata) throws Exception{
- //BA.debugLineNum = 256;BA.debugLine="Private Sub FAB_Btn_MouseExited (EventData As Mous";
- //BA.debugLineNum = 258;BA.debugLine="CallSubDelayed2(mCallBack, mEventName & \"_MouseEx";
+ //BA.debugLineNum = 273;BA.debugLine="Private Sub FAB_Btn_MouseExited (EventData As Mous";
+ //BA.debugLineNum = 275;BA.debugLine="CallSubDelayed2(mCallBack, mEventName & \"_MouseEx";
 __c.CallSubDelayed2(ba,_mcallback,_meventname+"_MouseExited",(Object)(_eventdata));
- //BA.debugLineNum = 260;BA.debugLine="End Sub";
+ //BA.debugLineNum = 277;BA.debugLine="End Sub";
 return "";
 }
 public String  _fab_btn_mousepressed(anywheresoftware.b4j.objects.NodeWrapper.MouseEventWrapper _eventdata) throws Exception{
- //BA.debugLineNum = 242;BA.debugLine="Private Sub FAB_Btn_MousePressed (EventData As Mou";
- //BA.debugLineNum = 244;BA.debugLine="FAB_Btn.RequestFocus 'set focus";
+ //BA.debugLineNum = 259;BA.debugLine="Private Sub FAB_Btn_MousePressed (EventData As Mou";
+ //BA.debugLineNum = 261;BA.debugLine="FAB_Btn.RequestFocus 'set focus";
 _fab_btn.RequestFocus();
- //BA.debugLineNum = 246;BA.debugLine="CallSubDelayed2(mCallBack, mEventName & \"_MousePr";
+ //BA.debugLineNum = 263;BA.debugLine="CallSubDelayed2(mCallBack, mEventName & \"_MousePr";
 __c.CallSubDelayed2(ba,_mcallback,_meventname+"_MousePressed",(Object)(_eventdata));
- //BA.debugLineNum = 248;BA.debugLine="End Sub";
+ //BA.debugLineNum = 265;BA.debugLine="End Sub";
 return "";
 }
 public double  _getalpha() throws Exception{
- //BA.debugLineNum = 153;BA.debugLine="Public Sub getAlpha As Double";
- //BA.debugLineNum = 155;BA.debugLine="Return mBase.Alpha";
+ //BA.debugLineNum = 170;BA.debugLine="Public Sub getAlpha As Double";
+ //BA.debugLineNum = 172;BA.debugLine="Return mBase.Alpha";
 if (true) return _mbase.getAlpha();
- //BA.debugLineNum = 157;BA.debugLine="End Sub";
+ //BA.debugLineNum = 174;BA.debugLine="End Sub";
 return 0;
 }
 public String  _getbackgroundcolor() throws Exception{
@@ -126,74 +126,95 @@ if (true) return _mbase;
  //BA.debugLineNum = 53;BA.debugLine="End Sub";
 return null;
 }
+public String  _getbordercolor() throws Exception{
+ //BA.debugLineNum = 90;BA.debugLine="Public Sub getBorderColor As String";
+ //BA.debugLineNum = 92;BA.debugLine="Return CFControlsUtils.GetBorderColor(FAB_Btn)";
+if (true) return _cfcontrolsutils._getbordercolor((anywheresoftware.b4j.objects.NodeWrapper.ConcreteNodeWrapper) anywheresoftware.b4a.AbsObjectWrapper.ConvertToWrapper(new anywheresoftware.b4j.objects.NodeWrapper.ConcreteNodeWrapper(), (javafx.scene.Node)(_fab_btn.getObject())));
+ //BA.debugLineNum = 94;BA.debugLine="End Sub";
+return "";
+}
+public int  _getborderradius() throws Exception{
+ //BA.debugLineNum = 102;BA.debugLine="Public Sub getBorderRadius As Int";
+ //BA.debugLineNum = 104;BA.debugLine="Return CFControlsUtils.GetBorderRadius(FAB_Btn)";
+if (true) return _cfcontrolsutils._getborderradius((anywheresoftware.b4j.objects.NodeWrapper.ConcreteNodeWrapper) anywheresoftware.b4a.AbsObjectWrapper.ConvertToWrapper(new anywheresoftware.b4j.objects.NodeWrapper.ConcreteNodeWrapper(), (javafx.scene.Node)(_fab_btn.getObject())));
+ //BA.debugLineNum = 106;BA.debugLine="End Sub";
+return 0;
+}
+public int  _getborderwidth() throws Exception{
+ //BA.debugLineNum = 96;BA.debugLine="Public Sub getBorderWidth As Int";
+ //BA.debugLineNum = 98;BA.debugLine="Return CFControlsUtils.GetBorderWidth(FAB_Btn)";
+if (true) return _cfcontrolsutils._getborderwidth((anywheresoftware.b4j.objects.NodeWrapper.ConcreteNodeWrapper) anywheresoftware.b4a.AbsObjectWrapper.ConvertToWrapper(new anywheresoftware.b4j.objects.NodeWrapper.ConcreteNodeWrapper(), (javafx.scene.Node)(_fab_btn.getObject())));
+ //BA.debugLineNum = 100;BA.debugLine="End Sub";
+return 0;
+}
 public String  _geteffect(String _effect) throws Exception{
- //BA.debugLineNum = 97;BA.debugLine="Public Sub getEffect(effect As String) As String";
- //BA.debugLineNum = 99;BA.debugLine="Return CFControlsUtils.GetEffect(FAB_Btn)";
+ //BA.debugLineNum = 114;BA.debugLine="Public Sub getEffect(effect As String) As String";
+ //BA.debugLineNum = 116;BA.debugLine="Return CFControlsUtils.GetEffect(FAB_Btn)";
 if (true) return _cfcontrolsutils._geteffect((anywheresoftware.b4j.objects.NodeWrapper.ConcreteNodeWrapper) anywheresoftware.b4a.AbsObjectWrapper.ConvertToWrapper(new anywheresoftware.b4j.objects.NodeWrapper.ConcreteNodeWrapper(), (javafx.scene.Node)(_fab_btn.getObject())));
- //BA.debugLineNum = 101;BA.debugLine="End Sub";
+ //BA.debugLineNum = 118;BA.debugLine="End Sub";
 return "";
 }
 public boolean  _getenabled() throws Exception{
- //BA.debugLineNum = 127;BA.debugLine="Public Sub getEnabled As Boolean";
- //BA.debugLineNum = 129;BA.debugLine="Return mBase.Enabled";
+ //BA.debugLineNum = 144;BA.debugLine="Public Sub getEnabled As Boolean";
+ //BA.debugLineNum = 146;BA.debugLine="Return mBase.Enabled";
 if (true) return _mbase.getEnabled();
- //BA.debugLineNum = 131;BA.debugLine="End Sub";
+ //BA.debugLineNum = 148;BA.debugLine="End Sub";
 return false;
 }
 public double  _getheight() throws Exception{
- //BA.debugLineNum = 166;BA.debugLine="Public Sub getHeight As Double";
- //BA.debugLineNum = 168;BA.debugLine="Return mBase.PrefHeight";
+ //BA.debugLineNum = 183;BA.debugLine="Public Sub getHeight As Double";
+ //BA.debugLineNum = 185;BA.debugLine="Return mBase.PrefHeight";
 if (true) return _mbase.getPrefHeight();
- //BA.debugLineNum = 170;BA.debugLine="End Sub";
+ //BA.debugLineNum = 187;BA.debugLine="End Sub";
 return 0;
 }
 public String  _geticon() throws Exception{
- //BA.debugLineNum = 117;BA.debugLine="Public Sub getIcon As String";
- //BA.debugLineNum = 119;BA.debugLine="Return FAB_Btn.Text";
+ //BA.debugLineNum = 134;BA.debugLine="Public Sub getIcon As String";
+ //BA.debugLineNum = 136;BA.debugLine="Return FAB_Btn.Text";
 if (true) return _fab_btn.getText();
- //BA.debugLineNum = 121;BA.debugLine="End Sub";
+ //BA.debugLineNum = 138;BA.debugLine="End Sub";
 return "";
 }
 public double  _getleft() throws Exception{
- //BA.debugLineNum = 208;BA.debugLine="Public Sub getLeft As Double";
- //BA.debugLineNum = 210;BA.debugLine="Return mBase.Left";
+ //BA.debugLineNum = 225;BA.debugLine="Public Sub getLeft As Double";
+ //BA.debugLineNum = 227;BA.debugLine="Return mBase.Left";
 if (true) return _mbase.getLeft();
- //BA.debugLineNum = 212;BA.debugLine="End Sub";
+ //BA.debugLineNum = 229;BA.debugLine="End Sub";
 return 0;
 }
 public anywheresoftware.b4j.objects.NodeWrapper.ConcreteNodeWrapper  _getparent() throws Exception{
- //BA.debugLineNum = 187;BA.debugLine="Public Sub getParent As Node";
- //BA.debugLineNum = 189;BA.debugLine="Return mBase.Parent";
+ //BA.debugLineNum = 204;BA.debugLine="Public Sub getParent As Node";
+ //BA.debugLineNum = 206;BA.debugLine="Return mBase.Parent";
 if (true) return _mbase.getParent();
- //BA.debugLineNum = 191;BA.debugLine="End Sub";
+ //BA.debugLineNum = 208;BA.debugLine="End Sub";
 return null;
 }
 public Object  _gettag() throws Exception{
- //BA.debugLineNum = 195;BA.debugLine="Public Sub getTag As Object";
- //BA.debugLineNum = 197;BA.debugLine="Return mBase.Tag";
+ //BA.debugLineNum = 212;BA.debugLine="Public Sub getTag As Object";
+ //BA.debugLineNum = 214;BA.debugLine="Return mBase.Tag";
 if (true) return _mbase.getTag();
- //BA.debugLineNum = 199;BA.debugLine="End Sub";
+ //BA.debugLineNum = 216;BA.debugLine="End Sub";
 return null;
 }
 public double  _gettop() throws Exception{
- //BA.debugLineNum = 180;BA.debugLine="Public Sub getTop As Double";
- //BA.debugLineNum = 182;BA.debugLine="Return mBase.Top";
+ //BA.debugLineNum = 197;BA.debugLine="Public Sub getTop As Double";
+ //BA.debugLineNum = 199;BA.debugLine="Return mBase.Top";
 if (true) return _mbase.getTop();
- //BA.debugLineNum = 184;BA.debugLine="End Sub";
+ //BA.debugLineNum = 201;BA.debugLine="End Sub";
 return 0;
 }
 public boolean  _getvisible() throws Exception{
- //BA.debugLineNum = 140;BA.debugLine="Public Sub getVisible As Boolean";
- //BA.debugLineNum = 142;BA.debugLine="Return mBase.Visible";
+ //BA.debugLineNum = 157;BA.debugLine="Public Sub getVisible As Boolean";
+ //BA.debugLineNum = 159;BA.debugLine="Return mBase.Visible";
 if (true) return _mbase.getVisible();
- //BA.debugLineNum = 144;BA.debugLine="End Sub";
+ //BA.debugLineNum = 161;BA.debugLine="End Sub";
 return false;
 }
 public double  _getwidth() throws Exception{
- //BA.debugLineNum = 173;BA.debugLine="Public Sub getWidth As Double";
- //BA.debugLineNum = 175;BA.debugLine="Return mBase.PrefWidth";
+ //BA.debugLineNum = 190;BA.debugLine="Public Sub getWidth As Double";
+ //BA.debugLineNum = 192;BA.debugLine="Return mBase.PrefWidth";
 if (true) return _mbase.getPrefWidth();
- //BA.debugLineNum = 177;BA.debugLine="End Sub";
+ //BA.debugLineNum = 194;BA.debugLine="End Sub";
 return 0;
 }
 public String  _initialize(anywheresoftware.b4a.BA _ba,Object _callback,String _eventname) throws Exception{
@@ -207,24 +228,24 @@ _mcallback = _callback;
 return "";
 }
 public String  _removeeffects() throws Exception{
- //BA.debugLineNum = 103;BA.debugLine="Public Sub RemoveEffects()";
- //BA.debugLineNum = 105;BA.debugLine="CFControlsUtils.removeEffect(FAB_Btn)";
+ //BA.debugLineNum = 120;BA.debugLine="Public Sub RemoveEffects()";
+ //BA.debugLineNum = 122;BA.debugLine="CFControlsUtils.removeEffect(FAB_Btn)";
 _cfcontrolsutils._removeeffect((anywheresoftware.b4j.objects.NodeWrapper.ConcreteNodeWrapper) anywheresoftware.b4a.AbsObjectWrapper.ConvertToWrapper(new anywheresoftware.b4j.objects.NodeWrapper.ConcreteNodeWrapper(), (javafx.scene.Node)(_fab_btn.getObject())));
- //BA.debugLineNum = 107;BA.debugLine="End Sub";
+ //BA.debugLineNum = 124;BA.debugLine="End Sub";
 return "";
 }
 public String  _removenodefromparent() throws Exception{
- //BA.debugLineNum = 217;BA.debugLine="Public Sub RemoveNodeFromParent";
- //BA.debugLineNum = 219;BA.debugLine="mBase.RemoveNodeFromParent";
+ //BA.debugLineNum = 234;BA.debugLine="Public Sub RemoveNodeFromParent";
+ //BA.debugLineNum = 236;BA.debugLine="mBase.RemoveNodeFromParent";
 _mbase.RemoveNodeFromParent();
- //BA.debugLineNum = 221;BA.debugLine="End Sub";
+ //BA.debugLineNum = 238;BA.debugLine="End Sub";
 return "";
 }
 public String  _setalpha(double _alpha) throws Exception{
- //BA.debugLineNum = 159;BA.debugLine="Public Sub setAlpha(Alpha As Double)";
- //BA.debugLineNum = 161;BA.debugLine="mBase.Alpha = Alpha";
+ //BA.debugLineNum = 176;BA.debugLine="Public Sub setAlpha(Alpha As Double)";
+ //BA.debugLineNum = 178;BA.debugLine="mBase.Alpha = Alpha";
 _mbase.setAlpha(_alpha);
- //BA.debugLineNum = 163;BA.debugLine="End Sub";
+ //BA.debugLineNum = 180;BA.debugLine="End Sub";
 return "";
 }
 public String  _setbackgroundcolor(String _color) throws Exception{
@@ -249,24 +270,24 @@ _cfcontrolsutils._setborderradius((anywheresoftware.b4j.objects.NodeWrapper.Conc
 return "";
 }
 public String  _seteffect(String _effect) throws Exception{
- //BA.debugLineNum = 91;BA.debugLine="Public Sub setEffect(effect As String)";
- //BA.debugLineNum = 93;BA.debugLine="CFControlsUtils.setEffect(FAB_Btn, effect)";
+ //BA.debugLineNum = 108;BA.debugLine="Public Sub setEffect(effect As String)";
+ //BA.debugLineNum = 110;BA.debugLine="CFControlsUtils.setEffect(FAB_Btn, effect)";
 _cfcontrolsutils._seteffect((anywheresoftware.b4j.objects.NodeWrapper.ConcreteNodeWrapper) anywheresoftware.b4a.AbsObjectWrapper.ConvertToWrapper(new anywheresoftware.b4j.objects.NodeWrapper.ConcreteNodeWrapper(), (javafx.scene.Node)(_fab_btn.getObject())),_effect);
- //BA.debugLineNum = 95;BA.debugLine="End Sub";
+ //BA.debugLineNum = 112;BA.debugLine="End Sub";
 return "";
 }
 public String  _setenabled(boolean _enabled) throws Exception{
- //BA.debugLineNum = 133;BA.debugLine="Public Sub setEnabled(Enabled As Boolean)";
- //BA.debugLineNum = 135;BA.debugLine="mBase.Enabled = Enabled";
+ //BA.debugLineNum = 150;BA.debugLine="Public Sub setEnabled(Enabled As Boolean)";
+ //BA.debugLineNum = 152;BA.debugLine="mBase.Enabled = Enabled";
 _mbase.setEnabled(_enabled);
- //BA.debugLineNum = 137;BA.debugLine="End Sub";
+ //BA.debugLineNum = 154;BA.debugLine="End Sub";
 return "";
 }
 public String  _seticon(String _icontext) throws Exception{
- //BA.debugLineNum = 111;BA.debugLine="Public Sub setIcon(IconText As String)";
- //BA.debugLineNum = 113;BA.debugLine="FAB_Btn.Text = IconText";
+ //BA.debugLineNum = 128;BA.debugLine="Public Sub setIcon(IconText As String)";
+ //BA.debugLineNum = 130;BA.debugLine="FAB_Btn.Text = IconText";
 _fab_btn.setText(_icontext);
- //BA.debugLineNum = 115;BA.debugLine="End Sub";
+ //BA.debugLineNum = 132;BA.debugLine="End Sub";
 return "";
 }
 public String  _setrotation(float _angle) throws Exception{
@@ -277,31 +298,31 @@ _cfcontrolsutils._setrotation((anywheresoftware.b4j.objects.NodeWrapper.Concrete
 return "";
 }
 public String  _settag(Object _tag) throws Exception{
- //BA.debugLineNum = 201;BA.debugLine="Public Sub setTag(Tag As Object)";
- //BA.debugLineNum = 203;BA.debugLine="mBase.Tag = Tag";
+ //BA.debugLineNum = 218;BA.debugLine="Public Sub setTag(Tag As Object)";
+ //BA.debugLineNum = 220;BA.debugLine="mBase.Tag = Tag";
 _mbase.setTag(_tag);
- //BA.debugLineNum = 205;BA.debugLine="End Sub";
+ //BA.debugLineNum = 222;BA.debugLine="End Sub";
 return "";
 }
 public String  _setvisible(boolean _visible) throws Exception{
- //BA.debugLineNum = 146;BA.debugLine="Public Sub setVisible(Visible As Boolean)";
- //BA.debugLineNum = 148;BA.debugLine="mBase.Visible = Visible";
+ //BA.debugLineNum = 163;BA.debugLine="Public Sub setVisible(Visible As Boolean)";
+ //BA.debugLineNum = 165;BA.debugLine="mBase.Visible = Visible";
 _mbase.setVisible(_visible);
- //BA.debugLineNum = 150;BA.debugLine="End Sub";
+ //BA.debugLineNum = 167;BA.debugLine="End Sub";
 return "";
 }
 public anywheresoftware.b4j.objects.ImageViewWrapper.ImageWrapper  _snapshot() throws Exception{
- //BA.debugLineNum = 224;BA.debugLine="Public Sub Snapshot As Image";
- //BA.debugLineNum = 226;BA.debugLine="Return mBase.Snapshot";
+ //BA.debugLineNum = 241;BA.debugLine="Public Sub Snapshot As Image";
+ //BA.debugLineNum = 243;BA.debugLine="Return mBase.Snapshot";
 if (true) return _mbase.Snapshot();
- //BA.debugLineNum = 228;BA.debugLine="End Sub";
+ //BA.debugLineNum = 245;BA.debugLine="End Sub";
 return null;
 }
 public anywheresoftware.b4j.objects.ImageViewWrapper.ImageWrapper  _snapshot2(anywheresoftware.b4j.objects.JFX.PaintWrapper _backgroundcolor) throws Exception{
- //BA.debugLineNum = 231;BA.debugLine="Public Sub Snapshot2(BackgroundColor As Paint) As";
- //BA.debugLineNum = 233;BA.debugLine="Return mBase.Snapshot2(BackgroundColor)";
+ //BA.debugLineNum = 248;BA.debugLine="Public Sub Snapshot2(BackgroundColor As Paint) As";
+ //BA.debugLineNum = 250;BA.debugLine="Return mBase.Snapshot2(BackgroundColor)";
 if (true) return _mbase.Snapshot2((javafx.scene.paint.Paint)(_backgroundcolor.getObject()));
- //BA.debugLineNum = 235;BA.debugLine="End Sub";
+ //BA.debugLineNum = 252;BA.debugLine="End Sub";
 return null;
 }
 public Object callSub(String sub, Object sender, Object[] args) throws Exception {

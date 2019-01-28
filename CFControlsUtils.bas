@@ -124,8 +124,14 @@ Public Sub GetTextColor(controlObj As Node) As String
 	Return CSSUtils.GetStyleProperty(controlObj, "-fx-text-fill")
 	 
 End Sub
- 
- 
+
+'Makes a Form fullscreen.
+Public Sub FullScreenForm(Frm As Form)
+	Dim joForm As JavaObject = Frm
+	Dim joStage As JavaObject = joForm.GetField("stage")
+	joStage.RunMethod("setMaximized", Array(True))
+End Sub
+
  #Region Add/remove Tooltip
  
 'Add tooltip to an Image View
@@ -230,15 +236,22 @@ Public Sub ConfigureTooltip(OpenDelay As Long,VisibleDuration As Long,CloseDelay
 
 End Sub
 
+'Measure the required Height and Width a text needs to display well
 Public Sub MeasureText(Text As String,TFont As Font) As TextMetric
+	
 	Dim TM As TextMetric
 	TM.Initialize
+	
 	Dim T As JavaObject
+	
 	T.InitializeNewInstance("javafx.scene.text.Text",Array(Text))
 	T.RunMethod("setFont",Array(TFont))
+	
 	TM.Width = T.RunMethod("prefWidth",Array(-1.0))
 	TM.Height = T.RunMethod("prefHeight",Array(TM.Width))
+	
 	Return TM
+	
 End Sub
 
 

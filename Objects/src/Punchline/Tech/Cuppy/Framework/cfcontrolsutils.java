@@ -28,13 +28,13 @@ static {
  public static anywheresoftware.b4a.keywords.Common __c = null;
 public static anywheresoftware.b4j.objects.JFX _fx = null;
 public static b4j.example.cssutils _cssutils = null;
+public static punchline.tech.cuppy.framework.cfconfigs _cfconfigs = null;
 public static punchline.tech.cuppy.framework.cfstringutility _cfstringutility = null;
 public static punchline.tech.cuppy.framework.cfdatageneratorutility _cfdatageneratorutility = null;
 public static punchline.tech.cuppy.framework.cfapputility _cfapputility = null;
-public static punchline.tech.cuppy.framework.cfstylemanager _cfstylemanager = null;
-public static punchline.tech.cuppy.framework.cfconfigs _cfconfigs = null;
-public static punchline.tech.cuppy.framework.cffileutility _cffileutility = null;
 public static punchline.tech.cuppy.framework.cfmathutility _cfmathutility = null;
+public static punchline.tech.cuppy.framework.cfstylemanager _cfstylemanager = null;
+public static punchline.tech.cuppy.framework.cffileutility _cffileutility = null;
 public static punchline.tech.cuppy.framework.cfdatatypeutility _cfdatatypeutility = null;
 public static class _textmetric{
 public boolean IsInitialized;
@@ -52,67 +52,82 @@ Height = 0;
 public static String  _addcontroltooltip(anywheresoftware.b4j.objects.NodeWrapper.ConcreteNodeWrapper _controlobj,String _msg) throws Exception{
 anywheresoftware.b4j.object.JavaObject _jotooltip = null;
 anywheresoftware.b4j.object.JavaObject _jotooltip2 = null;
- //BA.debugLineNum = 151;BA.debugLine="Public Sub AddControlToolTip(ControlObj As Node, m";
- //BA.debugLineNum = 153;BA.debugLine="Dim joToolTip As JavaObject";
+ //BA.debugLineNum = 157;BA.debugLine="Public Sub AddControlToolTip(ControlObj As Node, m";
+ //BA.debugLineNum = 159;BA.debugLine="Dim joToolTip As JavaObject";
 _jotooltip = new anywheresoftware.b4j.object.JavaObject();
- //BA.debugLineNum = 154;BA.debugLine="Dim joToolTip2 As JavaObject = joToolTip.Initiali";
+ //BA.debugLineNum = 160;BA.debugLine="Dim joToolTip2 As JavaObject = joToolTip.Initiali";
 _jotooltip2 = new anywheresoftware.b4j.object.JavaObject();
 _jotooltip2 = _jotooltip.InitializeNewInstance("javafx.scene.control.Tooltip",new Object[]{(Object)(_msg)});
- //BA.debugLineNum = 155;BA.debugLine="joToolTip.RunMethod(\"install\", Array(ControlObj,";
+ //BA.debugLineNum = 161;BA.debugLine="joToolTip.RunMethod(\"install\", Array(ControlObj,";
 _jotooltip.RunMethod("install",new Object[]{(Object)(_controlobj.getObject()),(Object)(_jotooltip2.getObject())});
- //BA.debugLineNum = 157;BA.debugLine="End Sub";
+ //BA.debugLineNum = 163;BA.debugLine="End Sub";
 return "";
 }
 public static String  _addimageviewtooltip(anywheresoftware.b4j.objects.ImageViewWrapper _controlobj,String _msg) throws Exception{
 anywheresoftware.b4j.object.JavaObject _jotooltip = null;
 anywheresoftware.b4j.object.JavaObject _jotooltip2 = null;
- //BA.debugLineNum = 128;BA.debugLine="Public Sub AddImageViewToolTip(ControlObj As Image";
- //BA.debugLineNum = 130;BA.debugLine="Dim joToolTip As JavaObject";
+ //BA.debugLineNum = 134;BA.debugLine="Public Sub AddImageViewToolTip(ControlObj As Image";
+ //BA.debugLineNum = 136;BA.debugLine="Dim joToolTip As JavaObject";
 _jotooltip = new anywheresoftware.b4j.object.JavaObject();
- //BA.debugLineNum = 131;BA.debugLine="Dim joToolTip2 As JavaObject = joToolTip.Initiali";
+ //BA.debugLineNum = 137;BA.debugLine="Dim joToolTip2 As JavaObject = joToolTip.Initiali";
 _jotooltip2 = new anywheresoftware.b4j.object.JavaObject();
 _jotooltip2 = _jotooltip.InitializeNewInstance("javafx.scene.control.Tooltip",new Object[]{(Object)(_msg)});
- //BA.debugLineNum = 133;BA.debugLine="joToolTip.RunMethod(\"install\", Array(ControlObj,";
+ //BA.debugLineNum = 139;BA.debugLine="joToolTip.RunMethod(\"install\", Array(ControlObj,";
 _jotooltip.RunMethod("install",new Object[]{(Object)(_controlobj.getObject()),(Object)(_jotooltip2.getObject())});
- //BA.debugLineNum = 135;BA.debugLine="End Sub";
+ //BA.debugLineNum = 141;BA.debugLine="End Sub";
 return "";
 }
 public static String  _addpanetooltip(anywheresoftware.b4j.objects.PaneWrapper.ConcretePaneWrapper _panelobj,String _msg) throws Exception{
 anywheresoftware.b4j.object.JavaObject _jotooltip = null;
 anywheresoftware.b4j.object.JavaObject _jotooltip2 = null;
- //BA.debugLineNum = 174;BA.debugLine="Public Sub AddPaneToolTip(PanelObj As Pane, msg As";
- //BA.debugLineNum = 176;BA.debugLine="Dim joToolTip As JavaObject";
+ //BA.debugLineNum = 180;BA.debugLine="Public Sub AddPaneToolTip(PanelObj As Pane, msg As";
+ //BA.debugLineNum = 182;BA.debugLine="Dim joToolTip As JavaObject";
 _jotooltip = new anywheresoftware.b4j.object.JavaObject();
- //BA.debugLineNum = 177;BA.debugLine="Dim joToolTip2 As JavaObject = joToolTip.Initiali";
+ //BA.debugLineNum = 183;BA.debugLine="Dim joToolTip2 As JavaObject = joToolTip.Initiali";
 _jotooltip2 = new anywheresoftware.b4j.object.JavaObject();
 _jotooltip2 = _jotooltip.InitializeNewInstance("javafx.scene.control.Tooltip",new Object[]{(Object)(_msg)});
- //BA.debugLineNum = 178;BA.debugLine="joToolTip.RunMethod(\"install\", Array(PanelObj, jo";
+ //BA.debugLineNum = 184;BA.debugLine="joToolTip.RunMethod(\"install\", Array(PanelObj, jo";
 _jotooltip.RunMethod("install",new Object[]{(Object)(_panelobj.getObject()),(Object)(_jotooltip2.getObject())});
- //BA.debugLineNum = 180;BA.debugLine="End Sub";
+ //BA.debugLineNum = 186;BA.debugLine="End Sub";
 return "";
 }
 public static String  _configuretooltip(long _opendelay,long _visibleduration,long _closedelay) throws Exception{
 anywheresoftware.b4j.object.JavaObject _mejo = null;
 String _classshortname = "";
 anywheresoftware.b4j.object.JavaObject _modjo = null;
- //BA.debugLineNum = 213;BA.debugLine="Public Sub ConfigureTooltip(OpenDelay As Long,Visi";
- //BA.debugLineNum = 215;BA.debugLine="Dim MEJO As JavaObject = Me";
+ //BA.debugLineNum = 219;BA.debugLine="Public Sub ConfigureTooltip(OpenDelay As Long,Visi";
+ //BA.debugLineNum = 221;BA.debugLine="Dim MEJO As JavaObject = Me";
 _mejo = new anywheresoftware.b4j.object.JavaObject();
 _mejo.setObject((java.lang.Object)(cfcontrolsutils.getObject()));
- //BA.debugLineNum = 216;BA.debugLine="Dim ClassShortName As String = MEJO.RunMethod(\"to";
+ //BA.debugLineNum = 222;BA.debugLine="Dim ClassShortName As String = MEJO.RunMethod(\"to";
 _classshortname = BA.ObjectToString(_mejo.RunMethod("toString",(Object[])(anywheresoftware.b4a.keywords.Common.Null)));
- //BA.debugLineNum = 217;BA.debugLine="ClassShortName = ClassShortName.SubString(ClassSh";
+ //BA.debugLineNum = 223;BA.debugLine="ClassShortName = ClassShortName.SubString(ClassSh";
 _classshortname = _classshortname.substring(_classshortname.lastIndexOf("."));
- //BA.debugLineNum = 218;BA.debugLine="Dim ModJO As JavaObject";
+ //BA.debugLineNum = 224;BA.debugLine="Dim ModJO As JavaObject";
 _modjo = new anywheresoftware.b4j.object.JavaObject();
- //BA.debugLineNum = 219;BA.debugLine="ModJO.InitializeStatic(CFAppUtility.GetPackageNam";
+ //BA.debugLineNum = 225;BA.debugLine="ModJO.InitializeStatic(CFAppUtility.GetPackageNam";
 _modjo.InitializeStatic(_cfapputility._getpackagename(cfcontrolsutils.getObject())+_classshortname);
- //BA.debugLineNum = 221;BA.debugLine="If ModJO.RunMethod(\"setTooltipTimers\",Array(OpenD";
+ //BA.debugLineNum = 227;BA.debugLine="If ModJO.RunMethod(\"setTooltipTimers\",Array(OpenD";
 if ((_modjo.RunMethod("setTooltipTimers",new Object[]{(Object)(_opendelay),(Object)(_visibleduration),(Object)(_closedelay)})).equals((Object)(anywheresoftware.b4a.keywords.Common.False))) { 
- //BA.debugLineNum = 222;BA.debugLine="Log($\"*******${CRLF}Tooltip Configuration failed";
+ //BA.debugLineNum = 228;BA.debugLine="Log($\"*******${CRLF}Tooltip Configuration failed";
 anywheresoftware.b4a.keywords.Common.Log(("*******"+anywheresoftware.b4a.keywords.Common.SmartStringFormatter("",(Object)(anywheresoftware.b4a.keywords.Common.CRLF))+"Tooltip Configuration failed"+anywheresoftware.b4a.keywords.Common.SmartStringFormatter("",(Object)(anywheresoftware.b4a.keywords.Common.CRLF))+"*******"));
  };
- //BA.debugLineNum = 225;BA.debugLine="End Sub";
+ //BA.debugLineNum = 231;BA.debugLine="End Sub";
+return "";
+}
+public static String  _fullscreenform(anywheresoftware.b4j.objects.Form _frm) throws Exception{
+anywheresoftware.b4j.object.JavaObject _joform = null;
+anywheresoftware.b4j.object.JavaObject _jostage = null;
+ //BA.debugLineNum = 123;BA.debugLine="Public Sub FullScreenForm(Frm As Form)";
+ //BA.debugLineNum = 124;BA.debugLine="Dim joForm As JavaObject = Frm";
+_joform = new anywheresoftware.b4j.object.JavaObject();
+_joform.setObject((java.lang.Object)(_frm));
+ //BA.debugLineNum = 125;BA.debugLine="Dim joStage As JavaObject = joForm.GetField(\"stag";
+_jostage = new anywheresoftware.b4j.object.JavaObject();
+_jostage.setObject((java.lang.Object)(_joform.GetField("stage")));
+ //BA.debugLineNum = 126;BA.debugLine="joStage.RunMethod(\"setMaximized\", Array(True))";
+_jostage.RunMethod("setMaximized",new Object[]{(Object)(anywheresoftware.b4a.keywords.Common.True)});
+ //BA.debugLineNum = 127;BA.debugLine="End Sub";
 return "";
 }
 public static String  _getbackgroundcolor(anywheresoftware.b4j.objects.NodeWrapper.ConcreteNodeWrapper _controlobj) throws Exception{
@@ -167,24 +182,24 @@ return "";
 public static punchline.tech.cuppy.framework.cfcontrolsutils._textmetric  _measuretext(String _text,anywheresoftware.b4j.objects.JFX.FontWrapper _tfont) throws Exception{
 punchline.tech.cuppy.framework.cfcontrolsutils._textmetric _tm = null;
 anywheresoftware.b4j.object.JavaObject _t = null;
- //BA.debugLineNum = 227;BA.debugLine="Public Sub MeasureText(Text As String,TFont As Fon";
- //BA.debugLineNum = 228;BA.debugLine="Dim TM As TextMetric";
+ //BA.debugLineNum = 234;BA.debugLine="Public Sub MeasureText(Text As String,TFont As Fon";
+ //BA.debugLineNum = 236;BA.debugLine="Dim TM As TextMetric";
 _tm = new punchline.tech.cuppy.framework.cfcontrolsutils._textmetric();
- //BA.debugLineNum = 229;BA.debugLine="TM.Initialize";
+ //BA.debugLineNum = 237;BA.debugLine="TM.Initialize";
 _tm.Initialize();
- //BA.debugLineNum = 230;BA.debugLine="Dim T As JavaObject";
+ //BA.debugLineNum = 239;BA.debugLine="Dim T As JavaObject";
 _t = new anywheresoftware.b4j.object.JavaObject();
- //BA.debugLineNum = 231;BA.debugLine="T.InitializeNewInstance(\"javafx.scene.text.Text\",";
+ //BA.debugLineNum = 241;BA.debugLine="T.InitializeNewInstance(\"javafx.scene.text.Text\",";
 _t.InitializeNewInstance("javafx.scene.text.Text",new Object[]{(Object)(_text)});
- //BA.debugLineNum = 232;BA.debugLine="T.RunMethod(\"setFont\",Array(TFont))";
+ //BA.debugLineNum = 242;BA.debugLine="T.RunMethod(\"setFont\",Array(TFont))";
 _t.RunMethod("setFont",new Object[]{(Object)(_tfont.getObject())});
- //BA.debugLineNum = 233;BA.debugLine="TM.Width = T.RunMethod(\"prefWidth\",Array(-1.0))";
+ //BA.debugLineNum = 244;BA.debugLine="TM.Width = T.RunMethod(\"prefWidth\",Array(-1.0))";
 _tm.Width = (double)(BA.ObjectToNumber(_t.RunMethod("prefWidth",new Object[]{(Object)(-1.0)})));
- //BA.debugLineNum = 234;BA.debugLine="TM.Height = T.RunMethod(\"prefHeight\",Array(TM.Wid";
+ //BA.debugLineNum = 245;BA.debugLine="TM.Height = T.RunMethod(\"prefHeight\",Array(TM.Wid";
 _tm.Height = (double)(BA.ObjectToNumber(_t.RunMethod("prefHeight",new Object[]{(Object)(_tm.Width)})));
- //BA.debugLineNum = 235;BA.debugLine="Return TM";
+ //BA.debugLineNum = 247;BA.debugLine="Return TM";
 if (true) return _tm;
- //BA.debugLineNum = 236;BA.debugLine="End Sub";
+ //BA.debugLineNum = 249;BA.debugLine="End Sub";
 return null;
 }
 public static String  _process_globals() throws Exception{
@@ -199,15 +214,15 @@ return "";
 public static String  _removecontroltooltip(anywheresoftware.b4j.objects.NodeWrapper.ConcreteNodeWrapper _controlobj) throws Exception{
 anywheresoftware.b4j.object.JavaObject _jotooltip = null;
 anywheresoftware.b4j.object.JavaObject _jotooltip2 = null;
- //BA.debugLineNum = 162;BA.debugLine="Public Sub RemoveControlToolTip(ControlObj As Node";
- //BA.debugLineNum = 164;BA.debugLine="Dim joToolTip As JavaObject";
+ //BA.debugLineNum = 168;BA.debugLine="Public Sub RemoveControlToolTip(ControlObj As Node";
+ //BA.debugLineNum = 170;BA.debugLine="Dim joToolTip As JavaObject";
 _jotooltip = new anywheresoftware.b4j.object.JavaObject();
- //BA.debugLineNum = 165;BA.debugLine="Dim joToolTip2 As JavaObject = joToolTip.Initiali";
+ //BA.debugLineNum = 171;BA.debugLine="Dim joToolTip2 As JavaObject = joToolTip.Initiali";
 _jotooltip2 = new anywheresoftware.b4j.object.JavaObject();
 _jotooltip2 = _jotooltip.InitializeNewInstance("javafx.scene.control.Tooltip",new Object[]{(Object)("")});
- //BA.debugLineNum = 167;BA.debugLine="joToolTip.RunMethod(\"uninstall\", Array(ControlObj";
+ //BA.debugLineNum = 173;BA.debugLine="joToolTip.RunMethod(\"uninstall\", Array(ControlObj";
 _jotooltip.RunMethod("uninstall",new Object[]{(Object)(_controlobj.getObject()),(Object)(_jotooltip2.getObject())});
- //BA.debugLineNum = 169;BA.debugLine="End Sub";
+ //BA.debugLineNum = 175;BA.debugLine="End Sub";
 return "";
 }
 public static String  _removeeffect(anywheresoftware.b4j.objects.NodeWrapper.ConcreteNodeWrapper _controlobj) throws Exception{
@@ -220,29 +235,29 @@ return "";
 public static String  _removeimageviewtooltip(anywheresoftware.b4j.objects.ImageViewWrapper _controlobj) throws Exception{
 anywheresoftware.b4j.object.JavaObject _jotooltip = null;
 anywheresoftware.b4j.object.JavaObject _jotooltip2 = null;
- //BA.debugLineNum = 140;BA.debugLine="Public Sub RemoveImageViewToolTip(ControlObj As Im";
- //BA.debugLineNum = 142;BA.debugLine="Dim joToolTip As JavaObject";
+ //BA.debugLineNum = 146;BA.debugLine="Public Sub RemoveImageViewToolTip(ControlObj As Im";
+ //BA.debugLineNum = 148;BA.debugLine="Dim joToolTip As JavaObject";
 _jotooltip = new anywheresoftware.b4j.object.JavaObject();
- //BA.debugLineNum = 143;BA.debugLine="Dim joToolTip2 As JavaObject = joToolTip.Initi";
+ //BA.debugLineNum = 149;BA.debugLine="Dim joToolTip2 As JavaObject = joToolTip.Initi";
 _jotooltip2 = new anywheresoftware.b4j.object.JavaObject();
 _jotooltip2 = _jotooltip.InitializeNewInstance("javafx.scene.control.Tooltip",new Object[]{(Object)("")});
- //BA.debugLineNum = 144;BA.debugLine="joToolTip.RunMethod(\"uninstall\", Array(ControlObj";
+ //BA.debugLineNum = 150;BA.debugLine="joToolTip.RunMethod(\"uninstall\", Array(ControlObj";
 _jotooltip.RunMethod("uninstall",new Object[]{(Object)(_controlobj.getObject()),(Object)(_jotooltip2.getObject())});
- //BA.debugLineNum = 146;BA.debugLine="End Sub";
+ //BA.debugLineNum = 152;BA.debugLine="End Sub";
 return "";
 }
 public static String  _removepanetooltip(anywheresoftware.b4j.objects.PaneWrapper.ConcretePaneWrapper _panelobj) throws Exception{
 anywheresoftware.b4j.object.JavaObject _jotooltip = null;
 anywheresoftware.b4j.object.JavaObject _jotooltip2 = null;
- //BA.debugLineNum = 185;BA.debugLine="Public Sub RemovePaneToolTip(PanelObj As Pane)";
- //BA.debugLineNum = 187;BA.debugLine="Dim joToolTip As JavaObject";
+ //BA.debugLineNum = 191;BA.debugLine="Public Sub RemovePaneToolTip(PanelObj As Pane)";
+ //BA.debugLineNum = 193;BA.debugLine="Dim joToolTip As JavaObject";
 _jotooltip = new anywheresoftware.b4j.object.JavaObject();
- //BA.debugLineNum = 188;BA.debugLine="Dim joToolTip2 As JavaObject = joToolTip.Initiali";
+ //BA.debugLineNum = 194;BA.debugLine="Dim joToolTip2 As JavaObject = joToolTip.Initiali";
 _jotooltip2 = new anywheresoftware.b4j.object.JavaObject();
 _jotooltip2 = _jotooltip.InitializeNewInstance("javafx.scene.control.Tooltip",new Object[]{(Object)("")});
- //BA.debugLineNum = 190;BA.debugLine="joToolTip.RunMethod(\"uninstall\", Array(PanelObj,";
+ //BA.debugLineNum = 196;BA.debugLine="joToolTip.RunMethod(\"uninstall\", Array(PanelObj,";
 _jotooltip.RunMethod("uninstall",new Object[]{(Object)(_panelobj.getObject()),(Object)(_jotooltip2.getObject())});
- //BA.debugLineNum = 192;BA.debugLine="End Sub";
+ //BA.debugLineNum = 198;BA.debugLine="End Sub";
 return "";
 }
 public static String  _setbackgroundcolor(anywheresoftware.b4j.objects.NodeWrapper.ConcreteNodeWrapper _controlobj,String _color) throws Exception{

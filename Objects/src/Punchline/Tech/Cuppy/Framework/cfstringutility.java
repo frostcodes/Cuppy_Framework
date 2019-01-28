@@ -24,13 +24,13 @@ static {
  public static anywheresoftware.b4a.keywords.Common __c = null;
 public static anywheresoftware.b4j.objects.JFX _fx = null;
 public static b4j.example.cssutils _cssutils = null;
+public static punchline.tech.cuppy.framework.cfconfigs _cfconfigs = null;
 public static punchline.tech.cuppy.framework.cfcontrolsutils _cfcontrolsutils = null;
 public static punchline.tech.cuppy.framework.cfdatageneratorutility _cfdatageneratorutility = null;
 public static punchline.tech.cuppy.framework.cfapputility _cfapputility = null;
-public static punchline.tech.cuppy.framework.cfstylemanager _cfstylemanager = null;
-public static punchline.tech.cuppy.framework.cfconfigs _cfconfigs = null;
-public static punchline.tech.cuppy.framework.cffileutility _cffileutility = null;
 public static punchline.tech.cuppy.framework.cfmathutility _cfmathutility = null;
+public static punchline.tech.cuppy.framework.cfstylemanager _cfstylemanager = null;
+public static punchline.tech.cuppy.framework.cffileutility _cffileutility = null;
 public static punchline.tech.cuppy.framework.cfdatatypeutility _cfdatatypeutility = null;
 public static Object  _breakstrat(String _haystack,String _after) throws Exception{
 String _found = "";
@@ -423,6 +423,41 @@ if (true) return _firstchar+_str.substring((int) (1));
  //BA.debugLineNum = 448;BA.debugLine="End Sub";
 return "";
 }
+public static String  _maptohttprequeststring(anywheresoftware.b4a.objects.collections.Map _map,boolean _appendquestionmark) throws Exception{
+ //BA.debugLineNum = 1173;BA.debugLine="Public Sub MapToHttpRequestString(Map As Map, Appe";
+ //BA.debugLineNum = 1175;BA.debugLine="Return MapToHttpRequestString2(Map, False)";
+if (true) return _maptohttprequeststring2(_map,anywheresoftware.b4a.keywords.Common.False);
+ //BA.debugLineNum = 1177;BA.debugLine="End Sub";
+return "";
+}
+public static String  _maptohttprequeststring2(anywheresoftware.b4a.objects.collections.Map _map,boolean _appendquestionmark) throws Exception{
+anywheresoftware.b4a.keywords.StringBuilderWrapper _result = null;
+int _i = 0;
+ //BA.debugLineNum = 1182;BA.debugLine="Public Sub MapToHttpRequestString2(Map As Map, App";
+ //BA.debugLineNum = 1184;BA.debugLine="Dim result As StringBuilder";
+_result = new anywheresoftware.b4a.keywords.StringBuilderWrapper();
+ //BA.debugLineNum = 1185;BA.debugLine="result.Initialize";
+_result.Initialize();
+ //BA.debugLineNum = 1187;BA.debugLine="If AppendQuestionMark Then";
+if (_appendquestionmark) { 
+ //BA.debugLineNum = 1189;BA.debugLine="result.Append(\"?\")";
+_result.Append("?");
+ };
+ //BA.debugLineNum = 1193;BA.debugLine="For i = 0 To Map.Size - 1";
+{
+final int step6 = 1;
+final int limit6 = (int) (_map.getSize()-1);
+_i = (int) (0) ;
+for (;_i <= limit6 ;_i = _i + step6 ) {
+ //BA.debugLineNum = 1195;BA.debugLine="result.Append(Map.GetKeyAt(i) & \"=\" & Map.GetVal";
+_result.Append(BA.ObjectToString(_map.GetKeyAt(_i))+"="+BA.ObjectToString(_map.GetValueAt(_i))+"&");
+ }
+};
+ //BA.debugLineNum = 1199;BA.debugLine="Return result.ToString.SubString2(0, result.ToStr";
+if (true) return _result.ToString().substring((int) (0),(int) (_result.ToString().length()-1));
+ //BA.debugLineNum = 1201;BA.debugLine="End Sub";
+return "";
+}
 public static String  _nicelyformatteddate() throws Exception{
  //BA.debugLineNum = 1059;BA.debugLine="Public Sub NicelyFormattedDate As String";
  //BA.debugLineNum = 1061;BA.debugLine="DateTime.DateFormat = \"MMMM '\" & DateOrdinal(Date";
@@ -813,7 +848,7 @@ _fromstr = "";
 _tostr = "";
  //BA.debugLineNum = 1123;BA.debugLine="FromStr = \"abcdefghijklmnopqrstuvwxyzABCDEFGHIJKL";
 _fromstr = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
- //BA.debugLineNum = 1124;BA.debugLine="ToStr = \"nopqrstuvwxyzabcdefghijklmNOPQRSTUVWXYZA";
+ //BA.debugLineNum = 1124;BA.debugLine="ToStr 	= \"nopqrstuvwxyzabcdefghijklmNOPQRSTUVWXYZ";
 _tostr = "nopqrstuvwxyzabcdefghijklmNOPQRSTUVWXYZABCDEFGHIJKLM";
  //BA.debugLineNum = 1126;BA.debugLine="Return Strtr(str, FromStr, ToStr)";
 if (true) return _strtr(_str,_fromstr,_tostr);
