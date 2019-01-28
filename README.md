@@ -1,4 +1,4 @@
-# Cuppy_Framework
+# Cuppy Framework - B4J Material Design User Interface Views
 
 Cuppy Framework enables developers to design applications faster and also create the functionality of the app.
 
