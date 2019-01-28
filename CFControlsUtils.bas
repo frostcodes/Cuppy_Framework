@@ -124,8 +124,14 @@ Public Sub GetTextColor(controlObj As Node) As String
 	Return CSSUtils.GetStyleProperty(controlObj, "-fx-text-fill")
 	 
 End Sub
- 
- 
+
+'Makes a Form fullscreen.
+Public Sub FullScreenForm(Frm As Form)
+	Dim joForm As JavaObject = Frm
+	Dim joStage As JavaObject = joForm.GetField("stage")
+	joStage.RunMethod("setMaximized", Array(True))
+End Sub
+
  #Region Add/remove Tooltip
  
 'Add tooltip to an Image View

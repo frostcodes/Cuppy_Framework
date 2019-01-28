@@ -120,6 +120,24 @@ Public Sub setBorderRadius(radius As Int)
 	CFControlsUtils.SetBorderRadius(SwitchPane, radius)
 	
 End Sub
+
+Public Sub getBorderColor As String
+	
+	Return CFControlsUtils.GetBorderColor(SwitchPane)
+	
+End Sub
+
+Public Sub getBorderWidth As Int
+	
+	Return CFControlsUtils.GetBorderWidth(SwitchPane)
+	
+End Sub
+
+Public Sub getBorderRadius As Int
+	
+	Return CFControlsUtils.GetBorderRadius(SwitchPane)
+	
+End Sub
  
 Public Sub setEffect(effect As String)
 	

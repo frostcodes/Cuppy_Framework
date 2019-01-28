@@ -30,13 +30,13 @@ public punchline.tech.cuppy.framework.cfmaterialradiobox _lastcheckedradiobox = 
 public int _unchecked_state = 0;
 public int _checked_state = 0;
 public b4j.example.cssutils _cssutils = null;
+public punchline.tech.cuppy.framework.cfconfigs _cfconfigs = null;
 public punchline.tech.cuppy.framework.cfcontrolsutils _cfcontrolsutils = null;
 public punchline.tech.cuppy.framework.cfstringutility _cfstringutility = null;
 public punchline.tech.cuppy.framework.cfdatageneratorutility _cfdatageneratorutility = null;
 public punchline.tech.cuppy.framework.cfapputility _cfapputility = null;
 public punchline.tech.cuppy.framework.cfmathutility _cfmathutility = null;
 public punchline.tech.cuppy.framework.cfstylemanager _cfstylemanager = null;
-public punchline.tech.cuppy.framework.cfconfigs _cfconfigs = null;
 public punchline.tech.cuppy.framework.cffileutility _cffileutility = null;
 public punchline.tech.cuppy.framework.cfdatatypeutility _cfdatatypeutility = null;
 public boolean  _bindcontrol(punchline.tech.cuppy.framework.cfmaterialradiobox _control) throws Exception{

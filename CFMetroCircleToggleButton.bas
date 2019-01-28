@@ -113,6 +113,24 @@ Public Sub setBorderRadius(radius As Int)
 	
 End Sub
  
+Public Sub getBorderColor As String
+	
+	Return CFControlsUtils.GetBorderColor(ToggleButton)
+	
+End Sub
+
+Public Sub getBorderWidth As Int
+	
+	Return CFControlsUtils.GetBorderWidth(ToggleButton)
+	
+End Sub
+
+Public Sub getBorderRadius As Int
+	
+	Return CFControlsUtils.GetBorderRadius(ToggleButton)
+	
+End Sub
+ 
 Public Sub setEffect(effect As String)
 	
 	CFControlsUtils.setEffect(ToggleButton, effect)

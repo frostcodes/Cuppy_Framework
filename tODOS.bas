@@ -25,8 +25,8 @@ End Sub
 ' 
 '	CFControlsUtils.setTextColor (InnerLabel, color)
 ' 
-'End Sub
  '
+'End Sub
  
  
  
@@ -48,7 +48,4 @@ End Sub
 'TabControl
 'TrackBar
  
- 
-'StyleManager (Cascading styles And theming)
-'StyleExtender (Apply selected theme propertys To legacy controls)
-   
+  

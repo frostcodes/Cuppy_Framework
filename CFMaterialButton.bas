@@ -4,8 +4,7 @@ ModulesStructureVersion=1
 Type=Class
 Version=5.51
 @EndOfDesignText@
-'Custom View class
- 
+
 #Event: MousePressed (EventData As MouseEvent)
 #Event: MouseEntered (EventData As MouseEvent)
 #Event: MouseExited (EventData As MouseEvent)
@@ -91,8 +90,7 @@ Public Sub setBorder(color As String , width As Int)
 	CFControlsUtils.setBorder(InnerButton, color, width)
 
 End Sub
-
-
+ 
 Public Sub setBorderRadius(radius As Int)
 	
 	CFControlsUtils.setBorderRadius(InnerButton, radius)
@@ -100,6 +98,24 @@ Public Sub setBorderRadius(radius As Int)
 End Sub
 
 
+Public Sub getBorderColor As String
+	
+	Return CFControlsUtils.GetBorderColor(InnerButton)
+	
+End Sub
+
+Public Sub getBorderWidth As Int
+	
+	Return CFControlsUtils.GetBorderWidth(InnerButton)
+	
+End Sub
+
+Public Sub getBorderRadius As Int
+	
+	Return CFControlsUtils.GetBorderRadius(InnerButton)
+	
+End Sub
+ 
 Public Sub setEffect(effect As String)
 	
 	CFControlsUtils.setEffect(InnerButton, effect)
@@ -119,18 +135,6 @@ Public Sub RemoveEffects()
 End Sub
 
 #End Region
-
-Public Sub setText(text As String)
-	
-	InnerButton.Text = text
-	
-End Sub
-
-Public Sub getText() As String
-	
-	Return InnerButton.Text
-	
-End Sub
 
 #Region General Functions and Properties
 
@@ -251,7 +255,31 @@ End Sub
 #End Region
 
 #Region Control Specific
+
+Public Sub setFont(font As Font)
+	
+	InnerButton.Font = font
+	
+End Sub
+
+Public Sub getFont() As Font
+	
+	Return InnerButton.font
+	
+End Sub
  
+Public Sub setText(text As String)
+	
+	InnerButton.Text = text
+	
+End Sub
+
+Public Sub getText() As String
+	
+	Return InnerButton.Text
+	
+End Sub
+
 Public Sub setTextSize(TextSize As Double)
 	
 	InnerButton.TextSize = TextSize

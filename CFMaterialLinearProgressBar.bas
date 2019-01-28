@@ -69,7 +69,8 @@ Public Sub DesignerCreateView (Base As Pane, Lbl As Label, Props As Map)
 	setTag(Lbl.Tag)
 	setAlpha(Lbl.Alpha)
 	
-	ProgressPercentageText.Font = CFStyleManager.FONT_BOLD
+	ProgressPercentageText.Visible =False 'unready for now
+'	ProgressPercentageText.Font = CFStyleManager.FONT_BOLD
 	
 End Sub
 
@@ -106,6 +107,24 @@ End Sub
 Public Sub setBorderRadius(radius As Int)
 	
 	CFControlsUtils.SetBorderRadius(ProgressPane, radius)
+	
+End Sub
+
+Public Sub getBorderColor As String
+	
+	Return CFControlsUtils.GetBorderColor(ProgressPane)
+	
+End Sub
+
+Public Sub getBorderWidth As Int
+	
+	Return CFControlsUtils.GetBorderWidth(ProgressPane)
+	
+End Sub
+
+Public Sub getBorderRadius As Int
+	
+	Return CFControlsUtils.GetBorderRadius(ProgressPane)
 	
 End Sub
  
@@ -195,8 +214,7 @@ Public Sub setProgress(value As Int)
 	End If
 	
 	ProgressBar.SetLayoutAnimated(300, 0 ,0 , (value / 100) * mBase.PrefWidth , mBase.PrefHeight)
-	ProgressPercentageText.Left = ProgressBar.PrefWidth - 8
-	Log(ProgressBar.PrefWidth - 8)
+'	ProgressPercentageText.Left = ProgressBar.PrefWidth - 8
 End Sub
 
 Public Sub getProgress()  As Int
@@ -204,19 +222,19 @@ Public Sub getProgress()  As Int
 	Return (ProgressBar.PrefWidth / mBase.PrefWidth ) * 100
 	
 End Sub
-
-'Get or set if the progress percentage is shown
-Public Sub setShowProgressPercentageText(BoolVal As Boolean)
-	 
-	ProgressPercentageText.Visible = BoolVal
-		
-End Sub
-
-Public Sub getShowProgressPercentageText As Boolean
-	 
-	Return ProgressPercentageText.Visible
-		
-End Sub
+'
+''Get Or set If the progress percentage Is shown
+'Public Sub setShowProgressPercentageText(BoolVal As Boolean)
+'	 
+'	ProgressPercentageText.Visible = BoolVal
+'		
+'End Sub
+'
+'Public Sub getShowProgressPercentageText As Boolean
+'	 
+'	Return ProgressPercentageText.Visible
+'		
+'End Sub
 
 #Region General Functions and Properties
 

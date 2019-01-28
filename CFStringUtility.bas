@@ -1172,3 +1172,36 @@ Public Sub Strtr(Str As String, FromStringList As String, ToStringList As String
 	Return result.ToString
 	
 End Sub
+ 
+'Converts a Map data into a HTTP request string
+'Useful for POST requests or GET for example
+'Return something like: <b>name=frost&amp;key2=value2&amp;key3=value3</b>
+Public Sub MapToHttpRequestString(Map As Map, AppendQuestionMark As Boolean) As String
+	 
+	Return MapToHttpRequestString2(Map, False)
+	
+End Sub
+
+'Converts a Map data into a HTTP request string
+'NOTE: this adds a ? if AppendQuestionMark is true!
+'Return something like: <b>?name=frost&amp;key2=value2&amp;key3=value3</b>
+Public Sub MapToHttpRequestString2(Map As Map, AppendQuestionMark As Boolean) As String
+	
+	Dim result As StringBuilder
+	result.Initialize
+	
+	If AppendQuestionMark Then
+		
+		result.Append("?")
+		
+	End If
+	
+	For i = 0 To Map.Size - 1
+		
+		result.Append(Map.GetKeyAt(i) & "=" & Map.GetValueAt(i) & "&")
+		 
+	Next
+	
+	Return result.ToString.SubString2(0, result.ToString.Length -1)
+	
+End Sub

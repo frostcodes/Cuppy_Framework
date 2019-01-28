@@ -89,6 +89,24 @@ Public Sub setBorderRadius(radius As Int)
 	CFControlsUtils.setBorderRadius(InnerCard, radius)
 	
 End Sub
+ 
+Public Sub getBorderColor As String
+	
+	Return CFControlsUtils.GetBorderColor(InnerCard)
+	
+End Sub
+
+Public Sub getBorderWidth As Int
+	
+	Return CFControlsUtils.GetBorderWidth(InnerCard)
+	
+End Sub
+
+Public Sub getBorderRadius As Int
+	
+	Return CFControlsUtils.GetBorderRadius(InnerCard)
+	
+End Sub
 
 Public Sub setEffect(effect As String)
 	

@@ -190,5 +190,3 @@ Public Sub IsControlBinded(Control As CFMaterialRadioBox) As Boolean
 	End If
 	
 End Sub
-
- 

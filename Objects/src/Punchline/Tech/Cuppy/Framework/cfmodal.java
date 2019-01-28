@@ -31,13 +31,13 @@ public anywheresoftware.b4j.objects.PaneWrapper.ConcretePaneWrapper _mbase = nul
 public anywheresoftware.b4j.objects.PaneWrapper.ConcretePaneWrapper _modalpane = null;
 public anywheresoftware.b4j.objects.PaneWrapper.ConcretePaneWrapper _modalbgpane = null;
 public b4j.example.cssutils _cssutils = null;
+public punchline.tech.cuppy.framework.cfconfigs _cfconfigs = null;
 public punchline.tech.cuppy.framework.cfcontrolsutils _cfcontrolsutils = null;
 public punchline.tech.cuppy.framework.cfstringutility _cfstringutility = null;
 public punchline.tech.cuppy.framework.cfdatageneratorutility _cfdatageneratorutility = null;
 public punchline.tech.cuppy.framework.cfapputility _cfapputility = null;
 public punchline.tech.cuppy.framework.cfmathutility _cfmathutility = null;
 public punchline.tech.cuppy.framework.cfstylemanager _cfstylemanager = null;
-public punchline.tech.cuppy.framework.cfconfigs _cfconfigs = null;
 public punchline.tech.cuppy.framework.cffileutility _cffileutility = null;
 public punchline.tech.cuppy.framework.cfdatatypeutility _cfdatatypeutility = null;
 public String  _base_resize(double _width,double _height) throws Exception{
@@ -82,10 +82,10 @@ _setalpha(_lbl.getAlpha());
 return "";
 }
 public double  _getalpha() throws Exception{
- //BA.debugLineNum = 185;BA.debugLine="Public Sub getAlpha As Double";
- //BA.debugLineNum = 187;BA.debugLine="Return mBase.Alpha";
+ //BA.debugLineNum = 202;BA.debugLine="Public Sub getAlpha As Double";
+ //BA.debugLineNum = 204;BA.debugLine="Return mBase.Alpha";
 if (true) return _mbase.getAlpha();
- //BA.debugLineNum = 189;BA.debugLine="End Sub";
+ //BA.debugLineNum = 206;BA.debugLine="End Sub";
 return 0;
 }
 public String  _getbackgroundcolor() throws Exception{
@@ -102,67 +102,88 @@ if (true) return _mbase;
  //BA.debugLineNum = 63;BA.debugLine="End Sub";
 return null;
 }
+public String  _getbordercolor() throws Exception{
+ //BA.debugLineNum = 100;BA.debugLine="Public Sub getBorderColor As String";
+ //BA.debugLineNum = 102;BA.debugLine="Return CFControlsUtils.GetBorderColor(ModalPane)";
+if (true) return _cfcontrolsutils._getbordercolor((anywheresoftware.b4j.objects.NodeWrapper.ConcreteNodeWrapper) anywheresoftware.b4a.AbsObjectWrapper.ConvertToWrapper(new anywheresoftware.b4j.objects.NodeWrapper.ConcreteNodeWrapper(), (javafx.scene.Node)(_modalpane.getObject())));
+ //BA.debugLineNum = 104;BA.debugLine="End Sub";
+return "";
+}
+public int  _getborderradius() throws Exception{
+ //BA.debugLineNum = 112;BA.debugLine="Public Sub getBorderRadius As Int";
+ //BA.debugLineNum = 114;BA.debugLine="Return CFControlsUtils.GetBorderRadius(ModalPane)";
+if (true) return _cfcontrolsutils._getborderradius((anywheresoftware.b4j.objects.NodeWrapper.ConcreteNodeWrapper) anywheresoftware.b4a.AbsObjectWrapper.ConvertToWrapper(new anywheresoftware.b4j.objects.NodeWrapper.ConcreteNodeWrapper(), (javafx.scene.Node)(_modalpane.getObject())));
+ //BA.debugLineNum = 116;BA.debugLine="End Sub";
+return 0;
+}
+public int  _getborderwidth() throws Exception{
+ //BA.debugLineNum = 106;BA.debugLine="Public Sub getBorderWidth As Int";
+ //BA.debugLineNum = 108;BA.debugLine="Return CFControlsUtils.GetBorderWidth(ModalPane)";
+if (true) return _cfcontrolsutils._getborderwidth((anywheresoftware.b4j.objects.NodeWrapper.ConcreteNodeWrapper) anywheresoftware.b4a.AbsObjectWrapper.ConvertToWrapper(new anywheresoftware.b4j.objects.NodeWrapper.ConcreteNodeWrapper(), (javafx.scene.Node)(_modalpane.getObject())));
+ //BA.debugLineNum = 110;BA.debugLine="End Sub";
+return 0;
+}
 public String  _geteffect(String _effect) throws Exception{
- //BA.debugLineNum = 107;BA.debugLine="Public Sub getEffect(effect As String) As String";
- //BA.debugLineNum = 109;BA.debugLine="Return CFControlsUtils.GetEffect(ModalPane)";
+ //BA.debugLineNum = 124;BA.debugLine="Public Sub getEffect(effect As String) As String";
+ //BA.debugLineNum = 126;BA.debugLine="Return CFControlsUtils.GetEffect(ModalPane)";
 if (true) return _cfcontrolsutils._geteffect((anywheresoftware.b4j.objects.NodeWrapper.ConcreteNodeWrapper) anywheresoftware.b4a.AbsObjectWrapper.ConvertToWrapper(new anywheresoftware.b4j.objects.NodeWrapper.ConcreteNodeWrapper(), (javafx.scene.Node)(_modalpane.getObject())));
- //BA.debugLineNum = 111;BA.debugLine="End Sub";
+ //BA.debugLineNum = 128;BA.debugLine="End Sub";
 return "";
 }
 public boolean  _getenabled() throws Exception{
- //BA.debugLineNum = 159;BA.debugLine="Public Sub getEnabled As Boolean";
- //BA.debugLineNum = 161;BA.debugLine="Return mBase.Enabled";
+ //BA.debugLineNum = 176;BA.debugLine="Public Sub getEnabled As Boolean";
+ //BA.debugLineNum = 178;BA.debugLine="Return mBase.Enabled";
 if (true) return _mbase.getEnabled();
- //BA.debugLineNum = 163;BA.debugLine="End Sub";
+ //BA.debugLineNum = 180;BA.debugLine="End Sub";
 return false;
 }
 public double  _getheight() throws Exception{
- //BA.debugLineNum = 198;BA.debugLine="Public Sub getHeight As Double";
- //BA.debugLineNum = 200;BA.debugLine="Return mBase.PrefHeight";
+ //BA.debugLineNum = 215;BA.debugLine="Public Sub getHeight As Double";
+ //BA.debugLineNum = 217;BA.debugLine="Return mBase.PrefHeight";
 if (true) return _mbase.getPrefHeight();
- //BA.debugLineNum = 202;BA.debugLine="End Sub";
+ //BA.debugLineNum = 219;BA.debugLine="End Sub";
 return 0;
 }
 public double  _getleft() throws Exception{
- //BA.debugLineNum = 240;BA.debugLine="Public Sub getLeft As Double";
- //BA.debugLineNum = 242;BA.debugLine="Return mBase.Left";
+ //BA.debugLineNum = 257;BA.debugLine="Public Sub getLeft As Double";
+ //BA.debugLineNum = 259;BA.debugLine="Return mBase.Left";
 if (true) return _mbase.getLeft();
- //BA.debugLineNum = 244;BA.debugLine="End Sub";
+ //BA.debugLineNum = 261;BA.debugLine="End Sub";
 return 0;
 }
 public anywheresoftware.b4j.objects.NodeWrapper.ConcreteNodeWrapper  _getparent() throws Exception{
- //BA.debugLineNum = 219;BA.debugLine="Public Sub getParent As Node";
- //BA.debugLineNum = 221;BA.debugLine="Return mBase.Parent";
+ //BA.debugLineNum = 236;BA.debugLine="Public Sub getParent As Node";
+ //BA.debugLineNum = 238;BA.debugLine="Return mBase.Parent";
 if (true) return _mbase.getParent();
- //BA.debugLineNum = 223;BA.debugLine="End Sub";
+ //BA.debugLineNum = 240;BA.debugLine="End Sub";
 return null;
 }
 public Object  _gettag() throws Exception{
- //BA.debugLineNum = 227;BA.debugLine="Public Sub getTag As Object";
- //BA.debugLineNum = 229;BA.debugLine="Return mBase.Tag";
+ //BA.debugLineNum = 244;BA.debugLine="Public Sub getTag As Object";
+ //BA.debugLineNum = 246;BA.debugLine="Return mBase.Tag";
 if (true) return _mbase.getTag();
- //BA.debugLineNum = 231;BA.debugLine="End Sub";
+ //BA.debugLineNum = 248;BA.debugLine="End Sub";
 return null;
 }
 public double  _gettop() throws Exception{
- //BA.debugLineNum = 212;BA.debugLine="Public Sub getTop As Double";
- //BA.debugLineNum = 214;BA.debugLine="Return mBase.Top";
+ //BA.debugLineNum = 229;BA.debugLine="Public Sub getTop As Double";
+ //BA.debugLineNum = 231;BA.debugLine="Return mBase.Top";
 if (true) return _mbase.getTop();
- //BA.debugLineNum = 216;BA.debugLine="End Sub";
+ //BA.debugLineNum = 233;BA.debugLine="End Sub";
 return 0;
 }
 public boolean  _getvisible() throws Exception{
- //BA.debugLineNum = 172;BA.debugLine="Public Sub getVisible As Boolean";
- //BA.debugLineNum = 174;BA.debugLine="Return mBase.Visible";
+ //BA.debugLineNum = 189;BA.debugLine="Public Sub getVisible As Boolean";
+ //BA.debugLineNum = 191;BA.debugLine="Return mBase.Visible";
 if (true) return _mbase.getVisible();
- //BA.debugLineNum = 176;BA.debugLine="End Sub";
+ //BA.debugLineNum = 193;BA.debugLine="End Sub";
 return false;
 }
 public double  _getwidth() throws Exception{
- //BA.debugLineNum = 205;BA.debugLine="Public Sub getWidth As Double";
- //BA.debugLineNum = 207;BA.debugLine="Return mBase.PrefWidth";
+ //BA.debugLineNum = 222;BA.debugLine="Public Sub getWidth As Double";
+ //BA.debugLineNum = 224;BA.debugLine="Return mBase.PrefWidth";
 if (true) return _mbase.getPrefWidth();
- //BA.debugLineNum = 209;BA.debugLine="End Sub";
+ //BA.debugLineNum = 226;BA.debugLine="End Sub";
 return 0;
 }
 public void  _hide() throws Exception{
@@ -186,9 +207,9 @@ return;
 case 0:
 //C
 this.state = -1;
- //BA.debugLineNum = 139;BA.debugLine="mBase.SetAlphaAnimated(300, 0)";
+ //BA.debugLineNum = 156;BA.debugLine="mBase.SetAlphaAnimated(300, 0)";
 parent._mbase.SetAlphaAnimated((int) (300),0);
- //BA.debugLineNum = 141;BA.debugLine="Wait For mBase_AnimationCompleted";
+ //BA.debugLineNum = 158;BA.debugLine="Wait For mBase_AnimationCompleted";
 parent.__c.WaitFor("mbase_animationcompleted", ba, this, null);
 this.state = 1;
 return;
@@ -196,15 +217,15 @@ case 1:
 //C
 this.state = -1;
 ;
- //BA.debugLineNum = 143;BA.debugLine="ModalBgPane.Visible = False";
+ //BA.debugLineNum = 160;BA.debugLine="ModalBgPane.Visible = False";
 parent._modalbgpane.setVisible(parent.__c.False);
- //BA.debugLineNum = 144;BA.debugLine="ModalPane.Visible = False";
+ //BA.debugLineNum = 161;BA.debugLine="ModalPane.Visible = False";
 parent._modalpane.setVisible(parent.__c.False);
- //BA.debugLineNum = 146;BA.debugLine="mBase.SetSize(0, 0)";
+ //BA.debugLineNum = 163;BA.debugLine="mBase.SetSize(0, 0)";
 parent._mbase.SetSize(0,0);
- //BA.debugLineNum = 147;BA.debugLine="mBase.Enabled = False";
+ //BA.debugLineNum = 164;BA.debugLine="mBase.Enabled = False";
 parent._mbase.setEnabled(parent.__c.False);
- //BA.debugLineNum = 152;BA.debugLine="End Sub";
+ //BA.debugLineNum = 169;BA.debugLine="End Sub";
 if (true) break;
 
             }
@@ -226,56 +247,56 @@ _mbase.Initialize(ba,_meventname);
 return "";
 }
 public String  _modalbgpane_mousepressed(anywheresoftware.b4j.objects.NodeWrapper.MouseEventWrapper _eventdata) throws Exception{
- //BA.debugLineNum = 274;BA.debugLine="Private Sub ModalBgPane_MousePressed (EventData As";
- //BA.debugLineNum = 276;BA.debugLine="ModalPane.RequestFocus 'set focus";
+ //BA.debugLineNum = 291;BA.debugLine="Private Sub ModalBgPane_MousePressed (EventData As";
+ //BA.debugLineNum = 293;BA.debugLine="ModalPane.RequestFocus 'set focus";
 _modalpane.RequestFocus();
- //BA.debugLineNum = 278;BA.debugLine="CallSubDelayed2(mCallBack, mEventName & \"_ModalBG";
+ //BA.debugLineNum = 295;BA.debugLine="CallSubDelayed2(mCallBack, mEventName & \"_ModalBG";
 __c.CallSubDelayed2(ba,_mcallback,_meventname+"_ModalBGPressed",(Object)(_eventdata));
- //BA.debugLineNum = 280;BA.debugLine="End Sub";
+ //BA.debugLineNum = 297;BA.debugLine="End Sub";
 return "";
 }
 public String  _modalbgpane_resize(double _width,double _height) throws Exception{
- //BA.debugLineNum = 296;BA.debugLine="Sub ModalBgPane_Resize (Width As Double, Height As";
- //BA.debugLineNum = 298;BA.debugLine="CallSubDelayed3(mCallBack, mEventName & \"_ModalBg";
+ //BA.debugLineNum = 313;BA.debugLine="Sub ModalBgPane_Resize (Width As Double, Height As";
+ //BA.debugLineNum = 315;BA.debugLine="CallSubDelayed3(mCallBack, mEventName & \"_ModalBg";
 __c.CallSubDelayed3(ba,_mcallback,_meventname+"_ModalBgPaneResize",(Object)(_width),(Object)(_height));
- //BA.debugLineNum = 300;BA.debugLine="End Sub";
+ //BA.debugLineNum = 317;BA.debugLine="End Sub";
 return "";
 }
 public String  _modalpane_mousepressed(anywheresoftware.b4j.objects.NodeWrapper.MouseEventWrapper _eventdata) throws Exception{
- //BA.debugLineNum = 282;BA.debugLine="Private Sub ModalPane_MousePressed (EventData As M";
- //BA.debugLineNum = 284;BA.debugLine="ModalPane.RequestFocus 'set focus";
+ //BA.debugLineNum = 299;BA.debugLine="Private Sub ModalPane_MousePressed (EventData As M";
+ //BA.debugLineNum = 301;BA.debugLine="ModalPane.RequestFocus 'set focus";
 _modalpane.RequestFocus();
- //BA.debugLineNum = 286;BA.debugLine="CallSubDelayed2(mCallBack, mEventName & \"_ModalPr";
+ //BA.debugLineNum = 303;BA.debugLine="CallSubDelayed2(mCallBack, mEventName & \"_ModalPr";
 __c.CallSubDelayed2(ba,_mcallback,_meventname+"_ModalPressed",(Object)(_eventdata));
- //BA.debugLineNum = 288;BA.debugLine="End Sub";
+ //BA.debugLineNum = 305;BA.debugLine="End Sub";
 return "";
 }
 public String  _modalpane_resize(double _width,double _height) throws Exception{
- //BA.debugLineNum = 290;BA.debugLine="Sub ModalPane_Resize (Width As Double, Height As D";
- //BA.debugLineNum = 292;BA.debugLine="CallSubDelayed3(mCallBack, mEventName & \"_ModalPa";
+ //BA.debugLineNum = 307;BA.debugLine="Sub ModalPane_Resize (Width As Double, Height As D";
+ //BA.debugLineNum = 309;BA.debugLine="CallSubDelayed3(mCallBack, mEventName & \"_ModalPa";
 __c.CallSubDelayed3(ba,_mcallback,_meventname+"_ModalPaneResize",(Object)(_width),(Object)(_height));
- //BA.debugLineNum = 294;BA.debugLine="End Sub";
+ //BA.debugLineNum = 311;BA.debugLine="End Sub";
 return "";
 }
 public String  _removeeffects() throws Exception{
- //BA.debugLineNum = 113;BA.debugLine="Public Sub RemoveEffects()";
- //BA.debugLineNum = 115;BA.debugLine="CFControlsUtils.RemoveEffect(ModalPane)";
+ //BA.debugLineNum = 130;BA.debugLine="Public Sub RemoveEffects()";
+ //BA.debugLineNum = 132;BA.debugLine="CFControlsUtils.RemoveEffect(ModalPane)";
 _cfcontrolsutils._removeeffect((anywheresoftware.b4j.objects.NodeWrapper.ConcreteNodeWrapper) anywheresoftware.b4a.AbsObjectWrapper.ConvertToWrapper(new anywheresoftware.b4j.objects.NodeWrapper.ConcreteNodeWrapper(), (javafx.scene.Node)(_modalpane.getObject())));
- //BA.debugLineNum = 117;BA.debugLine="End Sub";
+ //BA.debugLineNum = 134;BA.debugLine="End Sub";
 return "";
 }
 public String  _removenodefromparent() throws Exception{
- //BA.debugLineNum = 249;BA.debugLine="Public Sub RemoveNodeFromParent";
- //BA.debugLineNum = 251;BA.debugLine="mBase.RemoveNodeFromParent";
+ //BA.debugLineNum = 266;BA.debugLine="Public Sub RemoveNodeFromParent";
+ //BA.debugLineNum = 268;BA.debugLine="mBase.RemoveNodeFromParent";
 _mbase.RemoveNodeFromParent();
- //BA.debugLineNum = 253;BA.debugLine="End Sub";
+ //BA.debugLineNum = 270;BA.debugLine="End Sub";
 return "";
 }
 public String  _setalpha(double _alpha) throws Exception{
- //BA.debugLineNum = 191;BA.debugLine="Public Sub setAlpha(Alpha As Double)";
- //BA.debugLineNum = 193;BA.debugLine="mBase.Alpha = Alpha";
+ //BA.debugLineNum = 208;BA.debugLine="Public Sub setAlpha(Alpha As Double)";
+ //BA.debugLineNum = 210;BA.debugLine="mBase.Alpha = Alpha";
 _mbase.setAlpha(_alpha);
- //BA.debugLineNum = 195;BA.debugLine="End Sub";
+ //BA.debugLineNum = 212;BA.debugLine="End Sub";
 return "";
 }
 public String  _setbackgroundcolor(String _color) throws Exception{
@@ -300,17 +321,17 @@ _cfcontrolsutils._setborderradius((anywheresoftware.b4j.objects.NodeWrapper.Conc
 return "";
 }
 public String  _seteffect(String _effect) throws Exception{
- //BA.debugLineNum = 101;BA.debugLine="Public Sub setEffect(effect As String)";
- //BA.debugLineNum = 103;BA.debugLine="CFControlsUtils.setEffect(ModalPane, effect)";
+ //BA.debugLineNum = 118;BA.debugLine="Public Sub setEffect(effect As String)";
+ //BA.debugLineNum = 120;BA.debugLine="CFControlsUtils.setEffect(ModalPane, effect)";
 _cfcontrolsutils._seteffect((anywheresoftware.b4j.objects.NodeWrapper.ConcreteNodeWrapper) anywheresoftware.b4a.AbsObjectWrapper.ConvertToWrapper(new anywheresoftware.b4j.objects.NodeWrapper.ConcreteNodeWrapper(), (javafx.scene.Node)(_modalpane.getObject())),_effect);
- //BA.debugLineNum = 105;BA.debugLine="End Sub";
+ //BA.debugLineNum = 122;BA.debugLine="End Sub";
 return "";
 }
 public String  _setenabled(boolean _enabled) throws Exception{
- //BA.debugLineNum = 165;BA.debugLine="Public Sub setEnabled(Enabled As Boolean)";
- //BA.debugLineNum = 167;BA.debugLine="mBase.Enabled = Enabled";
+ //BA.debugLineNum = 182;BA.debugLine="Public Sub setEnabled(Enabled As Boolean)";
+ //BA.debugLineNum = 184;BA.debugLine="mBase.Enabled = Enabled";
 _mbase.setEnabled(_enabled);
- //BA.debugLineNum = 169;BA.debugLine="End Sub";
+ //BA.debugLineNum = 186;BA.debugLine="End Sub";
 return "";
 }
 public String  _setrotation(float _angle) throws Exception{
@@ -321,50 +342,50 @@ _cfcontrolsutils._setrotation((anywheresoftware.b4j.objects.NodeWrapper.Concrete
 return "";
 }
 public String  _settag(Object _tag) throws Exception{
- //BA.debugLineNum = 233;BA.debugLine="Public Sub setTag(Tag As Object)";
- //BA.debugLineNum = 235;BA.debugLine="mBase.Tag = Tag";
+ //BA.debugLineNum = 250;BA.debugLine="Public Sub setTag(Tag As Object)";
+ //BA.debugLineNum = 252;BA.debugLine="mBase.Tag = Tag";
 _mbase.setTag(_tag);
- //BA.debugLineNum = 237;BA.debugLine="End Sub";
+ //BA.debugLineNum = 254;BA.debugLine="End Sub";
 return "";
 }
 public String  _setvisible(boolean _visible) throws Exception{
- //BA.debugLineNum = 178;BA.debugLine="Public Sub setVisible(Visible As Boolean)";
- //BA.debugLineNum = 180;BA.debugLine="mBase.Visible = Visible";
+ //BA.debugLineNum = 195;BA.debugLine="Public Sub setVisible(Visible As Boolean)";
+ //BA.debugLineNum = 197;BA.debugLine="mBase.Visible = Visible";
 _mbase.setVisible(_visible);
- //BA.debugLineNum = 182;BA.debugLine="End Sub";
+ //BA.debugLineNum = 199;BA.debugLine="End Sub";
 return "";
 }
 public String  _show() throws Exception{
 anywheresoftware.b4j.objects.PaneWrapper.ConcretePaneWrapper _parent = null;
- //BA.debugLineNum = 123;BA.debugLine="Public Sub Show";
- //BA.debugLineNum = 125;BA.debugLine="Dim Parent As Pane = GetBase.Parent";
+ //BA.debugLineNum = 140;BA.debugLine="Public Sub Show";
+ //BA.debugLineNum = 142;BA.debugLine="Dim Parent As Pane = GetBase.Parent";
 _parent = new anywheresoftware.b4j.objects.PaneWrapper.ConcretePaneWrapper();
 _parent.setObject((javafx.scene.layout.Pane)(_getbase().getParent().getObject()));
- //BA.debugLineNum = 127;BA.debugLine="mBase.Enabled = True";
+ //BA.debugLineNum = 144;BA.debugLine="mBase.Enabled = True";
 _mbase.setEnabled(__c.True);
- //BA.debugLineNum = 128;BA.debugLine="mBase.Alpha = 1";
+ //BA.debugLineNum = 145;BA.debugLine="mBase.Alpha = 1";
 _mbase.setAlpha(1);
- //BA.debugLineNum = 130;BA.debugLine="ModalBgPane.Visible = True";
+ //BA.debugLineNum = 147;BA.debugLine="ModalBgPane.Visible = True";
 _modalbgpane.setVisible(__c.True);
- //BA.debugLineNum = 131;BA.debugLine="ModalPane.Visible = True";
+ //BA.debugLineNum = 148;BA.debugLine="ModalPane.Visible = True";
 _modalpane.setVisible(__c.True);
- //BA.debugLineNum = 133;BA.debugLine="mBase.SetLayoutAnimated(300, 0 , 0,  Parent.Width";
+ //BA.debugLineNum = 150;BA.debugLine="mBase.SetLayoutAnimated(300, 0 , 0,  Parent.Width";
 _mbase.SetLayoutAnimated((int) (300),0,0,_parent.getWidth(),_parent.getHeight());
- //BA.debugLineNum = 135;BA.debugLine="End Sub";
+ //BA.debugLineNum = 152;BA.debugLine="End Sub";
 return "";
 }
 public anywheresoftware.b4j.objects.ImageViewWrapper.ImageWrapper  _snapshot() throws Exception{
- //BA.debugLineNum = 256;BA.debugLine="Public Sub Snapshot As Image";
- //BA.debugLineNum = 258;BA.debugLine="Return mBase.Snapshot";
+ //BA.debugLineNum = 273;BA.debugLine="Public Sub Snapshot As Image";
+ //BA.debugLineNum = 275;BA.debugLine="Return mBase.Snapshot";
 if (true) return _mbase.Snapshot();
- //BA.debugLineNum = 260;BA.debugLine="End Sub";
+ //BA.debugLineNum = 277;BA.debugLine="End Sub";
 return null;
 }
 public anywheresoftware.b4j.objects.ImageViewWrapper.ImageWrapper  _snapshot2(anywheresoftware.b4j.objects.JFX.PaintWrapper _backgroundcolor) throws Exception{
- //BA.debugLineNum = 263;BA.debugLine="Public Sub Snapshot2(BackgroundColor As Paint) As";
- //BA.debugLineNum = 265;BA.debugLine="Return mBase.Snapshot2(BackgroundColor)";
+ //BA.debugLineNum = 280;BA.debugLine="Public Sub Snapshot2(BackgroundColor As Paint) As";
+ //BA.debugLineNum = 282;BA.debugLine="Return mBase.Snapshot2(BackgroundColor)";
 if (true) return _mbase.Snapshot2((javafx.scene.paint.Paint)(_backgroundcolor.getObject()));
- //BA.debugLineNum = 267;BA.debugLine="End Sub";
+ //BA.debugLineNum = 284;BA.debugLine="End Sub";
 return null;
 }
 public Object callSub(String sub, Object sender, Object[] args) throws Exception {

@@ -226,6 +226,24 @@ Public Sub setBorderRadius(radius As Int)
 	
 End Sub
 
+Public Sub getBorderColor As String
+	
+	Return CFControlsUtils.GetBorderColor(InnerPane)
+	
+End Sub
+
+Public Sub getBorderWidth As Int
+	
+	Return CFControlsUtils.GetBorderWidth(InnerPane)
+	
+End Sub
+
+Public Sub getBorderRadius As Int
+	
+	Return CFControlsUtils.GetBorderRadius(InnerPane)
+	
+End Sub
+
 Public Sub setEffect(effect As String)
 	
 	CFControlsUtils.setEffect(Label1, effect)
